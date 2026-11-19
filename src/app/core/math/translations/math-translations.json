@@ -167,9 +167,21 @@
     "fr": "À # degrés la portée est maximale, et seulement à cet angle.",
     "en": "At # degrees the range is maximum, and only at that angle."
   },
+  "A = #πr² + #πrh — as duas tampas têm r²; a lateral, r vezes h.": {
+    "fr": "A = #πr² + #πrh — les deux couvercles ont r² ; la latérale, r fois h.",
+    "en": "A = #πr² + #πrh — the two caps have r²; the lateral surface, r times h."
+  },
+  "A = #πr² — quatro círculos máximos.": {
+    "fr": "A = #πr² — quatre grands cercles.",
+    "en": "A = #πr² — four great circles."
+  },
   "A = |aₓb_y − a_ybₓ|: o determinante das componentes, em módulo.": {
     "fr": "A = |aₓb_y − a_ybₓ| : le déterminant des composantes, en module.",
     "en": "A = |aₓb_y − a_ybₓ|: the determinant of the components, in absolute value."
+  },
+  "A = πr² + πrg — a base tem r²; a lateral, r vezes a geratriz.": {
+    "fr": "A = πr² + πrg — la base a r² ; la latérale, r fois la génératrice.",
+    "en": "A = πr² + πrg — the base has r²; the lateral surface, r times the slant height."
   },
   "A MAIOR parte é a do maior número da razão.": {
     "fr": "La PLUS GRANDE part revient au plus grand nombre du rapport.",
@@ -199,13 +211,25 @@
     "fr": "La hauteur de l’image est le grandissement fois la hauteur de l’objet.",
     "en": "The image height is the magnification times the object height."
   },
+  "A altura reparte o triângulo em dois semelhantes ao original.": {
+    "fr": "La hauteur partage le triangle en deux triangles semblables à l’original.",
+    "en": "The altitude splits the triangle into two similar to the original."
+  },
   "A altura volta a zero quando o parâmetro satisfaz a equação de y.": {
     "fr": "La hauteur revient à zéro quand le paramètre satisfait l’équation de y.",
     "en": "The height returns to zero when the parameter satisfies the equation for y."
   },
+  "A amplitude decai como e elevado a −c·t/(#m). Iguale a #/# e isole t.": {
+    "fr": "L’amplitude décroît comme e élevé à −c·t/(#m). Égalez à #/# et isolez t.",
+    "en": "The amplitude decays like e to the −c·t/(#m). Set it equal to #/# and isolate t."
+  },
   "A amplitude estica o gráfico na vertical: ela é o afastamento máximo do eixo.": {
     "fr": "L'amplitude étire le graphique verticalement : c'est l'écart maximal par rapport à l'axe.",
     "en": "Amplitude stretches the graph vertically: it is the maximum distance from the axis."
+  },
+  "A amplitude é a envoltória exponencial; igualamos à metade do valor inicial.": {
+    "fr": "L’amplitude est l’enveloppe exponentielle ; nous l’égalons à la moitié de la valeur initiale.",
+    "en": "The amplitude is the exponential envelope; we set it equal to half the initial value."
   },
   "A amplitude é o módulo do coeficiente que multiplica o seno.": {
     "fr": "L’amplitude est le module du coefficient qui multiplie le sinus.",
@@ -263,9 +287,17 @@
     "fr": "La base triangular a # côtés.",
     "en": "The triangular base has # sides."
   },
+  "A base é um círculo, e nela o raio vai ao quadrado.": {
+    "fr": "La base est un cercle, et là le rayon passe au carré.",
+    "en": "The base is a circle, and there the radius goes squared."
+  },
   "A base é um círculo: a área dela é πr².": {
     "fr": "La base est un cercle : son aire est πr².",
     "en": "The base is a circle: its area is πr²."
+  },
+  "A base é π vezes esse valor.": {
+    "fr": "La base vaut π fois cette valeur.",
+    "en": "The base is π times that value."
   },
   "A cada período, o montante é multiplicado pelo mesmo fator.": {
     "fr": "Chaque période, le montant est multiplié par le même facteur.",
@@ -387,13 +419,37 @@
     "fr": "La covariance somme les produits des écarts.",
     "en": "Covariance sums the products of deviations."
   },
+  "A derivada da tangente é a secante AO QUADRADO. Sem o quadrado o valor muda, e o sinal pode até ficar negativo — coisa que a derivada da tangente nunca é.": {
+    "fr": "La dérivée de la tangente est la sécante AU CARRÉ. Sans le carré la valeur change, et le signe peut même devenir négatif — ce que la dérivée de la tangente n’est jamais.",
+    "en": "The derivative of tangent is secant SQUARED. Without the square the value changes, and the sign can even turn negative — which the derivative of tangent never is."
+  },
+  "A derivada de #x é #, e ela multiplica tudo.": {
+    "fr": "La dérivée de #x vaut #, et elle multiplie tout.",
+    "en": "The derivative of #x is #, and it multiplies everything."
+  },
+  "A derivada de um produto não é o produto das derivadas. São duas parcelas: a derivada do primeiro vezes o segundo, mais o primeiro vezes a derivada do segundo.": {
+    "fr": "La dérivée d’un produit n’est pas le produit des dérivées. Ce sont deux termes : la dérivée du premier fois le second, plus le premier fois la dérivée du second.",
+    "en": "The derivative of a product is not the product of the derivatives. It is two terms: the derivative of the first times the second, plus the first times the derivative of the second."
+  },
   "A derivada direcional é o gradiente projetado na direção.": {
     "fr": "La dérivée directionnelle est le gradient projeté dans la direction.",
     "en": "The directional derivative is the gradient projected in the direction."
   },
+  "A derivada do cosseno é MENOS o seno. Sem o sinal negativo o resultado sai exatamente simétrico — é o erro mais comum da tabela inteira.": {
+    "fr": "La dérivée du cosinus est MOINS le sinus. Sans le signe négatif, le résultat sort exactement symétrique — c’est l’erreur la plus fréquente de toute la table.",
+    "en": "The derivative of cosine is MINUS sine. Without the negative sign the result comes out exactly symmetric — it is the most common mistake in the whole table."
+  },
   "A derivada do logaritmo natural é o inverso do argumento.": {
     "fr": "La dérivée du logarithme naturel est l'inverse de l'argument.",
     "en": "The derivative of the natural logarithm is the reciprocal of the argument."
+  },
+  "A derivada do seno é o cosseno, e ela não troca de sinal.": {
+    "fr": "La dérivée du sinus est le cosinus, et elle ne change pas de signe.",
+    "en": "The derivative of sine is cosine, and it does not flip sign."
+  },
+  "A derivada do seno é o cosseno, sem sinal trocado. O menos pertence ao cosseno, não ao seno.": {
+    "fr": "La dérivée du sinus est le cosinus, sans changement de signe. Le moins appartient au cosinus, pas au sinus.",
+    "en": "The derivative of sine is cosine, with no sign flip. The minus belongs to the cosine, not to the sine."
   },
   "A derivada é o limite da inclinação da reta secante.": {
     "fr": "La dérivée est la limite de l'inclinaison de la sécante.",
@@ -527,6 +583,10 @@
     "fr": "La division se termine avec un reste nul, donc la décimale est finie.",
     "en": "The division ends with zero remainder, so the decimal is finite."
   },
+  "A divisão é por #, não por #. O fator #/# é da área do triângulo, não do volume do cone.": {
+    "fr": "La division se fait par #, et non par #. Le facteur #/# est celui de l’aire du triangle, pas du volume du cône.",
+    "en": "The division is by #, not by #. The factor #/# belongs to the area of the triangle, not to the volume of the cone."
+  },
   "A elipse soma os dois termos.": {
     "fr": "L'ellipse somme les deux termes.",
     "en": "The ellipse sums the two terms."
@@ -579,6 +639,14 @@
     "fr": "L’équation équilibrée donne la proportion — en MOLES, et non en grammes.",
     "en": "The balanced equation gives the proportion — in MOLES, not in grams."
   },
+  "A equação característica troca y por eʳᵗ.": {
+    "fr": "L’équation caractéristique remplace y par eʳᵗ.",
+    "en": "The characteristic equation replaces y by eʳᵗ."
+  },
+  "A equação característica é r² + b·r + c = #, com b = # e c = #; o discriminante é b² − #c.": {
+    "fr": "L’équation caractéristique est r² + b·r + c = #, avec b = # et c = # ; le discriminant vaut b² − #c.",
+    "en": "The characteristic equation is r² + b·r + c = #, with b = # and c = #; the discriminant is b² − #c."
+  },
   "A equação de Gauss, que vale para lentes delgadas e espelhos esféricos.": {
     "fr": "L’équation de conjugaison, valable pour les lentilles minces et les miroirs sphériques.",
     "en": "The thin-lens equation, which holds for thin lenses and spherical mirrors."
@@ -594,6 +662,10 @@
   "A equação reduzida da reta.": {
     "fr": "L'équation réduite de la droite.",
     "en": "The reduced equation of the line."
+  },
+  "A esfera cabe num cilindro de mesma altura e raio, ocupando dois terços dele.": {
+    "fr": "La sphère tient dans un cylindre de même hauteur et de même rayon, dont elle occupe les deux tiers.",
+    "en": "The sphere fits in a cylinder of the same height and radius, taking up two thirds of it."
   },
   "A excentricidade mede o achatamento.": {
     "fr": "L'excentricité mesure l'aplatissement.",
@@ -679,6 +751,10 @@
     "fr": "La borne reste dehors, d’où la parenthèse et le point creux.",
     "en": "The boundary stays out, hence the parenthesis and the hollow dot."
   },
+  "A fronteira, onde o amortecimento é crítico.": {
+    "fr": "La frontière, où l’amortissement est critique.",
+    "en": "The boundary, where the damping is critical."
+  },
   "A função afim tem a forma f(x) = ax + b.": {
     "fr": "La fonction affine a la forme f(x) = ax + b.",
     "en": "The affine function has the form f(x) = ax + b."
@@ -742,6 +818,10 @@
   "A fórmula que resolve a pergunta.": {
     "fr": "La formule qui résout la question.",
     "en": "The formula that solves the question."
+  },
+  "A hipotenusa ao quadrado é a soma dos catetos ao quadrado: #² + #² = # + #. Depois tire a raiz.": {
+    "fr": "L’hypoténuse au carré est la somme des cathètes au carré : #² + #² = # + #. Prenez ensuite la racine.",
+    "en": "The hypotenuse squared is the sum of the legs squared: #² + #² = # + #. Then take the root."
   },
   "A hipotenusa é a raiz dessa soma — e só a raiz positiva tem sentido aqui.": {
     "fr": "L'hypoténuse est la racine de cette somme — et seule la racine positive a du sens ici.",
@@ -831,6 +911,10 @@
     "fr": "Le côté déroulé est un rectangle : #πr de base par h de hauteur.",
     "en": "The unrolled side is a rectangle: #πr base by h height."
   },
+  "A lateral usa a GERATRIZ, não o raio: ela é o setor circular de raio g.": {
+    "fr": "La latérale utilise la GÉNÉRATRICE, et non le rayon : c’est le secteur circulaire de rayon g.",
+    "en": "The lateral surface uses the SLANT HEIGHT, not the radius: it is the circular sector of radius g."
+  },
   "A lei da gravitação universal relaciona massas e distância.": {
     "fr": "La loi de gravitation universelle relie masses et distance.",
     "en": "The law of universal gravitation relates masses and distance."
@@ -883,6 +967,10 @@
     "fr": "La masse divise par # et le volume par #⁻⁶ : il reste le facteur #.",
     "en": "Mass divides by # and volume by #⁻⁶: the factor # is what remains."
   },
+  "A massa divide: k = c²/(#m), com m = #.": {
+    "fr": "La masse divise : k = c²/(#m), avec m = #.",
+    "en": "The mass divides: k = c²/(#m), with m = #."
+  },
   "A massa do corpo se cancela de novo.": {
     "fr": "La masse du corps s'annule encore.",
     "en": "The body's mass cancels out again."
@@ -898,6 +986,10 @@
   "A massa e o raio se cancelam: só o formato decide quem chega antes.": {
     "fr": "La masse et le rayon s’annulent : seul le format décide qui arrive en premier.",
     "en": "Mass and radius cancel out: only the shape decides which one arrives first."
+  },
+  "A massa entra na conta: c = #√(m·k), com m = #.": {
+    "fr": "La masse entre dans le calcul : c = #√(m·k), avec m = #.",
+    "en": "The mass takes part: c = #√(m·k), with m = #."
   },
   "A massa molar diz quanto pesa UM mol. Divida os # g por ela para saber quantos cabem.": {
     "fr": "La masse molaire dit combien pèse UNE mole. Divisez les # g par elle pour savoir combien il y en a.",
@@ -1055,6 +1147,10 @@
     "fr": "La partie au-dessus : aucun élément ne pèse plus que le composé entier.",
     "en": "The part on top: no element weighs more than the whole compound."
   },
+  "A parte imaginária das raízes é a frequência angular amortecida.": {
+    "fr": "La partie imaginaire des racines est la pulsation amortie.",
+    "en": "The imaginary part of the roots is the damped angular frequency."
+  },
   "A parte imaginária das raízes é a frequência angular da oscilação.": {
     "fr": "La partie imaginaire des racines est la pulsation de l’oscillation.",
     "en": "The imaginary part of the roots is the angular frequency of the oscillation."
@@ -1062,6 +1158,10 @@
   "A parte inteira não pode ficar de fora: é ela que some quando o resultado vem pequeno demais.": {
     "fr": "La partie entière ne peut pas rester de côté : c’est elle qui disparaît quand le résultat sort trop petit.",
     "en": "The whole part cannot be left out: it is what goes missing when the result comes out too small."
+  },
+  "A parte real controla o decaimento; a imaginária, a frequência.": {
+    "fr": "La partie réelle contrôle la décroissance ; l’imaginaire, la fréquence.",
+    "en": "The real part controls the decay; the imaginary one, the frequency."
   },
   "A parábola abre para baixo: o projétil sobe, passa pela altura, desce e volta a passar. O saldo é positivo ENTRE os dois instantes.": {
     "fr": "La parabole est tournée vers le bas : le projectile monte, passe la hauteur, redescend et repasse. Le bilan est positif ENTRE les deux instants.",
@@ -1099,6 +1199,10 @@
     "fr": "La pyramide a les arêtes de la base et une de plus montant de chaque sommet.",
     "en": "The pyramid has the base edges plus one rising from each vertex."
   },
+  "A pirâmide vale um terço do prisma de mesma base: multiplique a área da base # pela altura # e divida por #.": {
+    "fr": "La pyramide vaut un tiers du prisme de même base : multipliez l’aire de la base # par la hauteur # et divisez par #.",
+    "en": "The pyramid is a third of the prism with the same base: multiply the base area # by the height # and divide by #."
+  },
   "A porcentagem é a parte sobre o todo.": {
     "fr": "Le pourcentage, c’est la partie sur le tout.",
     "en": "The percentage is the part over the whole."
@@ -1106,6 +1210,10 @@
   "A potência está por fora e a função trigonométrica por dentro.": {
     "fr": "La puissance est à l'extérieur et la fonction trigonométrique à l'intérieur.",
     "en": "The power is outside and the trigonometric function is inside."
+  },
+  "A potência foi derivada corretamente, mas faltou multiplicar pela derivada da função de dentro. É a cadeia: a camada interna sempre contribui com um fator.": {
+    "fr": "La puissance a été dérivée correctement, mais il manque la multiplication par la dérivée de la fonction intérieure. C’est la chaîne : la couche interne apporte toujours un facteur.",
+    "en": "The power was differentiated correctly, but the multiplication by the derivative of the inner function is missing. That is the chain: the inner layer always contributes a factor."
   },
   "A pressão numa profundidade é a atmosférica mais o peso da coluna de fluido.": {
     "fr": "La pression à une profondeur est la pression atmosphérique plus le poids de la colonne de fluide.",
@@ -1295,6 +1403,14 @@
     "fr": "La proportion de l’équation vaut en moles, pas en grammes. Passez par O₂ en grammes → moles → moles de H₂O₂ → grammes.",
     "en": "The equation’s ratio holds in moles, not in grams. Go through O₂ in grams → moles → moles of H₂O₂ → grams."
   },
+  "A proporção ficou de cabeça para baixo. Altura está para sombra assim como altura está para sombra — não troque os papéis entre as duas figuras.": {
+    "fr": "La proportion est à l’envers. La hauteur est à l’ombre ce que la hauteur est à l’ombre — n’échangez pas les rôles entre les deux figures.",
+    "en": "The proportion is upside down. Height is to shadow as height is to shadow — do not swap the roles between the two figures."
+  },
+  "A proporção foi montada de cabeça para baixo. Os segmentos correspondentes têm de ficar em posições correspondentes nas duas frações.": {
+    "fr": "La proportion a été montée à l’envers. Les segments correspondants doivent occuper des positions correspondantes dans les deux fractions.",
+    "en": "The proportion was set up upside down. Corresponding segments have to sit in corresponding places in both fractions."
+  },
   "A proporção já saiu inteira, e é a fórmula empírica.": {
     "fr": "La proportion est sortie entière, et c’est la formule empirique.",
     "en": "The proportion came out whole, and it is the empirical formula."
@@ -1419,6 +1535,18 @@
     "fr": "Le rapport est à l’envers. Pour chaque # de O₂ il sort # de H₂O, donc le coefficient de H₂O va au-dessus.",
     "en": "The ratio is upside down. For every # of O₂ there come # of H₂O, so the coefficient of H₂O goes on top."
   },
+  "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
+    "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
+    "en": "The ratio k multiplies LENGTHS. Area depends on # dimensions, so the factor is k²."
+  },
+  "A razão k multiplica COMPRIMENTOS. O volume depende de # dimensões, então o fator é k³.": {
+    "fr": "Le rapport k multiplie des LONGUEURS. Le volume dépend de # dimensions, donc le facteur est k³.",
+    "en": "The ratio k multiplies LENGTHS. Volume depends on # dimensions, so the factor is k³."
+  },
+  "A razão k multiplica COMPRIMENTOS. O volume tem três dimensões, então o fator é k³.": {
+    "fr": "Le rapport k multiplie des LONGUEURS. Le volume a trois dimensions, donc le facteur est k³.",
+    "en": "The ratio k multiplies LENGTHS. Volume has three dimensions, so the factor is k³."
+  },
   "A razão é a propriedade da potência de potência.": {
     "fr": "Le rapport est la propriété de la puissance de puissance.",
     "en": "The ratio is the power-of-power property."
@@ -1478,6 +1606,10 @@
   "A reta y = # é uma assíntota horizontal.": {
     "fr": "La droite y = # est une asymptote horizontale.",
     "en": "The line y = # is a horizontal asymptote."
+  },
+  "A reta y = f(x₀) + m(x − x₀) corta o eixo y em x = #.": {
+    "fr": "La droite y = f(x₀) + m(x − x₀) coupe l’axe des ordonnées en x = #.",
+    "en": "The line y = f(x₀) + m(x − x₀) crosses the y-axis at x = #."
   },
   "A secante é o inverso do cosseno — e o quadrado é dela toda.": {
     "fr": "La sécante est l’inverse du cosinus — et le carré porte sur elle tout entière.",
@@ -1547,9 +1679,21 @@
     "fr": "La substitution directe donne #/#.",
     "en": "Direct substitution gives #/#."
   },
+  "A subtração é entre os quadrados, não entre as medidas. Pitágoras relaciona áreas de quadrados, não comprimentos.": {
+    "fr": "La soustraction porte sur les carrés, et non sur les mesures. Pythagore relie des aires de carrés, pas des longueurs.",
+    "en": "The subtraction is between the squares, not between the measurements. Pythagoras relates areas of squares, not lengths."
+  },
   "A superfície da esfera equivale a quatro círculos máximos.": {
     "fr": "La surface de la sphère équivaut à quatre grands cercles.",
     "en": "The surface of the sphere equals four maximum circles."
+  },
+  "A superfície é a soma das duas partes.": {
+    "fr": "La surface est la somme des deux parties.",
+    "en": "The surface is the sum of the two parts."
+  },
+  "A superfície, por sua vez, cresceria apenas k² = # vezes.": {
+    "fr": "La surface, elle, ne croîtrait que de k² = # fois.",
+    "en": "The surface, in turn, would grow only k² = # times."
   },
   "A sustentação é a diferença de pressão aplicada sobre a área.": {
     "fr": "La portance est la différence de pression appliquée sur la surface.",
@@ -1570,6 +1714,10 @@
   "A tangente é o quociente entre seno e cosseno.": {
     "fr": "La tangente est le quotient entre sinus et cosinus.",
     "en": "The tangent is the quotient of sine by cosine."
+  },
+  "A taxa de decaimento é c/(#m), não c: com m = #, ela vale #.": {
+    "fr": "Le taux de décroissance est c/(#m), et non c : avec m = #, il vaut #.",
+    "en": "The decay rate is c/(#m), not c: with m = #, it is #."
   },
   "A taxa de entrada é constante; a de saída é proporcional ao que há no tanque.": {
     "fr": "Le débit d’entrée est constant ; celui de sortie est proportionnel à ce qu’il y a dans le réservoir.",
@@ -1598,6 +1746,10 @@
   "A velocidade angular é uma volta inteira dividida pelo período.": {
     "fr": "La vitesse angulaire est un tour complet divisé par la période.",
     "en": "Angular velocity is one full turn divided by the period."
+  },
+  "A velocidade inicial foi ignorada. Uma EDO de segunda ordem precisa de DUAS condições, e a segunda é justamente a derivada em zero.": {
+    "fr": "La vitesse initiale a été ignorée. Une EDO du second ordre a besoin de DEUX conditions, et la seconde est précisément la dérivée en zéro.",
+    "en": "The initial velocity was ignored. A second-order ODE needs TWO conditions, and the second one is precisely the derivative at zero."
   },
   "A velocidade média é a variação da posição dividida pela variação do tempo.": {
     "fr": "La vitesse moyenne est la variation de la position divisée par la variation du temps.",
@@ -1663,6 +1815,10 @@
     "fr": "L'aire entre elles est la différence des accumulées.",
     "en": "The area between them is the difference of the cumulative areas."
   },
+  "A área escala com k², não com k. Aqui k = #, então o fator é #².": {
+    "fr": "L’aire varie comme k², et non comme k. Ici k = #, donc le facteur vaut #².",
+    "en": "Area scales with k², not with k. Here k = #, so the factor is #²."
+  },
   "A área fica em função de uma única variável.": {
     "fr": "L’aire devient fonction d’une seule variable.",
     "en": "The area becomes a function of a single variable."
@@ -1711,9 +1867,21 @@
     "fr": "Trouvez la fonction dont le gradient est le champ, et soustrayez ses valeurs aux extrémités.",
     "en": "Find the function whose gradient is the field, and subtract its values at the endpoints."
   },
+  "Ache a hipotenusa primeiro, por Pitágoras. Depois use que o cateto ao quadrado, #², é igual à hipotenusa vezes a projeção dele.": {
+    "fr": "Trouvez d’abord l’hypoténuse, par Pythagore. Utilisez ensuite que la cathète au carré, #², vaut l’hypoténuse fois sa projection.",
+    "en": "Find the hypotenuse first, by Pythagoras. Then use that the leg squared, #², equals the hypotenuse times its projection."
+  },
+  "Ache a hipotenusa primeiro, por Pitágoras. Depois use que o produto dos catetos, # · #, é igual à hipotenusa vezes essa altura.": {
+    "fr": "Trouvez d’abord l’hypoténuse, par Pythagore. Utilisez ensuite que le produit des cathètes, # · #, vaut l’hypoténuse fois cette hauteur.",
+    "en": "Find the hypotenuse first, by Pythagoras. Then use that the product of the legs, # · #, equals the hypotenuse times that altitude."
+  },
   "Ache a razão primeiro, r = (a_q − aₚ) / (q − p); depois volte: a₁ = aₚ − (p − #)r.": {
     "fr": "Trouvez d’abord la raison, r = (a_q − aₚ) / (q − p) ; puis revenez : a₁ = aₚ − (p − #)r.",
     "en": "Find the difference first, r = (a_q − aₚ) / (q − p); then go back: a₁ = aₚ − (p − #)r."
+  },
+  "Ache as raízes da característica, escreva a solução geral com duas constantes e use y(#) = # e y′(#) = # para achá-las.": {
+    "fr": "Trouvez les racines de la caractéristique, écrivez la solution générale avec deux constantes et utilisez y(#) = # et y′(#) = # pour les déterminer.",
+    "en": "Find the roots of the characteristic equation, write the general solution with two constants and use y(#) = # and y′(#) = # to pin them down."
   },
   "Ache as raízes desse trinômio e teste um valor entre elas: é ali que o custo fica abaixo do limite.": {
     "fr": "Trouvez les racines de ce trinôme et testez une valeur entre elles : c’est là que le coût passe sous la limite.",
@@ -1803,9 +1971,17 @@
     "fr": "Outre t égal à zéro, il y a une autre racine : l’instant de l’impact.",
     "en": "Besides t equal to zero there is another root: the moment of impact."
   },
+  "Amortecimento crítico é a raiz dupla: discriminante zero.": {
+    "fr": "L’amortissement critique est la racine double : discriminant nul.",
+    "en": "Critical damping is the double root: zero discriminant."
+  },
   "Andando o contorno inteiro, cada vértice faz você girar um ângulo externo — e no fim você está olhando para o mesmo lado do começo.": {
     "fr": "En parcourant tout le contour, chaque sommet vous fait tourner d’un angle extérieur — et à la fin vous regardez du même côté qu’au départ.",
     "en": "Walking the whole outline, each vertex turns you by one exterior angle — and at the end you face the same way as at the start."
+  },
+  "Ao derivar uma potência o expoente desce e DIMINUI em um. Aqui ele desceu, mas continuou o mesmo lá em cima.": {
+    "fr": "En dérivant une puissance, l’exposant descend et DIMINUE de un. Ici il est descendu, mais il est resté le même en haut.",
+    "en": "When differentiating a power the exponent comes down and DROPS by one. Here it came down, but stayed the same up top."
   },
   "Ao passar os termos de y e z para o outro lado, o sinal deles troca. Aqui eles foram somados em vez de subtraídos.": {
     "fr": "En faisant passer les termes en y et z de l’autre côté, leur signe change. Ici ils ont été ajoutés au lieu d’être soustraits.",
@@ -1939,6 +2115,22 @@
     "fr": "Ici il n’y a pas de masse en chemin : la question part et arrive en moles.",
     "en": "There is no mass along the way here: the question starts and ends in moles."
   },
+  "Aqui o raio entra UMA vez: a lateral é um retângulo, não um círculo.": {
+    "fr": "Ici le rayon entre UNE fois : la latérale est un rectangle, pas un cercle.",
+    "en": "Here the radius enters ONCE: the lateral surface is a rectangle, not a circle."
+  },
+  "Aqui os quadrados se SUBTRAEM: a hipotenusa já é o maior lado, então o cateto que falta tem de ser menor que ela.": {
+    "fr": "Ici les carrés se SOUSTRAIENT : l’hypoténuse est déjà le plus grand côté, donc la cathète manquante doit être plus petite qu’elle.",
+    "en": "Here the squares are SUBTRACTED: the hypotenuse is already the longest side, so the missing leg has to be shorter than it."
+  },
+  "Aqui os quadrados se subtraem, não se somam.": {
+    "fr": "Ici les carrés se soustraient, ils ne s’additionnent pas.",
+    "en": "Here the squares are subtracted, not added."
+  },
+  "Aqui u é a potência e v é a função trigonométrica.": {
+    "fr": "Ici u est la puissance et v la fonction trigonométrique.",
+    "en": "Here u is the power and v is the trigonometric function."
+  },
   "Ar neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ar neutre a # électrons, autant que de protons.",
     "en": "Neutral Ar has # electrons, as many as protons."
@@ -2002,6 +2194,10 @@
   "As duas derivadas cruzadas.": {
     "fr": "Les deux dérivées croisées.",
     "en": "The two cross derivatives."
+  },
+  "As duas derivadas foram trocadas entre si. Vale guardar o ciclo: seno vira cosseno, cosseno vira menos seno, e só depois de quatro passos a função volta a ser ela mesma.": {
+    "fr": "Les deux dérivées ont été interverties. Retenez le cycle : le sinus devient cosinus, le cosinus devient moins sinus, et ce n’est qu’après quatre étapes que la fonction redevient elle-même.",
+    "en": "The two derivatives were swapped. Worth remembering the cycle: sine becomes cosine, cosine becomes minus sine, and only after four steps does the function come back to itself."
   },
   "As duas derivadas se SUBTRAEM: ∂Q/∂x MENOS ∂P/∂y.": {
     "fr": "Les deux dérivées se SOUSTRAIENT : ∂Q/∂x MOINS ∂P/∂y.",
@@ -2078,6 +2274,10 @@
   "As raízes racionais possíveis vêm dos divisores do termo constante e do líder.": {
     "fr": "Les racines rationnelles possibles viennent des diviseurs du terme constant et du coefficient dominant.",
     "en": "The possible rational roots come from the divisors of the constant term and the leading coefficient."
+  },
+  "As raízes são complexas; a parte real dá o decaimento, a imaginária a oscilação.": {
+    "fr": "Les racines sont complexes ; la partie réelle donne la décroissance, l’imaginaire l’oscillation.",
+    "en": "The roots are complex; the real part gives the decay, the imaginary one the oscillation."
   },
   "As relações de Girard ligam as raízes aos coeficientes.": {
     "fr": "Les relations de Viète lient les racines aux coefficients.",
@@ -2199,6 +2399,10 @@
     "fr": "Chaque rang décimal vaut une division par dix : dixièmes, centièmes, millièmes.",
     "en": "Each decimal place is a division by ten: tenths, hundredths, thousandths."
   },
+  "Cada cateto é média geométrica entre a hipotenusa e a sua projeção.": {
+    "fr": "Chaque cathète est la moyenne géométrique entre l’hypoténuse et sa projection.",
+    "en": "Each leg is the geometric mean of the hypotenuse and its projection."
+  },
   "Cada centímetro do mapa vale a escala em centímetros reais.": {
     "fr": "Chaque centimètre de la carte vaut l’échelle en centimètres réels.",
     "en": "Each centimetre on the map is worth the scale in real centimetres."
@@ -2222,6 +2426,10 @@
   "Cada componente é uma parcial avaliada no ponto.": {
     "fr": "Chaque composante est une dérivée partielle évaluée au point.",
     "en": "Each component is a partial derivative evaluated at the point."
+  },
+  "Cada derivada traz um fator # da cadeia; duas derivadas trazem #² = #.": {
+    "fr": "Chaque dérivée apporte un facteur # de la chaîne ; deux dérivées apportent #² = #.",
+    "en": "Each derivative brings a factor of # from the chain; two derivatives bring #² = #."
   },
   "Cada dimensão linear é multiplicada por k.": {
     "fr": "Chaque dimension linéaire est multipliée par k.",
@@ -2383,6 +2591,10 @@
     "fr": "Chaque sous-couche ne passe à la suivante qu’une fois remplie.",
     "en": "Each subshell only passes to the next once it is full."
   },
+  "Cada tampa é um círculo, e aí o raio vai ao quadrado.": {
+    "fr": "Chaque couvercle est un cercle, et là le rayon passe au carré.",
+    "en": "Each cap is a circle, and there the radius goes squared."
+  },
   "Cada termo contribui com sua derivada; a constante vira zero.": {
     "fr": "Chaque terme contribue avec sa dérivée ; la constante devient zéro.",
     "en": "Each term contributes its derivative; the constant becomes zero."
@@ -2410,6 +2622,10 @@
   "Cada um deles aparece agora no x que faz o argumento valer o mesmo de antes.": {
     "fr": "Chacun d’eux apparaît maintenant au x qui fait valoir à l’argument la même chose qu’avant.",
     "en": "Each of them now appears at the x that makes the argument worth the same as before."
+  },
+  "Cada uma das três dimensões é multiplicada por k.": {
+    "fr": "Chacune des trois dimensions est multipliée par k.",
+    "en": "Each of the three dimensions is multiplied by k."
   },
   "Cada unidade composta converte-se pela potência do seu fator.": {
     "fr": "Chaque unité composée se convertit par la puissance de son facteur.",
@@ -2478,6 +2694,10 @@
   "Calculamos o discriminante, que decide quantas raízes existem.": {
     "fr": "Nous calculons le discriminant, qui décide combien de racines existent.",
     "en": "We calculate the discriminant, which determines how many roots exist."
+  },
+  "Calculamos o fator.": {
+    "fr": "Nous calculons le facteur.",
+    "en": "We compute the factor."
   },
   "Calculamos o limite fatorando e cancelando.": {
     "fr": "Nous calculons la limite en factorisant et en simplifiant.",
@@ -2859,6 +3079,10 @@
     "fr": "Avec x = #, Pythagore donne y = #.",
     "en": "With x = #, Pythagoras gives y = #."
   },
+  "Com y(#) igual a # e y'(#) igual a #, avaliamos em t igual a #.": {
+    "fr": "Avec y(#) égal à # et y'(#) égal à #, nous évaluons en t égal à #.",
+    "en": "With y(#) equal to # and y'(#) equal to #, we evaluate at t equal to #."
+  },
   "Com |q| < #, qⁿ tende a zero quando n cresce.": {
     "fr": "Avec |q| < #, qⁿ tend vers zéro quand n croît.",
     "en": "With |q| < #, qⁿ tends to zero as n grows."
@@ -3118,6 +3342,14 @@
   "Crescer ou decrescer é o sinal da derivada. Derivamos.": {
     "fr": "Croître ou décroître, c’est le signe de la dérivée. Nous dérivons.",
     "en": "Increasing or decreasing is the sign of the derivative. We differentiate."
+  },
+  "Crítico é a raiz dupla da característica: c² − #mk = #, então c = #√(mk).": {
+    "fr": "Le cas critique est la racine double de la caractéristique : c² − #mk = #, donc c = #√(mk).",
+    "en": "Critical is the double root of the characteristic equation: c² − #mk = #, so c = #√(mk)."
+  },
+  "Da igualdade das áreas sai a altura.": {
+    "fr": "De l’égalité des aires sort la hauteur.",
+    "en": "The altitude comes out of the equality of areas."
   },
   "Da órbita circular, v² = GM/r, e v = #πr/T.": {
     "fr": "De l'orbite circulaire, v² = GM/r, et v = #πr/T.",
@@ -3451,6 +3683,10 @@
     "fr": "Dérivez chaque coordonnée séparément et combinez avec Pythagore.",
     "en": "Differentiate each coordinate separately and combine with Pythagoras."
   },
+  "Derive duas vezes: cosseno vira −seno e depois −cosseno, e cada derivada traz um fator # (ao todo #² = #).": {
+    "fr": "Dérivez deux fois : le cosinus devient −sinus puis −cosinus, et chaque dérivée apporte un facteur # (en tout #² = #).",
+    "en": "Differentiate twice: cosine becomes −sine and then −cosine, and each derivative brings a factor of # (in all #² = #)."
+  },
   "Derive duas vezes: cosseno vira −seno e depois −cosseno.": {
     "fr": "Dérivez deux fois : le cosinus devient −sinus puis −cosinus.",
     "en": "Differentiate twice: cosine becomes −sine and then −cosine."
@@ -3727,6 +3963,10 @@
     "fr": "Nous divisons chaque partie par le dénominateur réel.",
     "en": "We divide each part by the real denominator."
   },
+  "Dividimos e chegamos à altura.": {
+    "fr": "Nous divisons et obtenons la hauteur.",
+    "en": "We divide and reach the height."
+  },
   "Dividimos numerador e denominador por x², a maior potência.": {
     "fr": "Nous divisons numérateur et dénominateur par x², la plus grande puissance.",
     "en": "We divide numerator and denominator by x², the highest power."
@@ -3887,6 +4127,10 @@
     "fr": "Du quotient, l’énoncé demande le termo constante.",
     "en": "From the quotient, the question asks for the termo constante."
   },
+  "Dobrar o lado não dobra a área: quadruplica.": {
+    "fr": "Doubler le côté ne double pas l’aire : elle quadruple.",
+    "en": "Doubling the side does not double the area: it quadruples it."
+  },
   "Dois passos: C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) e depois U = ½·C·#². Para nJ, multiplique por #⁹.": {
     "fr": "Deux étapes : C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) puis U = ½·C·#². Pour des nJ, multipliez par #⁹.",
     "en": "Two steps: C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) and then U = ½·C·#². For nJ, multiply by #⁹."
@@ -3915,6 +4159,10 @@
     "fr": "Deux y pour chaque x : isoler oblige à choisir une branche.",
     "en": "Two y for each x: isolating requires choosing a branch."
   },
+  "Duas condições iniciais, porque a solução geral tem duas constantes.": {
+    "fr": "Deux conditions initiales, parce que la solution générale a deux constantes.",
+    "en": "Two initial conditions, because the general solution has two constants."
+  },
   "Duas cópias do trapézio formam um paralelogramo de base B + b.": {
     "fr": "Deux copies du trapèze forment un parallélogramme de base B + b.",
     "en": "Two copies of the trapezoid form a parallelogram of base B + b."
@@ -3939,6 +4187,10 @@
     "fr": "Deux racines réelles, par la formule quadratique (en ordre croissant).",
     "en": "Two real roots, by the quadratic formula (in increasing order)."
   },
+  "Dá para montar com um cubo partido em três pirâmides iguais.": {
+    "fr": "On peut le voir avec un cube partagé en trois pyramides égales.",
+    "en": "You can build it from a cube split into three equal pyramids."
+  },
   "E a aceleração centrípeta sai da velocidade e do raio.": {
     "fr": "Et l’accélération centripète vient de la vitesse et du rayon.",
     "en": "And the centripetal acceleration comes from the speed and the radius."
@@ -3962,6 +4214,10 @@
   "E a potência de comparação já sabemos decidir.": {
     "fr": "Et la puissance de comparaison nous savons déjà décider.",
     "en": "And the comparison power we already know how to decide."
+  },
+  "E a projeção sai da relação do cateto.": {
+    "fr": "Et la projection sort de la relation de la cathète.",
+    "en": "And the projection comes from the leg relation."
   },
   "E aí a equação se integra diretamente.": {
     "fr": "Et alors l'équation s'intègre directement.",
@@ -3999,6 +4255,14 @@
     "fr": "Et nous extrayons la racine quatrième.",
     "en": "And we take the fourth root."
   },
+  "E multiplicamos por #π.": {
+    "fr": "Et nous multiplions par #π.",
+    "en": "And we multiply by #π."
+  },
+  "E multiplicamos por #π/#.": {
+    "fr": "Et nous multiplions par #π/#.",
+    "en": "And we multiply by #π/#."
+  },
   "E o cateto adjacente.": {
     "fr": "Et le côté adjacent.",
     "en": "And the adjacent leg."
@@ -4031,6 +4295,10 @@
     "fr": "Et la valeur se lit sur une échelle fixe, de moins un à un.",
     "en": "And the value is read on a fixed scale, from minus one to one."
   },
+  "E o volume é a base vezes a altura.": {
+    "fr": "Et le volume est la base fois la hauteur.",
+    "en": "And the volume is the base times the height."
+  },
   "E o vértice, ou qualquer ponto de referência, acompanha.": {
     "fr": "Et le sommet, ou n'importe quel point de référence, suit.",
     "en": "And the vertex, or any reference point, follows."
@@ -4055,6 +4323,10 @@
     "fr": "Et nous ajoutons la constante d'intégration.",
     "en": "And we add the constant of integration."
   },
+  "E somamos os quadrados dos outros dois.": {
+    "fr": "Et nous additionnons les carrés des deux autres.",
+    "en": "And we add the squares of the other two."
+  },
   "E somamos.": {
     "fr": "Et nous additionnons.",
     "en": "And we add."
@@ -4070,6 +4342,10 @@
   "E usamos essa razão para o lado procurado.": {
     "fr": "Et nous utilisons ce rapport pour le côté recherché.",
     "en": "And we use this ratio for the sought side."
+  },
+  "E é o sinal dele que decide o comportamento do sistema.": {
+    "fr": "Et c’est son signe qui décide du comportement du système.",
+    "en": "And it is its sign that decides the behaviour of the system."
   },
   "Efetuamos os produtos e somamos.": {
     "fr": "Nous effectuons les produits et additionnons.",
@@ -4143,6 +4419,10 @@
     "fr": "Nous élevons au carré pour que les écarts opposés ne s'annulent pas.",
     "en": "We square so that opposite deviations do not cancel."
   },
+  "Elevamos o maior lado ao quadrado.": {
+    "fr": "Nous élevons le plus grand côté au carré.",
+    "en": "We square the longest side."
+  },
   "Elevando ao quadrado.": {
     "fr": "En élevant au carré.",
     "en": "Squaring."
@@ -4150,6 +4430,10 @@
   "Elevar a um expoente multiplica todos os expoentes da dimensão.": {
     "fr": "Élever à un exposant multiplie tous les exposants de la dimension.",
     "en": "Raising to an exponent multiplies every exponent of the dimension."
+  },
+  "Elevar ao quadrado é multiplicar o número por ele mesmo, não por #.": {
+    "fr": "Élever au carré, c’est multiplier le nombre par lui-même, et non par #.",
+    "en": "Squaring is multiplying the number by itself, not by #."
   },
   "Eleve aceleração angular ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de comprimento.": {
     "fr": "Élevez accélération angulaire au cube en multipliant chacun de ses exposants par # ; additionnez ensuite les exposants de longueur.",
@@ -4771,13 +5055,29 @@
     "fr": "En x = #, v = #.",
     "en": "At x = #, v = #."
   },
+  "Em x = #π/#, o argumento vale #π.": {
+    "fr": "En x = #π/#, l’argument vaut #π.",
+    "en": "At x = #π/#, the argument is #π."
+  },
   "Em x = #π/#, o argumento vale #π/#.": {
     "fr": "En x = #π/#, l’argument vaut #π/#.",
     "en": "At x = #π/#, the argument is #π/#."
   },
+  "Em x = π, o argumento vale #π.": {
+    "fr": "En x = π, l’argument vaut #π.",
+    "en": "At x = π, the argument is #π."
+  },
   "Em x = π, o argumento vale π.": {
     "fr": "En x = π, l’argument vaut π.",
     "en": "At x = π, the argument is π."
+  },
+  "Em x = π/#, o argumento vale #π/#.": {
+    "fr": "En x = π/#, l’argument vaut #π/#.",
+    "en": "At x = π/#, the argument is #π/#."
+  },
+  "Em x = π/#, o argumento vale π.": {
+    "fr": "En x = π/#, l’argument vaut π.",
+    "en": "At x = π/#, the argument is π."
   },
   "Em x = π/#, o argumento vale π/#.": {
     "fr": "En x = π/#, l’argument vaut π/#.",
@@ -5163,9 +5463,25 @@
     "fr": "Cette expression est continue, il suffit donc de substituer le point.",
     "en": "That piece is continuous, so it is enough to substitute the point."
   },
+  "Essa é a ALTURA relativa à hipotenusa, não a projeção do cateto.": {
+    "fr": "C’est la HAUTEUR relative à l’hypoténuse, et non la projection de la cathète.",
+    "en": "That is the ALTITUDE to the hypotenuse, not the projection of the leg."
+  },
   "Essa é a LARGURA do intervalo, não quantos inteiros cabem nele. De # a # a distância é #, mas os inteiros #, #, # e # são quatro.": {
     "fr": "C’est la LARGEUR de l’intervalle, et non le nombre d’entiers qu’il contient. De # à #, la distance vaut #, mais les entiers #, #, # et # sont au nombre de quatre.",
     "en": "That is the WIDTH of the interval, not how many integers fit in it. From # to # the distance is #, but the integers #, #, # and # are four."
+  },
+  "Essa é a PROJEÇÃO de um cateto sobre a hipotenusa, não a altura.": {
+    "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
+    "en": "That is the PROJECTION of a leg onto the hypotenuse, not the altitude."
+  },
+  "Essa é a SOMBRA do prédio. A altura só coincidiria com ela se a vara também tivesse altura igual à sua sombra.": {
+    "fr": "C’est l’OMBRE de l’immeuble. La hauteur ne coïnciderait avec elle que si la perche avait aussi une hauteur égale à son ombre.",
+    "en": "That is the building’s SHADOW. The height would only match it if the pole’s height also equalled its shadow."
+  },
+  "Essa é a SUPERFÍCIE da esfera, #πr². O volume usa r³ e tem o fator #/#.": {
+    "fr": "C’est la SURFACE de la sphère, #πr². Le volume utilise r³ et porte le facteur #/#.",
+    "en": "That is the SURFACE of the sphere, #πr². The volume uses r³ and carries the factor #/#."
   },
   "Essa é a camada de dentro, a penúltima. A última é a de maior n que recebeu elétrons.": {
     "fr": "C’est la couche intérieure, l’avant-dernière. La dernière est celle de plus grand n qui a reçu des électrons.",
@@ -5175,6 +5491,10 @@
     "fr": "C’est la charge de l’anion lui-même. Son indice est la charge de l’AUTRE, réduite — c’est le croisement.",
     "en": "That is the anion’s own charge. Its subscript is the charge of the OTHER one, reduced — that is the crossing."
   },
+  "Essa é a constante de tempo (cai a #/e ≈ #%). Para cair à metade, entra ln #.": {
+    "fr": "C’est la constante de temps (chute à #/e ≈ #%). Pour tomber à la moitié, c’est ln # qui intervient.",
+    "en": "That is the time constant (it falls to #/e ≈ #%). To fall to half, ln # comes in."
+  },
   "Essa é a contagem de átomos da fórmula, não a massa deles. Cada átomo entra com a massa do seu elemento.": {
     "fr": "C’est le nombre d’atomes de la formule, et non leur masse. Chaque atome entre avec la masse de son élément.",
     "en": "That is the count of atoms in the formula, not their mass. Each atom enters with its element’s mass."
@@ -5183,6 +5503,14 @@
     "fr": "C’est l’entrée de A elle-même. L’inverse est le bloc de DROITE à la fin de l’échelonnement.",
     "en": "That is an entry of A itself. The inverse is the RIGHT block at the end of the reduction."
   },
+  "Essa é a frequência NATURAL, sem amortecimento. O atrito alonga o período, e a frequência amortecida é menor que a natural.": {
+    "fr": "C’est la pulsation NATURELLE, sans amortissement. Le frottement allonge la période, et la pulsation amortie est plus petite que la naturelle.",
+    "en": "That is the NATURAL frequency, without damping. Friction lengthens the period, and the damped frequency is smaller than the natural one."
+  },
+  "Essa é a frequência angular amortecida, em radianos por unidade de tempo. O período é uma volta inteira dividida por ela.": {
+    "fr": "C’est la pulsation amortie, en radians par unité de temps. La période est un tour complet divisé par elle.",
+    "en": "That is the damped angular frequency, in radians per unit time. The period is one full turn divided by it."
+  },
   "Essa é a fórmula MOLECULAR, e a porcentagem não consegue distingui-la da empírica: C₆H₁₂O₆ e CH₂O têm exatamente a mesma composição. Sem a massa molar, a resposta é a proporção mais simples.": {
     "fr": "C’est la formule MOLÉCULAIRE, et le pourcentage ne peut pas la distinguer de l’empirique : C₆H₁₂O₆ et CH₂O ont exactement la même composition. Sans la masse molaire, la réponse est la proportion la plus simple.",
     "en": "That is the MOLECULAR formula, and the percentage cannot tell it from the empirical one: C₆H₁₂O₆ and CH₂O have exactly the same composition. Without the molar mass, the answer is the simplest proportion."
@@ -5190,6 +5518,14 @@
   "Essa é a fórmula empírica, que o enunciado já deu. A massa molar diz quantas vezes ela cabe na molécula — e é por esse número que todos os índices se multiplicam.": {
     "fr": "C’est la formule empirique, que l’énoncé a déjà donnée. La masse molaire dit combien de fois elle tient dans la molécule — et c’est par ce nombre que tous les indices se multiplient.",
     "en": "That is the empirical formula, which the question already gave. The molar mass says how many times it fits in the molecule — and that number is what all the subscripts are multiplied by."
+  },
+  "Essa é a hipotenusa inteira, um passo intermediário da conta.": {
+    "fr": "C’est l’hypoténuse entière, une étape intermédiaire du calcul.",
+    "en": "That is the whole hypotenuse, an intermediate step of the computation."
+  },
+  "Essa é a lateral. Faltam as duas tampas circulares.": {
+    "fr": "C’est la latérale. Il manque les deux couvercles circulaires.",
+    "en": "That is the lateral surface. The two circular caps are missing."
   },
   "Essa é a massa de UM mol. O enunciado pede a massa de #, então ainda falta multiplicar.": {
     "fr": "C’est la masse d’UNE mole. L’énoncé demande la masse de #, il reste donc à multiplier.",
@@ -5203,9 +5539,37 @@
     "fr": "C’est la plus petite des racines. Elles annulent toutes l’expression, mais l’énoncé demande la plus grande.",
     "en": "That is the smallest root. They all make the expression zero, but the question asks for the largest."
   },
+  "Essa é a menor raiz. A maior é a que domina o comportamento para t grande, porque ela decai mais devagar.": {
+    "fr": "C’est la plus petite racine. La plus grande domine le comportement pour t grand, parce qu’elle décroît plus lentement.",
+    "en": "That is the smaller root. The larger one governs the behaviour for large t, because it decays more slowly."
+  },
+  "Essa é a projeção do OUTRO cateto. Cada projeção usa o seu próprio.": {
+    "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
+    "en": "That is the projection of the OTHER leg. Each projection uses its own."
+  },
+  "Essa é a raiz do discriminante, que aparece na fórmula das raízes. O discriminante em si é o que está dentro dela.": {
+    "fr": "C’est la racine du discriminant, qui apparaît dans la formule des racines. Le discriminant lui-même est ce qui se trouve à l’intérieur.",
+    "en": "That is the square root of the discriminant, which shows up in the root formula. The discriminant itself is what sits inside it."
+  },
+  "Essa é a soma dos quadrados dos outros dois lados. A pergunta é pelo quadrado do MAIOR lado — são as duas pontas da comparação.": {
+    "fr": "C’est la somme des carrés des deux autres côtés. La question porte sur le carré du PLUS GRAND côté — ce sont les deux membres de la comparaison.",
+    "en": "That is the sum of the squares of the other two sides. The question asks for the square of the LONGEST side — they are the two ends of the comparison."
+  },
+  "Essa é a área LATERAL do cilindro. O volume usa a área da base, πr².": {
+    "fr": "C’est l’aire LATÉRALE du cylindre. Le volume utilise l’aire de la base, πr².",
+    "en": "That is the LATERAL area of the cylinder. The volume uses the base area, πr²."
+  },
   "Essa é a área da SOMBRA no plano xy. O plano é inclinado: multiplique por √(# + #² + #²).": {
     "fr": "C’est l’aire de l’OMBRE dans le plan xy. Le plan est incliné : multipliez par √(# + #² + #²).",
     "en": "That is the area of the SHADOW in the xy-plane. The plane is slanted: multiply by √(# + #² + #²)."
+  },
+  "Essa é só a primeira parcela: a potência foi derivada e a função trigonométrica, mantida. Falta a segunda, que deriva a trigonométrica.": {
+    "fr": "Ce n’est que le premier terme : la puissance a été dérivée et la fonction trigonométrique gardée. Il manque le second, qui dérive la trigonométrique.",
+    "en": "That is only the first term: the power was differentiated and the trigonometric function kept. The second one, which differentiates the trigonometric function, is missing."
+  },
+  "Essa é só a área LATERAL. A área total inclui a base circular.": {
+    "fr": "Ce n’est que l’aire LATÉRALE. L’aire totale comprend la base circulaire.",
+    "en": "That is only the LATERAL area. The total area includes the circular base."
   },
   "Esse número sai inteiro, e sair inteiro é a confirmação de que a empírica estava certa.": {
     "fr": "Ce nombre sort entier, et sortir entier confirme que l’empirique était juste.",
@@ -5214,6 +5578,14 @@
   "Esse ângulo está dentro da imagem, então é ele.": {
     "fr": "Cet angle est dans l’image, c’est donc lui.",
     "en": "That angle is inside the range, so it is the one."
+  },
+  "Esse é o VOLUME. A superfície é #πr², sem o fator #/# e com r².": {
+    "fr": "C’est le VOLUME. La surface vaut #πr², sans le facteur #/# et avec r².",
+    "en": "That is the VOLUME. The surface is #πr², without the factor #/# and with r²."
+  },
+  "Esse é o discriminante, que decide o regime, mas não é uma raiz.": {
+    "fr": "C’est le discriminant, qui décide du régime, mais ce n’est pas une racine.",
+    "en": "That is the discriminant, which decides the regime, but it is not a root."
   },
   "Esse é o número atômico, o total de elétrons. As camadas ocupadas são poucas: uma camada acomoda muitos elétrons.": {
     "fr": "C’est le numéro atomique, le total d’électrons. Les couches occupées sont peu nombreuses : une couche accueille beaucoup d’électrons.",
@@ -5226,6 +5598,10 @@
   "Esse é o número de MOLS do reagente — o primeiro trecho do trajeto. Ainda faltam a proporção e a volta para gramas.": {
     "fr": "C’est le nombre de MOLES du réactif — le premier segment du trajet. Il reste la proportion et le retour aux grammes.",
     "en": "That is the number of MOLES of the reactant — the first leg of the route. The proportion and the way back to grams are still missing."
+  },
+  "Esse é o período da oscilação. O pedido é o tempo para a AMPLITUDE cair à metade.": {
+    "fr": "C’est la période de l’oscillation. Ce qui est demandé, c’est le temps pour que l’AMPLITUDE tombe de moitié.",
+    "en": "That is the period of the oscillation. What is asked is the time for the AMPLITUDE to halve."
   },
   "Esse é o pi maiúsculo, que MULTIPLICA. Somar é o sigma, ∑.": {
     "fr": "C’est le pi majuscule, qui MULTIPLIE. Additionner, c’est le sigma, ∑.",
@@ -5254,6 +5630,50 @@
   "Esse é o total de elétrons do átomo, que é o número atômico. A pergunta é sobre a ÚLTIMA camada — as de dentro não contam.": {
     "fr": "C’est le total d’électrons de l’atome, c’est-à-dire le numéro atomique. La question porte sur la DERNIÈRE couche — celles de l’intérieur ne comptent pas.",
     "en": "That is the atom’s total number of electrons, the atomic number. The question is about the LAST shell — the inner ones do not count."
+  },
+  "Esse é o valor da derivada PRIMEIRA. Falta derivar mais uma vez.": {
+    "fr": "C’est la valeur de la dérivée PREMIÈRE. Il reste à dériver une fois de plus.",
+    "en": "That is the value of the FIRST derivative. One more differentiation is missing."
+  },
+  "Esse é o valor da função no ponto. A reta só corta o eixo y ali se x₀ = #.": {
+    "fr": "C’est la valeur de la fonction au point. La droite ne coupe l’axe des ordonnées là que si x₀ = #.",
+    "en": "That is the value of the function at the point. The line only crosses the y-axis there if x₀ = #."
+  },
+  "Esse é o valor da própria função em #, não o da derivada. O enunciado pede a taxa de variação, não a altura da curva.": {
+    "fr": "C’est la valeur de la fonction elle-même en #, et non celle de la dérivée. L’énoncé demande le taux de variation, pas la hauteur de la courbe.",
+    "en": "That is the value of the function itself at #, not of the derivative. The question asks for the rate of change, not the height of the curve."
+  },
+  "Esse é o valor da própria função em #π/#, não o da derivada. O enunciado pede a taxa de variação, não a altura da curva.": {
+    "fr": "C’est la valeur de la fonction elle-même en #π/#, et non celle de la dérivée. L’énoncé demande le taux de variation, pas la hauteur de la courbe.",
+    "en": "That is the value of the function itself at #π/#, not of the derivative. The question asks for the rate of change, not the height of the curve."
+  },
+  "Esse é o valor da própria função em π, não o da derivada. O enunciado pede a taxa de variação, não a altura da curva.": {
+    "fr": "C’est la valeur de la fonction elle-même en π, et non celle de la dérivée. L’énoncé demande le taux de variation, pas la hauteur de la courbe.",
+    "en": "That is the value of the function itself at π, not of the derivative. The question asks for the rate of change, not the height of the curve."
+  },
+  "Esse é o valor da própria função em π/#, não o da derivada. O enunciado pede a taxa de variação, não a altura da curva.": {
+    "fr": "C’est la valeur de la fonction elle-même en π/#, et non celle de la dérivée. L’énoncé demande le taux de variation, pas la hauteur de la courbe.",
+    "en": "That is the value of the function itself at π/#, not of the derivative. The question asks for the rate of change, not the height of the curve."
+  },
+  "Esse é o valor da própria função no arco, não o da derivada.": {
+    "fr": "C’est la valeur de la fonction elle-même en cet arc, et non celle de la dérivée.",
+    "en": "That is the value of the function itself at that arc, not of the derivative."
+  },
+  "Esse é o valor da tangente em #, não o da sua derivada.": {
+    "fr": "C’est la valeur de la tangente en #, et non celle de sa dérivée.",
+    "en": "That is the value of the tangent at #, not of its derivative."
+  },
+  "Esse é o valor da tangente em #π/#, não o da sua derivada.": {
+    "fr": "C’est la valeur de la tangente en #π/#, et non celle de sa dérivée.",
+    "en": "That is the value of the tangent at #π/#, not of its derivative."
+  },
+  "Esse é o valor da tangente em π, não o da sua derivada.": {
+    "fr": "C’est la valeur de la tangente en π, et non celle de sa dérivée.",
+    "en": "That is the value of the tangent at π, not of its derivative."
+  },
+  "Esse é o valor da tangente em π/#, não o da sua derivada.": {
+    "fr": "C’est la valeur de la tangente en π/#, et non celle de sa dérivée.",
+    "en": "That is the value of the tangent at π/#, not of its derivative."
   },
   "Esse é o valor de x; o pedido é y. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de x ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
@@ -5287,6 +5707,10 @@
     "fr": "C’est la valeur de z ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
     "en": "That is the value of z; the question asks for y. Check which column belongs to which variable."
   },
+  "Esse é o valor inicial. O sistema evolui a partir dele, e em t positivo já se moveu.": {
+    "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
+    "en": "That is the initial value. The system evolves from it, and at positive t it has already moved."
+  },
   "Esse é o índice antes da redução — a carga do metal, crua. Depois de dividir pelos fatores comuns, o índice é outro.": {
     "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
     "en": "That is the subscript before reducing — the metal’s raw charge. After dividing by the common factors, the subscript is different."
@@ -5302,6 +5726,10 @@
   "Esse é só o ÚLTIMO termo. O número em cima do sigma diz onde a soma para, não o que somar: é preciso somar todos os termos de k inicial até ele.": {
     "fr": "C’est seulement le DERNIER terme. Le nombre au-dessus du sigma dit où la somme s’arrête, pas ce qu’il faut additionner : il faut additionner tous les termes depuis le k initial jusqu’à lui.",
     "en": "That is only the LAST term. The number above the sigma says where the sum stops, not what to add: you have to add every term from the starting k up to it."
+  },
+  "Esse é um único círculo máximo. A esfera tem superfície equivalente a QUATRO deles.": {
+    "fr": "C’est un seul grand cercle. La sphère a une surface équivalente à QUATRE d’entre eux.",
+    "en": "That is a single great circle. The sphere has a surface equal to FOUR of them."
   },
   "Esses são os SUBNÍVEIS ocupados, não as camadas. Uma camada reúne vários subníveis: a camada # tem o #s e o #p.": {
     "fr": "Ce sont les SOUS-COUCHES occupées, et non les couches. Une couche réunit plusieurs sous-couches : la couche # contient le #s et le #p.",
@@ -5375,6 +5803,14 @@
     "fr": "F neutre a # électrons, autant que de protons.",
     "en": "Neutral F has # electrons, as many as protons."
   },
+  "Faltou a parcela que deriva x e mantém a função trigonométrica. A regra do produto sempre soma duas parcelas, nunca uma.": {
+    "fr": "Il manque le terme qui dérive x et garde la fonction trigonométrique. La règle du produit additionne toujours deux termes, jamais un seul.",
+    "en": "The term that differentiates x and keeps the trigonometric function is missing. The product rule always adds two terms, never one."
+  },
+  "Faltou a parcela que deriva x elevado a # e mantém a função trigonométrica. A regra do produto sempre soma duas parcelas, nunca uma.": {
+    "fr": "Il manque le terme qui dérive x élevé à # et garde la fonction trigonométrique. La règle du produit additionne toujours deux termes, jamais un seul.",
+    "en": "The term that differentiates x raised to # and keeps the trigonometric function is missing. The product rule always adds two terms, never one."
+  },
   "Faltou a parcela que vem da L₂: a L₃ é combinação das DUAS linhas de cima.": {
     "fr": "Il manque le terme qui vient de la L₂ : la L₃ est une combinaison des DEUX lignes du dessus.",
     "en": "The part coming from L₂ is missing: L₃ is a combination of BOTH rows above."
@@ -5386,6 +5822,10 @@
   "Faltou a raiz quadrada no fator √(# + fx² + fy²).": {
     "fr": "Il manque la racine carrée dans le facteur √(# + fx² + fy²).",
     "en": "The square root in the factor √(# + fx² + fy²) is missing."
+  },
+  "Faltou dividir pela sombra da vara: a razão é altura/sombra.": {
+    "fr": "Il manque la division par l’ombre de la perche : le rapport est hauteur/ombre.",
+    "en": "The division by the pole’s shadow is missing: the ratio is height/shadow."
   },
   "Faltou dividir pelo determinante, que vale #: A⁻¹ = (#/det)·adj A.": {
     "fr": "Il manque la division par le déterminant, qui vaut # : A⁻¹ = (#/det)·adj A.",
@@ -5411,9 +5851,45 @@
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
     "en": "The multiplication of L₁ by # before subtracting is missing."
   },
+  "Faltou multiplicar pela derivada de dentro, que vale #. O resultado fica # vezes menor que o correto, e é o descuido mais frequente da regra da cadeia.": {
+    "fr": "Il manque la multiplication par la dérivée intérieure, qui vaut #. Le résultat est # fois plus petit que le bon, et c’est l’étourderie la plus fréquente de la règle de la chaîne.",
+    "en": "The multiplication by the inner derivative, which is #, is missing. The result comes out # times smaller than the right one, and it is the most frequent slip of the chain rule."
+  },
+  "Faltou o # de #mk ao isolar k.": {
+    "fr": "Il manque le # de #mk au moment d’isoler k.",
+    "en": "The # of #mk was dropped when isolating k."
+  },
   "Faltou o #/#: com F = (−y/#, x/#) a circulação já é a área; ∮(x dy − y dx) é o DOBRO dela.": {
     "fr": "Il manque le #/# : avec F = (−y/#, x/#) la circulation est déjà l’aire ; ∮(x dy − y dx) en vaut le DOUBLE.",
     "en": "The #/# is missing: with F = (−y/#, x/#) the circulation is already the area; ∮(x dy − y dx) is TWICE it."
+  },
+  "Faltou o #: como o volume do cone já tinha sido dividido por #, o fator volta multiplicando quando isolamos h.": {
+    "fr": "Il manque le # : comme le volume du cône avait déjà été divisé par #, le facteur revient en multipliant lorsqu’on isole h.",
+    "en": "The # is missing: since the cone’s volume had already been divided by #, the factor comes back multiplying when h is isolated."
+  },
+  "Faltou o #: de c² = #mk sai c = #√(mk), não √(mk).": {
+    "fr": "Il manque le # : de c² = #mk on tire c = #√(mk), et non √(mk).",
+    "en": "The # is missing: from c² = #mk comes c = #√(mk), not √(mk)."
+  },
+  "Faltou o fator # pi: uma volta completa não é # radiano.": {
+    "fr": "Il manque le facteur # pi : un tour complet ne fait pas # radian.",
+    "en": "The factor # pi is missing: a full turn is not # radian."
+  },
+  "Faltou o fator #, que vem da fórmula da quadrática.": {
+    "fr": "Il manque le facteur #, qui vient de la formule quadratique.",
+    "en": "The factor #, which comes from the quadratic formula, is missing."
+  },
+  "Faltou o fator interno #, que a cadeia traz para fora junto com a secante.": {
+    "fr": "Il manque le facteur intérieur #, que la chaîne sort avec la sécante.",
+    "en": "The inner factor #, which the chain brings out along with the secant, is missing."
+  },
+  "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
+    "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
+    "en": "The third is missing: a solid tapering to a vertex has #/# of the volume of the prism or cylinder with the same base and height."
+  },
+  "Faltou uma tampa: o cilindro fechado tem duas bases, uma em cada extremidade.": {
+    "fr": "Il manque un couvercle : le cylindre fermé a deux bases, une à chaque extrémité.",
+    "en": "One cap is missing: the closed cylinder has two bases, one at each end."
   },
   "Faraday: a fem é N vezes a taxa de variação do fluxo (o sinal, pela lei de Lenz, só diz o sentido).": {
     "fr": "Faraday : la f.é.m. est N fois le taux de variation du flux (le signe, par la loi de Lenz, ne dit que le sens).",
@@ -5819,6 +6295,10 @@
     "fr": "En isolant les arestas et en substituant.",
     "en": "Isolating the arestas and substituting."
   },
+  "Isolando c (positivo, porque é atrito).": {
+    "fr": "En isolant c (positif, puisqu’il s’agit d’un frottement).",
+    "en": "Isolating c (positive, since it is friction)."
+  },
   "Isolando faces e substituindo.": {
     "fr": "En isolant les faces et en substituant.",
     "en": "Isolating the faces and substituting."
@@ -6123,6 +6603,10 @@
     "fr": "Nous mesurons l'écart de chaque valeur par rapport à la moyenne.",
     "en": "We measure the deviation of each value from the mean."
   },
+  "Menos que isso, o sistema oscila; mais, volta devagar sem oscilar.": {
+    "fr": "En dessous, le système oscille ; au-dessus, il revient lentement sans osciller.",
+    "en": "Below that, the system oscillates; above it, it returns slowly without oscillating."
+  },
   "Mesma receita, sinal trocado — e dois ramos separados.": {
     "fr": "Même recette, signe changé — et deux branches séparées.",
     "en": "Same recipe, sign reversed — and two separate branches."
@@ -6143,9 +6627,17 @@
     "fr": "Mn neutre a # électrons, autant que de protons.",
     "en": "Neutral Mn has # electrons, as many as protons."
   },
+  "Mola mais dura que isso vence o atrito, e o sistema oscila.": {
+    "fr": "Un ressort plus raide que cela l’emporte sur le frottement, et le système oscille.",
+    "en": "A spring stiffer than that beats the friction, and the system oscillates."
+  },
   "Montamos a divisão, os dois polinômios ordenados pelo maior grau.": {
     "fr": "Nous montons la division, les deux polynômes ordonnés par le plus haut degré.",
     "en": "We set up the division, the two polynomials ordered by highest degree."
+  },
+  "Montamos a proporção com os valores dados.": {
+    "fr": "Nous formons la proportion avec les valeurs données.",
+    "en": "We set up the proportion with the given values."
   },
   "Montamos o determinante com os unitários na primeira linha.": {
     "fr": "Nous montons le déterminant avec les unitaires sur la première ligne.",
@@ -6171,6 +6663,10 @@
     "fr": "Nous multiplions TOUS les termes, des deux côtés, par # : les fractions disparaissent.",
     "en": "We multiply ALL the terms, on both sides, by #: the fractions vanish."
   },
+  "Multiplicamos a área original por esse fator.": {
+    "fr": "Nous multiplions l’aire d’origine par ce facteur.",
+    "en": "We multiply the original area by that factor."
+  },
   "Multiplicamos componente a componente e somamos.": {
     "fr": "Nous multiplions composante par composante et nous additionnons.",
     "en": "We multiply component by component and sum."
@@ -6178,6 +6674,10 @@
   "Multiplicamos e dividimos por #x para formar sen(u)/u.": {
     "fr": "Nous multiplions et divisons par #x pour former sin(u)/u.",
     "en": "We multiply and divide by #x to form sin(u)/u."
+  },
+  "Multiplicamos em cruz e isolamos a altura.": {
+    "fr": "Nous multiplions en croix et isolons la hauteur.",
+    "en": "We cross-multiply and isolate the height."
   },
   "Multiplicamos em cruz.": {
     "fr": "Nous multiplions en croix.",
@@ -6195,13 +6695,25 @@
     "fr": "Nous multiplions numérateur et dénominateur par le conjugué.",
     "en": "We multiply numerator and denominator by the conjugate."
   },
+  "Multiplicamos o volume original por esse fator.": {
+    "fr": "Nous multiplions le volume d’origine par ce facteur.",
+    "en": "We multiply the original volume by that factor."
+  },
   "Multiplicamos os binômios, cada termo do primeiro por cada termo do segundo.": {
     "fr": "Nous multiplions les binômes, chaque terme du premier par chaque terme du second.",
     "en": "We multiply the binomials, each term of the first by each term of the second."
   },
+  "Multiplicamos pela altura e tomamos um terço.": {
+    "fr": "Nous multiplions par la hauteur et prenons un tiers.",
+    "en": "We multiply by the height and take a third."
+  },
   "Multiplicamos pela altura.": {
     "fr": "Nous multiplions par la hauteur.",
     "en": "We multiply by the height."
+  },
+  "Multiplicamos pelo volume original.": {
+    "fr": "Nous multiplions par le volume d’origine.",
+    "en": "We multiply by the original volume."
   },
   "Multiplicamos todos os termos por #. Cada fração vira o numerador vezes # dividido pelo seu denominador.": {
     "fr": "Nous multiplions tous les termes par #. Chaque fraction devient le numérateur fois # divisé par son dénominateur.",
@@ -6379,6 +6891,10 @@
     "fr": "Dans la division, P(x) est le dividende et (x - #) le diviseur. Nous appelons le quotient Q(x) et le reste R.",
     "en": "In the division, P(x) is the dividend and (x - #) the divisor. We call the quotient Q(x) and the remainder R."
   },
+  "Na esfera o raio entra TRÊS vezes: ela não tem altura separada.": {
+    "fr": "Dans la sphère le rayon entre TROIS fois : elle n’a pas de hauteur à part.",
+    "en": "In the sphere the radius enters THREE times: it has no separate height."
+  },
   "Na exponencial, a variável está no EXPOENTE.": {
     "fr": "Dans l'exponentielle, la variable est dans l'EXPOSANT.",
     "en": "In the exponential, the variable is in the EXPONENT."
@@ -6454,6 +6970,10 @@
   "Na identidade da divisão, o produto Q·D precisa alcançar o grau de P.": {
     "fr": "Dans l’identité de la division, le produit Q·D doit atteindre le degré de P.",
     "en": "In the division identity, the product Q·D has to reach the degree of P."
+  },
+  "Na lateral o raio entra uma vez só, multiplicado pela geratriz.": {
+    "fr": "Dans la latérale le rayon n’entre qu’une fois, multiplié par la génératrice.",
+    "en": "In the lateral surface the radius enters only once, multiplied by the slant height."
   },
   "Na multiplicação não é preciso denominador comum: multiplicamos em linha.": {
     "fr": "Dans la multiplication, il n'est pas nécessaire d'avoir un dénominateur commun : nous multiplions en ligne.",
@@ -6550,6 +7070,10 @@
   "Ne neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ne neutre a # électrons, autant que de protons.",
     "en": "Neutral Ne has # electrons, as many as protons."
+  },
+  "Negativo: raízes complexas, e o sistema oscila enquanto a amplitude decai.": {
+    "fr": "Négatif : racines complexes, et le système oscille pendant que l’amplitude décroît.",
+    "en": "Negative: complex roots, and the system oscillates while the amplitude decays."
   },
   "Nela, a distância focal satisfaz c² = a² + b².": {
     "fr": "Là, la distance focale satisfait c² = a² + b².",
@@ -6739,6 +7263,10 @@
     "fr": "Notez le #s avant le #d : l’énergie du #s est plus basse, et c’est l’énergie qui commande.",
     "en": "Note the #s before the #d: the #s has lower energy, and energy is what rules."
   },
+  "Nulo: o caso crítico, em que o retorno é o mais rápido possível sem oscilar.": {
+    "fr": "Nul : le cas critique, où le retour est le plus rapide possible sans oscillation.",
+    "en": "Zero: the critical case, where the return is as fast as possible without oscillating."
+  },
   "Num campo plano (P, Q), o rotacional aponta em z e mede o giro local.": {
     "fr": "Dans un champ plan (P, Q), le rotationnel pointe en z et mesure la rotation locale.",
     "en": "In a plane field (P, Q), the curl points along z and measures the local spin."
@@ -6875,6 +7403,10 @@
     "fr": "Ce n’est pas une valeur remarquable : nous utilisons la calculatrice en degrés. Le résultat doit tomber dans [−#°, #°].",
     "en": "Not a special value: we use the calculator in degrees. The result must land in [−#°, #°]."
   },
+  "O # sobe multiplicando o volume ao isolarmos h.": {
+    "fr": "Le # monte en multipliant le volume lorsqu’on isole h.",
+    "en": "The # moves up multiplying the volume when h is isolated."
+  },
   "O #º termo corresponde a k = # (o #º é k = #). Use C(#, k) vezes (#) elevado a k.": {
     "fr": "Le #ᵉ terme correspond à k = # (le #ᵉ est k = #). Utilisez C(#, k) fois (#) à la puissance k.",
     "en": "The #st term matches k = # (the #rd is k = #). Use C(#, k) times (#) to the power k."
@@ -6919,6 +7451,10 @@
     "fr": "Le S est l’ancre : dans un composé binaire, son n.o. est connu.",
     "en": "S is the anchor: in a binary compound its oxidation number is known."
   },
+  "O Sol está no mesmo lugar para os dois, então altura e sombra guardam a mesma razão: # para #.": {
+    "fr": "Le Soleil est au même endroit pour les deux, donc hauteur et ombre gardent le même rapport : # pour #.",
+    "en": "The Sun is in the same place for both, so height and shadow keep the same ratio: # to #."
+  },
   "O Teorema Fundamental diz que a integral é a variação de F nos extremos.": {
     "fr": "Le théorème fondamental dit que l’intégrale est la variation de F aux extrémités.",
     "en": "The Fundamental Theorem says the integral is the change in F at the endpoints."
@@ -6935,6 +7471,10 @@
     "fr": "La portée est la vitesse horizontale fois le temps total.",
     "en": "Range is horizontal speed times total time."
   },
+  "O amortecimento alonga o período em relação ao sistema sem atrito.": {
+    "fr": "L’amortissement allonge la période par rapport au système sans frottement.",
+    "en": "Damping lengthens the period compared with the frictionless system."
+  },
   "O arccos devolve o ângulo da imagem [#°, #°] que tem esse valor de cosseno.": {
     "fr": "L’arccos renvoie l’angle de l’image [#°, #°] qui a cette valeur de cosseno.",
     "en": "The arccos returns the angle in the range [#°, #°] with that cosseno value."
@@ -6950,6 +7490,30 @@
   "O arctg devolve o ângulo da imagem (−#°, #°) que tem esse valor de tangente.": {
     "fr": "L’arctg renvoie l’angle de l’image (−#°, #°) qui a cette valeur de tangente.",
     "en": "The arctg returns the angle in the range (−#°, #°) with that tangente value."
+  },
+  "O argumento da função trigonométrica é #π, e não #π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est #π, et non #π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is #π, not #π/#. The inner factor multiplies the derivative AND goes into the argument."
+  },
+  "O argumento da função trigonométrica é #π, e não π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est #π, et non π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is #π, not π/#. The inner factor multiplies the derivative AND goes into the argument."
+  },
+  "O argumento da função trigonométrica é #π/#, e não #π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est #π/#, et non #π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is #π/#, not #π/#. The inner factor multiplies the derivative AND goes into the argument."
+  },
+  "O argumento da função trigonométrica é #π/#, e não π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est #π/#, et non π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is #π/#, not π/#. The inner factor multiplies the derivative AND goes into the argument."
+  },
+  "O argumento da função trigonométrica é π, e não π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est π, et non π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is π, not π/#. The inner factor multiplies the derivative AND goes into the argument."
+  },
+  "O argumento da função trigonométrica é π/#, e não π/#. O fator interno multiplica a derivada E entra no argumento.": {
+    "fr": "L’argument de la fonction trigonométrique est π/#, et non π/#. Le facteur intérieur multiplie la dérivée ET entre dans l’argument.",
+    "en": "The argument of the trigonometric function is π/#, not π/#. The inner factor multiplies the derivative AND goes into the argument."
   },
   "O argumento não é x: ele traz um fator que precisa sair.": {
     "fr": "L’argument n’est pas x : il apporte un facteur qui doit sortir.",
@@ -6975,6 +7539,10 @@
     "fr": "Le bloc commence à glisser quand la composante du poids égale le frottement maximum.",
     "en": "The block starts to slide when the weight component equals the maximum friction."
   },
+  "O c entra AO QUADRADO no discriminante: Δ = c² − #mk.": {
+    "fr": "Le c entre AU CARRÉ dans le discriminant : Δ = c² − #mk.",
+    "en": "The c enters SQUARED in the discriminant: Δ = c² − #mk."
+  },
   "O calor específico é o preço de aquecer um quilo em um grau.": {
     "fr": "La chaleur spécifique est le prix de chauffer un kilo en un degré.",
     "en": "Specific heat is the price of heating a kilogram by one degree."
@@ -6995,9 +7563,17 @@
     "fr": "L’annulation vaut pour tout x différent du point — et c’est tout ce dont la limite a besoin.",
     "en": "The cancellation holds for every x other than the point — and that is all the limit needs."
   },
+  "O cateto ao quadrado é a hipotenusa ao quadrado menos o outro cateto ao quadrado: #² − #². Depois tire a raiz.": {
+    "fr": "La cathète au carré est l’hypoténuse au carré moins l’autre cathète au carré : #² − #². Prenez ensuite la racine.",
+    "en": "The leg squared is the hypotenuse squared minus the other leg squared: #² − #². Then take the root."
+  },
   "O centro de massa é a média das posições, ponderada pelas massas.": {
     "fr": "Le centre de masse est la moyenne des positions, pondérée par les masses.",
     "en": "The center of mass is the average of positions, weighted by the masses."
+  },
+  "O cilindro não tem o fator # — esse é do cone.": {
+    "fr": "Le cylindre n’a pas le facteur # — celui-ci est celui du cône.",
+    "en": "The cylinder does not have the factor # — that one belongs to the cone."
   },
   "O cilindro é um prisma de base circular: área da base vezes altura.": {
     "fr": "Le cylindre est un prisme de base circulaire : aire de la base fois hauteur.",
@@ -7018,6 +7594,10 @@
   "O coeficiente de determinação é o quadrado do de correlação.": {
     "fr": "Le coefficient de détermination est le carré de celui de corrélation.",
     "en": "The coefficient of determination is the square of the correlation coefficient."
+  },
+  "O coeficiente de fora acompanha a derivada.": {
+    "fr": "Le coefficient extérieur suit la dérivée.",
+    "en": "The outside coefficient tags along with the derivative."
   },
   "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO.": {
     "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM.",
@@ -7079,6 +7659,10 @@
     "fr": "Le cosinus se répète à l’angle symétrique par rapport à l’axe horizontal : #° − x₀.",
     "en": "The cosine repeats at the angle mirrored about the horizontal axis: #° − x₀."
   },
+  "O cosseno só oscila entre −# e #; quem encolhe é a exponencial.": {
+    "fr": "Le cosinus ne fait qu’osciller entre −# et # ; ce qui rétrécit, c’est l’exponentielle.",
+    "en": "The cosine only swings between −# and #; what shrinks is the exponential."
+  },
   "O cruzamento está certo e falta reduzir. A fórmula é uma proporção: Mg²⁺ com O²⁻ dá MgO, não Mg#O#.": {
     "fr": "Le croisement est juste, il reste à réduire. La formule est une proportion : Mg²⁺ avec O²⁻ donne MgO, et non Mg#O#.",
     "en": "The crossing is right and the reducing is missing. The formula is a proportion: Mg²⁺ with O²⁻ gives MgO, not Mg#O#."
@@ -7118,6 +7702,10 @@
   "O denominador é # elevado ao número de CASAS decimais, não # sempre. Com # casas, ele vale #.": {
     "fr": "Le dénominateur est # élevé au nombre de DÉCIMALES, et non # à chaque fois. Avec # décimales, il vaut #.",
     "en": "The denominator is # raised to the number of decimal PLACES, not # every time. With # places, it is #."
+  },
+  "O denominador é a ÁREA da base, πr², não o raio. Volume dividido por comprimento daria uma área, não uma altura.": {
+    "fr": "Le dénominateur est l’AIRE de la base, πr², et non le rayon. Un volume divisé par une longueur donnerait une aire, pas une hauteur.",
+    "en": "The denominator is the base AREA, πr², not the radius. Volume divided by a length would give an area, not a height."
   },
   "O denominador é constante, então ele só divide a derivada do natural.": {
     "fr": "Le dénominateur est constant, donc il ne divise que la dérivée du naturel.",
@@ -7163,9 +7751,17 @@
     "fr": "Le discriminant dit combien de fois la parabole touche l’axe des x.",
     "en": "The discriminant tells how many times the parabola meets the x-axis."
   },
+  "O discriminante vale #, e é ele que decide o regime.": {
+    "fr": "Le discriminant vaut #, et c’est lui qui décide du régime.",
+    "en": "The discriminant is #, and it is what decides the regime."
+  },
   "O discriminante é negativo, e não existe raiz quadrada real de número negativo.": {
     "fr": "Le discriminant est négatif, et il n'existe pas de racine carrée réelle de nombre négatif.",
     "en": "The discriminant is negative, and there is no real square root of a negative number."
+  },
+  "O discriminante é o de sempre.": {
+    "fr": "Le discriminant est celui de toujours.",
+    "en": "The discriminant is the usual one."
   },
   "O discriminante é zero, então o trinômio é um quadrado perfeito.": {
     "fr": "Le discriminant est zéro, donc le trinôme est un carré parfait.",
@@ -7283,6 +7879,10 @@
     "fr": "L’exposant # multiplie les exposants du second facteur avant l’addition. Additionner les dimensions directement ignore la puissance.",
     "en": "The exponent # multiplies the exponents of the second factor before the sum. Adding the dimensions directly ignores the power."
   },
+  "O expoente é #, não #: volume é uma grandeza de três dimensões.": {
+    "fr": "L’exposant est #, et non # : le volume est une grandeur à trois dimensions.",
+    "en": "The exponent is #, not #: volume is a three-dimensional quantity."
+  },
   "O fator (#x + #) zera no número de sinal contrário ao que está dentro dele.": {
     "fr": "Le facteur (#x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
     "en": "The factor (#x + #) vanishes at the number whose sign is opposite to the one written inside it."
@@ -7322,6 +7922,14 @@
   "O fator linear # entra ao quadrado: #² = # #.": {
     "fr": "Le facteur linéaire # entre au carré : #² = # #.",
     "en": "The linear factor # enters squared: #² = # #."
+  },
+  "O fator que multiplica o volume é portanto k elevado a #.": {
+    "fr": "Le facteur qui multiplie le volume est donc k élevé à #.",
+    "en": "The factor multiplying the volume is therefore k to the #."
+  },
+  "O fator que multiplica o área é portanto k elevado a #.": {
+    "fr": "Le facteur qui multiplie l’aire est donc k élevé à #.",
+    "en": "The factor multiplying the area is therefore k to the #."
   },
   "O fatorial não foi aplicado: n! é o produto de todos os naturais de # a n, não o próprio n.": {
     "fr": "La factorielle n’a pas été appliquée : n! est le produit de tous les entiers naturels de # à n, et non n lui-même.",
@@ -7422,6 +8030,10 @@
   "O maior deles é o pedido.": {
     "fr": "Le plus grand d’entre eux est celui demandé.",
     "en": "The largest of them is the one asked for."
+  },
+  "O maior lado mede # cm: eleve ao quadrado, # · #.": {
+    "fr": "Le plus grand côté mesure # cm : élevez au carré, # · #.",
+    "en": "The longest side is # cm: square it, # · #."
   },
   "O maior x admissível é a raiz desse limite.": {
     "fr": "Le plus grand x admissible est la racine de cette limite.",
@@ -7731,6 +8343,10 @@
     "fr": "Le carré de la somme contient les deux carrés plus le double du produit.",
     "en": "The square of the sum has the two squares plus twice the product."
   },
+  "O quadrado do maior é MAIOR que a soma: o triângulo é obtusângulo.": {
+    "fr": "Le carré du plus grand est PLUS GRAND que la somme : le triangle est obtusangle.",
+    "en": "The square of the longest side is LARGER than the sum: the triangle is obtuse."
+  },
   "O que decide é o numerador no mesmo ponto.": {
     "fr": "Ce qui décide est le numérateur au même point.",
     "en": "What decides is the numerator at the same point."
@@ -7754,6 +8370,10 @@
   "O que sobrou é do #º grau: aqui Bhaskara resolve de uma vez.": {
     "fr": "Ce qui reste est du #ᵉ degré : ici la formule quadratique résout d’un coup.",
     "en": "What is left is of degree #: here the quadratic formula settles it at once."
+  },
+  "O raio entra ao QUADRADO, porque ele mede a base, que é uma área. A altura entra uma vez só.": {
+    "fr": "Le rayon entre au CARRÉ, parce qu’il mesure la base, qui est une aire. La hauteur n’entre qu’une fois.",
+    "en": "The radius enters SQUARED, because it measures the base, which is an area. The height enters only once."
   },
   "O raio esférico é a distância até a origem.": {
     "fr": "Le rayon sphérique est la distance à l’origine.",
@@ -7891,9 +8511,21 @@
     "fr": "Le signe moins change le signe de TOUT le produit.",
     "en": "The minus sign flips the sign of the WHOLE product."
   },
+  "O sinal de menos é a parte que se esquece: o cosseno começa descendo.": {
+    "fr": "Le signe moins est ce qu’on oublie : le cosinus commence par descendre.",
+    "en": "The minus sign is the part people forget: the cosine starts by going down."
+  },
   "O sinal do produto, pela regra dos sinais, pedaço por pedaço.": {
     "fr": "Le signe du produit, par la règle des signes, morceau par morceau.",
     "en": "The sign of the product, by the sign rule, piece by piece."
+  },
+  "O sinal do segundo termo está errado: o discriminante é b ao quadrado MENOS quatro vezes o produto.": {
+    "fr": "Le signe du second terme est faux : le discriminant est b au carré MOINS quatre fois le produit.",
+    "en": "The sign of the second term is wrong: the discriminant is b squared MINUS four times the product."
+  },
+  "O sinal está invertido. Com b e c positivos, as duas raízes são negativas — é isso que faz o sistema voltar ao repouso.": {
+    "fr": "Le signe est inversé. Avec b et c positifs, les deux racines sont négatives — c’est ce qui ramène le système au repos.",
+    "en": "The sign is flipped. With b and c positive, both roots are negative — that is what brings the system back to rest."
   },
   "O sinal está invertido. Expoente negativo significa que a dimensão está no denominador — confira a definição da grandeza.": {
     "fr": "Le signe est inversé. Un exposant négatif signifie que la dimension est au dénominateur — vérifiez la définition de la grandeur.",
@@ -7927,6 +8559,14 @@
     "fr": "Le signe est inversé. Comme l’opération soustrait déjà k·L₁, k a le MÊME signe que le rapport entre l’entrée et le pivot.",
     "en": "The sign is flipped. Since the operation already subtracts k·L₁, k has the SAME sign as the ratio of the entry to the pivot."
   },
+  "O sinal ficou trocado: em x = #, y = f(x₀) − m·x₀.": {
+    "fr": "Le signe est inversé : en x = #, y = f(x₀) − m·x₀.",
+    "en": "The sign is flipped: at x = #, y = f(x₀) − m·x₀."
+  },
+  "O sinal negativo da derivada do cosseno ficou de fora.": {
+    "fr": "Le signe négatif de la dérivée du cosinus a été oublié.",
+    "en": "The negative sign of the derivative of cosine was left out."
+  },
   "O sinal pedido nunca acontece: nenhum número real serve.": {
     "fr": "Le signe demandé ne se produit jamais : aucun nombre réel ne convient.",
     "en": "The required sign never happens: no real number works."
@@ -7950,6 +8590,10 @@
   "O sinal saiu trocado: o pivô é k - #, que zera em k = #.": {
     "fr": "Le signe est inversé : le pivot est k - #, qui s’annule en k = #.",
     "en": "The sign is flipped: the pivot is k - #, which vanishes at k = #."
+  },
+  "O sinal: duas derivadas de seno (ou de cosseno) devolvem a função com o sinal TROCADO — seno → cosseno → −seno.": {
+    "fr": "Le signe : deux dérivées de sinus (ou de cosinus) rendent la fonction avec le signe INVERSÉ — sinus → cosinus → −sinus.",
+    "en": "The sign: two derivatives of sine (or cosine) give the function back with the sign FLIPPED — sine → cosine → −sine."
   },
   "O somatório manda somar o termo com k indo de # a #.": {
     "fr": "La somme demande d’additionner le terme pour k allant de # à #.",
@@ -8043,6 +8687,10 @@
     "fr": "Le terme est plus petit que #/n², série de Riemann avec p = # ; par comparaison, la série converge.",
     "en": "The term is smaller than #/n², a p-series with p = #; by comparison, the series converges."
   },
+  "O terço vale para cone e pirâmide. O cilindro tem seção constante: é área da base vezes altura, sem divisão.": {
+    "fr": "Le tiers vaut pour le cône et la pyramide. Le cylindre a une section constante : c’est l’aire de la base fois la hauteur, sans division.",
+    "en": "The third applies to the cone and the pyramid. The cylinder has constant cross-section: it is base area times height, with no division."
+  },
   "O teste da segunda derivada classifica o ponto.": {
     "fr": "Le test de la deuxième dérivée classe le point.",
     "en": "The second derivative test classifies the point."
@@ -8111,6 +8759,10 @@
     "fr": "Le volume du cube est l’arête au cube.",
     "en": "A cube’s volume is the edge cubed."
   },
+  "O volume escala com k³, não com k. Aqui k = #, então o fator é #³.": {
+    "fr": "Le volume varie comme k³, et non comme k. Ici k = #, donc le facteur vaut #³.",
+    "en": "Volume scales with k³, not with k. Here k = #, so the factor is #³."
+  },
   "O volume é o módulo do determinante #×# com u, v e w nas linhas. Calcule v × w e depois o escalar com u.": {
     "fr": "Le volume est le module du déterminant #×# avec u, v et w sur les lignes. Calculez v × w puis le scalaire avec u.",
     "en": "The volume is the absolute value of the #×# determinant with u, v and w as rows. Compute v × w and then the scalar with u."
@@ -8138,6 +8790,22 @@
   "O vértice é o ponto extremo da parábola: é ele que responde «qual é o maior» ou «qual é o menor».": {
     "fr": "Le sommet est le point extrême de la parabole : c’est lui qui répond à « quel est le plus grand » ou « quel est le plus petit ».",
     "en": "The vertex is the extreme point of the parabola: it is what answers “which is the largest” or “which is the smallest”."
+  },
+  "O x₀ = #π/# entra em radianos: #.": {
+    "fr": "Le x₀ = #π/# entre en radians : #.",
+    "en": "The x₀ = #π/# goes in radians: #."
+  },
+  "O x₀ = π entra em radianos: #.": {
+    "fr": "Le x₀ = π entre en radians : #.",
+    "en": "The x₀ = π goes in radians: #."
+  },
+  "O x₀ = π/# entra em radianos: #.": {
+    "fr": "Le x₀ = π/# entre en radians : #.",
+    "en": "The x₀ = π/# goes in radians: #."
+  },
+  "O x₀ precisa estar em RADIANOS na reta, não em graus.": {
+    "fr": "Le x₀ doit être en RADIANS dans la droite, et non en degrés.",
+    "en": "The x₀ has to be in RADIANS in the line, not in degrees."
   },
   "O zero de cima (x = #) ENTRA, porque a relação tem «ou igual». O de baixo (x = #) NUNCA entra: ali a fração não existe.": {
     "fr": "Le zéro du haut (x = #) ENTRE, parce que la relation contient « ou égal ». Celui du bas (x = #) n’entre JAMAIS : là, la fraction n’existe pas.",
@@ -8174,6 +8842,10 @@
   "O ângulo externo é o suplemento do interno do mesmo vértice.": {
     "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
     "en": "The exterior angle is the supplement of the interior one at the same vertex."
+  },
+  "O ângulo oposto ao maior lado é reto.": {
+    "fr": "L’angle opposé au plus grand côté est droit.",
+    "en": "The angle opposite the longest side is right."
   },
   "O índice conta átomos na fórmula, e por isso multiplica a massa.": {
     "fr": "L’indice compte les atomes de la formule, et multiplie donc la masse.",
@@ -8254,6 +8926,10 @@
   "Os botões abaixo do campo escrevem os símbolos.": {
     "fr": "Les boutons sous le champ écrivent les symboles.",
     "en": "The buttons below the field type the symbols."
+  },
+  "Os catetos não se somam diretamente: são os QUADRADOS que somam. Se somassem, o caminho reto teria o mesmo comprimento do caminho em L.": {
+    "fr": "Les cathètes ne s’additionnent pas directement : ce sont les CARRÉS qui s’additionnent. Sinon, le chemin droit aurait la même longueur que le chemin en L.",
+    "en": "The legs do not add directly: it is the SQUARES that add. If they did, the straight path would be as long as the L-shaped one."
   },
   "Os coeficientes de x, y e z são as coordenadas da normal.": {
     "fr": "Les coefficients de x, y et z sont les coordonnées de la normale.",
@@ -8531,6 +9207,10 @@
     "fr": "Les deux termes sont des cubes parfaits : #x³ est le cube de x et # est le cube de #.",
     "en": "Both terms are perfect cubes: #x³ is the cube of x and # is the cube of #."
   },
+  "Os dois valores coincidem: o triângulo É retângulo.": {
+    "fr": "Les deux valeurs coïncident : le triangle EST rectangle.",
+    "en": "The two values match: the triangle IS right-angled."
+  },
   "Os dois zeram: o fator se cancela e sobra um ponto removido.": {
     "fr": "Les deux s'annulent : le facteur s'annule et il reste un point supprimé.",
     "en": "Both are zero: the factor cancels and a removable point remains."
@@ -8563,6 +9243,10 @@
     "fr": "Les nombres trouvés sont les racines, et chacune génère un facteur.",
     "en": "The numbers found are the roots, and each generates a factor."
   },
+  "Os pedaços guardam a mesma razão nas duas transversais: # está para # como # está para o pedaço que falta. Multiplique cruzado.": {
+    "fr": "Les segments gardent le même rapport sur les deux transversales : # est à # comme # est au segment manquant. Multipliez en croix.",
+    "en": "The pieces keep the same ratio on both transversals: # is to # as # is to the missing piece. Cross-multiply."
+  },
   "Os planos não têm ponto comum aos três.": {
     "fr": "Les plans n’ont aucun point commun aux trois.",
     "en": "The three planes have no point in common."
@@ -8582,6 +9266,10 @@
   "Os quatro ângulos de um quadrilátero somam #°: tire #°, #° e #° de #°.": {
     "fr": "Les quatre angles d’un quadrilatère font #° : retirez #°, #° et #° de #°.",
     "en": "The four angles of a quadrilateral add to #°: take #°, #° and #° from #°."
+  },
+  "Os raios de sol chegam paralelos, então os dois triângulos são semelhantes.": {
+    "fr": "Les rayons du soleil arrivent parallèles, donc les deux triangles sont semblables.",
+    "en": "The sun’s rays arrive parallel, so the two triangles are similar."
   },
   "Os semieixos são # e # (as raízes de # e #), não os quadrados.": {
     "fr": "Les demi-axes sont # et # (les racines de # et #), et non les carrés.",
@@ -8626,6 +9314,14 @@
   "Os índices ficaram de fora. Eles contam átomos: cada um multiplica a massa atômica do seu elemento antes da soma.": {
     "fr": "Les indices ont été oubliés. Ils comptent des atomes : chacun multiplie la masse atomique de son élément avant l’addition.",
     "en": "The subscripts were left out. They count atoms: each one multiplies its element’s atomic mass before the sum."
+  },
+  "Oscila quando as raízes da característica são complexas: discriminante negativo.": {
+    "fr": "Il oscille quand les racines de la caractéristique sont complexes : discriminant négatif.",
+    "en": "It oscillates when the roots of the characteristic equation are complex: negative discriminant."
+  },
+  "Oscila quando c² − #mk < #. A fronteira é c² − #mk = #: isole k.": {
+    "fr": "Il oscille quand c² − #mk < #. La frontière est c² − #mk = # : isolez k.",
+    "en": "It oscillates when c² − #mk < #. The boundary is c² − #mk = #: isolate k."
   },
   "Ou pelo triângulo: cada número é a soma dos dois de cima.": {
     "fr": "Ou par le triangle : chaque nombre est la somme des deux du dessus.",
@@ -8790,6 +9486,10 @@
   "Partimos da forma geral.": {
     "fr": "Nous partons de la forme générale.",
     "en": "We start from the general form."
+  },
+  "Partimos da fórmula do volume e isolamos a altura.": {
+    "fr": "Nous partons de la formule du volume et isolons la hauteur.",
+    "en": "We start from the volume formula and isolate the height."
   },
   "Partimos da identidade fundamental.": {
     "fr": "Nous partons de l’identité fondamentale.",
@@ -8963,6 +9663,10 @@
     "fr": "Par la loi de Lenz, la force sur le courant induit s’oppose au mouvement : F = B·I·L.",
     "en": "By Lenz’s law, the force on the induced current opposes the motion: F = B·I·L."
   },
+  "Pela recíproca de Pitágoras, o triângulo é retângulo quando a² = b² + c².": {
+    "fr": "Par la réciproque de Pythagore, le triangle est rectangle quand a² = b² + c².",
+    "en": "By the converse of Pythagoras, the triangle is right-angled when a² = b² + c²."
+  },
   "Pela regra da potência invertida, o expoente sobe e divide.": {
     "fr": "Par la règle de la puissance inversée, l’exposant monte et divise.",
     "en": "By the inverted power rule, the exponent goes up and divides."
@@ -9127,6 +9831,10 @@
     "fr": "Donc :",
     "en": "So:"
   },
+  "Positivo: duas raízes reais, e o sistema volta ao repouso sem oscilar.": {
+    "fr": "Positif : deux racines réelles, et le système revient au repos sans osciller.",
+    "en": "Positive: two real roots, and the system returns to rest without oscillating."
+  },
   "Posição trocada: essa é a entrada da linha #, coluna #.": {
     "fr": "Position inversée : c’est l’entrée de la ligne #, colonne #.",
     "en": "Wrong position: that is the entry in row #, column #."
@@ -9154,6 +9862,10 @@
   "Primeira aplicação: derivadas de cima e de baixo.": {
     "fr": "Première application : dérivées du haut et du bas.",
     "en": "First application: derivatives of top and bottom."
+  },
+  "Primeiro a hipotenusa, por Pitágoras.": {
+    "fr": "D’abord l’hypoténuse, par Pythagore.",
+    "en": "First the hypotenuse, by Pythagoras."
   },
   "Primeiro a inclinação b; depois o intercepto sai de a = ȳ − b·x̄, porque a reta passa pelo ponto das médias.": {
     "fr": "D’abord la pente b ; ensuite l’ordonnée à l’origine sort de a = ȳ − b·x̄, puisque la droite passe par le point des moyennes.",
@@ -9207,6 +9919,14 @@
     "fr": "D'abord ce qui agit à l'horizontale, de l'intérieur vers l'extérieur.",
     "en": "First what acts horizontally, from inside to outside."
   },
+  "Primeiro o raio ao cubo.": {
+    "fr": "D’abord le rayon au cube.",
+    "en": "First the radius cubed."
+  },
+  "Primeiro o raio ao quadrado.": {
+    "fr": "D’abord le rayon au carré.",
+    "en": "First the radius squared."
+  },
   "Primeiro padronizamos o valor.": {
     "fr": "D'abord nous standardisons la valeur.",
     "en": "First we standardize the value."
@@ -9218,6 +9938,10 @@
   "Primeiro trecho: a massa dada vira quantidade.": {
     "fr": "Premier segment : la masse donnée devient une quantité de matière.",
     "en": "First leg: the given mass becomes an amount of substance."
+  },
+  "Primeiro, o regime: o discriminante é negativo, então o sistema oscila.": {
+    "fr": "D’abord le régime : le discriminant est négatif, donc le système oscille.",
+    "en": "First, the regime: the discriminant is negative, so the system oscillates."
   },
   "Primeiro, quanto UMA máquina produz por hora.": {
     "fr": "D’abord, ce qu’UNE machine produit par heure.",
@@ -9306,6 +10030,10 @@
   "Quanto cada pessoa consome.": {
     "fr": "Combien chaque personne consomme.",
     "en": "How much each person consumes."
+  },
+  "Quanto maior a diferença, mais aberto é o ângulo oposto ao maior lado.": {
+    "fr": "Plus l’écart est grand, plus l’angle opposé au plus grand côté est ouvert.",
+    "en": "The larger the gap, the wider the angle opposite the longest side."
   },
   "Quanto vale qualquer número elevado a zero?": {
     "fr": "Combien vaut n’importe quel nombre élevé à zéro ?",
@@ -9507,6 +10235,10 @@
     "fr": "En résolvant.",
     "en": "Solving."
   },
+  "Resultado de Arquimedes, que pediu para gravá-lo em seu túmulo.": {
+    "fr": "Résultat d’Archimède, qui demanda qu’on le grave sur sa tombe.",
+    "en": "Archimedes’ result, which he asked to have carved on his tomb."
+  },
   "Resíduo = y observado − y previsto pela reta naquele x.": {
     "fr": "Résidu = y observé − y prévu par la droite à ce x.",
     "en": "Residual = observed y − y predicted by the line at that x."
@@ -9575,6 +10307,10 @@
     "fr": "Sans frottement, l'énergie mécanique totale se conserve.",
     "en": "Without friction, the total mechanical energy is conserved."
   },
+  "Sem esse último fator a conta fica incompleta, por mais que a potência esteja certa.": {
+    "fr": "Sans ce dernier facteur le calcul reste incomplet, même si la puissance est juste.",
+    "en": "Without that last factor the computation is incomplete, however right the power may be."
+  },
   "Sem repetições, há n! ordens possíveis.": {
     "fr": "Sans répétitions, il y a n! ordres possibles.",
     "en": "Without repetitions, there are n! possible orders."
@@ -9586,6 +10322,10 @@
   "Sem x significa expoente zero.": {
     "fr": "Sans x signifie exposant nul.",
     "en": "No x means exponent zero."
+  },
+  "Semelhança é proporção, não diferença constante: os segmentos são multiplicados pela razão, não somados a ela.": {
+    "fr": "La similitude est une proportion, et non une différence constante : les segments sont multipliés par le rapport, pas additionnés à lui.",
+    "en": "Similarity is a proportion, not a constant difference: the segments are multiplied by the ratio, not added to it."
   },
   "Sendo regular, todos os ângulos são iguais: dividimos a soma por n.": {
     "fr": "Étant régulier, tous les angles sont égaux : nous divisons la somme par n.",
@@ -9935,6 +10675,10 @@
     "fr": "Remplacez x par # : chaque terme devient seulement son coefficient.",
     "en": "Substitute x = #: each term becomes just its coefficient."
   },
+  "Substitua y igual a e elevado a rt e resolva a quadrática que aparece.": {
+    "fr": "Remplacez y par e élevé à rt et résolvez la quadratique qui apparaît.",
+    "en": "Replace y by e to the rt and solve the quadratic that appears."
+  },
   "Substituindo (os kΩ se cancelam).": {
     "fr": "En substituant (les kΩ se simplifient).",
     "en": "Substituting (the kΩ cancel out)."
@@ -9986,6 +10730,10 @@
   "Substituindo os valores.": {
     "fr": "En remplaçant les valeurs.",
     "en": "Substituting the values."
+  },
+  "Substituindo uma exponencial, a EDO vira uma equação do segundo grau.": {
+    "fr": "En remplaçant par une exponentielle, l’EDO devient une équation du second degré.",
+    "en": "Substituting an exponential, the ODE becomes a quadratic equation."
   },
   "Substituindo v/c.": {
     "fr": "En remplaçant v/c.",
@@ -10054,6 +10802,10 @@
   "Substituir dá #/#. Multiplique em cima e embaixo pelo conjugado, √(x + #) + #, e simplifique o x.": {
     "fr": "La substitution donne #/#. Multipliez en haut et en bas par le conjugué, √(x + #) + #, et simplifiez le x.",
     "en": "Substituting gives #/#. Multiply top and bottom by the conjugate, √(x + #) + #, and cancel the x."
+  },
+  "Substituir y igual a e elevado a rt transforma a EDO numa equação do segundo grau.": {
+    "fr": "Remplacer y par e élevé à rt transforme l’EDO en une équation du second degré.",
+    "en": "Replacing y by e to the rt turns the ODE into a quadratic equation."
   },
   "Substituímos a dimensão de velocidade.": {
     "fr": "Nous substituons la dimension de vitesse.",
@@ -10131,6 +10883,10 @@
     "fr": "Nous substituons l'un des points pour trouver le coefficient linéaire.",
     "en": "We substitute one of the points to find the linear coefficient."
   },
+  "Substituímos x = # e usamos os valores notáveis.": {
+    "fr": "Nous remplaçons x = # et utilisons les valeurs remarquables.",
+    "en": "We substitute x = # and use the standard values."
+  },
   "Substituímos x = # nas derivadas.": {
     "fr": "Nous substituons x = # dans les dérivées.",
     "en": "We substitute x = # into the derivatives."
@@ -10138,6 +10894,10 @@
   "Substituímos x = #, de modo que o argumento vale #.": {
     "fr": "Nous substituons x = #, de sorte que l’argument vaut #.",
     "en": "We substitute x = #, so the argument is #."
+  },
+  "Substituímos x = #.": {
+    "fr": "Nous remplaçons x = #.",
+    "en": "We substitute x = #."
   },
   "Substituímos x = #π/# e usamos os valores notáveis.": {
     "fr": "Nous substituons x = #π/# et utilisons les valeurs remarquables.",
@@ -10167,6 +10927,10 @@
     "fr": "Nous substituons x = π.",
     "en": "We substitute x = π."
   },
+  "Substituímos x = π/# e usamos os valores notáveis.": {
+    "fr": "Nous remplaçons x = π/# et utilisons les valeurs remarquables.",
+    "en": "We substitute x = π/# and use the standard values."
+  },
   "Substituímos x = π/#, de modo que o argumento vale #π.": {
     "fr": "Nous substituons x = π/#, de sorte que l’argument vaut #π.",
     "en": "We substitute x = π/#, so the argument is #π."
@@ -10174,6 +10938,10 @@
   "Substituímos x = π/#, de modo que o argumento vale #π/#.": {
     "fr": "Nous substituons x = π/#, de sorte que l’argument vaut #π/#.",
     "en": "We substitute x = π/#, so the argument is #π/#."
+  },
+  "Substituímos x = π/#, de modo que o argumento vale π.": {
+    "fr": "Nous remplaçons x = π/#, de sorte que l’argument vaut π.",
+    "en": "We substitute x = π/#, so the argument is π."
   },
   "Substituímos x = π/#, de modo que o argumento vale π/#.": {
     "fr": "Nous substituons x = π/#, de sorte que l’argument vaut π/#.",
@@ -10282,6 +11050,10 @@
   "Só a coordenada z.": {
     "fr": "Seulement la coordonnée z.",
     "en": "Only the z coordinate."
+  },
+  "Só a envoltória exponencial foi considerada. A solução completa tem ainda as duas constantes ajustadas às condições iniciais.": {
+    "fr": "Seule l’enveloppe exponentielle a été prise en compte. La solution complète comporte aussi les deux constantes ajustées aux conditions initiales.",
+    "en": "Only the exponential envelope was taken into account. The full solution also has the two constants fitted to the initial conditions."
   },
   "Só agora substituímos os valores do instante pedido.": {
     "fr": "C’est seulement maintenant que nous substituons les valeurs de l’instant demandé.",
@@ -10442,6 +11214,10 @@
   "Também vale escrever: ∑_k=#^nk^#.": {
     "fr": "On peut aussi écrire : ∑_k=#^nk^#.",
     "en": "You can also write: ∑_k=#^nk^#."
+  },
+  "Também é exatamente a lateral do cilindro que a envolve.": {
+    "fr": "C’est aussi exactement la latérale du cylindre qui l’enveloppe.",
+    "en": "It is also exactly the lateral surface of the cylinder around it."
   },
   "Tentamos uma solução exponencial e chegamos à equação característica.": {
     "fr": "Nous essayons une solution exponentielle et nous arrivons à l'équation caractéristique.",
@@ -10791,6 +11567,10 @@
     "fr": "Utilisez d = |a·x₀ + b·y₀ + c| / √(a² + b²), avec la droite sous la forme ax + by + c = #.",
     "en": "Use d = |a·x₀ + b·y₀ + c| / √(a² + b²), with the line as ax + by + c = #."
   },
+  "V = #πr³/# — o raio entra ao CUBO; a esfera não tem altura à parte.": {
+    "fr": "V = #πr³/# — le rayon entre au CUBE ; la sphère n’a pas de hauteur à part.",
+    "en": "V = #πr³/# — the radius enters CUBED; the sphere has no separate height."
+  },
   "V = k·q/r, com o sinal da carga: #×#⁹ vezes #×#⁻⁶, dividido por # (sem quadrado). Divida por # para kV.": {
     "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois #×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
     "en": "V = k·q/r, with the charge’s sign: #×#⁹ times #×#⁻⁶, divided by # (no square). Divide by # for kV."
@@ -10798,6 +11578,26 @@
   "V = k·q/r, com o sinal da carga: #×#⁹ vezes (#)×#⁻⁶, dividido por # (sem quadrado). Divida por # para kV.": {
     "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois (#)×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
     "en": "V = k·q/r, with the charge’s sign: #×#⁹ times (#)×#⁻⁶, divided by # (no square). Divide by # for kV."
+  },
+  "V = πr²h — o raio entra ao QUADRADO (ele mede a base); a altura, uma vez só.": {
+    "fr": "V = πr²h — le rayon entre au CARRÉ (il mesure la base) ; la hauteur, une seule fois.",
+    "en": "V = πr²h — the radius enters SQUARED (it measures the base); the height, only once."
+  },
+  "V = πr²h, então h = V / (π · #²). O raio vai ao quadrado: #² = #.": {
+    "fr": "V = πr²h, donc h = V / (π · #²). Le rayon passe au carré : #² = #.",
+    "en": "V = πr²h, so h = V / (π · #²). The radius goes squared: #² = #."
+  },
+  "V = πr²h/# — o raio entra ao QUADRADO (ele mede a base); a altura, uma vez só.": {
+    "fr": "V = πr²h/# — le rayon entre au CARRÉ (il mesure la base) ; la hauteur, une seule fois.",
+    "en": "V = πr²h/# — the radius enters SQUARED (it measures the base); the height, only once."
+  },
+  "V = πr²h/#, então h = #V / (π · #²). O raio vai ao quadrado: #² = #.": {
+    "fr": "V = πr²h/#, donc h = #V / (π · #²). Le rayon passe au carré : #² = #.",
+    "en": "V = πr²h/#, so h = #V / (π · #²). The radius goes squared: #² = #."
+  },
+  "V' = k³·V — o volume escala com o CUBO da razão, e aqui k = #: o fator é #³.": {
+    "fr": "V' = k³·V — le volume varie comme le CUBE du rapport, et ici k = # : le facteur vaut #³.",
+    "en": "V' = k³·V — the volume scales with the CUBE of the ratio, and here k = #: the factor is #³."
   },
   "Vale para toda soma ou diferença de cubos: o fator do #º grau não tem raiz real.": {
     "fr": "Cela vaut pour toute somme ou différence de cubes : le facteur de degré # n’a pas de racine réelle.",
@@ -10898,6 +11698,10 @@
   "Você somou. O pi maiúsculo manda MULTIPLICAR — é o sigma que soma. Os dois têm o mesmo arranjo de índices, e é só a operação que muda.": {
     "fr": "Vous avez additionné. Le pi majuscule demande de MULTIPLIER — c’est le sigma qui additionne. Les deux ont la même disposition d’indices, et seule l’opération change.",
     "en": "You added. The capital pi tells you to MULTIPLY — it is the sigma that adds. Both have the same index layout, and only the operation changes."
+  },
+  "Você subtraiu os quadrados. Isso serve para achar um CATETO quando a hipotenusa é conhecida — aqui os quadrados somam.": {
+    "fr": "Vous avez soustrait les carrés. Cela sert à trouver une CATHÈTE quand l’hypoténuse est connue — ici les carrés s’additionnent.",
+    "en": "You subtracted the squares. That is for finding a LEG when the hypotenuse is known — here the squares add."
   },
   "Você usou o fator LINEAR. Numa unidade de área ou volume, ele precisa ser elevado ao expoente correspondente.": {
     "fr": "Vous avez utilisé le facteur LINÉAIRE. Dans une unité d’aire ou de volume, il doit être élevé à l’exposant correspondant.",
@@ -11383,6 +12187,18 @@
     "fr": "f″ est du #ᵉ degré : elle change de signe exactement là où elle s’annule.",
     "en": "f″ is of degree #: it changes sign exactly where it is zero."
   },
+  "k² é o fator da ÁREA. Volume tem três dimensões: k³.": {
+    "fr": "k² est le facteur de l’AIRE. Le volume a trois dimensions : k³.",
+    "en": "k² is the AREA factor. Volume has three dimensions: k³."
+  },
+  "k² é o fator de ÁREA. Volume escala com k³.": {
+    "fr": "k² est le facteur d’AIRE. Le volume varie comme k³.",
+    "en": "k² is the AREA factor. Volume scales with k³."
+  },
+  "k³ é o fator do VOLUME. Área tem duas dimensões: k².": {
+    "fr": "k³ est le facteur du VOLUME. L’aire a deux dimensions : k².",
+    "en": "k³ is the VOLUME factor. Area has two dimensions: k²."
+  },
   "kΩ vezes μF: #³ · #⁻⁶ = #⁻³, ou seja, milissegundos.": {
     "fr": "kΩ fois μF : #³ · #⁻⁶ = #⁻³, c’est-à-dire des millisecondes.",
     "en": "kΩ times μF: #³ · #⁻⁶ = #⁻³, that is, milliseconds."
@@ -11523,6 +12339,10 @@
     "fr": "C’est la quantité qui minimise le coût de production.",
     "en": "It is the quantity that minimises production cost."
   },
+  "É como se projeta uma suspensão: volta o mais rápido possível sem oscilar.": {
+    "fr": "C’est ainsi qu’on conçoit une suspension : elle revient le plus vite possible sans osciller.",
+    "en": "That is how a suspension is designed: it returns as fast as possible without oscillating."
+  },
   "É este cancelamento que transforma um problema infinito numa equação simples.": {
     "fr": "C’est cette annulation qui transforme un problème infini en une équation simple.",
     "en": "It is this cancellation that turns an infinite problem into a simple equation."
@@ -11550,6 +12370,10 @@
   "É o instante em que a altura é máxima.": {
     "fr": "C’est l’instant où la hauteur est maximale.",
     "en": "It is the instant when the height is greatest."
+  },
+  "É o mesmo ângulo do sol nos dois lugares, no mesmo instante.": {
+    "fr": "C’est le même angle du soleil aux deux endroits, au même instant.",
+    "en": "It is the same angle of the sun at both places, at the same moment."
   },
   "É o pirâmide de base com # lados.": {
     "fr": "C’est le pirâmide à base de # côtés.",
@@ -11583,9 +12407,17 @@
     "fr": "C’est ce qu’on appelle multiplier en croix.",
     "en": "That is what is called cross-multiplication."
   },
+  "É o regime superamortecido: lento, e sem passar do ponto de equilíbrio.": {
+    "fr": "C’est le régime suramorti : lent, et sans dépasser le point d’équilibre.",
+    "en": "It is the overdamped regime: slow, and without overshooting the equilibrium point."
+  },
   "É o tetraedro.": {
     "fr": "C’est le tetraedro.",
     "en": "It is the tetraedro."
+  },
+  "É por isso que massa e peso crescem muito mais rápido que a altura.": {
+    "fr": "C’est pour cela que la masse et le poids croissent bien plus vite que la hauteur.",
+    "en": "That is why mass and weight grow much faster than height."
   },
   "É sempre «o que se quer zerar, sobre o pivô».": {
     "fr": "C’est toujours « ce qu’on veut annuler, sur le pivot ».",
