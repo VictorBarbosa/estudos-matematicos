@@ -1,4 +1,16 @@
 {
+  "# + i_anual = (# + i_mensal)^#. Use a taxa em decimal e no fim volte para %.": {
+    "fr": "# + i_annuel = (# + i_mensal)^#. Utilisez le taux en décimal et revenez au % à la fin.",
+    "en": "# + i_annual = (# + i_mensal)^#. Use the rate in decimal form and go back to % at the end."
+  },
+  "# + i_anual = (# + i_semestral)^#. Use a taxa em decimal e no fim volte para %.": {
+    "fr": "# + i_annuel = (# + i_semestral)^#. Utilisez le taux en décimal et revenez au % à la fin.",
+    "en": "# + i_annual = (# + i_semestral)^#. Use the rate in decimal form and go back to % at the end."
+  },
+  "# + i_anual = (# + i_trimestral)^#. Use a taxa em decimal e no fim volte para %.": {
+    "fr": "# + i_annuel = (# + i_trimestral)^#. Utilisez le taux en décimal et revenez au % à la fin.",
+    "en": "# + i_annual = (# + i_trimestral)^#. Use the rate in decimal form and go back to % at the end."
+  },
   "# + tg²θ = sec²θ.": {
     "fr": "# + tan²θ = sec²θ.",
     "en": "# + tan²θ = sec²θ."
@@ -171,6 +183,18 @@
     "fr": "# est un cube parfait (#³). Utilisez u³ - v³ = (u - v)(u² + uv + v²) et annulez le premier facteur.",
     "en": "# is a perfect cube (#³). Use u³ - v³ = (u - v)(u² + uv + v²) and set the first factor to zero."
   },
+  "#% é a taxa PROPORCIONAL, a dos juros simples. Em juros compostos os juros de cada mês rendem juros: a anual é (# + i)^# − #, um pouco maior.": {
+    "fr": "#% est le taux PROPORTIONNEL, celui des intérêts simples. En intérêts composés, les intérêts de chaque mois rapportent des intérêts : l’annuel vaut (# + i)^# − #, un peu plus.",
+    "en": "#% is the PROPORTIONAL rate, the simple-interest one. With compound interest each month’s interest earns interest: the annual one is (# + i)^# − #, slightly larger."
+  },
+  "#% é a taxa PROPORCIONAL, a dos juros simples. Em juros compostos os juros de cada semestre rendem juros: a anual é (# + i)^# − #, um pouco maior.": {
+    "fr": "#% est le taux PROPORTIONNEL, celui des intérêts simples. En intérêts composés, les intérêts de chaque semestre rapportent des intérêts : l’annuel vaut (# + i)^# − #, un peu plus.",
+    "en": "#% is the PROPORTIONAL rate, the simple-interest one. With compound interest each half-year’s interest earns interest: the annual one is (# + i)^# − #, slightly larger."
+  },
+  "#% é a taxa PROPORCIONAL, a dos juros simples. Em juros compostos os juros de cada trimestre rendem juros: a anual é (# + i)^# − #, um pouco maior.": {
+    "fr": "#% est le taux PROPORTIONNEL, celui des intérêts simples. En intérêts composés, les intérêts de chaque trimestre rapportent des intérêts : l’annuel vaut (# + i)^# − #, un peu plus.",
+    "en": "#% is the PROPORTIONAL rate, the simple-interest one. With compound interest each quarter’s interest earns interest: the annual one is (# + i)^# − #, slightly larger."
+  },
   "#/# não vale # nem #: é só o aviso de que é preciso outra ferramenta.": {
     "fr": "#/# ne vaut ni # ni # : c’est seulement le signe qu’il faut un autre outil.",
     "en": "#/# is neither # nor #: it is only the warning that another tool is needed."
@@ -210,6 +234,26 @@
   "A = #πr² — quatro círculos máximos.": {
     "fr": "A = #πr² — quatre grands cercles.",
     "en": "A = #πr² — four great circles."
+  },
+  "A = D·d/#, com D e d as diagonais.": {
+    "fr": "A = D·d/#, avec D et d les diagonales.",
+    "en": "A = D·d/#, with D and d the diagonals."
+  },
+  "A = b·h": {
+    "fr": "A = b·h",
+    "en": "A = b·h"
+  },
+  "A = b·h / #": {
+    "fr": "A = b·h / #",
+    "en": "A = b·h / #"
+  },
+  "A = b·h / #, então h = #·A / b = # · # / #.": {
+    "fr": "A = b·h / #, donc h = #·A / b = # · # / #.",
+    "en": "A = b·h / #, so h = #·A / b = # · # / #."
+  },
+  "A = b·h, então h = A / b = # / #.": {
+    "fr": "A = b·h, donc h = A / b = # / #.",
+    "en": "A = b·h, so h = A / b = # / #."
   },
   "A = |aₓb_y − a_ybₓ|: o determinante das componentes, em módulo.": {
     "fr": "A = |aₓb_y − a_ybₓ| : le déterminant des composantes, en module.",
@@ -267,6 +311,10 @@
     "fr": "La hauteur revient à zéro quand le paramètre satisfait l’équation de y.",
     "en": "The height returns to zero when the parameter satisfies the equation for y."
   },
+  "A altura é a distância entre as bases, não o lado inclinado.": {
+    "fr": "La hauteur est la distance entre les bases, et non le côté incliné.",
+    "en": "The height is the distance between the bases, not the slanted side."
+  },
   "A altura é o cateto OPOSTO ao ângulo e a distância no chão é o ADJACENTE: a razão é a tangente.": {
     "fr": "La hauteur est la cathète OPPOSÉE à l’angle et la distance au sol est l’ADJACENTE : le rapport est la tangente.",
     "en": "The height is the leg OPPOSITE the angle and the ground distance is the ADJACENT one: the ratio is the tangent."
@@ -298,6 +346,10 @@
   "A aproximação superestima a área em #.": {
     "fr": "L’approximation surestime l’aire de #.",
     "en": "The approximation overestimates the area by #."
+  },
+  "A aproximação é boa para taxas pequenas.": {
+    "fr": "L’approximation est bonne pour de petits taux.",
+    "en": "The approximation is good for small rates."
   },
   "A assinatura diz o que entra e o que sai: um real entra, um real sai.": {
     "fr": "La signature dit ce qui entre et ce qui sort : un réel entre, un réel sort.",
@@ -647,6 +699,10 @@
     "fr": "La dérivée, qui donne la pente de la tangente.",
     "en": "The derivative, which gives the slope of the tangent."
   },
+  "A diferença de # é o juro que rendeu sobre juro.": {
+    "fr": "L’écart de # est l’intérêt produit sur les intérêts.",
+    "en": "The gap of # is the interest earned on interest."
+  },
   "A diferença de cubos fatora com um fator (x − a).": {
     "fr": "La différence de cubes se factorise avec un facteur (x − a).",
     "en": "The difference of cubes factors with an (x − a) factor."
@@ -811,6 +867,18 @@
     "fr": "La division se fait par #, et non par #. Le facteur #/# est celui de l’aire du triangle, pas du volume du cône.",
     "en": "The division is by #, not by #. The factor #/# belongs to the area of the triangle, not to the volume of the cone."
   },
+  "A divisão é por #, não por #: duas cópias do triângulo formam o paralelogramo.": {
+    "fr": "La division se fait par #, et non par # : deux copies du triangle forment le parallélogramme.",
+    "en": "The division is by #, not by #: two copies of the triangle make the parallelogram."
+  },
+  "A do retângulo é base vezes altura.": {
+    "fr": "Celle du rectangle est base fois hauteur.",
+    "en": "The rectangle’s is base times height."
+  },
+  "A do triângulo é metade da base vezes a altura.": {
+    "fr": "Celle du triangle est la moitié de la base fois la hauteur.",
+    "en": "The triangle’s is half the base times the height."
+  },
   "A e B ficaram trocados. Cada coeficiente acompanha o fator que foi anulado para encontrá-lo.": {
     "fr": "A et B ont été intervertis. Chaque coefficient accompagne le facteur qui a été annulé pour le trouver.",
     "en": "A and B got swapped. Each coefficient goes with the factor that was zeroed out to find it."
@@ -942,6 +1010,10 @@
   "A fatoração está completa.": {
     "fr": "La factorisation est complète.",
     "en": "The factorisation is complete."
+  },
+  "A figura se reparte em duas conhecidas, sem sobreposição.": {
+    "fr": "La figure se partage en deux figures connues, sans recouvrement.",
+    "en": "The figure splits into two known ones, without overlap."
   },
   "A fonte vê o equivalente: Q = C_eq·V.": {
     "fr": "La source voit l’équivalent : Q = C_eq·V.",
@@ -1579,6 +1651,14 @@
     "fr": "La question porte sur la partie réelle.",
     "en": "The question asks for the real part."
   },
+  "A pergunta é pelo JURO, que é o montante menos o capital aplicado.": {
+    "fr": "La question porte sur l’INTÉRÊT, qui est le montant moins le capital placé.",
+    "en": "The question asks for the INTEREST, which is the amount minus the capital invested."
+  },
+  "A pergunta é pelo montante final.": {
+    "fr": "La question porte sur le montant final.",
+    "en": "The question asks for the final amount."
+  },
   "A pergunta é por a frequência angular ω, em rad/s.": {
     "fr": "La question porte sur la pulsation ω, en rad/s.",
     "en": "The question asks for the angular frequency ω, in rad/s."
@@ -1999,6 +2079,10 @@
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
     "en": "The ratio k multiplies LENGTHS. Area depends on # dimensions, so the factor is k²."
   },
+  "A razão k multiplica COMPRIMENTOS. A área, sendo produto de dois comprimentos, é multiplicada por k².": {
+    "fr": "Le rapport k multiplie des LONGUEURS. L’aire, produit de deux longueurs, est multipliée par k².",
+    "en": "The ratio k multiplies LENGTHS. Area, being a product of two lengths, is multiplied by k²."
+  },
   "A razão k multiplica COMPRIMENTOS. O volume depende de # dimensões, então o fator é k³.": {
     "fr": "Le rapport k multiplie des LONGUEURS. Le volume dépend de # dimensions, donc le facteur est k³.",
     "en": "The ratio k multiplies LENGTHS. Volume depends on # dimensions, so the factor is k³."
@@ -2391,6 +2475,10 @@
     "fr": "L’aire est le périmètre fois l’apothème, divisé par #. Le périmètre vaut # côtés de #.",
     "en": "The area is the perimeter times the apothem, divided by #. The perimeter is # sides of #."
   },
+  "A área é o produto das duas, então k aparece duas vezes.": {
+    "fr": "L’aire est le produit des deux, donc k apparaît deux fois.",
+    "en": "The area is the product of the two, so k appears twice."
+  },
   "A área é o valor absoluto — o sinal indica apenas a orientação.": {
     "fr": "L'aire est la valeur absolue — le signe indique seulement l'orientation.",
     "en": "The area is the absolute value — the sign indicates only the orientation."
@@ -2410,6 +2498,10 @@
   "A única raiz real vem do primeiro fator.": {
     "fr": "La seule racine réelle vient du premier facteur.",
     "en": "The only real root comes from the first factor."
+  },
+  "A' = k² · A, e aqui k = #: o fator é #².": {
+    "fr": "A' = k² · A, et ici k = # : le facteur vaut #².",
+    "en": "A' = k² · A, and here k = #: the factor is #²."
   },
   "AB e DE são correspondentes, então são iguais: monte a equação, ache x e substitua em AB.": {
     "fr": "AB et DE sont correspondants, donc égaux : posez l’équation, trouvez x et substituez dans AB.",
@@ -2555,6 +2647,10 @@
     "fr": "L’amortissement critique est la racine double : discriminant nul.",
     "en": "Critical damping is the double root: zero discriminant."
   },
+  "Ampliar k vezes multiplica a área por k², nunca por k.": {
+    "fr": "Agrandir k fois multiplie l’aire par k², jamais par k.",
+    "en": "Scaling up k times multiplies the area by k², never by k."
+  },
   "Andando o contorno inteiro, cada vértice faz você girar um ângulo externo — e no fim você está olhando para o mesmo lado do começo.": {
     "fr": "En parcourant tout le contour, chaque sommet vous fait tourner d’un angle extérieur — et à la fin vous regardez du même côté qu’au départ.",
     "en": "Walking the whole outline, each vertex turns you by one exterior angle — and at the end you face the same way as at the start."
@@ -2670,6 +2766,10 @@
   "Aplicamos ao valor.": {
     "fr": "Nous appliquons à la valeur.",
     "en": "We apply it to the value."
+  },
+  "Aplicamos logaritmo para tirar n do expoente.": {
+    "fr": "Nous appliquons le logarithme pour sortir n de l’exposant.",
+    "en": "We apply the logarithm to get n out of the exponent."
   },
   "Aplicamos o sinal negativo.": {
     "fr": "Nous appliquons le signe négatif.",
@@ -2802,6 +2902,10 @@
   "As derivadas parciais são constantes: fx = # e fy = #.": {
     "fr": "Les dérivées partielles sont constantes : fx = # et fy = #.",
     "en": "The partial derivatives are constant: fx = # and fy = #."
+  },
+  "As diagonais do losango são perpendiculares e se cortam ao meio.": {
+    "fr": "Les diagonales du losange sont perpendiculaires et se coupent en leur milieu.",
+    "en": "The diagonals of the rhombus are perpendicular and bisect each other."
   },
   "As diferenças de coordenadas são os catetos de um triângulo retângulo.": {
     "fr": "Les différences de coordonnées sont les côtés d'un triangle rectangle.",
@@ -3030,6 +3134,10 @@
   "Ba neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ba neutre a # électrons, autant que de protons.",
     "en": "Neutral Ba has # electrons, as many as protons."
+  },
+  "Base e altura são ambas multiplicadas por k.": {
+    "fr": "La base et la hauteur sont toutes deux multipliées par k.",
+    "en": "Base and height are both multiplied by k."
   },
   "Basta avaliar o integrando no ponto.": {
     "fr": "Il suffit d’évaluer l’intégrande au point.",
@@ -4147,6 +4255,10 @@
     "fr": "En vérifiant avec la règle de la puissance.",
     "en": "Checking with the power rule."
   },
+  "Conferindo com a regra de #.": {
+    "fr": "Vérification avec la règle de #.",
+    "en": "Checking with the rule of #."
+  },
   "Conferindo pela unidade do SI.": {
     "fr": "Vérification par l’unité du SI.",
     "en": "Checking with the SI unit."
@@ -4286,6 +4398,10 @@
   "Cortando um triângulo de um lado e colando no outro, surge um retângulo.": {
     "fr": "En coupant un triangle d'un côté et en le collant de l'autre, un rectangle apparaît.",
     "en": "Cutting a triangle from one side and pasting it on the other, a rectangle emerges."
+  },
+  "Corte a figura em um retângulo e um triângulo.": {
+    "fr": "Découpez la figure en un rectangle et un triangle.",
+    "en": "Cut the figure into a rectangle and a triangle."
   },
   "Cramer: x = Dₓ / D. D é o determinante dos coeficientes; Dₓ troca a coluna de x pelos termos independentes.": {
     "fr": "Cramer : x = Dₓ / D. D est le déterminant des coefficients ; Dₓ remplace la colonne de x par les termes indépendants.",
@@ -5095,6 +5211,10 @@
     "fr": "En divisant.",
     "en": "Dividing."
   },
+  "Dividir # pela taxa daria o tempo nos juros SIMPLES. Nos compostos o capital rende sobre si mesmo, e dobra antes disso.": {
+    "fr": "Diviser # par le taux donnerait le temps en intérêts SIMPLES. En composés, le capital rapporte sur lui-même, et double avant cela.",
+    "en": "Dividing # by the rate would give the time for SIMPLE interest. With compound interest the capital earns on itself, and doubles sooner."
+  },
   "Dividir parte por parte não funciona. É preciso multiplicar numerador e denominador pelo conjugado do denominador.": {
     "fr": "Diviser partie par partie ne marche pas. Il faut multiplier numérateur et dénominateur par le conjugué du dénominateur.",
     "en": "Dividing part by part does not work. You have to multiply numerator and denominator by the conjugate of the denominator."
@@ -5102,6 +5222,18 @@
   "Dividir por # converte km/h em m/s.": {
     "fr": "Diviser par # convertit les km/h en m/s.",
     "en": "Dividing by # converts km/h into m/s."
+  },
+  "Dividir por # dá a taxa proporcional (juros simples). Em compostos a taxa do mês é menor: é a raiz de índice # de (# + i_anual), menos #.": {
+    "fr": "Diviser par # donne le taux proportionnel (intérêts simples). En composés, le taux du mois est plus petit : c’est la racine d’indice # de (# + i_annuel), moins #.",
+    "en": "Dividing by # gives the proportional rate (simple interest). With compound interest the month rate is smaller: it is the root of index # of (# + i_annual), minus #."
+  },
+  "Dividir por # dá a taxa proporcional (juros simples). Em compostos a taxa do semestre é menor: é a raiz de índice # de (# + i_anual), menos #.": {
+    "fr": "Diviser par # donne le taux proportionnel (intérêts simples). En composés, le taux du semestre est plus petit : c’est la racine d’indice # de (# + i_annuel), moins #.",
+    "en": "Dividing by # gives the proportional rate (simple interest). With compound interest the half-year rate is smaller: it is the root of index # of (# + i_annual), minus #."
+  },
+  "Dividir por # dá a taxa proporcional (juros simples). Em compostos a taxa do trimestre é menor: é a raiz de índice # de (# + i_anual), menos #.": {
+    "fr": "Diviser par # donne le taux proportionnel (intérêts simples). En composés, le taux du trimestre est plus petit : c’est la racine d’indice # de (# + i_annuel), moins #.",
+    "en": "Dividing by # gives the proportional rate (simple interest). With compound interest the quarter rate is smaller: it is the root of index # of (# + i_annual), minus #."
   },
   "Dividir por # é o avesso de multiplicar por # dentro do argumento.": {
     "fr": "Diviser par # est l’inverse de multiplier par # à l’intérieur de l’argument.",
@@ -5422,6 +5554,10 @@
   "Ela sai da soma das massas atômicas da fórmula, lidas na tabela periódica.": {
     "fr": "Elle vient de la somme des masses atomiques de la formule, lues dans le tableau périodique.",
     "en": "It comes from the sum of the atomic masses in the formula, read off the periodic table."
+  },
+  "Elas dividem o losango em quatro triângulos retângulos iguais.": {
+    "fr": "Elles partagent le losange en quatre triangles rectangles égaux.",
+    "en": "They split the rhombus into four equal right triangles."
   },
   "Ele é a fração da variação de y que a reta consegue explicar.": {
     "fr": "Il est la fraction de la variation de y que la droite peut expliquer.",
@@ -6255,6 +6391,10 @@
     "fr": "Écrivez # et le côté droit comme des puissances de #. Une fraction #/# est # à un exposant négatif.",
     "en": "Write # and the right-hand side as powers of #. A fraction #/# is # to a negative exponent."
   },
+  "Escreva (# + #)ⁿ = #: o capital se cancela. Como n está no expoente, use logaritmo.": {
+    "fr": "Écrivez (# + #)ⁿ = # : le capital se simplifie. Comme n est à l’exposant, utilisez le logarithme.",
+    "en": "Write (# + #)ⁿ = #: the capital cancels. Since n is in the exponent, use the logarithm."
+  },
   "Escreva (A | I) e escalone até a esquerda virar a identidade; faça cada operação também no bloco da direita.": {
     "fr": "Écrivez (A | I) et échelonnez jusqu’à ce que la gauche devienne l’identité ; faites chaque opération aussi dans le bloc de droite.",
     "en": "Write (A | I) and row-reduce until the left becomes the identity; do each operation in the right block too."
@@ -6494,6 +6634,10 @@
   "Escrevemos A ao lado da identidade e escalonamos as duas juntas.": {
     "fr": "Nous écrivons A à côté de l’identité et échelonnons les deux ensemble.",
     "en": "We write A beside the identity and row-reduce both together."
+  },
+  "Escrevemos a condição pedida.": {
+    "fr": "Nous écrivons la condition demandée.",
+    "en": "We write the required condition."
   },
   "Escrevemos a dimensão de cada fator.": {
     "fr": "Nous écrivons la dimension de chaque facteur.",
@@ -6787,6 +6931,10 @@
     "fr": "Ce n’est que le terme de l’arc. L’intégrale de cos²θ a DEUX termes : θ/# et sin(#θ)/# — le second devient (k/#)·√(a² − k²).",
     "en": "That is only the arc term. The integral of cos²θ has TWO terms: θ/# and sin(#θ)/# — the second one becomes (k/#)·√(a² − k²)."
   },
+  "Essa é só a parte de baixo. O triângulo de cima também tem área.": {
+    "fr": "Ce n’est que la partie du bas. Le triangle du haut a aussi une aire.",
+    "en": "That is only the bottom part. The triangle on top has an area too."
+  },
   "Essa é só a parte real. O módulo leva em conta as duas coordenadas do ponto.": {
     "fr": "Ce n’est que la partie réelle. Le module tient compte des deux coordonnées du point.",
     "en": "That is only the real part. The modulus takes both coordinates of the point into account."
@@ -6827,6 +6975,10 @@
     "fr": "C’est l’aire à cet instant, et non le taux auquel elle croît.",
     "en": "That is the area at the instant, not the rate at which it grows."
   },
+  "Esse é apenas o JURO. O montante inclui também o capital inicial.": {
+    "fr": "Ce n’est que l’INTÉRÊT. Le montant comprend aussi le capital initial.",
+    "en": "That is only the INTEREST. The amount also includes the initial capital."
+  },
   "Esse é c², não c: falta tirar a raiz quadrada.": {
     "fr": "C’est c², et non c : il reste à prendre la racine carrée.",
     "en": "That is c², not c: taking the square root is still missing."
@@ -6839,9 +6991,17 @@
     "fr": "C’est le CÔTÉ du rectangle optimal. La question porte sur l’aire, qui est le produit des deux côtés.",
     "en": "That is the SIDE of the optimal rectangle. The question asks for the area, which is the product of the two sides."
   },
+  "Esse é o MONTANTE. O juro é só a parte que foi acrescentada: M − C.": {
+    "fr": "C’est le MONTANT. L’intérêt n’est que la part ajoutée : M − C.",
+    "en": "That is the AMOUNT. The interest is only the part added: M − C."
+  },
   "Esse é o OUTRO ângulo agudo: a razão ficou invertida. A tangente é oposto sobre adjacente, vistos a partir do ângulo pedido.": {
     "fr": "C’est l’AUTRE angle aigu : le rapport est inversé. La tangente, c’est l’opposée sur l’adjacente, vues depuis l’angle demandé.",
     "en": "That is the OTHER acute angle: the ratio came out upside down. The tangent is opposite over adjacent, seen from the angle asked about."
+  },
+  "Esse é o PERÍMETRO (soma dos lados), não a área. Área se mede em unidades quadradas.": {
+    "fr": "C’est le PÉRIMÈTRE (la somme des côtés), et non l’aire. L’aire se mesure en unités carrées.",
+    "en": "That is the PERIMETER (the sum of the sides), not the area. Area is measured in square units."
   },
   "Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por dV/dt, que sai de derivar a relação.": {
     "fr": "C’est le VOLUME à cet instant, et non le taux auquel il croît. La question porte sur dV/dt, qui sort de la dérivation de la relation.",
@@ -6963,9 +7123,17 @@
     "fr": "C’est le régime permanent, atteint seulement quand t tend vers l’infini. En temps fini, il reste encore le transitoire.",
     "en": "That is the steady state, reached only as t goes to infinity. In finite time the transient is still there."
   },
+  "Esse é o resultado dos juros SIMPLES, em que só o capital inicial rende. Nos compostos o montante inteiro rende a cada período, e o crescimento é exponencial.": {
+    "fr": "C’est le résultat des intérêts SIMPLES, où seul le capital initial rapporte. En composés, tout le montant rapporte à chaque période, et la croissance est exponentielle.",
+    "en": "That is the result for SIMPLE interest, where only the initial capital earns. With compound interest the whole amount earns each period, and the growth is exponential."
+  },
   "Esse é o resultado em graus Celsius. O enunciado pede kelvin, que é a escala em que a lei de Stefan-Boltzmann vale.": {
     "fr": "C’est le résultat en degrés Celsius. L’énoncé demande des kelvins, l’échelle dans laquelle la loi de Stefan-Boltzmann est valable.",
     "en": "That is the result in degrees Celsius. The question asks for kelvin, the scale in which the Stefan-Boltzmann law holds."
+  },
+  "Esse é o retângulo que contém o losango. O losango é exatamente metade dele — falta dividir por #.": {
+    "fr": "C’est le rectangle qui contient le losange. Le losange en est exactement la moitié — il reste à diviser par #.",
+    "en": "That is the rectangle holding the rhombus. The rhombus is exactly half of it — dividing by # is still missing."
   },
   "Esse é o tempo característico, em que resta uma fração #/e do inicial. A meia-vida traz um fator logaritmo de #.": {
     "fr": "C’est le temps caractéristique, où il reste une fraction #/e de l’initial. La demi-vie porte un facteur logarithme de #.",
@@ -7399,6 +7567,10 @@
     "fr": "Il manque la division par # : le facteur est x - #, donc x = #/#.",
     "en": "The division by # is missing: the factor is x - #, so x = #/#."
   },
+  "Faltou dividir por #: o triângulo é METADE do paralelogramo de mesma base e altura.": {
+    "fr": "Il manque la division par # : le triangle est la MOITIÉ du parallélogramme de même base et de même hauteur.",
+    "en": "Dividing by # is missing: the triangle is HALF the parallelogram with the same base and height."
+  },
   "Faltou elevar a temperatura à QUARTA potência. É ela que separa a radiação das outras duas formas de transferência.": {
     "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
     "en": "Raising the temperature to the FOURTH power is missing. It is what sets radiation apart from the other two modes of transfer."
@@ -7483,6 +7655,10 @@
     "fr": "Il manque le facteur #/a. Il vient de dx = a·sec²θ dθ divisé par a²·sec²θ, ce qui laisse dθ/a — et non dθ.",
     "en": "The factor #/a is missing. It comes from dx = a·sec²θ dθ divided by a²·sec²θ, which leaves dθ/a — not dθ."
   },
+  "Faltou o fator #: como a área já havia sido dividida por #, ele volta multiplicando quando isolamos h.": {
+    "fr": "Il manque le facteur # : comme l’aire avait déjà été divisée par #, il revient en multipliant lorsqu’on isole h.",
+    "en": "The factor # is missing: since the area had already been divided by #, it comes back multiplying when h is isolated."
+  },
   "Faltou o fator da cadeia: cada derivada multiplica por #, e duas por #² = #.": {
     "fr": "Il manque le facteur de la chaîne : chaque dérivée multiplie par #, et deux par #² = #.",
     "en": "The chain factor is missing: each derivative multiplies by #, and two by #² = #."
@@ -7522,6 +7698,14 @@
   "Faltou subtrair o valor no limite inferior. A integral definida continua sendo F(b) − F(a), mesmo depois da substituição.": {
     "fr": "Il manque la soustraction de la valeur à la borne inférieure. L’intégrale définie reste F(b) − F(a), même après la substitution.",
     "en": "Subtracting the value at the lower limit is missing. The definite integral is still F(b) − F(a), even after the substitution."
+  },
+  "Faltou tirar o # do fator: a raiz dá # + i, não i.": {
+    "fr": "Il manque le retrait du # du facteur : la racine donne # + i, et non i.",
+    "en": "Taking the # out of the factor is missing: the root gives # + i, not i."
+  },
+  "Faltou tirar o #: o fator (# + i) inclui o capital. A taxa é o que passa de #.": {
+    "fr": "Il manque le retrait du # : le facteur (# + i) comprend le capital. Le taux est ce qui dépasse #.",
+    "en": "Taking out the # is missing: the factor (# + i) includes the capital. The rate is what goes beyond #."
   },
   "Faltou uma tampa: o cilindro fechado tem duas bases, uma em cada extremidade.": {
     "fr": "Il manque un couvercle : le cylindre fermé a deux bases, une à chaque extrémité.",
@@ -7566,6 +7750,10 @@
   "Fazemos os produtos de cada coeficiente pela sua potência.": {
     "fr": "Nous faisons les produits de chaque coefficient par sa puissance.",
     "en": "We multiply each coefficient by its power."
+  },
+  "Fazendo a conta.": {
+    "fr": "En faisant le calcul.",
+    "en": "Doing the arithmetic."
   },
   "Fazer x = # transforma cada termo no seu coeficiente: a soma deles é o valor em x = #.": {
     "fr": "Poser x = # transforme chaque terme en son coefficient : leur somme est la valeur en x = #.",
@@ -8119,6 +8307,10 @@
     "fr": "C’est une longueur, en cm. La couronne est une aire, en cm².",
     "en": "That is a length, in cm. The annulus is an area, in cm²."
   },
+  "Isso é uma soma de comprimentos, em cm. A área se mede em cm².": {
+    "fr": "C’est une somme de longueurs, en cm. L’aire se mesure en cm².",
+    "en": "That is a sum of lengths, in cm. Area is measured in cm²."
+  },
   "Juntamos os termos em x.": {
     "fr": "Nous réunissons les termes en x.",
     "en": "We gather the x terms."
@@ -8394,6 +8586,18 @@
   "Menos que isso, o sistema oscila; mais, volta devagar sem oscilar.": {
     "fr": "En dessous, le système oscille ; au-dessus, il revient lentement sans osciller.",
     "en": "Below that, the system oscillates; above it, it returns slowly without oscillating."
+  },
+  "Mesma equivalência, agora no sentido contrário: a taxa do mês é a incógnita.": {
+    "fr": "Même équivalence, maintenant dans l’autre sens : le taux du mois est l’inconnue.",
+    "en": "Same equivalence, now the other way round: the month rate is the unknown."
+  },
+  "Mesma equivalência, agora no sentido contrário: a taxa do semestre é a incógnita.": {
+    "fr": "Même équivalence, maintenant dans l’autre sens : le taux du semestre est l’inconnue.",
+    "en": "Same equivalence, now the other way round: the half-year rate is the unknown."
+  },
+  "Mesma equivalência, agora no sentido contrário: a taxa do trimestre é a incógnita.": {
+    "fr": "Même équivalence, maintenant dans l’autre sens : le taux du trimestre est l’inconnue.",
+    "en": "Same equivalence, now the other way round: the quarter rate is the unknown."
   },
   "Mesma receita, sinal trocado — e dois ramos separados.": {
     "fr": "Même recette, signe changé — et deux branches séparées.",
@@ -9543,6 +9747,10 @@
     "fr": "Le # n’apparaît pas dans la dérivée : il est devenu un terme constant, et non un facteur.",
     "en": "The # does not show up in the derivative: it became a constant term, not a factor."
   },
+  "O # sobe multiplicando a área, não dividindo.": {
+    "fr": "Le # monte en multipliant l’aire, et non en divisant.",
+    "en": "The # moves up multiplying the area, not dividing."
+  },
   "O # sobe multiplicando o volume ao isolarmos h.": {
     "fr": "Le # monte en multipliant le volume lorsqu’on isole h.",
     "en": "The # moves up multiplying the volume when h is isolated."
@@ -9762,6 +9970,10 @@
   "O cancelamento vale para todo x diferente do ponto — e é só disso que o limite precisa.": {
     "fr": "L’annulation vaut pour tout x différent du point — et c’est tout ce dont la limite a besoin.",
     "en": "The cancellation holds for every x other than the point — and that is all the limit needs."
+  },
+  "O capital se cancela — o tempo independe do valor investido.": {
+    "fr": "Le capital se simplifie — le temps ne dépend pas de la somme investie.",
+    "en": "The capital cancels — the time does not depend on the amount invested."
   },
   "O cateto adjacente se relaciona com a hipotenusa pelo cosseno.": {
     "fr": "La cathète adjacente se relie à l’hypoténuse par le cosinus.",
@@ -10255,6 +10467,10 @@
     "fr": "Le facteur qui multiplie l’aire est donc k élevé à #.",
     "en": "The factor multiplying the area is therefore k to the #."
   },
+  "O fator é (# + i), não apenas i. Sem o #, o capital encolheria em vez de crescer — o # é o que preserva o valor original.": {
+    "fr": "Le facteur est (# + i), et non i seul. Sans le #, le capital diminuerait au lieu de croître — le # est ce qui préserve la valeur d’origine.",
+    "en": "The factor is (# + i), not just i. Without the #, the capital would shrink instead of grow — the # is what preserves the original value."
+  },
   "O fatorial não foi aplicado: n! é o produto de todos os naturais de # a n, não o próprio n.": {
     "fr": "La factorielle n’a pas été appliquée : n! est le produit de tous les entiers naturels de # à n, et non n lui-même.",
     "en": "The factorial was not applied: n! is the product of all the naturals from # to n, not n itself."
@@ -10382,6 +10598,10 @@
   "O logaritmo só existe para argumento positivo: x = # daria log de número negativo e é descartado.": {
     "fr": "Le logarithme n’existe que pour un argument positif : x = # donnerait le log d’un nombre négatif et est écarté.",
     "en": "The logarithm only exists for a positive argument: x = # would give the log of a negative number and is discarded."
+  },
+  "O losango ocupa metade do retângulo que tem as diagonais por lados.": {
+    "fr": "Le losange occupe la moitié du rectangle qui a les diagonales pour côtés.",
+    "en": "The rhombus takes up half the rectangle whose sides are the diagonals."
   },
   "O maior deles é o pedido.": {
     "fr": "Le plus grand d’entre eux est celui demandé.",
@@ -10538,6 +10758,10 @@
   "O módulo é a raiz da soma dos quadrados das três componentes.": {
     "fr": "Le module est la racine de la somme des carrés des trois composantes.",
     "en": "The magnitude is the root of the sum of the squares of the three components."
+  },
+  "O n está no EXPOENTE, então é preciso logaritmo para isolá-lo — não basta dividir.": {
+    "fr": "Le n est à l’EXPOSANT, il faut donc le logarithme pour l’isoler — diviser ne suffit pas.",
+    "en": "The n is in the EXPONENT, so a logarithm is needed to isolate it — dividing is not enough."
   },
   "O neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "O neutre a # électrons, autant que de protons.",
@@ -10911,6 +11135,10 @@
     "fr": "Le résidu est la différence, avec signe.",
     "en": "The residual is the difference, with sign."
   },
+  "O retângulo não tem divisão por # — esse fator é do triângulo.": {
+    "fr": "Le rectangle n’a pas de division par # — ce facteur est celui du triangle.",
+    "en": "The rectangle has no division by # — that factor belongs to the triangle."
+  },
   "O salto é a diferença, direita menos esquerda.": {
     "fr": "Le saut est la différence, droite moins gauche.",
     "en": "The jump is the difference, right minus left."
@@ -11258,6 +11486,14 @@
   "O transiente decai a zero, e o que sobra é sempre o mesmo valor.": {
     "fr": "Le transitoire décroît vers zéro, et ce qui reste est toujours la même valeur.",
     "en": "The transient decays to zero, and what is left is always the same value."
+  },
+  "O triângulo entrou inteiro, como se fosse retângulo. Ele é metade da base vezes a altura.": {
+    "fr": "Le triangle est entré en entier, comme s’il s’agissait d’un rectangle. Il vaut la moitié de la base fois la hauteur.",
+    "en": "The triangle went in whole, as if it were a rectangle. It is half the base times the height."
+  },
+  "O triângulo é metade de um paralelogramo de mesma base e altura.": {
+    "fr": "Le triangle est la moitié d’un parallélogramme de même base et de même hauteur.",
+    "en": "The triangle is half a parallelogram with the same base and height."
   },
   "O triângulo é metade do retângulo de mesma base e altura.": {
     "fr": "Le triangle est la moitié du rectangle de même base et hauteur.",
@@ -11839,6 +12075,10 @@
     "fr": "Les intervalles se raccordent en # : l’intégrale de # à # est la somme des deux.",
     "en": "The intervals meet at #: the integral from # to # is the sum of the two."
   },
+  "Os juros de cada período rendem juros nos seguintes — por isso é potência, não multiplicação.": {
+    "fr": "Les intérêts de chaque période rapportent des intérêts aux suivantes — c’est pourquoi il s’agit d’une puissance, et non d’une multiplication.",
+    "en": "Each period’s interest earns interest in the following ones — that is why it is a power, not a multiplication."
+  },
   "Os lados discordam: o limite NÃO existe.": {
     "fr": "Les côtés ne concordent pas : la limite N'EXISTE PAS.",
     "en": "The sides disagree: the limit DOES NOT EXIST."
@@ -12019,6 +12259,10 @@
     "fr": "Pour le cosinus, le polynôme de degré # est celui-ci.",
     "en": "For the cosine, the degree-# polynomial is this one."
   },
+  "Para desfazer a potência #, tiramos a raiz de índice #.": {
+    "fr": "Pour défaire la puissance #, nous prenons la racine d’indice #.",
+    "en": "To undo the power #, we take the root of index #."
+  },
   "Para eliminar y, multiplicamos cada equação pelo coeficiente de y da outra.": {
     "fr": "Pour éliminer y, nous multiplions chaque équation par le coefficient de y de l'autre.",
     "en": "To eliminate y, we multiply each equation by the y-coefficient of the other."
@@ -12166,6 +12410,10 @@
   "Partimos da forma geral.": {
     "fr": "Nous partons de la forme générale.",
     "en": "We start from the general form."
+  },
+  "Partimos da fórmula da área e isolamos a altura.": {
+    "fr": "Nous partons de la formule de l’aire et isolons la hauteur.",
+    "en": "We start from the area formula and isolate the height."
   },
   "Partimos da fórmula do volume e isolamos a altura.": {
     "fr": "Nous partons de la formule du volume et isolons la hauteur.",
@@ -13331,6 +13579,10 @@
     "fr": "En additionnant les contributions de chaque terme.",
     "en": "Adding the contributions of each term."
   },
+  "Somando as duas.": {
+    "fr": "En additionnant les deux.",
+    "en": "Adding the two."
+  },
   "Somando as parcelas.": {
     "fr": "En additionnant les termes.",
     "en": "Adding the terms."
@@ -13662,6 +13914,10 @@
   "Substituímos a dimensão de velocidade.": {
     "fr": "Nous substituons la dimension de vitesse.",
     "en": "We substitute the velocity dimension."
+  },
+  "Substituímos a taxa em decimal.": {
+    "fr": "Nous remplaçons le taux en décimal.",
+    "en": "We substitute the rate in decimal form."
   },
   "Substituímos a área da base e a altura.": {
     "fr": "Nous substituons l'aire de la base et la hauteur.",
@@ -14103,6 +14359,18 @@
     "fr": "C’est aussi exactement la latérale du cylindre qui l’enveloppe.",
     "en": "It is also exactly the lateral surface of the cylinder around it."
   },
+  "Taxas equivalentes levam o mesmo capital ao mesmo montante em # ano. Um ano tem # períodos de um mês.": {
+    "fr": "Des taux équivalents mènent le même capital au même montant en # an. Une année compte # périodes d’un mois.",
+    "en": "Equivalent rates take the same capital to the same amount in # year. A year holds # periods of one month."
+  },
+  "Taxas equivalentes levam o mesmo capital ao mesmo montante em # ano. Um ano tem # períodos de um semestre.": {
+    "fr": "Des taux équivalents mènent le même capital au même montant en # an. Une année compte # périodes d’un semestre.",
+    "en": "Equivalent rates take the same capital to the same amount in # year. A year holds # periods of one half-year."
+  },
+  "Taxas equivalentes levam o mesmo capital ao mesmo montante em # ano. Um ano tem # períodos de um trimestre.": {
+    "fr": "Des taux équivalents mènent le même capital au même montant en # an. Une année compte # périodes d’un trimestre.",
+    "en": "Equivalent rates take the same capital to the same amount in # year. A year holds # periods of one quarter."
+  },
   "Tentamos uma solução exponencial e chegamos à equação característica.": {
     "fr": "Nous essayons une solution exponentielle et nous arrivons à l'équation caractéristique.",
     "en": "We try an exponential solution and arrive at the characteristic equation."
@@ -14150,6 +14418,10 @@
   "Ti neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ti neutre a # électrons, autant que de protons.",
     "en": "Neutral Ti has # electrons, as many as protons."
+  },
+  "Tiramos o # e passamos a porcentagem.": {
+    "fr": "Nous retirons le # et repassons en pourcentage.",
+    "en": "We take out the # and go back to a percentage."
   },
   "Tirando a raiz quadrada.": {
     "fr": "En prenant la racine carrée.",
@@ -14226,6 +14498,10 @@
   "Transportamos a medida.": {
     "fr": "Nous reportons la mesure.",
     "en": "We carry the measure across."
+  },
+  "Trapézio: some as bases (# + #), multiplique pela altura # e divida por #.": {
+    "fr": "Trapèze : additionnez les bases (# + #), multipliez par la hauteur # et divisez par #.",
+    "en": "Trapezoid: add the bases (# + #), multiply by the height # and divide by #."
   },
   "Trocamos a borda infinita por um limite.": {
     "fr": "Nous remplaçons la bordure infinie par une limite.",
@@ -14491,6 +14767,10 @@
     "fr": "Utilisez Horner avec # : descendez le premier coefficient, multipliez par # et ajoutez au suivant, colonne par colonne.",
     "en": "Use synthetic division with #: bring down the first coefficient, multiply by # and add to the next, column by column."
   },
+  "Use M = C(# + i)ⁿ, com i em decimal.": {
+    "fr": "Utilisez M = C(# + i)ⁿ, avec i en décimal.",
+    "en": "Use M = C(# + i)ⁿ, with i in decimal form."
+  },
   "Use V − A + F = # com os dois números dados e isole o que falta.": {
     "fr": "Utilisez V − A + F = # avec les deux nombres donnés et isolez ce qui manque.",
     "en": "Use V − E + F = # with the two given numbers and isolate what is missing."
@@ -14687,6 +14967,10 @@
     "fr": "Vous avez traité √(a² − x²) comme (a − x). La racine d’une différence n’est pas la différence des racines — c’est précisément pour cela que le changement trigonométrique existe.",
     "en": "You treated √(a² − x²) as (a − x). The root of a difference is not the difference of the roots — that is precisely why the trigonometric substitution exists."
   },
+  "Você usou apenas a base menor. Ambas as bases entram, pela média.": {
+    "fr": "Vous n’avez utilisé que la petite base. Les deux bases entrent, par la moyenne.",
+    "en": "You used only the shorter base. Both bases take part, through the average."
+  },
   "Você usou c² = a² + b², que é a relação da HIPÉRBOLE. Na elipse é uma subtração: c² = a² − b².": {
     "fr": "Vous avez utilisé c² = a² + b², qui est la relation de l’HYPERBOLE. Dans l’ellipse c’est une soustraction : c² = a² − b².",
     "en": "You used c² = a² + b², which is the HYPERBOLA relation. In the ellipse it is a subtraction: c² = a² − b²."
@@ -14714,6 +14998,10 @@
   "Você usou o seno. O cateto ADJACENTE ao ângulo se relaciona pelo cosseno; o seno trata do oposto.": {
     "fr": "Vous avez utilisé le sinus. La cathète ADJACENTE à l’angle se relie par le cosinus ; le sinus concerne l’opposée.",
     "en": "You used the sine. The leg ADJACENT to the angle relates through the cosine; the sine deals with the opposite one."
+  },
+  "Você usou só a base maior. O trapézio usa a média das duas bases.": {
+    "fr": "Vous n’avez utilisé que la grande base. Le trapèze utilise la moyenne des deux bases.",
+    "en": "You used only the longer base. The trapezoid uses the average of the two bases."
   },
   "Você usou um retângulo de altura f(b). Como a reta é inclinada, a região é um trapézio: a altura muda ao longo do intervalo.": {
     "fr": "Vous avez utilisé un rectangle de hauteur f(b). Comme la droite est inclinée, la région est un trapèze : la hauteur change le long de l’intervalle.",
@@ -14750,6 +15038,18 @@
   "Voltando à variável original.": {
     "fr": "Retour à la variable d’origine.",
     "en": "Back to the original variable."
+  },
+  "Volte pela raiz: # + i_mensal = raiz de índice # de (# + i_anual). Dividir por # é o erro dos juros simples.": {
+    "fr": "Revenez par la racine : # + i_mensal = racine d’indice # de (# + i_annuel). Diviser par # est l’erreur des intérêts simples.",
+    "en": "Come back through the root: # + i_mensal = root of index # of (# + i_annual). Dividing by # is the simple-interest mistake."
+  },
+  "Volte pela raiz: # + i_semestral = raiz de índice # de (# + i_anual). Dividir por # é o erro dos juros simples.": {
+    "fr": "Revenez par la racine : # + i_semestral = racine d’indice # de (# + i_annuel). Diviser par # est l’erreur des intérêts simples.",
+    "en": "Come back through the root: # + i_semestral = root of index # of (# + i_annual). Dividing by # is the simple-interest mistake."
+  },
+  "Volte pela raiz: # + i_trimestral = raiz de índice # de (# + i_anual). Dividir por # é o erro dos juros simples.": {
+    "fr": "Revenez par la racine : # + i_trimestral = racine d’indice # de (# + i_annuel). Diviser par # est l’erreur des intérêts simples.",
+    "en": "Come back through the root: # + i_trimestral = root of index # of (# + i_annual). Dividing by # is the simple-interest mistake."
   },
   "Volume da solução pronta, e não do solvente que se usou para preparar.": {
     "fr": "Volume de la solution prête, et non du solvant utilisé pour la préparer.",
@@ -15231,6 +15531,10 @@
     "fr": "k² est le facteur d’AIRE. Le volume varie comme k³.",
     "en": "k² is the AREA factor. Volume scales with k³."
   },
+  "k³ é o fator do VOLUME. Área tem duas dimensões, então o fator é k².": {
+    "fr": "k³ est le facteur du VOLUME. L’aire a deux dimensions, donc le facteur est k².",
+    "en": "k³ is the VOLUME factor. Area has two dimensions, so the factor is k²."
+  },
   "k³ é o fator do VOLUME. Área tem duas dimensões: k².": {
     "fr": "k³ est le facteur du VOLUME. L’aire a deux dimensions : k².",
     "en": "k³ is the VOLUME factor. Area has two dimensions: k²."
@@ -15375,6 +15679,14 @@
     "fr": "À gauche est restée l’identité ; à droite, l’inverse.",
     "en": "The identity is left on the left; on the right, the inverse."
   },
+  "Área e base não se subtraem: elas têm unidades diferentes. A relação entre elas é um produto, então isolar h pede uma divisão.": {
+    "fr": "L’aire et la base ne se soustraient pas : leurs unités diffèrent. La relation entre elles est un produit, donc isoler h demande une division.",
+    "en": "Area and base are not subtracted: they have different units. The relation between them is a product, so isolating h calls for a division."
+  },
+  "Área é aditiva: partes que não se sobrepõem somam.": {
+    "fr": "L’aire est additive : des parties qui ne se recouvrent pas s’additionnent.",
+    "en": "Area is additive: parts that do not overlap add up."
+  },
   "Ângulos colaterais internos são suplementares: somam 180°.": {
     "fr": "Les angles co-intérieurs sont supplémentaires : ils font 180°.",
     "en": "Co-interior angles are supplementary: they add up to 180°."
@@ -15422,6 +15734,10 @@
   "É a largura que aproveita melhor a cerca disponível.": {
     "fr": "C’est la largeur qui exploite le mieux la clôture disponible.",
     "en": "It is the width that makes the best use of the available fence."
+  },
+  "É a média das bases multiplicada pela altura.": {
+    "fr": "C’est la moyenne des bases multipliée par la hauteur.",
+    "en": "It is the average of the bases times the height."
   },
   "É a quantidade que minimiza o custo de produção.": {
     "fr": "C’est la quantité qui minimise le coût de production.",
