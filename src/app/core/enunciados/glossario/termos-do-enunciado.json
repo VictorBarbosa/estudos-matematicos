@@ -1,0 +1,212 @@
+{
+  "abscissa": {
+    "pt": {
+      "termo": "abscissa",
+      "definicao": "A primeira coordenada de um ponto, medida no eixo horizontal: em (3, 5), a abscissa é 3."
+    },
+    "fr": {
+      "termo": "abscisse",
+      "definicao": "La première coordonnée d'un point, mesurée sur l'axe horizontal : dans (3, 5), l'abscisse est 3."
+    },
+    "en": {
+      "termo": "abscissa",
+      "definicao": "The first coordinate of a point, measured along the horizontal axis: in (3, 5), the abscissa is 3."
+    }
+  },
+  "ordenada": {
+    "pt": {
+      "termo": "ordenada",
+      "definicao": "A segunda coordenada de um ponto, medida no eixo vertical: em (3, 5), a ordenada é 5."
+    },
+    "fr": {
+      "termo": "ordonnée",
+      "definicao": "La seconde coordonnée d'un point, mesurée sur l'axe vertical : dans (3, 5), l'ordonnée est 5."
+    },
+    "en": {
+      "termo": "ordinate",
+      "definicao": "The second coordinate of a point, measured along the vertical axis: in (3, 5), the ordinate is 5."
+    }
+  },
+  "vertice": {
+    "pt": {
+      "termo": "vértice",
+      "definicao": "O ponto em que a parábola muda de sentido — o mais alto, se ela abre para baixo; o mais baixo, se abre para cima."
+    },
+    "fr": {
+      "termo": "sommet",
+      "definicao": "Le point où la parabole change de sens — le plus haut si elle s'ouvre vers le bas, le plus bas si elle s'ouvre vers le haut."
+    },
+    "en": {
+      "termo": "vertex",
+      "definicao": "The point where the parabola turns — the highest if it opens downwards, the lowest if it opens upwards."
+    }
+  },
+  "diretriz": {
+    "pt": {
+      "termo": "diretriz",
+      "definicao": "A reta que, junto com o foco, define a parábola: cada ponto dela está à mesma distância dos dois."
+    },
+    "fr": {
+      "termo": "directrice",
+      "definicao": "La droite qui, avec le foyer, définit la parabole : chacun de ses points est à égale distance des deux."
+    },
+    "en": {
+      "termo": "directrix",
+      "definicao": "The line that, together with the focus, defines the parabola: every point of it is equidistant from both."
+    }
+  },
+  "discriminante": {
+    "pt": {
+      "termo": "discriminante",
+      "definicao": "O Δ = b² − 4ac: positivo, há duas raízes reais; zero, uma raiz dupla; negativo, nenhuma raiz real."
+    },
+    "fr": {
+      "termo": "discriminant",
+      "definicao": "Le Δ = b² − 4ac : positif, deux racines réelles ; nul, une racine double ; négatif, aucune racine réelle."
+    },
+    "en": {
+      "termo": "discriminant",
+      "definicao": "The Δ = b² − 4ac: positive, two real roots; zero, a double root; negative, no real roots."
+    }
+  },
+  "coeficiente angular": {
+    "pt": {
+      "termo": "coeficiente angular",
+      "definicao": "O m de y = mx + q: quanto y sobe quando x anda uma unidade. É a inclinação da reta."
+    },
+    "fr": {
+      "termo": "coefficient directeur",
+      "definicao": "Le m de y = mx + q : de combien y monte quand x avance d'une unité. C'est la pente de la droite."
+    },
+    "en": {
+      "termo": "slope",
+      "definicao": "The m in y = mx + q: how much y rises when x moves one unit. It is the steepness of the line."
+    }
+  },
+  "coeficiente linear": {
+    "pt": {
+      "termo": "coeficiente linear",
+      "definicao": "O q de y = mx + q: o valor de y onde a reta corta o eixo vertical."
+    },
+    "fr": {
+      "termo": "ordonnée à l'origine",
+      "definicao": "Le q de y = mx + q : la valeur de y là où la droite coupe l'axe vertical."
+    },
+    "en": {
+      "termo": "intercept",
+      "definicao": "The q in y = mx + q: the value of y where the line crosses the vertical axis."
+    }
+  },
+  "assintota": {
+    "pt": {
+      "termo": "assíntota",
+      "definicao": "A reta de que o gráfico chega infinitamente perto sem nunca tocar."
+    },
+    "fr": {
+      "termo": "asymptote",
+      "definicao": "La droite dont le graphe s'approche infiniment sans jamais la toucher."
+    },
+    "en": {
+      "termo": "asymptote",
+      "definicao": "The line the graph gets infinitely close to without ever touching."
+    }
+  },
+  "geratriz": {
+    "pt": {
+      "termo": "geratriz",
+      "definicao": "A fração que gera um decimal: a fração geratriz de 0,333… é 1/3."
+    },
+    "fr": {
+      "termo": "fraction génératrice",
+      "definicao": "La fraction qui engendre un décimal : la génératrice de 0,333… est 1/3."
+    },
+    "en": {
+      "termo": "generating fraction",
+      "definicao": "The fraction that generates a decimal: the generating fraction of 0.333… is 1/3."
+    }
+  },
+  "dizima periodica": {
+    "pt": {
+      "termo": "dízima periódica",
+      "definicao": "O decimal em que um grupo de algarismos se repete para sempre: 0,333… ou 1,2555…"
+    },
+    "fr": {
+      "termo": "développement décimal périodique",
+      "definicao": "Le décimal où un groupe de chiffres se répète indéfiniment : 0,333… ou 1,2555…"
+    },
+    "en": {
+      "termo": "repeating decimal",
+      "definicao": "The decimal in which a group of digits repeats forever: 0.333… or 1.2555…"
+    }
+  },
+  "fracao irredutivel": {
+    "pt": {
+      "termo": "fração irredutível",
+      "definicao": "A fração que não dá mais para simplificar: o mdc do numerador com o denominador é 1."
+    },
+    "fr": {
+      "termo": "fraction irréductible",
+      "definicao": "La fraction qu'on ne peut plus simplifier : le PGCD du numérateur et du dénominateur vaut 1."
+    },
+    "en": {
+      "termo": "irreducible fraction",
+      "definicao": "The fraction that cannot be simplified further: the gcd of numerator and denominator is 1."
+    }
+  },
+  "numero misto": {
+    "pt": {
+      "termo": "número misto",
+      "definicao": "A quantidade escrita como inteiro mais fração: 2 1/3 são sete terços."
+    },
+    "fr": {
+      "termo": "nombre fractionnaire",
+      "definicao": "La quantité écrite comme un entier plus une fraction : 2 1/3 vaut sept tiers."
+    },
+    "en": {
+      "termo": "mixed number",
+      "definicao": "The quantity written as a whole number plus a fraction: 2 1/3 is seven thirds."
+    }
+  },
+  "ponto de inflexao": {
+    "pt": {
+      "termo": "ponto de inflexão",
+      "definicao": "O ponto em que a curva troca de concavidade — deixa de curvar para cima e passa a curvar para baixo, ou o contrário."
+    },
+    "fr": {
+      "termo": "point d'inflexion",
+      "definicao": "Le point où la courbe change de concavité — elle cesse de se courber vers le haut et se courbe vers le bas, ou l'inverse."
+    },
+    "en": {
+      "termo": "inflection point",
+      "definicao": "The point where the curve changes concavity — it stops curving upwards and starts curving downwards, or the reverse."
+    }
+  },
+  "derivada": {
+    "pt": {
+      "termo": "derivada",
+      "definicao": "A taxa com que a função muda num ponto: a inclinação da reta tangente ao gráfico ali."
+    },
+    "fr": {
+      "termo": "dérivée",
+      "definicao": "Le taux de variation de la fonction en un point : la pente de la tangente au graphe en ce point."
+    },
+    "en": {
+      "termo": "derivative",
+      "definicao": "The rate at which the function changes at a point: the slope of the tangent line to the graph there."
+    }
+  },
+  "raiz": {
+    "pt": {
+      "termo": "raiz",
+      "definicao": "O valor de x que zera a expressão: onde o gráfico cruza o eixo horizontal."
+    },
+    "fr": {
+      "termo": "racine",
+      "definicao": "La valeur de x qui annule l'expression : là où le graphe coupe l'axe horizontal."
+    },
+    "en": {
+      "termo": "root",
+      "definicao": "The value of x that makes the expression zero: where the graph crosses the horizontal axis."
+    }
+  }
+}
