@@ -311,6 +311,38 @@
     "fr": "L’évaluation s’est arrêtée à la puissance de la borne sans être divisée par le nouvel exposant, que la primitive a laissé au dénominateur.",
     "en": "The evaluation stopped at the power at the edge and was not divided by the new exponent, which the antiderivative left in the denominator."
   },
+  "A balança deu gramas, e a concentração se mede em mols: AgNO₃ vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : AgNO₃ devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: AgNO₃ becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: CuSO₄ vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : CuSO₄ devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: CuSO₄ becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: C₆H₁₂O₆ vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : C₆H₁₂O₆ devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: C₆H₁₂O₆ becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: KCl vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : KCl devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: KCl becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: KOH vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : KOH devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: KOH becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: NaCl vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : NaCl devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: NaCl becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: NaOH vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : NaOH devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: NaOH becomes an amount of substance."
+  },
+  "A balança deu gramas, e a concentração se mede em mols: Na₂CO₃ vira quantidade.": {
+    "fr": "La balance a donné des grammes, et la concentration se mesure en moles : Na₂CO₃ devient une quantité de matière.",
+    "en": "The scale gave grams, and concentration is measured in moles: Na₂CO₃ becomes an amount of substance."
+  },
   "A bandeirada é cobrada uma vez, antes de qualquer quilômetro. Qual é o valor fixo e qual se repete?": {
     "fr": "La prise en charge est facturée une fois, avant tout kilomètre. Quelle est la valeur fixe et laquelle se répète ?",
     "en": "The base fare is charged once, before any kilometre. Which is the fixed amount and which repeats?"
@@ -459,6 +491,18 @@
     "fr": "La concavité est le signe de la dérivée SECONDE. Nous dérivons deux fois.",
     "en": "Concavity is the sign of the SECOND derivative. We differentiate twice."
   },
+  "A concentração diz quantos mols há em cada litro.": {
+    "fr": "La concentration dit combien de moles il y a dans chaque litre.",
+    "en": "The concentration says how many moles there are in each litre."
+  },
+  "A concentração final é a razão entre os dois totais.": {
+    "fr": "La concentration finale est le rapport entre les deux totaux.",
+    "en": "The final concentration is the ratio of the two totals."
+  },
+  "A concentração é mols por LITRO: passe a massa a mols pela massa molar, e o volume de mL para L dividindo por #.": {
+    "fr": "La concentration est en moles par LITRE : convertissez la masse en moles par la masse molaire, et le volume de mL en L en divisant par #.",
+    "en": "Concentration is moles per LITRE: turn the mass into moles with the molar mass, and the volume from mL to L by dividing by #."
+  },
   "A condição inicial escolhe uma delas: y(#) igual a #.": {
     "fr": "La condition initiale en choisit une : y(#) égal à #.",
     "en": "The initial condition picks one of them: y(#) equal to #."
@@ -586,6 +630,10 @@
   "A diferença, em módulo, é o erro cometido.": {
     "fr": "La différence, en valeur absolue, est l'erreur commise.",
     "en": "The difference, in absolute value, is the error committed."
+  },
+  "A diluição não se calcula por subtração de concentrações. O que se conserva são os mols: a mesma quantidade, espalhada em mais litros.": {
+    "fr": "La dilution ne se calcule pas par soustraction de concentrations. Ce qui se conserve, ce sont les moles : la même quantité, répartie dans plus de litres.",
+    "en": "Dilution is not computed by subtracting concentrations. What is conserved are the moles: the same amount, spread over more litres."
   },
   "A dimensão de aceleração angular sai da sua definição física.": {
     "fr": "La dimension de accélération angulaire découle de sa définition physique.",
@@ -1199,6 +1247,10 @@
     "fr": "La masse entre dans le calcul : c = #√(m·k), avec m = #.",
     "en": "The mass takes part: c = #√(m·k), with m = #."
   },
+  "A massa molar devolve a quantidade à balança.": {
+    "fr": "La masse molaire ramène la quantité à la balance.",
+    "en": "The molar mass brings the amount back to the scale."
+  },
   "A massa molar diz quanto pesa UM mol. Divida os # g por ela para saber quantos cabem.": {
     "fr": "La masse molaire dit combien pèse UNE mole. Divisez les # g par elle pour savoir combien il y en a.",
     "en": "The molar mass says how much ONE mole weighs. Divide the # g by it to find how many fit."
@@ -1279,9 +1331,17 @@
     "fr": "La plus petite d’entre elles.",
     "en": "The smallest of them."
   },
+  "A mesma quantidade, espalhada em mais litros, dá concentração menor.": {
+    "fr": "La même quantité, répartie dans plus de litres, donne une concentration plus faible.",
+    "en": "The same amount, spread over more litres, gives a lower concentration."
+  },
   "A metade entra dentro do logaritmo, não como fator. Resolver a equação exponencial exige aplicar o logaritmo aos dois lados.": {
     "fr": "La moitié entre dans le logarithme, et non comme facteur. Résoudre l’équation exponentielle exige d’appliquer le logarithme aux deux côtés.",
     "en": "The half goes inside the logarithm, not as a factor. Solving the exponential equation requires taking the logarithm of both sides."
+  },
+  "A molaridade é a quantidade dividida pelo volume da solução.": {
+    "fr": "La molarité est la quantité de matière divisée par le volume de la solution.",
+    "en": "Molarity is the amount of substance divided by the volume of the solution."
   },
   "A mudança de base escreve o logaritmo como um múltiplo do natural.": {
     "fr": "Le changement de base écrit le logarithme comme un multiple du naturel.",
@@ -2239,6 +2299,14 @@
     "fr": "Nous ajoutons les deux couvercles circulaires.",
     "en": "We add the two circular ends."
   },
+  "Acrescentar água não cria nem destrói soluto: a quantidade de mols fica.": {
+    "fr": "Ajouter de l’eau ne crée ni ne détruit de soluté : la quantité de moles reste.",
+    "en": "Adding water neither creates nor destroys solute: the number of moles stays."
+  },
+  "Acrescentar água não cria nem destrói soluto: os mols são os mesmos. O volume final é o que havia MAIS o que se acrescentou.": {
+    "fr": "Ajouter de l’eau ne crée ni ne détruit de soluté : les moles sont les mêmes. Le volume final est ce qu’il y avait PLUS ce qu’on a ajouté.",
+    "en": "Adding water neither creates nor destroys solute: the moles are the same. The final volume is what there was PLUS what was added."
+  },
   "Afastar as cargas ENFRAQUECE a força: o fator da distância divide, não multiplica.": {
     "fr": "Éloigner les charges AFFAIBLIT la force : le facteur de distance divise, il ne multiplie pas.",
     "en": "Moving the charges apart WEAKENS the force: the distance factor divides, it does not multiply."
@@ -3018,6 +3086,10 @@
   "Cada sen(u)/u tende a #; sobra a razão dos coeficientes.": {
     "fr": "Chaque sin(u)/u tend vers # ; il reste le rapport des coefficients.",
     "en": "Each sin(u)/u tends to #; the ratio of the coefficients is left."
+  },
+  "Cada solução traz a sua quantidade de soluto.": {
+    "fr": "Chaque solution apporte sa quantité de soluté.",
+    "en": "Each solution brings its own amount of solute."
   },
   "Cada subnível só recebe o seguinte depois de encher.": {
     "fr": "Chaque sous-couche ne passe à la suivante qu’une fois remplie.",
@@ -6275,9 +6347,21 @@
     "fr": "C’est la moitié de la LONGUEUR de l’intervalle. Le point c se trouve à l’intérieur, entre les bornes.",
     "en": "That is half the LENGTH of the interval. The point c lies inside it, between the ends."
   },
+  "Essa é a média SIMPLES das concentrações, e ela só acerta quando os dois volumes são iguais. Aqui um frasco traz mais solução que o outro, e por isso pesa mais no resultado.": {
+    "fr": "C’est la moyenne SIMPLE des concentrations, et elle ne tombe juste que si les deux volumes sont égaux. Ici un flacon contient plus de solution que l’autre, et pèse donc davantage dans le résultat.",
+    "en": "That is the PLAIN average of the concentrations, and it is only right when the two volumes are equal. Here one flask holds more solution than the other, so it weighs more in the result."
+  },
   "Essa é a projeção do OUTRO cateto. Cada projeção usa o seu próprio.": {
     "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
     "en": "That is the projection of the OTHER leg. Each projection uses its own."
+  },
+  "Essa é a quantidade em MOLS. A pergunta é por massa: falta multiplicar pela massa molar.": {
+    "fr": "C’est la quantité en MOLES. La question porte sur la masse : il reste à multiplier par la masse molaire.",
+    "en": "That is the amount in MOLES. The question asks for mass: multiplying by the molar mass is still missing."
+  },
+  "Essa é a quantidade total em MOLS. Falta dividir pelo volume somado para voltar a ser concentração.": {
+    "fr": "C’est la quantité totale en MOLES. Il reste à diviser par le volume total pour redevenir une concentration.",
+    "en": "That is the total amount in MOLES. Dividing by the combined volume to get back to a concentration is still missing."
   },
   "Essa é a raiz do centro, que é só o primeiro termo. Falta a correção proporcional ao afastamento, que é o que a derivada traz.": {
     "fr": "C’est la racine du centre, qui n’est que le premier terme. Il manque la correction proportionnelle à l’écart, qu’apporte la dérivée.",
@@ -7543,6 +7627,10 @@
     "fr": "Cela utilise la longueur du cercle. Stokes intègre le rotationnel sur l’AIRE du disque : πR².",
     "en": "That uses the length of the circle. Stokes integrates the curl over the AREA of the disk: πR²."
   },
+  "Isso é a concentração em GRAMAS por litro. A molaridade conta partículas, e por isso a massa precisa virar mols pela massa molar antes da divisão.": {
+    "fr": "C’est la concentration en GRAMMES par litre. La molarité compte des particules, et la masse doit donc devenir des moles par la masse molaire avant la division.",
+    "en": "That is the concentration in GRAMS per litre. Molarity counts particles, so the mass has to become moles through the molar mass before the division."
+  },
   "Isso é a derivada de ordem n em zero, e não o coeficiente. Falta dividir pelo fatorial da ordem, que é o que a fórmula manda.": {
     "fr": "C’est la dérivée d’ordre n en zéro, et non le coefficient. Il manque la division par la factorielle de l’ordre, comme la formule l’exige.",
     "en": "That is the order-n derivative at zero, not the coefficient. Dividing by the factorial of the order, as the formula requires, is missing."
@@ -7834,6 +7922,10 @@
   "Microcoulomb para coulomb: # μC = #⁻⁶ C.": {
     "fr": "Du microcoulomb au coulomb : # μC = #⁻⁶ C.",
     "en": "Microcoulomb to coulomb: # μC = #⁻⁶ C."
+  },
+  "Mililitro dividido por mol erra por mil: # mL são # L.": {
+    "fr": "Millilitre divisé par mole se trompe d’un facteur mille : # mL font # L.",
+    "en": "Millilitre divided by mole is off by a thousand: # mL is # L."
   },
   "Mn neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Mn neutre a # électrons, autant que de protons.",
@@ -8527,6 +8619,10 @@
     "fr": "À l'équilibre, ce qui entre est égal à ce qui sort.",
     "en": "In equilibrium, what goes in equals what comes out."
   },
+  "No frasco final os mols se somam, e os volumes também.": {
+    "fr": "Dans le flacon final, les moles s’additionnent, et les volumes aussi.",
+    "en": "In the final flask the moles add up, and so do the volumes."
+  },
   "No gráfico v × t, o movimento uniformemente variado é uma reta.": {
     "fr": "Sur le graphique v × t, le mouvement uniformément varié est une droite.",
     "en": "On the v × t graph, uniformly accelerated motion is a line."
@@ -8638,6 +8734,38 @@
   "No triângulo retângulo, os quadrados dos catetos somam o da hipotenusa.": {
     "fr": "Dans le triangle rectangle, les carrés des cathètes somment celui de l'hypoténuse.",
     "en": "In the right triangle, the squares of the legs sum to that of the hypotenuse."
+  },
+  "No volume pedido há essa quantidade de AgNO₃.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de AgNO₃.",
+    "en": "In the volume asked about there is that amount of AgNO₃."
+  },
+  "No volume pedido há essa quantidade de CuSO₄.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de CuSO₄.",
+    "en": "In the volume asked about there is that amount of CuSO₄."
+  },
+  "No volume pedido há essa quantidade de C₆H₁₂O₆.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de C₆H₁₂O₆.",
+    "en": "In the volume asked about there is that amount of C₆H₁₂O₆."
+  },
+  "No volume pedido há essa quantidade de KCl.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de KCl.",
+    "en": "In the volume asked about there is that amount of KCl."
+  },
+  "No volume pedido há essa quantidade de KOH.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de KOH.",
+    "en": "In the volume asked about there is that amount of KOH."
+  },
+  "No volume pedido há essa quantidade de NaCl.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de NaCl.",
+    "en": "In the volume asked about there is that amount of NaCl."
+  },
+  "No volume pedido há essa quantidade de NaOH.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de NaOH.",
+    "en": "In the volume asked about there is that amount of NaOH."
+  },
+  "No volume pedido há essa quantidade de Na₂CO₃.": {
+    "fr": "Dans le volume demandé, il y a cette quantité de Na₂CO₃.",
+    "en": "In the volume asked about there is that amount of Na₂CO₃."
   },
   "No vácuo não há condução nem convecção: só a radiação dissipa.": {
     "fr": "Dans le vide il n’y a ni conduction ni convection : seule le rayonnement dissipe.",
@@ -10487,6 +10615,10 @@
     "fr": "Le vecteur tangent est constant sur un segment.",
     "en": "The tangent vector is constant on a segment."
   },
+  "O volume acrescentado não é o volume final: somar é o passo que mais se esquece.": {
+    "fr": "Le volume ajouté n’est pas le volume final : l’addition est l’étape qu’on oublie le plus.",
+    "en": "The added volume is not the final volume: adding is the step most often forgotten."
+  },
   "O volume depende de três dimensões.": {
     "fr": "Le volume dépend de trois dimensions.",
     "en": "The volume depends on three dimensions."
@@ -10495,9 +10627,29 @@
     "fr": "Le volume du cube est l’arête au cube.",
     "en": "A cube’s volume is the edge cubed."
   },
+  "O volume entra em litros, nunca em mililitros.": {
+    "fr": "Le volume s’exprime en litres, jamais en millilitres.",
+    "en": "The volume goes in litres, never in millilitres."
+  },
+  "O volume entrou em mililitros, e o resultado ficou mil vezes maior. Passe para litros antes de multiplicar.": {
+    "fr": "Le volume est entré en millilitres, et le résultat est mille fois trop grand. Convertissez en litres avant de multiplier.",
+    "en": "The volume went in as millilitres, and the result came out a thousand times too large. Convert to litres before multiplying."
+  },
   "O volume escala com k³, não com k. Aqui k = #, então o fator é #³.": {
     "fr": "Le volume varie comme k³, et non comme k. Ici k = #, donc le facteur vaut #³.",
     "en": "Volume scales with k³, not with k. Here k = #, so the factor is #³."
+  },
+  "O volume ficou em mililitros. A concentração é por LITRO, e o fator mil muda tudo: divida os mililitros por # antes.": {
+    "fr": "Le volume est resté en millilitres. La concentration est par LITRE, et le facteur mille change tout : divisez d’abord les millilitres par #.",
+    "en": "The volume stayed in millilitres. Concentration is per LITRE, and the factor of a thousand changes everything: divide the millilitres by # first."
+  },
+  "O volume final é o que havia MAIS a água acrescentada, e não só a água. Some os dois antes de dividir.": {
+    "fr": "Le volume final est ce qu’il y avait PLUS l’eau ajoutée, et non l’eau seule. Additionnez les deux avant de diviser.",
+    "en": "The final volume is what there was PLUS the added water, not just the water. Add the two before dividing."
+  },
+  "O volume final é o que havia mais o que se acrescentou.": {
+    "fr": "Le volume final est ce qu’il y avait plus ce qu’on a ajouté.",
+    "en": "The final volume is what there was plus what was added."
   },
   "O volume é o módulo do determinante #×# com u, v e w nas linhas. Calcule v × w e depois o escalar com u.": {
     "fr": "Le volume est le module du déterminant #×# avec u, v et w sur les lignes. Calculez v × w puis le scalaire avec u.",
@@ -12583,6 +12735,10 @@
     "fr": "Additionnez les côtés de toutes les faces (#·# + #·#) et divisez par # pour avoir A. Ensuite, V = A − F + #.",
     "en": "Add the sides of all the faces (#·# + #·#) and divide by # to get E. Then, V = E − F + #."
   },
+  "Some os mols dos dois frascos e some os volumes; divida um pelo outro. Não é a média das concentrações — ela só acerta se os volumes forem iguais.": {
+    "fr": "Additionnez les moles des deux flacons et additionnez les volumes ; divisez l’un par l’autre. Ce n’est pas la moyenne des concentrations — elle ne tombe juste que si les volumes sont égaux.",
+    "en": "Add the moles of both flasks and add the volumes; divide one by the other. It is not the average of the concentrations — that is only right if the volumes are equal."
+  },
   "Some quadrados pede x = #·tg θ: daí # + x² vira #·sec²θ.": {
     "fr": "Une somme de carrés appelle x = #·tan θ : alors # + x² devient #·sec²θ.",
     "en": "A sum of squares calls for x = #·tan θ: then # + x² becomes #·sec²θ."
@@ -13819,9 +13975,17 @@
     "fr": "Retour à la variable d’origine.",
     "en": "Back to the original variable."
   },
+  "Volume da solução pronta, e não do solvente que se usou para preparar.": {
+    "fr": "Volume de la solution prête, et non du solvant utilisé pour la préparer.",
+    "en": "Volume of the finished solution, not of the solvent used to prepare it."
+  },
   "Vá da área para o z e só então desfaça a padronização.": {
     "fr": "Allez de l’aire vers z et seulement ensuite défaites la standardisation.",
     "en": "Go from the area to z and only then undo the standardisation."
+  },
+  "Vá por concentração × volume em litros → mols → vezes a massa molar → gramas. O caminho é o mesmo da definição, de trás para a frente.": {
+    "fr": "Passez par concentration × volume en litres → moles → fois la masse molaire → grammes. Le chemin est celui de la définition, pris à l’envers.",
+    "en": "Go through concentration × volume in litres → moles → times the molar mass → grams. The route is the definition, read backwards."
   },
   "W = q·(V_B − V_A) = #×#⁻⁶ vezes (# − #). Em joules; multiplique por # para mJ.": {
     "fr": "W = q·(V_B − V_A) = #×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
@@ -14483,6 +14647,10 @@
     "fr": "C’est ainsi qu’on conçoit une suspension : elle revient le plus vite possible sans osciller.",
     "en": "That is how a suspension is designed: it returns as fast as possible without oscillating."
   },
+  "É esta frase que vira a fórmula da diluição, e não o contrário.": {
+    "fr": "C’est cette phrase qui devient la formule de la dilution, et non l’inverse.",
+    "en": "It is this sentence that becomes the dilution formula, not the other way round."
+  },
   "É este cancelamento que transforma um problema infinito numa equação simples.": {
     "fr": "C’est cette annulation qui transforme un problème infini en une équation simple.",
     "en": "It is this cancellation that turns an infinite problem into a simple equation."
@@ -14498,6 +14666,10 @@
   "É metade de um triângulo equilátero: o lado menor é metade da hipotenusa.": {
     "fr": "C’est la moitié d’un triangle équilatéral : le plus petit côté vaut la moitié de l’hypoténuse.",
     "en": "It is half an equilateral triangle: the shortest side is half the hypotenuse."
+  },
+  "É média ponderada pelos volumes: a média simples só acerta se eles forem iguais.": {
+    "fr": "C’est une moyenne pondérée par les volumes : la moyenne simple ne tombe juste que s’ils sont égaux.",
+    "en": "It is a volume-weighted average: the plain average is only right if they are equal."
   },
   "É média ponderada: o isótopo mais abundante puxa o resultado para si.": {
     "fr": "C’est une moyenne pondérée : l’isotope le plus abondant tire le résultat vers lui.",
