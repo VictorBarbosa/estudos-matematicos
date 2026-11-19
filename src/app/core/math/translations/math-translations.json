@@ -223,6 +223,22 @@
     "fr": "#x³ est le cube de #x et # est le cube de #. Le facteur (#x - #) donne la racine : annulez-le et laissez le résultat en fraction.",
     "en": "#x³ is the cube of #x and # is the cube of #. The factor (#x - #) gives the root: set it to zero and leave the answer as a fraction."
   },
+  "#° está no #º quadrante. O cosseno é a abscissa (x) do ponto no círculo: veja o sinal ali e use o ângulo de referência.": {
+    "fr": "#° est dans le #e quadrant. Le cosinus est l’abscisse (x) du point sur le cercle : regardez le signe là et utilisez l’angle de référence.",
+    "en": "#° is in quadrant #. The cosine is the x-coordinate of the point on the circle: look at the sign there and use the reference angle."
+  },
+  "#° está no #º quadrante. O seno é a altura (y) do ponto no círculo: veja o sinal ali e use o ângulo de referência.": {
+    "fr": "#° est dans le #e quadrant. Le sinus est la hauteur (y) du point sur le cercle : regardez le signe là et utilisez l’angle de référence.",
+    "en": "#° is in quadrant #. The sine is the height (y) of the point on the circle: look at the sign there and use the reference angle."
+  },
+  "#° fica no #º quadrante.": {
+    "fr": "#° est dans le #e quadrant.",
+    "en": "#° is in quadrant #."
+  },
+  "#° é π radianos: multiplique # por π e divida por #.": {
+    "fr": "#° vaut π radians : multipliez # par π et divisez par #.",
+    "en": "#° is π radians: multiply # by π and divide by #."
+  },
   "A # graus o alcance é máximo, e é só nesse ângulo.": {
     "fr": "À # degrés la portée est maximale, et seulement à cet angle.",
     "en": "At # degrees the range is maximum, and only at that angle."
@@ -583,6 +599,10 @@
     "fr": "La constante ne disparaît pas : elle multiplie tout le résultat.",
     "en": "The constant does not vanish: it multiplies the whole result."
   },
+  "A conta parou na derivada do lado esquerdo. Ainda falta isolar dy/dx, que é o que o enunciado pede.": {
+    "fr": "Le calcul s’est arrêté à la dérivée du côté gauche. Il reste à isoler dy/dx, ce que l’énoncé demande.",
+    "en": "The computation stopped at the derivative of the left side. Isolating dy/dx, which is what the question asks for, is still missing."
+  },
   "A conta é só de leitura, depois de distribuir na ordem certa.": {
     "fr": "Le calcul se réduit à une lecture, une fois la répartition faite dans le bon ordre.",
     "en": "The computation is just a reading, once the filling is done in the right order."
@@ -594,6 +614,10 @@
   "A continuidade exige que os dois laterais coincidam.": {
     "fr": "La continuité exige que les deux limites latérales coïncident.",
     "en": "Continuity requires the two one-sided limits to agree."
+  },
+  "A conversão ficou invertida. Para ir de graus a radianos multiplica-se por π/#; o fator #/π faz o caminho contrário.": {
+    "fr": "La conversion est inversée. Pour aller des degrés aux radians on multiplie par π/# ; le facteur #/π fait le chemin inverse.",
+    "en": "The conversion is backwards. To go from degrees to radians you multiply by π/#; the factor #/π goes the other way."
   },
   "A coordenada pedida.": {
     "fr": "La coordonnée demandée.",
@@ -682,6 +706,10 @@
   "A derivada do seno é o cosseno, sem sinal trocado. O menos pertence ao cosseno, não ao seno.": {
     "fr": "La dérivée du sinus est le cosinus, sans changement de signe. Le moins appartient au cosinus, pas au sinus.",
     "en": "The derivative of sine is cosine, with no sign flip. The minus belongs to the cosine, not to the sine."
+  },
+  "A derivada é a inclinação da tangente. A reta passa pelo ponto com ela.": {
+    "fr": "La dérivée est la pente de la tangente. La droite passe par le point avec cette pente.",
+    "en": "The derivative is the slope of the tangent. The line passes through the point with it."
   },
   "A derivada é o limite da inclinação da reta secante.": {
     "fr": "La dérivée est la limite de l'inclinaison de la sécante.",
@@ -1003,6 +1031,10 @@
     "fr": "L’exponentielle l’emporte sur toute puissance : c’est pourquoi ce cas converge toujours.",
     "en": "The exponential beats any power: that is why this case always converges."
   },
+  "A expressão depende de x e de y — é o preço de não ter isolado y antes.": {
+    "fr": "L’expression dépend de x et de y — c’est le prix de ne pas avoir isolé y avant.",
+    "en": "The expression depends on x and on y — that is the price of not having isolated y first."
+  },
   "A fase desloca a onda horizontalmente.": {
     "fr": "La phase décale l'onde horizontalement.",
     "en": "Phase shifts the wave horizontally."
@@ -1242,6 +1274,10 @@
   "A inclinação da secante.": {
     "fr": "La pente de la sécante.",
     "en": "The slope of the secant."
+  },
+  "A inclinação da tangente é a derivada no ponto. A reta é y − # = m(x − #); em x = #, y = # − m·#.": {
+    "fr": "La pente de la tangente est la dérivée au point. La droite est y − # = m(x − #) ; en x = #, y = # − m·#.",
+    "en": "The slope of the tangent is the derivative at the point. The line is y − # = m(x − #); at x = #, y = # − m·#."
   },
   "A inclinação é a derivada no ponto.": {
     "fr": "La pente est la dérivée au point.",
@@ -1742,6 +1778,10 @@
   "A primeira derivada é a/x; escrita como potência, a·x⁻¹.": {
     "fr": "La dérivée première vaut a/x ; écrite en puissance, a·x⁻¹.",
     "en": "The first derivative is a/x; written as a power, a·x⁻¹."
+  },
+  "A primeira derivada, implicitamente.": {
+    "fr": "La dérivée première, implicitement.",
+    "en": "The first derivative, implicitly."
   },
   "A primeira derivada: o expoente desce e a cadeia traz o fator #.": {
     "fr": "La première dérivée : l’exposant descend et la chaîne apporte le facteur #.",
@@ -2367,6 +2407,26 @@
     "fr": "La tangente est le quotient entre sinus et cosinus.",
     "en": "The tangent is the quotient of sine by cosine."
   },
+  "A tangente é y/x: no #º quadrante, y é negativo e x é negativo, então o quociente é positivo.": {
+    "fr": "La tangente vaut y/x : dans le #e quadrant, y est negativo et x est negativo, donc le quotient est positivo.",
+    "en": "The tangent is y/x: in quadrant #, y is negativo and x is negativo, so the quotient is positivo."
+  },
+  "A tangente é y/x: no #º quadrante, y é negativo e x é positivo, então o quociente é negativo.": {
+    "fr": "La tangente vaut y/x : dans le #e quadrant, y est negativo et x est positivo, donc le quotient est negativo.",
+    "en": "The tangent is y/x: in quadrant #, y is negativo and x is positivo, so the quotient is negativo."
+  },
+  "A tangente é y/x: no #º quadrante, y é positivo e x é negativo, então o quociente é negativo.": {
+    "fr": "La tangente vaut y/x : dans le #e quadrant, y est positivo et x est negativo, donc le quotient est negativo.",
+    "en": "The tangent is y/x: in quadrant #, y is positivo and x is negativo, so the quotient is negativo."
+  },
+  "A tangente é y/x: no #º quadrante, y é positivo e x é positivo, então o quociente é positivo.": {
+    "fr": "La tangente vaut y/x : dans le #e quadrant, y est positivo et x est positivo, donc le quotient est positivo.",
+    "en": "The tangent is y/x: in quadrant #, y is positivo and x is positivo, so the quotient is positivo."
+  },
+  "A tangente é y/x: o sinal sai dos DOIS sinais juntos. No #º quadrante, por exemplo, os dois são negativos e a tangente é positiva.": {
+    "fr": "La tangente vaut y/x : le signe sort des DEUX signes réunis. Dans le #e quadrant, par exemple, les deux sont négatifs et la tangente est positive.",
+    "en": "The tangent is y/x: the sign comes from BOTH signs together. In quadrant #, for instance, both are negative and the tangent is positive."
+  },
   "A taxa da área não é o quadrado da taxa do lado. É preciso derivar A = L², o que traz o lado ATUAL para a conta.": {
     "fr": "Le taux de l’aire n’est pas le carré du taux du côté. Il faut dériver A = L², ce qui fait entrer le côté ACTUEL dans le calcul.",
     "en": "The rate of the area is not the square of the rate of the side. You have to differentiate A = L², which brings the CURRENT side into the computation."
@@ -2738,6 +2798,10 @@
   "Ao derivar uma potência o expoente desce e DIMINUI em um. Aqui ele desceu, mas continuou o mesmo lá em cima.": {
     "fr": "En dérivant une puissance, l’exposant descend et DIMINUE de un. Ici il est descendu, mais il est resté le même en haut.",
     "en": "When differentiating a power the exponent comes down and DROPS by one. Here it came down, but stayed the same up top."
+  },
+  "Ao derivar −ax/(by) de novo, o y também varia: a regra do quociente traz um y′ no numerador. Tratar y como constante perde esse termo.": {
+    "fr": "En dérivant −ax/(by) de nouveau, le y varie aussi : la règle du quotient apporte un y′ au numérateur. Traiter y comme une constante perd ce terme.",
+    "en": "Differentiating −ax/(by) again, the y varies too: the quotient rule brings a y′ into the numerator. Treating y as a constant loses that term."
   },
   "Ao menor ângulo (#°) se opõe o menor lado. O oposto a #° é o maior cateto, √# vezes o outro.": {
     "fr": "Au plus petit angle (#°) s’oppose le plus petit côté. L’opposé à #° est la plus grande cathète, √# fois l’autre.",
@@ -3135,6 +3199,10 @@
     "fr": "Les trois dérivées partielles.",
     "en": "The three partial derivatives."
   },
+  "Atalho que sai da mesma conta: y″ = −a·c/(b²·y³) = −#·#/(#·#).": {
+    "fr": "Raccourci issu du même calcul : y″ = −a·c/(b²·y³) = −#·#/(#·#).",
+    "en": "A shortcut from the same computation: y″ = −a·c/(b²·y³) = −#·#/(#·#)."
+  },
   "Até aqui nada se decidiu: a integral de dentro é comum, e tem limites finitos.": {
     "fr": "Jusqu’ici rien n’est décidé : l’intégrale intérieure est ordinaire, et ses bornes sont finies.",
     "en": "Nothing is decided yet: the inner integral is ordinary, and its limits are finite."
@@ -3510,6 +3578,10 @@
   "Cada potência é a base repetida; juntando os dois grupos, continuamos multiplicando a mesma base.": {
     "fr": "Chaque puissance est la base répétée ; en joignant les deux groupes, nous continuons à multiplier la même base.",
     "en": "Each power is the base repeated; combining the two groups, we continue multiplying the same base."
+  },
+  "Cada quadrante ocupa #°.": {
+    "fr": "Chaque quadrant occupe #°.",
+    "en": "Each quadrant spans #°."
   },
   "Cada reagente alcança um número de «receitas» da equação.": {
     "fr": "Chaque réactif atteint un nombre de « recettes » de l’équation.",
@@ -4179,6 +4251,10 @@
     "fr": "Avec un multiple de x dans l'exposant, la chaîne ajoute le facteur interne.",
     "en": "With a multiple of x in the exponent, the chain adds the inner factor."
   },
+  "Com x = # a tangente NÃO é horizontal. Horizontal pede o numerador de dy/dx igual a zero, junto com a equação da curva.": {
+    "fr": "Avec x = #, la tangente N’EST PAS horizontale. L’horizontalité exige que le numérateur de dy/dx soit nul, en même temps que l’équation de la courbe.",
+    "en": "With x = # the tangent is NOT horizontal. Horizontal requires the numerator of dy/dx to be zero, together with the equation of the curve."
+  },
   "Com x = #, Pitágoras dá y = #.": {
     "fr": "Avec x = #, Pythagore donne y = #.",
     "en": "With x = #, Pythagoras gives y = #."
@@ -4458,6 +4534,14 @@
   "Confira o resto da divisão por #: restos # e # dão resultados puramente imaginários, cuja parte real é zero.": {
     "fr": "Vérifiez le reste de la division par # : les restes # et # donnent des résultats purement imaginaires, dont la partie réelle est nulle.",
     "en": "Check the remainder of the division by #: remainders # and # give purely imaginary results, whose real part is zero."
+  },
+  "Confira qual coordenada é o cosseno (a horizontal, x) e de que lado do eixo o ponto está nesse quadrante.": {
+    "fr": "Vérifiez quelle coordonnée est le cosinus (l’horizontale, x) et de quel côté de l’axe se trouve le point dans ce quadrant.",
+    "en": "Check which coordinate is the cosine (the horizontal one, x) and on which side of the axis the point lies in that quadrant."
+  },
+  "Confira qual coordenada é o seno (a vertical, y) e de que lado do eixo o ponto está nesse quadrante.": {
+    "fr": "Vérifiez quelle coordonnée est le sinus (la verticale, y) et de quel côté de l’axe se trouve le point dans ce quadrant.",
+    "en": "Check which coordinate is the sine (the vertical one, y) and on which side of the axis the point lies in that quadrant."
   },
   "Confira que dá #/# em x = #; depois derive em cima e embaixo e substitua.": {
     "fr": "Vérifiez que cela donne #/# en x = # ; dérivez ensuite le haut et le bas et substituez.",
@@ -4771,6 +4855,10 @@
     "fr": "Nous dérivons les deux côtés par rapport au temps, par la règle de la chaîne.",
     "en": "We differentiate both sides with respect to time, by the chain rule."
   },
+  "Derivamos y′ de novo pela regra do quociente — y depende de x, então aparece y′ outra vez.": {
+    "fr": "Nous dérivons y′ de nouveau par la règle du quotient — y dépend de x, donc y′ réapparaît.",
+    "en": "We differentiate y′ again by the quotient rule — y depends on x, so y′ shows up once more."
+  },
   "Derivando de novo, sai outro fator # e o sinal troca: f″ = −#²·f.": {
     "fr": "En dérivant de nouveau, un autre facteur # sort et le signe change : f″ = −#²·f.",
     "en": "Differentiating again, another factor # comes out and the sign flips: f″ = −#²·f."
@@ -4790,6 +4878,10 @@
   "Derivando em relação ao tempo.": {
     "fr": "En dérivant par rapport au temps.",
     "en": "Differentiating with respect to time."
+  },
+  "Derivando implicitamente (o termo xy pede a regra do produto) e isolando dy/dx.": {
+    "fr": "En dérivant implicitement (le terme xy demande la règle du produit) et en isolant dy/dx.",
+    "en": "Differentiating implicitly (the xy term calls for the product rule) and isolating dy/dx."
   },
   "Derivando pela cadeia, aparece o logaritmo natural da base.": {
     "fr": "En dérivant par la chaîne, apparaît le logarithme naturel de la base.",
@@ -5010,6 +5102,18 @@
   "Derive duas vezes: seno vira cosseno e depois −seno.": {
     "fr": "Dérivez deux fois : le sinus devient cosinus puis −sinus.",
     "en": "Differentiate twice: sine becomes cosine and then −sine."
+  },
+  "Derive os dois lados. A circunferência esticada; a derivada carrega a razão dos eixos.": {
+    "fr": "Dérivez les deux côtés. Le cercle étiré ; la dérivée porte le rapport des axes.",
+    "en": "Differentiate both sides. The circle stretched; the derivative carries the ratio of the axes."
+  },
+  "Derive os dois lados. Dois y para cada x: isolar obriga a escolher um ramo.": {
+    "fr": "Dérivez les deux côtés. Deux y pour chaque x : isoler oblige à choisir une branche.",
+    "en": "Differentiate both sides. Two y values for each x: isolating forces you to pick a branch."
+  },
+  "Derive os dois lados. Mesma receita, sinal trocado — e dois ramos separados.": {
+    "fr": "Dérivez les deux côtés. Même recette, signe changé — et deux branches séparées.",
+    "en": "Differentiate both sides. Same recipe, flipped sign — and two separate branches."
   },
   "Derive x em x, #yz em y e #xz em z, some e substitua o ponto.": {
     "fr": "Dérivez x en x, #yz en y et #xz en z, additionnez et remplacez le point.",
@@ -6435,6 +6539,10 @@
     "fr": "Au lieu de six intégrales sur les faces, une intégrale triple de la divergence.",
     "en": "Instead of six integrals over the faces, one triple integral of the divergence."
   },
+  "Em x = # a reta corta o eixo y.": {
+    "fr": "En x = #, la droite coupe l’axe des ordonnées.",
+    "en": "At x = # the line crosses the y-axis."
+  },
   "Em x = # ainda dá #/# — então aplicamos de novo.": {
     "fr": "En x = # cela donne encore #/# — nous appliquons donc de nouveau.",
     "en": "At x = # it still gives #/# — so we apply it again."
@@ -6578,6 +6686,10 @@
   "Entre esses pontos, a reta está acima da parábola.": {
     "fr": "Entre ces points, la droite est au-dessus de la parabole.",
     "en": "Between those points the line is above the parabola."
+  },
+  "Entre quais múltiplos de #° o ângulo está?": {
+    "fr": "Entre quels multiples de #° l’angle se trouve-t-il ?",
+    "en": "Between which multiples of #° does the angle lie?"
   },
   "Entrou um termo a mais do que o grau # permite. A aproximação fica melhor, mas não é a que o enunciado pediu.": {
     "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
@@ -6955,9 +7067,17 @@
     "fr": "C’est la HAUTEUR relative à l’hypoténuse, et non la projection de la cathète.",
     "en": "That is the ALTITUDE to the hypotenuse, not the projection of the leg."
   },
+  "Essa é a INCLINAÇÃO da tangente, a derivada. Falta usar o ponto para achar onde a reta corta o eixo y.": {
+    "fr": "C’est la PENTE de la tangente, la dérivée. Il reste à utiliser le point pour trouver où la droite coupe l’axe des ordonnées.",
+    "en": "That is the SLOPE of the tangent, the derivative. Using the point to find where the line crosses the y-axis is still missing."
+  },
   "Essa é a LARGURA do intervalo, não quantos inteiros cabem nele. De # a # a distância é #, mas os inteiros #, #, # e # são quatro.": {
     "fr": "C’est la LARGEUR de l’intervalle, et non le nombre d’entiers qu’il contient. De # à #, la distance vaut #, mais les entiers #, #, # et # sont au nombre de quatre.",
     "en": "That is the WIDTH of the interval, not how many integers fit in it. From # to # the distance is #, but the integers #, #, # and # are four."
+  },
+  "Essa é a MENOR das duas ordenadas.": {
+    "fr": "C’est la PLUS PETITE des deux ordonnées.",
+    "en": "That is the SMALLER of the two y-coordinates."
   },
   "Essa é a PROJEÇÃO de um cateto sobre a hipotenusa, não a altura.": {
     "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
@@ -6995,9 +7115,17 @@
     "fr": "C’est la dérivée PREMIÈRE, a/x. Il reste à dériver une fois de plus.",
     "en": "That is the FIRST derivative, a/x. One more differentiation is missing."
   },
+  "Essa é a derivada PRIMEIRA. A pergunta pede derivar mais uma vez.": {
+    "fr": "C’est la dérivée PREMIÈRE. La question demande de dériver une fois de plus.",
+    "en": "That is the FIRST derivative. The question asks you to differentiate once more."
+  },
   "Essa é a derivada PRIMEIRA. Derive mais uma vez: sai outro fator k.": {
     "fr": "C’est la dérivée PREMIÈRE. Dérivez encore une fois : un autre facteur k sort.",
     "en": "That is the FIRST derivative. Differentiate once more: another factor k comes out."
+  },
+  "Essa é a derivada da circunferência, em que os dois coeficientes são #. Nesta curva eles não são, e cada um acompanha o seu termo até o fim da conta.": {
+    "fr": "C’est la dérivée du cercle, où les deux coefficients valent #. Sur cette courbe ils ne le sont pas, et chacun accompagne son terme jusqu’au bout du calcul.",
+    "en": "That is the derivative of the circle, where both coefficients are #. On this curve they are not, and each one follows its term to the end of the computation."
   },
   "Essa é a derivada do logaritmo NATURAL. Com base # ainda falta dividir pelo logaritmo natural de #, que vem da mudança de base.": {
     "fr": "C’est la dérivée du logarithme NATUREL. En base #, il reste à diviser par le logarithme naturel de #, qui vient du changement de base.",
@@ -7538,6 +7666,14 @@
   "Esse é o valor no extremo direito. O valor médio pondera todo o intervalo.": {
     "fr": "C’est la valeur à la borne de droite. La valeur moyenne pondère tout l’intervalle.",
     "en": "That is the value at the right end. The average value weighs the whole interval."
+  },
+  "Esse é o x do ponto. A pergunta é a ordenada y, que vem de y = #x.": {
+    "fr": "C’est le x du point. La question porte sur l’ordonnée y, qui vient de y = #x.",
+    "en": "That is the x of the point. The question asks for the y-coordinate, which comes from y = #x."
+  },
+  "Esse é o x do ponto. A pergunta é a ordenada y, que vem de y = −#x.": {
+    "fr": "C’est le x du point. La question porte sur l’ordonnée y, qui vient de y = −#x.",
+    "en": "That is the x of the point. The question asks for the y-coordinate, which comes from y = −#x."
   },
   "Esse é o x onde ocorre o máximo, não o valor máximo. Falta substituir esse x de volta na função.": {
     "fr": "C’est le x où se produit le maximum, et non la valeur maximale. Il reste à remplacer ce x dans la fonction.",
@@ -8583,6 +8719,10 @@
     "fr": "Isolez d’abord la puissance (divisez par #), puis prenez le ln des deux côtés.",
     "en": "Isolate the power first (divide by #), then take ln on both sides."
   },
+  "Isole dy/dx só depois de ter derivado tudo.": {
+    "fr": "N’isolez dy/dx qu’après avoir tout dérivé.",
+    "en": "Only isolate dy/dx after differentiating everything."
+  },
   "Isole x numa das equações e troque essa expressão na outra.": {
     "fr": "Isolez x dans l’une des équations et remplacez cette expression dans l’autre.",
     "en": "Isolate x in one of the equations and substitute that expression into the other."
@@ -8839,6 +8979,10 @@
     "fr": "Donc le volume est un tiers du prisme correspondant.",
     "en": "Therefore the volume is one third of the corresponding prism."
   },
+  "Logo o ângulo cai no quadrante.": {
+    "fr": "L’angle tombe donc dans le quadrant.",
+    "en": "So the angle falls in the quadrant."
+  },
   "Logo, basta calcular o valor numérico do polinômio nesse ponto.": {
     "fr": "Donc, il suffit de calculer la valeur numérique du polynôme en ce point.",
     "en": "Therefore, it is only necessary to calculate the numerical value of the polynomial at this point."
@@ -9050,6 +9194,10 @@
   "Multiplicamos os dois lados por r para usar r² = x² + y².": {
     "fr": "Nous multiplions les deux côtés par r pour utiliser r² = x² + y².",
     "en": "We multiply both sides by r in order to use r² = x² + y²."
+  },
+  "Multiplicamos os graus por π/#.": {
+    "fr": "Nous multiplions les degrés par π/#.",
+    "en": "We multiply the degrees by π/#."
   },
   "Multiplicamos pela altura e tomamos um terço.": {
     "fr": "Nous multiplions par la hauteur et prenons un tiers.",
@@ -9651,6 +9799,14 @@
     "fr": "Dans ce cas ce qui se conserve est le PRODUIT, pas le rapport.",
     "en": "In this case what stays fixed is the PRODUCT, not the ratio."
   },
+  "Nesse quadrante o valor é negativo.": {
+    "fr": "Dans ce quadrant la valeur est negativo.",
+    "en": "In that quadrant the value is negativo."
+  },
+  "Nesse quadrante o valor é positivo.": {
+    "fr": "Dans ce quadrant la valeur est positivo.",
+    "en": "In that quadrant the value is positivo."
+  },
   "Nesse tempo, a correnteza arrasta o barco rio abaixo.": {
     "fr": "Dans ce temps, le courant entraîne le bateau rivière en aval.",
     "en": "In that time, the current drags the boat downstream."
@@ -9810,6 +9966,14 @@
   "No ponto de encontro, as duas retas têm o mesmo y: igualamos.": {
     "fr": "Au point de rencontre, les deux droites ont le même y : nous égalons.",
     "en": "At the meeting point the two lines have the same y: we set them equal."
+  },
+  "No ponto, y′ = #.": {
+    "fr": "Au point, y′ = #.",
+    "en": "At the point, y′ = #."
+  },
+  "No ponto, y′ = #/#.": {
+    "fr": "Au point, y′ = #/#.",
+    "en": "At the point, y′ = #/#."
   },
   "No quadrado, base e altura são o mesmo lado.": {
     "fr": "Dans le carré, base et hauteur sont le même côté.",
@@ -9994,6 +10158,10 @@
   "Numerador com numerador, denominador com denominador.": {
     "fr": "Numérateur avec numérateur, dénominateur avec dénominateur.",
     "en": "Numerator with numerator, denominator with denominator."
+  },
+  "Numerador e denominador estão trocados. Embaixo fica o que multiplica dy/dx; em cima, o que sobrou sem ele.": {
+    "fr": "Numérateur et dénominateur sont intervertis. En bas va ce qui multiplie dy/dx ; en haut, ce qui reste sans lui.",
+    "en": "Numerator and denominator are swapped. Below goes what multiplies dy/dx; on top, what is left without it."
   },
   "Numerador e denominador têm o mesmo grau.": {
     "fr": "Numérateur et dénominateur ont le même degré.",
@@ -10518,6 +10686,18 @@
   "O cosseno tem o mesmo valor em x e em #° − x.": {
     "fr": "La fonction prend la même valeur en x et en #° − x.",
     "en": "The function takes the same value at x and at #° − x."
+  },
+  "O cosseno é a ABSCISSA do ponto sobre o círculo.": {
+    "fr": "Le cosinus est l’ABSCISSE du point sur le cercle.",
+    "en": "The cosine is the X-COORDINATE of the point on the circle."
+  },
+  "O cosseno é a abscissa (x) do ponto: no #º quadrante ela é negativa.": {
+    "fr": "Le cosinus est l’abscisse (x) du point : dans le #e quadrant elle est negativa.",
+    "en": "The cosine is the x-coordinate of the point: in quadrant # it is negativa."
+  },
+  "O cosseno é a abscissa (x) do ponto: no #º quadrante ela é positiva.": {
+    "fr": "Le cosinus est l’abscisse (x) du point : dans le #e quadrant elle est positiva.",
+    "en": "The cosine is the x-coordinate of the point: in quadrant # it is positiva."
   },
   "O cruzamento está certo e falta reduzir. A fórmula é uma proporção: Mg²⁺ com O²⁻ dá MgO, não Mg#O#.": {
     "fr": "Le croisement est juste, il reste à réduire. La formule est une proportion : Mg²⁺ avec O²⁻ donne MgO, et non Mg#O#.",
@@ -11067,6 +11247,10 @@
     "fr": "La même parenthèse apparaît dans les deux groupes : elle devient le facteur commun.",
     "en": "The same parenthesis shows up in both groups: it becomes the common factor."
   },
+  "O mnemônico: no #º tudo é positivo; no #º só o seno; no #º só a tangente; no #º só o cosseno.": {
+    "fr": "Le moyen mnémotechnique : au #e tout est positif ; au #e seul le sinus ; au #e seule la tangente ; au #e seul le cosinus.",
+    "en": "The mnemonic: in the #st everything is positive; in the #nd only the sine; in the #rd only the tangent; in the #th only the cosine."
+  },
   "O momento angular é o análogo rotacional do momento linear.": {
     "fr": "Le moment angulaire est l'analogue rotatif du moment linéaire.",
     "en": "The angular momentum is the rotational analogue of linear momentum."
@@ -11359,6 +11543,10 @@
     "fr": "Le milieu a chaque coordonnée égale à la moyenne des coordonnées.",
     "en": "The midpoint has each coordinate equal to the average of the coordinates."
   },
+  "O ponto também precisa estar na curva: substituímos y.": {
+    "fr": "Le point doit aussi être sur la courbe : nous remplaçons y.",
+    "en": "The point also has to lie on the curve: we substitute y."
+  },
   "O ponto é a fronteira ENTRE as duas raízes, onde a parábola cruza o eixo.": {
     "fr": "Le point est la frontière ENTRE les deux racines, où la parabole coupe l’axe.",
     "en": "The point is the boundary BETWEEN the two roots, where the parabola crosses the axis."
@@ -11631,6 +11819,18 @@
     "fr": "Le sinus vaut au moins −#.",
     "en": "The sine is at least −#."
   },
+  "O seno é a ORDENADA do ponto sobre o círculo.": {
+    "fr": "Le sinus est l’ORDONNÉE du point sur le cercle.",
+    "en": "The sine is the Y-COORDINATE of the point on the circle."
+  },
+  "O seno é a ordenada (y) do ponto: no #º quadrante ela é negativa.": {
+    "fr": "Le sinus est l’ordonnée (y) du point : dans le #e quadrant elle est negativa.",
+    "en": "The sine is the y-coordinate of the point: in quadrant # it is negativa."
+  },
+  "O seno é a ordenada (y) do ponto: no #º quadrante ela é positiva.": {
+    "fr": "Le sinus est l’ordonnée (y) du point : dans le #e quadrant elle est positiva.",
+    "en": "The sine is the y-coordinate of the point: in quadrant # it is positiva."
+  },
   "O sentido da conversão está invertido: trocar por uma unidade menor aumenta o número.": {
     "fr": "Le sens de la conversion est inversé : passer à une unité plus petite augmente le nombre.",
     "en": "The direction of the conversion is reversed: switching to a smaller unit increases the number."
@@ -11731,6 +11931,10 @@
     "fr": "Le signe est inversé. La primitive est négative, mais le terme restant vient de la borne inférieure avec le signe changé — et l’aire d’une fonction positive n’est pas négative.",
     "en": "The sign is flipped. The antiderivative is negative, but the leftover term comes from the lower edge with its sign reversed — and the area of a positive function is not negative."
   },
+  "O sinal ficou invertido. Ao isolar, a parcela sem dy/dx passa para o outro lado da igualdade, e é essa passagem que produz o menos na frente da fração.": {
+    "fr": "Le signe est inversé. En isolant, le terme sans dy/dx passe de l’autre côté de l’égalité, et c’est ce passage qui produit le moins devant la fraction.",
+    "en": "The sign is flipped. When isolating, the term without dy/dx moves to the other side of the equation, and that move is what produces the minus in front of the fraction."
+  },
   "O sinal ficou trocado. Como a operação já subtrai k·L₁, k tem o MESMO sinal da razão entre a entrada e o pivô.": {
     "fr": "Le signe est inversé. Comme l’opération soustrait déjà k·L₁, k a le MÊME signe que le rapport entre l’entrée et le pivot.",
     "en": "The sign is flipped. Since the operation already subtracts k·L₁, k has the SAME sign as the ratio of the entry to the pivot."
@@ -11738,6 +11942,14 @@
   "O sinal ficou trocado: em x = #, y = f(x₀) − m·x₀.": {
     "fr": "Le signe est inversé : en x = #, y = f(x₀) − m·x₀.",
     "en": "The sign is flipped: at x = #, y = f(x₀) − m·x₀."
+  },
+  "O sinal ficou trocado: na reta y − y₀ = m(x − x₀), em x = # sobra y₀ − m·x₀.": {
+    "fr": "Le signe est inversé : dans la droite y − y₀ = m(x − x₀), en x = # il reste y₀ − m·x₀.",
+    "en": "The sign is flipped: in the line y − y₀ = m(x − x₀), at x = # what is left is y₀ − m·x₀."
+  },
+  "O sinal ficou trocado: y″ = −a(y − x·y′)/(b·y²), com o menos na frente.": {
+    "fr": "Le signe est inversé : y″ = −a(y − x·y′)/(b·y²), avec le moins devant.",
+    "en": "The sign is flipped: y″ = −a(y − x·y′)/(b·y²), with the minus in front."
   },
   "O sinal negativo da derivada do cosseno ficou de fora.": {
     "fr": "Le signe négatif de la dérivée du cosinus a été oublié.",
@@ -11943,6 +12155,22 @@
     "fr": "L'unitaire est le vecteur divisé par son propre module.",
     "en": "The unit vector is the vector divided by its own magnitude."
   },
+  "O valor absoluto está correto, mas o sinal não. No #º quadrante, a abscissa do ponto é negativa.": {
+    "fr": "La valeur absolue est correcte, mais pas le signe. Dans le #e quadrant, la coordonnée du point est negativa.",
+    "en": "The magnitude is right, but the sign is not. In quadrant #, that coordinate of the point is negativa."
+  },
+  "O valor absoluto está correto, mas o sinal não. No #º quadrante, a abscissa do ponto é positiva.": {
+    "fr": "La valeur absolue est correcte, mais pas le signe. Dans le #e quadrant, la coordonnée du point est positiva.",
+    "en": "The magnitude is right, but the sign is not. In quadrant #, that coordinate of the point is positiva."
+  },
+  "O valor absoluto está correto, mas o sinal não. No #º quadrante, a ordenada do ponto é negativa.": {
+    "fr": "La valeur absolue est correcte, mais pas le signe. Dans le #e quadrant, la coordonnée du point est negativa.",
+    "en": "The magnitude is right, but the sign is not. In quadrant #, that coordinate of the point is negativa."
+  },
+  "O valor absoluto está correto, mas o sinal não. No #º quadrante, a ordenada do ponto é positiva.": {
+    "fr": "La valeur absolue est correcte, mais pas le signe. Dans le #e quadrant, la coordonnée du point est positiva.",
+    "en": "The magnitude is right, but the sign is not. In quadrant #, that coordinate of the point is positiva."
+  },
   "O valor da inversa.": {
     "fr": "La valeur de l’inverse.",
     "en": "The value of the inverse."
@@ -12102,6 +12330,10 @@
   "O ângulo entre os planos é o das normais, tomado agudo (módulo do cosseno).": {
     "fr": "L’angle entre les planos est celui des normais, pris aigu (module du cosinus).",
     "en": "The angle between the planos is that of the normais, taken as acute (absolute value of the cosine)."
+  },
+  "O ângulo está no #º quadrante.": {
+    "fr": "L’angle est dans le #e quadrant.",
+    "en": "The angle is in quadrant #."
   },
   "O ângulo externo é o suplemento do interno do mesmo vértice.": {
     "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
@@ -12475,6 +12707,10 @@
     "fr": "Les deux limites latérales divergent, donc la limite commune N’EXISTE PAS.",
     "en": "The two one-sided limits disagree, so the common limit does NOT exist."
   },
+  "Os dois pontos e a maior ordenada.": {
+    "fr": "Les deux points et la plus grande ordonnée.",
+    "en": "The two points and the larger y-coordinate."
+  },
   "Os dois pontos têm a mesma abscissa, então a reta é vertical.": {
     "fr": "Les deux points ont la même abscisse, donc la droite est verticale.",
     "en": "The two points have the same abscissa, so the line is vertical."
@@ -12558,6 +12794,10 @@
   "Os pontos críticos: onde f′ zera.": {
     "fr": "Les points critiques : là où f′ s’annule.",
     "en": "The critical points: where f′ is zero."
+  },
+  "Os quadrantes são contados no sentido anti-horário a partir do eixo x positivo, em faixas de #°. Confira a redução à primeira volta.": {
+    "fr": "Les quadrants se comptent dans le sens antihoraire à partir de l’axe x positif, par tranches de #°. Vérifiez la réduction au premier tour.",
+    "en": "The quadrants are counted counterclockwise from the positive x-axis, in bands of #°. Check the reduction to the first turn."
   },
   "Os quatro ângulos de um quadrilátero somam #°: tire #°, #° e #° de #°.": {
     "fr": "Les quatre angles d’un quadrilatère font #° : retirez #°, #° et #° de #°.",
@@ -13427,6 +13667,14 @@
     "fr": "Premier segment : la masse donnée devient une quantité de matière.",
     "en": "First leg: the given mass becomes an amount of substance."
   },
+  "Primeiro y′ = −#x/(#y). Derive de novo pelo quociente lembrando que y depende de x, e troque o y′ que aparecer por #.": {
+    "fr": "D’abord y′ = −#x/(#y). Dérivez de nouveau par le quotient en vous rappelant que y dépend de x, et remplacez le y′ qui apparaît par #.",
+    "en": "First y′ = −#x/(#y). Differentiate again by the quotient rule remembering that y depends on x, and replace the y′ that shows up by #."
+  },
+  "Primeiro y′ = −#x/(#y). Derive de novo pelo quociente lembrando que y depende de x, e troque o y′ que aparecer por #/#.": {
+    "fr": "D’abord y′ = −#x/(#y). Dérivez de nouveau par le quotient en vous rappelant que y dépend de x, et remplacez le y′ qui apparaît par #/#.",
+    "en": "First y′ = −#x/(#y). Differentiate again by the quotient rule remembering that y depends on x, and replace the y′ that shows up by #/#."
+  },
   "Primeiro, o regime: o discriminante é negativo, então o sistema oscila.": {
     "fr": "D’abord le régime : le discriminant est négatif, donc le système oscille.",
     "en": "First, the regime: the discriminant is negative, so the system oscillates."
@@ -13630,6 +13878,10 @@
   "Reduzimos o ângulo a uma volta e voltamos à forma algébrica.": {
     "fr": "Nous ramenons l'angle à un tour et revenons à la forme algébrique.",
     "en": "We reduce the angle to one turn and return to algebraic form."
+  },
+  "Reduzimos o ângulo à primeira volta.": {
+    "fr": "Nous ramenons l’angle au premier tour.",
+    "en": "We bring the angle back to the first turn."
   },
   "Reescrevemos as duas frações com denominador #.": {
     "fr": "Nous réécrivons les deux fractions avec le dénominateur #.",
@@ -13870,6 +14122,10 @@
   "Sendo regular, todos os ângulos são iguais: dividimos a soma por n.": {
     "fr": "Étant régulier, tous les angles sont égaux : nous divisons la somme par n.",
     "en": "Being regular, all the angles are equal: we divide the sum by n."
+  },
+  "Seno é o y do ponto, cosseno é o x, tangente é y/x. Veja o quadrante.": {
+    "fr": "Le sinus est le y du point, le cosinus le x, la tangente y/x. Regardez le quadrant.",
+    "en": "Sine is the point’s y, cosine its x, tangent y/x. Look at the quadrant."
   },
   "Sentido trocado: cargas de mesmo sinal se REPELEM — a força de A sobre M aponta para longe de A.": {
     "fr": "Sens inversé : des charges de même signe se REPOUSSENT — la force de A sur M pointe à l’opposé de A.",
@@ -14391,6 +14647,10 @@
     "fr": "En substituant x dans l’une des droites pour trouver y.",
     "en": "Substituting x into one of the lines to find y."
   },
+  "Substituindo x, y e y′.": {
+    "fr": "En remplaçant x, y et y′.",
+    "en": "Substituting x, y and y′."
+  },
   "Substituindo, com C em farads.": {
     "fr": "En substituant, avec C en farads.",
     "en": "Substituting, with C in farads."
@@ -14506,6 +14766,10 @@
   "Substituímos hipotenusa e cateto conhecido.": {
     "fr": "Nous substituons l'hypoténuse et le cathète connu.",
     "en": "We substitute the hypotenuse and the known leg."
+  },
+  "Substituímos o ponto (#, #), que está sobre a curva.": {
+    "fr": "Nous remplaçons le point (#, #), qui est sur la courbe.",
+    "en": "We substitute the point (#, #), which lies on the curve."
   },
   "Substituímos o ponto (#, #).": {
     "fr": "Nous remplaçons le point (#, #).",
@@ -14911,6 +15175,14 @@
     "fr": "C’est aussi exactement la latérale du cylindre qui l’enveloppe.",
     "en": "It is also exactly the lateral surface of the cylinder around it."
   },
+  "Tangente horizontal: dy/dx = #, ou seja, o numerador da derivada zera. Resolva isso junto com a equação da curva.": {
+    "fr": "Tangente horizontale : dy/dx = #, c’est-à-dire que le numérateur de la dérivée s’annule. Résolvez cela avec l’équation de la courbe.",
+    "en": "Horizontal tangent: dy/dx = #, that is, the numerator of the derivative vanishes. Solve that together with the equation of the curve."
+  },
+  "Tangente horizontal: y′ = #, isto é, o numerador zera.": {
+    "fr": "Tangente horizontale : y′ = #, c’est-à-dire que le numérateur s’annule.",
+    "en": "Horizontal tangent: y′ = #, that is, the numerator vanishes."
+  },
   "Taxas equivalentes levam o mesmo capital ao mesmo montante em # ano. Um ano tem # períodos de um mês.": {
     "fr": "Des taux équivalents mènent le même capital au même montant en # an. Une année compte # périodes d’un mois.",
     "en": "Equivalent rates take the same capital to the same amount in # year. A year holds # periods of one month."
@@ -15018,6 +15290,10 @@
   "Todo número inteiro é uma fração de denominador #.": {
     "fr": "Tout nombre entier est une fraction de dénominateur #.",
     "en": "Every whole number is a fraction with denominator #."
+  },
+  "Todo termo com y ganha um fator dy/dx, trazido pela regra da cadeia.": {
+    "fr": "Tout terme en y gagne un facteur dy/dx, apporté par la règle de la chaîne.",
+    "en": "Every term with y gains a factor dy/dx, brought in by the chain rule."
   },
   "Todos os termos compartilham um fator — ele sai em evidência.": {
     "fr": "Tous les termes partagent un facteur — il sort en évidence.",
@@ -15243,6 +15519,10 @@
     "fr": "Un terme avec x et y ensemble : la règle du produit entre deux fois.",
     "en": "A term with x and y together: the product rule enters twice."
   },
+  "Um termo traz x e y multiplicados, e ele exige a regra do produto: a parte em x entra sem dy/dx, e a parte em y entra com ele. Aqui a segunda metade ficou de fora.": {
+    "fr": "Un terme comporte x et y multipliés, et il exige la règle du produit : la partie en x entre sans dy/dx, et la partie en y entre avec. Ici la seconde moitié a été laissée de côté.",
+    "en": "One term has x and y multiplied, and it calls for the product rule: the x part comes in without dy/dx, and the y part comes in with it. Here the second half was left out."
+  },
   "Um terço do produto pela altura.": {
     "fr": "Un tiers du produit par la hauteur.",
     "en": "One third of the product by the height."
@@ -15302,6 +15582,10 @@
   "Usamos a identidade fundamental.": {
     "fr": "Nous utilisons l’identité fondamentale.",
     "en": "We use the fundamental identity."
+  },
+  "Usamos a proporção com a volta completa.": {
+    "fr": "Nous utilisons la proportion avec le tour complet.",
+    "en": "We use the proportion with the full turn."
   },
   "Usamos a restrição para escrever um lado em função do outro.": {
     "fr": "Nous utilisons la contrainte pour écrire un côté en fonction de l’autre.",
@@ -15458,6 +15742,14 @@
   "Você contou quantas parcelas existem, não quanto elas somam. O somatório devolve a soma dos valores, não a quantidade deles.": {
     "fr": "Vous avez compté combien il y a de termes, et non ce qu’ils totalisent. La somme renvoie le total des valeurs, pas leur nombre.",
     "en": "You counted how many terms there are, not what they add up to. The sum returns the total of the values, not how many there are."
+  },
+  "Você deu o cosseno. O seno é a coordenada VERTICAL do ponto.": {
+    "fr": "Vous avez donné le cosinus. Le sinus est la coordonnée VERTICALE du point.",
+    "en": "You gave the cosine. The sine is the VERTICAL coordinate of the point."
+  },
+  "Você deu o seno. O cosseno é a coordenada HORIZONTAL do ponto.": {
+    "fr": "Vous avez donné le sinus. Le cosinus est la coordonnée HORIZONTALE du point.",
+    "en": "You gave the sine. The cosine is the HORIZONTAL coordinate of the point."
   },
   "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
     "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
