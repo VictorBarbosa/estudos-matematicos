@@ -707,6 +707,10 @@
     "fr": "La charge du métal vient de son groupe dans le tableau. Croisez-la avec celle de l’anion et réduisez.",
     "en": "The metal’s charge comes from its group in the table. Cross it with the anion’s and reduce."
   },
+  "A carga do íon diz quantos elétrons entraram ou saíram.": {
+    "fr": "La charge de l’ion dit combien d’électrons sont entrés ou sortis.",
+    "en": "The ion’s charge says how many electrons came in or left."
+  },
   "A carga final é CV.": {
     "fr": "La charge finale est CV.",
     "en": "The final charge is CV."
@@ -722,6 +726,10 @@
   "A carga total do outro elemento não foi dividida pelo índice do metal. Se há dois átomos do metal, eles repartem a conta entre si.": {
     "fr": "La charge totale de l’autre élément n’a pas été divisée par l’indice du métal. S’il y a deux atomes de métal, ils se partagent le compte.",
     "en": "The other element’s total charge was not divided by the metal’s subscript. If there are two metal atoms, they share the count between them."
+  },
+  "A carga é o desequilíbrio entre prótons e elétrons.": {
+    "fr": "La charge est le déséquilibre entre protons et électrons.",
+    "en": "The charge is the imbalance between protons and electrons."
   },
   "A circunferência esticada; a derivada carrega a razão dos eixos.": {
     "fr": "Le cercle étiré ; la dérivée porte le rapport des axes.",
@@ -818,6 +826,10 @@
   "A condição é tan θ = μ, não sen θ = μ. O atrito é proporcional à normal, que traz o cosseno para a conta.": {
     "fr": "La condition est tan θ = μ, pas sin θ = μ. Le frottement est proportionnel à la normale, qui amène le cosinus dans le calcul.",
     "en": "The condition is tan θ = μ, not sin θ = μ. Friction is proportional to the normal force, which brings the cosine into the computation."
+  },
+  "A configuração se escreve preenchendo os subníveis em ordem de energia.": {
+    "fr": "La configuration s’écrit en remplissant les sous-couches par ordre d’énergie.",
+    "en": "The configuration is written by filling the subshells in order of energy."
   },
   "A constante MULTIPLICA a integral; ela não é somada ao resultado.": {
     "fr": "La constante MULTIPLIE l’intégrale ; elle ne s’ajoute pas au résultat.",
@@ -2190,6 +2202,14 @@
   "A massa molar é a soma de todas as parcelas.": {
     "fr": "La masse molaire est la somme de toutes les parts.",
     "en": "The molar mass is the sum of all the parts."
+  },
+  "A massa média é a média ponderada pelas abundâncias.": {
+    "fr": "La masse moyenne est la moyenne pondérée par les abondances.",
+    "en": "The average mass is the mean weighted by the abundances."
+  },
+  "A massa média é a média ponderada, e a abundância que falta é a incógnita.": {
+    "fr": "La masse moyenne est la moyenne pondérée, et l’abondance manquante est l’inconnue.",
+    "en": "The average mass is the weighted mean, and the missing abundance is the unknown."
   },
   "A massa se CANCELA na conservação de energia. A velocidade de queda é a mesma para qualquer massa.": {
     "fr": "La masse se SIMPLIFIE dans la conservation de l'énergie. La vitesse de chute est la même pour toute masse.",
@@ -3831,6 +3851,10 @@
     "fr": "L'orbite ne dépend pas de la masse du satellite : un boulon et l'ISS orbitent de la même façon.",
     "en": "The orbit does not depend on the satellite’s mass: a bolt and the ISS orbit alike."
   },
+  "A última camada é a de maior número, e são os elétrons dela que contam.": {
+    "fr": "La dernière couche est celle de plus grand numéro, et ce sont ses électrons qui comptent.",
+    "en": "The outer shell is the one with the highest number, and it is its electrons that count."
+  },
   "A última linha tem uma incógnita só.": {
     "fr": "La dernière ligne n’a qu’une seule inconnue.",
     "en": "The last row has only one unknown."
@@ -4370,6 +4394,10 @@
   "As bordas foram tratadas ao contrário. Os que NÃO satisfazem ficam entre as bordas, e uma borda só é excluída da contagem se ela satisfaz a inequação.": {
     "fr": "Les bornes ont été traitées à l’envers. Ceux qui NE satisfont PAS se trouvent entre les bornes, et une borne n’est exclue du compte que si elle satisfait l’inéquation.",
     "en": "The ends were handled the wrong way round. The ones that do NOT satisfy it lie between the ends, and an end is only left out of the count if it does satisfy the inequality."
+  },
+  "As camadas ocupadas são os números que aparecem na configuração.": {
+    "fr": "Les couches occupées sont les numéros qui apparaissent dans la configuration.",
+    "en": "The occupied shells are the numbers appearing in the configuration."
   },
   "As componentes da direção entraram trocadas no produto escalar.": {
     "fr": "Les composantes de la direction ont été inversées dans le produit scalaire.",
@@ -6234,6 +6262,10 @@
   "Como o argumento é um múltiplo de x, a cadeia acrescenta o fator interno.": {
     "fr": "Comme l’argument est un multiple de x, la chaîne ajoute le facteur interne.",
     "en": "Since the argument is a multiple of x, the chain adds the inner factor."
+  },
+  "Como o subnível é o da última camada, esse é o número de elétrons dela.": {
+    "fr": "Comme la sous-couche est celle de la dernière couche, c’est le nombre d’électrons de celle-ci.",
+    "en": "Since the subshell belongs to the outer shell, that is its number of electrons."
   },
   "Como o tempo não interessa, usamos Torricelli.": {
     "fr": "Comme le temps n’intervient pas, nous utilisons Torricelli.",
@@ -12211,6 +12243,10 @@
     "fr": "Nous faisons les produits de chaque coefficient par sa puissance.",
     "en": "We multiply each coefficient by its power."
   },
+  "Fazendo a conta com os números do enunciado.": {
+    "fr": "En faisant le calcul avec les nombres de l’énoncé.",
+    "en": "Doing the computation with the numbers from the statement."
+  },
   "Fazendo a conta.": {
     "fr": "En faisant le calcul.",
     "en": "Doing the arithmetic."
@@ -12378,6 +12414,10 @@
   "Frações não se somam juntando os denominadores: x/p + x/r não é x/(p + r). Use o mmc.": {
     "fr": "Les fractions ne s’additionnent pas en réunissant les dénominateurs : x/p + x/r n’est pas x/(p + r). Utilisez le ppcm.",
     "en": "Fractions do not add by merging denominators: x/p + x/r is not x/(p + r). Use the LCM."
+  },
+  "Ganhar elétrons deixa o íon com mais do que o átomo neutro tinha.": {
+    "fr": "Gagner des électrons laisse l’ion avec plus que l’atome neutre n’en avait.",
+    "en": "Gaining electrons leaves the ion with more than the neutral atom had."
   },
   "Gelo em água: densidade #, logo #% submerso — a ponta do iceberg é mesmo pequena.": {
     "fr": "Glace dans l’eau : masse volumique #, donc #% immergé — la pointe de l’iceberg est bien petite.",
@@ -12838,6 +12878,10 @@
   "Isolando a força.": {
     "fr": "En isolant la force.",
     "en": "Isolating the force."
+  },
+  "Isolando a porcentagem do isótopo mais leve.": {
+    "fr": "En isolant le pourcentage de l’isotope le plus léger.",
+    "en": "Isolating the percentage of the lighter isotope."
   },
   "Isolando a pressão no segundo ponto.": {
     "fr": "En isolant la pression au second point.",
@@ -13434,6 +13478,10 @@
   "Mais perto quando cos θ = # (θ = #°); mais longe quando cos θ = −# (θ = #°).": {
     "fr": "Plus près quand cos θ = # (θ = #°) ; plus loin quand cos θ = −# (θ = #°).",
     "en": "Closest when cos θ = # (θ = #°); farthest when cos θ = −# (θ = #°)."
+  },
+  "Mais prótons que elétrons deixa o íon positivo.": {
+    "fr": "Plus de protons que d’électrons rend l’ion positif.",
+    "en": "More protons than electrons leaves the ion positive."
   },
   "Mais tração acelera a onda; mais massa por metro a freia.": {
     "fr": "Plus de tension accélère l’onde ; plus de masse par mètre la freine.",
@@ -14855,6 +14903,10 @@
     "fr": "Dans un système isolé, la somme des chaleurs échangées est zéro.",
     "en": "In an isolated system, the sum of exchanged heats is zero."
   },
+  "Num átomo neutro, cada próton tem um elétron para equilibrar.": {
+    "fr": "Dans un atome neutre, chaque proton a un électron pour l’équilibrer.",
+    "en": "In a neutral atom, each proton has one electron to balance it."
+  },
   "Numa #×#, o determinante é a diferença dos produtos das diagonais.": {
     "fr": "Dans un #×#, le déterminant est la différence des produits des diagonales.",
     "en": "In a #×#, the determinant is the difference of the products of the diagonals."
@@ -16083,6 +16135,14 @@
     "fr": "L’exposant doit DIMINUER d’une unité à la dérivation. Ici il a été conservé, et la puissance est d’un degré trop élevée.",
     "en": "The exponent must DECREASE by one when differentiating. Here it was kept, and the power ended up one degree too high."
   },
+  "O expoente do subnível pedido é a resposta.": {
+    "fr": "L’exposant de la sous-couche demandée est la réponse.",
+    "en": "The exponent of the requested subshell is the answer."
+  },
+  "O expoente do último subnível diz quantos elétrons entraram nele.": {
+    "fr": "L’exposant de la dernière sous-couche dit combien d’électrons y sont entrés.",
+    "en": "The exponent of the last subshell says how many electrons went into it."
+  },
   "O expoente está certo, mas o fatorial ficou um atrás: o denominador é # fatorial, o mesmo número do expoente.": {
     "fr": "L’exposant est juste, mais la factorielle est en retard d’un : le dénominateur est # factorielle, le même nombre que l’exposant.",
     "en": "The exponent is right, but the factorial is one behind: the denominator is # factorial, the same number as the exponent."
@@ -16723,6 +16783,10 @@
     "fr": "Le numéro atomique est le décompte même des protons.",
     "en": "The atomic number is the proton count itself."
   },
+  "O número atômico é, por definição, a contagem de prótons.": {
+    "fr": "Le numéro atomique est, par définition, le nombre de protons.",
+    "en": "The atomic number is, by definition, the count of protons."
+  },
   "O número de camadas ocupadas é o período; os elétrons da última explicam o grupo, e por que elementos de última camada parecida reagem parecido.": {
     "fr": "Le nombre de couches occupées est la période ; les électrons de la dernière expliquent le groupe, et pourquoi des éléments à dernière couche semblable réagissent de façon semblable.",
     "en": "The number of occupied shells is the period; the electrons in the last one explain the group, and why elements with a similar outer shell react alike."
@@ -16730,6 +16794,10 @@
   "O número de dentes vezes as voltas é o mesmo nas duas: é o que a corrente impõe.": {
     "fr": "Le nombre de dents fois les tours est le même pour les deux : c’est ce que la chaîne impose.",
     "en": "Teeth times turns is the same for both: that is what the chain imposes."
+  },
+  "O número de massa conta as partículas do núcleo: prótons e nêutrons.": {
+    "fr": "Le nombre de masse compte les particules du noyau : protons et neutrons.",
+    "en": "The mass number counts the particles in the nucleus: protons and neutrons."
   },
   "O número de massa conta prótons e nêutrons juntos: tire os # prótons dos #.": {
     "fr": "Le nombre de masse compte protons et neutrons ensemble : retirez les # protons des #.",
@@ -17087,6 +17155,10 @@
     "fr": "Ce qui s’additionne d’un côté passe en soustraction de l’autre : le - y quitte la gauche et entre à droite avec le signe changé.",
     "en": "What is adding on one side passes as a subtraction to the other: the - y leaves the left and enters the right with its sign flipped."
   },
+  "O que falta é a diferença para a camada completa.": {
+    "fr": "Ce qui manque est l’écart jusqu’à la couche complète.",
+    "en": "What is missing is the gap to the complete shell."
+  },
   "O que faria o denominador virar zero?": {
     "fr": "Qu’est-ce qui annulerait le dénominateur ?",
     "en": "What would make the denominator zero?"
@@ -17186,6 +17258,10 @@
   "O reservatório PERDE água: a taxa entra com sinal negativo. Esvaziar é chegar a zero. São # unidades: multiplique # pela taxa e depois some o valor fixo.": {
     "fr": "Le réservoir PERD de l’eau : le taux entre avec un signe négatif. Se vider, c’est atteindre zéro. Il y a # unités : multipliez # par le taux puis ajoutez la valeur fixe.",
     "en": "The tank LOSES water: the rate enters with a negative sign. Emptying means reaching zero. There are # units: multiply # by the rate and then add the fixed value."
+  },
+  "O resto da amostra é o complemento da primeira abundância.": {
+    "fr": "Le reste de l’échantillon est le complément de la première abondance.",
+    "en": "The rest of the sample is the complement of the first abundance."
   },
   "O resto de Lagrange tem a forma do termo seguinte, com a derivada num ponto intermediário.": {
     "fr": "Le reste de Lagrange a la forme du terme suivant, avec la dérivée en un point intermédiaire.",
@@ -19719,6 +19795,10 @@
     "fr": "Parcourir le même chemin en sens inverse défait exactement le travail effectué.",
     "en": "Travelling the same path backwards undoes exactly the work done."
   },
+  "Perder elétrons deixa o íon com menos do que o átomo neutro tinha.": {
+    "fr": "Perdre des électrons laisse l’ion avec moins que l’atome neutre n’en avait.",
+    "en": "Losing electrons leaves the ion with fewer than the neutral atom had."
+  },
   "Perdeu-se # J.": {
     "fr": "# J ont été perdus.",
     "en": "# J were lost."
@@ -19810,6 +19890,10 @@
   "Por fim, o resultado volta à forma mista — que é como a quantidade se lê.": {
     "fr": "Enfin, le résultat revient à la forme mixte — qui est comment la quantité se lit.",
     "en": "Finally, the result returns to mixed form — which is how the quantity is read."
+  },
+  "Por isso a contagem é a mesma.": {
+    "fr": "Le compte est donc le même.",
+    "en": "So the count is the same."
   },
   "Por isso ele é a função inversa da exponencial de mesma base.": {
     "fr": "C'est pourquoi il est la fonction inverse de l'exponentielle de même base.",
@@ -21055,6 +21139,10 @@
     "fr": "En additionnant les contributions de chaque terme.",
     "en": "Adding the contributions of each term."
   },
+  "Somando as duas contagens.": {
+    "fr": "En additionnant les deux comptes.",
+    "en": "Adding the two counts."
+  },
   "Somando as duas metades.": {
     "fr": "En additionnant les deux moitiés.",
     "en": "Adding the two halves."
@@ -21322,6 +21410,10 @@
   "Substituindo (os kΩ se cancelam).": {
     "fr": "En substituant (les kΩ se simplifient).",
     "en": "Substituting (the kΩ cancel out)."
+  },
+  "Substituindo as duas massas com as suas abundâncias.": {
+    "fr": "En remplaçant les deux masses par leurs abondances.",
+    "en": "Substituting the two masses with their abundances."
   },
   "Substituindo as somas da amostra.": {
     "fr": "En substituant les sommes de l'échantillon.",
@@ -22174,6 +22266,10 @@
   "Tirando a raiz quadrada.": {
     "fr": "En prenant la racine carrée.",
     "en": "Taking the square root."
+  },
+  "Tirando os nêutrons do número de massa.": {
+    "fr": "En retirant les neutrons du nombre de masse.",
+    "en": "Taking the neutrons out of the mass number."
   },
   "Tire a raiz cúbica do primeiro e do último termo, mantendo o sinal; depois confira os do meio com #u²v e #uv².": {
     "fr": "Prenez la racine cubique du premier et du dernier terme, en gardant le signe ; vérifiez ensuite ceux du milieu avec #u²v et #uv².",

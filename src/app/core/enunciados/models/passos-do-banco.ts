@@ -2,6 +2,8 @@ import type { Passo } from '@core/math/tipos/tipos';
 import { resolverPorRegras } from '@core/enunciados/models/regras-de-passos';
 import { REGRAS_POR_TOPICO } from '@core/enunciados/models/regras.catalogo';
 import {
+  ATOMOS_E_IONS,
+  ESTRUTURA_ELETRONICA,
   GASES_IDEAIS,
   MOL_E_MASSA_MOLAR,
   SOLUCOES,
@@ -1039,6 +1041,12 @@ const POR_TOPICO: Readonly<Record<string, readonly Resolvedor[]>> = {
     (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
   ),
   'solucoes-e-concentracao': SOLUCOES.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
+  'atomos-isotopos-ions': ATOMOS_E_IONS.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
+  'estrutura-eletronica': ESTRUTURA_ELETRONICA.map(
     (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
   ),
 };

@@ -4,6 +4,12 @@ import {
   massaMolarDaFormula,
   partesDaFormula,
 } from '@core/math/quimica/formula/formula';
+import {
+  camadas,
+  configuracaoParaTex,
+  eletronsDaUltimaCamada,
+  eletronsNoSubnivel,
+} from '@core/math/quimica/eletrons/eletrons';
 
 /**
  * Os passos das perguntas de química do banco.
@@ -916,3 +922,505 @@ export const SOLUCOES: readonly ((texto: string) => Resolucao | null)[] = [
     };
   },
 ];
+
+/* ─────────────────── átomos, íons e camadas ─────────────────── */
+
+/** O número inteiro como o passo o escreve. */
+const inteiro = (valor: number): string => String(Math.round(valor));
+
+export const ATOMOS_E_IONS: readonly ((texto: string) => Resolucao | null)[] = [
+  // «Um átomo de sódio tem 11 prótons e 12 nêutrons. Qual é o número de massa?»
+  (texto) => {
+    const achado =
+      /átomo de .+? tem (\d+) prótons e (\d+) nêutrons\.\s*Qual é o seu número de massa/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [protons, neutrons] = [Number(achado[1]), Number(achado[2])];
+
+    return {
+      valor: inteiro(protons + neutrons),
+      passos: [
+        {
+          descricao: 'O número de massa conta as partículas do núcleo: prótons e nêutrons.',
+          tex: `A = Z + N`,
+        },
+        {
+          descricao: 'Somando as duas contagens.',
+          tex: `A = ${protons} + ${neutrons} = ${protons + neutrons}`,
+        },
+      ],
+    };
+  },
+
+  // «Um átomo tem número de massa 23 e 12 nêutrons. Qual é o número atômico?»
+  (texto) => {
+    const achado =
+      /número de massa (\d+) e (\d+) nêutrons\.\s*Qual é o número atômico/i.exec(texto);
+    if (achado === null) return null;
+
+    const [massa, neutrons] = [Number(achado[1]), Number(achado[2])];
+
+    return {
+      valor: inteiro(massa - neutrons),
+      passos: [
+        {
+          descricao: 'O número de massa conta as partículas do núcleo: prótons e nêutrons.',
+          tex: `A = Z + N \\Rightarrow Z = A - N`,
+        },
+        {
+          descricao: 'Tirando os nêutrons do número de massa.',
+          tex: `Z = ${massa} - ${neutrons} = ${massa - neutrons}`,
+        },
+      ],
+    };
+  },
+
+  // «Um íon tem 11 prótons e 10 elétrons. Qual é a carga?»
+  (texto) => {
+    const achado = /íon tem (\d+) prótons e (\d+) elétrons\.\s*Qual é a carga/i.exec(texto);
+    if (achado === null) return null;
+
+    const [protons, eletrons] = [Number(achado[1]), Number(achado[2])];
+
+    return {
+      valor: inteiro(protons - eletrons),
+      passos: [
+        {
+          descricao: 'A carga é o desequilíbrio entre prótons e elétrons.',
+          tex: `q = Z - e^-`,
+        },
+        {
+          descricao: 'Mais prótons que elétrons deixa o íon positivo.',
+          tex: `q = ${protons} - ${eletrons} = ${protons - eletrons}`,
+        },
+      ],
+    };
+  },
+
+  // «Um átomo neutro tem 3 prótons. Quantos elétrons ele possui?»
+  (texto) => {
+    const achado = /átomo neutro tem (\d+) prótons\.\s*Quantos elétrons/i.exec(texto);
+    if (achado === null) return null;
+
+    return {
+      valor: achado[1]!,
+      passos: [
+        {
+          descricao: 'Num átomo neutro, cada próton tem um elétron para equilibrar.',
+          tex: `e^- = Z`,
+        },
+        {
+          descricao: 'Por isso a contagem é a mesma.',
+          tex: `e^- = ${achado[1]}`,
+        },
+      ],
+    };
+  },
+
+  // «O íon Na⁺ perdeu 1 elétrons. Se o átomo neutro tinha 11, quantos tem?»
+  (texto) => {
+    const achado =
+      /íon .+? (perdeu|ganhou) (\d+) elétrons\.\s*Se o átomo neutro tinha (\d+) elétrons/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const perdeu = achado[1]!.toLowerCase() === 'perdeu';
+    const [quantos, neutro] = [Number(achado[2]), Number(achado[3])];
+    const total = perdeu ? neutro - quantos : neutro + quantos;
+
+    return {
+      valor: inteiro(total),
+      passos: [
+        {
+          descricao: perdeu
+            ? 'Perder elétrons deixa o íon com menos do que o átomo neutro tinha.'
+            : 'Ganhar elétrons deixa o íon com mais do que o átomo neutro tinha.',
+          tex: perdeu ? `e^- = Z - q` : `e^- = Z + q`,
+        },
+        {
+          descricao: 'Fazendo a conta com os números do enunciado.',
+          tex: `e^- = ${neutro} ${perdeu ? '-' : '+'} ${quantos} = ${total}`,
+        },
+      ],
+    };
+  },
+
+  // «Um íon de cálcio, cujo número atômico é 20, tem carga 2+. Quantos elétrons?»
+  (texto) => {
+    const achado =
+      /íon de .+?, cujo número atômico é (\d+), tem carga (\d+)([+-])\.\s*Quantos elétrons/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [z, carga] = [Number(achado[1]), Number(achado[2])];
+    const positivo = achado[3] === '+';
+    const total = positivo ? z - carga : z + carga;
+
+    return {
+      valor: inteiro(total),
+      passos: [
+        {
+          descricao: 'A carga é o desequilíbrio entre prótons e elétrons.',
+          tex: `e^- = Z ${positivo ? '-' : '+'} q`,
+        },
+        {
+          descricao: 'Fazendo a conta com os números do enunciado.',
+          tex: `e^- = ${z} ${positivo ? '-' : '+'} ${carga} = ${total}`,
+        },
+      ],
+    };
+  },
+
+  // «Um íon de ferro tem 26 prótons e carga 3+. Quantos elétrons ele tem?»
+  (texto) => {
+    const achado =
+      /íon de .+? tem (\d+) prótons e carga (\d+)([+-])\.\s*Quantos elétrons/i.exec(texto);
+    if (achado === null) return null;
+
+    const [z, carga] = [Number(achado[1]), Number(achado[2])];
+    const positivo = achado[3] === '+';
+    const total = positivo ? z - carga : z + carga;
+
+    return {
+      valor: inteiro(total),
+      passos: [
+        {
+          descricao: 'A carga é o desequilíbrio entre prótons e elétrons.',
+          tex: `e^- = Z ${positivo ? '-' : '+'} q`,
+        },
+        {
+          descricao: 'Fazendo a conta com os números do enunciado.',
+          tex: `e^- = ${z} ${positivo ? '-' : '+'} ${carga} = ${total}`,
+        },
+      ],
+    };
+  },
+
+  // «75% de massa 35 u e o resto de massa 37 u. Qual é a massa atômica média?»
+  (texto) => {
+    const achado =
+      /(\d+(?:[.,]\d+)?)% de massa (\d+(?:[.,]\d+)?) u e o resto de massa (\d+(?:[.,]\d+)?) u/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [abundancia, massa1, massa2] = achado.slice(1, 4).map((g) => num(g!));
+    const media = (abundancia! * massa1! + (100 - abundancia!) * massa2!) / 100;
+
+    return {
+      valor: media.toFixed(2),
+      passos: [
+        {
+          descricao: 'A massa média é a média ponderada pelas abundâncias.',
+          tex: `\\bar{A} = \\frac{a_1m_1 + a_2m_2}{100}`,
+        },
+        {
+          descricao: 'O resto da amostra é o complemento da primeira abundância.',
+          tex: `\\bar{A} = \\frac{${abundancia} \\cdot ${massa1} + ${100 - abundancia!} \\cdot ${massa2}}{100} = ${tex(media)}\\ \\text{u}`,
+        },
+      ],
+    };
+  },
+
+  // «O cloro tem dois isótopos: massa 35 com 75% e massa 37 com 25%.»
+  (texto) => {
+    const achado =
+      /massa (\d+(?:[.,]\d+)?) com (\d+(?:[.,]\d+)?)% de abundância e massa (\d+(?:[.,]\d+)?) com (?:(\d+(?:[.,]\d+)?)%|o restante)/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [massa1, a1, massa2] = achado.slice(1, 4).map((g) => num(g!));
+    // «o restante» é o complemento: o banco escreve das duas maneiras.
+    const a2 = achado[4] === undefined ? 100 - a1! : num(achado[4]);
+    const media = (a1! * massa1! + a2 * massa2!) / 100;
+
+    return {
+      valor: media.toFixed(2),
+      passos: [
+        {
+          descricao: 'A massa média é a média ponderada pelas abundâncias.',
+          tex: `\\bar{A} = \\frac{a_1m_1 + a_2m_2}{100}`,
+        },
+        {
+          descricao: 'Substituindo as duas massas com as suas abundâncias.',
+          tex: `\\bar{A} = \\frac{${a1} \\cdot ${massa1} + ${a2} \\cdot ${massa2}}{100} = ${tex(media)}\\ \\text{u}`,
+        },
+      ],
+    };
+  },
+
+  // «A massa atômica do cloro é 35,45 u, com isótopos de 35 e 37. Qual a porcentagem do primeiro?»
+  (texto) => {
+    const achado =
+      /massa atômica d[oae]s? .+? é (\d+(?:[.,]\d+)?) u, e ele tem dois isótopos: um de massa (\d+(?:[.,]\d+)?) u e outro de massa (\d+(?:[.,]\d+)?) u/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [media, massa1, massa2] = achado.slice(1, 4).map((g) => num(g!));
+    const porcento = ((massa2! - media!) / (massa2! - massa1!)) * 100;
+
+    return {
+      valor: porcento.toFixed(2),
+      passos: [
+        {
+          descricao: 'A massa média é a média ponderada, e a abundância que falta é a incógnita.',
+          tex: `\\bar{A} = \\frac{x \\cdot m_1 + (100 - x) \\cdot m_2}{100}`,
+        },
+        {
+          descricao: 'Isolando a porcentagem do isótopo mais leve.',
+          tex: `x = \\frac{${massa2} - ${media}}{${massa2} - ${massa1}} \\cdot 100 = ${tex(porcento)}\\%`,
+        },
+      ],
+    };
+  },
+];
+
+/* ─────────────────── estrutura eletrônica ─────────────────── */
+
+export const ESTRUTURA_ELETRONICA: readonly ((texto: string) => Resolucao | null)[] = [
+  // «Quantos elétrons há na última camada do átomo neutro de número atômico 19?»
+  // «… do átomo neutro de oxigênio, cujo número atômico é 8?»
+  (texto) => {
+    const achado =
+      /última camada do átomo neutro (?:de número atômico (\d+)|de .+?, cujo número atômico é (\d+))/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const z = Number(achado[1] ?? achado[2]);
+    const ultima = eletronsDaUltimaCamada(z);
+
+    return {
+      valor: inteiro(ultima),
+      passos: [
+        {
+          descricao: 'A configuração se escreve preenchendo os subníveis em ordem de energia.',
+          tex: configuracaoParaTex(z),
+        },
+        {
+          descricao: 'A última camada é a de maior número, e são os elétrons dela que contam.',
+          tex: `${camadas(z).join(' - ')} \\Rightarrow ${ultima}`,
+        },
+      ],
+    };
+  },
+
+  // «Quantos elétrons há no subnível 3d do átomo neutro de ferro, cujo número atômico é 26?»
+  (texto) => {
+    const achado =
+      /subnível (\d)([spdf]) do átomo neutro de .+?, cujo número atômico é (\d+)/i.exec(texto);
+    if (achado === null) return null;
+
+    const z = Number(achado[3]);
+    const quantos = eletronsNoSubnivel(z, Number(achado[1]), achado[2]! as 's' | 'p' | 'd' | 'f');
+
+    return {
+      valor: inteiro(quantos),
+      passos: [
+        {
+          descricao: 'A configuração se escreve preenchendo os subníveis em ordem de energia.',
+          tex: configuracaoParaTex(z),
+        },
+        {
+          descricao: 'O expoente do subnível pedido é a resposta.',
+          tex: `${achado[1]}${achado[2]} \\Rightarrow ${quantos}`,
+        },
+      ],
+    };
+  },
+
+  // «Quantas camadas eletrônicas ocupadas tem o átomo neutro de cálcio, Z = 20?»
+  (texto) => {
+    const achado =
+      /Quantas camadas eletrônicas ocupadas tem o átomo neutro de .+?, cujo número atômico é (\d+)/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const z = Number(achado[1]);
+    const quantas = camadas(z).length;
+
+    return {
+      valor: inteiro(quantas),
+      passos: [
+        {
+          descricao: 'A configuração se escreve preenchendo os subníveis em ordem de energia.',
+          tex: configuracaoParaTex(z),
+        },
+        {
+          descricao: 'As camadas ocupadas são os números que aparecem na configuração.',
+          tex: `${camadas(z).join(' - ')} \\Rightarrow ${quantas}`,
+        },
+      ],
+    };
+  },
+
+  // «Um átomo neutro tem a configuração terminando em 3p³. Quantos elétrons na última camada?»
+  (texto) => {
+    const achado =
+      /configuração terminando em (\d)[spdf]([¹²³⁴⁵⁶⁷⁸⁹⁰]+)\.\s*Quantos elétrons há na última camada/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const expoentes: Readonly<Record<string, string>> = {
+      '⁰': '0',
+      '¹': '1',
+      '²': '2',
+      '³': '3',
+      '⁴': '4',
+      '⁵': '5',
+      '⁶': '6',
+      '⁷': '7',
+      '⁸': '8',
+      '⁹': '9',
+    };
+    const quantos = Number([...achado[2]!].map((digito) => expoentes[digito] ?? '').join(''));
+
+    if (!Number.isFinite(quantos)) return null;
+
+    return {
+      valor: inteiro(quantos),
+      passos: [
+        {
+          descricao: 'O expoente do último subnível diz quantos elétrons entraram nele.',
+          tex: `${achado[1]}s^{${quantos}} \\Rightarrow ${quantos}`,
+        },
+        {
+          descricao: 'Como o subnível é o da última camada, esse é o número de elétrons dela.',
+          tex: `e^-_{última} = ${quantos}`,
+        },
+      ],
+    };
+  },
+
+  // «Um átomo neutro tem 11 elétrons. Quantos faltam para completar a última camada (8)?»
+  (texto) => {
+    const achado =
+      /átomo neutro tem (\d+) elétrons\.\s*Quantos elétrons faltam para completar a última camada, se ela precisa de (\d+)/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [z, precisa] = [Number(achado[1]), Number(achado[2])];
+    const ultima = eletronsDaUltimaCamada(z);
+
+    return {
+      valor: inteiro(precisa - ultima),
+      passos: [
+        {
+          descricao: 'A última camada é a de maior número, e são os elétrons dela que contam.',
+          tex: `${camadas(z).join(' - ')} \\Rightarrow ${ultima}`,
+        },
+        {
+          descricao: 'O que falta é a diferença para a camada completa.',
+          tex: `${precisa} - ${ultima} = ${precisa - ultima}`,
+        },
+      ],
+    };
+  },
+
+  // «Quantos prótons tem o átomo de número atômico 6?»
+  (texto) => {
+    const achado = /Quantos prótons tem o átomo de número atômico (\d+)/i.exec(texto);
+    if (achado === null) return null;
+
+    return {
+      valor: achado[1]!,
+      passos: [
+        {
+          descricao: 'O número atômico é, por definição, a contagem de prótons.',
+          tex: `Z = p^+`,
+        },
+        {
+          descricao: 'Por isso a contagem é a mesma.',
+          tex: `p^+ = ${achado[1]}`,
+        },
+      ],
+    };
+  },
+
+  // «Qual é o número total de elétrons do átomo neutro de número atômico 3?»
+  (texto) => {
+    const achado =
+      /número total de elétrons do átomo neutro de número atômico (\d+)/i.exec(texto);
+    if (achado === null) return null;
+
+    return {
+      valor: achado[1]!,
+      passos: [
+        {
+          descricao: 'Num átomo neutro, cada próton tem um elétron para equilibrar.',
+          tex: `e^- = Z`,
+        },
+        {
+          descricao: 'Por isso a contagem é a mesma.',
+          tex: `e^- = ${achado[1]}`,
+        },
+      ],
+    };
+  },
+
+  // «Quantos elétrons o íon Na⁺ tem, sabendo que o átomo neutro tem número atômico 11?»
+  (texto) => {
+    const achado =
+      /Quantos elétrons o íon (.+?) tem, sabendo que o átomo neutro tem número atômico (\d+)/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const z = Number(achado[2]);
+    const carga = cargaEscrita(achado[1]!);
+    if (carga === null) return null;
+
+    const total = z - carga;
+
+    return {
+      valor: inteiro(total),
+      passos: [
+        {
+          descricao: 'A carga do íon diz quantos elétrons entraram ou saíram.',
+          tex: `${achado[1]} \\Rightarrow q = ${carga > 0 ? '+' : ''}${carga}`,
+        },
+        {
+          descricao: 'A carga é o desequilíbrio entre prótons e elétrons.',
+          tex: `e^- = ${z} - (${carga > 0 ? '+' : ''}${carga}) = ${total}`,
+        },
+      ],
+    };
+  },
+];
+
+/**
+ * A carga escrita no símbolo do íon: `Na⁺` é +1, `O²⁻` é −2.
+ *
+ * Devolve `null` quando o símbolo não traz carga — e aí a pergunta não é esta.
+ */
+function cargaEscrita(simbolo: string): number | null {
+  const achado = /([¹²³⁴⁵⁶⁷⁸⁹]?)([⁺⁻])/.exec(simbolo);
+
+  if (achado === null) {
+    return null;
+  }
+
+  const digitos: Readonly<Record<string, number>> = {
+    '¹': 1,
+    '²': 2,
+    '³': 3,
+    '⁴': 4,
+    '⁵': 5,
+    '⁶': 6,
+    '⁷': 7,
+    '⁸': 8,
+    '⁹': 9,
+  };
+  const quanto = achado[1] === '' ? 1 : (digitos[achado[1]!] ?? 1);
+
+  return achado[2] === '⁺' ? quanto : -quanto;
+}
