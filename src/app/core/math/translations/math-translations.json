@@ -1443,9 +1443,33 @@
     "fr": "La fraction vaut θ/#°, parce que le tour complet fait #°. Diviser par #° doublerait le secteur.",
     "en": "The fraction is θ/#°, because the full turn is #°. Dividing by #° would double the sector."
   },
+  "A fronteira ENTRA no conjunto: a situação diz «no máximo» ou «pelo menos», que é ≤ ou ≥, e não < ou >.": {
+    "fr": "La borne APPARTIENT à l’ensemble : la situation dit « au plus » ou « au moins », ce qui donne ≤ ou ≥, et non < ou >.",
+    "en": "The boundary IS in the set: the situation says “at most” or “at least”, which is ≤ or ≥, not < or >."
+  },
+  "A fronteira NÃO entra no conjunto: a desigualdade do enunciado é estrita, então a resposta usa < e não ≤ ou ≥.": {
+    "fr": "La borne N’APPARTIENT PAS à l’ensemble : l’inégalité de l’énoncé est stricte, la réponse utilise donc < et non ≤ ou ≥.",
+    "en": "The boundary is NOT in the set: the inequality in the statement is strict, so the answer uses < and not ≤ or ≥."
+  },
+  "A fronteira NÃO entra no conjunto: a desigualdade do enunciado é estrita, então a resposta usa > e não ≤ ou ≥.": {
+    "fr": "La borne N’APPARTIENT PAS à l’ensemble : l’inégalité de l’énoncé est stricte, la réponse utilise donc > et non ≤ ou ≥.",
+    "en": "The boundary is NOT in the set: the inequality in the statement is strict, so the answer uses > and not ≤ or ≥."
+  },
+  "A fronteira NÃO entra no conjunto: a situação pede «a partir de» ou «acima de» com valor exato, e a desigualdade é estrita.": {
+    "fr": "La borne N’APPARTIENT PAS à l’ensemble : la situation dit « à partir de » ou « au-dessus de » avec une valeur exacte, et l’inégalité est stricte.",
+    "en": "The boundary is NOT in the set: the situation says “from” or “above” with an exact value, and the inequality is strict."
+  },
   "A fronteira entra na solução, por isso o colchete e a bolinha preenchida.": {
     "fr": "La borne entre dans la solution, d’où le crochet et le point plein.",
     "en": "The boundary is included, hence the bracket and the filled dot."
+  },
+  "A fronteira está certa, mas o SENTIDO não. Ao dividir por #, que é negativo, a desigualdade se inverte — e a história não muda isso. Confira com um exemplo: # < #, mas −# > −#.": {
+    "fr": "La borne est correcte, mais le SENS ne l’est pas. En divisant par #, qui est négatif, l’inégalité s’inverse — et le contexte n’y change rien. Vérifiez sur un exemple : # < #, mais −# > −#.",
+    "en": "The boundary is right, but the DIRECTION is not. Dividing by #, which is negative, reverses the inequality — and the story does not change that. Check with an example: # < #, but −# > −#."
+  },
+  "A fronteira está certa, mas o SENTIDO não: dividir por #, que é negativo, inverte a desigualdade. Confira com um exemplo: # < #, mas −# > −#.": {
+    "fr": "La borne est correcte, mais le SENS ne l’est pas : diviser par #, qui est négatif, inverse l’inégalité. Vérifiez sur un exemple : # < #, mais −# > −#.",
+    "en": "The boundary is right, but the DIRECTION is not: dividing by #, which is negative, reverses the inequality. Check with an example: # < #, but −# > −#."
   },
   "A fronteira fica de fora, por isso o parêntese e a bolinha vazada.": {
     "fr": "La borne reste dehors, d’où la parenthèse et le point creux.",
@@ -4099,6 +4123,14 @@
     "fr": "La base et la hauteur sont toutes deux multipliées par k.",
     "en": "Base and height are both multiplied by k."
   },
+  "Base negativa: expoente par dá positivo, ímpar dá negativo — (#)² = #, (#)³ = #.": {
+    "fr": "Base négative : un exposant pair donne un résultat positif, un exposant impair un résultat négatif — (#)² = #, (#)³ = #.",
+    "en": "Negative base: an even exponent gives a positive result, an odd one a negative result — (#)² = #, (#)³ = #."
+  },
+  "Base negativa: expoente par dá positivo, ímpar dá negativo — (#)³ = #.": {
+    "fr": "Base négative : un exposant pair donne un résultat positif, un exposant impair un résultat négatif — (#)³ = #.",
+    "en": "Negative base: an even exponent gives a positive result, an odd one a negative result — (#)³ = #."
+  },
   "Basta avaliar o integrando no ponto.": {
     "fr": "Il suffit d’évaluer l’intégrande au point.",
     "en": "It is enough to evaluate the integrand at the point."
@@ -5435,6 +5467,10 @@
     "fr": "En comparant avec la valeur vraie, il est visible ce que l'approximation a coûté.",
     "en": "Comparing with the true value, you can see what the approximation cost."
   },
+  "Compare as duas despesas: (B)·x + taxa > (A)·x. A taxa entra uma vez e com sinal negativo quando muda de lado.": {
+    "fr": "Comparez les deux dépenses : (B)·x + frais > (A)·x. Les frais entrent une seule fois et avec un signe négatif en changeant de côté.",
+    "en": "Compare the two costs: (B)·x + fee > (A)·x. The fee enters once, and with a negative sign when it moves across."
+  },
   "Compare com a velocidade orbital no mesmo raio.": {
     "fr": "Comparez avec la vitesse orbitale au même rayon.",
     "en": "Compare with the orbital velocity at the same radius."
@@ -6411,6 +6447,14 @@
     "fr": "Déterminant nul : les deux droites ont la même inclinaison.",
     "en": "Determinant zero: the two lines have the same slope."
   },
+  "Deu zero, então (x + #) é fator — é o teorema do resto.": {
+    "fr": "Le résultat est nul, donc (x + #) est un facteur — c’est le théorème du reste.",
+    "en": "It came out zero, so (x + #) is a factor — that is the remainder theorem."
+  },
+  "Deu zero, então (x - #) é fator — é o teorema do resto.": {
+    "fr": "Le résultat est nul, donc (x - #) est un facteur — c’est le théorème du reste.",
+    "en": "It came out zero, so (x - #) is a factor — that is the remainder theorem."
+  },
   "Dez vezes o logaritmo decimal.": {
     "fr": "Dix fois le logarithme décimal.",
     "en": "Ten times the decimal logarithm."
@@ -6474,6 +6518,10 @@
   "Distribuímos — o menos troca o sinal dos DOIS termos do segundo parêntese.": {
     "fr": "Nous distribuons — le moins change le signe des DEUX termes de la seconde parenthèse.",
     "en": "We expand — the minus flips the sign of BOTH terms in the second bracket."
+  },
+  "Distância = velocidade × tempo. Com a distância fixa, tempo ≤ limite vira velocidade ≥ distância ÷ limite.": {
+    "fr": "Distance = vitesse × temps. À distance fixée, temps ≤ limite devient vitesse ≥ distance ÷ limite.",
+    "en": "Distance = speed × time. With the distance fixed, time ≤ limit becomes speed ≥ distance ÷ limit."
   },
   "Distância = |n·P − d| / |n|. Aqui |n| = raiz de #² + #² + #².": {
     "fr": "Distance = |n·P − d| / |n|. Ici |n| = racine de #² + #² + #².",
@@ -6703,6 +6751,14 @@
     "fr": "Diviser par #π est le chemin pour trouver le rayon à partir de la LONGUEUR, et non de l’aire.",
     "en": "Dividing by #π is the way to find the radius from the LENGTH, not from the area."
   },
+  "Dividir por (x + #) pede #, e não #: é o número que anula o parêntese.": {
+    "fr": "Diviser par (x + #) demande #, et non # : c’est le nombre qui annule la parenthèse.",
+    "en": "Dividing by (x + #) calls for #, not #: it is the number that makes the bracket vanish."
+  },
+  "Dividir por (x - #) pede #, e não #: é o número que anula o parêntese.": {
+    "fr": "Diviser par (x - #) demande #, et non # : c’est le nombre qui annule la parenthèse.",
+    "en": "Dividing by (x - #) calls for #, not #: it is the number that makes the bracket vanish."
+  },
   "Dividir por uma fração é o mesmo que multiplicar pelo seu inverso.": {
     "fr": "Diviser par une fraction est le même que multiplier par son inverse.",
     "en": "Dividing by a fraction is the same as multiplying by its reciprocal."
@@ -6810,6 +6866,10 @@
   "Dois y para cada x: isolar obriga a escolher um ramo.": {
     "fr": "Deux y pour chaque x : isoler oblige à choisir une branche.",
     "en": "Two y for each x: isolating requires choosing a branch."
+  },
+  "Duas coisas mudaram de uma vez: o sentido e o sinal da fronteira. Resolva uma de cada vez — primeiro isole x com o sentido certo, depois confira o sinal.": {
+    "fr": "Deux choses ont changé à la fois : le sens et le signe de la borne. Traitez-les une par une — isolez d’abord x avec le bon sens, puis vérifiez le signe.",
+    "en": "Two things changed at once: the direction and the sign of the boundary. Deal with one at a time — first isolate x with the right direction, then check the sign."
   },
   "Duas condições iniciais, porque a solução geral tem duas constantes.": {
     "fr": "Deux conditions initiales, parce que la solution générale a deux constantes.",
@@ -8375,6 +8435,10 @@
     "fr": "C’est la LARGEUR de l’intervalle, et non le nombre d’entiers qu’il contient. De # à #, la distance vaut #, mais les entiers #, #, # et # sont au nombre de quatre.",
     "en": "That is the WIDTH of the interval, not how many integers fit in it. From # to # the distance is #, but the integers #, #, # and # are four."
   },
+  "Essa é a MAIOR raiz. A pergunta pede a menor.": {
+    "fr": "C’est la PLUS GRANDE racine. La question demande la plus petite.",
+    "en": "That is the LARGER root. The question asks for the smaller one."
+  },
   "Essa é a MEDIANA, o valor central. A média soma tudo e divide pela quantidade.": {
     "fr": "C’est la MÉDIANE, la valeur centrale. La moyenne additionne tout et divise par le nombre.",
     "en": "That is the MEDIAN, the middle value. The mean adds everything and divides by the count."
@@ -9019,6 +9083,10 @@
     "fr": "C’est le coefficient de x², qui vaut #p²q. Ce qui est demandé, c’est q lui-même.",
     "en": "That is the coefficient of x², which is #p²q. What is asked for is q itself."
   },
+  "Esse é o coeficiente do DIVIDENDO nesse grau. A divisão reorganiza tudo: só os termos líderes coincidem.": {
+    "fr": "C’est le coefficient du DIVIDENDE à ce degré. La division réorganise tout : seuls les termes dominants coïncident.",
+    "en": "That is the DIVIDEND’s coefficient at that degree. Division rearranges everything: only the leading terms coincide."
+  },
   "Esse é o comprimento do ARCO, uma medida linear. A área do setor usa πr², não #πr.": {
     "fr": "C’est la longueur de l’ARC, une mesure linéaire. L’aire du secteur utilise πr², et non #πr.",
     "en": "That is the length of the ARC, a linear measure. The sector area uses πr², not #πr."
@@ -9203,6 +9271,10 @@
     "fr": "C’est le régime permanent, atteint seulement quand t tend vers l’infini. En temps fini, il reste encore le transitoire.",
     "en": "That is the steady state, reached only as t goes to infinity. In finite time the transient is still there."
   },
+  "Esse é o resto, não um coeficiente do quociente.": {
+    "fr": "C’est le reste, pas un coefficient du quotient.",
+    "en": "That is the remainder, not a coefficient of the quotient."
+  },
   "Esse é o resultado de Euler. Runge-Kutta avalia a inclinação quatro vezes por passo, e por isso acerta muitas casas a mais.": {
     "fr": "C’est le résultat d’Euler. Runge-Kutta évalue la pente quatre fois par pas, et gagne donc bien plus de décimales justes.",
     "en": "That is Euler’s result. Runge-Kutta evaluates the slope four times per step, and so gets many more digits right."
@@ -9230,6 +9302,14 @@
   "Esse é o tempo de travessia em segundos, não a distância em m.": {
     "fr": "C’est le temps de traversée en secondes, et non la distance en m.",
     "en": "That is the crossing time in seconds, not the distance in m."
+  },
+  "Esse é o termo constante, que seria o resto da divisão por x. Para (x − a) é preciso avaliar o polinômio inteiro em a.": {
+    "fr": "C’est le terme constant, qui serait le reste de la division par x. Pour (x − a) il faut évaluer tout le polynôme en a.",
+    "en": "That is the constant term, which would be the remainder of the division by x. For (x − a) you have to evaluate the whole polynomial at a."
+  },
+  "Esse é o termo constante. Ele restringe as raízes racionais possíveis, mas não é uma delas por si só.": {
+    "fr": "C’est le terme constant. Il restreint les racines rationnelles possibles, mais n’en est pas une par lui-même.",
+    "en": "That is the constant term. It restricts the possible rational roots, but is not one of them by itself."
   },
   "Esse é o termo independente da última linha, que decide entre impossível e indeterminado — mas é o pivô, com k, que decide se a solução é única.": {
     "fr": "C’est le terme constant de la dernière ligne, qui décide entre incompatible et indéterminé — mais c’est le pivot, avec k, qui décide si la solution est unique.",
@@ -10327,6 +10407,10 @@
     "fr": "Géométriquement, c'est l'aire d'un carré de côté (a + b).",
     "en": "Geometrically, it is the area of a square of side (a + b)."
   },
+  "Grau menor que o divisor é característica do RESTO, não do quociente.": {
+    "fr": "Un degré inférieur à celui du diviseur caractérise le RESTE, pas le quotient.",
+    "en": "A degree lower than the divisor’s characterises the REMAINDER, not the quotient."
+  },
   "Graus iguais em cima e embaixo: a assíntota é o coeficiente de x de cima (#) dividido pelo de baixo (#).": {
     "fr": "Degrés égaux en haut et en bas : l’asymptote est le coefficient de x du haut (#) divisé par celui du bas (#).",
     "en": "Equal degrees above and below: the asymptote is the coefficient of x on top (#) divided by the one below (#)."
@@ -10863,6 +10947,10 @@
     "fr": "N’isolez dy/dx qu’après avoir tout dérivé.",
     "en": "Only isolate dy/dx after differentiating everything."
   },
+  "Isole x como numa equação: passe o # para o outro lado e divida por #. Como # é positivo, o sinal fica igual.": {
+    "fr": "Isolez x comme dans une équation : faites passer le # de l’autre côté et divisez par #. Comme # est positif, le sens ne change pas.",
+    "en": "Isolate x as in an equation: move the # to the other side and divide by #. Since # is positive, the sign stays the same."
+  },
   "Isole x numa das equações e troque essa expressão na outra.": {
     "fr": "Isolez x dans l’une des équations et remplacez cette expression dans l’autre.",
     "en": "Isolate x in one of the equations and substitute that expression into the other."
@@ -11275,6 +11363,10 @@
     "fr": "En dessous, le système oscille ; au-dessus, il revient lentement sans osciller.",
     "en": "Below that, the system oscillates; above it, it returns slowly without oscillating."
   },
+  "Menos vezes menos dá mais: # · (#) = #, que entra somando.": {
+    "fr": "Moins par moins donne plus : # · (#) = #, qui entre en addition.",
+    "en": "Minus times minus gives plus: # · (#) = #, which enters as an addition."
+  },
   "Mesma equivalência, agora no sentido contrário: a taxa do mês é a incógnita.": {
     "fr": "Même équivalence, maintenant dans l’autre sens : le taux du mois est l’inconnue.",
     "en": "Same equivalence, now the other way round: the month rate is the unknown."
@@ -11366,6 +11458,10 @@
   "Monte a matriz aumentada, zere a primeira coluna abaixo do pivô, depois a segunda, e resolva de baixo para cima.": {
     "fr": "Formez la matrice augmentée, annulez la première colonne sous le pivot, puis la deuxième, et résolvez de bas en haut.",
     "en": "Build the augmented matrix, clear the first column below the pivot, then the second, and solve from the bottom up."
+  },
+  "Monte as duas despesas e compare: mensalidade + (A)·x > (B)·x. Passe tudo para um lado antes de isolar x.": {
+    "fr": "Écrivez les deux dépenses et comparez : abonnement + (A)·x > (B)·x. Ramenez tout d’un seul côté avant d’isoler x.",
+    "en": "Set up both costs and compare: subscription + (A)·x > (B)·x. Move everything to one side before isolating x."
   },
   "Monte aₙ₊₁/aₙ: potências como bⁿ⁺¹/bⁿ viram b, e frações como (n + #)/n tendem a #.": {
     "fr": "Formez aₙ₊₁/aₙ : des puissances comme bⁿ⁺¹/bⁿ donnent b, et des fractions comme (n + #)/n tendent vers #.",
@@ -11662,6 +11758,10 @@
   "Multiplique tudo pelo mmc dos denominadores. O menos antes de uma fração vale para o numerador INTEIRO: use parênteses.": {
     "fr": "Multipliez tout par le ppcm des dénominateurs. Le moins devant une fraction porte sur le numérateur ENTIER : utilisez des parenthèses.",
     "en": "Multiply everything by the lcm of the denominators. The minus before a fraction applies to the WHOLE numerator: use brackets."
+  },
+  "Média de três provas é (soma)/#. Multiplique os dois lados por # — é positivo, o sentido não muda — e depois tire a soma das duas notas já feitas.": {
+    "fr": "La moyenne de trois contrôles vaut (somme)/#. Multipliez les deux côtés par # — il est positif, le sens ne change pas — puis retirez la somme des deux notes déjà obtenues.",
+    "en": "The average of three tests is (sum)/#. Multiply both sides by # — it is positive, so the direction does not change — then subtract the sum of the two marks already obtained."
   },
   "Módulo maior que #: o que está dentro fica LONGE de zero, abaixo de −# ou acima de #.": {
     "fr": "Valeur absolue supérieure à # : ce qui est à l’intérieur reste LOIN de zéro, en dessous de −# ou au-dessus de #.",
@@ -12619,6 +12719,10 @@
     "fr": "Pas besoin de calculer l’intégrale : le théorème donne le résultat directement.",
     "en": "No need to compute the integral: the theorem gives the result directly."
   },
+  "Não é preciso continuar testando candidatas — a fórmula dá as duas raízes.": {
+    "fr": "Inutile de continuer à tester des candidates — la formule donne les deux racines.",
+    "en": "There is no need to keep testing candidates — the formula gives both roots."
+  },
   "Não é preciso eliminar o parâmetro: a derivada é componente a componente.": {
     "fr": "Pas besoin d’éliminer le paramètre : la dérivée se fait composante par composante.",
     "en": "No need to eliminate the parameter: differentiation is component by component."
@@ -12955,6 +13059,10 @@
     "fr": "Le capital se simplifie — le temps ne dépend pas de la somme investie.",
     "en": "The capital cancels — the time does not depend on the amount invested."
   },
+  "O carrinho pesa também, e é um peso só dele, não por caixa.": {
+    "fr": "Le chariot pèse lui aussi, et c’est un poids qui lui est propre, pas un poids par caisse.",
+    "en": "The cart weighs something too, and it is a weight of its own, not per box."
+  },
   "O cateto adjacente se relaciona com a hipotenusa pelo cosseno.": {
     "fr": "La cathète adjacente se relie à l’hypoténuse par le cosinus.",
     "en": "The adjacent leg relates to the hypotenuse through the cosine."
@@ -13038,6 +13146,22 @@
   "O coeficiente de x foi multiplicado por # (de # para #).": {
     "fr": "Le coefficient de x a été multiplié par # (de # à #).",
     "en": "The coefficient of x was multiplied by # (from # to #)."
+  },
+  "O coeficiente de x é #: ao dividir por ele, o sentido se inverte. Na reta, a solução é (#; +∞).": {
+    "fr": "Le coefficient de x vaut # : en divisant par lui, le sens s’inverse. Sur la droite, la solution est (# ; +∞).",
+    "en": "The coefficient of x is #: dividing by it reverses the direction. On the line, the solution is (#, +∞)."
+  },
+  "O coeficiente de x é #: ao dividir por ele, o sentido se inverte. Na reta, a solução é (-∞; #).": {
+    "fr": "Le coefficient de x vaut # : en divisant par lui, le sens s’inverse. Sur la droite, la solution est (-∞ ; #).",
+    "en": "The coefficient of x is #: dividing by it reverses the direction. On the line, the solution is (-∞, #)."
+  },
+  "O coeficiente de x é #: ao dividir por ele, o sentido se inverte. Na reta, a solução é (-∞; #].": {
+    "fr": "Le coefficient de x vaut # : en divisant par lui, le sens s’inverse. Sur la droite, la solution est (-∞ ; #].",
+    "en": "The coefficient of x is #: dividing by it reverses the direction. On the line, the solution is (-∞, #]."
+  },
+  "O coeficiente de x é #: ao dividir por ele, o sentido se inverte. Na reta, a solução é [#; +∞).": {
+    "fr": "Le coefficient de x vaut # : en divisant par lui, le sens s’inverse. Sur la droite, la solution est [# ; +∞).",
+    "en": "The coefficient of x is #: dividing by it reverses the direction. On the line, the solution is [#, +∞)."
   },
   "O coeficiente de x é o pedido.": {
     "fr": "Le coefficient de x est ce qui est demandé.",
@@ -13335,6 +13459,10 @@
     "fr": "La divergence.",
     "en": "The divergence."
   },
+  "O divisor tem grau #, então o resto é um número — não sobra nenhum x nele.": {
+    "fr": "Le diviseur est de degré #, donc le reste est un nombre — il n’y reste aucun x.",
+    "en": "The divisor has degree #, so the remainder is a number — no x is left in it."
+  },
   "O dobro de operários leva metade do tempo: o produto operários × tempo é constante.": {
     "fr": "Deux fois plus d’ouvriers prennent moitié moins de temps : le produit ouvriers × temps est constant.",
     "en": "Twice the workers take half the time: the product workers × time is constant."
@@ -13602,6 +13730,10 @@
   "O foguete acelera expelindo massa: é conservação de momento linear.": {
     "fr": "La fusée accélère en expulsant de la masse : c'est la conservation du moment linéaire.",
     "en": "The rocket accelerates by expelling mass: it is conservation of linear momentum."
+  },
+  "O frete é cobrado uma vez, não por caderno. Monte: (preço)·x + frete ≤ orçamento.": {
+    "fr": "Les frais de port sont facturés une seule fois, pas par cahier. Écrivez : (prix)·x + frais ≤ budget.",
+    "en": "The shipping is charged once, not per notebook. Set up: (price)·x + shipping ≤ budget."
   },
   "O fundamental de cada corda.": {
     "fr": "Le fondamental de chaque corde.",
@@ -14035,6 +14167,10 @@
     "fr": "Le nombre fractionnaire devient une fraction impropre : l’entier multiplie le dénominateur et le numérateur s’y ajoute.",
     "en": "The mixed number becomes an improper fraction: the whole part multiplies the denominator and the numerator is added to it."
   },
+  "O número vai entre parênteses: é ele inteiro que é elevado, sinal incluído.": {
+    "fr": "Le nombre se met entre parenthèses : c’est lui en entier qui est élevé à la puissance, signe compris.",
+    "en": "The number goes in brackets: it is the whole of it that is raised to the power, sign included."
+  },
   "O número é grande porque a unidade de massa é pequena, não por capricho.": {
     "fr": "Le nombre est grand parce que l’unité de masse est petite, et non par caprice.",
     "en": "The number is large because the unit of mass is small, not out of whim."
@@ -14359,6 +14495,10 @@
     "fr": "Ce qui passe au carré, c’est le RAYON, et non le taux : dV/dt = #πr²·(dr/dt).",
     "en": "What gets squared is the RADIUS, not the rate: dV/dt = #πr²·(dr/dt)."
   },
+  "O quociente tem grau menor que o dividendo: dividir por algo de grau # derruba # grau(s).": {
+    "fr": "Le quotient est de degré inférieur au dividende : diviser par quelque chose de degré # fait perdre # degré(s).",
+    "en": "The quotient has lower degree than the dividend: dividing by something of degree # drops # degree(s)."
+  },
   "O raio da órbita é medido do CENTRO: some o raio da Terra (# km) aos # km. Depois T = #π·r/v, com v = √(GM/r).": {
     "fr": "Le rayon de l'orbite est mesuré depuis le CENTRE : ajoutez le rayon de la Terre (# km) aux # km. Ensuite T = #π·r/v, avec v = √(GM/r).",
     "en": "The orbital radius is measured from the CENTRE: add the Earth’s radius (# km) to the # km. Then T = #π·r/v, with v = √(GM/r)."
@@ -14407,6 +14547,10 @@
     "fr": "Le reste a déjà un degré plus petit que le diviseur, donc la division s’arrête.",
     "en": "The remainder already has a lower degree than the divisor, so the division ends."
   },
+  "O resto não interfere: ele tem grau menor que o divisor.": {
+    "fr": "Le reste n’intervient pas : il est de degré inférieur au diviseur.",
+    "en": "The remainder does not interfere: its degree is lower than the divisor’s."
+  },
   "O resto tem a cara do termo seguinte da série, com M no lugar da derivada.": {
     "fr": "Le reste a la forme du terme suivant de la série, avec M à la place de la dérivée.",
     "en": "The remainder has the shape of the next term of the series, with M in place of the derivative."
@@ -14414,6 +14558,10 @@
   "O resto usa a ordem SEGUINTE: expoente # e fatorial de #. Usar a própria ordem do polinômio superestima bastante o erro.": {
     "fr": "Le reste utilise l’ordre SUIVANT : exposant # et factorielle de #. Utiliser l’ordre du polynôme lui-même surestime nettement l’erreur.",
     "en": "The remainder uses the NEXT order: exponent # and factorial of #. Using the polynomial’s own order overestimates the error considerably."
+  },
+  "O resto é zero: o divisor é um fator exato do dividendo.": {
+    "fr": "Le reste est nul : le diviseur est un facteur exact du dividende.",
+    "en": "The remainder is zero: the divisor is an exact factor of the dividend."
   },
   "O resultado está em porcentagem. O enunciado pede a proporção, entre # e #.": {
     "fr": "Le résultat est en pourcentage. L’énoncé demande la proportion, entre # et #.",
@@ -14539,6 +14687,18 @@
     "fr": "Le sens de la conversion est inversé : passer à une unité plus petite augmente le nombre.",
     "en": "The direction of the conversion is reversed: switching to a smaller unit increases the number."
   },
+  "O sentido da desigualdade foi trocado sem motivo: o coeficiente de x é positivo, então ele se mantém do começo ao fim.": {
+    "fr": "Le sens de l’inégalité a été inversé sans raison : le coefficient de x est positif, il reste donc le même du début à la fin.",
+    "en": "The direction of the inequality was flipped for no reason: the coefficient of x is positive, so it stays the same throughout."
+  },
+  "O sentido está certo, mas o sinal da fronteira não. Confira a divisão pelo coeficiente de x.": {
+    "fr": "Le sens est correct, mais le signe de la borne ne l’est pas. Vérifiez la division par le coefficient de x.",
+    "en": "The direction is right, but the sign of the boundary is not. Check the division by the coefficient of x."
+  },
+  "O sentido está trocado, e aqui o coeficiente de x é POSITIVO: nada justifica inverter. Confira se você leu «no máximo» como «pelo menos», ou «acima de» como «abaixo de».": {
+    "fr": "Le sens est inversé, et ici le coefficient de x est POSITIF : rien ne justifie de l’inverser. Vérifiez si vous avez lu « au plus » comme « au moins », ou « au-dessus de » comme « en dessous de ».",
+    "en": "The direction is flipped, and here the coefficient of x is POSITIVE: nothing justifies reversing it. Check whether you read “at most” as “at least”, or “above” as “below”."
+  },
   "O setor é a fração #/# do círculo inteiro: calcule π · #² e multiplique por essa fração.": {
     "fr": "Le secteur est la fraction #/# du cercle entier : calculez π · #² et multipliez par cette fraction.",
     "en": "The sector is the fraction #/# of the whole circle: compute π · #² and multiply by that fraction."
@@ -14578,6 +14738,10 @@
   "O sinal de W: positivo quando o gás EXPANDE, empurrando o pistão.": {
     "fr": "Le signe de W : positif quand le gaz SE DILATE, en poussant le piston.",
     "en": "The sign of W: positive when the gas EXPANDS, pushing the piston."
+  },
+  "O sinal de a ficou trocado. Dividir por (x − a) pede P(a): o valor que ANULA o binômio, não o que aparece escrito nele.": {
+    "fr": "Le signe de a est inversé. Diviser par (x − a) demande P(a) : la valeur qui ANNULE le binôme, pas celle qui y est écrite.",
+    "en": "The sign of a is flipped. Dividing by (x − a) calls for P(a): the value that makes the binomial VANISH, not the one written in it."
   },
   "O sinal de cada fator em cada pedaço da reta (à direita do zero, o sinal do coeficiente de x).": {
     "fr": "Le signe de chaque facteur sur chaque morceau de la droite (à droite du zéro, le signe du coefficient de x).",
@@ -14642,6 +14806,10 @@
   "O sinal está invertido. No fator (x − r), a raiz é +r, porque é esse valor que faz o fator valer zero. Confira substituindo de volta.": {
     "fr": "Le signe est inversé. Dans le facteur (x − r), la racine est +r, car c’est cette valeur qui annule le facteur. Vérifiez en remplaçant.",
     "en": "The sign is flipped. In the factor (x − r), the root is +r, because that is the value making the factor zero. Check by substituting back."
+  },
+  "O sinal está invertido: a raiz é o valor que ANULA o polinômio. Num fator (x − a), a raiz é a, não −a.": {
+    "fr": "Le signe est inversé : la racine est la valeur qui ANNULE le polynôme. Dans un facteur (x − a), la racine est a, pas −a.",
+    "en": "The sign is flipped: the root is the value that makes the polynomial VANISH. In a factor (x − a), the root is a, not −a."
   },
   "O sinal está invertido: o fator (#x + #) zera no número de sinal contrário ao que está dentro dele.": {
     "fr": "Le facteur (#x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
@@ -14802,6 +14970,10 @@
   "O símbolo pede tudo o que está em A ou em B.": {
     "fr": "Le symbole demande tout ce qui est dans A ou dans B.",
     "en": "The symbol asks for everything in A or in B."
+  },
+  "O tanque PERDE água, então o coeficiente de x é negativo. «Pelo menos» vira ≥, mas não inverta o sentido duas vezes.": {
+    "fr": "Le réservoir PERD de l’eau, donc le coefficient de x est négatif. « Au moins » devient ≥, mais n’inversez pas le sens deux fois.",
+    "en": "The tank LOSES water, so the coefficient of x is negative. “At least” becomes ≥, but do not reverse the direction twice."
   },
   "O tempo de travessia sai só da componente que atravessa.": {
     "fr": "Le temps de traversée ne vient que de la composante qui traverse.",
@@ -16723,6 +16895,10 @@
     "fr": "Remplissez dans l’ordre de l’ÉNERGIE, et non des numéros : le #s vient avant le #d. Une sous-couche vide vaut zéro, et c’est aussi une réponse.",
     "en": "Fill in order of ENERGY, not of numbers: the #s comes before the #d. An empty subshell holds zero, and that is an answer too."
   },
+  "Prejuízo é lucro NEGATIVO: (margem)·x − custo fixo < #. O custo fixo entra subtraindo.": {
+    "fr": "Une perte est un bénéfice NÉGATIF : (marge)·x − coût fixe < #. Le coût fixe entre en soustraction.",
+    "en": "A loss is NEGATIVE profit: (margin)·x − fixed cost < #. The fixed cost enters subtracting."
+  },
   "Pressão é força por área.": {
     "fr": "La pression est la force par aire.",
     "en": "Pressure is force per area."
@@ -17279,6 +17455,14 @@
     "fr": "En résolvant.",
     "en": "Solving."
   },
+  "Resto zero: x + # é fator, e # é raiz.": {
+    "fr": "Reste nul : x + # est un facteur, et # est une racine.",
+    "en": "Zero remainder: x + # is a factor, and # is a root."
+  },
+  "Resto zero: x - # é fator, e # é raiz.": {
+    "fr": "Reste nul : x - # est un facteur, et # est une racine.",
+    "en": "Zero remainder: x - # is a factor, and # is a root."
+  },
   "Resultado de Arquimedes, que pediu para gravá-lo em seu túmulo.": {
     "fr": "Résultat d’Archimède, qui demanda qu’on le grave sur sa tombe.",
     "en": "Archimedes’ result, which he asked to have carved on his tomb."
@@ -17374,6 +17558,10 @@
   "Segundo trecho: a proporção da equação age sobre a quantidade.": {
     "fr": "Deuxième segment : la proportion de l’équation agit sur la quantité de matière.",
     "en": "Second leg: the proportion from the equation acts on the amount of substance."
+  },
+  "Seja qual for Q, multiplicado por zero some. Sobra só o resto.": {
+    "fr": "Quel que soit Q, multiplié par zéro il disparaît. Il ne reste que le reste.",
+    "en": "Whatever Q is, multiplied by zero it vanishes. Only the remainder is left."
   },
   "Sem atrito, a energia mecânica total se conserva.": {
     "fr": "Sans frottement, l'énergie mécanique totale se conserve.",
@@ -17754,6 +17942,10 @@
   "Somar os dois números não é a relação. Arestas entram com sinal de menos: V − A + F = #.": {
     "fr": "Additionner les deux nombres n’est pas la relation. Les arêtes entrent avec un signe moins : V − A + F = #.",
     "en": "Adding the two numbers is not the formula. Edges come in with a minus sign: V − E + F = #."
+  },
+  "Somar os graus é o que acontece na MULTIPLICAÇÃO. Na divisão, eles se subtraem.": {
+    "fr": "Additionner les degrés est ce qui se passe dans la MULTIPLICATION. Dans la division, ils se soustraient.",
+    "en": "Adding degrees is what happens in MULTIPLICATION. In division they subtract."
   },
   "Somar os módulos só vale se as duas forças apontam para o mesmo lado. Veja o sentido de cada uma.": {
     "fr": "Additionner les normes n’est valable que si les deux forces pointent du même côté. Regardez le sens de chacune.",
@@ -19087,6 +19279,10 @@
     "fr": "Une ligne suffit : les deux sont proportionnelles, et c’est ce qui donne une solution au système.",
     "en": "One row is enough: the two are proportional, and that is what gives the system a solution."
   },
+  "Uma lista curta para testar, em vez de tentar números ao acaso.": {
+    "fr": "Une courte liste à tester, au lieu d’essayer des nombres au hasard.",
+    "en": "A short list to test, instead of trying numbers at random."
+  },
   "Uma soma de quadrados pede a tangente.": {
     "fr": "Une somme de carrés appelle la tangente.",
     "en": "A sum of squares calls for the tangent."
@@ -19202,6 +19398,10 @@
   "Vale para toda soma ou diferença de cubos: o fator do #º grau não tem raiz real.": {
     "fr": "Cela vaut pour toute somme ou différence de cubes : le facteur de degré # n’a pas de racine réelle.",
     "en": "It holds for every sum or difference of cubes: the degree-# factor has no real root."
+  },
+  "Vale sempre P(x) = Q(x)·D(x) + R(x).": {
+    "fr": "On a toujours P(x) = Q(x)·D(x) + R(x).",
+    "en": "It always holds that P(x) = Q(x)·D(x) + R(x)."
   },
   "Valor médio = área dividida pela largura do intervalo (#). A área aqui é um trapézio.": {
     "fr": "Valeur moyenne = aire divisée par la largeur de l’intervalle (#). L’aire ici est un trapèze.",
@@ -19374,6 +19574,14 @@
   "Você parou no valor do logaritmo. Falta aplicar a exponencial para obter a razão de massas.": {
     "fr": "Vous vous êtes arrêté à la valeur du logarithme. Il reste à appliquer l’exponentielle pour obtenir le rapport de masses.",
     "en": "You stopped at the value of the logarithm. You still have to apply the exponential to get the mass ratio."
+  },
+  "Você somou # em vez de subtrair ao isolar o termo com x. A operação precisa DESFAZER o que está escrito na inequação.": {
+    "fr": "Vous avez ajouté # au lieu de soustraire en isolant le terme en x. L’opération doit DÉFAIRE ce qui est écrit dans l’inégalité.",
+    "en": "You added # instead of subtracting when isolating the term with x. The operation has to UNDO what is written in the inequality."
+  },
+  "Você somou # em vez de subtrair ao isolar x. O termo que está somando de um lado passa SUBTRAINDO do outro — a operação precisa desfazer o que está escrito.": {
+    "fr": "Vous avez ajouté # au lieu de soustraire en isolant x. Le terme qui s’ajoute d’un côté passe en SOUSTRAYANT de l’autre — l’opération doit défaire ce qui est écrit.",
+    "en": "You added # instead of subtracting when isolating x. A term that is added on one side moves across SUBTRACTING on the other — the operation has to undo what is written."
   },
   "Você somou a carga. Carga positiva é elétron que FALTA: ela entra subtraindo.": {
     "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
@@ -20247,6 +20455,10 @@
     "fr": "|ε| = N·ΔΦ/Δt, avec ΔΦ = (# − #)·#×#⁻⁴ Wb. Multipliez par # et divisez par # s.",
     "en": "|ε| = N·ΔΦ/Δt, with ΔΦ = (# − #)·#×#⁻⁴ Wb. Multiply by # and divide by # s."
   },
+  "«Acima de zero» é estrito: > e não ≥. A temperatura CHEGA a zero exatamente na fronteira, e ali já não está acima.": {
+    "fr": "« Au-dessus de zéro » est strict : > et non ≥. La température ATTEINT zéro exactement à la borne, et là elle n’est plus au-dessus.",
+    "en": "“Above zero” is strict: > and not ≥. The temperature REACHES zero exactly at the boundary, and there it is no longer above."
+  },
   "«Existe» é ∃: ∃x ∈ conjunto tal que a condição vale.": {
     "fr": "« Il existe » s’écrit ∃ : ∃x ∈ ensemble tel que la condition soit vraie.",
     "en": "“There exists” is ∃: ∃x ∈ set such that the condition holds."
@@ -20254,6 +20466,10 @@
   "«Para todo» é ∀; depois vem o conjunto e a condição: ∀x ∈ conjunto, condição.": {
     "fr": "« Pour tout » s’écrit ∀ ; viennent ensuite l’ensemble et la condition : ∀x ∈ ensemble, condition.",
     "en": "“For all” is ∀; then come the set and the condition: ∀x ∈ set, condition."
+  },
+  "«Pelo menos» vira ≥. O salário fixo é somado uma vez, não por venda.": {
+    "fr": "« Au moins » devient ≥. Le salaire fixe s’ajoute une seule fois, pas par vente.",
+    "en": "“At least” becomes ≥. The fixed salary is added once, not per sale."
   },
   "«Pertence» é ∈, e o conjunto vem depois: número ∈ ℕ.": {
     "fr": "« Appartient » s’écrit ∈, et l’ensemble vient après : nombre ∈ ℕ.",
