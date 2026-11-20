@@ -807,6 +807,10 @@
     "fr": "Le courant, par Ohm.",
     "en": "The current, by Ohm."
   },
+  "A correção é o fator γ = #/√(# − β²), não a velocidade.": {
+    "fr": "La correction est le facteur γ = #/√(# − β²), pas la vitesse.",
+    "en": "The correction is the factor γ = #/√(# − β²), not the speed."
+  },
   "A cota é sempre generosa: o erro real costuma ser bem menor que ela.": {
     "fr": "La borne est toujours généreuse : l’erreur réelle est en général bien plus petite.",
     "en": "The bound is always generous: the real error is usually much smaller."
@@ -1519,6 +1523,10 @@
     "fr": "La fonction n'atteint jamais zéro : l'axe x est une asymptote horizontale.",
     "en": "The function never reaches zero: the x-axis is a horizontal asymptote."
   },
+  "A função trabalho é o CUSTO de arrancar o elétron: ela se subtrai da energia do fóton.": {
+    "fr": "Le travail d’extraction est le COÛT pour arracher l’électron : il se soustrait de l’énergie du photon.",
+    "en": "The work function is the COST of tearing the electron out: it is subtracted from the photon’s energy."
+  },
   "A função é contínua aqui — substitua direto.": {
     "fr": "La fonction est continue ici — substituez directement.",
     "en": "The function is continuous here — substitute directly."
@@ -2103,6 +2111,10 @@
     "fr": "L’ordre compte : f(g(x)) est en général différent de g(f(x)).",
     "en": "Order matters: f(g(x)) is usually different from g(f(x))."
   },
+  "A ordem importa: trocar duas escolhas de lugar produz um arranjo diferente.": {
+    "fr": "L’ordre compte : échanger deux choix produit un arrangement différent.",
+    "en": "Order matters: swapping two choices produces a different arrangement."
+  },
   "A ordem é: parênteses, depois potências, depois multiplicação e divisão, e por fim adição e subtração.": {
     "fr": "L’ordre est : parenthèses, puis puissances, puis multiplication et division, et enfin addition et soustraction.",
     "en": "The order is: brackets, then powers, then multiplication and division, and finally addition and subtraction."
@@ -2611,6 +2623,10 @@
     "fr": "Le rapport de masses entre dans un LOGARITHME, il ne multiplie pas. C’est précisément ce qui rend le delta-v si coûteux.",
     "en": "The mass ratio goes inside a LOGARITHM, it does not multiply. That is exactly what makes delta-v so expensive."
   },
+  "A razão dos tempos é γ = #. Isole β em γ = #/√(# − β²): β = √(# − #/γ²).": {
+    "fr": "Le rapport des temps vaut γ = #. Isolez β dans γ = #/√(# − β²) : β = √(# − #/γ²).",
+    "en": "The ratio of the times is γ = #. Isolate β in γ = #/√(# − β²): β = √(# − #/γ²)."
+  },
   "A razão entre a intensidade e a de referência.": {
     "fr": "Le rapport entre l’intensité et celle de référence.",
     "en": "The ratio between the intensity and the reference one."
@@ -2707,6 +2723,10 @@
     "fr": "Le rapport est inversé. Le coefficient directeur est Δy sur Δx — la variation VERTICALE divisée par l’horizontale.",
     "en": "The ratio is upside down. The slope is Δy over Δx — the VERTICAL change divided by the horizontal one."
   },
+  "A razão está invertida: E = hc/λ. Comprimento de onda maior significa fóton MENOS energético.": {
+    "fr": "Le rapport est inversé : E = hc/λ. Une longueur d’onde plus grande signifie un photon MOINS énergétique.",
+    "en": "The ratio is upside down: E = hc/λ. A longer wavelength means a LESS energetic photon."
+  },
   "A razão está invertida: a tangente é a componente VERTICAL sobre a horizontal.": {
     "fr": "Le rapport est inversé : la tangente est la composante VERTICALE sur l’horizontale.",
     "en": "The ratio is upside down: the tangent is the VERTICAL component over the horizontal one."
@@ -2726,6 +2746,10 @@
   "A razão está invertida: é o coeficiente líder de cima dividido pelo de baixo, na mesma ordem em que a fração está escrita.": {
     "fr": "Le rapport est inversé : c’est le coefficient dominant du haut divisé par celui du bas, dans l’ordre où la fraction est écrite.",
     "en": "The ratio is upside down: it is the leading coefficient on top divided by the one below, in the order the fraction is written."
+  },
+  "A razão está invertida: λc = hc/φ = #/φ.": {
+    "fr": "Le rapport est inversé : λc = hc/φ = #/φ.",
+    "en": "The ratio is upside down: λc = hc/φ = #/φ."
   },
   "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
@@ -3243,6 +3267,10 @@
     "fr": "La vitesse tangentielle est l’angulaire multipliée par le rayon.",
     "en": "Tangential speed is the angular one multiplied by the radius."
   },
+  "A velocidade é # × #⁶ m/s: sem o #⁶ o momento sai um milhão de vezes menor.": {
+    "fr": "La vitesse vaut # × #⁶ m/s : sans le #⁶ la quantité de mouvement sort un million de fois plus petite.",
+    "en": "The speed is # × #⁶ m/s: without the #⁶ the momentum comes out a million times too small."
+  },
   "A velocidade é a taxa de variação da posição: derivamos uma vez.": {
     "fr": "La vitesse est le taux de variation de la position : on dérive une fois.",
     "en": "Velocity is the rate of change of position: we differentiate once."
@@ -3471,6 +3499,10 @@
     "fr": "Trouvez p′ par #/p′ = #/f − #/p ; puis h′ = −(p′/p)·h.",
     "en": "Find p′ from #/p′ = #/f − #/p; then h′ = −(p′/p)·h."
   },
+  "Ache γ = #/√(# − #²) e multiplique o tempo próprio por ele: quem vê o relógio passar mede MAIS tempo.": {
+    "fr": "Trouvez γ = #/√(# − #²) et multipliez le temps propre par ce facteur : celui qui voit passer l’horloge mesure PLUS de temps.",
+    "en": "Find γ = #/√(# − #²) and multiply the proper time by it: whoever watches the clock go by measures MORE time."
+  },
   "Acima de #, a ligação se trata como iônica.": {
     "fr": "Au-dessus de #, la liaison est traitée comme ionique.",
     "en": "Above #, the bond is treated as ionic."
@@ -3586,6 +3618,10 @@
   "Ampliar k vezes multiplica a área por k², nunca por k.": {
     "fr": "Agrandir k fois multiplie l’aire par k², jamais par k.",
     "en": "Scaling up k times multiplies the area by k², never by k."
+  },
+  "Anagrama é reordenação das mesmas letras, então a contagem é um fatorial ajustado, não uma potência.": {
+    "fr": "Un anagramme est une réorganisation des mêmes lettres : le dénombrement est donc une factorielle ajustée, pas une puissance.",
+    "en": "An anagram is a rearrangement of the same letters, so the count is an adjusted factorial, not a power."
   },
   "Andando o contorno inteiro, cada vértice faz você girar um ângulo externo — e no fim você está olhando para o mesmo lado do começo.": {
     "fr": "En parcourant tout le contour, chaque sommet vous fait tourner d’un angle extérieur — et à la fin vous regardez du même côté qu’au départ.",
@@ -3927,6 +3963,10 @@
     "fr": "Les deux dérivées se SOUSTRAIENT : ∂Q/∂x MOINS ∂P/∂y.",
     "en": "The two derivatives are SUBTRACTED: ∂Q/∂x MINUS ∂P/∂y."
   },
+  "As duas escolhas são independentes, então os totais se multiplicam.": {
+    "fr": "Les deux choix sont indépendants, donc les totaux se multiplient.",
+    "en": "The two choices are independent, so the totals multiply."
+  },
   "As duas expressões foram somadas. Numa função por partes só UMA delas vale em cada ponto — elas não se somam, elas se revezam.": {
     "fr": "Les deux expressions ont été additionnées. Dans une fonction définie par morceaux, une SEULE vaut en chaque point — elles ne s’additionnent pas, elles se relaient.",
     "en": "The two expressions were added. In a piecewise function only ONE of them holds at each point — they do not add, they take turns."
@@ -4094,6 +4134,10 @@
   "As três derivadas parciais.": {
     "fr": "Les trois dérivées partielles.",
     "en": "The three partial derivatives."
+  },
+  "As três escolhas são independentes: nenhuma limita as outras.": {
+    "fr": "Les trois choix sont indépendants : aucun ne limite les autres.",
+    "en": "The three choices are independent: none limits the others."
   },
   "As áreas foram somadas. Para recortar um pedaço de outro, subtrai-se — somar conta a parte de baixo duas vezes.": {
     "fr": "Les aires ont été additionnées. Pour découper un morceau dans un autre, on soustrait — additionner compte deux fois la partie du bas.",
@@ -4458,6 +4502,10 @@
   "Cada grupo de quatro é uma volta completa: multiplicar por i é girar #°.": {
     "fr": "Chaque groupe de quatre est un tour complet : multiplier par i, c’est tourner de #°.",
     "en": "Each group of four is a full turn: multiplying by i is a #° rotation."
+  },
+  "Cada grupo é escolhido separadamente, sem ordem.": {
+    "fr": "Chaque groupe est choisi séparément, sans ordre.",
+    "en": "Each group is chosen separately, without order."
   },
   "Cada gás contribui com essa fração da pressão total.": {
     "fr": "Chaque gaz contribue par cette fraction de la pression totale.",
@@ -5335,6 +5383,10 @@
     "fr": "Avec le numérateur un degré au-dessus, l'asymptote est une droite inclinée.",
     "en": "With the numerator one degree higher, the asymptote is a slanted line."
   },
+  "Com ordem: # opções para a #ª posição, # para a #ª, e assim por # posições.": {
+    "fr": "Avec ordre : # possibilités pour la #ᵉ position, # pour la #ᵉ, et ainsi de suite sur # positions.",
+    "en": "With order: # options for position #, # for position #, and so on for # positions."
+  },
   "Com p = # > # a p-série converge; só diverge quando p ≤ #.": {
     "fr": "Avec p = # > #, la série de Riemann converge ; elle ne diverge que si p ≤ #.",
     "en": "With p = # > # the p-series converges; it only diverges when p ≤ #."
@@ -5442,6 +5494,10 @@
   "Combinando em quadratura e voltando à incerteza absoluta.": {
     "fr": "En combinant en quadrature et en revenant à l'incertitude absolue.",
     "en": "Combining in quadrature and returning to absolute uncertainty."
+  },
+  "Combinação dentro de cada grupo, multiplicação entre os grupos.": {
+    "fr": "Combinaison à l’intérieur de chaque groupe, multiplication entre les groupes.",
+    "en": "Combination within each group, multiplication between the groups."
   },
   "Combustível: #% da massa inicial. Como o ganho é logarítmico, cada km/s extra custa muito mais que o anterior — e é por isso que foguetes têm estágios.": {
     "fr": "Carburant : #% de la masse initiale. Comme le gain est logarithmique, chaque km/s supplémentaire coûte bien plus que le précédent — et c’est pourquoi les fusées ont des étages.",
@@ -7055,6 +7111,10 @@
     "fr": "On peut le voir avec un cube partagé en trois pyramides égales.",
     "en": "You can build it from a cube split into three equal pyramids."
   },
+  "E = hc/λ, e hc vale # eV·nm: divida # por #.": {
+    "fr": "E = hc/λ, et hc vaut # eV·nm : divisez # par #.",
+    "en": "E = hc/λ, and hc is # eV·nm: divide # by #."
+  },
   "E = k·|q|/r²: #×#⁻⁶ vezes #×#⁹, dividido por (#)². Depois divida por # para kN/C.": {
     "fr": "E = k·|q|/r² : #×#⁻⁶ fois #×#⁹, divisé par (#)². Divisez ensuite par # pour des kN/C.",
     "en": "E = k·|q|/r²: #×#⁻⁶ times #×#⁹, divided by (#)². Then divide by # for kN/C."
@@ -8119,6 +8179,10 @@
     "fr": "Nous trouvons une primitive de l’intégrande.",
     "en": "We find an antiderivative of the integrand."
   },
+  "Energia do fóton: #/# eV. Tire dela a função trabalho, # eV.": {
+    "fr": "Énergie du photon : #/# eV. Retirez-en le travail d’extraction, # eV.",
+    "en": "Photon energy: #/# eV. Subtract the work function, # eV, from it."
+  },
   "Energia interna aumentou: o gás esquentou.": {
     "fr": "L'énergie interne a augmenté : le gaz s'est réchauffé.",
     "en": "The internal energy increased: the gas warmed up."
@@ -8214,6 +8278,10 @@
   "Escapar significa chegar ao infinito com velocidade nula.": {
     "fr": "S'échapper signifie atteindre l'infini avec une vitesse nulle.",
     "en": "To escape means to reach infinity with zero velocity."
+  },
+  "Escolha cada grupo à parte — C(#, #) e C(#, #) — e multiplique.": {
+    "fr": "Choisissez chaque groupe à part — C(#, #) et C(#, #) — puis multipliez.",
+    "en": "Choose each group separately — C(#, #) and C(#, #) — then multiply."
   },
   "Escolhas independentes multiplicam: opções da primeira × opções da segunda × …": {
     "fr": "Les choix indépendants se multiplient : options de la première × options de la seconde × …",
@@ -8543,6 +8611,14 @@
     "fr": "En écrivant chaque terme avec la température finale commune.",
     "en": "Writing each term with the common final temperature."
   },
+  "Escrito com fatoriais, é o mesmo que cortar as escolhas que não foram feitas.": {
+    "fr": "Écrit avec des factorielles, cela revient à supprimer les choix qui n’ont pas été faits.",
+    "en": "Written with factorials, it amounts to cancelling the choices that were not made."
+  },
+  "Essa contagem permitiria repetir pessoas. Sem reposição, cada posição tem uma opção menos que a anterior.": {
+    "fr": "Ce dénombrement permettrait de répéter des personnes. Sans remise, chaque position a une possibilité de moins que la précédente.",
+    "en": "That count would allow repeating people. Without replacement, each position has one option fewer than the one before."
+  },
   "Essa dimensão aparece sim. Expoente zero significaria independência dela.": {
     "fr": "Cette dimension apparaît bel et bien. Un exposant nul signifierait qu’elle n’intervient pas.",
     "en": "That dimension does appear. A zero exponent would mean it plays no part."
@@ -8566,6 +8642,10 @@
   "Essa é a ALTURA relativa à hipotenusa, não a projeção do cateto.": {
     "fr": "C’est la HAUTEUR relative à l’hypoténuse, et non la projection de la cathète.",
     "en": "That is the ALTITUDE to the hypotenuse, not the projection of the leg."
+  },
+  "Essa é a COMBINAÇÃO, que ignora a ordem. Numa fila, trocar duas pessoas de lugar produz uma fila diferente — então a ordem conta.": {
+    "fr": "C’est la COMBINAISON, qui ignore l’ordre. Dans une file, échanger deux personnes donne une file différente — l’ordre compte donc.",
+    "en": "That is the COMBINATION, which ignores order. In a queue, swapping two people gives a different queue — so order counts."
   },
   "Essa é a DISTÂNCIA de frenagem, em metros. A pergunta pede um tempo, em segundos.": {
     "fr": "C’est la DISTANCE de freinage, en mètres. La question demande un temps, en secondes.",
@@ -8739,9 +8819,17 @@
     "fr": "C’est l’énergie TOTALE avant la collision. La perte est l’écart entre avant et après.",
     "en": "That is the TOTAL energy before the collision. The loss is the gap between before and after."
   },
+  "Essa é a energia TOTAL, γmc². A cinética desconta a de repouso: (γ − #)mc².": {
+    "fr": "C’est l’énergie TOTALE, γmc². L’énergie cinétique en retire l’énergie de repos : (γ − #)mc².",
+    "en": "That is the TOTAL energy, γmc². The kinetic energy subtracts the rest energy: (γ − #)mc²."
+  },
   "Essa é a energia de rotação, em J. O momento angular não tem o fator um meio nem o quadrado — ele é linear na velocidade angular.": {
     "fr": "C’est l’énergie de rotation, en J. Le moment cinétique n’a ni le facteur un demi ni le carré — il est linéaire en vitesse angulaire.",
     "en": "That is the rotational energy, in J. Angular momentum has neither the factor of one half nor the square — it is linear in the angular velocity."
+  },
+  "Essa é a energia do fóton. O elétron sai com ela menos a função trabalho.": {
+    "fr": "C’est l’énergie du photon. L’électron sort avec cette énergie moins le travail d’extraction.",
+    "en": "That is the photon’s energy. The electron leaves with that minus the work function."
   },
   "Essa é a energia final. O enunciado pede a VARIAÇÃO, que é a diferença entre as duas.": {
     "fr": "C’est l’énergie finale. L’énoncé demande la VARIATION, c’est-à-dire l’écart entre les deux.",
@@ -9119,6 +9207,10 @@
     "fr": "Cette valeur est en kPa ; l’énoncé demande la chute en Pa.",
     "en": "That value is in kPa; the question asks for the drop in Pa."
   },
+  "Esse valor está em metros. A pergunta pede nanômetros: multiplique por #⁹.": {
+    "fr": "Cette valeur est en mètres. La question demande des nanomètres : multipliez par #⁹.",
+    "en": "That value is in metres. The question asks for nanometres: multiply by #⁹."
+  },
   "Esse valor está em m³. A pergunta pede litros (# m³ = # L).": {
     "fr": "Cette valeur est en m³. La question demande des litres (# m³ = # L).",
     "en": "That value is in m³. The question asks for litres (# m³ = # L)."
@@ -9147,6 +9239,10 @@
     "fr": "Cet angle est dans l’image, c’est donc lui.",
     "en": "That angle is inside the range, so it is the one."
   },
+  "Esse é #/γ. O fator de Lorentz é o INVERSO da raiz, e por isso é sempre maior que #.": {
+    "fr": "C’est #/γ. Le facteur de Lorentz est l’INVERSE de la racine, et il est donc toujours supérieur à #.",
+    "en": "That is #/γ. The Lorentz factor is the INVERSE of the root, and so it is always greater than #."
+  },
   "Esse é R². Falta a raiz.": {
     "fr": "C’est R². Il manque la racine.",
     "en": "That is R². The root is missing."
@@ -9162,6 +9258,10 @@
   "Esse é c², não c: falta tirar a raiz quadrada.": {
     "fr": "C’est c², et non c : il reste à prendre la racine carrée.",
     "en": "That is c², not c: taking the square root is still missing."
+  },
+  "Esse é o ARRANJO, que conta a ordem. Sem cargos, a mesma equipe em outra ordem é a mesma equipe: falta dividir por #!.": {
+    "fr": "C’est l’ARRANGEMENT, qui tient compte de l’ordre. Sans postes, la même équipe dans un autre ordre reste la même équipe : il manque la division par #!.",
+    "en": "That is the ARRANGEMENT, which counts order. With no roles, the same team in another order is the same team: the division by #! is missing."
   },
   "Esse é o COMPRIMENTO da circunferência. A área depende de r², não de r.": {
     "fr": "C’est la LONGUEUR du cercle. L’aire dépend de r², et non de r.",
@@ -9839,6 +9939,10 @@
     "fr": "C’est x₁. Ce qui est demandé est x₂ : répétez la formule en partant de x₁.",
     "en": "That is x₁. What is asked for is x₂: repeat the formula starting from x₁."
   },
+  "Esse é β². Falta a raiz quadrada.": {
+    "fr": "C’est β². Il manque la racine carrée.",
+    "en": "That is β². The square root is missing."
+  },
   "Esses são os SUBNÍVEIS ocupados, não as camadas. Uma camada reúne vários subníveis: a camada # tem o #s e o #p.": {
     "fr": "Ce sont les SOUS-COUCHES occupées, et non les couches. Une couche réunit plusieurs sous-couches : la couche # contient le #s et le #p.",
     "en": "Those are the occupied SUBSHELLS, not the shells. A shell gathers several subshells: shell # holds the #s and the #p."
@@ -10107,6 +10211,10 @@
     "fr": "Il manque la racine carrée : v = √(T/μ).",
     "en": "The square root is missing: v = √(T/μ)."
   },
+  "Faltou a raiz quadrada: γ = #/√(# − β²).": {
+    "fr": "Il manque la racine carrée : γ = #/√(# − β²).",
+    "en": "The square root is missing: γ = #/√(# − β²)."
+  },
   "Faltou a segunda solução. A calculadora devolve só uma, dentro de [#°, #°]; na volta inteira o cosseno assume esse valor em DOIS ângulos.": {
     "fr": "Il manque la seconde solution. La calculatrice n’en rend qu’une, dans [#°, #°] ; sur le tour complet, la fonction prend cette valeur en DEUX angles.",
     "en": "The second solution is missing. The calculator returns only one, inside [#°, #°]; over the full turn the function takes that value at TWO angles."
@@ -10302,6 +10410,10 @@
   "Faltou multiplicar pela massa, que são # kg.": {
     "fr": "Il manque la multiplication par la masse, qui vaut # kg.",
     "en": "Multiplying by the mass, which is # kg, is missing."
+  },
+  "Faltou multiplicar pela terceira escolha, os sapatos.": {
+    "fr": "Il manque la multiplication par le troisième choix, les chaussures.",
+    "en": "The multiplication by the third choice, the shoes, is missing."
   },
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
@@ -11387,6 +11499,10 @@
     "fr": "En regroupant, on arrive à la forme polaire.",
     "en": "Combining, we arrive at the polar form."
   },
+  "Juntar todos num só grupo ignora a restrição de quantos vêm de cada lado, e conta comissões que não respeitam o enunciado.": {
+    "fr": "Réunir tout le monde en un seul groupe ignore la contrainte du nombre de membres de chaque côté, et compte des commissions qui ne respectent pas l’énoncé.",
+    "en": "Lumping everyone into one group ignores the constraint on how many come from each side, and counts committees that do not meet the statement."
+  },
   "Junte os dois logs num só: log(x) + log(x + #) = log(x·(x + #)). Depois confira se o x achado deixa os logs com argumento positivo.": {
     "fr": "Réunissez les deux logs en un seul : log(x) + log(x + #) = log(x·(x + #)). Vérifiez ensuite que le x trouvé laisse les logs avec un argument positif.",
     "en": "Put the two logs into one: log(x) + log(x + #) = log(x·(x + #)). Then check that the x you found keeps the logs with a positive argument."
@@ -11394,6 +11510,10 @@
   "Já está isolado.": {
     "fr": "C’est déjà isolé.",
     "en": "It is already isolated."
+  },
+  "K = (γ − #)·# keV, com γ = #/√(# − #²). Não use ½mv²: a velocidade é relativística.": {
+    "fr": "K = (γ − #)·# keV, avec γ = #/√(# − #²). N’utilisez pas ½mv² : la vitesse est relativiste.",
+    "en": "K = (γ − #)·# keV, with γ = #/√(# − #²). Do not use ½mv²: the speed is relativistic."
   },
   "K neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "K neutre a # électrons, autant que de protons.",
@@ -11406,6 +11526,10 @@
   "Kirchhoff dos nós no nó de cima, com potencial V: o que chega pelos ramos das fontes sai por R₃.": {
     "fr": "Kirchhoff des nœuds au nœud du haut, de potentiel V : ce qui arrive par les branches des sources sort par R₃.",
     "en": "Kirchhoff’s node law at the top node, at potential V: what comes in through the source branches goes out through R₃."
+  },
+  "L = L₀/γ: ache γ = #/√(# − #²) e divida # m por ele.": {
+    "fr": "L = L₀/γ : trouvez γ = #/√(# − #²) et divisez # m par ce facteur.",
+    "en": "L = L₀/γ: find γ = #/√(# − #²) and divide # m by it."
   },
   "L = m·v·r·sen θ: com o ângulo de #°, o braço é a própria distância de # m.": {
     "fr": "L = m·v·r·sin θ : avec l’angle de #°, le bras est la distance elle-même, de # m.",
@@ -11551,6 +11675,10 @@
     "fr": "Lentille divergente : f = −# cm. Utilisez #/p′ = #/f − #/p.",
     "en": "Diverging lens: f = −# cm. Use #/p′ = #/f − #/p."
   },
+  "Letras repetidas não geram anagramas novos ao trocarem de lugar. É preciso dividir pelo fatorial de cada grupo de letras iguais.": {
+    "fr": "Des lettres répétées ne créent pas de nouveaux anagrammes en changeant de place. Il faut diviser par la factorielle de chaque groupe de lettres identiques.",
+    "en": "Repeated letters do not create new anagrams when they change places. You must divide by the factorial of each group of identical letters."
+  },
   "Li neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Li neutre a # électrons, autant que de protons.",
     "en": "Neutral Li has # electrons, as many as protons."
@@ -11666,6 +11794,10 @@
   "Mais área e mais diferença aumentam o fluxo; mais espessura o reduz.": {
     "fr": "Plus d’aire et plus d’écart augmentent le flux ; plus d’épaisseur le réduit.",
     "en": "More area and more difference raise the flux; more thickness lowers it."
+  },
+  "Mas cada grupo foi contado #! vezes, uma para cada ordem possível.": {
+    "fr": "Mais chaque groupe a été compté #! fois, une fois par ordre possible.",
+    "en": "But each group was counted #! times, once for every possible order."
   },
   "Mas esse x está fora da faixa observada.": {
     "fr": "Mais ce x se trouve hors de la plage observée.",
@@ -12014,6 +12146,10 @@
   "Multiplicar grandezas soma os expoentes de cada dimensão.": {
     "fr": "Multiplier des grandeurs additionne les exposants de chaque dimension.",
     "en": "Multiplying quantities adds the exponents of each dimension."
+  },
+  "Multiplicar n por p não conta subconjuntos. A contagem passa por arranjos e depois descarta as ordens repetidas.": {
+    "fr": "Multiplier n par p ne compte pas des sous-ensembles. Le dénombrement passe par les arrangements puis écarte les ordres répétés.",
+    "en": "Multiplying n by p does not count subsets. The count goes through arrangements and then discards the repeated orders."
   },
   "Multiplicar parte por parte não funciona: a distributiva produz quatro termos, e eles se misturam entre real e imaginário.": {
     "fr": "Multiplier partie par partie ne marche pas : la distributivité produit quatre termes, et ils se mélangent entre réel et imaginaire.",
@@ -12634,6 +12770,10 @@
   "No cilindro, a área da base se repete em cada fatia: vezes a altura.": {
     "fr": "Dans le cylindre, l’aire de la base se répète à chaque tranche : fois la hauteur.",
     "en": "In a cylinder the base area repeats in every slice: times the height."
+  },
+  "No corte, o fóton só tem a energia φ: #/λc = #, então λc = #/#.": {
+    "fr": "Au seuil, le photon n’a que l’énergie φ : #/λc = #, donc λc = #/#.",
+    "en": "At the cut-off the photon has only the energy φ: #/λc = #, so λc = #/#."
   },
   "No cruzamento os dois y são iguais: #x + # = #x + #. Resolva para x e substitua numa das retas.": {
     "fr": "Au point d’intersection les deux y sont égaux : #x + # = #x + #. Résolvez en x et remplacez dans l’une des droites.",
@@ -13594,6 +13734,10 @@
   "O composto é neutro: as cargas totais têm de se anular.": {
     "fr": "Le composé est neutre : les charges totales doivent s’annuler.",
     "en": "The compound is neutral: the total charges must cancel out."
+  },
+  "O comprimento ENCOLHE na direção do movimento: divide-se por γ, não se multiplica.": {
+    "fr": "La longueur SE CONTRACTE dans la direction du mouvement : on divise par γ, on ne multiplie pas.",
+    "en": "The length CONTRACTS along the direction of motion: you divide by γ, you do not multiply."
   },
   "O comprimento medido em movimento é o próprio dividido por γ.": {
     "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
@@ -15431,6 +15575,10 @@
     "fr": "Le réservoir PERD de l’eau, donc le coefficient de x est négatif. « Au moins » devient ≥, mais n’inversez pas le sens deux fois.",
     "en": "The tank LOSES water, so the coefficient of x is negative. “At least” becomes ≥, but do not reverse the direction twice."
   },
+  "O tempo DILATA para quem observa: Δt = γΔt₀ é maior que o tempo próprio, não menor.": {
+    "fr": "Le temps se DILATE pour l’observateur : Δt = γΔt₀ est plus grand que le temps propre, pas plus petit.",
+    "en": "Time DILATES for the observer: Δt = γΔt₀ is larger than the proper time, not smaller."
+  },
   "O tempo de travessia sai só da componente que atravessa.": {
     "fr": "Le temps de traversée ne vient que de la composante qui traverse.",
     "en": "The crossing time comes only from the component that crosses."
@@ -16675,6 +16823,10 @@
     "fr": "Pour que la résultante soit perpendiculaire, la composante rivière doit annuler le courant.",
     "en": "For the resultant to be perpendicular, the upriver component must cancel the current."
   },
+  "Para cada camisa, todas as calças seguem disponíveis — daí a multiplicação.": {
+    "fr": "Pour chaque chemise, tous les pantalons restent disponibles — d’où la multiplication.",
+    "en": "For each shirt, every pair of trousers is still available — hence the multiplication."
+  },
   "Para cada substância, multiplique o coeficiente pelo índice de Al e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
     "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Al et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
     "en": "For each substance, multiply the coefficient by the subscript of Al and add. Both sides give the same number — that is what “balanced” means."
@@ -17202,6 +17354,10 @@
   "Pelo princípio multiplicativo, cada posição tem uma opção menos que a anterior.": {
     "fr": "Par le principe multiplicatif, chaque position a une option de moins que la précédente.",
     "en": "By the multiplication principle, each position has one less option than the previous."
+  },
+  "Pelo princípio multiplicativo, os totais se multiplicam.": {
+    "fr": "Par le principe multiplicatif, les totaux se multiplient.",
+    "en": "By the multiplication principle, the totals multiply."
   },
   "Pelo produto misto: (u × v)·w.": {
     "fr": "Par le produit mixte : (u × v)·w.",
@@ -18107,6 +18263,10 @@
     "fr": "Sans le temps, utilisez Torricelli : v² = #² + #·#·# ; puis prenez la racine carrée.",
     "en": "Without the time, use Torricelli: v² = #² + #·#·#; then take the square root."
   },
+  "Sem ordem: faça o arranjo de # tomados # a # e divida por #!, as ordens que contam igual.": {
+    "fr": "Sans ordre : faites l’arrangement de # pris # à # et divisez par #!, les ordres qui comptent pour un seul.",
+    "en": "Without order: take the arrangement of # taken # by # and divide by #!, the orders that count as one."
+  },
   "Sem repetições, há n! ordens possíveis.": {
     "fr": "Sans répétitions, il y a n! ordres possibles.",
     "en": "Without repetitions, there are n! possible orders."
@@ -18466,6 +18626,14 @@
   "Somar as incertezas diretamente supõe que as duas medidas erram para o mesmo lado. Sendo independentes, elas se combinam em quadratura, e o total é menor.": {
     "fr": "Additionner les incertitudes directement suppose que les deux mesures se trompent dans le même sens. Étant indépendantes, elles se combinent en quadrature, et le total est plus petit.",
     "en": "Adding the uncertainties directly assumes both measurements err in the same direction. Being independent, they combine in quadrature, and the total is smaller."
+  },
+  "Somar contaria \"um grupo OU o outro\". Como a comissão precisa dos dois ao mesmo tempo, as contagens se multiplicam.": {
+    "fr": "Additionner compterait « un groupe OU l’autre ». Comme la commission a besoin des deux à la fois, les dénombrements se multiplient.",
+    "en": "Adding would count “one group OR the other”. Since the committee needs both at once, the counts multiply."
+  },
+  "Somar contaria as peças, não os trajes. Como as escolhas são combinadas entre si, os totais se multiplicam.": {
+    "fr": "Additionner compterait les pièces, pas les tenues. Comme les choix se combinent entre eux, les totaux se multiplient.",
+    "en": "Adding would count the garments, not the outfits. Since the choices combine with one another, the totals multiply."
   },
   "Somar dentro dos parênteses desloca para a esquerda, e multiplicar comprime.": {
     "fr": "Additionner dans les parenthèses décale vers la gauche, et multiplier comprime.",
@@ -19115,6 +19283,10 @@
     "fr": "Nous soustrayons de L₃, terme par terme.",
     "en": "We subtract from L₃, entry by entry."
   },
+  "São # letras: #!, dividido pelo fatorial de quantas vezes cada letra se repete.": {
+    "fr": "Il y a # lettres : #!, divisé par la factorielle du nombre de répétitions de chaque lettre.",
+    "en": "There are # letters: #!, divided by the factorial of how many times each letter repeats."
+  },
   "São as relações de Girard, que evitam recorrer a Bhaskara.": {
     "fr": "Ce sont les relations de Viète, qui évitent de recourir à la formule quadratique.",
     "en": "These are Vieta’s formulas, which spare you the quadratic formula."
@@ -19603,6 +19775,10 @@
     "fr": "Changer l’ordre des équations ne change pas les solutions.",
     "en": "Changing the order of the equations does not change the solutions."
   },
+  "Trocar duas letras iguais de lugar não gera uma palavra nova.": {
+    "fr": "Échanger deux lettres identiques ne produit pas un mot nouveau.",
+    "en": "Swapping two identical letters does not produce a new word."
+  },
   "Trocar os limites de integração troca o sinal da integral.": {
     "fr": "Échanger les bornes d’intégration change le signe de l’intégrale.",
     "en": "Swapping the limits of integration flips the sign of the integral."
@@ -19694,6 +19870,10 @@
   "Um autovalor é o número que a matriz multiplica, sem torcer a direção.": {
     "fr": "Une valeur propre est le nombre par lequel la matrice multiplie, sans tordre la direction.",
     "en": "An eigenvalue is the number the matrix multiplies by, without twisting the direction."
+  },
+  "Um comitê com as mesmas pessoas é o mesmo comitê, em qualquer ordem.": {
+    "fr": "Un comité composé des mêmes personnes est le même comité, quel que soit l’ordre.",
+    "en": "A committee with the same people is the same committee, in any order."
   },
   "Um desvio pega cerca de # por cento; dois, #; três, #.": {
     "fr": "Un écart type couvre environ # pour cent ; deux, # ; trois, #.",
@@ -20991,6 +21171,10 @@
     "fr": "v(#) = # + intégrale de a(t) de # à #. La primitive de t² est t³/#.",
     "en": "v(#) = # + integral of a(t) from # to #. The antiderivative of t² is t³/#."
   },
+  "v/c não é #/γ. De γ = #/√(# − β²) sai β = √(# − #/γ²).": {
+    "fr": "v/c n’est pas #/γ. De γ = #/√(# − β²) on tire β = √(# − #/γ²).",
+    "en": "v/c is not #/γ. From γ = #/√(# − β²) you get β = √(# − #/γ²)."
+  },
   "v_y = |v| · sen θ: o módulo vezes o seno do ângulo com o eixo x.": {
     "fr": "v_y = |v| · sin θ : la norme fois le sinus de l’angle avec l’axe des x.",
     "en": "v_y = |v| · sin θ: the magnitude times the sine of the angle with the x axis."
@@ -21110,6 +21294,10 @@
   "«Pertence» é ∈, e o conjunto vem depois: número ∈ ℕ.": {
     "fr": "« Appartient » s’écrit ∈, et l’ensemble vient après : nombre ∈ ℕ.",
     "en": "“Belongs to” is ∈, and the set comes after: number ∈ ℕ."
+  },
+  "½mv² só vale para v muito menor que c. A #c use K = (γ − #)mc².": {
+    "fr": "½mv² ne vaut que pour v très petit devant c. À #c utilisez K = (γ − #)mc².",
+    "en": "½mv² only holds for v much smaller than c. At #c use K = (γ − #)mc²."
   },
   "½·a·b só vale com ângulo reto entre os lados. Com #°, multiplique por sen #°.": {
     "fr": "½·a·b ne vaut que si l’angle entre les côtés est droit. Avec #°, multipliez par sin #°.",
@@ -21559,6 +21747,14 @@
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
     "en": "Φ = B·A·cos θ, with A in m² (# cm² = #×#⁻⁴ m²) and the angle measured from the normal. In Wb; ×# for mWb."
   },
+  "γ = #/√(# − β²) com β = #: eleve # ao quadrado, tire de #, raiz, e inverta.": {
+    "fr": "γ = #/√(# − β²) avec β = # : élevez # au carré, retirez-le de #, prenez la racine, puis inversez.",
+    "en": "γ = #/√(# − β²) with β = #: square #, subtract it from #, take the root, then invert."
+  },
+  "λ = h/(m·v): calcule m·v = # × #⁻³¹ × # × #⁶ e divida h por ele; passe de metros para nm.": {
+    "fr": "λ = h/(m·v) : calculez m·v = # × #⁻³¹ × # × #⁶ et divisez h par ce produit ; passez des mètres aux nm.",
+    "en": "λ = h/(m·v): compute m·v = # × #⁻³¹ × # × #⁶ and divide h by it; convert from metres to nm."
+  },
   "λ = v/f: a velocidade se DIVIDE pela frequência. # vezes # daria uma velocidade sem sentido.": {
     "fr": "λ = v/f : la vitesse se DIVISE par la fréquence. # fois # donnerait une vitesse qui n’a pas de sens.",
     "en": "λ = v/f: the speed is DIVIDED by the frequency. # times # would give a meaningless speed."
@@ -21566,6 +21762,10 @@
   "λ = y·d/(m·L), com y e d em metros; o resultado em metros vezes #⁹ dá nanômetros.": {
     "fr": "λ = y·d/(m·L), avec y et d en mètres ; le résultat en mètres fois #⁹ donne des nanomètres.",
     "en": "λ = y·d/(m·L), with y and d in metres; the result in metres times #⁹ gives nanometres."
+  },
+  "λ vai no denominador: E = hc/λ.": {
+    "fr": "λ va au dénominateur : E = hc/λ.",
+    "en": "λ goes in the denominator: E = hc/λ."
   },
   "μF vezes V dá μC diretamente.": {
     "fr": "μF fois V donne des μC directement.",
