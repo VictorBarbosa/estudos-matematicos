@@ -935,6 +935,10 @@
     "fr": "La différence des CARRÉS n’est pas le carré de la différence : v_B² − v_A² ≠ (v_B − v_A)².",
     "en": "The difference of the SQUARES is not the square of the difference: v_B² − v_A² ≠ (v_B − v_A)²."
   },
+  "A diferença está invertida: é o potencial no FIM menos o potencial no início.": {
+    "fr": "La différence est inversée : c’est le potentiel à l’ARRIVÉE moins le potentiel au départ.",
+    "en": "The difference is reversed: it is the potential at the END minus the potential at the start."
+  },
   "A diferença virou deformação, som e calor.": {
     "fr": "La différence est devenue déformation, son et chaleur.",
     "en": "The difference became deformation, sound and heat."
@@ -1815,6 +1819,10 @@
     "fr": "La lumière arrive en paquets d’énergie E = hf = hc/λ. Avec λ en nm, hc vaut # eV·nm.",
     "en": "Light arrives in packets of energy E = hf = hc/λ. With λ in nm, hc is # eV·nm."
   },
+  "A maior componente não é a maior taxa: andando na diagonal certa, a função sobe mais rápido que em qualquer eixo.": {
+    "fr": "La plus grande composante n’est pas le taux maximal : en suivant la bonne diagonale, la fonction monte plus vite que selon n’importe quel axe.",
+    "en": "The largest component is not the greatest rate: going along the right diagonal, the function rises faster than along any axis."
+  },
   "A maior delas é a resposta pedida.": {
     "fr": "La plus grande des deux est la réponse demandée.",
     "en": "The larger of them is the answer asked for."
@@ -1830,6 +1838,10 @@
   "A maior solução.": {
     "fr": "La plus grande solution.",
     "en": "The largest solution."
+  },
+  "A maior taxa é o módulo do gradiente: calcule as duas parciais em (#, #) e faça a raiz da soma dos quadrados.": {
+    "fr": "Le taux maximal est la norme du gradient : calculez les deux dérivées partielles en (#, #) et prenez la racine de la somme des carrés.",
+    "en": "The greatest rate is the magnitude of the gradient: compute both partials at (#, #) and take the root of the sum of the squares."
   },
   "A massa aparece em todos os termos e se cancela.": {
     "fr": "La masse apparaît dans tous les termes et s'annule.",
@@ -2126,6 +2138,10 @@
   "A origem e os dois pontos formam um triângulo: lados r₁ e r₂ com o ângulo Δθ entre eles.": {
     "fr": "L’origine et les deux points forment un triangle : les côtés r₁ et r₂ avec l’angle Δθ entre eux.",
     "en": "The origin and the two points form a triangle: sides r₁ and r₂ with the angle Δθ between them."
+  },
+  "A origem só seria crítica se os termos lineares fossem nulos. Aqui eles deslocam o ponto crítico para longe dela.": {
+    "fr": "L’origine ne serait critique que si les termes linéaires étaient nuls. Ici ils déplacent le point critique loin d’elle.",
+    "en": "The origin would only be critical if the linear terms were zero. Here they push the critical point away from it."
   },
   "A parte do barco que aponta rio acima tem de anular a correnteza: #·sen θ = #.": {
     "fr": "La part du bateau dirigée vers l’amont doit annuler le courant : #·sin θ = #.",
@@ -3287,6 +3303,10 @@
     "fr": "Le tour complet fait #°, et l’arc est la fraction que l’angle découpe.",
     "en": "The full turn is #°, and the arc is the fraction the angle cuts out."
   },
+  "A volta não repete o trabalho da ida: ela o desfaz. O sentido do percurso inverte o sinal do integrando.": {
+    "fr": "Le retour ne répète pas le travail de l’aller : il le défait. Le sens du parcours inverse le signe de l’intégrande.",
+    "en": "The way back does not repeat the work of the way out: it undoes it. The direction of travel flips the sign of the integrand."
+  },
   "A água tem um dos maiores de todos, e é por isso que ela serve de refrigerante.": {
     "fr": "L’eau en a l’une des plus élevées, et c’est pourquoi elle sert de réfrigérant.",
     "en": "Water has one of the highest of all, which is why it works as a coolant."
@@ -3899,9 +3919,21 @@
     "fr": "Les bornes ont été traitées à l’envers. Ceux qui NE satisfont PAS se trouvent entre les bornes, et une borne n’est exclue du compte que si elle satisfait l’inéquation.",
     "en": "The ends were handled the wrong way round. The ones that do NOT satisfy it lie between the ends, and an end is only left out of the count if it does satisfy the inequality."
   },
+  "As componentes da direção entraram trocadas no produto escalar.": {
+    "fr": "Les composantes de la direction ont été inversées dans le produit scalaire.",
+    "en": "The components of the direction were swapped in the dot product."
+  },
+  "As componentes entraram cruzadas no produto escalar.": {
+    "fr": "Les composantes ont été croisées dans le produit scalaire.",
+    "en": "The components were crossed in the dot product."
+  },
   "As componentes foram somadas em módulo, como se o corpo andasse pelos catetos. O deslocamento é a hipotenusa: vale Pitágoras, não soma simples.": {
     "fr": "Les composantes ont été additionnées en valeur absolue, comme si le corps marchait le long des cathètes. Le déplacement est l’hypoténuse : c’est Pythagore, et non une simple somme.",
     "en": "The components were added in magnitude, as if the body walked along the legs. The displacement is the hypotenuse: Pythagoras applies, not a plain sum."
+  },
+  "As componentes foram somadas. O módulo de um vetor sai por Pitágoras, não por soma simples.": {
+    "fr": "Les composantes ont été additionnées. La norme d’un vecteur s’obtient par Pythagore, pas par une simple addition.",
+    "en": "The components were added. The magnitude of a vector comes from Pythagoras, not from a plain sum."
   },
   "As componentes indicam o #º quadrante.": {
     "fr": "Les composantes indiquent le #ᵉ quadrant.",
@@ -4191,6 +4223,10 @@
     "fr": "En évaluant en x = #.",
     "en": "Evaluating at x = #."
   },
+  "Avaliando nas duas pontas.": {
+    "fr": "En évaluant aux deux extrémités.",
+    "en": "Evaluating at both endpoints."
+  },
   "Avaliando no ponto (#, #).": {
     "fr": "En évaluant au point (#, #).",
     "en": "Evaluating at the point (#, #)."
@@ -4370,6 +4406,10 @@
   "Cada componente da velocidade é a derivada da coordenada correspondente.": {
     "fr": "Chaque composante de la vitesse est la dérivée de la coordonnée correspondante.",
     "en": "Each velocity component is the derivative of the matching coordinate."
+  },
+  "Cada componente do gradiente é uma derivada parcial.": {
+    "fr": "Chaque composante du gradient est une dérivée partielle.",
+    "en": "Each component of the gradient is a partial derivative."
   },
   "Cada componente é o determinante #×# que sobra ao riscar a linha e a coluna.": {
     "fr": "Chaque composante est le déterminant #×# qui reste en rasant la ligne et la colonne.",
@@ -5214,6 +5254,10 @@
   "Com base e esse fator valeria # e sumiria; com base # ele vale cerca de #.": {
     "fr": "En base e ce facteur vaudrait # et disparaîtrait ; en base # il vaut environ #.",
     "en": "With base e that factor would be # and vanish; with base # it is about #."
+  },
+  "Com campo constante, o trabalho é o produto escalar com o deslocamento.": {
+    "fr": "Avec un champ constant, le travail est le produit scalaire avec le déplacement.",
+    "en": "With a constant field, the work is the dot product with the displacement."
   },
   "Com coeficiente # essa substância não fecha a conta: conte os átomos dela nos dois lados e veja que faltam. O coeficiente # é o que não se escreve, não o que sempre serve.": {
     "fr": "Avec le coefficient #, cette substance ne boucle pas le compte : comptez ses atomes des deux côtés et voyez qu’il en manque. Le coefficient # est celui qu’on n’écrit pas, pas celui qui convient toujours.",
@@ -6631,6 +6675,10 @@
     "fr": "Nous annulons la standardisation.",
     "en": "We undo the standardization."
   },
+  "Determinante não nulo garante solução única.": {
+    "fr": "Un déterminant non nul garantit une solution unique.",
+    "en": "A non-zero determinant guarantees a unique solution."
+  },
   "Determinante zero: as duas retas têm a mesma inclinação.": {
     "fr": "Déterminant nul : les deux droites ont la même inclinaison.",
     "en": "Determinant zero: the two lines have the same slope."
@@ -7283,6 +7331,10 @@
     "fr": "Et nous additionnons.",
     "en": "And we add."
   },
+  "E subtraindo.": {
+    "fr": "Et en soustrayant.",
+    "en": "And subtracting."
+  },
   "E tomamos o arco-cosseno.": {
     "fr": "Et nous prenons l'arc-cosinus.",
     "en": "And we take the arccosine."
@@ -7370,6 +7422,10 @@
   "Elas dividem o losango em quatro triângulos retângulos iguais.": {
     "fr": "Elles partagent le losange en quatre triangles rectangles égaux.",
     "en": "They split the rhombus into four equal right triangles."
+  },
+  "Ele aponta para a direção de subida mais íngreme a partir daquele ponto.": {
+    "fr": "Il pointe dans la direction de la montée la plus raide à partir de ce point.",
+    "en": "It points in the direction of steepest ascent from that point."
   },
   "Ele não depende do caminho: só de onde se começou e onde se terminou.": {
     "fr": "Il ne dépend pas du chemin : seulement d’où l’on est parti et où l’on est arrivé.",
@@ -8979,6 +9035,14 @@
     "fr": "C’est la note qu’on entend (la moyenne). Les battements par seconde sont la DIFFÉRENCE.",
     "en": "That is the note you hear (the average). The beats per second are the DIFFERENCE."
   },
+  "Essa é a ordenada do ponto crítico, não a abscissa.": {
+    "fr": "C’est l’ordonnée du point critique, pas l’abscisse.",
+    "en": "That is the ordinate of the critical point, not the abscissa."
+  },
+  "Essa é a outra componente do gradiente.": {
+    "fr": "C’est l’autre composante du gradient.",
+    "en": "That is the other component of the gradient."
+  },
   "Essa é a outra solução, a menor. A equação modular tem DUAS respostas, e o enunciado pede a maior.": {
     "fr": "C’est l’autre solution, la plus petite. L’équation avec valeur absolue a DEUX réponses, et l’énoncé demande la plus grande.",
     "en": "That is the other solution, the smaller one. The absolute-value equation has TWO answers, and the question asks for the larger."
@@ -9155,6 +9219,10 @@
     "fr": "Ce n’est que la correction f/f′. Le nouveau point est le précédent MOINS elle.",
     "en": "That is only the correction f/f′. The new point is the previous one MINUS it."
   },
+  "Essa é só a ida. O enunciado pede o percurso completo, que inclui a volta.": {
+    "fr": "Ce n’est que l’aller. L’énoncé demande le parcours complet, retour compris.",
+    "en": "That is only the way out. The statement asks for the whole route, including the way back."
+  },
   "Essa é só a outra parcela. Faltou o termo com o arco-seno.": {
     "fr": "Ce n’est que l’autre terme. Il manque celui avec l’arc sinus.",
     "en": "That is only the other term. The arcsine term is missing."
@@ -9283,6 +9351,10 @@
     "fr": "C’est le MONTANT. L’intérêt n’est que la part ajoutée : M − C.",
     "en": "That is the AMOUNT. The interest is only the part added: M − C."
   },
+  "Esse é o MÓDULO do gradiente. A pergunta é por uma componente, que é apenas uma das duas parcelas do vetor.": {
+    "fr": "C’est la NORME du gradient. La question porte sur une composante, qui n’est qu’une des deux parts du vecteur.",
+    "en": "That is the MAGNITUDE of the gradient. The question asks for one component, which is only one of the vector’s two parts."
+  },
   "Esse é o OUTRO autovalor, o menor. As duas raízes estão certas; a pergunta pede a maior.": {
     "fr": "C’est l’AUTRE valeur propre, la plus petite. Les deux racines sont correctes ; la question demande la plus grande.",
     "en": "That is the OTHER eigenvalue, the smaller one. Both roots are right; the question asks for the larger."
@@ -9391,6 +9463,10 @@
     "fr": "C’est la longueur du chemin parcouru en diagonale. La question ne porte que sur la distance descendue vers l’aval.",
     "en": "That is the length of the diagonal path travelled. The question only asks how far downstream it drifted."
   },
+  "Esse é o comprimento do caminho, não o trabalho. O campo precisa entrar na conta.": {
+    "fr": "C’est la longueur du chemin, pas le travail. Le champ doit entrer dans le calcul.",
+    "en": "That is the length of the path, not the work. The field has to enter the computation."
+  },
   "Esse é o comprimento. A pergunta é a largura.": {
     "fr": "C’est la longueur. La question porte sur la largeur.",
     "en": "That is the length. The question asks for the width."
@@ -9483,6 +9559,10 @@
     "fr": "C’est la norme du déplacement en m. Il reste à diviser par les # s.",
     "en": "That is the magnitude of the displacement in m. Dividing by the # s is still missing."
   },
+  "Esse é o módulo do gradiente, que é a taxa na MELHOR direção. A pedida é numa direção específica, e ela nunca passa dessa.": {
+    "fr": "C’est la norme du gradient, c’est-à-dire le taux dans la MEILLEURE direction. Celui qu’on demande concerne une direction précise, et il ne dépasse jamais celui-là.",
+    "en": "That is the magnitude of the gradient, which is the rate in the BEST direction. The one asked for is along a specific direction, and it never exceeds that."
+  },
   "Esse é o módulo do vetor inteiro. A componente é sempre menor ou igual a ele — igual apenas quando o vetor está sobre o eixo.": {
     "fr": "C’est la norme du vecteur entier. La composante lui est toujours inférieure ou égale — égale seulement quand le vecteur est porté par l’axe.",
     "en": "That is the magnitude of the whole vector. The component is always less than or equal to it — equal only when the vector lies on the axis."
@@ -9554,6 +9634,10 @@
   "Esse é o plano de corte, não a abscissa do vértice da curva resultante.": {
     "fr": "Ceci est le plan de coupe, pas l’abscisse du sommet de la courbe obtenue.",
     "en": "That is the cutting plane, not the abscissa of the vertex of the resulting curve."
+  },
+  "Esse é o potencial no ponto final. O trabalho é a DIFERENÇA entre os dois potenciais.": {
+    "fr": "C’est le potentiel au point d’arrivée. Le travail est la DIFFÉRENCE entre les deux potentiels.",
+    "en": "That is the potential at the end point. The work is the DIFFERENCE between the two potentials."
   },
   "Esse é o primeiro elemento da diagonal, não o maior. Os três são autovalores: compare-os.": {
     "fr": "C’est le premier élément de la diagonale, pas le plus grand. Les trois sont des valeurs propres : comparez-les.",
@@ -10367,6 +10451,10 @@
     "fr": "Il manque l’extraction de la racine QUATRIÈME. La valeur obtenue est la température à la puissance quatre, et non la température.",
     "en": "Taking the FOURTH root is missing. The value obtained is the temperature to the fourth power, not the temperature."
   },
+  "Faltou extrair a raiz quadrada.": {
+    "fr": "Il manque la racine carrée.",
+    "en": "The square root is missing."
+  },
   "Faltou extrair a raiz quadrada: esse é o valor de x ao quadrado, não de x.": {
     "fr": "Il manque la racine carrée : ceci est la valeur de x au carré, pas de x.",
     "en": "The square root is missing: that is the value of x squared, not of x."
@@ -10418,6 +10506,10 @@
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
     "en": "The multiplication by dr/dt is missing. The chain rule gives dV/dt = (dV/dr)·(dr/dt), and here dr/dt = #."
+  },
+  "Faltou normalizar a direção. Sem dividir pelo comprimento do vetor, a taxa sai escalada por ele — e um vetor maior daria uma inclinação maior, o que não faz sentido.": {
+    "fr": "Il manque la normalisation de la direction. Sans diviser par la longueur du vecteur, le taux est mis à son échelle — et un vecteur plus long donnerait une pente plus forte, ce qui n’a pas de sens.",
+    "en": "Normalising the direction is missing. Without dividing by the vector’s length the rate is scaled by it — and a longer vector would give a steeper slope, which makes no sense."
   },
   "Faltou o # da contagem dupla: #A = k·V, porque cada aresta tem duas pontas.": {
     "fr": "Il manque le # du double comptage : #A = k·V, car chaque arête a deux extrémités.",
@@ -10926,6 +11018,10 @@
   "I/I₀ = #⁻⁹ / #⁻¹² = #³. O log de # elevado a k é k; depois multiplique por #.": {
     "fr": "I/I₀ = #⁻⁹ / #⁻¹² = #³. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
     "en": "I/I₀ = #⁻⁹ / #⁻¹² = #³. The log of # to the k is k; then multiply by #."
+  },
+  "Ida e volta pelo mesmo caminho sempre se cancelam, em qualquer campo.": {
+    "fr": "L’aller et le retour par le même chemin s’annulent toujours, dans n’importe quel champ.",
+    "en": "Out and back along the same path always cancel, in any field."
   },
   "Identificamos as duas camadas: a potência por fora, o binômio por dentro.": {
     "fr": "Nous identifions les deux couches : la puissance dehors, le binôme dedans.",
@@ -12639,6 +12735,10 @@
     "fr": "Sur la verticale, la vitesse s’annule au point le plus haut.",
     "en": "Vertically, the speed vanishes at the highest point."
   },
+  "Na volta, o vetor tangente inverte e o integrando troca de sinal.": {
+    "fr": "Au retour, le vecteur tangent s’inverse et l’intégrande change de signe.",
+    "en": "On the way back the tangent vector reverses and the integrand changes sign."
+  },
   "Nas duas primeiras colunas, a L₃ é combinação das de cima: # vezes a L₁ mais # vezes a L₂.": {
     "fr": "Dans les deux premières colonnes, L₃ est combinaison de celles du haut : # fois L₁ plus # fois L₂.",
     "en": "In the first two columns, L₃ is a combination of the ones above: # times L₁ plus # times L₂."
@@ -12694,6 +12794,10 @@
   "Nenhuma conversão de unidade é necessária: as unidades se cancelam, desde que iguais nos dois estados.": {
     "fr": "Aucune conversion d'unité n'est nécessaire : les unités s'annulent, à condition d'être les mêmes dans les deux états.",
     "en": "No unit conversion is needed: the units cancel out, as long as they are the same in both states."
+  },
+  "Nenhuma outra direção sobe mais rápido que essa.": {
+    "fr": "Aucune autre direction ne monte plus vite que celle-là.",
+    "en": "No other direction rises faster than that one."
   },
   "Nenhuma potência de base positiva resulta em zero ou negativo.": {
     "fr": "Aucune puissance de base positive ne donne zéro ou négatif.",
@@ -12911,6 +13015,18 @@
     "fr": "Dans le plan, il se réduit à un déterminant #×#.",
     "en": "In the plane, it reduces to a #×# determinant."
   },
+  "No ponto crítico o gradiente é o vetor nulo — e aqui o ponto é máximo.": {
+    "fr": "Au point critique le gradient est le vecteur nul — et ici le point est un maximum.",
+    "en": "At the critical point the gradient is the zero vector — and here the point is a maximum."
+  },
+  "No ponto crítico o gradiente é o vetor nulo — e aqui o ponto é mínimo.": {
+    "fr": "Au point critique le gradient est le vecteur nul — et ici le point est un minimum.",
+    "en": "At the critical point the gradient is the zero vector — and here the point is a minimum."
+  },
+  "No ponto crítico o gradiente é o vetor nulo — e aqui o ponto é sela.": {
+    "fr": "Au point critique le gradient est le vecteur nul — et ici le point est un col.",
+    "en": "At the critical point the gradient is the zero vector — and here the point is a saddle."
+  },
   "No ponto de encontro, as duas retas têm o mesmo y: igualamos.": {
     "fr": "Au point de rencontre, les deux droites ont le même y : nous égalons.",
     "en": "At the meeting point the two lines have the same y: we set them equal."
@@ -13019,6 +13135,10 @@
     "fr": "À l’angle critique le réfracté sort à #° : sin θc = n₂/n₁ = #/#.",
     "en": "At the critical angle the refracted ray leaves at #°: sin θc = n₂/n₁ = #/#."
   },
+  "Normalizar é o passo que mais se esquece aqui.": {
+    "fr": "Normaliser est l’étape qu’on oublie le plus souvent ici.",
+    "en": "Normalising is the step most often forgotten here."
+  },
   "Normalize a direção antes de projetar o gradiente nela.": {
     "fr": "Normalisez la direction avant d’y projeter le gradient.",
     "en": "Normalise the direction before projecting the gradient onto it."
@@ -13050,6 +13170,14 @@
   "Nulo: o caso crítico, em que o retorno é o mais rápido possível sem oscilar.": {
     "fr": "Nul : le cas critique, où le retour est le plus rapide possible sans oscillation.",
     "en": "Zero: the critical case, where the return is as fast as possible without oscillating."
+  },
+  "Num campo conservativo, esse valor dependeria só das pontas, não do caminho.": {
+    "fr": "Dans un champ conservatif, cette valeur ne dépendrait que des extrémités, pas du chemin.",
+    "en": "In a conservative field, that value would depend only on the endpoints, not on the path."
+  },
+  "Num campo conservativo, qualquer caminho fechado dá trabalho zero.": {
+    "fr": "Dans un champ conservatif, tout chemin fermé donne un travail nul.",
+    "en": "In a conservative field, any closed path gives zero work."
   },
   "Num campo plano (P, Q), o rotacional aponta em z e mede o giro local.": {
     "fr": "Dans un champ plan (P, Q), le rotationnel pointe en z et mesure la rotation locale.",
@@ -13571,9 +13699,21 @@
     "fr": "Le champ d’une charge ponctuelle décroît en r², et non en r.",
     "en": "The field of a point charge falls off as r², not as r."
   },
+  "O campo foi avaliado só no ponto final. O valor correto é a média integrada ao longo de todo o trajeto.": {
+    "fr": "Le champ n’a été évalué qu’au point d’arrivée. La valeur correcte est la moyenne intégrée sur tout le trajet.",
+    "en": "The field was evaluated only at the end point. The correct value is the average integrated over the whole route."
+  },
+  "O campo foi avaliado só no ponto inicial. Como ele varia ao longo do caminho, é preciso integrar — avaliar numa ponta só é uma aproximação grosseira.": {
+    "fr": "Le champ n’a été évalué qu’au point de départ. Comme il varie le long du chemin, il faut intégrer — l’évaluer à une seule extrémité n’est qu’une approximation grossière.",
+    "en": "The field was evaluated only at the starting point. Since it varies along the path you have to integrate — evaluating at a single endpoint is a crude approximation."
+  },
   "O campo é a força por unidade de carga de prova: não depende de quem o mede.": {
     "fr": "Le champ est la force par unité de charge d’épreuve : il ne dépend pas de qui le mesure.",
     "en": "The field is the force per unit test charge: it does not depend on who measures it."
+  },
+  "O campo é o gradiente de uma função potencial.": {
+    "fr": "Le champ est le gradient d’une fonction potentielle.",
+    "en": "The field is the gradient of a potential function."
   },
   "O cancelamento não é total: a primeira parcela não tem par para cancelá-la.": {
     "fr": "L’annulation n’est pas totale : le premier terme n’a pas de partenaire pour l’annuler.",
@@ -14583,6 +14723,10 @@
     "fr": "La quantité de mouvement.",
     "en": "The momentum."
   },
+  "O máximo possível é o módulo do gradiente, quando a direção coincide com ele.": {
+    "fr": "Le maximum possible est la norme du gradient, lorsque la direction coïncide avec lui.",
+    "en": "The greatest possible value is the magnitude of the gradient, when the direction coincides with it."
+  },
   "O mínimo ocorre em x = #, e a imagem começa nele.": {
     "fr": "Le minimum se produit en x = #, et l’image commence là.",
     "en": "The minimum occurs at x = #, and the range starts there."
@@ -15267,6 +15411,10 @@
     "fr": "Le sens de l’inégalité a été inversé sans raison : le coefficient de x est positif, il reste donc le même du début à la fin.",
     "en": "The direction of the inequality was flipped for no reason: the coefficient of x is positive, so it stays the same throughout."
   },
+  "O sentido do percurso está invertido. Trocar as pontas troca o sinal do trabalho.": {
+    "fr": "Le sens du parcours est inversé. Échanger les extrémités change le signe du travail.",
+    "en": "The direction of travel is reversed. Swapping the endpoints flips the sign of the work."
+  },
   "O sentido está certo, mas o sinal da fronteira não. Confira a divisão pelo coeficiente de x.": {
     "fr": "Le sens est correct, mais le signe de la borne ne l’est pas. Vérifiez la division par le coefficient de x.",
     "en": "The direction is right, but the sign of the boundary is not. Check the division by the coefficient of x."
@@ -15735,6 +15883,10 @@
     "fr": "Le terme constant est lui aussi multiplié par # : toute la seconde équation vaut # fois la première.",
     "en": "The constant term is multiplied by # as well: the whole second equation is # times the first."
   },
+  "O termo misto acopla as duas equações: não dá para resolver cada parcial isoladamente quando ele existe.": {
+    "fr": "Le terme mixte couple les deux équations : on ne peut pas résoudre chaque dérivée partielle isolément lorsqu’il est présent.",
+    "en": "The mixed term couples the two equations: you cannot solve each partial on its own when it is there."
+  },
   "O termo misto foi esquecido. Ao derivar em uma variável, o produto xy deixa a OUTRA variável como coeficiente — ele não desaparece.": {
     "fr": "Le terme mixte a été oublié. En dérivant par rapport à une variable, le produit xy laisse l’AUTRE variable comme coefficient — il ne disparaît pas.",
     "en": "The mixed term was forgotten. When differentiating with respect to one variable, the product xy leaves the OTHER variable as a coefficient — it does not vanish."
@@ -15827,6 +15979,10 @@
     "fr": "Le total des faces.",
     "en": "The total number of faces."
   },
+  "O trabalho de ida.": {
+    "fr": "Le travail de l’aller.",
+    "en": "The work on the way out."
+  },
   "O trabalho do agente é a variação da energia potencial: carga vezes a diferença de potencial.": {
     "fr": "Le travail de l’agent est la variation d’énergie potentielle : charge fois la différence de potentiel.",
     "en": "The agent’s work is the change in potential energy: charge times the potential difference."
@@ -15850,6 +16006,10 @@
   "O trabalho usa a VARIAÇÃO de volume, não o volume final. Só a expansão realiza trabalho.": {
     "fr": "Le travail utilise la VARIATION de volume, pas le volume final. Seule la dilatation effectue un travail.",
     "en": "The work uses the CHANGE in volume, not the final volume. Only the expansion does work."
+  },
+  "O trabalho é a diferença do potencial entre as pontas.": {
+    "fr": "Le travail est la différence de potentiel entre les extrémités.",
+    "en": "The work is the difference in potential between the endpoints."
   },
   "O trabalho é a integral do campo projetado no deslocamento.": {
     "fr": "Le travail est l'intégrale du champ projeté sur le déplacement.",
@@ -16582,6 +16742,10 @@
   "Os limites laterais discordam: há um salto.": {
     "fr": "Les limites latérales ne concordent pas : il y a un saut.",
     "en": "The one-sided limits disagree: there is a jump."
+  },
+  "Os módulos foram multiplicados, como se campo e deslocamento estivessem alinhados. Só a componente do campo AO LONGO do caminho realiza trabalho.": {
+    "fr": "Les normes ont été multipliées, comme si le champ et le déplacement étaient alignés. Seule la composante du champ LE LONG du chemin effectue un travail.",
+    "en": "The magnitudes were multiplied, as if field and displacement were aligned. Only the component of the field ALONG the path does work."
   },
   "Os módulos foram somados. Isso só valeria se vento e rumo estivessem perfeitamente alinhados — vetores se somam componente a componente, nunca módulo com módulo.": {
     "fr": "Les normes ont été additionnées. Cela ne vaudrait que si le vent et le cap étaient parfaitement alignés — les vecteurs s’additionnent composante par composante, jamais norme avec norme.",
@@ -17387,6 +17551,10 @@
     "fr": "Pensez à ce qui arrive au vecteur tangent quand le sens s’inverse.",
     "en": "Think about what happens to the tangent vector when the direction reverses."
   },
+  "Percorrer o mesmo caminho ao contrário desfaz exatamente o trabalho feito.": {
+    "fr": "Parcourir le même chemin en sens inverse défait exactement le travail effectué.",
+    "en": "Travelling the same path backwards undoes exactly the work done."
+  },
   "Perdeu-se # J.": {
     "fr": "# J ont été perdus.",
     "en": "# J were lost."
@@ -17798,6 +17966,10 @@
   "Qualquer outro ponto dessa curva devolve exatamente o mesmo valor.": {
     "fr": "N’importe quel autre point de cette courbe redonne exactement la même valeur.",
     "en": "Any other point on this curve returns exactly the same value."
+  },
+  "Quando isso acontece, o campo é conservativo e o caminho deixa de importar.": {
+    "fr": "Quand c’est le cas, le champ est conservatif et le chemin cesse d’importer.",
+    "en": "When that happens, the field is conservative and the path stops mattering."
   },
   "Quando o MDC é #, a fração a/b já é irredutível.": {
     "fr": "Quand le PGCD est #, la fraction a/b est déjà irréductible.",
@@ -18567,6 +18739,10 @@
     "fr": "En additionnant les contributions de chaque terme.",
     "en": "Adding the contributions of each term."
   },
+  "Somando as duas metades.": {
+    "fr": "En additionnant les deux moitiés.",
+    "en": "Adding the two halves."
+  },
   "Somando as duas.": {
     "fr": "En additionnant les deux.",
     "en": "Adding the two."
@@ -19335,6 +19511,10 @@
     "fr": "Seule la composante de la vitesse PERPENDICULAIRE au champ compte : d’où le sinus.",
     "en": "Only the component of the velocity PERPENDICULAR to the field counts: hence the sine."
   },
+  "Só a componente do campo ao longo do caminho realiza trabalho.": {
+    "fr": "Seule la composante du champ le long du chemin effectue un travail.",
+    "en": "Only the component of the field along the path does work."
+  },
   "Só a coordenada x.": {
     "fr": "Seulement la coordonnée x.",
     "en": "Only the x coordinate."
@@ -19547,6 +19727,10 @@
     "fr": "Tangente horizontale : y′ = #, c’est-à-dire que le numérateur s’annule.",
     "en": "Horizontal tangent: y′ = #, that is, the numerator vanishes."
   },
+  "Taxa nula: essa direção é tangente à curva de nível.": {
+    "fr": "Taux nul : cette direction est tangente à la courbe de niveau.",
+    "en": "Zero rate: that direction is tangent to the level curve."
+  },
   "Taxas equivalentes levam o mesmo capital ao mesmo montante em # ano. Um ano tem # períodos de um mês.": {
     "fr": "Des taux équivalents mènent le même capital au même montant en # an. Une année compte # périodes d’un mois.",
     "en": "Equivalent rates take the same capital to the same amount in # year. A year holds # periods of one month."
@@ -19718,6 +19902,10 @@
   "Trabalho negativo: a força se opõe ao movimento.": {
     "fr": "Travail négatif : la force s’oppose au mouvement.",
     "en": "Negative work: the force opposes the motion."
+  },
+  "Trabalho zero acontece em caminho FECHADO. Aqui as pontas são diferentes, e o potencial muda entre elas.": {
+    "fr": "Un travail nul se produit sur un chemin FERMÉ. Ici les extrémités sont différentes, et le potentiel change de l’une à l’autre.",
+    "en": "Zero work happens on a CLOSED path. Here the endpoints differ, and the potential changes between them."
   },
   "Trabalho é força vezes deslocamento.": {
     "fr": "Le travail est la force fois le déplacement.",
@@ -21483,6 +21671,10 @@
     "fr": "C’est la moitié d’un triangle équilatéral : le plus petit côté vaut la moitié de l’hypoténuse.",
     "en": "It is half an equilateral triangle: the shortest side is half the hypotenuse."
   },
+  "É máximo.": {
+    "fr": "C’est un maximum.",
+    "en": "It is a maximum."
+  },
   "É média ponderada pelos volumes: a média simples só acerta se eles forem iguais.": {
     "fr": "C’est une moyenne pondérée par les volumes : la moyenne simple ne tombe juste que s’ils sont égaux.",
     "en": "It is a volume-weighted average: the plain average is only right if they are equal."
@@ -21494,6 +21686,10 @@
   "É média ponderada: o isótopo mais abundante puxa o resultado para si.": {
     "fr": "C’est une moyenne pondérée : l’isotope le plus abondant tire le résultat vers lui.",
     "en": "It is a weighted mean: the most abundant isotope pulls the result toward itself."
+  },
+  "É mínimo.": {
+    "fr": "C’est un minimum.",
+    "en": "It is a minimum."
   },
   "É o antiprisma de base com # lados.": {
     "fr": "C’est l’antiprisme à base de # côtés.",
@@ -21662,6 +21858,10 @@
   "É por isso que uma parede dupla isola muito mais que uma simples do mesmo total.": {
     "fr": "C’est pourquoi un mur double isole bien plus qu’un simple de même épaisseur totale.",
     "en": "That is why a double wall insulates far better than a single one of the same total thickness."
+  },
+  "É sela.": {
+    "fr": "C’est un col.",
+    "en": "It is a saddle point."
   },
   "É sempre «o que se quer zerar, sobre o pivô».": {
     "fr": "C’est toujours « ce qu’on veut annuler, sur le pivot ».",
