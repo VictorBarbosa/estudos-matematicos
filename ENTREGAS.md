@@ -1,8 +1,9 @@
 # Entregas pendentes
 
 Medido em 19 de novembro de 2026. Última atualização: **frentes 2, 3 e 4
-fechadas** — o dicionário de resolução chegou ao fim da fila: o que resta sem
-tradução é notação pura, que não se traduz.
+fechadas** (o dicionário de resolução chegou ao fim da fila) e **frente 7 de
+3 071 para 1 823 entradas** — as 283 formas que mostravam a conta pela metade
+agora mostram a conta inteira.
 
 Cada número aqui saiu de um comando, não de estimativa. A coluna **como medir**
 é o comando que refaz a conta — use-a para conferir o progresso em vez de
@@ -18,9 +19,9 @@ confiar neste arquivo, que envelhece.
 | 4 | ~~Diagnósticos sem tradução~~ | **0** | ✅ |
 | 5 | Texto de exercício ainda em TypeScript | 19 arquivos, 3 832 linhas | **5** |
 | 6 | ~~Palavra em português injetada no molde~~ | **0** | ✅ |
-| 7 | Entrada do banco sem resolução própria | 3 071 entradas, 113 tópicos | **10** |
+| 7 | Entrada do banco sem resolução própria | 1 823 entradas, 85 tópicos | **6** |
 | 8 | ~~Legenda que explica o termo do enunciado~~ | **0** | ✅ |
-| | **Total** | | **15** |
+| | **Total** | | **11** |
 
 Uma «entrega» é uma rodada de trabalho que fecha um pedaço verificável e deixa
 a suíte verde. Pelo ritmo das últimas sessões, cada uma leva de uma a duas
@@ -126,15 +127,30 @@ valor lido de um campo de nome. Roda em `npm run verificar:geradores`.
 
 **Como medir:** `npm run verificar:geradores`.
 
-## 7 · Entrada do banco sem resolução própria — 3 071 entradas, 10 entregas
+## 7 · Entrada do banco sem resolução própria — 1 823 entradas, 6 entregas
 
-4 309 das 7 380 entradas prontas têm passos próprios (58,4 %). As outras caem
+5 557 das 7 380 entradas prontas têm passos próprios (75,3 %). As outras caem
 nas etapas genéricas: o aluno vê a resposta certa e não vê de onde ela sai —
 foi exatamente a queixa da fração geratriz.
 
-Cada forma de pergunta ganha passos quando alguém escreve a regra dela. São
-113 tópicos sem resolvedor, e uma rodada cobre um tópico inteiro quando as
-formas dele se parecem.
+O que subiu de 4 273 para 5 557 nesta rodada não foi escrever regra nova: foi
+consertar a que já existia. A substituição escreve `#` no lugar de cada número,
+e quando a fórmula repete um valor que o texto traz uma vez só — a lei dos
+cossenos usa cada lado duas vezes — os marcadores acabavam antes da conta e a
+trilha inteira era recusada. Foram 283 formas, todas com o mesmo conserto:
+`#1`, `#2`… apontando o grupo.
+
+Junto veio um defeito mais sério: `avaliarLatex`, que é quem confere se a conta
+mostrada fecha com a resposta, não sabia elevar um parêntese — e em JavaScript
+`^` é o OU-exclusivo, não a potência. A régua estava torta nos dois sentidos.
+Com ela reta, 60 regras mostravam conta errada na tela (o traço de
+[[1, 2], [3, 4]] aparecia como 1 + 2); hoje são 120 entradas, e nenhuma delas é
+índice trocado — é substituição que mostra uma comparação, um módulo ou um
+fator que só existe em símbolo.
+
+O que falta agora é diferente: 85 tópicos **sem nenhuma regra**. Cada forma de
+pergunta ganha passos quando alguém escreve a fórmula dela, e uma rodada cobre
+um tópico inteiro quando as formas dele se parecem.
 
 **Como medir:** subir `COBERTURA_MINIMA` em
 `src/app/core/enunciados/passos-do-banco.spec.ts` para 1.1 e rodar.
