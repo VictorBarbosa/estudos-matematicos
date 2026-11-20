@@ -1,7 +1,8 @@
 # Entregas pendentes
 
-Medido em 19 de novembro de 2026. Última atualização: **frente 1 fechada por
-inteiro** — todo enunciado do site troca de idioma.
+Medido em 19 de novembro de 2026. Última atualização: **frentes 2, 3 e 4
+fechadas** — o dicionário de resolução chegou ao fim da fila: o que resta sem
+tradução é notação pura, que não se traduz.
 
 Cada número aqui saiu de um comando, não de estimativa. A coluna **como medir**
 é o comando que refaz a conta — use-a para conferir o progresso em vez de
@@ -12,14 +13,14 @@ confiar neste arquivo, que envelhece.
 | # | Frente | Falta | Entregas |
 |---|---|---|---|
 | 1 | ~~Enunciado que não troca de idioma na tela~~ | **0** | ✅ |
-| 2 | Descrições de passo sem tradução | 1 734 frases | **9** |
-| 3 | Dicas sem tradução | 805 frases | **5** |
-| 4 | Diagnósticos sem tradução | 1 640 frases | **8** |
+| 2 | ~~Descrições de passo sem tradução~~ | **0** (5 de notação) | ✅ |
+| 3 | ~~Dicas sem tradução~~ | **0** (14 de notação) | ✅ |
+| 4 | ~~Diagnósticos sem tradução~~ | **0** | ✅ |
 | 5 | Texto de exercício ainda em TypeScript | 19 arquivos, 3 832 linhas | **5** |
 | 6 | ~~Palavra em português injetada no molde~~ | **0** | ✅ |
 | 7 | Entrada do banco sem resolução própria | 3 071 entradas, 113 tópicos | **10** |
 | 8 | ~~Legenda que explica o termo do enunciado~~ | **0** | ✅ |
-| | **Total** | | **30** |
+| | **Total** | | **15** |
 
 Uma «entrega» é uma rodada de trabalho que fecha um pedaço verificável e deixa
 a suíte verde. Pelo ritmo das últimas sessões, cada uma leva de uma a duas
@@ -56,29 +57,40 @@ preposição era a única palavra na lista).
 `src/app/core/enunciados/traducao-na-tela.spec.ts` — ele já está em 0, então o
 spec verde é a medida.
 
-## 2, 3 e 4 · O dicionário de frases — 4 179 frases, 22 entregas
+## 2, 3 e 4 · O dicionário de frases — **fechadas**
 
 `math-translations.json` indexa por frase normalizada (`#` no lugar dos
-números). O que a tela mostra do motor de resolução passa por ele.
+números). O que a tela mostra do motor de resolução passa por ele — e agora
+passa inteiro.
 
 | O que | Traduzido | Total | Falta |
 |---|---|---|---|
-| Descrições de passo | 1 413 | 3 147 | 1 734 |
-| Dicas | 323 | 1 128 | 805 |
-| Diagnósticos | 1 | 1 641 | **1 640** |
+| Descrições de passo | 3 139 | 3 144 | 5, só notação |
+| Dicas | 1 114 | 1 128 | 14, só notação |
+| Diagnósticos | 1 641 | 1 641 | 0 |
 
-Os diagnósticos são a frente que eu nunca tinha medido, e são a maior: 1 de
-1 641. Parte deles já chega traduzida à tela por outro caminho — os geradores
-que escrevem `diagnosticoTraducoes` à mão —, então o número do dicionário é
-pior do que a tela. Quantos exatamente ainda não sei, e descobrir isso é a
-primeira das oito entregas desta linha.
+As dezenove frases que sobram são fórmula escrita em texto — «p = mv»,
+«ΔU = Q − W», «# × # = #», «A = b·h» —, e notação não muda de idioma. Traduzi-las
+seria repetir a chave, e o guarda «cada entrada tem francês e inglês de
+verdade» recusa exatamente isso. Por esse motivo os pisos de
+`traducoes-de-resolucao.spec.ts` ficam em 0,998 (passos) e 0,987 (dicas), e em
+**1** para os diagnósticos: frase nova sem tradução derruba o teste no dia em
+que for escrita.
 
-O ritmo medido é de ~200 frases por rodada traduzindo por tópico com regras de
-frase (as frases de um tópico são variações de poucos moldes), o que dá as 22.
+Os diagnósticos eram a frente que eu nunca tinha medido, e eram a maior: 1 de
+1 641 no dicionário. A maior parte já chegava traduzida à tela por outro
+caminho — os geradores que escrevem `diagnosticoTraducoes` à mão —, e o resto
+entrou aqui.
+
+O trabalho rendeu por FAMÍLIA, não por linha: as frases de um tópico são
+variações de poucos moldes («Zeramos o resto da coluna #: L₂ ← L₂ − #·L₁» tem
+trinta irmãs que mudam só a notação), então cada rodada fechava dois tópicos
+inteiros em vez de percorrer a lista geral. Foram ~90 tópicos nesse ritmo.
 
 **Como medir:** subir os pisos de
 `src/app/core/math/translations/traducoes-de-resolucao.spec.ts` para 1.1 e
-rodar; as três mensagens trazem os números.
+rodar; as três mensagens trazem os números, e as de passos e dicas listam as
+frases que faltam.
 
 ## 5 · Texto de exercício ainda em TypeScript — 19 arquivos, 5 entregas
 
