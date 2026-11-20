@@ -379,6 +379,10 @@
     "fr": "La hauteur de l’image est le grandissement fois la hauteur de l’objet.",
     "en": "The image height is the magnification times the object height."
   },
+  "A altura máxima não depende da massa do corpo.": {
+    "fr": "La hauteur maximale ne dépend pas de la masse du corps.",
+    "en": "The maximum height does not depend on the mass of the body."
+  },
   "A altura pela visada de B.": {
     "fr": "La hauteur par la visée depuis B.",
     "en": "The height from the sighting at B."
@@ -394,6 +398,10 @@
   "A altura é a distância entre as bases, não o lado inclinado.": {
     "fr": "La hauteur est la distance entre les bases, et non le côté incliné.",
     "en": "The height is the distance between the bases, not the slanted side."
+  },
+  "A altura é b·SENO de C (o cateto oposto ao ângulo), não b·cosseno.": {
+    "fr": "La hauteur vaut b·SINUS de C (le côté opposé à l’angle), pas b·cosinus.",
+    "en": "The height is b·SINE of C (the leg opposite the angle), not b·cosine."
   },
   "A altura é o cateto OPOSTO ao ângulo e a distância no chão é o ADJACENTE: a razão é a tangente.": {
     "fr": "La hauteur est la cathète OPPOSÉE à l’angle et la distance au sol est l’ADJACENTE : le rapport est la tangente.",
@@ -1031,6 +1039,10 @@
     "fr": "La division est inversée. On cherche combien de moles TIENNENT dans la masse donnée, donc la masse va au-dessus et la masse molaire en dessous.",
     "en": "The division is upside down. You want how many moles FIT in the given mass, so the mass goes on top and the molar mass below."
   },
+  "A divisão está invertida: o tempo vai no denominador.": {
+    "fr": "La division est inversée : le temps va au dénominateur.",
+    "en": "The division is upside down: time goes in the denominator."
+  },
   "A divisão está invertida: λ = v/f, não f/v.": {
     "fr": "La division est inversée : λ = v/f, et non f/v.",
     "en": "The division is upside down: λ = v/f, not f/v."
@@ -1079,6 +1091,10 @@
     "fr": "L’énergie a augmenté parce que celui qui a ramené les bras a fourni du travail pour cela.",
     "en": "The energy went up because whoever pulled the arms in did work to do so."
   },
+  "A energia cinética depende do quadrado da velocidade.": {
+    "fr": "L'énergie cinétique dépend du carré de la vitesse.",
+    "en": "Kinetic energy depends on the square of the speed."
+  },
   "A energia cinética não se conserva: parte virou deformação e calor.": {
     "fr": "L'énergie cinétique ne se conserve pas : une partie est devenue déformation et chaleur.",
     "en": "Kinetic energy is not conserved: part became deformation and heat."
@@ -1118,6 +1134,10 @@
   "A energia ganha na ddp vira energia cinética: qΔV = ½mv².": {
     "fr": "L’énergie gagnée dans la d.d.p. devient énergie cinétique : qΔV = ½mv².",
     "en": "The energy gained in the potential difference becomes kinetic energy: qΔV = ½mv²."
+  },
+  "A energia potencial vira cinética: mgh = mv²/#, então v = √(#gh) — a massa se cancela.": {
+    "fr": "L'énergie potentielle devient cinétique : mgh = mv²/#, donc v = √(#gh) — la masse se simplifie.",
+    "en": "The potential energy becomes kinetic: mgh = mv²/#, so v = √(#gh) — the mass cancels out."
   },
   "A energia total é γmc²; a cinética é o que passa da energia de repouso.": {
     "fr": "L’énergie totale est γmc² ; la cinétique est ce qui dépasse l’énergie de repos.",
@@ -1279,6 +1299,10 @@
     "fr": "La force est inversement proportionnelle au carré de la distance.",
     "en": "The force is inversely proportional to the square of the distance."
   },
+  "A força é perpendicular ao deslocamento: o trabalho é exatamente ZERO, não F·d.": {
+    "fr": "La force est perpendiculaire au déplacement : le travail est exactement NUL, pas F·d.",
+    "en": "The force is perpendicular to the displacement: the work is exactly ZERO, not F·d."
+  },
   "A força é proporcional a q₁·q₂ e inversamente a r²: multiplique # por # e divida por #².": {
     "fr": "La force est proportionnelle à q₁·q₂ et inversement à r² : multipliez # par # et divisez par #².",
     "en": "The force is proportional to q₁·q₂ and inversely to r²: multiply # by # and divide by #²."
@@ -1406,6 +1430,10 @@
   "A fórmula da soma mistura senos e cossenos dos dois ângulos.": {
     "fr": "La formule de la somme mélange sinus et cosinus des deux angles.",
     "en": "The sum formula mixes sines and cosines of both angles."
+  },
+  "A fórmula de Herão dá o mesmo valor direto dos três lados.": {
+    "fr": "La formule de Héron donne la même valeur directement à partir des trois côtés.",
+    "en": "Heron’s formula gives the same value directly from the three sides."
   },
   "A fórmula do arco duplo para o seno.": {
     "fr": "La formule de l’angle double pour le sinus.",
@@ -1778,6 +1806,14 @@
   "A massa molar é a soma de todas as parcelas.": {
     "fr": "La masse molaire est la somme de toutes les parts.",
     "en": "The molar mass is the sum of all the parts."
+  },
+  "A massa se CANCELA na conservação de energia. A velocidade de queda é a mesma para qualquer massa.": {
+    "fr": "La masse se SIMPLIFIE dans la conservation de l'énergie. La vitesse de chute est la même pour toute masse.",
+    "en": "The mass CANCELS in the conservation of energy. The falling speed is the same for any mass."
+  },
+  "A massa se cancela.": {
+    "fr": "La masse se simplifie.",
+    "en": "The mass cancels out."
   },
   "A massa se concentra ainda mais perto do centro.": {
     "fr": "La masse se concentre encore plus près du centre.",
@@ -2299,6 +2335,10 @@
     "fr": "La proportion de l’équation vaut en moles, pas en grammes. Passez par O₂ en grammes → moles → moles de H₂O₂ → grammes.",
     "en": "The equation’s ratio holds in moles, not in grams. Go through O₂ in grams → moles → moles of H₂O₂ → grams."
   },
+  "A proporção está invertida. Cada lado fica sobre o seno do SEU ângulo oposto — confira qual seno vai no numerador.": {
+    "fr": "La proportion est inversée. Chaque côté se place sur le sinus de SON angle opposé — vérifiez quel sinus va au numérateur.",
+    "en": "The proportion is upside down. Each side goes over the sine of ITS opposite angle — check which sine belongs in the numerator."
+  },
   "A proporção ficou de cabeça para baixo. Altura está para sombra assim como altura está para sombra — não troque os papéis entre as duas figuras.": {
     "fr": "La proportion est à l’envers. La hauteur est à l’ombre ce que la hauteur est à l’ombre — n’échangez pas les rôles entre les deux figures.",
     "en": "The proportion is upside down. Height is to shadow as height is to shadow — do not swap the roles between the two figures."
@@ -2314,6 +2354,10 @@
   "A proporção não depende de quanto se tem, e # g é o número que facilita a conta.": {
     "fr": "La proportion ne dépend pas de la quantité, et # g est le nombre qui simplifie le calcul.",
     "en": "The proportion does not depend on how much there is, and # g is the number that makes the computation easy."
+  },
+  "A proporção é entre lados e SENOS dos ângulos, não entre lados e os ângulos em si. Dobrar o ângulo não dobra o lado oposto.": {
+    "fr": "La proportion lie les côtés aux SINUS des angles, pas aux angles eux-mêmes. Doubler l’angle ne double pas le côté opposé.",
+    "en": "The proportion relates sides to the SINES of the angles, not to the angles themselves. Doubling the angle does not double the opposite side."
   },
   "A proporção é xícaras por ovo.": {
     "fr": "La proportion est en tasses par œuf.",
@@ -2947,6 +2991,10 @@
     "fr": "La vitesse par rapport au sol est celle de l’avion plus celle du vent.",
     "en": "The ground speed is the aircraft plus the wind."
   },
+  "A velocidade entra ao QUADRADO. Essa é metade do momento linear, não energia.": {
+    "fr": "La vitesse entre au CARRÉ. Ceci est la moitié de la quantité de mouvement, pas une énergie.",
+    "en": "The speed enters SQUARED. This is half the linear momentum, not energy."
+  },
   "A velocidade entra ao QUADRADO. É a mesma relação do movimento circular, em que a aceleração centrípeta é v ao quadrado sobre o raio.": {
     "fr": "La vitesse entre au CARRÉ. C’est la même relation que dans le mouvement circulaire, où l’accélération centripète vaut v au carré sur le rayon.",
     "en": "The speed enters SQUARED. It is the same relation as in circular motion, where the centripetal acceleration is v squared over the radius."
@@ -3046,6 +3094,10 @@
   "A área máxima é a do quadrado.": {
     "fr": "L’aire maximale est celle du carré.",
     "en": "The greatest area is the square’s."
+  },
+  "A área pelos dois lados e o ângulo entre eles.": {
+    "fr": "L’aire à partir des deux côtés et de l’angle entre eux.",
+    "en": "The area from the two sides and the angle between them."
   },
   "A área total sob a curva vale #, e a tabela só dá o lado esquerdo.": {
     "fr": "L’aire totale sous la courbe vaut #, et la table ne donne que le côté gauche.",
@@ -4655,6 +4707,10 @@
     "fr": "Avec B = #.",
     "en": "With B = #."
   },
+  "Com C obtuso, sen #° = sen #°: a área continua positiva.": {
+    "fr": "Avec C obtus, sin #° = sin #° : l’aire reste positive.",
+    "en": "With C obtuse, sin #° = sin #°: the area stays positive."
+  },
   "Com M igual a # e x igual a #.": {
     "fr": "Avec M égal à # et x égal à #.",
     "en": "With M equal to # and x equal to #."
@@ -5446,6 +5502,14 @@
   "Corte a figura em um retângulo e um triângulo.": {
     "fr": "Découpez la figure en un rectangle et un triangle.",
     "en": "Cut the figure into a rectangle and a triangle."
+  },
+  "Cosseno negativo: o ângulo passa de #°, e o triângulo é obtusângulo.": {
+    "fr": "Cosinus négatif : l’angle dépasse #°, et le triangle est obtusangle.",
+    "en": "Negative cosine: the angle exceeds #°, and the triangle is obtuse."
+  },
+  "Cosseno positivo: o ângulo é agudo, e o triângulo é acutângulo.": {
+    "fr": "Cosinus positif : l’angle est aigu, et le triangle est acutangle.",
+    "en": "Positive cosine: the angle is acute, and the triangle is acute-angled."
   },
   "Cramer: x = Dₓ / D. D é o determinante dos coeficientes; Dₓ troca a coluna de x pelos termos independentes.": {
     "fr": "Cramer : x = Dₓ / D. D est le déterminant des coefficients ; Dₓ remplace la colonne de x par les termes indépendants.",
@@ -6439,6 +6503,14 @@
     "fr": "Doubler la température en kelvins multiplie l’émission par seize.",
     "en": "Doubling the temperature in kelvin multiplies the emission by sixteen."
   },
+  "Dobrar a velocidade de lançamento quadruplica a altura.": {
+    "fr": "Doubler la vitesse de lancement quadruple la hauteur.",
+    "en": "Doubling the launch speed quadruples the height."
+  },
+  "Dobrar a velocidade quadruplica a energia.": {
+    "fr": "Doubler la vitesse quadruple l'énergie.",
+    "en": "Doubling the speed quadruples the energy."
+  },
   "Dobrar o lado não dobra a área: quadruplica.": {
     "fr": "Doubler le côté ne double pas l’aire : elle quadruple.",
     "en": "Doubling the side does not double the area: it quadruples it."
@@ -6446,6 +6518,10 @@
   "Dobrar o tempo de parada reduz a força à metade — é exatamente o que um airbag faz.": {
     "fr": "Doubler le temps d’arrêt réduit la force de moitié — c’est exactement ce que fait un airbag.",
     "en": "Doubling the stopping time halves the force — exactly what an airbag does."
+  },
+  "Dois lados e o ângulo entre eles pedem a lei dos cossenos.": {
+    "fr": "Deux côtés et l’angle entre eux appellent la loi des cosinus.",
+    "en": "Two sides and the angle between them call for the law of cosines."
   },
   "Dois passos: C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) e depois U = ½·C·#². Para nJ, multiplique por #⁹.": {
     "fr": "Deux étapes : C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) puis U = ½·C·#². Pour des nJ, multipliez par #⁹.",
@@ -7991,6 +8067,10 @@
     "fr": "C’est l’ÉNERGIE CINÉTIQUE, en joules. La quantité de mouvement est linéaire en vitesse, pas quadratique, et n’a pas le facteur #/#.",
     "en": "That is the KINETIC ENERGY, in joules. Momentum is linear in velocity, not quadratic, and has no factor of #/#."
   },
+  "Essa é a ENERGIA potencial, em joules. A pergunta pede velocidade, em m/s: falta igualar à cinética e isolar v.": {
+    "fr": "C'est l'ÉNERGIE potentielle, en joules. La question demande une vitesse, en m/s : il reste à l'égaler à l'énergie cinétique et à isoler v.",
+    "en": "That is the potential ENERGY, in joules. The question asks for a speed, in m/s: you still have to set it equal to the kinetic energy and isolate v."
+  },
   "Essa é a INCLINAÇÃO da tangente, a derivada. Falta usar o ponto para achar onde a reta corta o eixo y.": {
     "fr": "C’est la PENTE de la tangente, la dérivée. Il reste à utiliser le point pour trouver où la droite coupe l’axe des ordonnées.",
     "en": "That is the SLOPE of the tangent, the derivative. Using the point to find where the line crosses the y-axis is still missing."
@@ -8491,6 +8571,10 @@
     "fr": "C’est le CÔTÉ du rectangle optimal. La question porte sur l’aire, qui est le produit des deux côtés.",
     "en": "That is the SIDE of the optimal rectangle. The question asks for the area, which is the product of the two sides."
   },
+  "Esse é o MOMENTO LINEAR, em kg·m/s. A energia cinética usa o quadrado da velocidade e divide por #.": {
+    "fr": "C'est la QUANTITÉ DE MOUVEMENT, en kg·m/s. L'énergie cinétique utilise le carré de la vitesse et divise par #.",
+    "en": "That is the LINEAR MOMENTUM, in kg·m/s. Kinetic energy uses the square of the speed and divides by #."
+  },
   "Esse é o MONTANTE. O juro é só a parte que foi acrescentada: M − C.": {
     "fr": "C’est le MONTANT. L’intérêt n’est que la part ajoutée : M − C.",
     "en": "That is the AMOUNT. The interest is only the part added: M − C."
@@ -8510,6 +8594,10 @@
   "Esse é o PRODUTO (c/a). A soma usa b: −b/a.": {
     "fr": "C’est le PRODUIT (c/a). La somme utilise b : −b/a.",
     "en": "That is the PRODUCT (c/a). The sum uses b: −b/a."
+  },
+  "Esse é o TEMPO de subida, em segundos. A pergunta pede altura, em metros.": {
+    "fr": "Ceci est le TEMPS de montée, en secondes. La question demande une hauteur, en mètres.",
+    "en": "That is the TIME of ascent, in seconds. The question asks for a height, in metres."
   },
   "Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por dV/dt, que sai de derivar a relação.": {
     "fr": "C’est le VOLUME à cet instant, et non le taux auquel il croît. La question porte sur dV/dt, qui sort de la dérivation de la relation.",
@@ -8839,6 +8927,10 @@
     "fr": "C’est la valeur de la tangente en π/#, et non celle de sa dérivée.",
     "en": "That is the value of the tangent at π/#, not of its derivative."
   },
+  "Esse é o valor de a², não de a. Falta extrair a raiz quadrada no último passo.": {
+    "fr": "Ceci est la valeur de a², pas de a. Il manque la racine carrée à la dernière étape.",
+    "en": "That is the value of a², not a. The square root in the last step is missing."
+  },
   "Esse é o valor de t = x². Falta voltar a x: x = √#.": {
     "fr": "C’est la valeur de t = x². Il reste à revenir à x : x = √#.",
     "en": "That is the value of t = x². Going back to x is still missing: x = √#."
@@ -8939,9 +9031,17 @@
     "fr": "C’est l’angle en RADIANS. La calculatrice était dans le mauvais mode : passez en degrés.",
     "en": "That is the angle in RADIANS. The calculator was in the wrong mode: switch to degrees."
   },
+  "Esse é o ângulo em RADIANOS. A pergunta pede graus.": {
+    "fr": "Ceci est l’angle en RADIANS. La question demande des degrés.",
+    "en": "That is the angle in RADIANS. The question asks for degrees."
+  },
   "Esse é o ângulo em RADIANOS. O enunciado pede graus: confira o modo da calculadora (DEG, e não RAD).": {
     "fr": "C’est l’angle en RADIANS. L’énoncé demande des degrés : vérifiez le mode de la calculatrice (DEG, et non RAD).",
     "en": "That is the angle in RADIANS. The question asks for degrees: check the calculator mode (DEG, not RAD)."
+  },
+  "Esse é o ângulo oposto ao MENOR lado. O maior ângulo fica sempre em frente ao maior lado — é ele que entra com sinal de menos no numerador.": {
+    "fr": "Ceci est l’angle opposé au PLUS PETIT côté. Le plus grand angle est toujours face au plus grand côté — c’est lui qui entre avec le signe moins au numérateur.",
+    "en": "That is the angle opposite the SHORTEST side. The largest angle always faces the longest side — that is the one entering with a minus sign in the numerator."
   },
   "Esse é o índice antes da redução — a carga do metal, crua. Depois de dividir pelos fatores comuns, o índice é outro.": {
     "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
@@ -9323,6 +9423,10 @@
     "fr": "Il manque la division par #, qui vient du terme ρv²/# de Bernoulli.",
     "en": "Dividing by #, which comes from Bernoulli’s ρv²/# term, is missing."
   },
+  "Faltou dividir por #.": {
+    "fr": "Il manque la division par #.",
+    "en": "You forgot to divide by #."
+  },
   "Faltou dividir por #: cada aresta pertence a duas faces e foi contada duas vezes.": {
     "fr": "Il manque la division par # : chaque arête appartient à deux faces et a été comptée deux fois.",
     "en": "The division by # is missing: each edge belongs to two faces and was counted twice."
@@ -9447,6 +9551,14 @@
     "fr": "Il manque le # : π multiplie le DIAMÈTRE, qui vaut le double du rayon. C = πd = #πr.",
     "en": "The # is missing: π multiplies the DIAMETER, which is twice the radius. C = πd = #πr."
   },
+  "Faltou o cosseno: só a componente da força alinhada ao deslocamento trabalha.": {
+    "fr": "Il manque le cosinus : seule la composante de la force alignée sur le déplacement travaille.",
+    "en": "The cosine is missing: only the component of the force aligned with the displacement does work."
+  },
+  "Faltou o fator # do denominador, que vem do mv²/#.": {
+    "fr": "Il manque le facteur # au dénominateur, qui vient du mv²/#.",
+    "en": "The factor # in the denominator is missing; it comes from the mv²/#."
+  },
   "Faltou o fator # multiplicando a integral de g.": {
     "fr": "Il manque le facteur # multipliant l’intégrale de g.",
     "en": "The factor # multiplying the integral of g is missing."
@@ -9483,6 +9595,10 @@
     "fr": "Il manque le facteur # : comme l’aire avait déjà été divisée par #, il revient en multipliant lorsqu’on isole h.",
     "en": "The factor # is missing: since the area had already been divided by #, it comes back multiplying when h is isolated."
   },
+  "Faltou o fator #: v = √(#gh).": {
+    "fr": "Il manque le facteur # : v = √(#gh).",
+    "en": "The factor # is missing: v = √(#gh)."
+  },
   "Faltou o fator #: β = #·log(I/I₀). O log sozinho dá bels, não decibéis.": {
     "fr": "Il manque le facteur # : β = #·log(I/I₀). Le log seul donne des bels, pas des décibels.",
     "en": "The factor # is missing: β = #·log(I/I₀). The log alone gives bels, not decibels."
@@ -9518,6 +9634,10 @@
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
     "en": "The third is missing: a solid tapering to a vertex has #/# of the volume of the prism or cylinder with the same base and height."
+  },
+  "Faltou o ½: base vezes altura dá um paralelogramo, o triângulo é a metade.": {
+    "fr": "Il manque le ½ : base fois hauteur donne un parallélogramme, le triangle en est la moitié.",
+    "en": "The ½ is missing: base times height gives a parallelogram; the triangle is half of it."
   },
   "Faltou passar # cm para # m: com r em centímetros, r² fica # # vezes maior.": {
     "fr": "Il manque la conversion de # cm en # m : avec r en centimètres, r² devient # # fois plus grand.",
@@ -9726,6 +9846,10 @@
   "Força final × distância supõe força constante igual a #·#. Ela cresce desde #·#: integre.": {
     "fr": "Force finale × distance suppose une force constante égale à #·#. Elle croît depuis #·# : intégrez.",
     "en": "Final force × distance assumes a constant force equal to #·#. It grows from #·#: integrate."
+  },
+  "Força perpendicular ao movimento não realiza trabalho — nem a normal, nem a força centrípeta.": {
+    "fr": "Une force perpendiculaire au mouvement ne travaille pas — ni la normale, ni la force centripète.",
+    "en": "A force perpendicular to the motion does no work — neither the normal force nor the centripetal force."
   },
   "Força × distância usa uma força constante. Aqui F depende de x: integre.": {
     "fr": "Force × distance suppose une force constante. Ici F dépend de x : intégrez.",
@@ -10051,6 +10175,10 @@
     "fr": "Nous isolons le cosinus et substituons.",
     "en": "We isolate the cosine and substitute."
   },
+  "Isolamos o cosseno na lei dos cossenos.": {
+    "fr": "Nous isolons le cosinus dans la loi des cosinus.",
+    "en": "We isolate the cosine in the law of cosines."
+  },
   "Isolamos o cosseno.": {
     "fr": "Nous isolons le cosinus.",
     "en": "We isolate the cosine."
@@ -10275,6 +10403,10 @@
     "fr": "Ce n’est pas une valeur : c’est un avertissement qu’il reste à simplifier.",
     "en": "That is not a value: it is a warning that something must be simplified."
   },
+  "Isso supõe um ângulo reto entre a e b. Calcule o ângulo pela lei dos cossenos antes.": {
+    "fr": "Cela suppose un angle droit entre a et b. Calculez d’abord l’angle par la loi des cosinus.",
+    "en": "That assumes a right angle between a and b. Work out the angle with the law of cosines first."
+  },
   "Isso usa a ÁREA da esfera. O teorema integra o divergente no VOLUME: (#/#)πR³.": {
     "fr": "Cela utilise l’AIRE de la sphère. Le théorème intègre la divergence dans le VOLUME : (#/#)πR³.",
     "en": "That uses the AREA of the sphere. The theorem integrates the divergence over the VOLUME: (#/#)πR³."
@@ -10378,6 +10510,10 @@
   "L'Hôpital: derivamos o numerador e o denominador SEPARADAMENTE (não é a regra do quociente).": {
     "fr": "L’Hôpital : nous dérivons le numérateur et le dénominateur SÉPARÉMENT (ce n’est pas la règle du quotient).",
     "en": "L’Hôpital: we differentiate numerator and denominator SEPARATELY (this is not the quotient rule)."
+  },
+  "Lado sobre o seno do ângulo oposto é constante: #/sen #° = x/sen #°. Isole x.": {
+    "fr": "Un côté divisé par le sinus de l’angle opposé est constant : #/sin #° = x/sin #°. Isolez x.",
+    "en": "A side over the sine of its opposite angle is constant: #/sin #° = x/sin #°. Isolate x."
   },
   "Laterais diferentes: o limite não existe.": {
     "fr": "Limites latérales différentes : la limite n’existe pas.",
@@ -11407,6 +11543,10 @@
     "fr": "Là, la distance focale satisfait c² = a² + b².",
     "en": "There, the focal distance satisfies c² = a² + b²."
   },
+  "Nem o caminho importa: só a diferença de altura.": {
+    "fr": "Le chemin n'importe pas non plus : seule la différence de hauteur compte.",
+    "en": "The path does not matter either: only the difference in height."
+  },
   "Nenhum z faz # dar um número diferente de zero: contradição.": {
     "fr": "Aucun z ne fait de # un nombre différent de zéro : contradiction.",
     "en": "No z makes # anything other than zero: a contradiction."
@@ -11619,6 +11759,10 @@
     "fr": "Au point de rencontre, les deux droites ont le même y : nous égalons.",
     "en": "At the meeting point the two lines have the same y: we set them equal."
   },
+  "No ponto mais alto, toda a energia cinética virou potencial.": {
+    "fr": "Au point le plus haut, toute l'énergie cinétique est devenue potentielle.",
+    "en": "At the highest point, all the kinetic energy has become potential."
+  },
   "No ponto, y′ = #.": {
     "fr": "Au point, y′ = #.",
     "en": "At the point, y′ = #."
@@ -11634,6 +11778,10 @@
   "No regime permanente, a grandeza para de mudar.": {
     "fr": "En régime permanent, la grandeur cesse de changer.",
     "en": "In the steady state, the quantity stops changing."
+  },
+  "No topo a velocidade é zero: toda a energia cinética vira potencial. Iguale v²/# a g·h, com v = # ao quadrado.": {
+    "fr": "Au sommet la vitesse est nulle : toute l'énergie cinétique devient potentielle. Égalez v²/# à g·h, avec v = # au carré.",
+    "en": "At the top the speed is zero: all the kinetic energy becomes potential. Set v²/# equal to g·h, with v = # squared."
   },
   "No triângulo ABC, os três ângulos somam #°.": {
     "fr": "Dans le triangle ABC, les trois angles font #°.",
@@ -12070,6 +12218,10 @@
   "O arco é um comprimento — mede-se em cm, não em cm².": {
     "fr": "L’arc est une longueur — il se mesure en cm, et non en cm².",
     "en": "The arc is a length — it is measured in cm, not in cm²."
+  },
+  "O arco-cosseno devolve o ângulo.": {
+    "fr": "L’arc cosinus redonne l’angle.",
+    "en": "The arccosine gives back the angle."
   },
   "O arco-tangente cru não distingue o quadrante.": {
     "fr": "L’arc tangente brut ne distingue pas le quadrant.",
@@ -12995,6 +13147,14 @@
     "fr": "Le plus grand x admissible est la racine de cette limite.",
     "en": "The largest permissible x is the root of this limit."
   },
+  "O maior ângulo fica oposto ao maior lado (#). Use a lei dos cossenos para ele: cos = (#² + #² − #²) / (# · # · #).": {
+    "fr": "Le plus grand angle est opposé au plus grand côté (#). Utilisez la loi des cosinus pour lui : cos = (#² + #² − #²) / (# · # · #).",
+    "en": "The largest angle lies opposite the longest side (#). Use the law of cosines for it: cos = (#² + #² − #²) / (# · # · #)."
+  },
+  "O maior ângulo fica oposto ao maior lado, que aqui é a.": {
+    "fr": "Le plus grand angle est opposé au plus grand côté, qui est ici a.",
+    "en": "The largest angle lies opposite the longest side, which here is a."
+  },
   "O mais perto é com cos θ = # e o mais longe com cos θ = −#: substitua e calcule p/(# + e) e p/(# − e).": {
     "fr": "Le plus proche est avec cos θ = # et le plus loin avec cos θ = −# : substituez et calculez p/(# + e) et p/(# − e).",
     "en": "Closest is with cos θ = # and farthest with cos θ = −#: substitute and compute p/(# + e) and p/(# − e)."
@@ -13054,6 +13214,10 @@
   "O mesmo parêntese aparece nos dois grupos: ele vira o fator comum.": {
     "fr": "La même parenthèse apparaît dans les deux groupes : elle devient le facteur commun.",
     "en": "The same parenthesis shows up in both groups: it becomes the common factor."
+  },
+  "O mesmo trabalho em menos tempo exige mais potência — não mais energia.": {
+    "fr": "Le même travail en moins de temps exige plus de puissance — pas plus d'énergie.",
+    "en": "The same work in less time demands more power — not more energy."
   },
   "O mnemônico: no #º tudo é positivo; no #º só o seno; no #º só a tangente; no #º só o cosseno.": {
     "fr": "Le moyen mnémotechnique : au #e tout est positif ; au #e seul le sinus ; au #e seule la tangente ; au #e seul le cosinus.",
@@ -13831,6 +13995,10 @@
     "fr": "Le signe du second terme est faux : le discriminant est b au carré MOINS quatre fois le produit.",
     "en": "The sign of the second term is wrong: the discriminant is b squared MINUS four times the product."
   },
+  "O sinal do termo de correção está trocado: a fórmula tem MENOS #bc·cos A.": {
+    "fr": "Le signe du terme correctif est inversé : la formule porte MOINS #bc·cos A.",
+    "en": "The sign of the correction term is flipped: the formula has MINUS #bc·cos A."
+  },
   "O sinal do termo do meio acompanha o sinal da parcela do binômio. Confira se está diante de uma soma ou de uma diferença.": {
     "fr": "Le signe du terme du milieu suit le signe du terme du binôme. Vérifiez si vous êtes devant une somme ou une différence.",
     "en": "The sign of the middle term follows the sign of the binomial’s term. Check whether you are facing a sum or a difference."
@@ -14239,6 +14407,10 @@
     "fr": "Le travail total est le même : ouvriers × jours ne change pas.",
     "en": "The total work is the same: workers × days does not change."
   },
+  "O trabalho usa COSSENO. O seno aparece no torque, que mede giro, não deslocamento alinhado.": {
+    "fr": "Le travail utilise le COSINUS. Le sinus apparaît dans le moment de force, qui mesure la rotation, pas un déplacement aligné.",
+    "en": "Work uses COSINE. Sine appears in torque, which measures turning, not aligned displacement."
+  },
   "O trabalho usa a VARIAÇÃO de volume, não o volume final. Só a expansão realiza trabalho.": {
     "fr": "Le travail utilise la VARIATION de volume, pas le volume final. Seule la dilatation effectue un travail.",
     "en": "The work uses the CHANGE in volume, not the final volume. Only the expansion does work."
@@ -14498,6 +14670,10 @@
   "O ângulo oposto ao maior lado é reto.": {
     "fr": "L’angle opposé au plus grand côté est droit.",
     "en": "The angle opposite the longest side is right."
+  },
+  "O ângulo, e o seno dele.": {
+    "fr": "L’angle, puis son sinus.",
+    "en": "The angle, and then its sine."
   },
   "O índice conta átomos na fórmula, e por isso multiplica a massa.": {
     "fr": "L’indice compte les atomes de la formule, et multiplie donc la masse.",
@@ -15711,6 +15887,10 @@
     "fr": "Pythagore est vrai à tout instant : c’est la relation à dériver.",
     "en": "Pythagoras holds at every instant: that is the relation to differentiate."
   },
+  "Pitágoras é o caso particular da lei dos cossenos para o ângulo reto.": {
+    "fr": "Pythagore est le cas particulier de la loi des cosinus pour un angle droit.",
+    "en": "Pythagoras is the special case of the law of cosines for a right angle."
+  },
   "Pomos # em evidência do lado de y.": {
     "fr": "Nous mettons # en facteur du côté de y.",
     "en": "We factor # out on the y side."
@@ -15803,6 +15983,14 @@
     "fr": "La puissance est l'énergie par temps.",
     "en": "Power is energy per time."
   },
+  "Potência é trabalho DIVIDIDO por tempo. Multiplicar daria uma grandeza sem significado aqui.": {
+    "fr": "La puissance est un travail DIVISÉ par le temps. Multiplier donnerait une grandeur sans signification ici.",
+    "en": "Power is work DIVIDED by time. Multiplying would give a quantity with no meaning here."
+  },
+  "Potência é trabalho por tempo: # J divididos pelos # s.": {
+    "fr": "La puissance est un travail par temps : # J divisés par les # s.",
+    "en": "Power is work per time: # J divided by the # s."
+  },
   "Preencha na ordem de ENERGIA, não na ordem dos números: o #s vem antes do #d. Um subnível vazio tem zero, e isso também é resposta.": {
     "fr": "Remplissez dans l’ordre de l’ÉNERGIE, et non des numéros : le #s vient avant le #d. Une sous-couche vide vaut zéro, et c’est aussi une réponse.",
     "en": "Fill in order of ENERGY, not of numbers: the #s comes before the #d. An empty subshell holds zero, and that is an answer too."
@@ -15850,6 +16038,10 @@
   "Primeiro achamos onde as curvas se cruzam.": {
     "fr": "D’abord nous trouvons où les courbes se croisent.",
     "en": "First we find where the curves cross."
+  },
+  "Primeiro ache o ângulo entre os lados # e # pela lei dos cossenos; depois use área = ½·#·#·sen C.": {
+    "fr": "Trouvez d’abord l’angle entre les côtés # et # par la loi des cosinus ; utilisez ensuite aire = ½·#·#·sin C.",
+    "en": "First find the angle between sides # and # with the law of cosines; then use area = ½·#·#·sin C."
   },
   "Primeiro b × c, depois o escalar com a, e por fim o módulo.": {
     "fr": "D’abord b × c, puis le scalaire avec a, et enfin le module.",
@@ -16450,6 +16642,10 @@
   "Sem x significa expoente zero.": {
     "fr": "Sans x signifie exposant nul.",
     "en": "No x means exponent zero."
+  },
+  "Sem ângulo dado, a lei dos cossenos dá o ângulo C entre a e b.": {
+    "fr": "Sans angle donné, la loi des cosinus fournit l’angle C entre a et b.",
+    "en": "With no angle given, the law of cosines provides the angle C between a and b."
   },
   "Semelhança é proporção, não diferença constante: os segmentos são multiplicados pela razão, não somados a ela.": {
     "fr": "La similitude est une proportion, et non une différence constante : les segments sont multipliés par le rapport, pas additionnés à lui.",
@@ -17171,6 +17367,10 @@
     "fr": "Nous substituons le rayon.",
     "en": "We substitute the radius."
   },
+  "Substituímos os três lados, cada um ao quadrado.": {
+    "fr": "Nous remplaçons les trois côtés, chacun au carré.",
+    "en": "We substitute the three sides, each squared."
+  },
   "Substituímos os valores conhecidos.": {
     "fr": "Nous substituons les valeurs connues.",
     "en": "We substitute the known values."
@@ -17755,6 +17955,10 @@
     "fr": "Nous prenons l'arc-cosinus.",
     "en": "We take the arccosine."
   },
+  "Tomando a como base, a altura é b·sen C: a área é metade da base vezes a altura.": {
+    "fr": "En prenant a comme base, la hauteur vaut b·sin C : l’aire est la moitié de la base fois la hauteur.",
+    "en": "Taking a as the base, the height is b·sin C: the area is half the base times the height."
+  },
   "Tomando o arco-tangente.": {
     "fr": "En prenant l'arc-tangente.",
     "en": "Taking the arctangent."
@@ -17770,6 +17974,10 @@
   "Totalmente submerso, o corpo desce com a resultante.": {
     "fr": "Entièrement immergé, le corps descend sous l’effet de la résultante.",
     "en": "Fully submerged, the body goes down under the net force."
+  },
+  "Trabalho negativo: a força se opõe ao movimento, como o atrito.": {
+    "fr": "Travail négatif : la force s'oppose au mouvement, comme le frottement.",
+    "en": "Negative work: the force opposes the motion, like friction."
   },
   "Trabalho é força vezes deslocamento.": {
     "fr": "Le travail est la force fois le déplacement.",
@@ -18223,6 +18431,10 @@
     "fr": "Fois l’aire de la base.",
     "en": "Times the base area."
   },
+  "Você aplicou Pitágoras direto, o que só vale para ângulo de #°. Com outro ângulo é preciso o termo de correção −#bc·cos A.": {
+    "fr": "Vous avez appliqué Pythagore directement, ce qui ne vaut que pour un angle de #°. Avec un autre angle il faut le terme correctif −#bc·cos A.",
+    "en": "You applied Pythagoras directly, which only holds for an angle of #°. With any other angle you need the correction term −#bc·cos A."
+  },
   "Você aplicou a proporção direto sobre as massas. Os coeficientes contam MOLÉCULAS, não gramas — é preciso passar pelos mols antes e depois.": {
     "fr": "Vous avez appliqué la proportion directement aux masses. Les coefficients comptent des MOLÉCULES, pas des grammes — il faut passer par les moles avant et après.",
     "en": "You applied the proportion straight to the masses. The coefficients count MOLECULES, not grams — you have to go through moles before and after."
@@ -18362,6 +18574,10 @@
   "Você usou c² = a² − b², que é a relação da ELIPSE. Na hipérbole os termos se somam: c² = a² + b².": {
     "fr": "Vous avez utilisé c² = a² − b², qui est la relation de l’ELLIPSE. Dans l’hyperbole les termes s’additionnent : c² = a² + b².",
     "en": "You used c² = a² − b², which is the ELLIPSE relation. In the hyperbola the terms add: c² = a² + b²."
+  },
+  "Você usou o cosseno de C na área. A área usa o SENO; o cosseno só serviu para achar C.": {
+    "fr": "Vous avez utilisé le cosinus de C dans l’aire. L’aire utilise le SINUS ; le cosinus n’a servi qu’à trouver C.",
+    "en": "You used the cosine of C in the area. The area uses the SINE; the cosine only served to find C."
   },
   "Você usou o cosseno. O cateto OPOSTO ao ângulo se relaciona pelo seno; o cosseno trata do cateto adjacente.": {
     "fr": "Vous avez utilisé le cosinus. La cathète OPPOSÉE à l’angle se relie par le sinus ; le cosinus concerne la cathète adjacente.",
@@ -19171,6 +19387,10 @@
     "fr": "« Appartient » s’écrit ∈, et l’ensemble vient après : nombre ∈ ℕ.",
     "en": "“Belongs to” is ∈, and the set comes after: number ∈ ℕ."
   },
+  "½·a·b só vale com ângulo reto entre os lados. Com #°, multiplique por sen #°.": {
+    "fr": "½·a·b ne vaut que si l’angle entre les côtés est droit. Avec #°, multipliez par sin #°.",
+    "en": "½·a·b only holds when the angle between the sides is right. With #°, multiply by sin #°."
+  },
   "À direita do bico a expressão é positiva e o módulo não muda nada.": {
     "fr": "À droite du pic, l'expression est positive et le module ne change rien.",
     "en": "To the right of the cusp the expression is positive and the absolute value changes nothing."
@@ -19186,6 +19406,10 @@
   "À pressão constante, W = p·ΔV. Use p em Pa (# atm = # × # # Pa) e ΔV em m³ (os # L divididos por #).": {
     "fr": "À pression constante, W = p·ΔV. Utilisez p en Pa (# atm = # × # # Pa) et ΔV en m³ (les # L divisés par #).",
     "en": "At constant pressure, W = p·ΔV. Use p in Pa (# atm = # × # # Pa) and ΔV in m³ (the # L divided by #)."
+  },
+  "Área = ½·#·#·sen #°: metade do produto dos dois lados vezes o seno do ângulo entre eles.": {
+    "fr": "Aire = ½·#·#·sin #° : la moitié du produit des deux côtés fois le sinus de l’angle entre eux.",
+    "en": "Area = ½·#·#·sin #°: half the product of the two sides times the sine of the angle between them."
   },
   "Área e base não se subtraem: elas têm unidades diferentes. A relação entre elas é um produto, então isolar h pede uma divisão.": {
     "fr": "L’aire et la base ne se soustraient pas : leurs unités diffèrent. La relation entre elles est un produit, donc isoler h demande une division.",
@@ -19479,9 +19703,17 @@
     "fr": "C’est le tetraedro.",
     "en": "It is the tetraedro."
   },
+  "É por isso que a velocidade final não depende da massa.": {
+    "fr": "Voilà pourquoi la vitesse finale ne dépend pas de la masse.",
+    "en": "That is why the final speed does not depend on the mass."
+  },
   "É por isso que assoprar a comida esfria mais rápido que apenas esperar.": {
     "fr": "C’est pourquoi souffler sur un plat le refroidit plus vite que d’attendre.",
     "en": "That is why blowing on food cools it faster than just waiting."
+  },
+  "É por isso que colisões a alta velocidade são tão mais destrutivas.": {
+    "fr": "C'est pourquoi les collisions à grande vitesse sont bien plus destructrices.",
+    "en": "That is why high-speed collisions are so much more destructive."
   },
   "É por isso que massa e peso crescem muito mais rápido que a altura.": {
     "fr": "C’est pour cela que la masse et le poids croissent bien plus vite que la hauteur.",
