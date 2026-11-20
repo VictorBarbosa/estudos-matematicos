@@ -1,6 +1,7 @@
 import type { Passo } from '@core/math/tipos/tipos';
 import { resolverPorRegras } from '@core/enunciados/models/regras-de-passos';
 import { REGRAS_POR_TOPICO } from '@core/enunciados/models/regras.catalogo';
+import { MOL_E_MASSA_MOLAR } from '@core/enunciados/models/resolvedores-quimica';
 
 /**
  * Os passos de resolução das perguntas do banco.
@@ -1022,6 +1023,14 @@ const POR_TOPICO: Readonly<Record<string, readonly Resolvedor[]>> = {
   'angulos-e-triangulos': ANGULOS,
   poliedros: POLIEDROS,
   'solidos-e-volumes': SOLIDOS,
+  /*
+   * Química lê a fórmula do texto, e por isso mora num arquivo só dela: o
+   * molde das regras declarativas não distingue o `3` do `CaCO3` de um dado do
+   * exercício.
+   */
+  'mol-e-massa-molar': MOL_E_MASSA_MOLAR.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
 };
 
 /**
