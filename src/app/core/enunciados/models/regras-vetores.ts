@@ -84,7 +84,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a componente x do vetor unitário na direção de (#, #)? (duas casas decimais)',
       '\\hat{u}_x = \\frac{x}{\\sqrt{x^2 + y^2}}',
-      '\\hat{u}_x = \\frac{#}{\\sqrt{#^2 + #^2}}',
+      '\\hat{u}_x = \\frac{#1}{\\sqrt{#1^2 + #2^2}}',
       (v) => v[0]! / Math.hypot(v[0]!, v[1]!),
       2,
     ],
@@ -148,21 +148,21 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o ângulo entre (#, #) e (#, #)? (em graus, duas casas decimais)',
       '\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot #}{\\sqrt{#^2 + #^2}\\sqrt{#^2 + #^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #3 + #2 \\cdot #4}{\\sqrt{#1^2 + #2^2}\\sqrt{#3^2 + #4^2}}\\right)',
       (v) => anguloEntre(v[0]!, v[1]!, 0, v[2]!, v[3]!, 0),
       2,
     ],
     [
       'Qual é o ângulo entre os vetores (#, #) e (#, #), em graus? (duas casas decimais)',
       '\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot #}{\\sqrt{#^2 + #^2}\\sqrt{#^2 + #^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #3 + #2 \\cdot #4}{\\sqrt{#1^2 + #2^2}\\sqrt{#3^2 + #4^2}}\\right)',
       (v) => anguloEntre(v[0]!, v[1]!, 0, v[2]!, v[3]!, 0),
       2,
     ],
     [
       'Qual é a projeção de (#, #) sobre a direção de (#, #)? (duas casas decimais)',
       'proj = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}',
-      'proj = \\frac{# \\cdot # + # \\cdot #}{\\sqrt{#^2 + #^2}}',
+      'proj = \\frac{#1 \\cdot #3 + #2 \\cdot #4}{\\sqrt{#3^2 + #4^2}}',
       (v) => (v[0]! * v[2]! + v[1]! * v[3]!) / Math.hypot(v[2]!, v[3]!),
       2,
     ],
@@ -229,14 +229,14 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o ângulo entre os vetores (#, #, #) e (#, #, #), em graus? Arredonde para duas casas decimais.',
       '\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot # + # \\cdot #}{\\sqrt{#^2+#^2+#^2}\\sqrt{#^2+#^2+#^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6}{\\sqrt{#1^2+#2^2+#3^2}\\sqrt{#4^2+#5^2+#6^2}}\\right)',
       (v) => anguloEntre(v[0]!, v[1]!, v[2]!, v[3]!, v[4]!, v[5]!),
       2,
     ],
     [
       'Qual é o ângulo, em graus, entre os vetores (#, #, #) e (#, #, #)? (duas casas decimais)',
       '\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot # + # \\cdot #}{\\sqrt{#^2+#^2+#^2}\\sqrt{#^2+#^2+#^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6}{\\sqrt{#1^2+#2^2+#3^2}\\sqrt{#4^2+#5^2+#6^2}}\\right)',
       (v) => anguloEntre(v[0]!, v[1]!, v[2]!, v[3]!, v[4]!, v[5]!),
       2,
     ],
@@ -268,7 +268,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a componente x do vetor unitário na direção de (#, #, #)? Arredonde para duas casas decimais.',
       '\\hat{u}_x = \\frac{x}{\\sqrt{x^2+y^2+z^2}}',
-      '\\hat{u}_x = \\frac{#}{\\sqrt{#^2 + #^2 + #^2}}',
+      '\\hat{u}_x = \\frac{#1}{\\sqrt{#1^2 + #2^2 + #3^2}}',
       (v) => v[0]! / Math.hypot(v[0]!, v[1]!, v[2]!),
       2,
     ],
@@ -314,7 +314,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a distância do ponto P(#, #, #) ao plano #x + #y + #z = #? (duas casas decimais)',
       'd = \\frac{|ax_0 + by_0 + cz_0 - d|}{\\sqrt{a^2 + b^2 + c^2}}',
-      'd = \\frac{|# \\cdot # + # \\cdot # + # \\cdot # - #|}{\\sqrt{#^2 + #^2 + #^2}}',
+      'd = \\frac{|#4 \\cdot #1 + #5 \\cdot #2 + #6 \\cdot #3 - #7|}{\\sqrt{#4^2 + #5^2 + #6^2}}',
       (v) =>
         Math.abs(v[3]! * v[0]! + v[4]! * v[1]! + v[5]! * v[2]! - v[6]!) /
         Math.hypot(v[3]!, v[4]!, v[5]!),
@@ -323,14 +323,14 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o ângulo entre o vetor n = (#, #, #) e o vetor m = (#, #, #), em graus? (duas casas decimais)',
       '\\cos\\theta = \\frac{\\vec{n}\\cdot\\vec{m}}{|\\vec{n}||\\vec{m}|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot # + # \\cdot #}{\\sqrt{#^2+#^2+#^2}\\sqrt{#^2+#^2+#^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6}{\\sqrt{#1^2+#2^2+#3^2}\\sqrt{#4^2+#5^2+#6^2}}\\right)',
       (v) => anguloEntre(v[0]!, v[1]!, v[2]!, v[3]!, v[4]!, v[5]!),
       2,
     ],
     [
       'Dois planos têm vetores normais (#, #, #) e (#, #, #). Qual é o ângulo agudo entre eles, em graus? (duas casas decimais)',
       '\\cos\\theta = \\frac{|\\vec{n}_1\\cdot\\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}',
-      '\\theta = \\arccos\\left(\\frac{# \\cdot # + # \\cdot # + # \\cdot #}{\\sqrt{#^2+#^2+#^2}\\sqrt{#^2+#^2+#^2}}\\right)',
+      '\\theta = \\arccos\\left(\\frac{#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6}{\\sqrt{#1^2+#2^2+#3^2}\\sqrt{#4^2+#5^2+#6^2}}\\right)',
       (v) => {
         const angulo = anguloEntre(v[0]!, v[1]!, v[2]!, v[3]!, v[4]!, v[5]!);
         return Math.min(angulo, 180 - angulo);
