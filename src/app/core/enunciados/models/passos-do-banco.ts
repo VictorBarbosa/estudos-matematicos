@@ -1,7 +1,11 @@
 import type { Passo } from '@core/math/tipos/tipos';
 import { resolverPorRegras } from '@core/enunciados/models/regras-de-passos';
 import { REGRAS_POR_TOPICO } from '@core/enunciados/models/regras.catalogo';
-import { MOL_E_MASSA_MOLAR } from '@core/enunciados/models/resolvedores-quimica';
+import {
+  GASES_IDEAIS,
+  MOL_E_MASSA_MOLAR,
+  SOLUCOES,
+} from '@core/enunciados/models/resolvedores-quimica';
 
 /**
  * Os passos de resolução das perguntas do banco.
@@ -1029,6 +1033,12 @@ const POR_TOPICO: Readonly<Record<string, readonly Resolvedor[]>> = {
    * exercício.
    */
   'mol-e-massa-molar': MOL_E_MASSA_MOLAR.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
+  'gases-ideais': GASES_IDEAIS.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
+  'solucoes-e-concentracao': SOLUCOES.map(
     (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
   ),
 };

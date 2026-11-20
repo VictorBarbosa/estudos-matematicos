@@ -783,6 +783,18 @@
     "fr": "La concentration finale est le rapport entre les deux totaux.",
     "en": "The final concentration is the ratio of the two totals."
   },
+  "A concentração final é o soluto total dividido pelo volume total.": {
+    "fr": "La concentration finale est le soluté total divisé par le volume total.",
+    "en": "The final concentration is the total solute divided by the total volume."
+  },
+  "A concentração vezes o volume em litros dá a quantidade de soluto.": {
+    "fr": "La concentration fois le volume en litres donne la quantité de soluté.",
+    "en": "The concentration times the volume in litres gives the amount of solute."
+  },
+  "A concentração é a quantidade de soluto dividida pelo volume em litros.": {
+    "fr": "La concentration est la quantité de soluté divisée par le volume en litres.",
+    "en": "The concentration is the amount of solute divided by the volume in litres."
+  },
   "A concentração é mols por LITRO: passe a massa a mols pela massa molar, e o volume de mL para L dividindo por #.": {
     "fr": "La concentration est en moles par LITRE : convertissez la masse en moles par la masse molaire, et le volume de mL en L en divisant par #.",
     "en": "Concentration is moles per LITRE: turn the mass into moles with the molar mass, and the volume from mL to L by dividing by #."
@@ -942,6 +954,10 @@
   "A curva de nível é f(x, y) = k: o k é o próprio valor de f no ponto (#, #).": {
     "fr": "La courbe de niveau est f(x, y) = k : le k est justement la valeur de f au point (#, #).",
     "en": "The level curve is f(x, y) = k: the k is precisely the value of f at the point (#, #)."
+  },
+  "A densidade dá a massa do litro inteiro de solução.": {
+    "fr": "La densité donne la masse du litre entier de solution.",
+    "en": "The density gives the mass of the whole litre of solution."
   },
   "A densidade tem de estar em kg/m: # g/m = # kg/m. Sem converter, a velocidade sai cerca de # vezes menor.": {
     "fr": "La masse linéique doit être en kg/m : # g/m = # kg/m. Sans conversion, la vitesse sort environ # fois trop petite.",
@@ -1570,6 +1586,10 @@
   "A força é proporcional ao produto das cargas e a #/r².": {
     "fr": "La force est proportionnelle au produit des charges et à #/r².",
     "en": "The force is proportional to the product of the charges and to #/r²."
+  },
+  "A fração em quantidade de matéria é a parte sobre o todo.": {
+    "fr": "La fraction molaire est la partie sur le tout.",
+    "en": "The mole fraction is the part over the whole."
   },
   "A fração está invertida, e por isso o resultado passou de #%. O obtido vai em cima: compara-se o que saiu com o que era possível.": {
     "fr": "La fraction est inversée, et c’est pourquoi le résultat dépasse #%. L’obtenu va au numérateur : on compare ce qui est sorti à ce qui était possible.",
@@ -2559,6 +2579,10 @@
     "fr": "La pondération n’a utilisé que les masses. Le bon poids est la capacité thermique, qui vaut masse FOIS chaleur massique.",
     "en": "The weighting used only the masses. The right weight is the heat capacity, which is mass TIMES specific heat."
   },
+  "A porcentagem em massa é a razão entre as duas, vezes cem.": {
+    "fr": "Le pourcentage massique est le rapport des deux, multiplié par cent.",
+    "en": "The mass percentage is the ratio of the two, times one hundred."
+  },
   "A porcentagem é a parte sobre o todo.": {
     "fr": "Le pourcentage, c’est la partie sur le tout.",
     "en": "The percentage is the part over the whole."
@@ -2587,9 +2611,25 @@
     "fr": "La pression à une profondeur est la pression atmosphérique plus le poids de la colonne de fluide.",
     "en": "Pressure at a depth is atmospheric plus the weight of the fluid column."
   },
+  "A pressão não muda, então o volume e a temperatura sobem juntos.": {
+    "fr": "La pression ne change pas, donc le volume et la température montent ensemble.",
+    "en": "The pressure does not change, so volume and temperature rise together."
+  },
+  "A pressão parcial é a fração da quantidade total vezes a pressão total.": {
+    "fr": "La pression partielle est la fraction de la quantité totale fois la pression totale.",
+    "en": "The partial pressure is the fraction of the total amount times the total pressure."
+  },
+  "A pressão parcial é essa fração da pressão total.": {
+    "fr": "La pression partielle est cette fraction de la pression totale.",
+    "en": "The partial pressure is that fraction of the total pressure."
+  },
   "A pressão precisa estar em pascal: # atm = # # Pa. Em atmosferas, o resultado não sai em joules.": {
     "fr": "La pression doit être en pascals : # atm = # # Pa. En atmosphères, le résultat ne sort pas en joules.",
     "en": "The pressure must be in pascals: # atm = # # Pa. In atmospheres, the result does not come out in joules."
+  },
+  "A pressão total sai da equação dos gases, com a temperatura em kelvin.": {
+    "fr": "La pression totale se déduit de l’équation des gaz, avec la température en kelvins.",
+    "en": "The total pressure comes from the gas equation, with the temperature in kelvin."
   },
   "A primeira derivada é a/x; escrita como potência, a·x⁻¹.": {
     "fr": "La dérivée première vaut a/x ; écrite en puissance, a·x⁻¹.",
@@ -3215,6 +3255,10 @@
     "fr": "La réponse est demandée en litres, et # m³ font # L.",
     "en": "The answer is asked for in litres, and # m³ is # L."
   },
+  "A resposta é pedida em mililitros: multiplicamos por mil.": {
+    "fr": "La réponse est demandée en millilitres : nous multiplions par mille.",
+    "en": "The answer is asked for in millilitres: we multiply by one thousand."
+  },
   "A resposta.": {
     "fr": "La réponse.",
     "en": "The answer."
@@ -3531,6 +3575,10 @@
     "fr": "La température s’exprime en kelvins : ajoutez # aux degrés Celsius. L’équation dit que le volume est proportionnel à T, et une proportion exige une échelle dont le zéro est le vrai zéro.",
     "en": "Temperature goes in kelvin: add # to the Celsius reading. The equation says volume is proportional to T, and proportion needs a scale whose zero is the real zero."
   },
+  "A temperatura entra sempre em kelvin.": {
+    "fr": "La température entre toujours en kelvins.",
+    "en": "Temperature always goes in kelvin."
+  },
   "A temperatura entra sempre em kelvin: em celsius a proporcionalidade se quebra.": {
     "fr": "La température entre toujours en kelvins : en degrés celsius la proportionnalité se brise.",
     "en": "Temperature always goes in kelvin: in celsius the proportionality breaks down."
@@ -3546,6 +3594,10 @@
   "A temperatura ficou em graus Celsius. A equação diz que o volume é proporcional a T, e isso só vale numa escala cujo zero é o zero de verdade: some #.": {
     "fr": "La température est restée en degrés Celsius. L’équation dit que le volume est proportionnel à T, et cela n’est vrai que sur une échelle dont le zéro est le vrai zéro : ajoutez #.",
     "en": "The temperature stayed in Celsius. The equation says volume is proportional to T, and that only holds on a scale whose zero is the real zero: add #."
+  },
+  "A temperatura não muda, então o produto da pressão pelo volume é constante.": {
+    "fr": "La température ne change pas, donc le produit de la pression par le volume est constant.",
+    "en": "The temperature does not change, so the product of pressure and volume is constant."
   },
   "A temperatura precisa estar em KELVIN. Em celsius, o zero da escala é arbitrário e a proporcionalidade se quebra — a # °C o resultado seria zero.": {
     "fr": "La température doit être en KELVINS. En celsius, le zéro de l'échelle est arbitraire et la proportionnalité se brise — à # °C le résultat serait nul.",
@@ -7330,6 +7382,10 @@
   "Diferença de temperatura faz o papel da tensão, e o fluxo, o da corrente.": {
     "fr": "L’écart de température joue le rôle de la tension, et le flux celui du courant.",
     "en": "The temperature difference plays the role of voltage, and the flux that of current."
+  },
+  "Diluir acrescenta água, e a quantidade de soluto não muda.": {
+    "fr": "Diluer ajoute de l’eau, et la quantité de soluté ne change pas.",
+    "en": "Diluting adds water, and the amount of solute does not change."
   },
   "Distribua os elétrons na ordem de energia e olhe só a ÚLTIMA camada — não o total de elétrons do átomo.": {
     "fr": "Répartissez les électrons dans l’ordre des énergies et ne regardez que la DERNIÈRE couche — pas le total d’électrons de l’atome.",
@@ -12643,6 +12699,10 @@
     "fr": "Inversé : de |x − a|/b < # on tire R = b ; de b·|x − a| < # on tire R = #/b.",
     "en": "Flipped: from |x − a|/b < # comes R = b; from b·|x − a| < # comes R = #/b."
   },
+  "Isolamos a grandeza que falta: a quantidade de matéria.": {
+    "fr": "Nous isolons la grandeur manquante : la quantité de matière.",
+    "en": "We isolate the missing quantity: the amount of substance."
+  },
   "Isolamos a grandeza que falta: pressão.": {
     "fr": "Nous isolons la grandeur manquante : la pression.",
     "en": "We isolate the missing quantity: pressure."
@@ -12766,6 +12826,10 @@
   "Isolando a altura.": {
     "fr": "En isolant la hauteur.",
     "en": "Isolating the height."
+  },
+  "Isolando a concentração final.": {
+    "fr": "En isolant la concentration finale.",
+    "en": "Isolating the final concentration."
   },
   "Isolando a distância procurada.": {
     "fr": "En isolant la distance recherchée.",
@@ -14762,6 +14826,10 @@
   "Num gás ideal as partículas não se enxergam, e as pressões simplesmente se somam.": {
     "fr": "Dans un gaz parfait les particules ne se voient pas, et les pressions s’additionnent simplement.",
     "en": "In an ideal gas the particles do not see each other, and the pressures simply add."
+  },
+  "Num litro de solução há essa massa de soluto.": {
+    "fr": "Dans un litre de solution il y a cette masse de soluté.",
+    "en": "In one litre of solution there is that mass of solute."
   },
   "Num polígono regular todos os externos são iguais, então contar quantos cabem na volta é contar os vértices.": {
     "fr": "Dans un polygone régulier tous les angles extérieurs sont égaux, donc compter combien tiennent dans le tour, c’est compter les sommets.",
@@ -17631,6 +17699,10 @@
     "fr": "Le signe : deux dérivées de sinus (ou de cosinus) rendent la fonction avec le signe INVERSÉ — sinus → cosinus → −sinus.",
     "en": "The sign: two derivatives of sine (or cosine) give the function back with the sign FLIPPED — sine → cosine → −sine."
   },
+  "O soluto das duas soluções se junta, e os volumes também.": {
+    "fr": "Le soluté des deux solutions s’additionne, et les volumes aussi.",
+    "en": "The solute of both solutions adds up, and so do the volumes."
+  },
   "O somatório manda somar o termo com k indo de # a #.": {
     "fr": "La somme demande d’additionner le terme pour k allant de # à #.",
     "en": "The sum tells you to add the term with k going from # to #."
@@ -18074,6 +18146,10 @@
   "O volume do cubo é a aresta ao cubo.": {
     "fr": "Le volume du cube est l’arête au cube.",
     "en": "A cube’s volume is the edge cubed."
+  },
+  "O volume em litros é a quantidade de soluto dividida pela concentração.": {
+    "fr": "Le volume en litres est la quantité de soluté divisée par la concentration.",
+    "en": "The volume in litres is the amount of solute divided by the concentration."
   },
   "O volume entra em litros, nunca em mililitros.": {
     "fr": "Le volume s’exprime en litres, jamais en millilitres.",
@@ -18774,6 +18850,10 @@
   "Os limites laterais discordam: há um salto.": {
     "fr": "Les limites latérales ne concordent pas : il y a un saut.",
     "en": "The one-sided limits disagree: there is a jump."
+  },
+  "Os mols saem da equação dos gases.": {
+    "fr": "Les moles se déduisent de l’équation des gaz parfaits.",
+    "en": "The moles come from the ideal gas equation."
   },
   "Os mols são a massa dividida pela massa molar.": {
     "fr": "Les moles sont la masse divisée par la masse molaire.",

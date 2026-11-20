@@ -58,7 +58,7 @@ const ENTRADAS = todosOsEnunciados();
  * O que falta agora são 85 tópicos SEM NENHUMA regra — e esses pedem escrever
  * a fórmula de cada forma de pergunta, não mais consertar índice.
  */
-const COBERTURA_MINIMA = 0.7611;
+const COBERTURA_MINIMA = 0.7773;
 
 /**
  * Quantas substituições ainda mostram conta diferente da resposta.
