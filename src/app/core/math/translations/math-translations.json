@@ -391,6 +391,10 @@
     "fr": "L’accélération ne vaudrait g qu’en chute libre (plan vertical). Sur un plan incliné, seule la composante du poids accélère le bloc.",
     "en": "The acceleration would only be g in free fall (a vertical plane). On an incline, only the component of the weight accelerates the block."
   },
+  "A aceleração é a derivada da velocidade: derive s(t) DUAS vezes e só então use t = #.": {
+    "fr": "L’accélération est la dérivée de la vitesse : dérivez s(t) DEUX fois et seulement ensuite prenez t = #.",
+    "en": "Acceleration is the derivative of velocity: differentiate s(t) TWICE and only then put t = #."
+  },
   "A aceleração é a taxa de variação da velocidade: derivamos de novo.": {
     "fr": "L'accélération est le taux de variation de la vitesse : on dérive encore.",
     "en": "Acceleration is the rate of change of velocity: we differentiate again."
@@ -542,6 +546,14 @@
   "A base hexagonal tem # lados.": {
     "fr": "La base hexagonal a # côtés.",
     "en": "The hexagonal base has # sides."
+  },
+  "A base nunca muda nessas propriedades — o que se opera é o expoente. Em #^# · #^#, continuamos multiplicando fatores #; só a quantidade deles muda.": {
+    "fr": "La base ne change jamais dans ces propriétés — c’est sur l’exposant qu’on opère. Dans #^# · #^#, on continue à multiplier des facteurs # ; seul leur nombre change.",
+    "en": "The base never changes in these properties — it is the exponent you operate on. In #^# · #^# you keep multiplying factors of #; only how many of them changes."
+  },
+  "A base nunca muda — o que se acumula é a quantidade de fatores.": {
+    "fr": "La base ne change jamais — ce qui s’accumule est le nombre de facteurs.",
+    "en": "The base never changes — what accumulates is the number of factors."
   },
   "A base octogonal tem # lados.": {
     "fr": "La base octogonal a # côtés.",
@@ -2367,6 +2379,10 @@
     "fr": "La première lentille forme une image intermédiaire.",
     "en": "The first lens forms an intermediate image."
   },
+  "A primeira parada é a menor raiz não negativa.": {
+    "fr": "Le premier arrêt correspond à la plus petite racine non négative.",
+    "en": "The first stop is the smallest non-negative root."
+  },
   "A primeira parcela é o regime permanente; a segunda é o transiente, que some.": {
     "fr": "Le premier terme est le régime permanent ; le second est le transitoire, qui disparaît.",
     "en": "The first term is the steady state; the second is the transient, which dies out."
@@ -2618,6 +2634,10 @@
   "A raiz de uma diferença de quadrados pede o seno.": {
     "fr": "La racine d’une différence de carrés appelle le sinus.",
     "en": "The root of a difference of squares calls for the sine."
+  },
+  "A raiz de índice # desfaz exatamente um expoente #.": {
+    "fr": "La racine d’indice # défait exactement un exposant #.",
+    "en": "The root of index # undoes exactly one exponent #."
   },
   "A raiz devolve a dispersão na unidade original.": {
     "fr": "La racine ramène la dispersion à l'unité originale.",
@@ -3959,6 +3979,10 @@
     "fr": "Les barres doivent englober toute la soustraction : le texte dit la valeur absolue DE « x moins # », et non la valeur absolue de x moins #.",
     "en": "The bars have to wrap the whole subtraction: the text says the absolute value OF “x minus #”, not the absolute value of x minus #."
   },
+  "As bases são iguais: mantenha # e SOME os expoentes.": {
+    "fr": "Les bases sont identiques : gardez # et ADDITIONNEZ les exposants.",
+    "en": "The bases are the same: keep # and ADD the exponents."
+  },
   "As bases são paralelas: o ângulo da base maior e o da base menor do mesmo lado somam #°.": {
     "fr": "Les bases sont parallèles : l’angle de la grande base et celui de la petite du même côté font #°.",
     "en": "The bases are parallel: the angle at the longer base and the one at the shorter base on the same side add to #°."
@@ -4247,6 +4271,10 @@
     "fr": "Nous évaluons la position aux deux instants.",
     "en": "We evaluate the position at both moments."
   },
+  "Avaliamos as três no instante t = #.": {
+    "fr": "Nous les évaluons toutes les trois à l’instant t = #.",
+    "en": "We evaluate all three at the instant t = #."
+  },
   "Avaliamos entre # e t.": {
     "fr": "Nous évaluons entre # et t.",
     "en": "We evaluate between # and t."
@@ -4326,6 +4354,10 @@
   "Avançar uma unidade em x multiplica o valor pela base.": {
     "fr": "Avancer d'une unité en x multiplie la valeur par la base.",
     "en": "Advancing one unit in x multiplies the value by the base."
+  },
+  "Aí a ACELERAÇÃO é que se anula, não a velocidade. Nesse instante o corpo está no seu ponto mais rápido no sentido contrário, não parado.": {
+    "fr": "Là c’est l’ACCÉLÉRATION qui s’annule, pas la vitesse. À cet instant le corps est à son point le plus rapide dans le sens opposé, pas à l’arrêt.",
+    "en": "There it is the ACCELERATION that vanishes, not the velocity. At that instant the body is at its fastest in the opposite direction, not at rest."
   },
   "Aí está a assíntota, não o buraco. O buraco acontece onde numerador E denominador zeram juntos — ali o fator se cancela e sobra um ponto removido.": {
     "fr": "C’est là que se trouve l’asymptote, pas le trou. Le trou apparaît là où le numérateur ET le dénominateur s’annulent ensemble — le facteur se simplifie et il reste un point enlevé.",
@@ -4594,6 +4626,10 @@
   "Cada fóton entrega toda a energia a um elétron; φ é o custo de arrancá-lo do metal, e o resto vira energia cinética.": {
     "fr": "Chaque photon remet toute son énergie à un électron ; φ est le coût pour l’arracher au métal, et le reste devient énergie cinétique.",
     "en": "Each photon hands all its energy to one electron; φ is the cost of tearing it from the metal, and the rest becomes kinetic energy."
+  },
+  "Cada grupo de # fatores iguais sai da raiz como um único fator.": {
+    "fr": "Chaque groupe de # facteurs identiques sort de la racine comme un seul facteur.",
+    "en": "Each group of # identical factors leaves the root as a single factor."
   },
   "Cada grupo de quatro é uma volta completa: multiplicar por i é girar #°.": {
     "fr": "Chaque groupe de quatre est un tour complet : multiplier par i, c’est tourner de #°.",
@@ -6495,6 +6531,10 @@
     "fr": "Dérivez V par rapport à t avant de substituer le rayon.",
     "en": "Differentiate V with respect to t before substituting the radius."
   },
+  "Derive a posição para obter a velocidade; a taxa média não precisa de derivada.": {
+    "fr": "Dérivez la position pour obtenir la vitesse ; le taux moyen n’a pas besoin de dérivée.",
+    "en": "Differentiate the position to get the velocity; the average rate needs no derivative."
+  },
   "Derive cada coordenada separadamente e combine com Pitágoras.": {
     "fr": "Dérivez chaque coordonnée séparément et combinez avec Pythagore.",
     "en": "Differentiate each coordinate separately and combine with Pythagoras."
@@ -8063,6 +8103,10 @@
     "fr": "En mN.",
     "en": "In mN."
   },
+  "Em metros por segundo, se a posição está em metros e o tempo em segundos.": {
+    "fr": "En mètres par seconde, si la position est en mètres et le temps en secondes.",
+    "en": "In metres per second, if the position is in metres and the time in seconds."
+  },
   "Em milímetros.": {
     "fr": "En millimètres.",
     "en": "In millimetres."
@@ -8843,6 +8887,10 @@
     "fr": "C’est la SURFACE de la sphère, #πr². Le volume utilise r³ et porte le facteur #/#.",
     "en": "That is the SURFACE of the sphere, #πr². The volume uses r³ and carries the factor #/#."
   },
+  "Essa é a VELOCIDADE. A aceleração é a taxa de variação dela, ou seja, a segunda derivada da posição — falta derivar mais uma vez.": {
+    "fr": "C’est la VITESSE. L’accélération en est le taux de variation, c’est-à-dire la dérivée seconde de la position — il reste à dériver une fois de plus.",
+    "en": "That is the VELOCITY. Acceleration is its rate of change, that is, the second derivative of the position — one more differentiation is missing."
+  },
   "Essa é a amplitude (maior menos menor). Ela usa só dois valores e ignora como os demais se distribuem.": {
     "fr": "C’est l’étendue (le plus grand moins le plus petit). Elle n’utilise que deux valeurs et ignore la répartition des autres.",
     "en": "That is the range (largest minus smallest). It uses only two values and ignores how the others are spread."
@@ -9231,6 +9279,14 @@
     "fr": "C’est la variation de la QUANTITÉ DE MOUVEMENT, en kg·m/s. Il reste à diviser par le temps pour obtenir la force.",
     "en": "That is the change in MOMENTUM, in kg·m/s. Dividing by the time to get the force is still missing."
   },
+  "Essa é a velocidade INSTANTÂNEA no início do intervalo. A média compara as posições nos dois extremos.": {
+    "fr": "C’est la vitesse INSTANTANÉE au début de l’intervalle. La moyenne compare les positions aux deux extrémités.",
+    "en": "That is the INSTANTANEOUS velocity at the start of the interval. The average compares the positions at both ends."
+  },
+  "Essa é a velocidade MÉDIA num intervalo, não a instantânea. A média usa dois instantes; a instantânea usa a derivada em um só.": {
+    "fr": "C’est la vitesse MOYENNE sur un intervalle, pas l’instantanée. La moyenne utilise deux instants ; l’instantanée utilise la dérivée en un seul.",
+    "en": "That is the AVERAGE velocity over an interval, not the instantaneous one. The average uses two instants; the instantaneous one uses the derivative at a single instant."
+  },
   "Essa é a velocidade ORBITAL rasante. A de escape tem o fator # dentro da raiz, sendo √# vezes maior.": {
     "fr": "C'est la vitesse ORBITALE rasante. Celle de libération porte le facteur # sous la racine et est √# fois plus grande.",
     "en": "That is the grazing ORBITAL speed. The escape speed has the factor # inside the root, being √# times larger."
@@ -9462,6 +9518,10 @@
   "Esse é o PRODUTO (c/a). A soma usa b: −b/a.": {
     "fr": "C’est le PRODUIT (c/a). La somme utilise b : −b/a.",
     "en": "That is the PRODUCT (c/a). The sum uses b: −b/a."
+  },
+  "Esse é o SEGUNDO instante em que o corpo para. A pergunta é pela primeira vez — use a menor raiz não negativa.": {
+    "fr": "C’est le DEUXIÈME instant où le corps s’arrête. La question porte sur la première fois — prenez la plus petite racine non négative.",
+    "en": "That is the SECOND instant at which the body stops. The question asks for the first time — use the smallest non-negative root."
   },
   "Esse é o TEMPO de parada, em segundos. A pergunta pede uma distância, em metros.": {
     "fr": "C’est le TEMPS d’arrêt, en secondes. La question demande une distance, en mètres.",
@@ -9835,6 +9895,14 @@
     "fr": "C’est la valeur de l’ACCÉLÉRATION, en m/s². La question demande la force résultante, en newtons.",
     "en": "That is the value of the ACCELERATION, in m/s². The question asks for the net force, in newtons."
   },
+  "Esse é o valor da POSIÇÃO no instante, não da velocidade. A velocidade é a taxa de variação da posição: é preciso derivar antes de avaliar.": {
+    "fr": "C’est la valeur de la POSITION à cet instant, pas de la vitesse. La vitesse est le taux de variation de la position : il faut dériver avant d’évaluer.",
+    "en": "That is the value of the POSITION at that instant, not of the velocity. Velocity is the rate of change of position: you must differentiate before evaluating."
+  },
+  "Esse é o valor da POSIÇÃO. Entre ela e a aceleração há duas derivadas.": {
+    "fr": "C’est la valeur de la POSITION. Entre elle et l’accélération il y a deux dérivations.",
+    "en": "That is the value of the POSITION. Between it and the acceleration there are two differentiations."
+  },
   "Esse é o valor da derivada PRIMEIRA. Falta derivar mais uma vez.": {
     "fr": "C’est la valeur de la dérivée PREMIÈRE. Il reste à dériver une fois de plus.",
     "en": "That is the value of the FIRST derivative. One more differentiation is missing."
@@ -9850,6 +9918,10 @@
   "Esse é o valor da integral, não o valor médio. Falta dividir pela largura do intervalo, que vale #.": {
     "fr": "C’est la valeur de l’intégrale, et non la valeur moyenne. Il reste à diviser par la largeur de l’intervalle, qui vaut #.",
     "en": "That is the value of the integral, not the average value. Dividing by the width of the interval, which is #, is still missing."
+  },
+  "Esse é o valor da posição no instante da parada, não o instante em si. A pergunta pede um tempo, em segundos.": {
+    "fr": "C’est la valeur de la position à l’instant de l’arrêt, pas l’instant lui-même. La question demande un temps, en secondes.",
+    "en": "That is the value of the position at the moment of stopping, not the moment itself. The question asks for a time, in seconds."
   },
   "Esse é o valor da própria função em #, não o da derivada. O enunciado pede a taxa de variação, não a altura da curva.": {
     "fr": "C’est la valeur de la fonction elle-même en #, et non celle de la dérivée. L’énoncé demande le taux de variation, pas la hauteur de la courbe.",
@@ -10194,6 +10266,14 @@
   "Expansão: o gás realiza trabalho sobre o ambiente.": {
     "fr": "Dilatation : le gaz effectue un travail sur le milieu extérieur.",
     "en": "Expansion: the gas does work on its surroundings."
+  },
+  "Expoente negativo não deixa o número negativo: ele o inverte.": {
+    "fr": "Un exposant négatif ne rend pas le nombre négatif : il l’inverse.",
+    "en": "A negative exponent does not make the number negative: it inverts it."
+  },
+  "Expoente negativo não deixa o resultado negativo: ele INVERTE o número. #^{-k} significa #/#^{k}, que é positivo.": {
+    "fr": "Un exposant négatif ne rend pas le résultat négatif : il INVERSE le nombre. #^{-k} signifie #/#^{k}, qui est positif.",
+    "en": "A negative exponent does not make the result negative: it INVERTS the number. #^{-k} means #/#^{k}, which is positive."
   },
   "Expoente negativo não torna o resultado negativo: ele INVERTE o valor. A exponencial de base positiva é sempre positiva.": {
     "fr": "Un exposant négatif ne rend pas le résultat négatif : il INVERSE la valeur. L’exponentielle de base positive est toujours positive.",
@@ -10827,6 +10907,10 @@
     "fr": "Nous factorisons les deux nombres en nombres premiers.",
     "en": "We factor both numbers into primes."
   },
+  "Fatorando, as raízes aparecem.": {
+    "fr": "En factorisant, les racines apparaissent.",
+    "en": "Factoring, the roots appear."
+  },
   "Fatorando, o fator que zera se cancela e o limite existe.": {
     "fr": "En factorisant, le facteur qui s’annule se simplifie et la limite existe.",
     "en": "Factoring, the vanishing factor cancels and the limit exists."
@@ -11018,6 +11102,10 @@
   "Geometricamente, é a diagonal do paralelogramo formado pelos dois vetores.": {
     "fr": "Géométriquement, c’est la diagonale du parallélogramme formé par les deux vecteurs.",
     "en": "Geometrically, it is the diagonal of the parallelogram formed by the two vectors."
+  },
+  "Geometricamente, é a inclinação da reta secante entre os dois pontos.": {
+    "fr": "Géométriquement, c’est la pente de la sécante entre les deux points.",
+    "en": "Geometrically, it is the slope of the secant line between the two points."
   },
   "Geometricamente, é a área de um quadrado de lado (a + b).": {
     "fr": "Géométriquement, c'est l'aire d'un carré de côté (a + b).",
@@ -12039,6 +12127,10 @@
     "fr": "Moins par moins donne plus : # · (#) = #, qui entre en addition.",
     "en": "Minus times minus gives plus: # · (#) = #, which enters as an addition."
   },
+  "Mesma base # em cima e embaixo: mantenha a base e SUBTRAIA os expoentes, # − #.": {
+    "fr": "Même base # en haut et en bas : gardez la base et SOUSTRAYEZ les exposants, # − #.",
+    "en": "Same base # on top and below: keep the base and SUBTRACT the exponents, # − #."
+  },
   "Mesma equivalência, agora no sentido contrário: a taxa do mês é a incógnita.": {
     "fr": "Même équivalence, maintenant dans l’autre sens : le taux du mois est l’inconnue.",
     "en": "Same equivalence, now the other way round: the month rate is the unknown."
@@ -12847,6 +12939,10 @@
     "fr": "Au retour, le vecteur tangent s’inverse et l’intégrande change de signe.",
     "en": "On the way back the tangent vector reverses and the integrand changes sign."
   },
+  "Nada permanece sob o radical: a raiz era exata.": {
+    "fr": "Rien ne reste sous le radical : la racine était exacte.",
+    "en": "Nothing stays under the radical: the root was exact."
+  },
   "Nas duas primeiras colunas, a L₃ é combinação das de cima: # vezes a L₁ mais # vezes a L₂.": {
     "fr": "Dans les deux premières colonnes, L₃ est combinaison de celles du haut : # fois L₁ plus # fois L₂.",
     "en": "In the first two columns, L₃ is a combination of the ones above: # times L₁ plus # times L₂."
@@ -13491,6 +13587,10 @@
     "fr": "Pas besoin d’éliminer le paramètre : la dérivée se fait composante par composante.",
     "en": "No need to eliminate the parameter: differentiation is component by component."
   },
+  "Não é uma convenção arbitrária: é o que a divisão de uma potência por ela mesma exige.": {
+    "fr": "Ce n’est pas une convention arbitraire : c’est ce qu’exige la division d’une puissance par elle-même.",
+    "en": "It is not an arbitrary convention: it is what dividing a power by itself requires."
+  },
   "Não é valor notável: usamos a calculadora em graus. O resultado tem de cair em (−#°, #°).": {
     "fr": "Ce n’est pas une valeur remarquable : nous utilisons la calculatrice en degrés. Le résultat doit tomber dans (−#°, #°).",
     "en": "Not a special value: we use the calculator in degrees. The result must land in (−#°, #°)."
@@ -14039,6 +14139,10 @@
     "fr": "Le corps A ralentit dans la collision : une part de sa quantité de mouvement a été transférée à B.",
     "en": "Body A slows down in the collision: part of its momentum was transferred to B."
   },
+  "O corpo para duas vezes; a pergunta é pela primeira.": {
+    "fr": "Le corps s’arrête deux fois ; la question porte sur la première.",
+    "en": "The body stops twice; the question asks about the first time."
+  },
   "O cosseno e o ângulo.": {
     "fr": "Le cosinus et l’angle.",
     "en": "The cosine and the angle."
@@ -14418,6 +14522,10 @@
   "O expoente está certo, mas o fatorial ficou um atrás: o denominador é # fatorial, o mesmo número do expoente.": {
     "fr": "L’exposant est juste, mais la factorielle est en retard d’un : le dénominateur est # factorielle, le même nombre que l’exposant.",
     "en": "The exponent is right, but the factorial is one behind: the denominator is # factorial, the same number as the exponent."
+  },
+  "O expoente externo manda repetir a potência interna # vezes.": {
+    "fr": "L’exposant extérieur demande de répéter la puissance intérieure # fois.",
+    "en": "The outer exponent tells you to repeat the inner power # times."
   },
   "O expoente é #, não #. O cubo aparece na terceira lei de Kepler, relacionando período e raio.": {
     "fr": "L'exposant est #, pas #. Le cube apparaît dans la troisième loi de Kepler, reliant période et rayon.",
@@ -15326,6 +15434,10 @@
   "O que sobra do módulo total é a componente normal, que curva a trajetória.": {
     "fr": "Ce qui reste du module total est la composante normale, qui courbe la trajectoire.",
     "en": "What remains of the total magnitude is the normal component, which curves the trajectory."
+  },
+  "O que sobra permanece sob o radical.": {
+    "fr": "Ce qui reste demeure sous le radical.",
+    "en": "What is left stays under the radical."
   },
   "O que sobra é a diferença.": {
     "fr": "Ce qui reste est la différence.",
@@ -17327,6 +17439,18 @@
     "fr": "S'arrêter signifie une vitesse finale nulle.",
     "en": "Stopping means a final speed of zero."
   },
+  "Parar significa velocidade nula: igualamos a derivada a zero.": {
+    "fr": "S’arrêter signifie une vitesse nulle : nous égalons la dérivée à zéro.",
+    "en": "Stopping means zero velocity: we set the derivative equal to zero."
+  },
+  "Parar é ter velocidade zero: derive s(t), iguale a zero e fique com a menor raiz positiva.": {
+    "fr": "S’arrêter, c’est avoir une vitesse nulle : dérivez s(t), égalez à zéro et gardez la plus petite racine positive.",
+    "en": "Stopping means having zero velocity: differentiate s(t), set it to zero and keep the smallest positive root."
+  },
+  "Parece que você multiplicou a base pela soma dos expoentes. Potência é multiplicação repetida da base, não multiplicação da base pelo expoente.": {
+    "fr": "Il semble que vous ayez multiplié la base par la somme des exposants. Une puissance est une multiplication répétée de la base, pas une multiplication de la base par l’exposant.",
+    "en": "It looks like you multiplied the base by the sum of the exponents. A power is repeated multiplication of the base, not multiplication of the base by the exponent."
+  },
   "Parece que você somou numeradores com numeradores e denominadores com denominadores. O denominador indica o tamanho das partes, não uma quantidade a ser somada — por isso ele não entra na conta. Repare que #/# + #/# daria #/#, ou seja #/#, quando o resultado é #.": {
     "fr": "Il semble que vous ayez combiné numérateurs avec numérateurs et dénominateurs avec dénominateurs. Le dénominateur indique la taille des parts, pas une quantité à additionner — il n’entre donc pas dans le calcul. Remarquez que #/# + #/# donnerait #/#, soit #/#, alors que le résultat vaut #.",
     "en": "It looks like you combined numerators with numerators and denominators with denominators. The denominator says the size of the parts, not an amount to add — so it does not take part in the computation. Notice that #/# + #/# would give #/#, that is #/#, when the result is #."
@@ -17823,6 +17947,10 @@
     "fr": "Puissance de puissance multiplie les exposants ; ensuite nous égalons.",
     "en": "A power of a power multiplies the exponents; then we set them equal."
   },
+  "Potência de potência: mantenha # e MULTIPLIQUE os expoentes, # × #.": {
+    "fr": "Puissance d’une puissance : gardez # et MULTIPLIEZ les exposants, # × #.",
+    "en": "Power of a power: keep # and MULTIPLY the exponents, # × #."
+  },
   "Potência mede a rapidez com que o trabalho é realizado.": {
     "fr": "La puissance mesure la rapidité avec laquelle le travail est effectué.",
     "en": "Power measures the speed at which work is performed."
@@ -18055,6 +18183,10 @@
     "fr": "Cherchez le facteur qui apparaît en haut et en bas en même temps.",
     "en": "Look for the factor that appears both above and below."
   },
+  "Procure o maior quadrado perfeito que divide # — teste #, #, #, #, #… A raiz desse quadrado é o que sai.": {
+    "fr": "Cherchez le plus grand carré parfait qui divise # — essayez #, #, #, #, #… La racine de ce carré est ce qui sort.",
+    "en": "Look for the largest perfect square dividing # — try #, #, #, #, #… The root of that square is what comes out."
+  },
   "Produto escalar e módulos das direções.": {
     "fr": "Produit scalaire et modules des direções.",
     "en": "Dot product and magnitudes of the direções."
@@ -18118,6 +18250,10 @@
   "Quando o denominador cresce mais rápido, a fração tende a zero.": {
     "fr": "Quand le dénominateur croît plus vite, la fraction tend vers zéro.",
     "en": "When the denominator grows faster, the fraction tends to zero."
+  },
+  "Quando os expoentes se cancelam, o resultado é #, não #. Dividir uma potência por ela mesma dá # — é exatamente daí que vem a regra do expoente zero.": {
+    "fr": "Quand les exposants se compensent, le résultat vaut #, pas #. Diviser une puissance par elle-même donne # — c’est précisément de là que vient la règle de l’exposant zéro.",
+    "en": "When the exponents cancel, the result is #, not #. Dividing a power by itself gives # — that is exactly where the zero-exponent rule comes from."
   },
   "Quantas casas depois da vírgula? Esse é o expoente do #. Simplifique no fim.": {
     "fr": "Combien de décimales ? C’est l’exposant du #. Simplifiez à la fin.",
@@ -19611,6 +19747,10 @@
     "fr": "Nous soustrayons de L₃, terme par terme.",
     "en": "We subtract from L₃, entry by entry."
   },
+  "São # grupos de # fatores, ou seja # × # fatores ao todo: os expoentes se multiplicam.": {
+    "fr": "Ce sont # groupes de # facteurs, soit # × # facteurs en tout : les exposants se multiplient.",
+    "en": "That is # groups of # factors, so # × # factors altogether: the exponents multiply."
+  },
   "São # letras: #!, dividido pelo fatorial de quantas vezes cada letra se repete.": {
     "fr": "Il y a # lettres : #!, divisé par la factorielle du nombre de répétitions de chaque lettre.",
     "en": "There are # letters: #!, divided by the factorial of how many times each letter repeats."
@@ -20555,6 +20695,18 @@
     "fr": "La vitesse moyenne est la distance divisée par le temps.",
     "en": "Average speed is distance divided by time."
   },
+  "Velocidade negativa: a posição está diminuindo.": {
+    "fr": "Vitesse négative : la position diminue.",
+    "en": "Negative velocity: the position is decreasing."
+  },
+  "Velocidade nula: nesse instante o corpo está parado — a posição atingiu um extremo.": {
+    "fr": "Vitesse nulle : à cet instant le corps est immobile — la position a atteint un extremum.",
+    "en": "Zero velocity: at that instant the body is at rest — the position has reached an extremum."
+  },
+  "Velocidade positiva: a posição está aumentando.": {
+    "fr": "Vitesse positive : la position augmente.",
+    "en": "Positive velocity: the position is increasing."
+  },
   "Velocidade × tempo só vale com velocidade constante. Aqui ela varia: integre.": {
     "fr": "Vitesse × temps ne vaut qu’à vitesse constante. Ici elle varie : intégrez.",
     "en": "Speed × time only holds at constant speed. Here it varies: integrate."
@@ -20583,6 +20735,10 @@
     "fr": "Vous avez appliqué la proportion directement aux masses. Les coefficients comptent des MOLÉCULES, pas des grammes.",
     "en": "You applied the proportion straight to the masses. The coefficients count MOLECULES, not grams."
   },
+  "Você calculou a variação da posição, Δs, mas esqueceu de dividir por Δt. Taxa é sempre uma divisão.": {
+    "fr": "Vous avez calculé la variation de position, Δs, mais oublié de diviser par Δt. Un taux est toujours une division.",
+    "en": "You computed the change in position, Δs, but forgot to divide by Δt. A rate is always a division."
+  },
   "Você considerou apenas a velocidade inicial, como se o movimento fosse uniforme. Falta a contribuição da aceleração — o triângulo do gráfico.": {
     "fr": "Vous n’avez tenu compte que de la vitesse initiale, comme si le mouvement était uniforme. Il manque la contribution de l’accélération — le triangle du graphe.",
     "en": "You only took the initial speed into account, as if the motion were uniform. The contribution of the acceleration — the triangle of the graph — is missing."
@@ -20607,9 +20763,17 @@
     "fr": "Vous avez compté combien il y a de termes, et non ce qu’ils totalisent. La somme renvoie le total des valeurs, pas leur nombre.",
     "en": "You counted how many terms there are, not what they add up to. The sum returns the total of the values, not how many there are."
   },
+  "Você deixou sair o quadrado inteiro. Na raiz quadrada, cada PAR de fatores iguais sai como um único fator: #² sai como #, não como #.": {
+    "fr": "Vous avez laissé sortir le carré entier. Dans une racine carrée, chaque PAIRE de facteurs identiques sort comme un seul facteur : #² sort en #, pas en #.",
+    "en": "You let the whole square come out. In a square root, each PAIR of identical factors leaves as a single factor: #² comes out as #, not as #."
+  },
   "Você derivou a força. O trabalho é a integral (a primitiva), não a derivada.": {
     "fr": "Vous avez dérivé la force. Le travail est l’intégrale (la primitive), et non la dérivée.",
     "en": "You differentiated the force. The work is the integral (the antiderivative), not the derivative."
+  },
+  "Você derivou duas vezes e chegou à ACELERAÇÃO. Para a velocidade, basta uma derivada da posição.": {
+    "fr": "Vous avez dérivé deux fois et obtenu l’ACCÉLÉRATION. Pour la vitesse, une seule dérivée de la position suffit.",
+    "en": "You differentiated twice and got the ACCELERATION. For the velocity, one derivative of the position is enough."
   },
   "Você deu o cosseno. O seno é a coordenada VERTICAL do ponto.": {
     "fr": "Vous avez donné le cosinus. Le sinus est la coordonnée VERTICALE du point.",
@@ -20627,9 +20791,17 @@
     "fr": "Vous avez divisé le total par # sans déduire la prise en charge de $ #, qui ne se paie qu’une fois.",
     "en": "You divided the total by # without deducting the $ # flag-fall, which is paid only once."
   },
+  "Você dividiu os expoentes. Na divisão de potências de mesma base, os expoentes se SUBTRAEM — é o que sobra depois de cancelar os fatores comuns.": {
+    "fr": "Vous avez divisé les exposants. Dans la division de puissances de même base, les exposants se SOUSTRAIENT — c’est ce qui reste après simplification des facteurs communs.",
+    "en": "You divided the exponents. In the division of powers with the same base the exponents SUBTRACT — it is what remains after cancelling the common factors."
+  },
   "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
     "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
     "en": "You divided by the number of moles. More moles mean MORE particles, so the amount multiplies."
+  },
+  "Você dividiu por #. Raiz quadrada não é metade: é o número que, MULTIPLICADO por si mesmo, dá o radicando.": {
+    "fr": "Vous avez divisé par #. Une racine carrée n’est pas une moitié : c’est le nombre qui, MULTIPLIÉ par lui-même, donne le radicande.",
+    "en": "You divided by #. A square root is not a half: it is the number that, MULTIPLIED by itself, gives the radicand."
   },
   "Você dividiu. Dividir responde «quantos mols há nesta massa» — e aqui a quantidade já é conhecida; o que falta é quanto ela pesa.": {
     "fr": "Vous avez divisé. Diviser répond à « combien de moles dans cette masse » — et ici la quantité est déjà connue ; ce qui manque, c’est combien elle pèse.",
@@ -20671,6 +20843,10 @@
     "fr": "Vous avez multiplié la base par # au lieu de l’élever. Une puissance est une multiplication RÉPÉTÉE : #^# signifie multiplier # par lui-même # fois.",
     "en": "You multiplied the base by # instead of raising it. A power is REPEATED multiplication: #^# means multiplying # by itself # times."
   },
+  "Você multiplicou a potência interna por n. O expoente externo manda REPETIR a potência interna n vezes como fator, não somá-la n vezes.": {
+    "fr": "Vous avez multiplié la puissance intérieure par n. L’exposant extérieur demande de RÉPÉTER la puissance intérieure n fois comme facteur, pas de l’additionner n fois.",
+    "en": "You multiplied the inner power by n. The outer exponent tells you to REPEAT the inner power n times as a factor, not to add it n times."
+  },
   "Você multiplicou as duas frações diretamente, sem inverter a segunda. Dividir por c/d é multiplicar por d/c, porque esse é o número que, multiplicado por c/d, resulta em #.": {
     "fr": "Vous avez multiplié les deux fractions directement, sans inverser la seconde. Diviser par c/d, c’est multiplier par d/c, car c’est le nombre qui, multiplié par c/d, donne #.",
     "en": "You multiplied the two fractions directly, without flipping the second. Dividing by c/d is multiplying by d/c, because that is the number which, times c/d, gives #."
@@ -20678,6 +20854,10 @@
   "Você multiplicou em cruz, o que equivale a inverter a segunda fração. Esse é o procedimento da divisão; na multiplicação é em linha: numerador com numerador, denominador com denominador.": {
     "fr": "Vous avez multiplié en croix, ce qui revient à inverser la seconde fraction. C’est la méthode de la division ; dans la multiplication, c’est en ligne : numérateur avec numérateur, dénominateur avec dénominateur.",
     "en": "You cross-multiplied, which amounts to flipping the second fraction. That is the division procedure; in multiplication it is straight across: numerator with numerator, denominator with denominator."
+  },
+  "Você multiplicou os expoentes. Multiplicar expoentes é a regra da potência de potência, (aᵐ)ⁿ; no produto de potências de mesma base, eles se SOMAM.": {
+    "fr": "Vous avez multiplié les exposants. Multiplier les exposants est la règle de la puissance d’une puissance, (aᵐ)ⁿ ; dans un produit de puissances de même base, ils s’ADDITIONNENT.",
+    "en": "You multiplied the exponents. Multiplying exponents is the rule for a power of a power, (aᵐ)ⁿ; in a product of powers with the same base they ADD."
   },
   "Você multiplicou. Multiplicar daria a massa de tantos mols — e aqui a massa já é conhecida; o que falta é a quantidade.": {
     "fr": "Vous avez multiplié. Multiplier donnerait la masse de tant de moles — et ici la masse est déjà connue ; ce qui manque, c’est la quantité.",
@@ -20734,6 +20914,10 @@
   "Você somou em vez de subtrair. A = Z + n, então n = A − Z.": {
     "fr": "Vous avez additionné au lieu de soustraire. A = Z + n, donc n = A − Z.",
     "en": "You added instead of subtracting. A = Z + n, so n = A − Z."
+  },
+  "Você somou os expoentes. Somar é a regra do PRODUTO de potências; na potência de potência eles se multiplicam, porque são n grupos de m fatores.": {
+    "fr": "Vous avez additionné les exposants. L’addition est la règle du PRODUIT de puissances ; dans la puissance d’une puissance ils se multiplient, car il s’agit de n groupes de m facteurs.",
+    "en": "You added the exponents. Adding is the rule for the PRODUCT of powers; in a power of a power they multiply, because it is n groups of m factors."
   },
   "Você somou os produtos massa × posição mas não dividiu pela massa total.": {
     "fr": "Vous avez additionné les produits masse × position mais n’avez pas divisé par la masse totale.",
@@ -22174,6 +22358,10 @@
   "∈ liga um ELEMENTO a um conjunto; ⊂ liga um conjunto a outro. A é um conjunto, então o símbolo é ⊂.": {
     "fr": "∈ relie un ÉLÉMENT à un ensemble ; ⊂ relie un ensemble à un autre. A est un ensemble, donc le symbole est ⊂.",
     "en": "∈ links an ELEMENT to a set; ⊂ links a set to another set. A is a set, so the symbol is ⊂."
+  },
+  "√# não é um inteiro — # não é quadrado perfeito. Por isso a resposta fica na forma k√n, com uma parte permanecendo sob o radical.": {
+    "fr": "√# n’est pas un entier — # n’est pas un carré parfait. C’est pourquoi la réponse prend la forme k√n, une partie restant sous le radical.",
+    "en": "√# is not an integer — # is not a perfect square. That is why the answer takes the form k√n, with part of it staying under the radical."
   },
   "∞/∞ não vale #. O resultado depende dos coeficientes dos termos dominantes.": {
     "fr": "∞/∞ ne vaut pas #. Le résultat dépend des coefficients des termes dominants.",
