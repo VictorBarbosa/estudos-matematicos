@@ -1371,6 +1371,10 @@
     "fr": "La figure se partage en deux figures connues, sans recouvrement.",
     "en": "The figure splits into two known ones, without overlap."
   },
+  "A fonte vê a resistência equivalente do circuito todo, não só R₁.": {
+    "fr": "La source voit la résistance équivalente de tout le circuit, pas seulement R₁.",
+    "en": "The source sees the equivalent resistance of the whole circuit, not just R₁."
+  },
   "A fonte vê o equivalente: Q = C_eq·V.": {
     "fr": "La source voit l’équivalent : Q = C_eq·V.",
     "en": "The source sees the equivalent: Q = C_eq·V."
@@ -3283,6 +3287,10 @@
     "fr": "La température doit être en kelvins : ajoutez # aux degrés celsius.",
     "en": "The temperature must be in kelvin: add # to the degrees celsius."
   },
+  "A tensão vai ao quadrado e DIVIDE pela resistência: P = V²/R.": {
+    "fr": "La tension est élevée au carré et DIVISÉE par la résistance : P = V²/R.",
+    "en": "The voltage is squared and DIVIDED by the resistance: P = V²/R."
+  },
   "A troca de nomes é o que reflete o gráfico na reta y = x.": {
     "fr": "L’échange des noms est ce qui reflète le graphique par rapport à la droite y = x.",
     "en": "Swapping the names is what reflects the graph across the line y = x."
@@ -4411,6 +4419,14 @@
     "fr": "Les quatre termes concordent : c’est le cube du binôme.",
     "en": "All four terms match: it is the cube of the binomial."
   },
+  "Baterias em oposição empurram a corrente em sentidos contrários: as fem se SUBTRAEM.": {
+    "fr": "Des piles en opposition poussent le courant en sens contraires : les f.é.m. se SOUSTRAIENT.",
+    "en": "Batteries in opposition push the current in opposite directions: the emfs SUBTRACT."
+  },
+  "Baterias no mesmo sentido se ajudam: as fem se SOMAM.": {
+    "fr": "Des piles dans le même sens s’additionnent : les f.é.m. S’AJOUTENT.",
+    "en": "Batteries in the same direction help each other: the emfs ADD."
+  },
   "Be neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Be neutre a # électrons, autant que de protons.",
     "en": "Neutral Be has # electrons, as many as protons."
@@ -5439,6 +5455,10 @@
     "fr": "Avec un mouvement relatif, la fréquence entendue change : c’est l’effet Doppler.",
     "en": "With relative motion the frequency heard changes: that is the Doppler effect."
   },
+  "Com muitas tentativas, até eventos raros ficam quase certos.": {
+    "fr": "Avec beaucoup d’essais, même les événements rares deviennent quasi certains.",
+    "en": "With many attempts, even rare events become almost certain."
+  },
   "Com muitos lados, isso se aproxima de πr² — o círculo é o limite.": {
     "fr": "Avec beaucoup de côtés, cela s’approche de πr² — le cercle est la limite.",
     "en": "With many sides, this approaches πr² — the circle is the limit."
@@ -6119,6 +6139,10 @@
     "fr": "Le cas critique est la racine double de la caractéristique : c² − #mk = #, donc c = #√(mk).",
     "en": "Critical is the double root of the characteristic equation: c² − #mk = #, so c = #√(mk)."
   },
+  "C·V é a carga FINAL, que só se atinge depois de vários τ.": {
+    "fr": "C·V est la charge FINALE, qui n’est atteinte qu’au bout de plusieurs τ.",
+    "en": "C·V is the FINAL charge, reached only after several τ."
+  },
   "Da igualdade das áreas sai a altura.": {
     "fr": "De l’égalité des aires sort la hauteur.",
     "en": "The altitude comes out of the equality of areas."
@@ -6214,6 +6238,10 @@
   "Depois de trocar por u, não esqueça o fator que vem de dx = du/a.": {
     "fr": "Après le changement en u, n’oubliez pas le facteur qui vient de dx = du/a.",
     "en": "After switching to u, do not forget the factor coming from dx = du/a."
+  },
+  "Depois de um τ o capacitor tem #% da carga final; depois de #τ, mais de #%.": {
+    "fr": "Au bout d’un τ le condensateur a #% de la charge finale ; au bout de #τ, plus de #%.",
+    "en": "After one τ the capacitor holds #% of the final charge; after #τ, more than #%."
   },
   "Depois integramos o que sobrou em y.": {
     "fr": "Ensuite nous intégrons ce qui reste en y.",
@@ -8143,6 +8171,10 @@
     "fr": "En parallèle les plaques se réunissent en une aire plus grande : les capacités s’additionnent.",
     "en": "In parallel the plates join into a larger area: the capacitances add up."
   },
+  "Em paralelo: #/R = #/# + #/# + #/#; depois inverta. O resultado é menor que # Ω.": {
+    "fr": "En parallèle : #/R = #/# + #/# + #/# ; puis inversez. Le résultat est inférieur à # Ω.",
+    "en": "In parallel: #/R = #/# + #/# + #/#; then invert. The result is less than # Ω."
+  },
   "Em paralelo: #/R = #/# + #/#; depois inverta. O resultado é menor que # Ω.": {
     "fr": "En parallèle : #/R = #/# + #/# ; puis inversez. Le résultat est inférieur à # Ω.",
     "en": "In parallel: #/R = #/# + #/#; then invert. The result is less than # Ω."
@@ -8174,6 +8206,10 @@
   "Em série a corrente atravessa um depois do outro: as resistências se somam.": {
     "fr": "En série le courant traverse l’un après l’autre : les résistances s’additionnent.",
     "en": "In series the current passes one after the other: the resistances add up."
+  },
+  "Em série as resistências se somam: # + # + #.": {
+    "fr": "En série les résistances s’additionnent : # + # + #.",
+    "en": "In series the resistances add: # + # + #."
   },
   "Em série as resistências se somam: # + #.": {
     "fr": "En série les résistances s’additionnent : # + #.",
@@ -8779,6 +8815,10 @@
     "fr": "Écrit avec des factorielles, cela revient à supprimer les choix qui n’ont pas été faits.",
     "en": "Written with factorials, it amounts to cancelling the choices that were not made."
   },
+  "Essa conta supõe reposição. Retirando várias peças de uma vez, o lote encolhe a cada peça — use combinações.": {
+    "fr": "Ce calcul suppose une remise. En tirant plusieurs pièces à la fois, le lot diminue à chaque pièce — utilisez des combinaisons.",
+    "en": "That computation assumes replacement. Drawing several parts at once, the batch shrinks with each part — use combinations."
+  },
   "Essa contagem permitiria repetir pessoas. Sem reposição, cada posição tem uma opção menos que a anterior.": {
     "fr": "Ce dénombrement permettrait de répéter des personnes. Sans remise, chaque position a une possibilité de moins que la précédente.",
     "en": "That count would allow repeating people. Without replacement, each position has one option fewer than the one before."
@@ -8803,6 +8843,10 @@
     "fr": "Cette expression est continue, il suffit donc de substituer le point.",
     "en": "That piece is continuous, so it is enough to substitute the point."
   },
+  "Essa seria a resposta COM reposição. Sem repor a primeira bola, a urna tem uma vermelha menos e uma bola menos no total.": {
+    "fr": "Ce serait la réponse AVEC remise. Sans remettre la première boule, l’urne a une rouge de moins et une boule de moins au total.",
+    "en": "That would be the answer WITH replacement. Without putting the first ball back, the urn has one red fewer and one ball fewer in total."
+  },
   "Essa seria a soma das forças, que a reação no apoio também ajuda a equilibrar. A pergunta é de TORQUE em relação ao apoio.": {
     "fr": "Ce serait la somme des forces, que la réaction à l’appui contribue aussi à équilibrer. La question porte sur le MOMENT par rapport à l’appui.",
     "en": "That would be the sum of the forces, which the reaction at the support also helps to balance. The question is about TORQUE about the support."
@@ -8814,6 +8858,10 @@
   "Essa é a COMBINAÇÃO, que ignora a ordem. Numa fila, trocar duas pessoas de lugar produz uma fila diferente — então a ordem conta.": {
     "fr": "C’est la COMBINAISON, qui ignore l’ordre. Dans une file, échanger deux personnes donne une file différente — l’ordre compte donc.",
     "en": "That is the COMBINATION, which ignores order. In a queue, swapping two people gives a different queue — so order counts."
+  },
+  "Essa é a CONTAGEM dos casos favoráveis, não a probabilidade. Falta dividir pelo total de resultados possíveis.": {
+    "fr": "C’est le NOMBRE de cas favorables, pas la probabilité. Il reste à diviser par le total des résultats possibles.",
+    "en": "That is the COUNT of favourable cases, not the probability. You still have to divide by the total number of possible outcomes."
   },
   "Essa é a DISTÂNCIA de frenagem, em metros. A pergunta pede um tempo, em segundos.": {
     "fr": "C’est la DISTANCE de freinage, en mètres. La question demande un temps, en secondes.",
@@ -9187,6 +9235,26 @@
     "fr": "C’est la pression partielle de l’AUTRE gaz. La fraction molaire utilise les moles du gaz que la question nomme.",
     "en": "That is the partial pressure of the OTHER gas. The mole fraction uses the moles of the gas the question names."
   },
+  "Essa é a probabilidade de NENHUM sucesso. Falta subtrair de # para obter \"ao menos um\".": {
+    "fr": "C’est la probabilité d’AUCUN succès. Il reste à la soustraire de # pour obtenir « au moins un ».",
+    "en": "That is the probability of NO success. You still have to subtract it from # to get “at least one”."
+  },
+  "Essa é a probabilidade de acertar em TODAS as tentativas, que é muito menor do que acertar em ao menos uma.": {
+    "fr": "C’est la probabilité de réussir à TOUS les essais, bien plus faible que celle de réussir au moins une fois.",
+    "en": "That is the probability of succeeding on EVERY attempt, which is far smaller than succeeding at least once."
+  },
+  "Essa é a probabilidade de ao menos uma ser defeituosa — o complementar do que foi pedido.": {
+    "fr": "C’est la probabilité qu’au moins une soit défectueuse — le complémentaire de ce qui est demandé.",
+    "en": "That is the probability that at least one is faulty — the complement of what was asked."
+  },
+  "Essa é a probabilidade do evento COMPLEMENTAR — de NÃO acontecer o que foi pedido.": {
+    "fr": "C’est la probabilité de l’événement COMPLÉMENTAIRE — celle que ce qui est demandé N’ARRIVE PAS.",
+    "en": "That is the probability of the COMPLEMENTARY event — that what was asked does NOT happen."
+  },
+  "Essa é a probabilidade só da PRIMEIRA retirada. O evento pedido exige as duas.": {
+    "fr": "C’est la probabilité du PREMIER tirage seulement. L’événement demandé en exige deux.",
+    "en": "That is the probability of the FIRST draw only. The event asked for requires both."
+  },
   "Essa é a projeção do OUTRO cateto. Cada projeção usa o seu próprio.": {
     "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
     "en": "That is the projection of the OTHER leg. Each projection uses its own."
@@ -9266,6 +9334,10 @@
   "Essa é a taxa do PERÍMETRO: dP/dt = #·dL/dt. A pergunta é pela área.": {
     "fr": "C’est le taux du PÉRIMÈTRE : dP/dt = #·dL/dt. La question porte sur l’aire.",
     "en": "That is the rate of the PERIMETER: dP/dt = #·dL/dt. The question asks about the area."
+  },
+  "Essa é a tensão sobre R₁. Sobre R₂ vai R₂/(R₁ + R₂) da tensão.": {
+    "fr": "C’est la tension aux bornes de R₁. Aux bornes de R₂ il y a R₂/(R₁ + R₂) de la tension.",
+    "en": "That is the voltage across R₁. Across R₂ there is R₂/(R₁ + R₂) of the voltage."
   },
   "Essa é a variação da função, não a área sob ela. Integrar acumula valores; subtrair extremos é o que a DERIVADA desfaz.": {
     "fr": "C’est la variation de la fonction, et non l’aire sous elle. Intégrer accumule des valeurs ; soustraire les extrémités est ce que la DÉRIVÉE défait.",
@@ -9407,6 +9479,10 @@
     "fr": "Cette valeur est en SECONDES. La question demande des minutes.",
     "en": "That value is in SECONDS. The question asks for minutes."
   },
+  "Esse valor está em ampères; o pedido é em mA (×#).": {
+    "fr": "Cette valeur est en ampères ; on demande des mA (×#).",
+    "en": "That value is in amperes; what is asked for is mA (×#)."
+  },
   "Esse valor está em kPa; o enunciado pede a queda em Pa.": {
     "fr": "Cette valeur est en kPa ; l’énoncé demande la chute en Pa.",
     "en": "That value is in kPa; the question asks for the drop in Pa."
@@ -9422,6 +9498,10 @@
   "Esse valor está em newtons. A pergunta pede kN (# kN = # N).": {
     "fr": "Cette valeur est en newtons. La question demande des kN (# kN = # N).",
     "en": "That value is in newtons. The question asks for kN (# kN = # N)."
+  },
+  "Esse valor está em segundos; o pedido é em ms.": {
+    "fr": "Cette valeur est en secondes ; on demande des ms.",
+    "en": "That value is in seconds; what is asked for is ms."
   },
   "Esse x é a prateleira MENOS cheia. A mais cheia tem x + #.": {
     "fr": "Ce x est l’étagère la MOINS remplie. La plus remplie en a x + #.",
@@ -9778,6 +9858,10 @@
   "Esse é o plano de corte, não a abscissa do vértice da curva resultante.": {
     "fr": "Ceci est le plan de coupe, pas l’abscisse du sommet de la courbe obtenue.",
     "en": "That is the cutting plane, not the abscissa of the vertex of the resulting curve."
+  },
+  "Esse é o potencial do nó (em volts). A corrente em R₃ é V/#.": {
+    "fr": "C’est le potentiel du nœud (en volts). Le courant dans R₃ vaut V/#.",
+    "en": "That is the node potential (in volts). The current in R₃ is V/#."
   },
   "Esse é o potencial no ponto final. O trabalho é a DIFERENÇA entre os dois potenciais.": {
     "fr": "C’est le potentiel au point d’arrivée. Le travail est la DIFFÉRENCE entre les deux potentiels.",
@@ -10923,6 +11007,10 @@
     "fr": "Factorisez numérateur et dénominateur. Facteur qui se simplifie : removable. Facteur qui reste en bas : infinie.",
     "en": "Factor numerator and denominator. A factor that cancels: removable. A factor left below: infinite."
   },
+  "Favoráveis: escolher # entre as # boas, C(#, #). Possíveis: C(#, #).": {
+    "fr": "Favorables : choisir # parmi les # bonnes, C(#, #). Possibles : C(#, #).",
+    "en": "Favourable: choose # from the # good ones, C(#, #). Possible: C(#, #)."
+  },
   "Faz sentido pela definição: as somas de Riemann dos dois trechos se juntam.": {
     "fr": "Cela se comprend par la définition : les sommes de Riemann des deux morceaux se réunissent.",
     "en": "It makes sense from the definition: the Riemann sums of the two stretches join up."
@@ -11743,6 +11831,10 @@
     "fr": "C’est la quantité de mouvement. Pour devenir un moment cinétique, il manque encore la distance perpendiculaire au point de référence.",
     "en": "That is the linear momentum. To become angular momentum, the perpendicular distance to the reference point is still missing."
   },
+  "Isso é o quanto FALTA carregar. A carga é Q·(# − e^(−t/τ)).": {
+    "fr": "C’est ce qu’il RESTE à charger. La charge vaut Q·(# − e^(−t/τ)).",
+    "en": "That is how much is STILL to be charged. The charge is Q·(# − e^(−t/τ))."
+  },
   "Isso é o salto, não um limite lateral. Cada lado tem seu próprio valor, e o salto é a diferença entre eles.": {
     "fr": "C’est le saut, pas une limite latérale. Chaque côté a sa propre valeur, et le saut est leur différence.",
     "en": "That is the jump, not a one-sided limit. Each side has its own value, and the jump is the difference between them."
@@ -11986,6 +12078,10 @@
   "Linha de A vezes coluna de B: para a entrada (#), a linha # de A vezes a coluna # de B, termo a termo, e some.": {
     "fr": "Ligne de A fois colonne de B : pour l’entrée (#), la ligne # de A fois la colonne # de B, terme à terme, puis additionnez.",
     "en": "Row of A times column of B: for entry (#), row # of A times column # of B, term by term, then add."
+  },
+  "Listamos os resultados que satisfazem ao menos uma das condições.": {
+    "fr": "Nous listons les résultats qui vérifient au moins une des conditions.",
+    "en": "We list the outcomes satisfying at least one of the conditions."
   },
   "Localizamos o número no plano: a parte real no eixo x, a imaginária no y.": {
     "fr": "Nous localisons le nombre dans le plan : la partie réelle sur l'axe x, l'imaginaires sur y.",
@@ -12418,6 +12514,10 @@
   "Multiplicar GRANDEZAS soma os expoentes; multiplicar os expoentes entre si seria o efeito de uma potência de potência.": {
     "fr": "Multiplier des GRANDEURS additionne les exposants ; multiplier les exposants entre eux serait l’effet d’une puissance de puissance.",
     "en": "Multiplying QUANTITIES adds the exponents; multiplying the exponents together would be the effect of a power of a power."
+  },
+  "Multiplicar a probabilidade pelo número de tentativas conta cenários mais de uma vez, e com muitas tentativas passaria de #. Use o complementar.": {
+    "fr": "Multiplier la probabilité par le nombre d’essais compte certains scénarios plusieurs fois, et avec beaucoup d’essais dépasserait #. Utilisez le complémentaire.",
+    "en": "Multiplying the probability by the number of attempts counts some scenarios more than once, and with many attempts would exceed #. Use the complement."
   },
   "Multiplicar as grandezas soma os expoentes correspondentes.": {
     "fr": "Multiplier les grandeurs additionne les exposants correspondants.",
@@ -12926,6 +13026,10 @@
   "Na tabela dos ângulos notáveis, com o sinal já considerado.": {
     "fr": "Dans la table des angles remarquables, le signe étant déjà pris en compte.",
     "en": "In the table of special angles, with the sign already taken into account."
+  },
+  "Na união, os resultados que satisfazem as DUAS condições não podem ser contados duas vezes: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).": {
+    "fr": "Dans la réunion, les résultats qui vérifient les DEUX conditions ne peuvent pas être comptés deux fois : P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+    "en": "In the union, outcomes satisfying BOTH conditions must not be counted twice: P(A ∪ B) = P(A) + P(B) − P(A ∩ B)."
   },
   "Na vertical, a conta é direta: multiplica e soma.": {
     "fr": "Sur la verticale, le calcul est direct : multiplier et additionner.",
@@ -13591,6 +13695,10 @@
     "fr": "Ce n’est pas une convention arbitraire : c’est ce qu’exige la division d’une puissance par elle-même.",
     "en": "It is not an arbitrary convention: it is what dividing a power by itself requires."
   },
+  "Não é uma malha só: os três ramos estão em paralelo entre os mesmos dois nós. Use a lei dos nós.": {
+    "fr": "Ce n’est pas une seule maille : les trois branches sont en parallèle entre les deux mêmes nœuds. Utilisez la loi des nœuds.",
+    "en": "It is not a single loop: the three branches are in parallel between the same two nodes. Use the junction rule."
+  },
   "Não é valor notável: usamos a calculadora em graus. O resultado tem de cair em (−#°, #°).": {
     "fr": "Ce n’est pas une valeur remarquable : nous utilisons la calculatrice en degrés. Le résultat doit tomber dans (−#°, #°).",
     "en": "Not a special value: we use the calculator in degrees. The result must land in (−#°, #°)."
@@ -14250,6 +14358,10 @@
   "O denominador é a distância ao QUADRADO. Sem o quadrado, o resultado nem tem unidade de aceleração.": {
     "fr": "Le dénominateur est la distance au CARRÉ. Sans le carré, le résultat n’a même pas une unité d’accélération.",
     "en": "The denominator is the distance SQUARED. Without the square, the result does not even have units of acceleration."
+  },
+  "O denominador é a resistência TOTAL, R₁ + R₂.": {
+    "fr": "Le dénominateur est la résistance TOTALE, R₁ + R₂.",
+    "en": "The denominator is the TOTAL resistance, R₁ + R₂."
   },
   "O denominador é a ÁREA da base, πr², não o raio. Volume dividido por comprimento daria uma área, não uma altura.": {
     "fr": "Le dénominateur est l’AIRE de la base, πr², et non le rayon. Un volume divisé par une longueur donnerait une aire, pas une hauteur.",
@@ -16639,6 +16751,10 @@
     "fr": "Les boutons sous le champ écrivent les symboles.",
     "en": "The buttons below the field type the symbols."
   },
+  "Os casos possíveis são todas as escolhas de peças, sem ordem.": {
+    "fr": "Les cas possibles sont tous les choix de pièces, sans ordre.",
+    "en": "The possible cases are all the choices of parts, without order."
+  },
   "Os catetos não se somam diretamente: são os QUADRADOS que somam. Se somassem, o caminho reto teria o mesmo comprimento do caminho em L.": {
     "fr": "Les cathètes ne s’additionnent pas directement : ce sont les CARRÉS qui s’additionnent. Sinon, le chemin droit aurait la même longueur que le chemin en L.",
     "en": "The legs do not add directly: it is the SQUARES that add. If they did, the straight path would be as long as the L-shaped one."
@@ -16939,6 +17055,10 @@
     "fr": "Les deux points ont la même abscisse, donc la droite est verticale.",
     "en": "The two points have the same abscissa, so the line is vertical."
   },
+  "Os dois resistores estão na mesma malha, em série: a resistência é R₁ + R₂.": {
+    "fr": "Les deux résistances sont dans la même maille, en série : la résistance vaut R₁ + R₂.",
+    "en": "Both resistors are in the same loop, in series: the resistance is R₁ + R₂."
+  },
   "Os dois termos do meio são iguais — é daí que sai o \"#ab\".": {
     "fr": "Les deux termes du milieu sont égaux — c’est de là que vient le « #ab ».",
     "en": "The two middle terms are equal — that is where the “#ab” comes from."
@@ -16974,6 +17094,10 @@
   "Os externos somam #°: o número de lados é #° dividido pelo externo.": {
     "fr": "Les angles extérieurs font #° : le nombre de côtés est #° divisé par l’extérieur.",
     "en": "The exterior angles add to #°: the number of sides is #° divided by the exterior angle."
+  },
+  "Os favoráveis escolhem apenas entre as boas.": {
+    "fr": "Les cas favorables ne choisissent que parmi les bonnes.",
+    "en": "The favourable ones choose only among the good parts."
   },
   "Os inteiros que sobram são estes.": {
     "fr": "Les entiers qui restent sont ceux-ci.",
@@ -17306,6 +17430,10 @@
   "Para desfazer a potência #, tiramos a raiz de índice #.": {
     "fr": "Pour défaire la puissance #, nous prenons la racine d’indice #.",
     "en": "To undo the power #, we take the root of index #."
+  },
+  "Para dois eventos ocorrerem JUNTOS, as probabilidades se multiplicam. Somar corresponderia a \"um ou o outro\" — e poderia até passar de #.": {
+    "fr": "Pour que deux événements se produisent ENSEMBLE, les probabilités se multiplient. Additionner correspondrait à « l’un ou l’autre » — et pourrait même dépasser #.",
+    "en": "For two events to happen TOGETHER, the probabilities multiply. Adding would correspond to “one or the other” — and could even exceed #."
   },
   "Para eliminar y, multiplicamos cada equação pelo coeficiente de y da outra.": {
     "fr": "Pour éliminer y, nous multiplions chaque équation par le coefficient de y de l'autre.",
@@ -18155,6 +18283,10 @@
     "fr": "D’abord, μ en kg/m : # g = # kg.",
     "en": "First, μ in kg/m: # g = # kg."
   },
+  "Probabilidade # significaria evento certo. Há resultados do dado que não satisfazem nenhuma das condições.": {
+    "fr": "Une probabilité de # signifierait un événement certain. Certains résultats du dé ne vérifient aucune des conditions.",
+    "en": "A probability of # would mean a certain event. Some outcomes of the die satisfy neither condition."
+  },
   "Procuramos dois números cuja soma e produto reproduzam o trinômio.": {
     "fr": "Nous cherchons deux nombres dont la somme et le produit reproduisent le trinôme.",
     "en": "We seek two numbers whose sum and product reproduce the trinomial."
@@ -18599,6 +18731,10 @@
     "fr": "Résultat d’Archimède, qui demanda qu’on le grave sur sa tombe.",
     "en": "Archimedes’ result, which he asked to have carved on his tomb."
   },
+  "Resultados que satisfazem AMBAS as condições contam uma vez só.": {
+    "fr": "Les résultats qui vérifient les DEUX conditions ne comptent qu’une fois.",
+    "en": "Outcomes satisfying BOTH conditions count only once."
+  },
   "Resíduo = y observado − y previsto pela reta naquele x.": {
     "fr": "Résidu = y observé − y prévu par la droite à ce x.",
     "en": "Residual = observed y − y predicted by the line at that x."
@@ -18615,6 +18751,14 @@
     "fr": "Des droites parallèles ont des coefficients PROPORTIONNELS, et non égaux : x a été multiplié par #, donc y aussi.",
     "en": "Parallel lines have PROPORTIONAL coefficients, not equal ones: x was multiplied by #, so y was too."
   },
+  "Retirar \"de uma vez\" significa que a ordem não importa: são combinações.": {
+    "fr": "Tirer « en une seule fois » signifie que l’ordre n’importe pas : ce sont des combinaisons.",
+    "en": "Drawing “all at once” means order does not matter: these are combinations."
+  },
+  "Retirar sem reposição muda o espaço amostral da segunda retirada.": {
+    "fr": "Tirer sans remise change l’univers du second tirage.",
+    "en": "Drawing without replacement changes the sample space of the second draw."
+  },
   "Reunimos TODAS as raízes — a que passou no teste e as que vieram da fórmula. A pergunta pede a menor entre elas.": {
     "fr": "Nous réunissons TOUTES les racines — celle du test et celles de la formule. La question demande la plus petite d’entre elles.",
     "en": "We gather ALL the roots — the one from the test and those from the formula. The question asks for the smallest of them."
@@ -18630,6 +18774,14 @@
   "Runge-Kutta usa quatro, e faz uma média ponderada delas.": {
     "fr": "Runge-Kutta utilise quatre, et fait une moyenne pondérée d'elles.",
     "en": "Runge-Kutta uses four, and makes a weighted average of them."
+  },
+  "R·I é a TENSÃO (# V). A potência é R·I², com a corrente ao quadrado.": {
+    "fr": "R·I est la TENSION (# V). La puissance vaut R·I², avec le courant au carré.",
+    "en": "R·I is the VOLTAGE (# V). The power is R·I², with the current squared."
+  },
+  "R₂ e R₃ estão em PARALELO: não se somam, combinam-se por produto sobre soma.": {
+    "fr": "R₂ et R₃ sont en PARALLÈLE : elles ne s’additionnent pas, elles se combinent par produit sur somme.",
+    "en": "R₂ and R₃ are in PARALLEL: they do not add, they combine as product over sum."
   },
   "S = a₁ / (# − q), válida porque |q| < #.": {
     "fr": "S = a₁ / (# − q), valable parce que |q| < #.",
@@ -18707,6 +18859,10 @@
     "fr": "Sans ce dernier facteur le calcul reste incomplet, même si la puissance est juste.",
     "en": "Without that last factor the computation is incomplete, however right the power may be."
   },
+  "Sem independência, o segundo evento tem probabilidade alterada.": {
+    "fr": "Sans indépendance, le second événement a une probabilité modifiée.",
+    "en": "Without independence, the second event has an altered probability."
+  },
   "Sem o tempo, use Torricelli: v² = #² + #·#·#; depois tire a raiz quadrada.": {
     "fr": "Sans le temps, utilisez Torricelli : v² = #² + #·#·# ; puis prenez la racine carrée.",
     "en": "Without the time, use Torricelli: v² = #² + #·#·#; then take the square root."
@@ -18718,6 +18874,10 @@
   "Sem repetições, há n! ordens possíveis.": {
     "fr": "Sans répétitions, il y a n! ordres possibles.",
     "en": "Without repetitions, there are n! possible orders."
+  },
+  "Sem reposição a urna muda: a #ª vermelha tem #/#; a #ª, #/#. Multiplique.": {
+    "fr": "Sans remise l’urne change : la #ᵉ rouge a #/# ; la #ᵉ, #/#. Multipliez.",
+    "en": "Without replacement the urn changes: red number # has #/#; number #, #/#. Multiply."
   },
   "Sem solução = retas paralelas = determinante zero: a₁·k − a₂·b₁ = #.": {
     "fr": "Sans solution = droites parallèles = déterminant nul : a₁·k − a₂·b₁ = #.",
@@ -19787,6 +19947,10 @@
     "fr": "Ce sont les deux points situés à la même distance de l’origine.",
     "en": "They are the two points at the same distance from the origin."
   },
+  "Série e paralelo trocados: resistores em SÉRIE se somam; em PARALELO, somam-se os inversos.": {
+    "fr": "Série et parallèle inversés : les résistances en SÉRIE s’additionnent ; en PARALLÈLE, ce sont les inverses qui s’additionnent.",
+    "en": "Series and parallel are swapped: resistors in SERIES add; in PARALLEL, the reciprocals add."
+  },
   "Só a componente da aceleração perpendicular à velocidade curva a trajetória. Com ela, r = v²/aₙ, e aqui v = #.": {
     "fr": "Seule la composante de l’accélération perpendiculaire à la vitesse courbe la trajectoire. Avec elle, r = v²/aₙ, et ici v = #.",
     "en": "Only the component of the acceleration perpendicular to the velocity bends the path. With it, r = v²/aₙ, and here v = #."
@@ -20142,6 +20306,10 @@
   "Toda partícula com momento p tem um comprimento de onda associado.": {
     "fr": "Toute particule de quantité de mouvement p a une longueur d’onde associée.",
     "en": "Every particle with momentum p has an associated wavelength."
+  },
+  "Toda probabilidade fica entre # e # — resultado fora disso é erro de contagem.": {
+    "fr": "Toute probabilité est comprise entre # et # — un résultat hors de cet intervalle est une erreur de dénombrement.",
+    "en": "Every probability lies between # and # — a result outside that is a counting error."
   },
   "Toda raiz é uma potência de expoente fracionário.": {
     "fr": "Toute racine est une puissance d'exposant fractionnaire.",
@@ -20611,6 +20779,10 @@
     "fr": "V = #πr³/# — le rayon entre au CUBE ; la sphère n’a pas de hauteur à part.",
     "en": "V = #πr³/# — the radius enters CUBED; the sphere has no separate height."
   },
+  "V = R·I, então I = V/R — divide, não multiplica.": {
+    "fr": "V = R·I, donc I = V/R — on divise, on ne multiplie pas.",
+    "en": "V = R·I, so I = V/R — you divide, you do not multiply."
+  },
   "V = k·q/r, com o sinal da carga: #×#⁹ vezes #×#⁻⁶, dividido por # (sem quadrado). Divida por # para kV.": {
     "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois #×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
     "en": "V = k·q/r, with the charge’s sign: #×#⁹ times #×#⁻⁶, divided by # (no square). Divide by # for kV."
@@ -20638,6 +20810,10 @@
   "V' = k³·V — o volume escala com o CUBO da razão, e aqui k = #: o fator é #³.": {
     "fr": "V' = k³·V — le volume varie comme le CUBE du rapport, et ici k = # : le facteur vaut #³.",
     "en": "V' = k³·V — the volume scales with the CUBE of the ratio, and here k = #: the factor is #³."
+  },
+  "V/R é a CORRENTE. A potência é V·I = V²/R.": {
+    "fr": "V/R est le COURANT. La puissance vaut V·I = V²/R.",
+    "en": "V/R is the CURRENT. The power is V·I = V²/R."
   },
   "Vale para toda soma ou diferença de cubos: o fator do #º grau não tem raiz real.": {
     "fr": "Cela vaut pour toute somme ou différence de cubes : le facteur de degré # n’a pas de racine réelle.",
@@ -22338,6 +22514,10 @@
   "π é definido como a razão entre o comprimento e o diâmetro — em qualquer círculo.": {
     "fr": "π est défini comme le rapport entre la longueur et le diamètre — dans n'importe quel cercle.",
     "en": "π is defined as the ratio between the circumference and the diameter — in any circle."
+  },
+  "τ = R·C — produto, não divisão.": {
+    "fr": "τ = R·C — un produit, pas une division.",
+    "en": "τ = R·C — a product, not a division."
   },
   "τ = R·C: # kΩ vezes # μF dá direto em milissegundos (#³ × #⁻⁶ = #⁻³).": {
     "fr": "τ = R·C : # kΩ fois # μF donne directement des millisecondes (#³ × #⁻⁶ = #⁻³).",
