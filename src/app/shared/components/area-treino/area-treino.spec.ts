@@ -59,7 +59,7 @@ describe('AreaTreino', () => {
 
   /** Digita no campo de resposta e dispara o evento de input. */
   async function responder(texto: string): Promise<void> {
-    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    const campo = fixture.nativeElement.querySelector('input[type="text"]') as HTMLInputElement;
     campo.value = texto;
     campo.dispatchEvent(new Event('input'));
     await fixture.whenStable();
@@ -182,7 +182,7 @@ describe('AreaTreino', () => {
     proximo.click();
     await fixture.whenStable();
 
-    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    const campo = fixture.nativeElement.querySelector('input[type="text"]') as HTMLInputElement;
     expect(campo.value).toBe('');
     expect(texto()).toContain('Verificar');
     expect(texto()).not.toContain('Correto!');
@@ -344,7 +344,7 @@ describe('AreaTreino', () => {
 
     // O último passo da resolução traz a resposta: sem travar o campo, dava
     // para copiá-la e ganhar o acerto.
-    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    const campo = fixture.nativeElement.querySelector('input[type="text"]') as HTMLInputElement;
     expect(campo.disabled).toBe(true);
     expect(texto()).toContain('conta como não resolvido');
     expect(texto()).toContain('Como se resolve');
@@ -472,7 +472,7 @@ describe('AreaTreino com gabarito de duas escritas', () => {
   let fixture: ComponentFixture<AreaTreino>;
 
   async function responder(texto: string): Promise<void> {
-    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    const campo = fixture.nativeElement.querySelector('input[type="text"]') as HTMLInputElement;
     campo.value = texto;
     campo.dispatchEvent(new Event('input'));
     await fixture.whenStable();
@@ -676,5 +676,72 @@ describe('AreaTreino e a pergunta publicada', () => {
     fixture.destroy();
 
     expect(emFoco.exercicio()).toBeNull();
+  });
+});
+
+/**
+ * A caixa de mostrar a dica.
+ *
+ * A dica entrega o caminho — «a altura é o cateto oposto e a sombra, o
+ * adjacente» —, e quem já sabe quer treinar sem ela. A escolha fica na própria
+ * tela, acima do enunciado, e vale para as outras telas de treino: por isso o
+ * teste confere as duas coisas, a dica sumindo e a escolha ficando guardada.
+ */
+describe('AreaTreino e a caixa de mostrar a dica', () => {
+  let fixture: ComponentFixture<AreaTreino>;
+
+  const comDica: GeradorExercicio<Fracao> = {
+    ...geradorFixo,
+    gerar: () => ({ ...exercicioFixo, dica: 'O mmc de 4 e 6 é 12.' }),
+  };
+
+  function caixa(): HTMLInputElement {
+    return fixture.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+  }
+
+  function texto(): string {
+    return fixture.nativeElement.textContent as string;
+  }
+
+  async function montar(): Promise<void> {
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    });
+
+    fixture = TestBed.createComponent(AreaTreino);
+    fixture.componentRef.setInput('gerador', comDica);
+    await fixture.whenStable();
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+    await montar();
+  });
+
+  it('começa marcada, e a dica aparece', () => {
+    expect(caixa().checked).toBe(true);
+    expect(texto()).toContain('O mmc de 4 e 6 é 12.');
+  });
+
+  it('desmarcada, a dica some e o enunciado fica', async () => {
+    caixa().click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(texto()).not.toContain('O mmc de 4 e 6 é 12.');
+    expect(texto()).toContain('Calcule e escreva o resultado');
+  });
+
+  it('a escolha sobrevive à troca de tela', async () => {
+    caixa().click();
+    await fixture.whenStable();
+
+    // Outra tela de treino: o componente é recriado do zero, como numa
+    // navegação. Sem o serviço guardando a escolha, a dica voltaria.
+    await montar();
+
+    expect(caixa().checked).toBe(false);
+    expect(texto()).not.toContain('O mmc de 4 e 6 é 12.');
   });
 });

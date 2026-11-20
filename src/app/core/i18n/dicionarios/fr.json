@@ -1179,6 +1179,7 @@
     "faltaPara": "Pour ouvrir l’étape suivante, il reste : {itens}.",
     "irPara": "Aller à {titulo}",
     "irParaProva": "Passer l’examen final de {sessao}",
+    "mostrarDica": "Afficher l’indice",
     "nadaFalta": "Rien : l’étape suivante est déjà ouverte.",
     "naoSei": "Je ne sais pas, montrer la solution",
     "nivelMaximo": "niveau maximal",

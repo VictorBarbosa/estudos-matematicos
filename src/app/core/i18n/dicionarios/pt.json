@@ -1179,6 +1179,7 @@
     "faltaPara": "Falta para liberar a próxima etapa: {itens}.",
     "irPara": "Ir para {titulo}",
     "irParaProva": "Fazer a prova final de {sessao}",
+    "mostrarDica": "Mostrar a dica",
     "nadaFalta": "Nada: a próxima etapa já está liberada.",
     "naoSei": "Não sei, mostrar a resolução",
     "nivelMaximo": "nível máximo",

@@ -19,6 +19,7 @@ import {
 import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
+import { DicasService } from '@core/treino/services/dicas.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
@@ -64,6 +65,15 @@ export class AreaTreino {
 
   protected readonly chaveDoNivel = CHAVE_DO_NIVEL;
   protected readonly i18n = inject(I18nService);
+
+  /**
+   * A escolha de ver ou não a dica.
+   *
+   * Mora num serviço, e não num signal daqui, porque a caixa de seleção fica
+   * em todas as telas de treino: desligada numa, tem de continuar desligada na
+   * seguinte.
+   */
+  protected readonly dicas = inject(DicasService);
 
   /**
    * A rodada em andamento.

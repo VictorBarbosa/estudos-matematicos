@@ -47,6 +47,17 @@
     </p>
   }
 
+  <!-- A caixa fica aqui, acima da pergunta, e não nas configurações: a vontade
+       de ver a dica muda no meio da sessão. -->
+  <label class="mostrar-dica">
+    <input
+      type="checkbox"
+      [checked]="dicas.visiveis()"
+      (change)="dicas.alternar()"
+    />
+    <span>{{ i18n.t('treino.mostrarDica') }}</span>
+  </label>
+
   <div class="enunciado">
     <!-- A conta dentro do enunciado é desenhada: `(x + 1)/(x − 2)` lido como
          texto parece divisão de duas quantias, e não a fração que a questão
@@ -57,7 +68,7 @@
     @if (exercicio.enunciadoTex !== '') {
       <app-formula [tex]="exercicio.enunciadoTex" [bloco]="true" />
     }
-    @if (dica(); as dica) {
+    @if (dicas.visiveis() && dica(); as dica) {
       <p class="dica">{{ dica }}</p>
     }
   </div>

@@ -1179,6 +1179,7 @@
     "faltaPara": "To open the next stage: {itens}.",
     "irPara": "Go to {titulo}",
     "irParaProva": "Take the final exam for {sessao}",
+    "mostrarDica": "Show the hint",
     "nadaFalta": "Nothing: the next stage is already open.",
     "naoSei": "I don't know, show the solution",
     "nivelMaximo": "top level",

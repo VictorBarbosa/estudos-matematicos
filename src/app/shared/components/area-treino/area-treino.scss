@@ -104,6 +104,29 @@
   }
 }
 
+/*
+ * A caixa de mostrar a dica.
+ *
+ * Fica acima do enunciado e discreta: é um ajuste de estudo, não um comando do
+ * exercício, e não pode competir com a pergunta pela atenção.
+ */
+.mostrar-dica {
+  align-items: center;
+  align-self: flex-start;
+  color: var(--texto-tenue);
+  cursor: pointer;
+  display: flex;
+  font-size: var(--texto-sm);
+  gap: var(--esp-2);
+  /* Encostada no quadro que ela comanda: o espaçamento da coluna afastaria a
+     caixa da pergunta a ponto de parecer outro assunto. */
+  margin-bottom: calc(-1 * var(--esp-3));
+
+  input {
+    cursor: pointer;
+  }
+}
+
 .enunciado {
   background: var(--superficie-2);
   border-radius: var(--raio-md);
