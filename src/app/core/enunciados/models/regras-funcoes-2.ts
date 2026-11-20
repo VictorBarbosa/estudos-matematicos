@@ -31,13 +31,13 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para a função f(x) = #x + #, qual é o valor de f(#)?',
       'f(x) = ax + b',
-      'f(#) = # \\cdot # + #',
+      'f(#3) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
     ],
     [
       'Para f(x) = x² − #x + #, qual é o valor de f(#)?',
       'f(x) = x^2 - ax + b',
-      'f(#) = #^2 - # \\cdot # + #',
+      'f(#3) = #3^2 - #1 \\cdot #3 + #2',
       (v) => v[2]! ** 2 - v[0]! * v[2]! + v[1]!,
     ],
     [
@@ -79,7 +79,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A função f(x) = #/(x − #) está definida para todo x real, exceto um. Qual é o valor de f(#)? (duas casas decimais)',
       'f(x) = \\frac{a}{x - b}',
-      'f(#) = \\frac{#}{# - #}',
+      'f(#3) = \\frac{#1}{#3 - #2}',
       (v) => v[0]! / (v[2]! - v[1]!),
       2,
     ],
@@ -89,25 +89,25 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma função multiplica o número por # e soma #. Que número a função inversa devolve quando recebe #?',
       'f(x) = ax + b \\Rightarrow f^{-1}(y) = \\frac{y - b}{a}',
-      'f^{-1}(#) = \\frac{# - #}{#}',
+      'f^{-1}(#3) = \\frac{#3 - #2}{#1}',
       (v) => (v[2]! - v[1]!) / v[0]!,
     ],
     [
       'Se f(x) = #x + #, qual é o valor de f⁻¹(#)?',
       'f^{-1}(y) = \\frac{y - b}{a}',
-      'f^{-1}(#) = \\frac{# - #}{#}',
+      'f^{-1}(#3) = \\frac{#3 - #2}{#1}',
       (v) => (v[2]! - v[1]!) / v[0]!,
     ],
     [
       'Se f(x) = x + #, qual é o valor de f⁻¹(#)?',
       'f(x) = x + b \\Rightarrow f^{-1}(y) = y - b',
-      'f^{-1}(#) = # - #',
+      'f^{-1}(#2) = #2 - #1',
       (v) => v[1]! - v[0]!,
     ],
     [
       'Se f(x) = (x + #)/#, qual é o valor de f⁻¹(#)?',
       'f(x) = \\frac{x+b}{a} \\Rightarrow f^{-1}(y) = ay - b',
-      'f^{-1}(#) = # \\cdot # - #',
+      'f^{-1}(#3) = #2 \\cdot #3 - #1',
       (v) => v[1]! * v[2]! - v[0]!,
     ],
     [
@@ -120,37 +120,37 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma função multiplica por # e subtrai #. Quanto vale a função inversa em #? Responda como fração.',
       'f(x) = ax - b \\Rightarrow f^{-1}(y) = \\frac{y+b}{a}',
-      'f^{-1}(#) = \\frac{# + #}{#}',
+      'f^{-1}(#3) = \\frac{#3 + #2}{#1}',
       (v) => fracao(v[2]! + v[1]!, v[0]!),
     ],
     [
       'Com f(x) = #x e g(x) = x + #, qual é o valor de f(g(#))?',
       'f(g(x)) = a(x + b)',
-      'f(g(#)) = # \\cdot (# + #)',
+      'f(g(#3)) = #1 \\cdot (#3 + #2)',
       (v) => v[0]! * (v[2]! + v[1]!),
     ],
     [
       'Com f(x) = #x + # e g(x) = x − #, qual é o valor de f(g(#))?',
       'f(g(x)) = a(x - b) + c',
-      'f(g(#)) = # \\cdot (# - #) + #',
+      'f(g(#4)) = #1 \\cdot (#4 - #3) + #2',
       (v) => v[0]! * (v[3]! - v[2]!) + v[1]!,
     ],
     [
       'A função f multiplica por # e soma #; a função g soma #. Quanto vale f aplicada a g de #?',
       'f(g(x)) = a(x + b) + c',
-      'f(g(#)) = # \\cdot (# + #) + #',
+      'f(g(#4)) = #1 \\cdot (#4 + #3) + #2',
       (v) => v[0]! * (v[3]! + v[2]!) + v[1]!,
     ],
     [
       'Com f(x) = #x + # e g(x) = #x + #, qual é o valor de f(g(x)) para x = #?',
       'f(g(x)) = a(cx + d) + b',
-      'f(g(#)) = #(# \\cdot # + #) + #',
+      'f(g(#5)) = #1(#3 \\cdot #5 + #4) + #2',
       (v) => v[0]! * (v[2]! * v[4]! + v[3]!) + v[1]!,
     ],
     [
       'Uma função multiplica por # e soma #. Para que valor de x a função aplicada a si mesma dá #?',
       'f(f(x)) = a(ax + b) + b = c \\Rightarrow x = \\frac{c - b - ab}{a^2}',
-      'x = \\frac{# - # - # \\cdot #}{#^2}',
+      'x = \\frac{#3 - #2 - #1 \\cdot #2}{#1^2}',
       (v) => (v[2]! - v[1]! - v[0]! * v[1]!) / v[0]! ** 2,
     ],
     [
@@ -287,14 +287,14 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Dividindo (# mais #i) por (# mais #i), qual é a parte REAL do resultado? (duas casas decimais)',
       '\\frac{a+bi}{c+di} = \\frac{ac + bd}{c^2 + d^2}',
-      '\\operatorname{Re} = \\frac{# \\cdot # + # \\cdot #}{#^2 + #^2}',
+      '\\operatorname{Re} = \\frac{#1 \\cdot #3 + #2 \\cdot #4}{#3^2 + #4^2}',
       (v) => (v[0]! * v[2]! + v[1]! * v[3]!) / (v[2]! ** 2 + v[3]! ** 2),
       2,
     ],
     [
       'Divida (# + #i) por (# + #i). Qual é a parte real do resultado? (duas casas decimais)',
       '\\frac{a+bi}{c+di} = \\frac{ac + bd}{c^2 + d^2}',
-      '\\operatorname{Re} = \\frac{# \\cdot # + # \\cdot #}{#^2 + #^2}',
+      '\\operatorname{Re} = \\frac{#1 \\cdot #3 + #2 \\cdot #4}{#3^2 + #4^2}',
       (v) => (v[0]! * v[2]! + v[1]! * v[3]!) / (v[2]! ** 2 + v[3]! ** 2),
       2,
     ],
@@ -418,7 +418,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o valor da função f(x) = #/(x − #) em x = #? (duas casas decimais)',
       'f(x) = \\frac{a}{x - b}',
-      'f(#) = \\frac{#}{# - #}',
+      'f(#3) = \\frac{#1}{#3 - #2}',
       (v) => v[0]! / (v[2]! - v[1]!),
       2,
     ],
@@ -473,14 +473,14 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'O custo médio por peça é o custo fixo de # reais somado a # reais por peça, tudo dividido pelo número de peças. Qual é o custo médio para # peças? (três casas decimais)',
       'C = \\frac{F + a n}{n}',
-      'C = \\frac{# + # \\cdot #}{#}',
+      'C = \\frac{#1 + #2 \\cdot #3}{#3}',
       (v) => (v[0]! + v[1]! * v[2]!) / v[2]!,
       3,
     ],
     [
       'A concentração de um remédio no sangue é # vezes o tempo, dividido pelo tempo ao quadrado mais #. Qual é a concentração no instante t = #? (três casas decimais)',
       'C(t) = \\frac{at}{t^2 + b}',
-      'C(#) = \\frac{# \\cdot #}{#^2 + #}',
+      'C(#3) = \\frac{#1 \\cdot #3}{#3^2 + #2}',
       (v) => (v[0]! * v[2]!) / (v[2]! ** 2 + v[1]!),
       3,
     ],
@@ -524,14 +524,14 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o limite pela DIREITA de f(x) = #x + # em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^+}(bx+c) = ba + c',
-      '\\lim_{x\\to #^+}(#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #3^+}(#1x + #2) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
       2,
     ],
     [
       'Qual é o limite pela ESQUERDA de f(x) = #x + # em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^-}(bx+c) = ba + c',
-      '\\lim_{x\\to #^-}(#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #3^-}(#1x + #2) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
       2,
     ],
@@ -557,7 +557,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma tarifa cobra # reais por minuto nos primeiros # minutos e # real por minuto depois disso. Quanto custa uma ligação de # minutos? (três casas decimais)',
       'C = a \\cdot m_0 + b(t - m_0)',
-      'C = # \\cdot \\min(#, #) + # \\cdot \\max(0, # - #)',
+      'C = #1 \\cdot \\min(#4, #2) + #3 \\cdot \\max(0, #4 - #2)',
       (v) => v[0]! * Math.min(v[3]!, v[1]!) + v[2]! * Math.max(0, v[3]! - v[1]!),
       3,
     ],
@@ -571,7 +571,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um imposto cobra #% sobre a renda até # reais e #% sobre o que passar desse limite. Quanto paga, em reais, quem ganha #? (três casas decimais)',
       'I = \\frac{a}{100}L + \\frac{b}{100}(R - L)',
-      'I = \\frac{#}{100} \\cdot # + \\frac{#}{100} \\cdot (# - #)',
+      'I = \\frac{#1}{100} \\cdot #2 + \\frac{#3}{100} \\cdot (#4 - #2)',
       (v) => (v[0]! / 100) * v[1]! + (v[2]! / 100) * (v[3]! - v[1]!),
       3,
     ],
@@ -632,14 +632,14 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o limite pela DIREITA de f(x) = #x + # em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^+}(bx+c) = ba + c',
-      '\\lim_{x\\to #^+}(#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #3^+}(#1x + #2) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
       2,
     ],
     [
       'Qual é o limite pela ESQUERDA de f(x) = #x + # em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^-}(bx+c) = ba + c',
-      '\\lim_{x\\to #^-}(#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #3^-}(#1x + #2) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
       2,
     ],

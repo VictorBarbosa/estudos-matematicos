@@ -47,14 +47,14 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um carro passa a # m/s e acelera a # m/s² durante # s. Quantos metros ele percorre nesse tempo? (duas casas decimais)',
       'd = v_0 t + \\frac{a t^2}{2}',
-      'd = # \\cdot # + \\frac{# \\cdot #^2}{2}',
+      'd = #1 \\cdot #3 + \\frac{#2 \\cdot #3^2}{2}',
       (v) => v[0]! * v[2]! + (v[1]! * v[2]! ** 2) / 2,
       2,
     ],
     [
       'Um corpo parte a # m/s e acelera a # m/s². Que distância percorre em # s? (duas casas decimais)',
       'd = v_0 t + \\frac{a t^2}{2}',
-      'd = # \\cdot # + \\frac{# \\cdot #^2}{2}',
+      'd = #1 \\cdot #3 + \\frac{#2 \\cdot #3^2}{2}',
       (v) => v[0]! * v[2]! + (v[1]! * v[2]! ** 2) / 2,
       2,
     ],
@@ -247,7 +247,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo de # kg desce uma rampa de # m de altura e chega com # m/s. Quantos joules foram perdidos por atrito? (duas casas decimais)',
       'E_{diss} = m g h - \\frac{m v^2}{2}',
-      'E_{diss} = # \\cdot 9{,}81 \\cdot # - \\frac{# \\cdot #^2}{2}',
+      'E_{diss} = #1 \\cdot 9{,}81 \\cdot #2 - \\frac{#1 \\cdot #3^2}{2}',
       (v) => v[0]! * G * v[1]! - (v[0]! * v[2]! ** 2) / 2,
       2,
     ],
@@ -476,7 +476,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Num divisor de tensão, R₁ = # kΩ e R₂ = # kΩ estão em série com uma fonte de # V. Qual é a tensão sobre R₂, em V? (duas casas decimais)',
       'U_2 = U \\frac{R_2}{R_1 + R_2}',
-      'U_2 = # \\cdot \\frac{#}{# + #}',
+      'U_2 = #3 \\cdot \\frac{#2}{#1 + #2}',
       (v) => v[2]! * (v[1]! / (v[0]! + v[1]!)),
       2,
     ],
@@ -497,7 +497,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'R₁ = # Ω está em série com o paralelo de R₂ = # Ω e R₃ = # Ω, tudo ligado a # V. Qual corrente sai da fonte, em A? (duas casas decimais)',
       'R_{eq} = R_1 + \\frac{R_2 R_3}{R_2 + R_3}, \\quad i = \\frac{U}{R_{eq}}',
-      'i = \\frac{#}{# + \\frac{# \\cdot #}{# + #}}',
+      'i = \\frac{#4}{#1 + \\frac{#2 \\cdot #3}{#2 + #3}}',
       (v) => v[3]! / (v[0]! + (v[1]! * v[2]!) / (v[1]! + v[2]!)),
       2,
     ],
@@ -657,7 +657,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Duas cordas de # m, presas nas pontas, conduzem ondas a # m/s e # m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem? (duas casas decimais)',
       'f = \\frac{v}{2L}, \\quad b = |f_1 - f_2|',
-      'b = \\left|\\frac{#}{2 \\cdot #} - \\frac{#}{2 \\cdot #}\\right|',
+      'b = \\left|\\frac{#2}{2 \\cdot #1} - \\frac{#3}{2 \\cdot #1}\\right|',
       (v) => Math.abs(v[1]! / (2 * v[0]!) - v[2]! / (2 * v[0]!)),
       2,
     ],
@@ -716,7 +716,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um objeto de # cm de altura está a # cm de uma lente convergente de foco # cm. Qual é a altura da imagem, em cm? (negativo se invertida; duas casas decimais)',
       'A = -\\frac{d_i}{d_o}, \\quad h_i = A h_o',
-      'd_i = \\left(\\frac{1}{#} - \\frac{1}{#}\\right)^{-1}, \\quad h_i = -\\frac{d_i}{#} \\cdot #',
+      'd_i = \\left(\\frac{1}{#3} - \\frac{1}{#2}\\right)^{-1}, \\quad h_i = -\\frac{d_i}{#2} \\cdot #1',
       (v) => {
         const di = 1 / (1 / v[2]! - 1 / v[1]!);
         return -(di / v[1]!) * v[0]!;
@@ -893,14 +893,14 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Num instante, um corpo tem velocidade (#, #) m/s e aceleração (#, #) m/s². Qual é a componente TANGENCIAL da aceleração, em m/s²? (duas casas decimais)',
       'a_t = \\frac{\\vec v \\cdot \\vec a}{|\\vec v|}',
-      'a_t = \\frac{# \\cdot # + # \\cdot #}{\\sqrt{#^2 + #^2}}',
+      'a_t = \\frac{#1 \\cdot #3 + #2 \\cdot #4}{\\sqrt{#1^2 + #2^2}}',
       (v) => (v[0]! * v[2]! + v[1]! * v[3]!) / Math.hypot(v[0]!, v[1]!),
       2,
     ],
     [
       'Num instante, um corpo tem velocidade (#, #) m/s e aceleração (#, #) m/s². Qual é o raio de curvatura da trajetória, em metros? (duas casas decimais)',
       'R = \\frac{|\\vec v|^3}{|\\vec v \\times \\vec a|}',
-      'R = \\frac{\\left(\\sqrt{#^2 + #^2}\\right)^3}{|# \\cdot # - # \\cdot #|}',
+      'R = \\frac{\\left(\\sqrt{#1^2 + #2^2}\\right)^3}{|#1 \\cdot #4 - #2 \\cdot #3|}',
       (v) => Math.hypot(v[0]!, v[1]!) ** 3 / Math.abs(v[0]! * v[3]! - v[1]! * v[2]!),
       2,
     ],
@@ -1059,7 +1059,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma barra homogênea de # m e # N está apoiada numa ponta. Uma carga de # N está a # m desse apoio. Que força vertical é preciso fazer na outra ponta, em N? (duas casas decimais)',
       'F \\cdot L = P_{barra}\\frac{L}{2} + P_{carga} \\cdot x',
-      'F = \\frac{# \\cdot \\frac{#}{2} + # \\cdot #}{#}',
+      'F = \\frac{#2 \\cdot \\frac{#1}{2} + #3 \\cdot #4}{#1}',
       (v) => (v[1]! * (v[0]! / 2) + v[2]! * v[3]!) / v[0]!,
       2,
     ],
@@ -1338,7 +1338,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a aceleração da gravidade a # km de altitude? (use g₀ = # m/s² e R = # km; duas casas decimais)',
       'g = g_0\\left(\\frac{R}{R + h}\\right)^2',
-      'g = # \\cdot \\left(\\frac{#}{# + #}\\right)^2',
+      'g = #2 \\cdot \\left(\\frac{#3}{#3 + #1}\\right)^2',
       (v) => v[1]! * (v[2]! / (v[2]! + v[0]!)) ** 2,
       2,
     ],
@@ -1422,28 +1422,28 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo de # kg a # m/s colide com outro de # kg parado, e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)',
       'v = \\frac{m_1 v_1}{m_1 + m_2}',
-      'v = \\frac{# \\cdot #}{# + #}',
+      'v = \\frac{#1 \\cdot #2}{#1 + #3}',
       (v) => (v[0]! * v[1]!) / (v[0]! + v[2]!),
       2,
     ],
     [
       'Um carrinho de # kg a # m/s atinge outro de # kg, parado, e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)',
       'v = \\frac{m_1 v_1}{m_1 + m_2}',
-      'v = \\frac{# \\cdot #}{# + #}',
+      'v = \\frac{#1 \\cdot #2}{#1 + #3}',
       (v) => (v[0]! * v[1]!) / (v[0]! + v[2]!),
       2,
     ],
     [
       'Um corpo de # kg a # m/s colide com outro de # kg a # m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)',
       'v = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}',
-      'v = \\frac{# \\cdot # + # \\cdot #}{# + #}',
+      'v = \\frac{#1 \\cdot #2 + #3 \\cdot #4}{#1 + #3}',
       (v) => (v[0]! * v[1]! + v[2]! * v[3]!) / (v[0]! + v[2]!),
       2,
     ],
     [
       'Um corpo de # kg a # m/s atinge outro de # kg parado, e os dois seguem juntos. Quanta energia cinética foi perdida, em J? (duas casas decimais)',
       'E_{perdida} = \\frac{m_1 v^2}{2} - \\frac{(m_1+m_2)v_f^2}{2}',
-      'E = \\frac{# \\cdot #^2}{2} - \\frac{(# + #)\\left(\\frac{# \\cdot #}{# + #}\\right)^2}{2}',
+      'E = \\frac{#1 \\cdot #2^2}{2} - \\frac{(#1 + #3)\\left(\\frac{#1 \\cdot #2}{#1 + #3}\\right)^2}{2}',
       (v) => {
         const vf = (v[0]! * v[1]!) / (v[0]! + v[2]!);
         return (v[0]! * v[1]! ** 2) / 2 - ((v[0]! + v[2]!) * vf ** 2) / 2;
@@ -1512,7 +1512,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo gira sem torque externo com inércia # kg·m² a # rad/s, e a inércia cai para #. De quanto VARIOU a energia cinética de rotação, em J? (duas casas decimais)',
       'E = \\frac{L^2}{2I}, \\quad \\Delta E = \\frac{I_1 \\omega_1^2}{2}\\left(\\frac{I_1}{I_2} - 1\\right)',
-      '\\Delta E = \\frac{# \\cdot #^2}{2}\\left(\\frac{#}{#} - 1\\right)',
+      '\\Delta E = \\frac{#1 \\cdot #2^2}{2}\\left(\\frac{#1}{#3} - 1\\right)',
       (v) => ((v[0]! * v[1]! ** 2) / 2) * (v[0]! / v[2]! - 1),
       2,
     ],
@@ -1934,7 +1934,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       '# kg de água a # °C são misturados com # kg de água a # °C. Qual é a temperatura final, em °C? (recipiente isolado; duas casas decimais)',
       'T_f = \\frac{m_1 T_1 + m_2 T_2}{m_1 + m_2}',
-      'T_f = \\frac{# \\cdot # + # \\cdot #}{# + #}',
+      'T_f = \\frac{#1 \\cdot #2 + #3 \\cdot #4}{#1 + #3}',
       (v) => (v[0]! * v[1]! + v[2]! * v[3]!) / (v[0]! + v[2]!),
       2,
     ],
@@ -1984,7 +1984,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Dois capacitores, de # μF e # μF, são ligados em SÉRIE. Qual é a capacitância equivalente, em μF? (duas casas decimais)',
       'C_{eq} = \\frac{C_1 C_2}{C_1 + C_2}',
-      'C_{eq} = \\frac{# \\cdot #}{# + #}',
+      'C_{eq} = \\frac{#1 \\cdot #2}{#1 + #2}',
       (v) => (v[0]! * v[1]!) / (v[0]! + v[1]!),
       2,
     ],
@@ -2078,7 +2078,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um foguete parte com # t e termina a queima com # t. Que fração da massa inicial era propelente? (duas casas decimais)',
       'f = \\frac{m_i - m_f}{m_i}',
-      'f = \\frac{# - #}{#}',
+      'f = \\frac{#1 - #2}{#1}',
       (v) => (v[0]! - v[1]!) / v[0]!,
       2,
     ],
@@ -2120,7 +2120,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Dois estágios têm massas estruturais iguais de # t e propelente de # t cada, com exaustão # m/s. Qual é o delta-v TOTAL, em km/s? (duas casas decimais)',
       '\\Delta v = v_e\\left[\\ln\\frac{m_0}{m_0 - m_p} + \\ln\\frac{m_0 - m_p}{m_0 - 2m_p}\\right]',
-      '\\Delta v = \\frac{# \\cdot 2\\ln\\left(\\frac{# + #}{#}\\right)}{1000}',
+      '\\Delta v = \\frac{#3 \\cdot 2\\ln\\left(\\frac{#1 + #2}{#1}\\right)}{1000}',
       (v) => (v[2]! * 2 * Math.log((v[0]! + v[1]!) / v[0]!)) / 1000,
       2,
     ],
