@@ -183,6 +183,10 @@
     "fr": "# est le nombre d’arêtes. Utilisez Euler pour arriver aux sommets.",
     "en": "# is the number of edges. Use Euler to get to the vertices."
   },
+  "# é o número de lados. A pergunta é quantas diagonais: n(n − #)/#.": {
+    "fr": "# est le nombre de côtés. La question porte sur le nombre de diagonales : n(n − #)/#.",
+    "en": "# is the number of sides. The question asks how many diagonals: n(n − #)/#."
+  },
   "# é p, o que multiplica x (#x² = (#x)²). O pedido é q.": {
     "fr": "# est p, ce qui multiplie x (#x² = (#x)²). Ce qui est demandé, c’est q.",
     "en": "# is p, what multiplies x (#x² = (#x)²). What is asked for is q."
@@ -266,6 +270,26 @@
   "#° fica no #º quadrante.": {
     "fr": "#° est dans le #e quadrant.",
     "en": "#° is in quadrant #."
+  },
+  "#° é metade do ângulo A, que a diagonal AC corta. BD corta o ângulo B.": {
+    "fr": "#° est la moitié de l’angle A, que la diagonale AC coupe. BD coupe l’angle B.",
+    "en": "#° is half of angle A, which the diagonal AC cuts. BD cuts angle B."
+  },
+  "#° é o outro ângulo da mesma base. O da base menor é o suplementar.": {
+    "fr": "#° est l’autre angle de la même base. Celui de la petite base en est le supplémentaire.",
+    "en": "#° is the other angle on the same base. The one on the shorter base is its supplement."
+  },
+  "#° é o ângulo B (que corresponde a E). EF é um lado, medido em cm.": {
+    "fr": "#° est l’angle B (qui correspond à E). EF est un côté, mesuré en cm.",
+    "en": "#° is angle B (which corresponds to E). EF is a side, measured in cm."
+  },
+  "#° é o ângulo B inteiro. A diagonal BD o divide ao meio.": {
+    "fr": "#° est l’angle B entier. La diagonale BD le partage en deux.",
+    "en": "#° is the whole of angle B. The diagonal BD splits it in half."
+  },
+  "#° é o ângulo OPOSTO (opostos são iguais). O consecutivo é o suplementar.": {
+    "fr": "#° est l’angle OPPOSÉ (les opposés sont égaux). Le consécutif en est le supplémentaire.",
+    "en": "#° is the OPPOSITE angle (opposite angles are equal). The consecutive one is its supplement."
   },
   "#° é π radianos: multiplique # por π e divida por #.": {
     "fr": "#° vaut π radians : multipliez # par π et divisez par #.",
@@ -442,6 +466,10 @@
   "A assinatura diz o que entra e o que sai: um real entra, um real sai.": {
     "fr": "La signature dit ce qui entre et ce qui sort : un réel entre, un réel sort.",
     "en": "The signature says what goes in and what comes out: a real goes in, a real comes out."
+  },
+  "A assíntota só é zero quando o numerador tem grau MENOR que o denominador. Com graus iguais, sobra a razão dos coeficientes líderes.": {
+    "fr": "L’asymptote n’est nulle que lorsque le numérateur est de degré INFÉRIEUR à celui du dénominateur. À degrés égaux, il reste le rapport des coefficients dominants.",
+    "en": "The asymptote is zero only when the numerator has LOWER degree than the denominator. With equal degrees, the ratio of the leading coefficients remains."
   },
   "A assíntota vertical aparece onde o denominador zera.": {
     "fr": "L’asymptote verticale apparaît là où le dénominateur s’annule.",
@@ -1402,6 +1430,10 @@
   "A fração saiu invertida: o coeficiente do seno de cima vai em cima.": {
     "fr": "La fraction est inversée : le coefficient du sinus du haut va en haut.",
     "en": "The fraction came out upside down: the coefficient of the top sine goes on top."
+  },
+  "A fração saiu invertida: o numerador da função é quem vai em cima.": {
+    "fr": "La fraction est inversée : c’est le numérateur de la fonction qui va en haut.",
+    "en": "The fraction came out upside down: the function’s numerator is what goes on top."
   },
   "A fração se simplifica num número.": {
     "fr": "La fraction se simplifie en un nombre.",
@@ -2587,6 +2619,10 @@
     "fr": "Le rapport est inversé. Diminuer l’inertie fait MONTER la vitesse angulaire — c’est la patineuse qui accélère en ramenant les bras.",
     "en": "The ratio is upside down. Reducing the inertia makes the angular velocity GO UP — it is the skater who speeds up by pulling the arms in."
   },
+  "A razão está invertida. O coeficiente angular é o líder de cima sobre o de baixo.": {
+    "fr": "Le rapport est inversé. Le coefficient directeur est le dominant du haut sur celui du bas.",
+    "en": "The ratio is upside down. The slope is the leading coefficient on top over the one below."
+  },
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
     "en": "The ratio is upside down: at equilibrium, y is the constant term divided by the coefficient."
@@ -2598,6 +2634,10 @@
   "A razão está invertida: é o coeficiente de cima sobre o de baixo.": {
     "fr": "Le rapport est inversé : c’est le coefficient du haut sur celui du bas.",
     "en": "The ratio is upside down: it is the top coefficient over the bottom one."
+  },
+  "A razão está invertida: é o coeficiente líder de cima dividido pelo de baixo, na mesma ordem em que a fração está escrita.": {
+    "fr": "Le rapport est inversé : c’est le coefficient dominant du haut divisé par celui du bas, dans l’ordre où la fraction est écrite.",
+    "en": "The ratio is upside down: it is the leading coefficient on top divided by the one below, in the order the fraction is written."
   },
   "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
@@ -2674,6 +2714,10 @@
   "A relação inclui o zero, e ele acontece na raiz dupla.": {
     "fr": "La relation inclut le zéro, et il se produit à la racine double.",
     "en": "The relation includes zero, and it happens at the double root."
+  },
+  "A relação não é direta assim. Passe pelo ângulo externo: n = #° / aₑ.": {
+    "fr": "La relation n’est pas aussi directe. Passez par l’angle extérieur : n = #° / aₑ.",
+    "en": "The relation is not that direct. Go through the exterior angle: n = #° / aₑ."
   },
   "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
     "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
@@ -2831,9 +2875,21 @@
     "fr": "La somme des parties doit donner le total, ce qui détermine k.",
     "en": "The sum of the parts must equal the total, which determines k."
   },
+  "A soma dos internos do TRIÂNGULO é #°, não #°. Os #° valem para a soma dos ângulos externos, ou para os internos de um quadrilátero.": {
+    "fr": "La somme des angles intérieurs du TRIANGLE vaut #°, pas #°. Les #° valent pour la somme des angles extérieurs, ou pour les angles intérieurs d’un quadrilatère.",
+    "en": "The sum of the interior angles of a TRIANGLE is #°, not #°. The #° applies to the sum of the exterior angles, or to the interior angles of a quadrilateral."
+  },
   "A soma dos nox de um composto neutro é ZERO. Comece pelo elemento de nox conhecido — oxigênio −#, halogênio −# — e não esqueça de multiplicar cada um pelo seu índice.": {
     "fr": "La somme des n.o. d’un composé neutre est NULLE. Commencez par l’élément au n.o. connu — oxygène −#, halogène −# — et n’oubliez pas de multiplier chacun par son indice.",
     "en": "The oxidation numbers of a neutral compound add to ZERO. Start with the element whose number is known — oxygen −#, halogen −# — and do not forget to multiply each by its subscript."
+  },
+  "A soma dos ângulos EXTERNOS é sempre #°, para qualquer polígono. A dos internos cresce com o número de lados.": {
+    "fr": "La somme des angles EXTÉRIEURS vaut toujours #°, pour tout polygone. Celle des angles intérieurs croît avec le nombre de côtés.",
+    "en": "The sum of the EXTERIOR angles is always #°, for any polygon. The interior sum grows with the number of sides."
+  },
+  "A soma dos ângulos de um QUADRILÁTERO é #°, não #°.": {
+    "fr": "La somme des angles d’un QUADRILATÈRE vaut #°, pas #°.",
+    "en": "The sum of the angles of a QUADRILATERAL is #°, not #°."
   },
   "A soma dos ângulos internos de qualquer triângulo é #°.": {
     "fr": "La somme des angles intérieurs de tout triangle est #°.",
@@ -3226,6 +3282,10 @@
   "A' = k² · A, e aqui k = #: o fator é #².": {
     "fr": "A' = k² · A, et ici k = # : le facteur vaut #².",
     "en": "A' = k² · A, and here k = #: the factor is #²."
+  },
+  "AB corresponde a DE, não a EF. Siga a ordem: E ocupa o lugar de B e F o de C.": {
+    "fr": "AB correspond à DE, pas à EF. Suivez l’ordre : E occupe la place de B et F celle de C.",
+    "en": "AB corresponds to DE, not to EF. Follow the order: E takes B’s place and F takes C’s."
   },
   "AB e DE são correspondentes, então são iguais: monte a equação, ache x e substitua em AB.": {
     "fr": "AB et DE sont correspondants, donc égaux : posez l’équation, trouvez x et substituez dans AB.",
@@ -4010,6 +4070,10 @@
   "Avançar uma unidade em x multiplica o valor pela base.": {
     "fr": "Avancer d'une unité en x multiplie la valeur par la base.",
     "en": "Advancing one unit in x multiplies the value by the base."
+  },
+  "Aí está a assíntota, não o buraco. O buraco acontece onde numerador E denominador zeram juntos — ali o fator se cancela e sobra um ponto removido.": {
+    "fr": "C’est là que se trouve l’asymptote, pas le trou. Le trou apparaît là où le numérateur ET le dénominateur s’annulent ensemble — le facteur se simplifie et il reste un point enlevé.",
+    "en": "That is where the asymptote is, not the hole. The hole occurs where the numerator AND the denominator vanish together — there the factor cancels and a removed point remains."
   },
   "B = μ₀·I/(#π·r): com μ₀ = #π×#⁻⁷ o π cancela e fica #×#⁻⁷·#/# em teslas. Para μT, ×#⁶.": {
     "fr": "B = μ₀·I/(#π·r) : avec μ₀ = #π×#⁻⁷ le π se simplifie et il reste #×#⁻⁷·#/# en teslas. Pour des μT, ×#⁶.",
@@ -5102,6 +5166,10 @@
   "Com o momento de inércia de esfera maciça, a massa e o raio se cancelam.": {
     "fr": "Avec le moment d’inertie de la sphère pleine, la masse et le rayon se simplifient.",
     "en": "With the moment of inertia of the solid sphere, the mass and the radius cancel."
+  },
+  "Com o numerador de grau MAIOR, não há assíntota horizontal: a função cresce sem limite, mas ao longo de uma reta inclinada.": {
+    "fr": "Avec un numérateur de degré SUPÉRIEUR, il n’y a pas d’asymptote horizontale : la fonction croît sans limite, mais le long d’une droite inclinée.",
+    "en": "With the numerator of HIGHER degree there is no horizontal asymptote: the function grows without bound, but along a slanted line."
   },
   "Com o numerador de grau menor, a função tende a zero.": {
     "fr": "Avec le numérateur de degré inférieur, la fonction tend vers zéro.",
@@ -6843,6 +6911,10 @@
     "fr": "Et nous divisons par la nouvelle inertie pour trouver la nouvelle vitesse angulaire.",
     "en": "And we divide by the new inertia to find the new angular velocity."
   },
+  "E efetuamos a divisão.": {
+    "fr": "Et nous effectuons la division.",
+    "en": "And we carry out the division."
+  },
   "E ela se relaciona com o raio da curva como no movimento circular.": {
     "fr": "Et elle se rapporte au rayon de la courbe comme dans le mouvement circulaire.",
     "en": "And it relates to the radius of the curve as in circular motion."
@@ -7022,6 +7094,10 @@
   "Ela sai da soma das massas atômicas da fórmula, lidas na tabela periódica.": {
     "fr": "Elle vient de la somme des masses atomiques de la formule, lues dans le tableau périodique.",
     "en": "It comes from the sum of the atomic masses in the formula, read off the periodic table."
+  },
+  "Ela é o quociente da divisão do numerador pelo denominador.": {
+    "fr": "Elle est le quotient de la division du numérateur par le dénominateur.",
+    "en": "It is the quotient of the numerator divided by the denominator."
   },
   "Elas dividem o losango em quatro triângulos retângulos iguais.": {
     "fr": "Elles partagent le losange en quatre triangles rectangles égaux.",
@@ -7691,6 +7767,10 @@
     "fr": "En une période l’onde avance d’une longueur d’onde : v = λ·f.",
     "en": "In one period the wave advances one wavelength: v = λ·f."
   },
+  "Em vez de dividir, os dois valores foram subtraídos. A barra de fração é uma divisão.": {
+    "fr": "Au lieu de diviser, les deux valeurs ont été soustraites. La barre de fraction est une division.",
+    "en": "Instead of dividing, the two values were subtracted. The fraction bar is a division."
+  },
   "Em vez de seis integrais nas faces, uma integral tripla do divergente.": {
     "fr": "Au lieu de six intégrales sur les faces, une intégrale triple de la divergence.",
     "en": "Instead of six integrals over the faces, one triple integral of the divergence."
@@ -7799,6 +7879,10 @@
     "fr": "En x = π/#, l’argument vaut π/#.",
     "en": "At x = π/#, the argument is π/#."
   },
+  "Em x igual a #, o denominador zera.": {
+    "fr": "En x égal à #, le dénominateur s’annule.",
+    "en": "At x equal to #, the denominator vanishes."
+  },
   "Em órbita, a gravidade é exatamente a força centrípeta necessária.": {
     "fr": "En orbite, la gravité est exactement la force centripète nécessaire.",
     "en": "In orbit, gravity is exactly the required centripetal force."
@@ -7830,6 +7914,10 @@
   "Energia interna diminuiu: o gás esfriou.": {
     "fr": "L'énergie interne a diminué : le gaz s'est refroidi.",
     "en": "The internal energy decreased: the gas cooled down."
+  },
+  "Entraram os termos constantes. Longe da origem quem manda é o termo de MAIOR grau; as constantes somem na comparação.": {
+    "fr": "Ce sont les termes constants qui ont été utilisés. Loin de l’origine c’est le terme de PLUS HAUT degré qui domine ; les constantes disparaissent dans la comparaison.",
+    "en": "The constant terms were used. Far from the origin the HIGHEST-degree term rules; the constants vanish in the comparison."
   },
   "Entre # e #, a ligação se trata como covalente polar.": {
     "fr": "Entre # et #, la liaison est traitée comme covalente polaire.",
@@ -7874,6 +7962,10 @@
   "Entrou cosseno no lugar do seno. É o seno que mede a parte perpendicular — com velocidade alinhada ao raio o momento angular é zero, e o cosseno daria o máximo.": {
     "fr": "Le cosinus a pris la place du sinus. C’est le sinus qui mesure la part perpendiculaire — avec une vitesse alignée au rayon, le moment cinétique est nul, alors que le cosinus donnerait le maximum.",
     "en": "Cosine went in place of sine. It is the sine that measures the perpendicular part — with the velocity aligned with the radius the angular momentum is zero, and the cosine would give the maximum."
+  },
+  "Entrou o coeficiente do termo de grau # do numerador. Quem define a inclinação é o termo de maior grau, que aqui é o quadrático.": {
+    "fr": "C’est le coefficient du terme de degré # du numérateur qui a été pris. La pente est fixée par le terme de plus haut degré, ici le terme quadratique.",
+    "en": "The coefficient of the degree-# term of the numerator was used. The slope is set by the highest-degree term, which here is the quadratic one."
   },
   "Entrou um termo a mais do que o grau # permite. A aproximação fica melhor, mas não é a que o enunciado pediu.": {
     "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
@@ -8314,6 +8406,10 @@
   "Essa é a SOMA (−b/a). O produto usa c: c/a.": {
     "fr": "C’est la SOMME (−b/a). Le produit utilise c : c/a.",
     "en": "That is the SUM (−b/a). The product uses c: c/a."
+  },
+  "Essa é a SOMA de todos os ângulos. Falta dividir por n.": {
+    "fr": "C’est la SOMME de tous les angles. Il reste à diviser par n.",
+    "en": "That is the SUM of all the angles. You still have to divide by n."
   },
   "Essa é a SOMBRA do prédio. A altura só coincidiria com ela se a vara também tivesse altura igual à sua sombra.": {
     "fr": "C’est l’OMBRE de l’immeuble. La hauteur ne coïnciderait avec elle que si la perche avait aussi une hauteur égale à son ombre.",
@@ -8867,6 +8963,10 @@
     "fr": "C’est le VOLUME. La surface vaut #πr², sans le facteur #/# et avec r².",
     "en": "That is the VOLUME. The surface is #πr², without the factor #/# and with r²."
   },
+  "Esse é o ZERO da função, onde o numerador se anula e o gráfico cruza o eixo x. A assíntota vertical vem do denominador.": {
+    "fr": "C’est le ZÉRO de la fonction, là où le numérateur s’annule et où le graphe coupe l’axe des x. L’asymptote verticale vient du dénominateur.",
+    "en": "That is the ZERO of the function, where the numerator vanishes and the graph crosses the x axis. The vertical asymptote comes from the denominator."
+  },
   "Esse é o arccos do valor. As duas inversas se completam até #°: confira qual das duas razões foi pedida.": {
     "fr": "C’est l’arccos de la valeur. Les deux inverses se complètent jusqu’à #° : vérifiez laquelle des deux fonctions était demandée.",
     "en": "That is the arccos of the value. The two inverses add up to #°: check which of the two was asked for."
@@ -9315,6 +9415,10 @@
     "fr": "C’est le y : x utilise le COSINUS.",
     "en": "That is the y: x uses the COSINE."
   },
+  "Esse é o ângulo EXTERNO. O interno é o suplementar dele: interno + externo = #°.": {
+    "fr": "C’est l’angle EXTÉRIEUR. L’intérieur en est le supplémentaire : intérieur + extérieur = #°.",
+    "en": "That is the EXTERIOR angle. The interior one is its supplement: interior + exterior = #°."
+  },
   "Esse é o ângulo em RADIANOS. A calculadora estava no modo errado: passe para graus.": {
     "fr": "C’est l’angle en RADIANS. La calculatrice était dans le mauvais mode : passez en degrés.",
     "en": "That is the angle in RADIANS. The calculator was in the wrong mode: switch to degrees."
@@ -9326,6 +9430,10 @@
   "Esse é o ângulo em RADIANOS. O enunciado pede graus: confira o modo da calculadora (DEG, e não RAD).": {
     "fr": "C’est l’angle en RADIANS. L’énoncé demande des degrés : vérifiez le mode de la calculatrice (DEG, et non RAD).",
     "en": "That is the angle in RADIANS. The question asks for degrees: check the calculator mode (DEG, not RAD)."
+  },
+  "Esse é o ângulo interno de CADA vértice, se o polígono for regular. A pergunta pede a soma de todos.": {
+    "fr": "C’est l’angle intérieur de CHAQUE sommet, si le polygone est régulier. La question demande la somme de tous.",
+    "en": "That is the interior angle at EACH vertex, if the polygon is regular. The question asks for the sum of all of them."
   },
   "Esse é o ângulo oposto ao MENOR lado. O maior ângulo fica sempre em frente ao maior lado — é ele que entra com sinal de menos no numerador.": {
     "fr": "Ceci est l’angle opposé au PLUS PETIT côté. Le plus grand angle est toujours face au plus grand côté — c’est lui qui entre avec le signe moins au numérateur.",
@@ -9382,6 +9490,10 @@
   "Esse é só o ÚLTIMO termo. O número em cima do sigma diz onde a soma para, não o que somar: é preciso somar todos os termos de k inicial até ele.": {
     "fr": "C’est seulement le DERNIER terme. Le nombre au-dessus du sigma dit où la somme s’arrête, pas ce qu’il faut additionner : il faut additionner tous les termes depuis le k initial jusqu’à lui.",
     "en": "That is only the LAST term. The number above the sigma says where the sum stops, not what to add: you have to add every term from the starting k up to it."
+  },
+  "Esse é um zero da função: o numerador se anula, mas o denominador não. O gráfico passa pelo eixo x ali, sem furo nenhum.": {
+    "fr": "C’est un zéro de la fonction : le numérateur s’annule, mais pas le dénominateur. Le graphe traverse l’axe des x à cet endroit, sans aucun trou.",
+    "en": "That is a zero of the function: the numerator vanishes but the denominator does not. The graph crosses the x axis there, with no hole at all."
   },
   "Esse é um único círculo máximo. A esfera tem superfície equivalente a QUATRO deles.": {
     "fr": "C’est un seul grand cercle. La sphère a une surface équivalente à QUATRE d’entre eux.",
@@ -9679,6 +9791,10 @@
     "fr": "Il manque la double dérivation du terme #x³ : elle donne #x, et le terme #x² donne #.",
     "en": "Differentiating the term #x³ twice is missing: it gives #x, and the term #x² gives #."
   },
+  "Faltou descontar o ângulo B, que é igual ao E pela congruência.": {
+    "fr": "Il manque la soustraction de l’angle B, égal à E par la congruence.",
+    "en": "You forgot to subtract angle B, which equals E by the congruence."
+  },
   "Faltou dividir a soma dos lados por #: cada aresta é a divisa de duas faces.": {
     "fr": "Il manque la division de la somme des côtés par # : chaque arête est la frontière de deux faces.",
     "en": "The division of the sum of sides by # is missing: each edge is the border of two faces."
@@ -9730,6 +9846,10 @@
   "Faltou dividir por #: cada aresta pertence a duas faces e foi contada duas vezes.": {
     "fr": "Il manque la division par # : chaque arête appartient à deux faces et a été comptée deux fois.",
     "en": "The division by # is missing: each edge belongs to two faces and was counted twice."
+  },
+  "Faltou dividir por #: cada diagonal liga dois vértices e foi contada uma vez em cada ponta.": {
+    "fr": "Il manque la division par # : chaque diagonale relie deux sommets et a été comptée une fois à chaque extrémité.",
+    "en": "The division by # is missing: each diagonal joins two vertices and was counted once at each end."
   },
   "Faltou dividir por #: cada um dos n triângulos tem área ℓ·a/#, não ℓ·a.": {
     "fr": "Il manque la division par # : chacun des n triangles a pour aire ℓ·a/#, et non ℓ·a.",
@@ -10151,6 +10271,10 @@
     "fr": "En dehors de ce point, le trinôme a le signe de a (positif).",
     "en": "Outside that point, the quadratic has the sign of a (positive)."
   },
+  "Fora do domínio não há valor nenhum a calcular.": {
+    "fr": "Hors du domaine il n’y a aucune valeur à calculer.",
+    "en": "Outside the domain there is no value to compute at all."
+  },
   "Força centrípeta não é uma força nova: é o nome do papel que a resultante cumpre.": {
     "fr": "La force centripète n’est pas une force nouvelle : c’est le nom du rôle que la résultante joue.",
     "en": "Centripetal force is not a new force: it is the name of the role the resultant plays."
@@ -10202,6 +10326,10 @@
   "Geometricamente, é a área de um quadrado de lado (a + b).": {
     "fr": "Géométriquement, c'est l'aire d'un carré de côté (a + b).",
     "en": "Geometrically, it is the area of a square of side (a + b)."
+  },
+  "Graus iguais em cima e embaixo: a assíntota é o coeficiente de x de cima (#) dividido pelo de baixo (#).": {
+    "fr": "Degrés égaux en haut et en bas : l’asymptote est le coefficient de x du haut (#) divisé par celui du bas (#).",
+    "en": "Equal degrees above and below: the asymptote is the coefficient of x on top (#) divided by the one below (#)."
   },
   "Green troca a integral na borda pela integral dupla do giro no interior.": {
     "fr": "Green échange l’intégrale sur le bord contre l’intégrale double de la rotation à l’intérieur.",
@@ -10875,6 +11003,10 @@
     "fr": "Un côté divisé par le sinus de l’angle opposé est constant : #/sin #° = x/sin #°. Isolez x.",
     "en": "A side over the sine of its opposite angle is constant: #/sin #° = x/sin #°. Isolate x."
   },
+  "Lados opostos são paralelos: dois ângulos consecutivos são colaterais internos e somam #°.": {
+    "fr": "Les côtés opposés sont parallèles : deux angles consécutifs sont des angles internes du même côté et leur somme vaut #°.",
+    "en": "Opposite sides are parallel: two consecutive angles are co-interior and add up to #°."
+  },
   "Laterais diferentes: o limite não existe.": {
     "fr": "Limites latérales différentes : la limite n’existe pas.",
     "en": "Different one-sided limits: the limit does not exist."
@@ -11055,6 +11187,10 @@
     "fr": "Donc :",
     "en": "So:"
   },
+  "Longe da origem, #x² sobre #x se comporta como (#/#)·x: a inclinação é a razão dos termos de maior grau.": {
+    "fr": "Loin de l’origine, #x² sur #x se comporte comme (#/#)·x : la pente est le rapport des termes de plus haut degré.",
+    "en": "Far from the origin, #x² over #x behaves like (#/#)·x: the slope is the ratio of the highest-degree terms."
+  },
   "Longe da origem, só o termo de maior grau de cada lado importa.": {
     "fr": "Loin de l'origine, seul le terme de plus haut degré de chaque côté importe.",
     "en": "Far from the origin, only the highest degree term on each side matters."
@@ -11078,6 +11214,10 @@
   "M é uma cota para a derivada de ordem seguinte no intervalo.": {
     "fr": "M est une borne pour la dérivée d’ordre suivant sur l’intervalle.",
     "en": "M is a bound for the next-order derivative on the interval."
+  },
+  "Maior que #°: o triângulo é obtusângulo.": {
+    "fr": "Supérieur à #° : le triangle est obtusangle.",
+    "en": "Greater than #°: the triangle is obtuse."
   },
   "Maior que algo que diverge também diverge.": {
     "fr": "Plus grand que quelque chose qui diverge diverge aussi.",
@@ -11938,6 +12078,10 @@
   "Nem o caminho importa: só a diferença de altura.": {
     "fr": "Le chemin n'importe pas non plus : seule la différence de hauteur compte.",
     "en": "The path does not matter either: only the difference in height."
+  },
+  "Nenhum desses pontos zera o numerador, então todos são assíntotas verticais.": {
+    "fr": "Aucun de ces points n’annule le numérateur, donc tous sont des asymptotes verticales.",
+    "en": "None of these points makes the numerator zero, so all of them are vertical asymptotes."
   },
   "Nenhum z faz # dar um número diferente de zero: contradição.": {
     "fr": "Aucun z ne fait de # un nombre différent de zéro : contradiction.",
@@ -13839,6 +13983,10 @@
     "fr": "Le numérateur oscille entre # et #, et c’est le dénominateur qui commande le comportement.",
     "en": "The numerator swings between # and #, and the denominator governs the behaviour."
   },
+  "O numerador tem grau # e o denominador, #.": {
+    "fr": "Le numérateur est de degré # et le dénominateur de degré #.",
+    "en": "The numerator has degree # and the denominator degree #."
+  },
   "O numerador é multiplicado pelo mesmo fator que o denominador, por isso o valor da fração não muda.": {
     "fr": "Le numérateur est multiplié par le même facteur que le dénominateur, c’est pourquoi la valeur de la fraction ne change pas.",
     "en": "The numerator is multiplied by the same factor as the denominator, which is why the value of the fraction does not change."
@@ -14535,6 +14683,10 @@
     "fr": "Le signe est inversé. Le métal perd des électrons, et son n.o. est donc positif ; le négatif est celui de l’élément qui en reçoit.",
     "en": "The sign is flipped. The metal loses electrons, so its oxidation number is positive; the negative one belongs to the element that gains them."
   },
+  "O sinal ficou invertido. A assíntota está onde o denominador ZERA, e para isso o x precisa anular a expressão inteira.": {
+    "fr": "Le signe est inversé. L’asymptote se trouve là où le dénominateur S’ANNULE, ce qui exige que x annule toute l’expression.",
+    "en": "The sign is flipped. The asymptote sits where the denominator becomes ZERO, and for that x has to cancel the whole expression."
+  },
   "O sinal ficou invertido. A primitiva é negativa, mas o termo que sobra vem da borda de baixo com o sinal trocado — e área de função positiva não é negativa.": {
     "fr": "Le signe est inversé. La primitive est négative, mais le terme restant vient de la borne inférieure avec le signe changé — et l’aire d’une fonction positive n’est pas négative.",
     "en": "The sign is flipped. The antiderivative is negative, but the leftover term comes from the lower edge with its sign reversed — and the area of a positive function is not negative."
@@ -15147,6 +15299,10 @@
     "fr": "L’angle E correspond à B, donc B mesure aussi #°. Utilisez la somme #° dans le triangle ABC.",
     "en": "Angle E matches B, so B is also #°. Use the #° sum in triangle ABC."
   },
+  "O ângulo E corresponde a B, não a C. C corresponde a F.": {
+    "fr": "L’angle E correspond à B, pas à C. C correspond à F.",
+    "en": "Angle E corresponds to B, not to C. C corresponds to F."
+  },
   "O ângulo EXTERNO é o suplemento do interno.": {
     "fr": "L’angle EXTÉRIEUR est le supplémentaire de l’intérieur.",
     "en": "The EXTERIOR angle is the supplement of the interior one."
@@ -15519,6 +15675,10 @@
     "fr": "Les données de l’énoncé.",
     "en": "The data from the statement."
   },
+  "Os demais termos crescem mais devagar e somem na comparação.": {
+    "fr": "Les autres termes croissent plus lentement et disparaissent dans la comparaison.",
+    "en": "The other terms grow more slowly and vanish in the comparison."
+  },
   "Os denominadores já são iguais, então nada precisa ser convertido.": {
     "fr": "Les dénominateurs sont déjà égaux, donc rien n'a besoin d'être converti.",
     "en": "The denominators are already equal, so nothing needs to be converted."
@@ -15558,6 +15718,10 @@
   "Os dois lados são potências de #: # = #³.": {
     "fr": "Les deux côtés sont des puissances de # : # = #³.",
     "en": "Both sides are powers of #: # = #³."
+  },
+  "Os dois lados vizinhos ao vértice escolhido não geram triângulo novo.": {
+    "fr": "Les deux côtés voisins du sommet choisi ne forment pas de nouveau triangle.",
+    "en": "The two sides next to the chosen vertex do not form a new triangle."
   },
   "Os dois laterais coincidem, então o limite comum existe.": {
     "fr": "Les deux limites latérales coïncident, donc la limite commune existe.",
@@ -16379,6 +16543,10 @@
     "fr": "Par le théorème des valeurs intermédiaires, il existe une racine dans l’intervalle.",
     "en": "By the intermediate value theorem, there is a root in the interval."
   },
+  "Pelo interno a mesma conta exigiria resolver uma equação; pelo externo é uma divisão.": {
+    "fr": "Par l’angle intérieur, le même calcul exigerait de résoudre une équation ; par l’extérieur, c’est une division.",
+    "en": "Through the interior angle the same computation would require solving an equation; through the exterior one it is a division."
+  },
   "Pelo princípio multiplicativo, cada posição tem uma opção menos que a anterior.": {
     "fr": "Par le principe multiplicatif, chaque position a une option de moins que la précédente.",
     "en": "By the multiplication principle, each position has one less option than the previous."
@@ -16606,6 +16774,10 @@
   "Primeiro b × c, depois o escalar com a, e por fim o módulo.": {
     "fr": "D’abord b × c, puis le scalaire avec a, et enfin le module.",
     "en": "First b × c, then the scalar with a, and finally the magnitude."
+  },
+  "Primeiro conferimos que # está no domínio.": {
+    "fr": "Nous vérifions d’abord que # appartient au domaine.",
+    "en": "First we check that # belongs to the domain."
   },
   "Primeiro derivamos em x, com a outra variável constante.": {
     "fr": "Nous dérivons d’abord en x, l’autre variable étant constante.",
@@ -16998,6 +17170,10 @@
   "Repita a conta passo a passo, sempre usando o y mais recente.": {
     "fr": "Répétez le calcul pas à pas, en utilisant toujours le y le plus récent.",
     "en": "Repeat the computation step by step, always using the most recent y."
+  },
+  "Resolva a equação que anula o denominador.": {
+    "fr": "Résolvez l’équation qui annule le dénominateur.",
+    "en": "Solve the equation that makes the denominator vanish."
   },
   "Resolva a potência antes dos produtos e das somas.": {
     "fr": "Résolvez la puissance avant les produits et les sommes.",
@@ -17703,6 +17879,10 @@
     "fr": "Substituez le y fixe et traitez ce qui reste comme une fonction d’une seule variable.",
     "en": "Substitute the fixed y and treat what remains as a function of one variable only."
   },
+  "Substitua x = # em cima e embaixo, separadamente, e depois divida.": {
+    "fr": "Remplacez x = # au numérateur et au dénominateur, séparément, puis divisez.",
+    "en": "Substitute x = # in the numerator and the denominator separately, then divide."
+  },
   "Substitua x = # no binômio: fica (#) elevado a #.": {
     "fr": "Remplacez x par # dans le binôme : il reste (#) à la puissance #.",
     "en": "Substitute x = # into the binomial: it becomes (#) to the power #."
@@ -17942,6 +18122,10 @@
   "Substituímos em Euler.": {
     "fr": "Nous substituons dans Euler.",
     "en": "We substitute into Euler."
+  },
+  "Substituímos em cima e embaixo.": {
+    "fr": "Nous remplaçons au numérateur et au dénominateur.",
+    "en": "We substitute in the numerator and in the denominator."
   },
   "Substituímos essa abscissa na função para obter a ordenada do vértice.": {
     "fr": "On remplace cette abscisse dans la fonction pour obtenir l’ordonnée du sommet.",
@@ -18194,6 +18378,10 @@
   "São n pares, e a soma dobrada precisa ser dividida por dois.": {
     "fr": "Ce sont n paires, et la somme doublée doit être divisée par deux.",
     "en": "There are n pairs, and the doubled sum must be divided by two."
+  },
+  "São n − # triângulos, não n. Os dois lados vizinhos ao vértice de onde saem as diagonais não geram triângulo novo.": {
+    "fr": "Il y a n − # triangles, pas n. Les deux côtés voisins du sommet d’où partent les diagonales ne forment pas de nouveau triangle.",
+    "en": "There are n − # triangles, not n. The two sides next to the vertex the diagonals start from do not form a new triangle."
   },
   "São os dois pontos em que a parábola cruza o eixo x.": {
     "fr": "Ce sont les deux points où la parabole croise l’axe des abscisses.",
@@ -18907,6 +19095,10 @@
     "fr": "Une surface coupée par un plan redonne une courbe à une seule variable.",
     "en": "A surface cut by a plane gives back a curve in a single variable."
   },
+  "Uma volta completa. É daí que vem o #°, e é por isso que ele não depende do número de lados: qualquer polígono convexo dá uma volta e só uma.": {
+    "fr": "Un tour complet. C’est de là que vient le #°, et c’est pourquoi il ne dépend pas du nombre de côtés : tout polygone convexe fait un tour, et un seul.",
+    "en": "One full turn. That is where the #° comes from, and why it does not depend on the number of sides: any convex polygon makes one turn, and only one."
+  },
   "União (∪): junte os elementos dos dois conjuntos, sem repetir.": {
     "fr": "Union (∪) : réunissez les éléments des deux ensembles, sans répétition.",
     "en": "Union (∪): put together the elements of both sets, without repeating."
@@ -19115,6 +19307,10 @@
     "fr": "Vous avez donné le sinus. Le cosinus est la coordonnée HORIZONTALE du point.",
     "en": "You gave the sine. The cosine is the HORIZONTAL coordinate of the point."
   },
+  "Você dividiu #° pelo ângulo INTERNO. A soma #° é dos externos — use primeiro o suplementar.": {
+    "fr": "Vous avez divisé #° par l’angle INTÉRIEUR. La somme de #° est celle des angles extérieurs — passez d’abord par le supplémentaire.",
+    "en": "You divided #° by the INTERIOR angle. The sum of #° is that of the exterior angles — go through the supplement first."
+  },
   "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
     "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
     "en": "You divided by the number of moles. More moles mean MORE particles, so the amount multiplies."
@@ -19206,6 +19402,10 @@
   "Você supôs que há tantos nêutrons quanto prótons. Isso vale em alguns elementos leves e falha no resto — o enunciado dá o número de nêutrons.": {
     "fr": "Vous avez supposé qu’il y a autant de neutrons que de protons. Cela vaut pour quelques éléments légers et échoue pour les autres — l’énoncé donne le nombre de neutrons.",
     "en": "You assumed there are as many neutrons as protons. That holds for a few light elements and fails for the rest — the question gives the number of neutrons."
+  },
+  "Você supôs que o triângulo é retângulo. Nada no enunciado diz isso — use os #° completos.": {
+    "fr": "Vous avez supposé que le triangle est rectangle. Rien dans l’énoncé ne le dit — utilisez les #° complets.",
+    "en": "You assumed the triangle is right-angled. Nothing in the statement says so — use the full #°."
   },
   "Você tratou √(a² − x²) como (a − x). A raiz de uma diferença não é a diferença das raízes — é justamente por isso que a troca trigonométrica existe.": {
     "fr": "Vous avez traité √(a² − x²) comme (a − x). La racine d’une différence n’est pas la différence des racines — c’est précisément pour cela que le changement trigonométrique existe.",
@@ -19715,6 +19915,10 @@
     "fr": "Nous annulons le reste de la colonne # : L₃ ← L₃ − L₂.",
     "en": "We clear the rest of column #: L₃ ← L₃ − L₂."
   },
+  "Zerar o denominador exclui o ponto do domínio — mas não diz o que o gráfico faz.": {
+    "fr": "Annuler le dénominateur exclut le point du domaine — mais ne dit pas ce que fait le graphe.",
+    "en": "A vanishing denominator excludes the point from the domain — but says nothing about what the graph does."
+  },
   "Zero seria o caso de a identidade não ter termo do meio — o que só acontece na diferença de quadrados. No quadrado de um binômio, os dois termos cruzados se SOMAM em vez de se cancelar.": {
     "fr": "Zéro correspondrait au cas où l’identité n’a pas de terme du milieu — ce qui n’arrive que pour la différence de carrés. Dans le carré d’un binôme, les deux termes croisés s’ADDITIONNENT au lieu de s’annuler.",
     "en": "Zero would be the case where the identity has no middle term — which only happens in the difference of squares. In the square of a binomial, the two cross terms ADD instead of cancelling."
@@ -19722,6 +19926,10 @@
   "Zero seria o nível de uma curva que passa por onde a função se anula. Aqui ela não se anula no ponto dado.": {
     "fr": "Zéro serait le niveau d’une courbe passant là où la fonction s’annule. Ici elle ne s’annule pas au point donné.",
     "en": "Zero would be the level of a curve passing where the function vanishes. Here it does not vanish at the given point."
+  },
+  "Zero só seria a assíntota se o denominador fosse um múltiplo de x. Aqui ele tem uma constante somada.": {
+    "fr": "Zéro ne serait l’asymptote que si le dénominateur était un multiple de x. Ici une constante s’y ajoute.",
+    "en": "Zero would only be the asymptote if the denominator were a multiple of x. Here it has a constant added."
   },
   "Zero é resposta: este subnível ainda não começou a receber elétrons.": {
     "fr": "Zéro est une réponse : cette sous-couche n’a pas encore commencé à recevoir des électrons.",
@@ -19955,6 +20163,10 @@
     "fr": "x = # est le CENTRE de la série, et non le rayon. Le rayon sort de l’inégalité |x − a| < R.",
     "en": "x = # is the CENTRE of the series, not the radius. The radius comes from the inequality |x − a| < R."
   },
+  "x = # é o valor da incógnita. A pergunta é a medida de AB: substitua x.": {
+    "fr": "x = # est la valeur de l’inconnue. La question porte sur la mesure de AB : remplacez x.",
+    "en": "x = # is the value of the unknown. The question asks for the measure of AB: substitute x."
+  },
   "x = r·cos θ. Em #° o cosseno tem sinal próprio do quadrante.": {
     "fr": "x = r·cos θ. À #°, le cosinus porte le signe propre au quadrant.",
     "en": "x = r·cos θ. At #° the cosine carries the sign of its quadrant."
@@ -20090,6 +20302,10 @@
   "Ângulos correspondentes são iguais: E corresponde a B.": {
     "fr": "Les angles correspondants sont égaux : E correspond à B.",
     "en": "Matching angles are equal: E matches B."
+  },
+  "Ângulos entre paralelas cortadas por uma transversal somam #°, não #°.": {
+    "fr": "Les angles entre parallèles coupées par une sécante font une somme de #°, pas de #°.",
+    "en": "Angles between parallels cut by a transversal add up to #°, not #°."
   },
   "É (#) ELEVADO a #, não vezes #.": {
     "fr": "C’est (#) ÉLEVÉ à #, et non multiplié par #.",
@@ -20399,6 +20615,10 @@
     "fr": "C’est pourquoi la demi-vie est une propriété du matériau, et non de l’échantillon.",
     "en": "That is why half-life is a property of the material, not of the sample."
   },
+  "É por isso que se subtrai de #: os dois são suplementares, não por convenção.": {
+    "fr": "C’est pourquoi on soustrait de # : les deux sont supplémentaires, et non par convention.",
+    "en": "That is why you subtract from #: the two are supplementary, not by convention."
+  },
   "É por isso que uma parede dupla isola muito mais que uma simples do mesmo total.": {
     "fr": "C’est pourquoi un mur double isole bien plus qu’un simple de même épaisseur totale.",
     "en": "That is why a double wall insulates far better than a single one of the same total thickness."
@@ -20406,6 +20626,10 @@
   "É sempre «o que se quer zerar, sobre o pivô».": {
     "fr": "C’est toujours « ce qu’on veut annuler, sur le pivot ».",
     "en": "It is always “what you want to clear, over the pivot”."
+  },
+  "É um buraco: um único ponto que falta, sem nada acontecendo em volta.": {
+    "fr": "C’est un trou : un unique point manquant, sans rien de particulier autour.",
+    "en": "It is a hole: a single missing point, with nothing happening around it."
   },
   "É um produto escalar entre uma linha e uma coluna.": {
     "fr": "C’est un produit scalaire entre une ligne et une colonne.",
