@@ -199,6 +199,14 @@
     "fr": "# est le DIAMÈTRE : la courbe passe par l’origine et par le point à # de celle-ci, du côté opposé.",
     "en": "# is the DIAMETER: the curve passes through the origin and through the point # away from it, on the other side."
   },
+  "# é o MDC, não o MMC. O MMC é um MÚLTIPLO comum, então precisa ser maior ou igual a ambos; o MDC é um divisor, e nunca os ultrapassa.": {
+    "fr": "# est le PGCD, pas le PPCM. Le PPCM est un MULTIPLE commun, il doit donc être supérieur ou égal aux deux ; le PGCD est un diviseur, et ne les dépasse jamais.",
+    "en": "# is the GCD, not the LCM. The LCM is a common MULTIPLE, so it must be greater than or equal to both; the GCD is a divisor, and never exceeds them."
+  },
+  "# é o MMC, não o MDC. O MDC é um DIVISOR, então nunca pode ser maior que os próprios números; o MMC é um MÚLTIPLO, e nunca é menor que eles.": {
+    "fr": "# est le PPCM, pas le PGCD. Le PGCD est un DIVISEUR, il ne peut donc jamais être plus grand que les nombres eux-mêmes ; le PPCM est un MULTIPLE, et n’est jamais plus petit qu’eux.",
+    "en": "# is the LCM, not the GCD. The GCD is a DIVISOR, so it can never be larger than the numbers themselves; the LCM is a MULTIPLE, and is never smaller than them."
+  },
   "# é o coeficiente do termo do meio, #pq. Divida por #p para chegar a q.": {
     "fr": "# est le coefficient du terme du milieu, #pq. Divisez par #p pour arriver à q.",
     "en": "# is the coefficient of the middle term, #pq. Divide by #p to reach q."
@@ -210,6 +218,10 @@
   "# é o número de lados. A pergunta é quantas diagonais: n(n − #)/#.": {
     "fr": "# est le nombre de côtés. La question porte sur le nombre de diagonales : n(n − #)/#.",
     "en": "# is the number of sides. The question asks how many diagonals: n(n − #)/#."
+  },
+  "# é o produto dos dois números. Ele é de fato um múltiplo comum, mas não o MENOR: dividindo pelo MDC (#) chegamos a #, que também serve e é menor.": {
+    "fr": "# est le produit des deux nombres. C’est bien un multiple commun, mais pas le PLUS PETIT : en divisant par le PGCD (#) on obtient #, qui convient aussi et est plus petit.",
+    "en": "# is the product of the two numbers. It is indeed a common multiple, but not the SMALLEST: dividing by the GCD (#) gives #, which also works and is smaller."
   },
   "# é o valor de f(#), ou seja, onde a reta corta o eixo VERTICAL. A raiz é onde ela corta o eixo horizontal — são pontos diferentes.": {
     "fr": "# est la valeur de f(#), c’est-à-dire l’endroit où la droite coupe l’axe VERTICAL. La racine est là où elle coupe l’axe horizontal — ce sont des points différents.",
@@ -486,6 +498,10 @@
   "A altura é o cateto oposto e a sombra, o adjacente: altura = #·tg #°.": {
     "fr": "La hauteur est la cathète opposée et l’ombre, l’adjacente : hauteur = #·tan #°.",
     "en": "The height is the opposite leg and the shadow, the adjacent one: height = #·tan #°."
+  },
+  "A amplitude NÃO entra no período nem na frequência. Puxar mais a mola faz o corpo percorrer mais distância, mas também ir mais rápido — os efeitos se cancelam.": {
+    "fr": "L’amplitude n’intervient NI dans la période NI dans la fréquence. Tirer davantage sur le ressort fait parcourir plus de distance au corps, mais aussi aller plus vite — les effets se compensent.",
+    "en": "The amplitude enters NEITHER the period NOR the frequency. Pulling the spring further makes the body travel a longer distance, but also go faster — the effects cancel out."
   },
   "A amplitude decai como e elevado a −c·t/(#m). Iguale a #/# e isole t.": {
     "fr": "L’amplitude décroît comme e élevé à −c·t/(#m). Égalez à #/# et isolez t.",
@@ -1114,6 +1130,10 @@
   "A dimensão de impulso sai da sua definição física.": {
     "fr": "La dimension de impulsion découle de sa définition physique.",
     "en": "The dimension of impulse follows from its physical definition."
+  },
+  "A dimensão de momento de inércia sai da sua definição física.": {
+    "fr": "La dimension du moment d’inertie découle de sa définition physique.",
+    "en": "The dimension of moment of inertia follows from its physical definition."
   },
   "A dimensão de momento linear sai da sua definição física.": {
     "fr": "La dimension de quantité de mouvement découle de sa définition physique.",
@@ -3003,6 +3023,10 @@
     "fr": "Le rapport est inversé. Diminuer l’inertie fait MONTER la vitesse angulaire — c’est la patineuse qui accélère en ramenant les bras.",
     "en": "The ratio is upside down. Reducing the inertia makes the angular velocity GO UP — it is the skater who speeds up by pulling the arms in."
   },
+  "A razão está invertida. Em ω = √(k/m) a constante da mola fica em cima; no período, T = #π√(m/k), a massa é que sobe.": {
+    "fr": "Le rapport est inversé. Dans ω = √(k/m) la constante de raideur est au numérateur ; dans la période, T = #π√(m/k), c’est la masse qui monte.",
+    "en": "The ratio is upside down. In ω = √(k/m) the spring constant is on top; in the period, T = #π√(m/k), it is the mass that moves up."
+  },
   "A razão está invertida. O coeficiente angular é o líder de cima sobre o de baixo.": {
     "fr": "Le rapport est inversé. Le coefficient directeur est le dominant du haut sur celui du bas.",
     "en": "The ratio is upside down. The slope is the leading coefficient on top over the one below."
@@ -4295,6 +4319,10 @@
     "fr": "Les composantes ont été additionnées. La norme d’un vecteur s’obtient par Pythagore, pas par une simple addition.",
     "en": "The components were added. The magnitude of a vector comes from Pythagoras, not from a plain sum."
   },
+  "As componentes foram trocadas: o seno cuida da vertical e o cosseno da horizontal, e não o contrário.": {
+    "fr": "Les composantes ont été inversées : le sinus s’occupe de la verticale et le cosinus de l’horizontale, et non l’inverse.",
+    "en": "The components were swapped: the sine handles the vertical and the cosine the horizontal, not the other way round."
+  },
   "As componentes indicam o #º quadrante.": {
     "fr": "Les composantes indiquent le #ᵉ quadrant.",
     "en": "The components point to quadrant #."
@@ -5383,6 +5411,14 @@
     "fr": "Calculez Δ. S’il est négatif, le trinôme porte TOUJOURS le signe de a — et la réponse est « tous » ou « vide ».",
     "en": "Compute Δ. If it is negative, the quadratic ALWAYS has the sign of a — and the answer is “all” or “empty”."
   },
+  "Calcule Δx primeiro, depois some as alturas tomadas na borda direita de cada retângulo.": {
+    "fr": "Calculez d’abord Δx, puis additionnez les hauteurs prises au bord droit de chaque rectangle.",
+    "en": "Compute Δx first, then add the heights taken at the right edge of each rectangle."
+  },
+  "Calcule Δx primeiro, depois some as alturas tomadas na borda esquerda de cada retângulo.": {
+    "fr": "Calculez d’abord Δx, puis additionnez les hauteurs prises au bord gauche de chaque rectangle.",
+    "en": "Compute Δx first, then add the heights taken at the left edge of each rectangle."
+  },
   "Calcule τ = R·C = #×#³ · #×#⁻⁶ s e a carga final Q = #·# μC; depois q = Q·(# − e elevado a −t/τ).": {
     "fr": "Calculez τ = R·C = #×#³ · #×#⁻⁶ s et la charge finale Q = #·# μC ; puis q = Q·(# − e à la puissance −t/τ).",
     "en": "Work out τ = R·C = #×#³ · #×#⁻⁶ s and the final charge Q = #·# μC; then q = Q·(# − e to the power −t/τ)."
@@ -6019,9 +6055,17 @@
     "fr": "Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
     "en": "Start by working out x_v = −b/(#a), with a = # and b = #."
   },
+  "Comece calculando ω = √(k/m).": {
+    "fr": "Commencez par calculer ω = √(k/m).",
+    "en": "Start by computing ω = √(k/m)."
+  },
   "Comece comparando os denominadores.": {
     "fr": "Commencez par comparer les dénominateurs.",
     "en": "Start by comparing the denominators."
+  },
+  "Comece fatorando os dois números em primos.": {
+    "fr": "Commencez par décomposer les deux nombres en facteurs premiers.",
+    "en": "Start by factoring both numbers into primes."
   },
   "Comece pela função de DENTRO: calcule f(#) e use o resultado como entrada de g.": {
     "fr": "Commencez par la fonction INTÉRIEURE : calculez f(#) et utilisez le résultat comme entrée de g.",
@@ -6586,6 +6630,10 @@
   "Decompomos o peso em componentes paralela e perpendicular ao plano.": {
     "fr": "Nous décomposons le poids en composantes parallèle et perpendiculaire au plan.",
     "en": "We decompose the weight into parallel and perpendicular components to the plane."
+  },
+  "Decomponha a velocidade antes de qualquer conta.": {
+    "fr": "Décomposez la vitesse avant tout calcul.",
+    "en": "Break the velocity into components before any computation."
   },
   "Definindo esse valor, a descontinuidade é removida.": {
     "fr": "En définissant cette valeur, la discontinuité est levée.",
@@ -8199,9 +8247,17 @@
     "fr": "Élevez masse au carré en multipliant chacun de ses exposants par # ; additionnez ensuite les exposants de aire.",
     "en": "Raise mass squared by multiplying each of its exponents by #; then add the exponents of area."
   },
+  "Eleve momento de inércia ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de energia.": {
+    "fr": "Élevez le moment d’inertie au cube en multipliant chacun de ses exposants par # ; additionnez ensuite avec les exposants de l’énergie.",
+    "en": "Cube the moment of inertia by multiplying each of its exponents by #; then add the exponents of energy."
+  },
   "Eleve momento de inércia ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de massa.": {
     "fr": "Élevez momento de inércia au cube en multipliant chacun de ses exposants par # ; puis additionnez avec les exposants de massa.",
     "en": "Cube momento de inércia by multiplying each of its exponents by #; then add the exponents of massa."
+  },
+  "Eleve momento de inércia ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de vazão.": {
+    "fr": "Élevez le moment d’inertie au cube en multipliant chacun de ses exposants par # ; additionnez ensuite avec les exposants du débit.",
+    "en": "Cube the moment of inertia by multiplying each of its exponents by #; then add the exponents of the flow rate."
   },
   "Eleve momento linear ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de energia.": {
     "fr": "Élevez quantité de mouvement au cube en multipliant chacun de ses exposants par # ; additionnez ensuite les exposants de énergie.",
@@ -8218,6 +8274,10 @@
   "Eleve momento linear ao quadrado multiplicando cada expoente dela por #; depois some com os expoentes de impulso.": {
     "fr": "Élevez quantité de mouvement au carré en multipliant chacun de ses exposants par # ; additionnez ensuite les exposants de impulsion.",
     "en": "Raise linear momentum squared by multiplying each of its exponents by #; then add the exponents of impulse."
+  },
+  "Eleve momento linear ao quadrado multiplicando cada expoente dela por #; depois some com os expoentes de momento de inércia.": {
+    "fr": "Élevez la quantité de mouvement au carré en multipliant chacun de ses exposants par # ; additionnez ensuite avec les exposants du moment d’inertie.",
+    "en": "Square the linear momentum by multiplying each of its exponents by #; then add the exponents of moment of inertia."
   },
   "Eleve potência ao cubo multiplicando cada expoente dela por #; depois some com os expoentes de constante elástica.": {
     "fr": "Élevez puissance au cube en multipliant chacun de ses exposants par # ; additionnez ensuite les exposants de constante de raideur.",
@@ -10647,6 +10707,10 @@
     "fr": "C’est le rectangle qui contient le losange. Le losange en est exactement la moitié — il reste à diviser par #.",
     "en": "That is the rectangle holding the rhombus. The rhombus is exactly half of it — dividing by # is still missing."
   },
+  "Esse é o tempo até o PONTO MAIS ALTO. O voo completo inclui também a descida, e leva o dobro desse tempo quando o lançamento parte do chão.": {
+    "fr": "C’est le temps jusqu’au POINT LE PLUS HAUT. Le vol complet comprend aussi la descente, et dure le double lorsque le tir part du sol.",
+    "en": "That is the time to the HIGHEST POINT. The full flight also includes the descent, and takes twice as long when the launch starts from the ground."
+  },
   "Esse é o tempo característico, em que resta uma fração #/e do inicial. A meia-vida traz um fator logaritmo de #.": {
     "fr": "C’est le temps caractéristique, où il reste une fraction #/e de l’initial. La demi-vie porte un facteur logarithme de #.",
     "en": "That is the characteristic time, when a fraction #/e of the initial amount is left. Half-life carries a factor of the logarithm of #."
@@ -10686,6 +10750,10 @@
   "Esse é o traço, que é a SOMA dos autovalores. O produto deles é o determinante.": {
     "fr": "C’est la trace, qui est la SOMME des valeurs propres. Leur produit est le déterminant.",
     "en": "That is the trace, which is the SUM of the eigenvalues. Their product is the determinant."
+  },
+  "Esse é o valor EXATO da integral. A soma de Riemann com poucos retângulos é apenas uma aproximação, e ainda difere dele.": {
+    "fr": "C’est la valeur EXACTE de l’intégrale. La somme de Riemann avec peu de rectangles n’en est qu’une approximation, et en diffère encore.",
+    "en": "That is the EXACT value of the integral. A Riemann sum with few rectangles is only an approximation, and still differs from it."
   },
   "Esse é o valor EXATO da solução. O exercício pede o que o método de Euler devolve, que é diferente — e a diferença é justamente o que o tópico estuda.": {
     "fr": "C’est la valeur EXACTE de la solution. L’exercice demande ce que rend la méthode d’Euler, qui est différent — et cet écart est justement ce que le sujet étudie.",
@@ -11395,6 +11463,10 @@
     "fr": "Il manque la racine carrée dans le facteur √(# + fx² + fy²).",
     "en": "The square root in the factor √(# + fx² + fy²) is missing."
   },
+  "Faltou a raiz quadrada. A frequência angular é √(k/m), não k/m — e é ela que entra no período.": {
+    "fr": "Il manque la racine carrée. La pulsation est √(k/m), pas k/m — et c’est elle qui entre dans la période.",
+    "en": "The square root is missing. The angular frequency is √(k/m), not k/m — and it is what enters the period."
+  },
   "Faltou a raiz quadrada: # é r², não r.": {
     "fr": "Il manque la racine carrée : # vaut r², et non r.",
     "en": "The square root is missing: # is r², not r."
@@ -11662,6 +11734,10 @@
   "Faltou multiplicar pela largura do intervalo. A integral acumula o valor ao longo de todo o intervalo.": {
     "fr": "Il manque la multiplication par la largeur de l’intervalle. L’intégrale accumule la valeur sur tout l’intervalle.",
     "en": "Multiplying by the width of the interval is missing. The integral accumulates the value over the whole interval."
+  },
+  "Faltou multiplicar pela largura Δx. A soma das alturas não é a área: cada altura precisa virar retângulo.": {
+    "fr": "Il manque la multiplication par la largeur Δx. La somme des hauteurs n’est pas l’aire : chaque hauteur doit devenir un rectangle.",
+    "en": "Multiplying by the width Δx is missing. The sum of the heights is not the area: each height has to become a rectangle."
   },
   "Faltou multiplicar pela massa, que são # kg.": {
     "fr": "Il manque la multiplication par la masse, qui vaut # kg.",
@@ -15026,6 +15102,10 @@
   "O alcance máximo acontece a # graus, para uma mesma velocidade inicial.": {
     "fr": "La portée maximale arrive à # degrés, pour une même vitesse initiale.",
     "en": "Maximum range happens at # degrees, for the same initial speed."
+  },
+  "O alcance usa as duas componentes: o tempo de voo vem da vertical (#·sen #°) e a distância, da horizontal (#·cos #° vezes esse tempo).": {
+    "fr": "La portée utilise les deux composantes : le temps de vol vient de la verticale (#·sin #°) et la distance, de l’horizontale (#·cos #° fois ce temps).",
+    "en": "The range uses both components: the time of flight comes from the vertical one (#·sin #°) and the distance from the horizontal one (#·cos #° times that time)."
   },
   "O alcance é a coordenada x nesse instante.": {
     "fr": "La portée est la coordonnée x à cet instant.",
@@ -19283,6 +19363,10 @@
     "fr": "Nous partons du système.",
     "en": "We start from the system."
   },
+  "Partindo de # m, o projétil cai ALÉM do nível de lançamento: some a altura inicial (na altura máxima) ou resolva y(t) = # com ela (no tempo de voo).": {
+    "fr": "En partant de # m, le projectile tombe AU-DELÀ du niveau de tir : ajoutez la hauteur initiale (pour la hauteur maximale) ou résolvez y(t) = # avec elle (pour le temps de vol).",
+    "en": "Starting from # m, the projectile falls BELOW the launch level: add the initial height (for the maximum height) or solve y(t) = # with it (for the time of flight)."
+  },
   "Parêntese deixa o extremo de fora. Para incluir as pontas, o desenho é o colchete.": {
     "fr": "La parenthèse laisse la borne dehors. Pour inclure les extrémités, le dessin est le crochet.",
     "en": "A parenthesis leaves the endpoint out. To include the ends, the shape is the bracket."
@@ -19842,6 +19926,10 @@
   "Primeiro y′ = −#x/(#y). Derive de novo pelo quociente lembrando que y depende de x, e troque o y′ que aparecer por #/#.": {
     "fr": "D’abord y′ = −#x/(#y). Dérivez de nouveau par le quotient en vous rappelant que y dépend de x, et remplacez le y′ qui apparaît par #/#.",
     "en": "First y′ = −#x/(#y). Differentiate again by the quotient rule remembering that y depends on x, and replace the y′ that shows up by #/#."
+  },
+  "Primeiro ω = √(#/#); a velocidade máxima é a amplitude vezes ω: #·ω.": {
+    "fr": "D’abord ω = √(#/#) ; la vitesse maximale est l’amplitude fois ω : #·ω.",
+    "en": "First ω = √(#/#); the maximum speed is the amplitude times ω: #·ω."
   },
   "Primeiro, descobrimos qual trecho cobre x igual a #.": {
     "fr": "D’abord, nous cherchons quel morceau couvre x égal à #.",
@@ -22975,6 +23063,14 @@
     "fr": "Vous avez supposé que le triangle est rectangle. Rien dans l’énoncé ne le dit — utilisez les #° complets.",
     "en": "You assumed the triangle is right-angled. Nothing in the statement says so — use the full #°."
   },
+  "Você tomou as alturas pela direita. Numa função crescente, essa escolha dá um valor maior; pela esquerda, menor.": {
+    "fr": "Vous avez pris les hauteurs à droite. Pour une fonction croissante, ce choix donne une valeur plus grande ; à gauche, plus petite.",
+    "en": "You took the heights on the right. For an increasing function that choice gives a larger value; on the left, a smaller one."
+  },
+  "Você tomou as alturas pela esquerda. Numa função crescente, essa escolha dá um valor maior; pela esquerda, menor.": {
+    "fr": "Vous avez pris les hauteurs à gauche. Pour une fonction croissante, ce choix donne une valeur plus grande ; à gauche, plus petite.",
+    "en": "You took the heights on the left. For an increasing function that choice gives a larger value; on the left, a smaller one."
+  },
   "Você tratou a dízima como decimal finito. Com período, o denominador leva NOVES, não potências de dez: um # para cada dígito que se repete.": {
     "fr": "Vous avez traité le développement périodique comme un décimal fini. Avec une période, le dénominateur porte des NEUFS, pas des puissances de dix : un # par chiffre qui se répète.",
     "en": "You treated the repeating decimal as a terminating one. With a repeating block the denominator takes NINES, not powers of ten: one # for each repeating digit."
@@ -23002,6 +23098,10 @@
   "Você usou a sentença do lado errado. Pela esquerda, x é menor que #, então vale a outra sentença do sistema.": {
     "fr": "Vous avez utilisé l’expression du mauvais côté. Par la gauche, x est inférieur à #, c’est donc l’autre expression du système qui vaut.",
     "en": "You used the expression from the wrong side. From the left, x is less than #, so the other expression of the system applies."
+  },
+  "Você usou a velocidade TOTAL onde cabia apenas uma das componentes. Na vertical entra v₀·sen θ; na horizontal, v₀·cos θ.": {
+    "fr": "Vous avez utilisé la vitesse TOTALE là où seule une composante convenait. À la verticale entre v₀·sin θ ; à l’horizontale, v₀·cos θ.",
+    "en": "You used the TOTAL velocity where only one component belonged. Vertically it is v₀·sin θ; horizontally, v₀·cos θ."
   },
   "Você usou apenas a base menor. Ambas as bases entram, pela média.": {
     "fr": "Vous n’avez utilisé que la petite base. Les deux bases entrent, par la moyenne.",
