@@ -51,13 +51,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Resolva a equação #(x − #) = #x + # e informe o valor exato de x.',
       'a(x - b) = c x + d \\Rightarrow x = \\frac{d + ab}{a - c}',
-      'x = \\frac{# + # \\cdot #}{# - #}',
+      'x = \\frac{#4 + #1 \\cdot #2}{#1 - #3}',
       (v) => (v[3]! + v[0]! * v[1]!) / (v[0]! - v[2]!),
     ],
     [
       'Resolva a equação #(x + #) = #x − # e informe o valor exato de x.',
       'a(x + b) = c x - d \\Rightarrow x = \\frac{-d - ab}{a - c}',
-      'x = \\frac{-# - # \\cdot #}{# - #}',
+      'x = \\frac{-#4 - #1 \\cdot #2}{#1 - #3}',
       (v) => (-v[3]! - v[0]! * v[1]!) / (v[0]! - v[2]!),
     ],
     [
@@ -117,7 +117,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um pai tem o triplo da idade do filho. Daqui a # anos terá o dobro. Quantos anos o filho tem hoje?',
       '3x + a = 2(x + a) \\Rightarrow x = a',
-      '3x + # = 2(x + #) \\Rightarrow x = #',
+      '3x + #1 = 2(x + #1) \\Rightarrow x = #1',
       (v) => v[0]!,
     ],
     [
@@ -138,7 +138,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Dois números têm soma # e produto #. Qual é o maior dos dois?',
       'x^2 - Sx + P = 0 \\Rightarrow x = \\frac{S + \\sqrt{S^2 - 4P}}{2}',
-      'x = \\frac{# + \\sqrt{#^2 - 4 \\cdot #}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 - 4 \\cdot #2}}{2}',
       (v) => raizes(1, -v[0]!, v[1]!)[0]!,
     ],
     [
@@ -150,13 +150,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Resolva a equação x² − #x = # e informe a MAIOR raiz.',
       'x^2 - ax - b = 0',
-      'x = \\frac{# + \\sqrt{#^2 + 4 \\cdot #}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 + 4 \\cdot #2}}{2}',
       (v) => raizes(1, -v[0]!, -v[1]!)[0]!,
     ],
     [
       'Resolva a equação x² − #x + # = # e informe a MAIOR raiz.',
       'x^2 - ax + (b - c) = 0',
-      'x = \\frac{# + \\sqrt{#^2 - 4(# - #)}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 - 4(#2 - #3)}}{2}',
       (v) => raizes(1, -v[0]!, v[1]! - v[2]!)[0]!,
     ],
     [
@@ -168,13 +168,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um retângulo tem a base # cm maior que a altura e área de # cm². Quantos centímetros mede a base?',
       'h(h + a) = A \\Rightarrow h = \\frac{-a + \\sqrt{a^2 + 4A}}{2}',
-      'h = \\frac{-# + \\sqrt{#^2 + 4 \\cdot #}}{2}',
+      'b = \\frac{-#1 + \\sqrt{#1^2 + 4 \\cdot #2}}{2} + #1',
       (v) => raizes(1, v[0]!, -v[1]!)[0]! + v[0]!,
     ],
     [
       'Resolva a equação x² − #x − # = # e informe a MAIOR raiz.',
       'x^2 - ax - (b + c) = 0',
-      'x = \\frac{# + \\sqrt{#^2 + 4(# + #)}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 + 4(#2 + #3)}}{2}',
       (v) => raizes(1, -v[0]!, -(v[1]! + v[2]!))[0]!,
     ],
     [
@@ -186,26 +186,26 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Resolva a equação #x² − #x + # = # e informe a MAIOR raiz.',
       'ax^2 - bx + (c - d) = 0',
-      'x = \\frac{# + \\sqrt{#^2 - 4 \\cdot # \\cdot (# - #)}}{2 \\cdot #}',
+      'x = \\frac{#2 + \\sqrt{#2^2 - 4 \\cdot #1 \\cdot (#3 - #4)}}{2 \\cdot #1}',
       (v) => raizes(v[0]!, -v[1]!, v[2]! - v[3]!)[0]!,
     ],
     [
       'Uma pedra é atirada para cima a # m/s, de uma altura de # m. Com a gravidade valendo # m/s², em quantos segundos ela chega ao chão? (duas casas decimais)',
       'h + v t - \\frac{gt^2}{2} = 0 \\Rightarrow t = \\frac{v + \\sqrt{v^2 + 2gh}}{g}',
-      't = \\frac{# + \\sqrt{#^2 + 2 \\cdot # \\cdot #}}{#}',
+      't = \\frac{#1 + \\sqrt{#1^2 + 2 \\cdot #3 \\cdot #2}}{#3}',
       (v) => (v[0]! + Math.sqrt(v[0]! ** 2 + 2 * v[2]! * v[1]!)) / v[2]!,
       2,
     ],
     [
       'Resolva a equação x² − #x + # = # e informe a MENOR raiz.',
       'x^2 - ax + (b - c) = 0',
-      'x = \\frac{# - \\sqrt{#^2 - 4(# - #)}}{2}',
+      'x = \\frac{#1 - \\sqrt{#1^2 - 4(#2 - #3)}}{2}',
       (v) => raizes(1, -v[0]!, v[1]! - v[2]!)[1]!,
     ],
     [
       'Resolva a equação #x² − #x = # e informe a MAIOR raiz.',
       'ax^2 - bx - c = 0',
-      'x = \\frac{# + \\sqrt{#^2 + 4 \\cdot # \\cdot #}}{2 \\cdot #}',
+      'x = \\frac{#2 + \\sqrt{#2^2 + 4 \\cdot #1 \\cdot #3}}{2 \\cdot #1}',
       (v) => raizes(v[0]!, -v[1]!, -v[2]!)[0]!,
     ],
     [
@@ -217,13 +217,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A soma de um número positivo com o seu inverso é #/#. Qual é o maior valor que esse número pode ter?',
       'x + \\frac{1}{x} = \\frac{a}{b} \\Rightarrow bx^2 - ax + b = 0',
-      'x = \\frac{# + \\sqrt{#^2 - 4 \\cdot #^2}}{2 \\cdot #}',
+      'x = \\frac{#1 + \\sqrt{#1^2 - 4 \\cdot #2^2}}{2 \\cdot #2}',
       (v) => raizes(v[1]!, -v[0]!, v[1]!)[0]!,
     ],
     [
       'Resolva a equação x² − #x + # = # e informe a MAIOR raiz, com duas casas decimais.',
       'x^2 - ax + (b - c) = 0',
-      'x = \\frac{# + \\sqrt{#^2 - 4(# - #)}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 - 4(#2 - #3)}}{2}',
       (v) => raizes(1, -v[0]!, v[1]! - v[2]!)[0]!,
       2,
     ],
@@ -236,7 +236,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A diferença entre dois números positivos é # e o produto deles é #. Qual é o MAIOR deles?',
       'x(x + d) = P \\Rightarrow x = \\frac{-d + \\sqrt{d^2 + 4P}}{2}',
-      'x = \\frac{-# + \\sqrt{#^2 + 4 \\cdot #}}{2}',
+      'x = \\frac{-#1 + \\sqrt{#1^2 + 4 \\cdot #2}}{2} + #1',
       (v) => raizes(1, v[0]!, -v[1]!)[0]! + v[0]!,
     ],
   ],
@@ -257,19 +257,19 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule o valor numérico de x² + #x para x = #.',
       'x^2 + ax',
-      '#^2 + # \\cdot #',
+      '(#2)^2 + #1 \\cdot #2',
       (v) => v[1]! ** 2 + v[0]! * v[1]!,
     ],
     [
       'Calcule o valor numérico de #(x − #) + #x para x = #.',
       'a(x - b) + cx',
-      '# \\cdot (# - #) + # \\cdot #',
+      '#1 \\cdot (#4 - #2) + #3 \\cdot #4',
       (v) => v[0]! * (v[3]! - v[1]!) + v[2]! * v[3]!,
     ],
     [
       'Calcule o valor numérico de (a + b)² − ab para a = # e b = #.',
       '(a + b)^2 - ab',
-      '(# + #)^2 - # \\cdot #',
+      '(#1 + #2)^2 - #1 \\cdot #2',
       (v) => (v[0]! + v[1]! + v[2]!) ** 2 - v[0]! * v[1]!,
     ],
     [
@@ -281,50 +281,50 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule o valor numérico de #(x + #) − #x para x = #.',
       'a(x + b) - cx',
-      '# \\cdot (# + #) - # \\cdot #',
+      '#1 \\cdot (#4 + #2) - #3 \\cdot #4',
       (v) => v[0]! * (v[3]! + v[1]!) - v[2]! * v[3]!,
     ],
     [
       'Calcule o valor numérico de x² − #x + # para x = #.',
       'x^2 - ax + b',
-      '#^2 - # \\cdot # + #',
+      '(#3)^2 - #1 \\cdot #3 + #2',
       (v) => v[2]! ** 2 - v[0]! * v[2]! + v[1]!,
     ],
     [
       'Calcule o valor numérico de (#x + #)/(x − #) para x = #. (duas casas decimais)',
       '\\frac{ax + b}{x - c}',
-      '\\frac{# \\cdot # + #}{# - #}',
+      '\\frac{#1 \\cdot #4 + #2}{#4 - #3}',
       (v) => (v[0]! * v[3]! + v[1]!) / (v[3]! - v[2]!),
       2,
     ],
     [
       'Calcule o valor numérico de #(x + #)² − #x para x = #.',
       'a(x + b)^2 - cx',
-      '# \\cdot (# + #)^2 - # \\cdot #',
+      '#1 \\cdot (#4 + #2)^2 - #3 \\cdot #4',
       (v) => v[0]! * (v[3]! + v[1]!) ** 2 - v[2]! * v[3]!,
     ],
     [
       'Calcule o valor numérico de (a³ − b³)/(a − b) para a = # e b = #.',
       '\\frac{a^3 - b^3}{a - b} = a^2 + ab + b^2',
-      '\\frac{#^3 - #^3}{# - #}',
+      '\\frac{(#1)^3 - (#2)^3}{#1 - #2}',
       (v) => (v[0]! ** 3 - v[1]! ** 3) / (v[0]! - v[1]!),
     ],
     [
       'Calcule o valor numérico de #x² − #xy + y² para x = # e y = #.',
       'ax^2 - bxy + y^2',
-      '# \\cdot #^2 - # \\cdot # \\cdot # + #^2',
+      '#1 \\cdot (#3)^2 - #2 \\cdot #3 \\cdot #4 + (#4)^2',
       (v) => v[0]! * v[2]! ** 2 - v[1]! * v[2]! * v[3]! + v[3]! ** 2,
     ],
     [
       'Calcule o valor numérico de #x² − #xy + #y² para x = # e y = #.',
       'ax^2 - bxy + cy^2',
-      '# \\cdot #^2 - # \\cdot # \\cdot # + # \\cdot #^2',
+      '#1 \\cdot (#4)^2 - #2 \\cdot #4 \\cdot #5 + #3 \\cdot (#5)^2',
       (v) => v[0]! * v[3]! ** 2 - v[1]! * v[3]! * v[4]! + v[2]! * v[4]! ** 2,
     ],
     [
       'A área de um terreno é dada por x² + #x, com x em metros. Quantos metros quadrados ele tem quando x = #?',
       'x^2 + ax',
-      '#^2 + # \\cdot #',
+      '(#2)^2 + #1 \\cdot #2',
       (v) => v[1]! ** 2 + v[0]! * v[1]!,
     ],
   ],
@@ -333,13 +333,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Some as frações #/# e #/# e dê o resultado irredutível.',
       '\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}',
-      '\\frac{# \\cdot # + # \\cdot #}{# \\cdot #}',
+      '\\frac{#1 \\cdot #4 + #3 \\cdot #2}{#2 \\cdot #4}',
       (v) => fracao(v[0]! * v[3]! + v[2]! * v[1]!, v[1]! * v[3]!),
     ],
     [
       'Subtraia #/# de #/# e dê o resultado irredutível.',
       '\\frac{c}{d} - \\frac{a}{b} = \\frac{cb - ad}{db}',
-      '\\frac{# \\cdot # - # \\cdot #}{# \\cdot #}',
+      '\\frac{#3 \\cdot #2 - #1 \\cdot #4}{#4 \\cdot #2}',
       (v) => fracao(v[2]! * v[1]! - v[0]! * v[3]!, v[3]! * v[1]!),
     ],
     [
@@ -381,7 +381,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um tanque estava com #/# da capacidade e recebeu mais #/#. Que fração da capacidade ele tem agora?',
       '\\frac{a}{b} + \\frac{c}{d}',
-      '\\frac{# \\cdot # + # \\cdot #}{# \\cdot #}',
+      '\\frac{#1 \\cdot #4 + #3 \\cdot #2}{#2 \\cdot #4}',
       (v) => fracao(v[0]! * v[3]! + v[2]! * v[1]!, v[1]! * v[3]!),
     ],
     [
@@ -393,7 +393,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um bolo foi cortado em # fatias iguais e # foram servidas. Que fração do bolo sobrou?',
       '1 - \\frac{s}{t} = \\frac{t - s}{t}',
-      '\\frac{# - #}{#}',
+      '\\frac{#1 - #2}{#1}',
       (v) => fracao(v[0]! - v[1]!, v[0]!),
     ],
     [
@@ -405,7 +405,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Lucas gastou #/# da mesada em livros e #/# em transporte. Que fração da mesada ele gastou ao todo?',
       '\\frac{a}{b} + \\frac{c}{d}',
-      '\\frac{# \\cdot # + # \\cdot #}{# \\cdot #}',
+      '\\frac{#1 \\cdot #4 + #3 \\cdot #2}{#2 \\cdot #4}',
       (v) => fracao(v[0]! * v[3]! + v[2]! * v[1]!, v[1]! * v[3]!),
     ],
   ],
@@ -467,7 +467,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa PA de primeiro termo # e razão #, qual é a soma dos # primeiros termos?',
       'S_n = \\frac{n(a_1 + a_n)}{2}',
-      'S_n = \\frac{# \\cdot (2 \\cdot # + (# - 1) \\cdot #)}{2}',
+      'S_n = \\frac{#3 \\cdot (2 \\cdot #1 + (#3 - 1) \\cdot #2)}{2}',
       (v) => (v[2]! * (2 * v[0]! + (v[2]! - 1) * v[1]!)) / 2,
     ],
     [
@@ -492,7 +492,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa progressão geométrica de primeiro termo # e razão #, qual é a soma dos # primeiros termos?',
       'S_n = a_1\\frac{q^n - 1}{q - 1}',
-      'S_n = # \\cdot \\frac{#^{#} - 1}{# - 1}',
+      'S_n = #1 \\cdot \\frac{#2^{#3} - 1}{#2 - 1}',
       (v) => v[0]! * ((v[1]! ** v[2]! - 1) / (v[1]! - 1)),
     ],
     [
@@ -504,7 +504,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma pessoa guarda # reais no primeiro mês e aumenta # reais a cada mês seguinte. Quantos reais ela guardou ao todo nos # primeiros meses?',
       'S_n = \\frac{n(2a_1 + (n-1)r)}{2}',
-      'S_n = \\frac{# \\cdot (2 \\cdot # + (# - 1) \\cdot #)}{2}',
+      'S_n = \\frac{#3 \\cdot (2 \\cdot #1 + (#3 - 1) \\cdot #2)}{2}',
       (v) => (v[2]! * (2 * v[0]! + (v[2]! - 1) * v[1]!)) / 2,
     ],
     [
@@ -519,13 +519,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'De quantos modos se pode escolher uma equipe de # pessoas entre # candidatos, sem distinguir papéis?',
       'C(n, k) = \\frac{n!}{k!(n-k)!}',
-      'C(#, #) = \\frac{#!}{#!\\,(# - #)!}',
+      'C(#2, #1) = \\frac{#2!}{#1!\\,(#2 - #1)!}',
       (v) => combinacao(v[1]!, v[0]!),
     ],
     [
       'De quantos modos se pode escolher uma equipe de # pessoas entre # candidatos, sem distinguir cargos?',
       'C(n, k) = \\frac{n!}{k!(n-k)!}',
-      'C(#, #) = \\frac{#!}{#!\\,(# - #)!}',
+      'C(#2, #1) = \\frac{#2!}{#1!\\,(#2 - #1)!}',
       (v) => combinacao(v[1]!, v[0]!),
     ],
     [
@@ -573,13 +573,13 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'De quantos modos se pode escolher um presidente e um vice entre # candidatos, sendo os dois cargos diferentes?',
       'A(n, 2) = n(n-1)',
-      'A = # \\cdot (# - 1)',
+      'A = #1 \\cdot (#1 - 1)',
       (v) => v[0]! * (v[0]! - 1),
     ],
     [
       'Numa urna há # bolas de uma cor e # de outra. Retirando duas SEM reposição, quantos pares distintos (sem ordem) se podem formar?',
       'C(n, 2) = \\frac{n(n-1)}{2}',
-      'C(#, 2) = \\frac{#(# - 1)}{2}',
+      'C(#1 + #2, 2) = \\frac{(#1 + #2)(#1 + #2 - 1)}{2}',
       (v) => combinacao(v[0]! + v[1]!, 2),
     ],
   ],
@@ -595,7 +595,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Num dado de # faces, qual é a probabilidade de sair um número maior que #? Responda como fração.',
       'P = \\frac{n - k}{n}',
-      'P = \\frac{# - #}{#}',
+      'P = \\frac{#1 - #2}{#1}',
       (v) => {
         const mdc = (a: number, b: number): number => (b === 0 ? Math.abs(a) : mdc(b, a % b));
         const num = v[0]! - v[1]!;
@@ -606,14 +606,14 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa urna há # bolas vermelhas e # azuis. Retirando UMA bola, qual é a probabilidade de ser vermelha? (duas casas decimais)',
       'P = \\frac{v}{v + a}',
-      'P = \\frac{#}{# + #}',
+      'P = \\frac{#1}{#1 + #2}',
       (v) => v[0]! / (v[0]! + v[1]!),
       2,
     ],
     [
       'Numa urna há # bolas brancas e # pretas. Qual é a probabilidade de tirar uma branca? Responda como fração.',
       'P = \\frac{b}{b + p}',
-      'P = \\frac{#}{# + #}',
+      'P = \\frac{#1}{#1 + #2}',
       (v) => {
         const mdc = (a: number, b: number): number => (b === 0 ? Math.abs(a) : mdc(b, a % b));
         const total = v[0]! + v[1]!;
@@ -624,7 +624,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa urna há # bolas vermelhas e # azuis. Retirando duas SEM reposição, qual é a probabilidade de ambas serem vermelhas? (duas casas decimais)',
       'P = \\frac{v}{v+a} \\cdot \\frac{v-1}{v+a-1}',
-      'P = \\frac{#}{# + #} \\cdot \\frac{# - 1}{# + # - 1}',
+      'P = \\frac{#1}{#1 + #2} \\cdot \\frac{#1 - 1}{#1 + #2 - 1}',
       (v) => (v[0]! / (v[0]! + v[1]!)) * ((v[0]! - 1) / (v[0]! + v[1]! - 1)),
       2,
     ],
@@ -644,14 +644,14 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa urna há # bolas brancas e # pretas. Tirando duas sem reposição, qual é a probabilidade de as duas serem brancas? (duas casas decimais)',
       'P = \\frac{b}{b+p} \\cdot \\frac{b-1}{b+p-1}',
-      'P = \\frac{#}{# + #} \\cdot \\frac{# - 1}{# + # - 1}',
+      'P = \\frac{#1}{#1 + #2} \\cdot \\frac{#1 - 1}{#1 + #2 - 1}',
       (v) => (v[0]! / (v[0]! + v[1]!)) * ((v[0]! - 1) / (v[0]! + v[1]! - 1)),
       2,
     ],
     [
       'Numa urna há # bolas vermelhas e # azuis. Retirando duas COM reposição, qual é a probabilidade de ambas serem azuis? (duas casas decimais)',
       'P = \\left(\\frac{a}{v+a}\\right)^2',
-      'P = \\left(\\frac{#}{# + #}\\right)^2',
+      'P = \\left(\\frac{#2}{#1 + #2}\\right)^2',
       (v) => (v[1]! / (v[0]! + v[1]!)) ** 2,
       2,
     ],
@@ -745,7 +745,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um empréstimo de R$ # é pago em # parcelas iguais a juros de #% ao período. Qual é o valor da parcela? (duas casas decimais)',
       'P = C \\cdot \\frac{i(1+i)^n}{(1+i)^n - 1}',
-      'P = # \\cdot \\frac{\\frac{#}{100}(1 + \\frac{#}{100})^{#}}{(1 + \\frac{#}{100})^{#} - 1}',
+      'P = #1 \\cdot \\frac{\\frac{#3}{100}(1 + \\frac{#3}{100})^{#2}}{(1 + \\frac{#3}{100})^{#2} - 1}',
       (v) => {
         const i = v[2]! / 100;
         const n = v[1]!;
