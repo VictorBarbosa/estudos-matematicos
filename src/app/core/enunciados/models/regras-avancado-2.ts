@@ -292,7 +292,7 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Pelo teorema de Green com F = (−y/#, x/#), calcule a área da região limitada pela circunferência de raio #. (duas casas decimais)',
       'A = \\pi r^2',
-      'A = \\pi \\cdot #^2',
+      'A = \\pi \\cdot #3^2',
       (v) => PI * v[v.length - 1]! ** 2,
       2,
     ],

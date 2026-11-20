@@ -55,13 +55,13 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o MENOR valor que a função f(x) = (x − #)² + # pode assumir?',
       '(x-a)^2 + b \\ge b',
-      'f_{min} = #',
+      'f_{min} = #2',
       (v) => v[1]!,
     ],
     [
       'Uma função devolve o quadrado de (x menos #) somado a #. Qual é o menor valor que ela pode assumir?',
       '(x-a)^2 + b \\ge b',
-      'f_{min} = #',
+      'f_{min} = #2',
       (v) => v[1]!,
     ],
     [
@@ -177,25 +177,25 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'O gráfico de f foi deslocado # unidades para CIMA, dando g(x) = f(x) + #. Se f(#) = #, qual é g(#)?',
       'g(x) = f(x) + k',
-      'g = # + #',
+      'g = #4 + #1',
       (v) => v[3]! + v[0]!,
     ],
     [
       'O gráfico de f foi deslocado # unidades para a DIREITA, dando g(x) = f(x − #). Se f(#) = #, qual é g(#)?',
       'g(x) = f(x - k)',
-      'g(#) = f(#) = #',
+      'g(#5) = f(#3) = #4',
       (v) => v[3]!,
     ],
     [
       'g(x) = f(x + #). Se o gráfico de f tem um zero em x = #, em que valor de x o gráfico de g cruza o eixo horizontal?',
       'f(u) = 0 \\Rightarrow x + k = u',
-      'x + # = #',
+      'x = #2 - #1',
       (v) => v[1]! - v[0]!,
     ],
     [
       'g(x) = #·f(x). Se f(#) = #, qual é g(#)?',
       'g(x) = k\\,f(x)',
-      'g = # \\cdot #',
+      'g = #1 \\cdot #3',
       (v) => v[0]! * v[2]!,
     ],
     [
@@ -227,13 +227,13 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'g(x) = −f(x) + #. Se f(#) = #, qual é g(#)?',
       'g(x) = -f(x) + k',
-      'g = -# + #',
+      'g = -#3 + #1',
       (v) => -v[2]! + v[0]!,
     ],
     [
       'A parábola y = (x − #)² + # tem vértice em que ponto? Informe a ORDENADA do vértice.',
       'y = (x-a)^2 + k \\Rightarrow y_v = k',
-      'y_v = #',
+      'y_v = #2',
       (v) => v[1]!,
     ],
   ],
@@ -281,7 +281,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Some os números complexos (# + #i) e (# + #i). Qual é a parte imaginária do resultado?',
       '(a+bi) + (c+di) = (a+c) + (b+d)i',
-      '\\operatorname{Im} = # + #',
+      '\\operatorname{Im} = #2 + #4',
       (v) => v[1]! + v[3]!,
     ],
     [
@@ -404,7 +404,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Em que valor de x está a assíntota vertical da função f(x) = #/(x − #)? (duas casas decimais)',
       'D(x) = 0',
-      'x = #',
+      'x = #2',
       (v) => v[1]!,
       2,
     ],
@@ -432,21 +432,21 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma função divide # vezes x mais # por # vezes x mais #. Em que valor de y está a assíntota horizontal? (três casas decimais)',
       '\\lim_{x\\to\\infty}\\frac{ax+b}{cx+d} = \\frac{a}{c}',
-      'y = \\frac{#}{#}',
+      'y = \\frac{#1}{#3}',
       (v) => v[0]! / v[2]!,
       3,
     ],
     [
       'Esta função tem um buraco e uma assíntota vertical. Em que valor de x está o BURACO, se f(x) = (x² − #)/(x − #)? (duas casas decimais)',
       '\\frac{x^2 - a^2}{x - a} \\Rightarrow x = a',
-      'x = #',
+      'x = #2',
       (v) => v[1]!,
       2,
     ],
     [
       'Uma função divide o quadrado de x menos # por x menos #. Em que valor de x o gráfico tem um buraco, e não uma assíntota?',
       '\\frac{x^2 - a^2}{x - a} \\Rightarrow x = a',
-      'x = #',
+      'x = #2',
       (v) => v[1]!,
     ],
     [
@@ -459,7 +459,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A função f(x) = (x² + #x + #)/(x + #) tem assíntota oblíqua y = x + m. Qual é o valor de m? (duas casas decimais)',
       '\\frac{x^2 + bx + c}{x + d} \\Rightarrow m = b - d',
-      'm = # - #',
+      'm = #1 - #3',
       (v) => v[0]! - v[2]!,
       2,
     ],
@@ -490,7 +490,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Se x < #, f(x) = #x + #; se x ≥ #, f(x) = #x + #. Qual é o limite pela ESQUERDA em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^-} f(x) = b a + c',
-      '\\lim_{x\\to #^-} (#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #1^-} (#2x + #3) = #2 \\cdot #1 + #3',
       (v) => v[1]! * v[0]! + v[2]!,
       2,
     ],
@@ -504,7 +504,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Se x < #, f(x) = #x + #; se x ≥ #, f(x) = #x + #. Qual é o SALTO em x = # (limite à direita menos à esquerda)? (duas casas decimais)',
       's = (da + e) - (ba + c)',
-      's = (# \\cdot # + #) - (# \\cdot # + #)',
+      's = (#5 \\cdot #1 + #6) - (#2 \\cdot #1 + #3)',
       (v) => v[4]! * v[0]! + v[5]! - (v[1]! * v[0]! + v[2]!),
       2,
     ],
@@ -578,7 +578,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'O imposto é # até #, e depois #% sobre o que excede #. Sobre uma renda de #, quanto é o imposto? (duas casas decimais)',
       'I = a + \\frac{b}{100}(R - L)',
-      'I = # + \\frac{#}{100} \\cdot (# - #)',
+      'I = #1 + \\frac{#3}{100} \\cdot (#5 - #4)',
       (v) => v[0]! + (v[2]! / 100) * (v[4]! - v[3]!),
       2,
     ],
@@ -612,7 +612,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Se x < #, f(x) = #x + #; se x ≥ #, f(x) = #x + #. Qual é o limite pela ESQUERDA em x = #? (duas casas decimais)',
       '\\lim_{x\\to a^-} f(x) = b a + c',
-      '\\lim_{x\\to #^-} (#x + #) = # \\cdot # + #',
+      '\\lim_{x\\to #1^-} (#2x + #3) = #2 \\cdot #1 + #3',
       (v) => v[1]! * v[0]! + v[2]!,
       2,
     ],
@@ -646,7 +646,7 @@ export const REGRAS_FUNCOES_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o salto do gráfico em x = #, isto é, o limite pela direita menos o limite pela esquerda? Use f(x) = #x + # à esquerda e #x + # à direita. (duas casas decimais)',
       's = (da+e) - (ba+c)',
-      's = (# \\cdot # + #) - (# \\cdot # + #)',
+      's = (#4 \\cdot #1 + #5) - (#2 \\cdot #1 + #3)',
       (v) => v[3]! * v[0]! + v[4]! - (v[1]! * v[0]! + v[2]!),
       2,
     ],

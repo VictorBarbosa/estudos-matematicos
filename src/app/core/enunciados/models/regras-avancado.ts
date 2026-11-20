@@ -83,14 +83,14 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Na curva x² + y² = #, qual é o valor de dy/dx no ponto (#, #)? (duas casas decimais)',
       '\\frac{dy}{dx} = -\\frac{x}{y}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#2}{#3}',
       (v) => -v[1]! / v[2]!,
       2,
     ],
     [
       'Uma circunferência tem a soma dos quadrados de x e y igual a #. No ponto (#, #), qual é a inclinação da reta tangente? Responda como fração.',
       '\\frac{dy}{dx} = -\\frac{x}{y}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#2}{#3}',
       (v) => {
         const mdc = (a: number, b: number): number => (b === 0 ? Math.abs(a) : mdc(b, a % b));
         const d = mdc(-v[1]!, v[2]!) || 1;
@@ -102,13 +102,13 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma circunferência tem a soma dos quadrados de x e y igual a #. No ponto (#, #), qual é a inclinação da reta tangente?',
       '\\frac{dy}{dx} = -\\frac{x}{y}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#2}{#3}',
       (v) => -v[1]! / v[2]!,
     ],
     [
       'Na curva x² + y² = #, qual é o coeficiente angular da reta tangente no ponto (#, #)? (duas casas decimais)',
       '\\frac{dy}{dx} = -\\frac{x}{y}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#2}{#3}',
       (v) => -v[1]! / v[2]!,
       2,
     ],
@@ -121,28 +121,28 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A curva x² + y² = # passa por (#, #). Onde a reta tangente nesse ponto corta o eixo y? (duas casas decimais)',
       'y_{corte} = \\frac{r^2}{y_0}',
-      'y = \\frac{#}{#}',
+      'y = \\frac{#1}{#3}',
       (v) => v[0]! / v[2]!,
       2,
     ],
     [
       'Na curva y² = #x, qual é o valor de dy/dx no ponto (#, #)? (duas casas decimais)',
       '\\frac{dy}{dx} = \\frac{a}{2y}',
-      '\\frac{dy}{dx} = \\frac{#}{2 \\cdot #}',
+      '\\frac{dy}{dx} = \\frac{#1}{2 \\cdot #3}',
       (v) => v[0]! / (2 * v[2]!),
       2,
     ],
     [
       'Na curva x·y = #, qual é o valor de dy/dx no ponto (#, #)? (duas casas decimais)',
       '\\frac{dy}{dx} = -\\frac{y}{x}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#3}{#2}',
       (v) => -v[2]! / v[1]!,
       2,
     ],
     [
       'Uma curva satisfaz: o produto de x por y vale #. No ponto (#, #), qual é a inclinação da reta tangente?',
       '\\frac{dy}{dx} = -\\frac{y}{x}',
-      '\\frac{dy}{dx} = -\\frac{#}{#}',
+      '\\frac{dy}{dx} = -\\frac{#3}{#2}',
       (v) => -v[2]! / v[1]!,
     ],
     [
@@ -285,7 +285,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral tripla da constante # sobre o cubo de # a # em x, y e z. (duas casas decimais)',
       '\\iiint k\,dV = k(L)^3',
-      '= # \\cdot (# - #)^3',
+      '= #1 \\cdot (#3 - #2)^3',
       (v) => v[0]! * (v[2]! - v[1]!) ** 3,
       2,
     ],
@@ -528,7 +528,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Pelo teste da razão, calcule L = lim |aₙ₊₁/aₙ| para a série de termo #/#^n. (duas casas decimais)',
       'L = \\frac{1}{a}',
-      'L = \\frac{1}{#}',
+      'L = \\frac{1}{#2}',
       (v) => 1 / v[1]!,
       2,
     ],
@@ -660,21 +660,21 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       "Aplique o método de Euler com passo h = # e # passos, partindo de y(#) = # e y' = y. Qual é o valor aproximado? (duas casas decimais)",
       'y_{n+1} = y_n + h y_n',
-      'y = #(1 + #)^{#}',
+      'y = #4(1 + #1)^{#2}',
       (v) => v[3]! * (1 + v[0]!) ** v[1]!,
       2,
     ],
     [
       "Aplique Euler com passo h = # e # passos para y' = y, partindo de y(#) = #. Qual é o valor obtido? (duas casas decimais)",
       'y_{n+1} = y_n + h y_n',
-      'y = #(1 + #)^{#}',
+      'y = #4(1 + #1)^{#2}',
       (v) => v[3]! * (1 + v[0]!) ** v[1]!,
       2,
     ],
     [
       "Aplique Euler com passo h = # e # passos para y' = −y, partindo de y(#) = #. Qual é o valor obtido? (duas casas decimais)",
       'y_{n+1} = y_n - h y_n',
-      'y = #(1 - #)^{#}',
+      'y = #4(1 - #1)^{#2}',
       (v) => v[3]! * (1 - v[0]!) ** v[1]!,
       2,
     ],
@@ -819,7 +819,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma amostra de # g tem meia-vida de # anos. Quanto resta depois de # anos, em g? (duas casas decimais)',
       'N = N_0\\left(\\frac{1}{2}\\right)^{t/T}',
-      'N = # \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#}{#}}',
+      'N = #1 \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#3}{#2}}',
       (v) => v[0]! * 0.5 ** (v[2]! / v[1]!),
       2,
     ],

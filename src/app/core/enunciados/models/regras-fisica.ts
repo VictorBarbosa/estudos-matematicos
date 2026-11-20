@@ -205,14 +205,14 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo de # kg cai de # m, partindo do repouso e sem atrito. Com que velocidade chega ao solo, em m/s? (use g = # m/s²; duas casas decimais)',
       'v = \\sqrt{2gh}',
-      'v = \\sqrt{2 \\cdot # \\cdot #}',
+      'v = \\sqrt{2 \\cdot #3 \\cdot #2}',
       (v) => Math.sqrt(2 * v[2]! * v[1]!),
       2,
     ],
     [
       'Um corpo cai de # m, partindo do repouso, com a gravidade valendo # m/s² e sem atrito. Com que velocidade, em m/s, chega ao solo? (duas casas decimais)',
       'v = \\sqrt{2gh}',
-      'v = \\sqrt{2 \\cdot # \\cdot #}',
+      'v = \\sqrt{2 \\cdot #2 \\cdot #1}',
       (v) => Math.sqrt(2 * v[1]! * v[0]!),
       2,
     ],
@@ -393,7 +393,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma carga de # μC está num campo elétrico uniforme de # N/C. Qual é o módulo da força sobre ela, em mN? (duas casas decimais)',
       'F = q \\cdot E',
-      'F = # \\cdot 10^{-6} \\cdot #',
+      'F = #1 \\cdot 10^{-6} \\cdot #2 \\cdot 1000',
       (v) => v[0]! * 1e-6 * v[1]! * 1000,
       2,
     ],
@@ -533,7 +533,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um solenoide de # cm tem # espiras e corrente de # A. Qual é o campo no interior, em mT? (μ₀ = #π×10⁻⁷; duas casas decimais)',
       'B = \\mu_0 \\frac{N i}{L}',
-      'B = 4\\pi \\cdot 10^{-7} \\cdot \\frac{# \\cdot #}{#}',
+      'B = 4\\pi \\cdot 10^{-7} \\cdot \\frac{#2 \\cdot #3}{\\frac{#1}{100}} \\cdot 1000',
       (v) => ((4 * PI * 1e-7 * v[1]! * v[2]!) / (v[0]! / 100)) * 1000,
       2,
     ],
@@ -553,7 +553,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma bobina de # espiras, cada uma com # cm², está perpendicular a um campo que passa de # T a # T em # s. Qual é o módulo da fem induzida, em V? (duas casas decimais)',
       '|\\varepsilon| = N A \\frac{|\\Delta B|}{\\Delta t}',
-      '|\\varepsilon| = # \\cdot \\frac{#}{10000} \\cdot \\frac{# - #}{#}',
+      '|\\varepsilon| = #1 \\cdot \\frac{#2}{10000} \\cdot \\frac{#4 - #3}{#5}',
       (v) => v[0]! * (v[1]! / 10000) * (Math.abs(v[3]! - v[2]!) / v[4]!),
       2,
     ],
@@ -702,14 +702,14 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um objeto está a # cm de uma lente convergente de distância focal # cm. A que distância, em centímetros, fica a imagem? (duas casas decimais)',
       '\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}',
-      'd_i = \\left(\\frac{1}{#} - \\frac{1}{#}\\right)^{-1}',
+      'd_i = \\left(\\frac{1}{#2} - \\frac{1}{#1}\\right)^{-1}',
       (v) => 1 / (1 / v[1]! - 1 / v[0]!),
       2,
     ],
     [
       'Um objeto está a # cm de uma lente convergente de foco # cm. A que distância da lente se forma a imagem, em cm? (duas casas decimais)',
       '\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}',
-      'd_i = \\left(\\frac{1}{#} - \\frac{1}{#}\\right)^{-1}',
+      'd_i = \\left(\\frac{1}{#2} - \\frac{1}{#1}\\right)^{-1}',
       (v) => 1 / (1 / v[1]! - 1 / v[0]!),
       2,
     ],
@@ -879,7 +879,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo vai do ponto (#, #) ao ponto (#, #) em # s. Qual é a componente x da velocidade média, em m/s? (duas casas decimais)',
       'v_x = \\frac{\\Delta x}{\\Delta t}',
-      'v_x = \\frac{# - #}{#}',
+      'v_x = \\frac{#3 - #1}{#5}',
       (v) => (v[2]! - v[0]!) / v[4]!,
       2,
     ],
@@ -973,7 +973,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um aro de # kg e # m de raio rola sem deslizar a # m/s. Qual é a energia cinética TOTAL, em J? (duas casas decimais)',
       'E = \\frac{m v^2}{2} + \\frac{I \\omega^2}{2} = m v^2',
-      'E = # \\cdot #^2',
+      'E = #1 \\cdot #3^2',
       (v) => v[0]! * v[2]! ** 2,
       2,
     ],
@@ -1024,7 +1024,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma alavanca tem # m de um lado e # m do outro. Que força do lado # equilibra # N aplicados do lado #? (duas casas decimais)',
       'F_1 d_1 = F_2 d_2',
-      'F = \\frac{F_{apl} \\cdot d_{apl}}{d_{alvo}} = \\frac{# \\cdot #}{#}',
+      'F = \\frac{F_{apl} \\cdot d_{apl}}{d_{alvo}} = \\frac{#4 \\cdot #5}{#3}',
       (v) => (v[3]! * v[4]!) / v[2]!,
       2,
     ],
@@ -1359,7 +1359,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o período orbital de um satélite a # km de altitude? (use GM = #×10⁵ km³/s² e R = # km; em minutos, duas casas decimais)',
       'T = 2\\pi\\sqrt{\\frac{(R+h)^3}{GM}}',
-      'T = \\frac{2\\pi\\sqrt{\\frac{(# + #)^3}{# \\times 10^5}}}{60}',
+      'T = \\frac{2\\pi\\sqrt{\\frac{(#3 + #1)^3}{#2 \\times 10^5}}}{60}',
       (v) => (2 * PI * Math.sqrt((kmEscrito(v[2]!) + v[0]!) ** 3 / (v[1]! * 1e5))) / 60,
       2,
     ],
@@ -1620,7 +1620,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma massa de # kg oscila numa mola de constante # N/m com amplitude # m. Qual é a energia TOTAL, em J? (duas casas decimais)',
       'E = \\frac{k A^2}{2}',
-      'E = \\frac{# \\cdot #^2}{2}',
+      'E = \\frac{#2 \\cdot #3^2}{2}',
       (v) => (v[1]! * v[2]! ** 2) / 2,
       2,
     ],
@@ -1941,7 +1941,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo de # m² e emissividade # está a # °C. Qual é a potência irradiada, em W? (σ = #×10⁻⁸; duas casas decimais)',
       'P = \\varepsilon \\sigma A T^4',
-      'P = # \\cdot # \\times 10^{-8} \\cdot # \\cdot (# + 273{,}15)^4',
+      'P = #2 \\cdot #4 \\times 10^{-8} \\cdot #1 \\cdot (#3 + 273{,}15)^4',
       (v) => v[1]! * v[3]! * 1e-8 * v[0]! * (v[2]! + 273.15) ** 4,
       2,
     ],
@@ -1964,7 +1964,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quanta energia guarda um capacitor de # μF carregado a # V, em mJ? (duas casas decimais)',
       'E = \\frac{C U^2}{2}',
-      'E = \\frac{# \\cdot #^2}{2}',
+      'E = \\frac{#1 \\cdot #2^2}{2 \\cdot 1000}',
       (v) => (v[0]! * v[1]! ** 2) / 2 / 1000,
       2,
     ],
@@ -2050,7 +2050,7 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um motor queima # kg/s de propelente com velocidade de exaustão de # m/s. Qual é o empuxo, em kN? (duas casas decimais)',
       'F = \\dot{m} \\cdot v_e',
-      'F = # \\cdot #',
+      'F = \\frac{#1 \\cdot #2}{1000}',
       (v) => (v[0]! * v[1]!) / 1000,
       2,
     ],

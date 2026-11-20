@@ -103,7 +103,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Uma fatia de bolo é um setor circular de raio # cm e ângulo central de #°. Quantos centímetros mede o contorno completo da fatia, isto é, os dois raios mais o arco? (duas casas decimais)',
       'P = 2r + \\frac{\\theta}{360}2\\pi r',
-      'P = 2 \\cdot # + \\frac{#}{360} \\cdot 2\\pi \\cdot #',
+      'P = 2 \\cdot #1 + \\frac{#2}{360} \\cdot 2\\pi \\cdot #1',
       (v) => 2 * v[0]! + (v[1]! / 360) * 2 * PI * v[0]!,
       2,
     ],
@@ -138,7 +138,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Num jardim quadrado de # m de lado há um canteiro circular inscrito, que ocupa toda a largura do jardim. Quantos metros quadrados sobram de grama? (duas casas decimais)',
       'A = L^2 - \\pi\\left(\\frac{L}{2}\\right)^2',
-      'A = #^2 - \\pi\\left(\\frac{#}{2}\\right)^2',
+      'A = #1^2 - \\pi\\left(\\frac{#1}{2}\\right)^2',
       (v) => v[0]! ** 2 - PI * (v[0]! / 2) ** 2,
       2,
     ],
@@ -180,7 +180,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Uma horta tem a forma de triângulo retângulo, com catetos de # m e # m. Quantos metros de cerca são necessários para cercar todo o contorno dela?',
       'P = a + b + \\sqrt{a^2 + b^2}',
-      'P = # + # + \\sqrt{#^2 + #^2}',
+      'P = #1 + #2 + \\sqrt{#1^2 + #2^2}',
       (v) => v[0]! + v[1]! + Math.hypot(v[0]!, v[1]!),
     ],
     [
@@ -204,7 +204,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Uma foto de # cm por # cm é ampliada sem deformar, até o lado maior ficar com # cm. Quantos centímetros passa a medir o lado menor?',
       '\\frac{x}{x_{min}} = \\frac{x_{novo}}{x_{max}}',
-      'x = \\frac{\\min(#, #) \\cdot #}{\\max(#, #)}',
+      'x = \\frac{\\min(#1, #2) \\cdot #3}{\\max(#1, #2)}',
       (v) => (Math.min(v[0]!, v[1]!) * v[2]!) / Math.max(v[0]!, v[1]!),
     ],
     [
@@ -229,13 +229,13 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Dois terrenos triangulares são semelhantes. Os lados correspondentes estão na razão # : #. Se o menor tem # m² de área, quantos metros quadrados tem o maior?',
       '\\frac{A_2}{A_1} = \\left(\\frac{k_2}{k_1}\\right)^2',
-      'A_2 = # \\cdot \\left(\\frac{#}{#}\\right)^2',
+      'A_2 = #3 \\cdot \\left(\\frac{#2}{#1}\\right)^2',
       (v) => v[2]! * (v[1]! / v[0]!) ** 2,
     ],
     [
       'Dois terrenos triangulares são semelhantes. No menor, o lado que mede # m corresponde ao lado de # m do maior. Se o menor tem # m², quantos metros quadrados tem o maior?',
       '\\frac{A_2}{A_1} = \\left(\\frac{L_2}{L_1}\\right)^2',
-      'A_2 = # \\cdot \\left(\\frac{#}{#}\\right)^2',
+      'A_2 = #3 \\cdot \\left(\\frac{#2}{#1}\\right)^2',
       (v) => v[2]! * (v[1]! / v[0]!) ** 2,
     ],
     [
@@ -248,13 +248,13 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Um triângulo retângulo tem catetos de # cm e # cm. Quantos centímetros mede a altura traçada do ângulo reto até a hipotenusa?',
       'h = \\frac{ab}{\\sqrt{a^2 + b^2}}',
-      'h = \\frac{# \\cdot #}{\\sqrt{#^2 + #^2}}',
+      'h = \\frac{#1 \\cdot #2}{\\sqrt{#1^2 + #2^2}}',
       (v) => (v[0]! * v[1]!) / Math.hypot(v[0]!, v[1]!),
     ],
     [
       'Um retângulo tem diagonal de # cm e um dos lados mede # cm. Quantos centímetros tem o perímetro dele?',
       'P = 2\\left(a + \\sqrt{d^2 - a^2}\\right)',
-      'P = 2\\left(# + \\sqrt{#^2 - #^2}\\right)',
+      'P = 2\\left(#2 + \\sqrt{#1^2 - #2^2}\\right)',
       (v) => 2 * (v[1]! + Math.sqrt(v[0]! ** 2 - v[1]! ** 2)),
     ],
     [
@@ -358,7 +358,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Num triângulo retângulo, os dois catetos medem # cm e # cm. Quantos graus mede o ângulo oposto ao MAIOR cateto? (duas casas decimais)',
       '\\tan\\theta = \\frac{maior}{menor}',
-      '\\theta = \\arctan\\left(\\frac{\\max(#, #)}{\\min(#, #)}\\right)',
+      '\\theta = \\arctan\\left(\\frac{\\max(#1, #2)}{\\min(#1, #2)}\\right)',
       (v) => graus(Math.atan(Math.max(v[0]!, v[1]!) / Math.min(v[0]!, v[1]!))),
       2,
     ],
@@ -388,7 +388,7 @@ export const REGRAS_GEOMETRIA_PLANA: Readonly<Record<string, readonly Regra[]>> 
     [
       'Dois observadores estão a # m um do outro, na mesma reta de um balão. Os ângulos de elevação medidos são de #° e #°. Qual é a altura do balão, em metros? (duas casas decimais)',
       'h = \\frac{d\\tan\\alpha_1\\tan\\alpha_2}{\\tan\\alpha_2 - \\tan\\alpha_1}',
-      'h = \\frac{# \\cdot \\tan #^\\circ \\cdot \\tan #^\\circ}{\\tan #^\\circ - \\tan #^\\circ}',
+      'h = \\frac{#1 \\cdot \\tan #2^\\circ \\cdot \\tan #3^\\circ}{\\tan #3^\\circ - \\tan #2^\\circ}',
       (v) =>
         (v[0]! * Math.tan(rad(v[1]!)) * Math.tan(rad(v[2]!))) /
         (Math.tan(rad(v[2]!)) - Math.tan(rad(v[1]!))),

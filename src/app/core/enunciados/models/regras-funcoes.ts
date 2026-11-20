@@ -139,7 +139,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A parábola y = x² + #x + # corta o eixo y em que valor?',
       'y(0) = c',
-      'y(0) = #',
+      'y(0) = #2',
       (v) => v[1]!,
     ],
     [
@@ -199,14 +199,14 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma substância tem meia-vida de # anos. Começando com # g, quantos gramas restam após # anos? (duas casas decimais)',
       'N = N_0 \\left(\\frac{1}{2}\\right)^{t/T}',
-      'N = # \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#}{#}}',
+      'N = #2 \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#3}{#1}}',
       (v) => v[1]! * 0.5 ** (v[2]! / v[0]!),
       2,
     ],
     [
       'Uma substância tem meia-vida de # anos. De uma amostra de # g, quantos gramas restam depois de # anos?',
       'N = N_0 \\left(\\frac{1}{2}\\right)^{t/T}',
-      'N = # \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#}{#}}',
+      'N = #2 \\cdot \\left(\\frac{1}{2}\\right)^{\\frac{#3}{#1}}',
       (v) => v[1]! * 0.5 ** (v[2]! / v[0]!),
     ],
     [
@@ -301,7 +301,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Sabendo que log # = # e log # = #, qual é o valor de log #? (duas casas decimais)',
       '\\log(ab) = \\log a + \\log b',
-      '\\log(#) = # + #',
+      '\\log(#5) = #2 + #4',
       (v) => v[1]! + v[3]!,
       2,
     ],
@@ -341,13 +341,13 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quais são as soluções de |x − #| = #? Informe a MENOR.',
       '|x - a| = d \\Rightarrow x = a - d',
-      'x = #2 - #1',
+      'x = #1 - #2',
       (v) => v[0]! - v[1]!,
     ],
     [
       'Qual é o MENOR valor que a função f(x) = |x − #| + # pode assumir?',
       'f(x) = |x - a| + b \\Rightarrow f_{min} = b',
-      'f_{min} = #',
+      'f_{min} = #2',
       (v) => v[1]!,
     ],
     [
@@ -383,7 +383,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quantas soluções tem a equação |x − #| + # = #? Responda #, # ou #.',
       '|x - a| = c - b \\Rightarrow \\begin{cases} 2 & c > b \\\\ 1 & c = b \\\\ 0 & c < b \\end{cases}',
-      '|x - #| = # - #',
+      '|x - #1| = #3 - #2',
       (v) => (v[2]! > v[1]! ? 2 : v[2]! === v[1]! ? 1 : 0),
     ],
   ],

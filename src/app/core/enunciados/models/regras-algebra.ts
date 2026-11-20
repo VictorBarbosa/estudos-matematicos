@@ -717,7 +717,7 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um capital de R$ # foi aplicado a juros compostos e virou R$ # após # períodos. Qual foi a taxa por período, em %? (duas casas decimais)',
       'i = \\left(\\frac{M}{C}\\right)^{1/n} - 1',
-      'i = \\left(\\frac{#}{#}\\right)^{\\frac{1}{#}} - 1',
+      'i = \\left(\\left(\\frac{#2}{#1}\\right)^{\\frac{1}{#3}} - 1\\right) \\cdot 100',
       (v) => ((v[1]! / v[0]!) ** (1 / v[2]!) - 1) * 100,
       2,
     ],

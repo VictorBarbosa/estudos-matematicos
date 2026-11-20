@@ -157,7 +157,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Sabendo que a integral de f de # a # vale #, quanto vale a integral de #·f no mesmo intervalo?',
       '\\int k f = k\\int f',
-      'k\\int f = # \\cdot #',
+      'k\\int f = #4 \\cdot #3',
       (v) => v[3]! * v[2]!,
     ],
   ],

@@ -336,6 +336,97 @@ export function resolverPorRegras(
  * avaliador não entende a expressão, devolve `null` e a regra é PULADA: o
  * silêncio é melhor que um falso alarme.
  */
+/**
+ * Toda potência vira `Math.pow`, inclusive a de base entre parênteses.
+ *
+ * As três substituições por regex que havia aqui cobriam `x^2` e `x^{2}`, mas
+ * não `(...)^2` — e é essa a forma que sai de `\\frac{a}{b}` depois de virar
+ * `((a)/(b))`. O `^` sobrevivente era lido pelo JavaScript como OU-exclusivo,
+ * e a conta saía errada em silêncio.
+ *
+ * Aqui a base é lida de trás para a frente a partir do `^`: um grupo de
+ * parênteses equilibrado (com o nome da função antes dele, se houver) ou o
+ * número imediatamente anterior. O expoente vem das chaves, de um grupo de
+ * parênteses ou do número seguinte.
+ */
+function potenciasEmPow(expressao: string): string {
+  let texto = expressao;
+
+  for (let guarda = 0; guarda < 64; guarda += 1) {
+    const corte = texto.indexOf('^');
+    if (corte === -1) {
+      return texto;
+    }
+
+    // A base: o que termina imediatamente antes do `^`.
+    let inicio = -1;
+
+    if (texto[corte - 1] === ')') {
+      let nivel = 0;
+      for (let i = corte - 1; i >= 0; i -= 1) {
+        if (texto[i] === ')') nivel += 1;
+        else if (texto[i] === '(') {
+          nivel -= 1;
+          if (nivel === 0) {
+            inicio = i;
+            break;
+          }
+        }
+      }
+      // O nome da função, quando a base é `Math.sqrt(...)`.
+      while (inicio > 0 && /[A-Za-z.]/.test(texto[inicio - 1]!)) {
+        inicio -= 1;
+      }
+    } else {
+      const antes = /(\d+(?:\.\d+)?)$/.exec(texto.slice(0, corte));
+      if (antes !== null) {
+        inicio = corte - antes[1]!.length;
+      }
+    }
+
+    if (inicio === -1) {
+      return texto;
+    }
+
+    // O expoente: `{...}`, `(...)` ou o número que vem logo depois.
+    let fim = -1;
+    let expoente = '';
+    const depois = texto.slice(corte + 1);
+
+    if (depois.startsWith('{') || depois.startsWith('(')) {
+      const abre = depois[0]!;
+      const fecha = abre === '{' ? '}' : ')';
+      let nivel = 0;
+      for (let i = 0; i < depois.length; i += 1) {
+        if (depois[i] === abre) nivel += 1;
+        else if (depois[i] === fecha) {
+          nivel -= 1;
+          if (nivel === 0) {
+            expoente = depois.slice(1, i);
+            fim = corte + 1 + i + 1;
+            break;
+          }
+        }
+      }
+    } else {
+      const numero = /^-?\d+(?:\.\d+)?/.exec(depois);
+      if (numero !== null) {
+        expoente = numero[0];
+        fim = corte + 1 + numero[0].length;
+      }
+    }
+
+    if (fim === -1 || expoente === '') {
+      return texto;
+    }
+
+    const base = texto.slice(inicio, corte);
+    texto = `${texto.slice(0, inicio)}Math.pow(${base},${expoente})${texto.slice(fim)}`;
+  }
+
+  return texto;
+}
+
 export function avaliarLatex(tex: string): number | null {
   // Só o lado direito interessa: `y_v = ...` vira `...`.
   const igual = tex.lastIndexOf('=');
@@ -369,11 +460,19 @@ export function avaliarLatex(tex: string): number | null {
       .replace(/\\sqrt\{([^{}]*)\}/g, 'Math.sqrt($1)');
   } while (expressao !== anterior);
 
-  // Potência: `x^{2}` e `x^2` viram `Math.pow`.
-  expressao = expressao
-    .replace(/\{([^{}]*)\}\^\{([^{}]*)\}/g, 'Math.pow($1,$2)')
-    .replace(/(\d+(?:\.\d+)?)\^\{([^{}]*)\}/g, 'Math.pow($1,$2)')
-    .replace(/(\d+(?:\.\d+)?)\^(\d+)/g, 'Math.pow($1,$2)');
+  expressao = potenciasEmPow(expressao);
+
+  /*
+   * Sobrou um `^`? O avaliador desiste.
+   *
+   * Em JavaScript `^` é o OU-exclusivo de inteiros, não a potência: deixar um
+   * passar faz `3.14*(15)^2` valer 45 em vez de 706,86 — um número plausível,
+   * calculado errado, comparado com a resposta e acusado como divergência que
+   * não existe. Melhor nenhum número que um número inventado.
+   */
+  if (expressao.includes('^')) {
+    return null;
+  }
 
   // O que sobrou de letra é variável: não é conta numérica, e o avaliador sai.
   // `2Math.sqrt(...)` também é produto implícito.

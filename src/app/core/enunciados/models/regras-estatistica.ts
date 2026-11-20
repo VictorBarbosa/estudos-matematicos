@@ -155,7 +155,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa normal de média # e desvio #, que valor deixa #% das observações abaixo dele? (duas casas decimais)',
       'x = \\mu + z\\sigma',
-      'x = # + # \\cdot #',
+      'x = #1 + z_{#3\\%} \\cdot #2',
       (v) => Math.round(v[0]! + zDe(v[2]! / 100) * v[1]!),
       2,
     ],
@@ -378,13 +378,13 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a soma dos elementos da diagonal principal da matriz [[#, #], [#, #]]?',
       '\\operatorname{tr} = a + d',
-      '\\operatorname{tr} = # + #',
+      '\\operatorname{tr} = #1 + #4',
       (v) => v[0]! + v[3]!,
     ],
     [
       'Uma matriz # por # tem primeira linha # e #, e segunda linha # e #. Qual é a soma dos elementos da diagonal principal?',
       '\\operatorname{tr} = a + d',
-      '\\operatorname{tr} = # + #',
+      '\\operatorname{tr} = #3 + #6',
       (v) => {
         const [a, , , d] = v.slice(-4) as [number, number, number, number];
         return a + d;
@@ -448,7 +448,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o traço da matriz [[#, #], [#, #]], isto é, a soma dos autovalores?',
       '\\operatorname{tr} = a + d',
-      '\\operatorname{tr} = # + #',
+      '\\operatorname{tr} = #1 + #4',
       (v) => v[0]! + v[3]!,
     ],
     [
@@ -460,25 +460,25 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma matriz #×# tem autovalores # e #. Qual é o traço dela?',
       '\\operatorname{tr} = \\lambda_1 + \\lambda_2',
-      '\\operatorname{tr} = # + #',
+      '\\operatorname{tr} = #3 + #4',
       (v) => v[v.length - 2]! + v[v.length - 1]!,
     ],
     [
       'Uma matriz #×# tem autovalores # e #. Qual é o determinante dela?',
       '\\det = \\lambda_1\\lambda_2',
-      '\\det = # \\cdot #',
+      '\\det = #3 \\cdot #4',
       (v) => v[v.length - 2]! * v[v.length - 1]!,
     ],
     [
       'Uma matriz # por # tem autovalores # e #. Qual é o determinante dela, que é o produto dos autovalores?',
       '\\det = \\lambda_1\\lambda_2',
-      '\\det = # \\cdot #',
+      '\\det = #3 \\cdot #4',
       (v) => v[v.length - 2]! * v[v.length - 1]!,
     ],
     [
       'A matriz [[#, #], [#, #]] tem autovalores iguais a # e #. Qual é o determinante dela?',
       '\\det = \\lambda_1\\lambda_2',
-      '\\det = # \\cdot #',
+      '\\det = #5 \\cdot #6',
       (v) => v[v.length - 2]! * v[v.length - 1]!,
     ],
     [
@@ -522,7 +522,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aplicando a operação L# ← L# − #·L# na matriz [[#, #], [#, #]], qual é a nova entrada da linha # na coluna #?',
       'L_2 \\leftarrow L_2 - k L_1',
-      'a_{21} = # - # \\cdot #',
+      'a_{21} = #7 - #3 \\cdot #5',
       (v, texto) => {
         const [a, , c] = matriz2(texto);
         return c - v[2]! * a;
@@ -603,7 +603,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a soma dos coeficientes de x^{pares} no desenvolvimento de (# + x)^#? Responda como potência de # elevada a n−#.',
       '\\frac{2^n}{2} = 2^{n-1}',
-      '2^{#}',
+      '2^{#2 - 1}',
       (v) => 2 ** (v[1]! - 1),
     ],
   ],

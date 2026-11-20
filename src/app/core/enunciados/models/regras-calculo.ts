@@ -401,7 +401,7 @@ export const REGRAS_CALCULO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a derivada parcial de f(x, y) = x² + #y² em relação a x, no ponto (#, #)?',
       '\\frac{\\partial f}{\\partial x} = 2x',
-      '\\frac{\\partial f}{\\partial x} = 2 \\cdot #',
+      '\\frac{\\partial f}{\\partial x} = 2 \\cdot #2',
       (v) => 2 * v[1]!,
     ],
     [
@@ -704,7 +704,7 @@ export const REGRAS_CALCULO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A função f(x) = (#x + #)/(x − #) tem uma assíntota vertical. Em que valor de x ela está?',
       'D(c) = 0',
-      'x = #',
+      'x = #3',
       (v) => v[2]!,
     ],
     [
@@ -764,7 +764,7 @@ export const REGRAS_CALCULO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A função que divide # por x menos # é descontínua em qual valor de x?',
       '\\frac{a}{x - c} \\Rightarrow x = c',
-      'x = #',
+      'x = #2',
       (v) => v[1]!,
     ],
     [

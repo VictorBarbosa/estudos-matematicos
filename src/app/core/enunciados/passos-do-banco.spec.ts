@@ -48,17 +48,30 @@ const ENTRADAS = todosOsEnunciados();
  * fórmula repete um valor — devolve as entradas dela a este número. As cinco
  * primeiras (o efeito Doppler, em duas formas, e o arranjo, em três)
  * devolveram 36 entradas: 4273 → 4309.
+ *
+ * Depois delas, mais 27 formas de vetores, planos, geometria e trigonometria:
+ * 4309 → 4391 (59,5%). O trabalho é sempre o mesmo e rende por família — uma
+ * regra consertada devolve todas as entradas que a usam.
  */
-const COBERTURA_MINIMA = 0.5838;
+const COBERTURA_MINIMA = 0.5949;
 
 /**
  * Quantas substituições ainda mostram conta diferente da resposta.
  *
- * Zero é o alvo. Hoje são as que ficaram depois das correções automáticas de
- * ordem: falta nelas um fator que a fórmula carrega em símbolo (a constante de
- * um gás, o fator de unidade) e que a substituição textual não reproduz.
+ * Zero é o alvo. Eram 538 medidas com uma régua torta: `avaliarLatex` não
+ * sabia elevar um parêntese — `3,14 \cdot (15)^2` virava um OU-exclusivo em
+ * JavaScript e valia 45 em vez de 706,86 —, e isso tanto escondia erro quanto
+ * inventava erro que não existia. Com a potência lida de verdade, a conta
+ * honesta deu 590; corrigir os índices dos marcadores em 60 regras baixou para
+ * 120.
+ *
+ * As que ficam são de três tipos, e nenhuma é índice trocado: a substituição
+ * que mostra uma COMPARAÇÃO e não a resposta (quantas soluções tem |x − a| = d),
+ * a que mostra uma diferença cujo módulo a conta toma (a fem induzida de um
+ * campo que cai), e a que carrega um fator em símbolo (o `z` da normal, a
+ * constante de um gás).
  */
-const TETO_DE_SUBSTITUICOES_INCOERENTES = 538;
+const TETO_DE_SUBSTITUICOES_INCOERENTES = 120;
 
 function dadosDe(entrada: (typeof ENTRADAS)[number]): DadosDoBanco {
   const { total: _fora, ...resto } = entrada['dados-calculo'] ?? {};

@@ -53,13 +53,13 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'A reta que passa por A(#, #) e B(#, #) tem equação y = mx + n. Qual é o valor de n?',
       'n = y_1 - m x_1',
-      'n = # - \\frac{# - #}{# - #} \\cdot #',
+      'n = #2 - \\frac{#4 - #2}{#3 - #1} \\cdot #1',
       (v) => v[1]! - ((v[3]! - v[1]!) / (v[2]! - v[0]!)) * v[0]!,
     ],
     [
       'Qual é a distância do ponto P(#, #) à reta #x + #y + # = #? (duas casas decimais)',
       'd = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}',
-      'd = \\frac{|# \\cdot # + # \\cdot # + #|}{\\sqrt{#^2 + #^2}}',
+      'd = \\frac{|#3 \\cdot #1 + #4 \\cdot #2 + #5|}{\\sqrt{#3^2 + #4^2}}',
       (v) => Math.abs(v[2]! * v[0]! + v[3]! * v[1]! + v[4]!) / Math.hypot(v[2]!, v[3]!),
       2,
     ],
@@ -97,7 +97,7 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Qual é a área do triângulo de vértices A(#, #), B(#, #) e C(#, #)? (duas casas decimais)',
       'A = \\frac{|x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)|}{2}',
-      'A = \\frac{|#(# - #) + #(# - #) + #(# - #)|}{2}',
+      'A = \\frac{|#1(#4 - #6) + #3(#6 - #2) + #5(#2 - #4)|}{2}',
       (v) =>
         Math.abs(v[0]! * (v[3]! - v[5]!) + v[2]! * (v[5]! - v[1]!) + v[4]! * (v[1]! - v[3]!)) / 2,
       2,
@@ -105,7 +105,7 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Qual é a distância do ponto P(#, #) à reta que passa por A(#, #) e B(#, #)? (duas casas decimais)',
       'd = \\frac{|(y_2-y_1)x_0 - (x_2-x_1)y_0 + x_2y_1 - y_2x_1|}{\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}}',
-      'd = \\frac{|(# - #) \\cdot # - (# - #) \\cdot # + # \\cdot # - # \\cdot #|}{\\sqrt{(# - #)^2 + (# - #)^2}}',
+      'd = \\frac{|(#6 - #4) \\cdot #1 - (#5 - #3) \\cdot #2 + #5 \\cdot #4 - #6 \\cdot #3|}{\\sqrt{(#5 - #3)^2 + (#6 - #4)^2}}',
       (v) => {
         const numerador = Math.abs(
           (v[5]! - v[3]!) * v[0]! - (v[4]! - v[2]!) * v[1]! + v[4]! * v[3]! - v[5]! * v[2]!,
@@ -221,7 +221,7 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Qual é o comprimento da corda comum às circunferências x² + y² = # e (x − #)² + y² = #? (duas casas decimais)',
       'L = 2\\sqrt{r_1^2 - x^2},\\ x = \\frac{r_1^2 - r_2^2 + d^2}{2d}',
-      'L = 2\\sqrt{# - \\left(\\frac{# - # + #^2}{2 \\cdot #}\\right)^2}',
+      'L = 2\\sqrt{#1 - \\left(\\frac{#1 - #3 + #2^2}{2 \\cdot #2}\\right)^2}',
       (v) => {
         const x = (v[0]! - v[2]! + v[1]! ** 2) / (2 * v[1]!);
         return 2 * Math.sqrt(v[0]! - x * x);
@@ -266,7 +266,7 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Uma elipse tem semieixo maior # e semieixo menor #. Qual é a sua excentricidade?',
       'e = \\frac{\\sqrt{a^2 - b^2}}{a}',
-      'e = \\frac{\\sqrt{#^2 - #^2}}{#}',
+      'e = \\frac{\\sqrt{#1^2 - #2^2}}{#1}',
       (v) => Math.sqrt(v[0]! ** 2 - v[1]! ** 2) / v[0]!,
     ],
     [
@@ -306,7 +306,7 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Uma hipérbole equilátera tem semieixo real #. Qual é a excentricidade dela? (duas casas decimais)',
       'e = \\sqrt{2}',
-      'e = \\frac{\\sqrt{#^2 + #^2}}{#}',
+      'e = \\frac{\\sqrt{#1^2 + #1^2}}{#1}',
       (v) => Math.sqrt(v[0]! ** 2 + v[0]! ** 2) / v[0]!,
       2,
     ],
@@ -384,14 +384,14 @@ export const REGRAS_GEOMETRIA_ANALITICA: Readonly<Record<string, readonly Regra[
     [
       'Qual é a distância entre os pontos polares (#, #°) e (#, #°)? (duas casas decimais)',
       'd = \\sqrt{r_1^2 + r_2^2 - 2r_1r_2\\cos(\\theta_2-\\theta_1)}',
-      'd = \\sqrt{#^2 + #^2 - 2 \\cdot # \\cdot # \\cos(# - #)^\\circ}',
+      'd = \\sqrt{#1^2 + #3^2 - 2 \\cdot #1 \\cdot #3 \\cos(#4 - #2)^\\circ}',
       (v) => Math.sqrt(v[0]! ** 2 + v[2]! ** 2 - 2 * v[0]! * v[2]! * Math.cos(rad(v[3]! - v[1]!))),
       2,
     ],
     [
       'Qual é a distância entre os pontos de coordenadas polares (#, #°) e (#, #°)? (duas casas decimais)',
       'd = \\sqrt{r_1^2 + r_2^2 - 2r_1r_2\\cos(\\theta_2-\\theta_1)}',
-      'd = \\sqrt{#^2 + #^2 - 2 \\cdot # \\cdot # \\cos(# - #)^\\circ}',
+      'd = \\sqrt{#1^2 + #3^2 - 2 \\cdot #1 \\cdot #3 \\cos(#4 - #2)^\\circ}',
       (v) => Math.sqrt(v[0]! ** 2 + v[2]! ** 2 - 2 * v[0]! * v[2]! * Math.cos(rad(v[3]! - v[1]!))),
       2,
     ],

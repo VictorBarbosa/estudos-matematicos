@@ -33,7 +33,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Somando os vetores (#, #) e (#, #), qual é a componente x do resultado?',
       '(a_x + b_x,\\ a_y + b_y)',
-      'x = # + #',
+      'x = #1 + #3',
       (v) => v[0]! + v[2]!,
     ],
     [
@@ -192,13 +192,13 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o produto escalar dos vetores (#, #, #) e (#, #, #)?',
       '\\vec{a}\\cdot\\vec{b} = a_xb_x + a_yb_y + a_zb_z',
-      '# \\cdot # + # \\cdot # + # \\cdot #',
+      '#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6',
       (v) => v[0]! * v[3]! + v[1]! * v[4]! + v[2]! * v[5]!,
     ],
     [
       'Calcule o produto escalar entre o deslocamento (#, #, #) e a força (#, #, #).',
       '\\vec{a}\\cdot\\vec{b} = a_xb_x + a_yb_y + a_zb_z',
-      '# \\cdot # + # \\cdot # + # \\cdot #',
+      '#1 \\cdot #4 + #2 \\cdot #5 + #3 \\cdot #6',
       (v) => v[0]! * v[3]! + v[1]! * v[4]! + v[2]! * v[5]!,
     ],
     [
@@ -217,13 +217,13 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a componente z do produto vetorial a × b, com a = (#, #, #) e b = (#, #, #)?',
       '(a\\times b)_z = a_xb_y - a_yb_x',
-      '# \\cdot # - # \\cdot #',
+      '#1 \\cdot #5 - #2 \\cdot #4',
       (v) => v[0]! * v[4]! - v[1]! * v[3]!,
     ],
     [
       'Qual é a componente y do produto vetorial a × b, com a = (#, #, #) e b = (#, #, #)?',
       '(a\\times b)_y = a_zb_x - a_xb_z',
-      '# \\cdot # - # \\cdot #',
+      '#3 \\cdot #4 - #1 \\cdot #6',
       (v) => v[2]! * v[3]! - v[0]! * v[5]!,
     ],
     [
@@ -261,7 +261,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a distância entre os pontos (#, #, #) e (#, #, #)? (duas casas decimais)',
       'd = \\sqrt{\\Delta x^2 + \\Delta y^2 + \\Delta z^2}',
-      'd = \\sqrt{(# - #)^2 + (# - #)^2 + (# - #)^2}',
+      'd = \\sqrt{(#4 - #1)^2 + (#5 - #2)^2 + (#6 - #3)^2}',
       (v) => Math.hypot(v[3]! - v[0]!, v[4]! - v[1]!, v[5]! - v[2]!),
       2,
     ],
@@ -278,13 +278,13 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um plano passa pelo ponto (#, #, #) e tem vetor normal (#, #, #). Escrito na forma ax mais by mais cz igual a d, quanto vale d?',
       'd = ax_0 + by_0 + cz_0',
-      'd = # \\cdot # + # \\cdot # + # \\cdot #',
+      'd = #4 \\cdot #1 + #5 \\cdot #2 + #6 \\cdot #3',
       (v) => v[3]! * v[0]! + v[4]! * v[1]! + v[5]! * v[2]!,
     ],
     [
       'O plano passa por P(#, #, #) e tem vetor normal n = (#, #, #). Escrito como ax + by + cz = d, quanto vale d?',
       'd = ax_0 + by_0 + cz_0',
-      'd = # \\cdot # + # \\cdot # + # \\cdot #',
+      'd = #4 \\cdot #1 + #5 \\cdot #2 + #6 \\cdot #3',
       (v) => v[3]! * v[0]! + v[4]! * v[1]! + v[5]! * v[2]!,
     ],
     [
