@@ -99,6 +99,10 @@
     "fr": "# L = # dm³, et # m³ contient #³ dm³.",
     "en": "# L = # dm³, and # m³ holds #³ dm³."
   },
+  "# cm² = #⁻⁴ m²: o centímetro vai ao QUADRADO na conversão.": {
+    "fr": "# cm² = #⁻⁴ m² : le centimètre est AU CARRÉ dans la conversion.",
+    "en": "# cm² = #⁻⁴ m²: the centimetre is SQUARED in the conversion."
+  },
   "# dividido por # dá # com resto #. As duas formas valem como resposta: #/# ou # #/#.": {
     "fr": "# divisé par # donne # avec un reste de #. Les deux écritures valent comme réponse : #/# ou # #/#.",
     "en": "# divided by # gives # with remainder #. Both forms count as the answer: #/# or # #/#."
@@ -143,6 +147,10 @@
     "fr": "# m est la distance parcourue, et non la distance de B à la tour. Il faut monter les deux équations.",
     "en": "# m is how far you walked, not the distance from B to the tower. You have to set up both equations."
   },
+  "# mm = #⁻³ m (não #⁻²).": {
+    "fr": "# mm = #⁻³ m (et non #⁻²).",
+    "en": "# mm = #⁻³ m (not #⁻²)."
+  },
   "# não é potência exata de #. Tire o ln dos dois lados: x·ln # = ln #.": {
     "fr": "# n’est pas une puissance exacte de #. Prenez le ln des deux côtés : x·ln # = ln #.",
     "en": "# is not an exact power of #. Take ln on both sides: x·ln # = ln #."
@@ -186,6 +194,10 @@
   "# é o número de lados. A pergunta é quantas diagonais: n(n − #)/#.": {
     "fr": "# est le nombre de côtés. La question porte sur le nombre de diagonales : n(n − #)/#.",
     "en": "# is the number of sides. The question asks how many diagonals: n(n − #)/#."
+  },
+  "# é o valor de f(#), ou seja, onde a reta corta o eixo VERTICAL. A raiz é onde ela corta o eixo horizontal — são pontos diferentes.": {
+    "fr": "# est la valeur de f(#), c’est-à-dire l’endroit où la droite coupe l’axe VERTICAL. La racine est là où elle coupe l’axe horizontal — ce sont des points différents.",
+    "en": "# is the value of f(#), that is, where the line crosses the VERTICAL axis. The root is where it crosses the horizontal axis — they are different points."
   },
   "# é p, o que multiplica x (#x² = (#x)²). O pedido é q.": {
     "fr": "# est p, ce qui multiplie x (#x² = (#x)²). Ce qui est demandé, c’est q.",
@@ -2147,6 +2159,14 @@
     "fr": "L’ordre des lettres donne la correspondance : E correspond à B et F à C. Alors EF correspond à quel côté de ABC ?",
     "en": "The order of the letters gives the matching: E matches B and F matches C. So EF matches which side of ABC?"
   },
+  "A ordem das operações foi trocada: primeiro multiplica-se a por x, e só depois soma-se b.": {
+    "fr": "L’ordre des opérations a été inversé : on multiplie d’abord a par x, et seulement ensuite on ajoute b.",
+    "en": "The order of operations was swapped: first multiply a by x, and only then add b."
+  },
+  "A ordem das operações foi trocada: primeiro multiplica-se a taxa pelo número de unidades, e só depois soma-se o valor inicial.": {
+    "fr": "L’ordre des opérations a été inversé : on multiplie d’abord le taux par le nombre d’unités, et seulement ensuite on ajoute la valeur initiale.",
+    "en": "The order of operations was swapped: first multiply the rate by the number of units, and only then add the initial value."
+  },
   "A ordem está trocada: o enunciado pede a direita MENOS a esquerda, e inverter troca o sinal do salto.": {
     "fr": "L’ordre est inversé : l’énoncé demande la droite MOINS la gauche, et inverser change le signe du saut.",
     "en": "The order is reversed: the statement asks for the right MINUS the left, and swapping flips the sign of the jump."
@@ -2170,6 +2190,10 @@
   "A ordem importa: trocar duas escolhas de lugar produz um arranjo diferente.": {
     "fr": "L’ordre compte : échanger deux choix produit un arrangement différent.",
     "en": "Order matters: swapping two choices produces a different arrangement."
+  },
+  "A ordem é V_B − V_A (final menos inicial); invertida, o sinal troca.": {
+    "fr": "L’ordre est V_B − V_A (final moins initial) ; inversé, le signe change.",
+    "en": "The order is V_B − V_A (final minus initial); reversed, the sign flips."
   },
   "A ordem é: parênteses, depois potências, depois multiplicação e divisão, e por fim adição e subtração.": {
     "fr": "L’ordre est : parenthèses, puis puissances, puis multiplication et division, et enfin addition et soustraction.",
@@ -4227,6 +4251,10 @@
     "fr": "Les racines sont les valeurs propres.",
     "en": "The roots are the eigenvalues."
   },
+  "As regras dos capacitores são o espelho das dos resistores: em PARALELO se somam; em SÉRIE, somam-se os inversos.": {
+    "fr": "Les règles des condensateurs sont le miroir de celles des résistances : en PARALLÈLE elles s’additionnent ; en SÉRIE, ce sont les inverses qui s’additionnent.",
+    "en": "The rules for capacitors mirror those for resistors: in PARALLEL they add; in SERIES, the reciprocals add."
+  },
   "As relações de Girard ligam as raízes aos coeficientes.": {
     "fr": "Les relations de Viète lient les racines aux coefficients.",
     "en": "Vieta’s formulas link the roots to the coefficients."
@@ -4450,6 +4478,10 @@
   "Buscamos o z que deixa essa área à esquerda.": {
     "fr": "Nous cherchons le z qui laisse cette aire à gauche.",
     "en": "We seek the z that leaves this area to the left."
+  },
+  "C = Q/V, então Q = C·V — multiplica, não divide.": {
+    "fr": "C = Q/V, donc Q = C·V — on multiplie, on ne divise pas.",
+    "en": "C = Q/V, so Q = C·V — you multiply, you do not divide."
   },
   "C = ε₀·A/d com A em m² (# cm² = #×#⁻⁴ m²) e d em m (# mm = #×#⁻³ m). Depois passe para pF (×#¹²).": {
     "fr": "C = ε₀·A/d avec A en m² (# cm² = #×#⁻⁴ m²) et d en m (# mm = #×#⁻³ m). Passez ensuite en pF (×#¹²).",
@@ -4838,6 +4870,10 @@
   "Calculamos a contribuição da coluna.": {
     "fr": "Nous calculons la contribution de la colonne.",
     "en": "We calculate the column's contribution."
+  },
+  "Calculamos a diferença entre dois valores consecutivos.": {
+    "fr": "Nous calculons la différence entre deux valeurs consécutives.",
+    "en": "We compute the difference between two consecutive values."
   },
   "Calculamos a distância do ponto ao centro.": {
     "fr": "Nous calculons la distance du point au centre.",
@@ -5783,6 +5819,10 @@
     "fr": "Nous comparons à la forme standard : le nombre qui multiplie y vaut #p.",
     "en": "We compare with the standard form: the number multiplying y is #p."
   },
+  "Comparamos dois totais consecutivos.": {
+    "fr": "Nous comparons deux totaux consécutifs.",
+    "en": "We compare two consecutive totals."
+  },
   "Comparando as duas órbitas.": {
     "fr": "En comparant les deux orbites.",
     "en": "Comparing the two orbits."
@@ -6142,6 +6182,10 @@
   "C·V é a carga FINAL, que só se atinge depois de vários τ.": {
     "fr": "C·V est la charge FINALE, qui n’est atteinte qu’au bout de plusieurs τ.",
     "en": "C·V is the FINAL charge, reached only after several τ."
+  },
+  "C₁ e o bloco C₂∥C₃ estão em SÉRIE: somam-se os inversos, não os valores.": {
+    "fr": "C₁ et le bloc C₂∥C₃ sont en SÉRIE : ce sont les inverses qui s’additionnent, pas les valeurs.",
+    "en": "C₁ and the block C₂∥C₃ are in SERIES: the reciprocals add, not the values."
   },
   "Da igualdade das áreas sai a altura.": {
     "fr": "De l’égalité des aires sort la hauteur.",
@@ -7335,6 +7379,10 @@
     "fr": "Et la projection sort de la relation de la cathète.",
     "en": "And the projection comes from the leg relation."
   },
+  "E a soma.": {
+    "fr": "Puis l’addition.",
+    "en": "And then the addition."
+  },
   "E agora derivamos esse resultado em y.": {
     "fr": "Et nous dérivons maintenant ce résultat en y.",
     "en": "And now we differentiate that result in y."
@@ -7490,6 +7538,10 @@
   "E é o sinal dele que decide o comportamento do sistema.": {
     "fr": "Et c’est son signe qui décide du comportement du système.",
     "en": "And it is its sign that decides the behaviour of the system."
+  },
+  "Efetuamos o produto.": {
+    "fr": "Nous effectuons le produit.",
+    "en": "We carry out the multiplication."
   },
   "Efetuamos os produtos e somamos.": {
     "fr": "Nous effectuons les produits et additionnons.",
@@ -7971,6 +8023,10 @@
     "fr": "Dans Na₂S, le n.o. vaut +#.",
     "en": "In Na₂S, the oxidation number is +#."
   },
+  "Em PARALELO os capacitores se somam: C₂₃ = C₂ + C₃.": {
+    "fr": "En PARALLÈLE les condensateurs s’additionnent : C₂₃ = C₂ + C₃.",
+    "en": "In PARALLEL the capacitors add: C₂₃ = C₂ + C₃."
+  },
   "Em PbCl₄, o nox é +#.": {
     "fr": "Dans PbCl₄, le n.o. vaut +#.",
     "en": "In PbCl₄, the oxidation number is +#."
@@ -8163,6 +8219,10 @@
     "fr": "En parallèle le courant gagne des chemins : on additionne les INVERSES.",
     "en": "In parallel the current gains paths: the RECIPROCALS add up."
   },
+  "Em paralelo as capacitâncias se somam: # + # + #.": {
+    "fr": "En parallèle les capacités s’additionnent : # + # + #.",
+    "en": "In parallel the capacitances add: # + # + #."
+  },
   "Em paralelo as capacitâncias se somam: # + #.": {
     "fr": "En parallèle les capacités s’additionnent : # + #.",
     "en": "In parallel the capacitances add up: # + #."
@@ -8218,6 +8278,10 @@
   "Em série com R₁, as resistências se somam.": {
     "fr": "En série avec R₁, les résistances s’additionnent.",
     "en": "In series with R₁, the resistances add up."
+  },
+  "Em série: #/C = #/# + #/# + #/#. Depois inverta. O resultado é menor que #.": {
+    "fr": "En série : #/C = #/# + #/# + #/#. Puis inversez. Le résultat est inférieur à #.",
+    "en": "In series: #/C = #/# + #/# + #/#. Then invert. The result is less than #."
   },
   "Em série: #/C = #/# + #/#. Depois inverta. O resultado é menor que #.": {
     "fr": "En série : #/C = #/# + #/#. Puis inversez. Le résultat est plus petit que #.",
@@ -9647,6 +9711,10 @@
     "fr": "C’est le coefficient D de l’équation générale. Le centre vaut −D/# : il reste à diviser par deux et à changer le signe.",
     "en": "That is the coefficient D of the general equation. The centre is −D/#: dividing by two and flipping the sign is still missing."
   },
+  "Esse é o coeficiente b, o valor inicial. A taxa de variação é o coeficiente que multiplica o x.": {
+    "fr": "C’est le coefficient b, la valeur initiale. Le taux de variation est le coefficient qui multiplie x.",
+    "en": "That is the coefficient b, the initial value. The rate of change is the coefficient multiplying x."
+  },
   "Esse é o coeficiente de CORRELAÇÃO. A fração explicada é o quadrado dele — e é por isso que uma correlação de # explica menos da metade da variação.": {
     "fr": "C’est le coefficient de CORRÉLATION. La fraction expliquée en est le carré — et c’est pourquoi une corrélation de # explique moins de la moitié de la variation.",
     "en": "That is the CORRELATION coefficient. The explained fraction is its square — which is why a correlation of # explains less than half the variation."
@@ -10126,6 +10194,18 @@
   "Esse é o valor exato. Runge-Kutta chega muito perto dele, mas não é igual — o erro existe, só é pequeno.": {
     "fr": "C’est la valeur exacte. Runge-Kutta s’en approche beaucoup, mais ne l’égale pas — l’erreur existe, elle est seulement petite.",
     "en": "That is the exact value. Runge-Kutta gets very close to it, but is not equal — the error is there, it is just small."
+  },
+  "Esse é o valor fixo, que não muda com o número de unidades. A pergunta é quanto o total cresce a cada unidade a mais.": {
+    "fr": "C’est la valeur fixe, qui ne change pas avec le nombre d’unités. La question est de combien le total augmente à chaque unité supplémentaire.",
+    "en": "That is the fixed value, which does not change with the number of units. The question is how much the total grows with each extra unit."
+  },
+  "Esse é o valor inicial, não o ponto em que o total zera. A pergunta é onde a função chega a zero.": {
+    "fr": "C’est la valeur initiale, pas le point où le total s’annule. La question porte sur l’endroit où la fonction atteint zéro.",
+    "en": "That is the initial value, not the point where the total vanishes. The question asks where the function reaches zero."
+  },
+  "Esse é o valor inicial, o que existe antes de qualquer unidade. A pergunta pede o total, que já inclui a taxa.": {
+    "fr": "C’est la valeur initiale, celle qui existe avant toute unité. La question demande le total, qui inclut déjà le taux.",
+    "en": "That is the initial value, what exists before any unit. The question asks for the total, which already includes the rate."
   },
   "Esse é o valor inicial. O sistema evolui a partir dele, e em t positivo já se moveu.": {
     "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
@@ -10903,9 +10983,25 @@
     "fr": "Il manque le signe négatif de la formule du sommet. Elle vaut moins b sur deux a.",
     "en": "The minus sign of the vertex formula is missing. It is minus b over two a."
   },
+  "Faltou o sinal negativo. Ao isolar, o termo b passa para o outro lado da igualdade trocando de sinal: x = −b/a.": {
+    "fr": "Il manque le signe négatif. En isolant, le terme b passe de l’autre côté de l’égalité en changeant de signe : x = −b/a.",
+    "en": "The minus sign is missing. When isolating, the term b moves to the other side of the equality changing sign: x = −b/a."
+  },
+  "Faltou o sinal: ao isolar, o valor inicial passa para o outro lado trocando de sinal, então a conta é −b dividido por a.": {
+    "fr": "Il manque le signe : en isolant, la valeur initiale passe de l’autre côté en changeant de signe, le calcul est donc −b divisé par a.",
+    "en": "The sign is missing: when isolating, the initial value moves to the other side changing sign, so the computation is −b divided by a."
+  },
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
     "en": "The third is missing: a solid tapering to a vertex has #/# of the volume of the prism or cylinder with the same base and height."
+  },
+  "Faltou o ½ da energia: U = ½CV².": {
+    "fr": "Il manque le ½ de l’énergie : U = ½CV².",
+    "en": "The ½ of the energy is missing: U = ½CV²."
+  },
+  "Faltou o ½: U = ½CV².": {
+    "fr": "Il manque le ½ : U = ½CV².",
+    "en": "The ½ is missing: U = ½CV²."
   },
   "Faltou o ½: base vezes altura dá um paralelogramo, o triângulo é a metade.": {
     "fr": "Il manque le ½ : base fois hauteur donne un parallélogramme, le triangle en est la moitié.",
@@ -11802,6 +11898,10 @@
   "Isso vem da regra do quociente de potências, não de convenção.": {
     "fr": "Cela vient de la règle du quotient de puissances, pas d’une convention.",
     "en": "That comes from the quotient rule for powers, not from a convention."
+  },
+  "Isso é a ENERGIA (½CV²). A carga é só C·V.": {
+    "fr": "C’est l’ÉNERGIE (½CV²). La charge vaut simplement C·V.",
+    "en": "That is the ENERGY (½CV²). The charge is just C·V."
   },
   "Isso é a capacidade térmica do corpo, em joules por kelvin. Falta multiplicar pela variação de temperatura pedida.": {
     "fr": "C’est la capacité thermique du corps, en joules par kelvin. Il reste à multiplier par la variation de température demandée.",
@@ -15399,6 +15499,14 @@
     "fr": "Le potentiel décroît en r (pas en r²) et porte le signe de la charge : c’est un scalaire.",
     "en": "The potential falls with r (not r²) and carries the charge’s sign: it is a scalar."
   },
+  "O potencial cai com r, não com r² — r² é do campo e da força.": {
+    "fr": "Le potentiel décroît en r, pas en r² — le r² concerne le champ et la force.",
+    "en": "The potential falls off as r, not as r² — the r² belongs to the field and the force."
+  },
+  "O potencial carrega o sinal da carga: carga negativa, potencial negativo.": {
+    "fr": "Le potentiel porte le signe de la charge : charge négative, potentiel négatif.",
+    "en": "The potential carries the sign of the charge: negative charge, negative potential."
+  },
   "O potencial é escalar: cada carga contribui com kq/r, com o seu sinal.": {
     "fr": "Le potentiel est scalaire : chaque charge contribue par kq/r, avec son signe.",
     "en": "The potential is a scalar: each charge contributes kq/r, with its own sign."
@@ -15606,6 +15714,10 @@
   "O reservatório PERDE água: a taxa entra com sinal negativo. Esvaziar é chegar a zero.": {
     "fr": "Le réservoir PERD de l’eau : le taux entre avec un signe négatif. Se vider, c’est arriver à zéro.",
     "en": "The tank LOSES water: the rate comes in with a negative sign. Emptying means reaching zero."
+  },
+  "O reservatório PERDE água: a taxa entra com sinal negativo. Esvaziar é chegar a zero. São # unidades: multiplique # pela taxa e depois some o valor fixo.": {
+    "fr": "Le réservoir PERD de l’eau : le taux entre avec un signe négatif. Se vider, c’est atteindre zéro. Il y a # unités : multipliez # par le taux puis ajoutez la valeur fixe.",
+    "en": "The tank LOSES water: the rate enters with a negative sign. Emptying means reaching zero. There are # units: multiply # by the rate and then add the fixed value."
   },
   "O resto de Lagrange tem a forma do termo seguinte, com a derivada num ponto intermediário.": {
     "fr": "Le reste de Lagrange a la forme du terme suivant, avec la dérivée en un point intermédiaire.",
@@ -15826,6 +15938,10 @@
   "O sinal de a ficou trocado. Dividir por (x − a) pede P(a): o valor que ANULA o binômio, não o que aparece escrito nele.": {
     "fr": "Le signe de a est inversé. Diviser par (x − a) demande P(a) : la valeur qui ANNULE le binôme, pas celle qui y est écrite.",
     "en": "The sign of a is flipped. Dividing by (x − a) calls for P(a): the value that makes the binomial VANISH, not the one written in it."
+  },
+  "O sinal de cada carga entra na soma: potencial de carga negativa é negativo.": {
+    "fr": "Le signe de chaque charge entre dans la somme : le potentiel d’une charge négative est négatif.",
+    "en": "The sign of each charge enters the sum: the potential of a negative charge is negative."
   },
   "O sinal de cada fator em cada pedaço da reta (à direita do zero, o sinal do coeficiente de x).": {
     "fr": "Le signe de chaque facteur sur chaque morceau de la droite (à droite du zéro, le signe du coefficient de x).",
@@ -16335,9 +16451,17 @@
     "fr": "Le moment de force utilise le SINUS. Le cosinus apparaît dans le travail, qui mesure un déplacement aligné, pas une rotation.",
     "en": "Torque uses SINE. Cosine appears in work, which measures aligned displacement, not rotation."
   },
+  "O total chega a zero: igualamos a função a zero.": {
+    "fr": "Le total atteint zéro : nous égalons la fonction à zéro.",
+    "en": "The total reaches zero: we set the function equal to zero."
+  },
   "O total de faces.": {
     "fr": "Le total des faces.",
     "en": "The total number of faces."
+  },
+  "O total procurado é #: igualamos a função a esse valor.": {
+    "fr": "Le total cherché vaut # : nous égalons la fonction à cette valeur.",
+    "en": "The total sought is #: we set the function equal to that value."
   },
   "O trabalho de ida.": {
     "fr": "Le travail de l’aller.",
@@ -16434,6 +16558,14 @@
   "O valor inicial não é o destino. Ele define de onde a solução parte; para onde ela vai depende só dos coeficientes da equação.": {
     "fr": "La valeur initiale n’est pas la destination. Elle dit d’où part la solution ; où elle va ne dépend que des coefficients de l’équation.",
     "en": "The initial value is not the destination. It says where the solution starts; where it goes depends only on the coefficients of the equation."
+  },
+  "O valor inicial se cancela e sobra o coeficiente de x.": {
+    "fr": "La valeur initiale se simplifie et il reste le coefficient de x.",
+    "en": "The initial value cancels and the coefficient of x remains."
+  },
+  "O valor inicial é # e a taxa é #: é a leitura de f(#) e de a.": {
+    "fr": "La valeur initiale vaut # et le taux vaut # : c’est la lecture de f(#) et de a.",
+    "en": "The initial value is # and the rate is #: that is reading off f(#) and a."
   },
   "O valor inicial é o que existe antes de qualquer unidade: é o coeficiente b.": {
     "fr": "La valeur initiale est ce qui existe avant toute unité : c’est le coefficient b.",
@@ -18071,6 +18203,10 @@
     "fr": "Position inversée : c’est l’entrée de la ligne #, colonne #.",
     "en": "Wrong position: that is the entry in row #, column #."
   },
+  "Potencial é kq/r — sem o quadrado da distância.": {
+    "fr": "Le potentiel vaut kq/r — sans le carré de la distance.",
+    "en": "The potential is kq/r — with no square on the distance."
+  },
   "Potência de potência multiplica os expoentes; depois igualamos.": {
     "fr": "Puissance de puissance multiplie les exposants ; ensuite nous égalons.",
     "en": "A power of a power multiplies the exponents; then we set them equal."
@@ -19455,6 +19591,10 @@
     "fr": "En substituant et en calculant.",
     "en": "Substituting and calculating."
   },
+  "Substituindo e expandindo.": {
+    "fr": "En remplaçant et en développant.",
+    "en": "Substituting and expanding."
+  },
   "Substituindo e invertendo o seno.": {
     "fr": "En substituant et en inversant le sinus.",
     "en": "Substituting and inverting the sine."
@@ -20471,6 +20611,10 @@
     "fr": "Remplacez x par # : d’abord # fois #, puis ajoutez (#).",
     "en": "Replace x by #: first # times #, then add (#)."
   },
+  "Troque x por #: primeiro # vezes (#), depois some #.": {
+    "fr": "Remplacez x par # : d’abord # fois (#), puis ajoutez #.",
+    "en": "Replace x with #: first # times (#), then add #."
+  },
   "Troque x por #: primeiro # vezes (#), depois some (#).": {
     "fr": "Remplacez x par # : d’abord # fois (#), puis ajoutez (#).",
     "en": "Replace x by #: first # times (#), then add (#)."
@@ -20510,6 +20654,10 @@
   "Tudo que não tem y some, e o que multiplica y permanece.": {
     "fr": "Tout ce qui n’a pas de y disparaît, et ce qui multiplie y reste.",
     "en": "Everything without a y vanishes, and what multiplies y stays."
+  },
+  "Tudo se cancela menos o coeficiente de x.": {
+    "fr": "Tout se simplifie sauf le coefficient de x.",
+    "en": "Everything cancels except the coefficient of x."
   },
   "Tudo se cancela, menos o fator #/a.": {
     "fr": "Tout se simplifie, sauf le facteur #/a.",
@@ -20807,6 +20955,14 @@
     "fr": "V = πr²h/#, donc h = #V / (π · #²). Le rayon passe au carré : #² = #.",
     "en": "V = πr²h/#, so h = #V / (π · #²). The radius goes squared: #² = #."
   },
+  "V vai AO QUADRADO: #² = #.": {
+    "fr": "V est AU CARRÉ : #² = #.",
+    "en": "V is SQUARED: #² = #."
+  },
+  "V vai ao quadrado na energia.": {
+    "fr": "V est au carré dans l’énergie.",
+    "en": "V is squared in the energy."
+  },
   "V' = k³·V — o volume escala com o CUBO da razão, e aqui k = #: o fator é #³.": {
     "fr": "V' = k³·V — le volume varie comme le CUBE du rapport, et ici k = # : le facteur vaut #³.",
     "en": "V' = k³·V — the volume scales with the CUBE of the ratio, and here k = #: the factor is #³."
@@ -20914,6 +21070,10 @@
   "Você calculou a variação da posição, Δs, mas esqueceu de dividir por Δt. Taxa é sempre uma divisão.": {
     "fr": "Vous avez calculé la variation de position, Δs, mais oublié de diviser par Δt. Un taux est toujours une division.",
     "en": "You computed the change in position, Δs, but forgot to divide by Δt. A rate is always a division."
+  },
+  "Você calculou f(#), que é o valor da função em x = #. A taxa é a DIFERENÇA entre dois valores consecutivos, não um valor isolado.": {
+    "fr": "Vous avez calculé f(#), la valeur de la fonction en x = #. Le taux est la DIFFÉRENCE entre deux valeurs consécutives, pas une valeur isolée.",
+    "en": "You computed f(#), which is the value of the function at x = #. The rate is the DIFFERENCE between two consecutive values, not a single value."
   },
   "Você considerou apenas a velocidade inicial, como se o movimento fosse uniforme. Falta a contribuição da aceleração — o triângulo do gráfico.": {
     "fr": "Vous n’avez tenu compte que de la vitesse initiale, comme si le mouvement était uniforme. Il manque la contribution de l’accélération — le triangle du graphe.",
@@ -21078,6 +21238,10 @@
   "Você somou a carga. Carga positiva é elétron que FALTA: ela entra subtraindo.": {
     "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
     "en": "You added the charge. A positive charge is a MISSING electron: it enters by subtraction."
+  },
+  "Você somou a taxa com o valor fixo. A taxa é só a parte que se repete a cada unidade — o valor fixo não entra nela.": {
+    "fr": "Vous avez additionné le taux et la valeur fixe. Le taux n’est que la part qui se répète à chaque unité — la valeur fixe n’y entre pas.",
+    "en": "You added the rate to the fixed value. The rate is only the part that repeats with each unit — the fixed value is not part of it."
   },
   "Você somou as diferenças. A distância é a HIPOTENUSA do triângulo formado por elas, e não a soma dos catetos — andar na diagonal é mais curto que andar pelos dois lados.": {
     "fr": "Vous avez additionné les différences. La distance est l’HYPOTÉNUSE du triangle qu’elles forment, et non la somme des côtés — marcher en diagonale est plus court que longer les deux côtés.",
@@ -21263,9 +21427,17 @@
     "fr": "W = q·(V_B − V_A) = #×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
     "en": "W = q·(V_B − V_A) = #×#⁻⁶ times (# − #). In joules; multiply by # for mJ."
   },
+  "W = q·(V_B − V_A) = #×#⁻⁶ vezes (# − (#)). Em joules; multiplique por # para mJ.": {
+    "fr": "W = q·(V_B − V_A) = #×#⁻⁶ fois (# − (#)). En joules ; multipliez par # pour des mJ.",
+    "en": "W = q·(V_B − V_A) = #×#⁻⁶ times (# − (#)). In joules; multiply by # for mJ."
+  },
   "W = q·(V_B − V_A) = (#)×#⁻⁶ vezes (# − #). Em joules; multiplique por # para mJ.": {
     "fr": "W = q·(V_B − V_A) = (#)×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
     "en": "W = q·(V_B − V_A) = (#)×#⁻⁶ times (# − #). In joules; multiply by # for mJ."
+  },
+  "W = q·(V_B − V_A) = (#)×#⁻⁶ vezes (# − (#)). Em joules; multiplique por # para mJ.": {
+    "fr": "W = q·(V_B − V_A) = (#)×#⁻⁶ fois (# − (#)). En joules ; multipliez par # pour des mJ.",
+    "en": "W = q·(V_B − V_A) = (#)×#⁻⁶ times (# − (#)). In joules; multiply by # for mJ."
   },
   "Zeramos o resto da coluna #: L₁ ← L₁ + #/#·L₂.": {
     "fr": "Nous annulons le reste de la colonne # : L₁ ← L₁ + #/#·L₂.",
@@ -22091,6 +22263,10 @@
     "fr": "C’est la DIFFÉRENCE #/R − #/(R + h), et non le seul terme du point final.",
     "en": "It is the DIFFERENCE #/R − #/(R + h), not just the term at the end point."
   },
+  "É a DIFERENÇA de potencial que conta, não a soma.": {
+    "fr": "C’est la DIFFÉRENCE de potentiel qui compte, pas la somme.",
+    "en": "It is the potential DIFFERENCE that counts, not the sum."
+  },
   "É a altura do retângulo que teria a MESMA área: numa reta, coincide com o valor no ponto médio do intervalo.": {
     "fr": "C’est la hauteur du rectangle qui aurait la MÊME aire : sur une droite, elle coïncide avec la valeur au milieu de l’intervalle.",
     "en": "It is the height of the rectangle with the SAME area: on a line, it coincides with the value at the midpoint of the interval."
@@ -22162,6 +22338,10 @@
   "É a taxa de variação ao andar só na direção de y.": {
     "fr": "C’est le taux de variation lorsqu’on se déplace uniquement dans la direction de y.",
     "en": "It is the rate of change when moving only in the y direction."
+  },
+  "É a área do triângulo no gráfico V × Q: a carga entra aos poucos, contra uma tensão que cresce.": {
+    "fr": "C’est l’aire du triangle sur le graphe V × Q : la charge entre peu à peu, contre une tension qui augmente.",
+    "en": "It is the area of the triangle on the V × Q graph: the charge comes in gradually, against a rising voltage."
   },
   "É ali que a reta deixa de descer e passa a subir.": {
     "fr": "C’est là que la droite cesse de descendre et se met à monter.",
