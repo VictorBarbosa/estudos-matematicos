@@ -767,6 +767,10 @@
     "fr": "La covariance somme les produits des écarts.",
     "en": "Covariance sums the products of deviations."
   },
+  "A curva de nível é f(x, y) = k: o k é o próprio valor de f no ponto (#, #).": {
+    "fr": "La courbe de niveau est f(x, y) = k : le k est justement la valeur de f au point (#, #).",
+    "en": "The level curve is f(x, y) = k: the k is precisely the value of f at the point (#, #)."
+  },
   "A densidade tem de estar em kg/m: # g/m = # kg/m. Sem converter, a velocidade sai cerca de # vezes menor.": {
     "fr": "La masse linéique doit être en kg/m : # g/m = # kg/m. Sans conversion, la vitesse sort environ # fois trop petite.",
     "en": "The linear density has to be in kg/m: # g/m = # kg/m. Without converting, the speed comes out about # times too small."
@@ -890,6 +894,10 @@
   "A diferença é a área procurada.": {
     "fr": "La différence est l’aire cherchée.",
     "en": "The difference is the area sought."
+  },
+  "A diferença é sempre positiva: subtrai-se a menor da maior.": {
+    "fr": "La différence est toujours positive : on soustrait la plus petite de la plus grande.",
+    "en": "The difference is always positive: the smaller is subtracted from the larger."
   },
   "A diferença, em módulo, é o erro cometido.": {
     "fr": "La différence, en valeur absolue, est l'erreur commise.",
@@ -2435,6 +2443,10 @@
     "fr": "La racine est en x = #, car toute base élevée à zéro donne #.",
     "en": "The root is at x = #, because any base raised to zero gives #."
   },
+  "A raiz exige o de dentro maior ou igual a zero. Com y = #, isole x² e tire a raiz.": {
+    "fr": "La racine exige que ce qui est dessous soit supérieur ou égal à zéro. Avec y = #, isolez x² et prenez la racine.",
+    "en": "The root requires what is inside to be greater than or equal to zero. With y = #, isolate x² and take the root."
+  },
   "A raiz exige que o radicando não seja negativo.": {
     "fr": "La racine exige que le radicande ne soit pas négatif.",
     "en": "The root requires the radicand not be negative."
@@ -3203,6 +3215,10 @@
     "fr": "AB et DE sont des côtés correspondants (A↔D, B↔E) : ils ont la même mesure.",
     "en": "AB and DE are matching sides (A↔D, B↔E): they have the same measure."
   },
+  "Abaixo de #, a ligação se trata como covalente apolar.": {
+    "fr": "En dessous de #, la liaison est traitée comme covalente apolaire.",
+    "en": "Below #, the bond is treated as non-polar covalent."
+  },
   "Aberto nas duas pontas: fₙ = n·v/(#L), como na corda.": {
     "fr": "Ouvert aux deux extrémités : fₙ = n·v/(#L), comme sur la corde.",
     "en": "Open at both ends: fₙ = n·v/(#L), as on the string."
@@ -3214,6 +3230,10 @@
   "Aceleração é variação de velocidade por tempo.": {
     "fr": "L'accélération est la variation de vitesse par temps.",
     "en": "Acceleration is the change of velocity per time."
+  },
+  "Ache a carga de cada um e cruze: o índice de cada elemento é a carga do outro. Depois reduza — Mg²⁺ com O²⁻ dá MgO, não Mg#O#.": {
+    "fr": "Trouvez la charge de chacun et croisez : l’indice de chaque élément est la charge de l’autre. Réduisez ensuite — Mg²⁺ avec O²⁻ donne MgO, pas Mg#O#.",
+    "en": "Find each one’s charge and cross them: each element’s subscript is the other’s charge. Then reduce — Mg²⁺ with O²⁻ gives MgO, not Mg#O#."
   },
   "Ache a função cujo gradiente é o campo, e subtraia os valores dela nas pontas.": {
     "fr": "Trouvez la fonction dont le gradient est le champ, et soustrayez ses valeurs aux extrémités.",
@@ -3266,6 +3286,10 @@
   "Ache p′ por #/p′ = #/f − #/p; depois h′ = −(p′/p)·h.": {
     "fr": "Trouvez p′ par #/p′ = #/f − #/p ; puis h′ = −(p′/p)·h.",
     "en": "Find p′ from #/p′ = #/f − #/p; then h′ = −(p′/p)·h."
+  },
+  "Acima de #, a ligação se trata como iônica.": {
+    "fr": "Au-dessus de #, la liaison est traitée comme ionique.",
+    "en": "Above #, the bond is treated as ionic."
   },
   "Acima de #: o comportamento é essencialmente linear.": {
     "fr": "Au-dessus de # : le comportement est essentiellement linéaire.",
@@ -3647,6 +3671,14 @@
     "fr": "Les constantes comme #π sont adimensionnelles et n’entrent pas dans le calcul.",
     "en": "Constants such as #π are dimensionless and do not enter the computation."
   },
+  "As coordenadas do ponto entraram trocadas.": {
+    "fr": "Les coordonnées du point ont été inversées.",
+    "en": "The coordinates of the point were swapped."
+  },
+  "As coordenadas entraram trocadas. A ordem importa: o primeiro número é x, o segundo é y, e a função não é simétrica nelas.": {
+    "fr": "Les coordonnées ont été inversées. L’ordre compte : le premier nombre est x, le second est y, et la fonction n’est pas symétrique en elles.",
+    "en": "The coordinates were swapped. The order matters: the first number is x, the second is y, and the function is not symmetric in them."
+  },
   "As derivadas de cada fator são os próprios coeficientes de x.": {
     "fr": "Les dérivées de chaque facteur sont les coefficients de x eux-mêmes.",
     "en": "The derivatives of each factor are the coefficients of x themselves."
@@ -3854,6 +3886,10 @@
   "Até aqui nada se decidiu: a integral de dentro é comum, e tem limites finitos.": {
     "fr": "Jusqu’ici rien n’est décidé : l’intégrale intérieure est ordinaire, et ses bornes sont finies.",
     "en": "Nothing is decided yet: the inner integral is ordinary, and its limits are finite."
+  },
+  "Até dois elétrons, o grupo é o próprio número; de três em diante soma-se #, porque os grupos # a # são o bloco d.": {
+    "fr": "Jusqu’à deux électrons, le groupe est ce nombre même ; à partir de trois on ajoute #, car les groupes # à # forment le bloc d.",
+    "en": "Up to two electrons the group is that very number; from three on you add #, because groups # to # are the d block."
   },
   "Avaliamos a função no ponto de máximo.": {
     "fr": "Nous évaluons la fonction au point de maximum.",
@@ -4131,6 +4167,10 @@
     "fr": "Chaque élément a gardé son propre nombre comme indice. C’est l’inverse : l’indice de l’un est la charge de l’AUTRE — c’est ce qui rend le composé neutre.",
     "en": "Each element kept its own number as its subscript. It is the other way round: one’s subscript is the OTHER’s charge — that is what makes the compound neutral."
   },
+  "Cada elemento ficou com o próprio número como índice. É o contrário: o índice de um é a carga do OUTRO, e é isso que faz o composto sair neutro.": {
+    "fr": "Chaque élément a gardé son propre nombre comme indice. C’est l’inverse : l’indice de l’un est la charge de l’AUTRE, et c’est ce qui rend le composé neutre.",
+    "en": "Each element kept its own number as its subscript. It is the other way round: one’s subscript is the OTHER’s charge, and that is what makes the compound neutral."
+  },
   "Cada entrada do produto é a linha de A vezes a coluna de B, termo a termo.": {
     "fr": "Chaque entrée du produit est la ligne de A fois la colonne de B, terme à terme.",
     "en": "Each entry of the product is the row of A times the column of B, term by term."
@@ -4259,6 +4299,10 @@
     "fr": "Chaque part vaut la valeur divisée par cette somme.",
     "en": "Each share is the value divided by that sum."
   },
+  "Cada ponto do plano produz uma altura, e o conjunto delas é a superfície.": {
+    "fr": "Chaque point du plan produit une hauteur, et leur ensemble forme la surface.",
+    "en": "Each point of the plane produces a height, and the set of them is the surface."
+  },
   "Cada potência é a base repetida; juntando os dois grupos, continuamos multiplicando a mesma base.": {
     "fr": "Chaque puissance est la base répétée ; en joignant les deux groupes, nous continuons à multiplier la même base.",
     "en": "Each power is the base repeated; combining the two groups, we continue multiplying the same base."
@@ -4322,6 +4366,10 @@
   "Cada triângulo tem base igual ao lado e altura igual ao apótema.": {
     "fr": "Chaque triangle a une base égale au côté et une hauteur égale à l'apothème.",
     "en": "Each triangle has a base equal to the side and a height equal to the apothem."
+  },
+  "Cada um chega à configuração do gás nobre mais próximo.": {
+    "fr": "Chacun atteint la configuration du gaz noble le plus proche.",
+    "en": "Each one reaches the configuration of the nearest noble gas."
   },
   "Cada um deles aparece agora no x que faz o argumento valer o mesmo de antes.": {
     "fr": "Chacun d’eux apparaît maintenant au x qui fait valoir à l’argument la même chose qu’avant.",
@@ -4474,6 +4522,10 @@
   "Calculando cada fator.": {
     "fr": "En calculant chaque facteur.",
     "en": "Working out each factor."
+  },
+  "Calculando essa altura.": {
+    "fr": "En calculant cette hauteur.",
+    "en": "Computing that height."
   },
   "Calculando o produto escalar e o módulo da velocidade.": {
     "fr": "En calculant le produit scalaire et le module de la vitesse.",
@@ -4959,6 +5011,10 @@
     "fr": "L’angle au centre étant connu, il suffit de diviser par deux.",
     "en": "With the central angle known, it is enough to divide by two."
   },
+  "Com o coeficiente positivo, é um mínimo do corte.": {
+    "fr": "Avec le coefficient positif, c’est un minimum de la coupe.",
+    "en": "With a positive coefficient, it is a minimum of the cut."
+  },
   "Com o expoente a partir de #, o termo em épsilon cresce sem parar.": {
     "fr": "Avec l’exposant à partir de #, le terme en epsilon croît sans fin.",
     "en": "With the exponent from # on, the epsilon term grows without end."
@@ -5030,6 +5086,10 @@
   "Com passo #, o erro é este.": {
     "fr": "Avec un pas de #, l’erreur vaut ceci.",
     "en": "With step #, the error is this."
+  },
+  "Com poucos elétrons na última camada, o átomo os perde.": {
+    "fr": "Avec peu d’électrons sur la dernière couche, l’atome les perd.",
+    "en": "With few electrons in its outer shell, the atom loses them."
   },
   "Com quantidade par, a mediana é a média dos dois centrais.": {
     "fr": "Avec un nombre pair, la médiane est la moyenne des deux valeurs centrales.",
@@ -5526,6 +5586,10 @@
   "Conte as faces que servem, sem contar a mesma face duas vezes, e divida por #.": {
     "fr": "Comptez les faces qui conviennent, sans compter deux fois la même face, et divisez par #.",
     "en": "Count the faces that qualify, without counting the same face twice, and divide by #."
+  },
+  "Conte os elétrons da última camada: até #, o grupo é esse número; de # em diante, some # — é a numeração de # a #.": {
+    "fr": "Comptez les électrons de la dernière couche : jusqu’à #, le groupe est ce nombre ; à partir de #, ajoutez # — c’est la numérotation de # à #.",
+    "en": "Count the outer-shell electrons: up to #, the group is that number; from # on, add # — this is the numbering from # to #."
   },
   "Conte os átomos de cada elemento nos dois lados e ajuste só os COEFICIENTES, os números da frente. Mexer num índice trocaria a substância.": {
     "fr": "Comptez les atomes de chaque élément des deux côtés et n’ajustez que les COEFFICIENTS, les nombres de devant. Toucher à un indice changerait la substance.",
@@ -6819,6 +6883,10 @@
     "fr": "Et nous ajoutons la constante d'intégration.",
     "en": "And we add the constant of integration."
   },
+  "E somamos as parcelas.": {
+    "fr": "Et nous additionnons les termes.",
+    "en": "And we add the terms."
+  },
   "E somamos os quadrados dos outros dois.": {
     "fr": "Et nous additionnons les carrés des deux autres.",
     "en": "And we add the squares of the other two."
@@ -7715,6 +7783,10 @@
     "fr": "L'énergie interne a diminué : le gaz s'est refroidi.",
     "en": "The internal energy decreased: the gas cooled down."
   },
+  "Entre # e #, a ligação se trata como covalente polar.": {
+    "fr": "Entre # et #, la liaison est traitée comme covalente polaire.",
+    "en": "Between # and #, the bond is treated as polar covalent."
+  },
   "Entre as grandezas do lançamento, a pergunta é por a altura máxima.": {
     "fr": "Parmi les grandeurs du lancer, la question porte sur la hauteur maximale.",
     "en": "Among the launch quantities, the question asks for the maximum height."
@@ -8223,6 +8295,14 @@
     "fr": "C’est la constante de temps (chute à #/e ≈ #%). Pour tomber à la moitié, c’est ln # qui intervient.",
     "en": "That is the time constant (it falls to #/e ≈ #%). To fall to half, ln # comes in."
   },
+  "Essa é a contagem da última camada, que é a numeração antiga (#A a #A). Na numeração de # a #, os elementos de # ou mais elétrons na última camada somam #.": {
+    "fr": "Ceci est le compte de la dernière couche, qui correspond à l’ancienne numérotation (#A à #A). Dans la numérotation de # à #, les éléments ayant # électrons ou plus sur la dernière couche ajoutent #.",
+    "en": "That is the outer-shell count, which is the old numbering (#A to #A). In the numbering from # to #, elements with # or more outer electrons add #."
+  },
+  "Essa é a contagem da última camada. A carga é quantos elétrons ele perde ou ganha para chegar ao gás nobre — não quantos tem.": {
+    "fr": "Ceci est le compte de la dernière couche. La charge correspond au nombre d’électrons qu’il perd ou gagne pour atteindre le gaz noble — pas au nombre qu’il possède.",
+    "en": "That is the outer-shell count. The charge is how many electrons it loses or gains to reach the noble gas — not how many it has."
+  },
   "Essa é a contagem de átomos da fórmula, não a massa deles. Cada átomo entra com a massa do seu elemento.": {
     "fr": "C’est le nombre d’atomes de la formule, et non leur masse. Chaque atome entre avec la masse de son élément.",
     "en": "That is the count of atoms in the formula, not their mass. Each atom enters with its element’s mass."
@@ -8679,6 +8759,10 @@
     "fr": "C’est le PÉRIMÈTRE (la somme des côtés), et non l’aire. L’aire se mesure en unités carrées.",
     "en": "That is the PERIMETER (the sum of the sides), not the area. Area is measured in square units."
   },
+  "Esse é o PERÍODO, o número de camadas ocupadas. O grupo é a coluna, e vem da contagem da última camada.": {
+    "fr": "Ceci est la PÉRIODE, le nombre de couches occupées. Le groupe est la colonne, et vient du compte de la dernière couche.",
+    "en": "That is the PERIOD, the number of occupied shells. The group is the column, and comes from the outer-shell count."
+  },
   "Esse é o PESO do corpo, que usa a densidade DELE. O empuxo usa a densidade do FLUIDO deslocado.": {
     "fr": "C’est le POIDS du corps, qui utilise SA masse volumique. La poussée utilise la masse volumique du FLUIDE déplacé.",
     "en": "That is the WEIGHT of the body, which uses ITS density. The buoyant force uses the density of the displaced FLUID."
@@ -8895,6 +8979,10 @@
     "fr": "C’est le pi majuscule, qui MULTIPLIE. Additionner, c’est le sigma, ∑.",
     "en": "That is the capital pi, which MULTIPLIES. Adding is the sigma, ∑."
   },
+  "Esse é o plano de corte, não a abscissa do vértice da curva resultante.": {
+    "fr": "Ceci est le plan de coupe, pas l’abscisse du sommet de la courbe obtenue.",
+    "en": "That is the cutting plane, not the abscissa of the vertex of the resulting curve."
+  },
   "Esse é o primeiro valor observado. O intercepto é o valor PREVISTO em x igual a zero, que costuma estar fora da faixa medida.": {
     "fr": "C’est la première valeur observée. L’ordonnée à l’origine est la valeur PRÉDITE en x égal à zéro, qui se trouve souvent hors de la plage mesurée.",
     "en": "That is the first observed value. The intercept is the PREDICTED value at x equal to zero, which usually lies outside the measured range."
@@ -8914,6 +9002,10 @@
   "Esse é o raio da circunferência, não a distância do ponto ao centro. São medidas diferentes — compará-las é justamente o que decide a posição.": {
     "fr": "C’est le rayon du cercle, et non la distance du point au centre. Ce sont deux mesures différentes — les comparer est justement ce qui décide de la position.",
     "en": "That is the radius of the circle, not the distance from the point to the centre. They are different measurements — comparing them is precisely what decides the position."
+  },
+  "Esse é o raio do disco, que seria o limite se y fosse zero. Com y igual a #, sobra menos espaço para x.": {
+    "fr": "Ceci est le rayon du disque, qui serait la limite si y valait zéro. Avec y égal à #, il reste moins de place pour x.",
+    "en": "That is the radius of the disc, which would be the limit if y were zero. With y equal to #, there is less room left for x."
   },
   "Esse é o regime permanente, que só é atingido quando t tende ao infinito. Em tempo finito ainda sobra o transiente.": {
     "fr": "C’est le régime permanent, atteint seulement quand t tend vers l’infini. En temps fini, il reste encore le transitoire.",
@@ -9103,6 +9195,10 @@
     "fr": "C’est la valeur prédite par la droite, et non le résidu.",
     "en": "That is the value predicted by the line, not the residual."
   },
+  "Esse é o x do ponto, não o nível. O nível é a ALTURA da superfície ali, que é o valor da função.": {
+    "fr": "Ceci est le x du point, pas le niveau. Le niveau est la HAUTEUR de la surface en ce point, c’est-à-dire la valeur de la fonction.",
+    "en": "That is the x of the point, not the level. The level is the HEIGHT of the surface there, which is the value of the function."
+  },
   "Esse é o x do ponto. A pergunta é a ordenada y, que vem de y = #x.": {
     "fr": "C’est le x du point. La question porte sur l’ordonnée y, qui vient de y = #x.",
     "en": "That is the x of the point. The question asks for the y-coordinate, which comes from y = #x."
@@ -9226,6 +9322,10 @@
   "Este termo não aparece na série: o coeficiente é zero, por simetria da função.": {
     "fr": "Ce terme n’apparaît pas dans la série : le coefficient est nul, par symétrie de la fonction.",
     "en": "This term does not appear in the series: the coefficient is zero, by symmetry of the function."
+  },
+  "Estes cortes são convenção de ensino, não lei: o HF tem # e se comporta como molécula covalente muito polar. A régua é faixa, não fronteira.": {
+    "fr": "Ces seuils sont une convention pédagogique, pas une loi : HF vaut # et se comporte comme une molécule covalente très polaire. La règle est une plage, pas une frontière.",
+    "en": "These cut-offs are a teaching convention, not a law: HF has # and behaves like a very polar covalent molecule. The rule is a band, not a border."
   },
   "Esticar o gráfico na vertical estica a área na mesma proporção.": {
     "fr": "Étirer le graphe verticalement étire l’aire dans la même proportion.",
@@ -9587,6 +9687,10 @@
     "fr": "Il manque l’extraction de la racine QUATRIÈME. La valeur obtenue est la température à la puissance quatre, et non la température.",
     "en": "Taking the FOURTH root is missing. The value obtained is the temperature to the fourth power, not the temperature."
   },
+  "Faltou extrair a raiz quadrada: esse é o valor de x ao quadrado, não de x.": {
+    "fr": "Il manque la racine carrée : ceci est la valeur de x au carré, pas de x.",
+    "en": "The square root is missing: that is the value of x squared, not of x."
+  },
   "Faltou extrair a raiz quadrada: isso tem unidade de velocidade ao quadrado.": {
     "fr": "Il manque l’extraction de la racine carrée : cela a l’unité d’une vitesse au carré.",
     "en": "Taking the square root is missing: that has units of speed squared."
@@ -9742,6 +9846,10 @@
   "Faltou o sinal negativo ao isolar x. Ao passar b para o outro lado da igualdade, ele troca de sinal.": {
     "fr": "Il manque le signe négatif en isolant x. En passant b de l’autre côté de l’égalité, il change de signe.",
     "en": "The negative sign is missing when isolating x. Moving b to the other side of the equation flips its sign."
+  },
+  "Faltou o sinal negativo da fórmula do vértice. Ela é menos b sobre dois a.": {
+    "fr": "Il manque le signe négatif de la formule du sommet. Elle vaut moins b sur deux a.",
+    "en": "The minus sign of the vertex formula is missing. It is minus b over two a."
   },
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
@@ -9919,6 +10027,14 @@
     "fr": "Supposez # g : chaque pourcentage devient des grammes. Convertissez-les en moles, divisez tous par le PLUS PETIT et, s’il reste un demi, multipliez tous par deux.",
     "en": "Pretend # g: each percentage turns into grams. Convert each to moles, divide them all by the SMALLEST and, if a half is left over, multiply them all by two."
   },
+  "Fixamos y igual a # e olhamos o que sobra.": {
+    "fr": "Nous fixons y égal à # et regardons ce qui reste.",
+    "en": "We fix y equal to # and look at what is left."
+  },
+  "Fixando y igual a #, sobra uma condição só em x.": {
+    "fr": "En fixant y égal à #, il ne reste qu’une condition sur x.",
+    "en": "Fixing y equal to #, only a condition on x remains."
+  },
   "Flutuando, o peso iguala o empuxo; o volume se cancela e a fração submersa é a razão das densidades: # sobre #.": {
     "fr": "En flottaison, le poids égale la poussée ; le volume se simplifie et la fraction immergée est le rapport des masses volumiques : # sur #.",
     "en": "Floating, the weight equals the buoyant force; the volume cancels and the submerged fraction is the ratio of the densities: # over #."
@@ -9926,6 +10042,10 @@
   "Fora da diagonal o elemento fica no lugar, mas troca de SINAL.": {
     "fr": "Hors de la diagonale, l’élément reste en place, mais change de SIGNE.",
     "en": "Off the diagonal the entry stays in place, but flips its SIGN."
+  },
+  "Fora dele a função simplesmente não existe, por mais bem definida que a fórmula pareça.": {
+    "fr": "En dehors, la fonction n’existe tout simplement pas, aussi bien définie que la formule puisse paraître.",
+    "en": "Outside it the function simply does not exist, however well defined the formula may look."
   },
   "Fora desse ponto, o trinômio tem o sinal de a (negativo).": {
     "fr": "En dehors de ce point, le trinôme porte le signe de a (négatif).",
@@ -10942,6 +11062,10 @@
   "Mg neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Mg neutre a # électrons, autant que de protons.",
     "en": "Neutral Mg has # electrons, as many as protons."
+  },
+  "Mg²⁺ com O²⁻ dá MgO, e não Mg₂O₂.": {
+    "fr": "Mg²⁺ avec O²⁻ donne MgO, et non Mg₂O₂.",
+    "en": "Mg²⁺ with O²⁻ gives MgO, not Mg₂O₂."
   },
   "Microcoulomb para coulomb: # μC = #⁻⁶ C.": {
     "fr": "Du microcoulomb au coulomb : # μC = #⁻⁶ C.",
@@ -12011,6 +12135,10 @@
     "fr": "Normalisez la direction avant d’y projeter le gradient.",
     "en": "Normalise the direction before projecting the gradient onto it."
   },
+  "Nos dois casos ele chega à configuração do gás nobre mais próximo.": {
+    "fr": "Dans les deux cas il atteint la configuration du gaz noble le plus proche.",
+    "en": "In both cases it reaches the configuration of the nearest noble gas."
+  },
   "Nos dois sentidos os fatores eram inversos, então os dois dividem o tempo inicial.": {
     "fr": "Dans les deux cas les facteurs étaient inverses, donc les deux divisent le temps initial.",
     "en": "In both cases the factors were inverse, so both divide the initial time."
@@ -12655,6 +12783,10 @@
     "fr": "Le composé est neutre : la somme des n.o., en comptant les indices, est nulle.",
     "en": "The compound is neutral: the sum of the oxidation numbers, counting the subscripts, is zero."
   },
+  "O composto é neutro: as cargas totais têm de se anular.": {
+    "fr": "Le composé est neutre : les charges totales doivent s’annuler.",
+    "en": "The compound is neutral: the total charges must cancel out."
+  },
   "O comprimento medido em movimento é o próprio dividido por γ.": {
     "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
     "en": "The length measured in motion is the proper length divided by γ."
@@ -12726,6 +12858,10 @@
   "O cruzamento está certo e falta reduzir. A fórmula é uma proporção: Mg²⁺ com O²⁻ dá MgO, não Mg#O#.": {
     "fr": "Le croisement est juste, il reste à réduire. La formule est une proportion : Mg²⁺ avec O²⁻ donne MgO, et non Mg#O#.",
     "en": "The crossing is right and the reducing is missing. The formula is a proportion: Mg²⁺ with O²⁻ gives MgO, not Mg#O#."
+  },
+  "O cruzamento está certo, mas falta reduzir: a fórmula iônica é uma PROPORÇÃO, e proporção se escreve na forma mais simples. Mg²⁺ com O²⁻ dá MgO.": {
+    "fr": "Le croisement est correct, mais il faut réduire : la formule ionique est une PROPORTION, et une proportion s’écrit sous sa forme la plus simple. Mg²⁺ avec O²⁻ donne MgO.",
+    "en": "The crossing is right, but it still has to be reduced: an ionic formula is a RATIO, and a ratio is written in its simplest form. Mg²⁺ with O²⁻ gives MgO."
   },
   "O cubo é o quadrado multiplicado mais uma vez pelo binômio.": {
     "fr": "Le cube est le carré multiplié encore une fois par le binôme.",
@@ -12918,6 +13054,14 @@
   "O domínio é todo o conjunto dos reais, menos esse ponto.": {
     "fr": "Le domaine est tout l’ensemble des réels, sauf ce point.",
     "en": "The domain is the whole set of reals, except that point."
+  },
+  "O domínio é um DISCO, não um losango. A condição envolve a soma dos quadrados, e por isso o limite sai por Pitágoras, não por subtração.": {
+    "fr": "Le domaine est un DISQUE, pas un losange. La condition porte sur la somme des carrés, et la limite vient donc de Pythagore, pas d’une soustraction.",
+    "en": "The domain is a DISC, not a rhombus. The condition involves the sum of squares, so the limit comes from Pythagoras, not from subtraction."
+  },
+  "O domínio é um disco de raio #, e não um intervalo.": {
+    "fr": "Le domaine est un disque de rayon #, et non un intervalle.",
+    "en": "The domain is a disc of radius #, not an interval."
   },
   "O duto é horizontal, então os termos de altura se cancelam.": {
     "fr": "Le conduit est horizontal, donc les termes de hauteur se simplifient.",
@@ -13174,6 +13318,10 @@
   "O grau do quociente é a diferença dos graus.": {
     "fr": "Le degré du quotient est la différence des degrés.",
     "en": "The quotient’s degree is the difference of the degrees."
+  },
+  "O grupo sai da contagem da última camada.": {
+    "fr": "Le groupe se déduit du compte des électrons de la dernière couche.",
+    "en": "The group comes from counting the outer-shell electrons."
   },
   "O impulso específico expressa a mesma eficiência em segundos.": {
     "fr": "L'impulsion spécifique exprime la même efficacité en secondes.",
@@ -14199,6 +14347,14 @@
     "fr": "Le signe est inversé. Comme la formule est a = −D/#, le signe du centre est opposé à celui du coefficient.",
     "en": "The sign is flipped. Since the formula is a = −D/#, the sign of the centre is opposite to the coefficient’s."
   },
+  "O sinal está trocado. Este átomo GANHA elétrons, e elétron é carga negativa.": {
+    "fr": "Le signe est inversé. Cet atome GAGNE des électrons, et un électron porte une charge négative.",
+    "en": "The sign is flipped. This atom GAINS electrons, and an electron carries negative charge."
+  },
+  "O sinal está trocado. Este átomo PERDE elétrons, e quem perde carga negativa fica positivo.": {
+    "fr": "Le signe est inversé. Cet atome PERD des électrons, et qui perd une charge négative devient positif.",
+    "en": "The sign is flipped. This atom LOSES electrons, and losing negative charge leaves it positive."
+  },
   "O sinal está trocado. O metal perde elétrons, e por isso o nox dele é positivo; o negativo é do elemento que recebe.": {
     "fr": "Le signe est inversé. Le métal perd des électrons, et son n.o. est donc positif ; le négatif est celui de l’élément qui en reçoit.",
     "en": "The sign is flipped. The metal loses electrons, so its oxidation number is positive; the negative one belongs to the element that gains them."
@@ -14478,6 +14634,10 @@
   "O termo misto foi esquecido. Ao derivar em uma variável, o produto xy deixa a OUTRA variável como coeficiente — ele não desaparece.": {
     "fr": "Le terme mixte a été oublié. En dérivant par rapport à une variable, le produit xy laisse l’AUTRE variable comme coefficient — il ne disparaît pas.",
     "en": "The mixed term was forgotten. When differentiating with respect to one variable, the product xy leaves the OTHER variable as a coefficient — it does not vanish."
+  },
+  "O termo misto também contribui: ao fixar y igual a #, ele vira parte do coeficiente de x, e não some.": {
+    "fr": "Le terme mixte contribue aussi : en fixant y égal à #, il devient une partie du coefficient de x et ne disparaît pas.",
+    "en": "The mixed term contributes too: when y is fixed at #, it becomes part of the coefficient of x and does not vanish."
   },
   "O termo misto é linear em cada variável, então não aparece fator #: derivar xy em x dá y, e derivar y em y dá #.": {
     "fr": "Le terme mixte est linéaire en chaque variable, donc aucun facteur # n’apparaît : dériver xy en x donne y, et dériver y en y donne #.",
@@ -14786,6 +14946,10 @@
   "O ± gera as duas raízes.": {
     "fr": "Le ± génère les deux racines.",
     "en": "The ± generates the two roots."
+  },
+  "O átomo vai para a configuração do gás nobre mais próximo: com poucos elétrons na última camada, perde-os (carga positiva); perto de fechar, ganha os que faltam (negativa).": {
+    "fr": "L’atome rejoint la configuration du gaz noble le plus proche : avec peu d’électrons sur la dernière couche, il les perd (charge positive) ; près de la compléter, il gagne ceux qui manquent (charge négative).",
+    "en": "The atom goes to the configuration of the nearest noble gas: with few outer electrons it loses them (positive charge); close to filling the shell, it gains the missing ones (negative charge)."
   },
   "O átomo é neutro, então há um elétron para cada próton.": {
     "fr": "L’atome est neutre, donc il y a un électron pour chaque proton.",
@@ -15383,6 +15547,10 @@
     "fr": "Les termes décroissent et tendent vers zéro : par le critère de Leibniz, la série converge.",
     "en": "The terms decrease and go to zero: by Leibniz’s test, the series converges."
   },
+  "Os termos em y foram ignorados. Em duas variáveis, nada se despreza: a altura depende das duas coordenadas ao mesmo tempo.": {
+    "fr": "Les termes en y ont été ignorés. À deux variables, rien ne se néglige : la hauteur dépend des deux coordonnées à la fois.",
+    "en": "The terms in y were ignored. With two variables nothing is dropped: the height depends on both coordinates at once."
+  },
   "Os termos mistos (com x e y) foram contados duas vezes. Eles já saem de ∫M dx; de N só se aproveita o que é novo, a g′(y).": {
     "fr": "Les termes mixtes (en x et y) ont été comptés deux fois. Ils sortent déjà de ∫M dx ; de N on ne retient que ce qui est nouveau, la g′(y).",
     "en": "The mixed terms (with x and y) were counted twice. They already come out of ∫M dx; from N only what is new, the g′(y), is used."
@@ -15407,6 +15575,10 @@
     "fr": "Les valeurs en x = #.",
     "en": "The values at x = #."
   },
+  "Os valores foram somados. A pergunta é a DIFERENÇA — e é ela que diz o quanto um átomo puxa o elétron mais que o outro.": {
+    "fr": "Les valeurs ont été additionnées. La question porte sur la DIFFÉRENCE — c’est elle qui dit à quel point un atome attire l’électron plus que l’autre.",
+    "en": "The values were added. The question asks for the DIFFERENCE — it is what tells how much one atom pulls the electron more than the other."
+  },
   "Os vértices são duas cópias dos da base, e cada vértice dá três arestas contadas duas vezes.": {
     "fr": "Les sommets sont deux copies de ceux de la base, et chaque sommet donne trois arêtes comptées deux fois.",
     "en": "The vertices are two copies of the base ones, and each vertex gives three edges counted twice."
@@ -15422,6 +15594,14 @@
   "Os índices foram somados sem os coeficientes. O coeficiente diz quantas moléculas há, e cada uma traz os seus átomos: os dois se multiplicam.": {
     "fr": "Les indices ont été additionnés sans les coefficients. Le coefficient dit combien il y a de molécules, et chacune apporte ses atomes : les deux se multiplient.",
     "en": "The subscripts were added without the coefficients. The coefficient says how many molecules there are, and each brings its own atoms: the two multiply."
+  },
+  "Os índices já estão na proporção mais simples.": {
+    "fr": "Les indices sont déjà dans la proportion la plus simple.",
+    "en": "The subscripts are already in the simplest ratio."
+  },
+  "Os índices se reduzem: o que se escreve é a proporção mais simples.": {
+    "fr": "Les indices se réduisent : on écrit la proportion la plus simple.",
+    "en": "The subscripts reduce: what is written is the simplest ratio."
   },
   "Oscila quando as raízes da característica são complexas: discriminante negativo.": {
     "fr": "Il oscille quand les racines de la caractéristique sont complexes : discriminant négatif.",
@@ -16063,6 +16243,10 @@
     "fr": "Près de # : Euler est d’ordre un, et l’erreur décroît en même temps que le pas.",
     "en": "Near #: Euler is first order, and the error falls along with the step."
   },
+  "Perto de fechar a camada, o átomo ganha os que faltam.": {
+    "fr": "Près de compléter sa couche, l’atome gagne les électrons qui manquent.",
+    "en": "Close to filling its shell, the atom gains the missing electrons."
+  },
   "Perto do centro, poucos termos já bastam.": {
     "fr": "Près du centre, peu de termes suffisent.",
     "en": "Near the centre, a few terms are enough."
@@ -16395,6 +16579,10 @@
     "fr": "Tout nombre est un multiple de #, donc le PPCM de # et # vaut #. Aucun nouveau dénominateur n’apparaît ici.",
     "en": "Every number is a multiple of #, so the LCM of # and # is #. No new denominator shows up here."
   },
+  "Qualquer outro ponto dessa curva devolve exatamente o mesmo valor.": {
+    "fr": "N’importe quel autre point de cette courbe redonne exactement la même valeur.",
+    "en": "Any other point on this curve returns exactly the same value."
+  },
   "Quando o MDC é #, a fração a/b já é irredutível.": {
     "fr": "Quand le PGCD est #, la fraction a/b est déjà irréductible.",
     "en": "When the GCD is #, the fraction a/b is already irreducible."
@@ -16450,6 +16638,10 @@
   "Quem esfria cede exatamente o que quem esquenta recebe.": {
     "fr": "Ce que cède celui qui refroidit est exactement ce que reçoit celui qui chauffe.",
     "en": "What the cooling one gives up is exactly what the warming one takes in."
+  },
+  "Quem tem pouco na última camada perde; quem está perto de fechar, ganha.": {
+    "fr": "Celui qui a peu d’électrons sur la dernière couche en perd ; celui qui est près de la compléter en gagne.",
+    "en": "An atom with few electrons in its outer shell loses them; one close to filling it gains them."
   },
   "Quem vê o relógio passar mede um intervalo γ vezes maior que o tempo próprio.": {
     "fr": "Celui qui voit l’horloge passer mesure un intervalle γ fois plus grand que le temps propre.",
@@ -16762,6 +16954,10 @@
   "Saíram os que desceram nas duas paradas e entraram os que subiram.": {
     "fr": "Sont sortis ceux qui sont descendus aux deux arrêts, et sont entrés ceux qui sont montés.",
     "en": "Those who got off at both stops left, and those who got on entered."
+  },
+  "Se a curva passa por (#, #), o nível é a altura ali.": {
+    "fr": "Si la courbe passe par (#, #), le niveau est la hauteur en ce point.",
+    "en": "If the curve passes through (#, #), the level is the height there."
   },
   "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso.": {
     "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela.",
@@ -17291,6 +17487,10 @@
     "fr": "Nous remontons à la deuxième ligne, avec z connu.",
     "en": "We move up to the second row, with z known."
   },
+  "Substitua as duas coordenadas e some com cuidado nos sinais.": {
+    "fr": "Remplacez les deux coordonnées et additionnez en faisant attention aux signes.",
+    "en": "Substitute both coordinates and add carefully, watching the signs."
+  },
   "Substitua cada extremo na série: (x − a)ⁿ vira Rⁿ ou (−R)ⁿ. Sobra uma série numérica — teste-a (harmônica, alternada, p-série).": {
     "fr": "Substituez chaque extrémité dans la série : (x − a)ⁿ devient Rⁿ ou (−R)ⁿ. Il reste une série numérique — testez-la (harmonique, alternée, p-série).",
     "en": "Substitute each endpoint into the series: (x − a)ⁿ becomes Rⁿ or (−R)ⁿ. A numerical series remains — test it (harmonic, alternating, p-series)."
@@ -17675,6 +17875,10 @@
     "fr": "Nous substituons x dans l'une des équations originales pour trouver y.",
     "en": "We substitute x into one of the original equations to find y."
   },
+  "Substituímos x igual a # e y igual a #.": {
+    "fr": "Nous remplaçons x par # et y par #.",
+    "en": "We substitute x equal to # and y equal to #."
+  },
   "Substituímos x por # dentro do módulo.": {
     "fr": "Nous remplaçons x par # à l’intérieur de la valeur absolue.",
     "en": "We replace x by # inside the absolute value."
@@ -17690,6 +17894,10 @@
   "Substituímos.": {
     "fr": "Nous substituons.",
     "en": "We substitute."
+  },
+  "Subtraia a menor da maior: a diferença é sempre positiva. Acima de # a ligação se trata como iônica; abaixo de #, como covalente apolar.": {
+    "fr": "Soustrayez la plus petite de la plus grande : la différence est toujours positive. Au-dessus de #, la liaison est traitée comme ionique ; en dessous de #, comme covalente apolaire.",
+    "en": "Subtract the smaller from the larger: the difference is always positive. Above #, the bond is treated as ionic; below #, as non-polar covalent."
   },
   "Subtraia a média e divida pelo desvio: z = (# − #) / #.": {
     "fr": "Soustrayez la moyenne et divisez par l’écart type : z = (# − #) / #.",
@@ -18447,6 +18655,10 @@
     "fr": "Une constante sort de l’intégrale : celle de #·f vaut # fois celle de f.",
     "en": "A constant comes out of the integral: the one of #·f is # times the one of f."
   },
+  "Uma curva de nível junta todos os pontos de mesma altura.": {
+    "fr": "Une courbe de niveau réunit tous les points de même hauteur.",
+    "en": "A level curve gathers all the points at the same height."
+  },
   "Uma das equações era combinação das outras e não trouxe informação nova.": {
     "fr": "L’une des équations était une combinaison des autres et n’a apporté aucune information nouvelle.",
     "en": "One of the equations was a combination of the others and brought no new information."
@@ -18467,6 +18679,10 @@
     "fr": "Une fonction de A dans B s’écrit f : A → B.",
     "en": "A function from A to B is written f: A → B."
   },
+  "Uma função de duas variáveis pede DUAS substituições.": {
+    "fr": "Une fonction de deux variables demande DEUX substitutions.",
+    "en": "A function of two variables calls for TWO substitutions."
+  },
   "Uma função limitada na ponta é o que garante a convergência aqui.": {
     "fr": "Une fonction bornée au bout est ce qui garantit la convergence ici.",
     "en": "A function bounded at the end is what guarantees convergence here."
@@ -18478,6 +18694,10 @@
   "Uma soma de quadrados pede a tangente.": {
     "fr": "Une somme de carrés appelle la tangente.",
     "en": "A sum of squares calls for the tangent."
+  },
+  "Uma superfície cortada por um plano devolve uma curva de uma variável só.": {
+    "fr": "Une surface coupée par un plan redonne une courbe à une seule variable.",
+    "en": "A surface cut by a plane gives back a curve in a single variable."
   },
   "União (∪): junte os elementos dos dois conjuntos, sem repetir.": {
     "fr": "Union (∪) : réunissez les éléments des deux ensembles, sans répétition.",
@@ -19287,6 +19507,10 @@
     "fr": "Zéro correspondrait au cas où l’identité n’a pas de terme du milieu — ce qui n’arrive que pour la différence de carrés. Dans le carré d’un binôme, les deux termes croisés s’ADDITIONNENT au lieu de s’annuler.",
     "en": "Zero would be the case where the identity has no middle term — which only happens in the difference of squares. In the square of a binomial, the two cross terms ADD instead of cancelling."
   },
+  "Zero seria o nível de uma curva que passa por onde a função se anula. Aqui ela não se anula no ponto dado.": {
+    "fr": "Zéro serait le niveau d’une courbe passant là où la fonction s’annule. Ici elle ne s’annule pas au point donné.",
+    "en": "Zero would be the level of a curve passing where the function vanishes. Here it does not vanish at the given point."
+  },
   "Zero é resposta: este subnível ainda não começou a receber elétrons.": {
     "fr": "Zéro est une réponse : cette sous-couche n’a pas encore commencé à recevoir des électrons.",
     "en": "Zero is an answer: this subshell has not started receiving electrons yet."
@@ -19751,6 +19975,10 @@
     "fr": "C’est de là que vient le signe moins dans la partie réelle du produit.",
     "en": "That is where the minus sign in the real part of the product comes from."
   },
+  "É daí que vem o cruzamento: o índice de cada um é a carga do outro.": {
+    "fr": "C’est de là que vient le croisement : l’indice de chacun est la charge de l’autre.",
+    "en": "That is where the crossing comes from: each one’s subscript is the other’s charge."
+  },
   "É ela, e só ela, que muda o módulo da velocidade.": {
     "fr": "C’est elle, et elle seule, qui change la norme de la vitesse.",
     "en": "It is that one, and only that one, that changes the magnitude of the velocity."
@@ -19914,6 +20142,10 @@
   "É o quadro de sinais do tópico Estudo de sinal, aplicado à derivada.": {
     "fr": "C’est le tableau de signes du sujet Étude de signe, appliqué à la dérivée.",
     "en": "It is the sign chart from the Sign study topic, applied to the derivative."
+  },
+  "É o que o mapa topográfico desenha: cada linha é uma altitude.": {
+    "fr": "C’est ce que dessine la carte topographique : chaque ligne est une altitude.",
+    "en": "That is what a topographic map draws: each line is one altitude."
   },
   "É o que se chama de multiplicar em cruz.": {
     "fr": "C’est ce qu’on appelle multiplier en croix.",
