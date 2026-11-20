@@ -1103,6 +1103,10 @@
     "fr": "La division se termine avec un reste nul, donc la décimale est finie.",
     "en": "The division ends with zero remainder, so the decimal is finite."
   },
+  "A divisão é pelo módulo do vetor sobre o qual se projeta, b — não pelo módulo de a.": {
+    "fr": "La division se fait par la norme du vecteur sur lequel on projette, b — pas par celle de a.",
+    "en": "The division is by the magnitude of the vector you project onto, b — not by the magnitude of a."
+  },
   "A divisão é por #, não por #. O fator #/# é da área do triângulo, não do volume do cone.": {
     "fr": "La division se fait par #, et non par #. Le facteur #/# est celui de l’aire du triangle, pas du volume du cône.",
     "en": "The division is by #, not by #. The factor #/# belongs to the area of the triangle, not to the volume of the cone."
@@ -1627,6 +1631,10 @@
     "fr": "La pente du rayon CP.",
     "en": "The slope of the radius CP."
   },
+  "A inclinação ficou invertida: m = Δy / Δx, não Δx / Δy.": {
+    "fr": "La pente est inversée : m = Δy / Δx, pas Δx / Δy.",
+    "en": "The slope is upside down: m = Δy / Δx, not Δx / Δy."
+  },
   "A inclinação é a derivada no ponto.": {
     "fr": "La pente est la dérivée au point.",
     "en": "The slope is the derivative at the point."
@@ -1954,6 +1962,10 @@
   "A metade entra dentro do logaritmo, não como fator. Resolver a equação exponencial exige aplicar o logaritmo aos dois lados.": {
     "fr": "La moitié entre dans le logarithme, et non comme facteur. Résoudre l’équation exponentielle exige d’appliquer le logarithme aux deux côtés.",
     "en": "The half goes inside the logarithm, not as a factor. Solving the exponential equation requires taking the logarithm of both sides."
+  },
+  "A metade é a área do TRIÂNGULO formado pelos dois vetores. O paralelogramo é o dobro dele.": {
+    "fr": "La moitié est l’aire du TRIANGLE formé par les deux vecteurs. Le parallélogramme en vaut le double.",
+    "en": "Half of it is the area of the TRIANGLE formed by the two vectors. The parallelogram is twice that."
   },
   "A mista só seria zero se não houvesse termo com x e y juntos. Aqui há, e é ele que resta depois das duas derivadas.": {
     "fr": "La mixte ne serait nulle que s’il n’y avait pas de terme avec x et y ensemble. Ici il y en a un, et c’est lui qui reste après les deux dérivations.",
@@ -2290,6 +2302,10 @@
   "A projeção escalar de a sobre b é a·b dividido por |b|: o escalar e só o módulo de quem recebe a sombra.": {
     "fr": "La projection scalaire de a sur b est a·b divisé par |b| : le scalaire et seulement le module de celui qui reçoit l’ombre.",
     "en": "The scalar projection of a onto b is a·b divided by |b|: the scalar and only the length of the one receiving the shadow."
+  },
+  "A projeção não depende do comprimento de b, só da sua direção.": {
+    "fr": "La projection ne dépend pas de la longueur de b, seulement de sa direction.",
+    "en": "The projection does not depend on the length of b, only on its direction."
   },
   "A projeção é o módulo de a vezes o cosseno do ângulo entre eles.": {
     "fr": "La projection est le module de a fois le cosinus de l'angle entre eux.",
@@ -2646,6 +2662,10 @@
   "A razão está invertida. O coeficiente angular é o líder de cima sobre o de baixo.": {
     "fr": "Le rapport est inversé. Le coefficient directeur est le dominant du haut sur celui du bas.",
     "en": "The ratio is upside down. The slope is the leading coefficient on top over the one below."
+  },
+  "A razão está invertida. O coeficiente angular é Δy sobre Δx — a variação VERTICAL dividida pela horizontal.": {
+    "fr": "Le rapport est inversé. Le coefficient directeur est Δy sur Δx — la variation VERTICALE divisée par l’horizontale.",
+    "en": "The ratio is upside down. The slope is Δy over Δx — the VERTICAL change divided by the horizontal one."
   },
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
@@ -8499,6 +8519,10 @@
     "fr": "C’est la composante NORMALE, qui courbe la trajectoire. La tangentielle est celle qui accélère ou freine le mouvement.",
     "en": "That is the NORMAL component, which bends the path. The tangential one is what speeds up or slows down the motion."
   },
+  "Essa é a componente do produto VETORIAL (aₓb_y − a_ybₓ). O escalar soma os produtos correspondentes; o vetorial os subtrai cruzados.": {
+    "fr": "C’est la composante du produit VECTORIEL (aₓb_y − a_ybₓ). Le produit scalaire additionne les produits correspondants ; le vectoriel les soustrait en croisé.",
+    "en": "That is the component of the CROSS product (aₓb_y − a_ybₓ). The dot product adds the corresponding products; the cross product subtracts them crosswise."
+  },
   "Essa é a componente normal da aceleração, não o raio. Falta dividir o quadrado da velocidade por ela.": {
     "fr": "C’est la composante normale de l’accélération, et non le rayon. Il reste à diviser le carré de la vitesse par elle.",
     "en": "That is the normal component of the acceleration, not the radius. Dividing the square of the speed by it is still missing."
@@ -8518,6 +8542,14 @@
   "Essa é a contagem de átomos da fórmula, não a massa deles. Cada átomo entra com a massa do seu elemento.": {
     "fr": "C’est le nombre d’atomes de la formule, et non leur masse. Chaque atome entre avec la masse de son élément.",
     "en": "That is the count of atoms in the formula, not their mass. Each atom enters with its element’s mass."
+  },
+  "Essa é a coordenada x de P. O pedido é a y.": {
+    "fr": "C’est la coordonnée x de P. On demande celle en y.",
+    "en": "That is the x coordinate of P. The one asked for is y."
+  },
+  "Essa é a coordenada y de P. O pedido é a x.": {
+    "fr": "C’est la coordonnée y de P. On demande celle en x.",
+    "en": "That is the y coordinate of P. The one asked for is x."
   },
   "Essa é a covariância, que ainda carrega as unidades das duas variáveis. A inclinação é ela dividida pela variância de x.": {
     "fr": "C’est la covariance, qui porte encore les unités des deux variables. La pente en est le quotient par la variance de x.",
@@ -8546,6 +8578,10 @@
   "Essa é a derivada do logaritmo NATURAL. Com base # ainda falta dividir pelo logaritmo natural de #, que vem da mudança de base.": {
     "fr": "C’est la dérivée du logarithme NATUREL. En base #, il reste à diviser par le logarithme naturel de #, qui vient du changement de base.",
     "en": "That is the derivative of the NATURAL logarithm. With base #, dividing by the natural logarithm of #, which comes from the change of base, is still missing."
+  },
+  "Essa é a diferença entre as abscissas, não a média delas. O ponto médio fica a meio caminho, então soma-se e divide-se por #.": {
+    "fr": "C’est la différence entre les abscisses, pas leur moyenne. Le milieu se situe à mi-chemin : on additionne et on divise par #.",
+    "en": "That is the difference between the abscissas, not their average. The midpoint lies halfway, so you add and divide by #."
   },
   "Essa é a diferença entre as temperaturas iniciais. A final fica entre as duas, mais perto de quem tem maior capacidade térmica.": {
     "fr": "C’est l’écart entre les températures initiales. La finale se situe entre les deux, plus près de celui qui a la plus grande capacité thermique.",
@@ -8650,6 +8686,10 @@
   "Essa é a inclinação m. O pedido é q: ponha P em y = mx + q e isole q.": {
     "fr": "C’est la pente m. Ce qui est demandé est q : placez P dans y = mx + q et isolez q.",
     "en": "That is the slope m. What is asked for is q: put P into y = mx + q and isolate q."
+  },
+  "Essa é a inclinação m. O pedido é q: substitua um dos pontos em y = mx + q e isole q.": {
+    "fr": "C’est la pente m. On demande q : remplacez un des points dans y = mx + q et isolez q.",
+    "en": "That is the slope m. What is asked for is q: substitute one of the points into y = mx + q and isolate q."
   },
   "Essa é a inclinação, não o intercepto.": {
     "fr": "C’est la pente, et non l’ordonnée à l’origine.",
@@ -8919,6 +8959,14 @@
     "fr": "Ce nombre sort entier, et sortir entier confirme que l’empirique était juste.",
     "en": "That number comes out whole, and coming out whole confirms the empirical formula was right."
   },
+  "Esse produto só daria a área se os vetores fossem perpendiculares, quando sen θ = #.": {
+    "fr": "Ce produit ne donnerait l’aire que si les vecteurs étaient perpendiculaires, quand sin θ = #.",
+    "en": "That product would only give the area if the vectors were perpendicular, when sin θ = #."
+  },
+  "Esse seria o produto escalar apenas se os vetores fossem paralelos e de mesmo sentido, quando cos θ = #.": {
+    "fr": "Ce serait le produit scalaire seulement si les vecteurs étaient parallèles et de même sens, quand cos θ = #.",
+    "en": "That would be the dot product only if the vectors were parallel and pointing the same way, when cos θ = #."
+  },
   "Esse valor está em SEGUNDOS. A pergunta pede minutos.": {
     "fr": "Cette valeur est en SECONDES. La question demande des minutes.",
     "en": "That value is in SECONDS. The question asks for minutes."
@@ -9167,6 +9215,10 @@
     "fr": "C’est la norme de toute l’accélération. Seule sa part alignée avec la vitesse change la rapidité ; la part perpendiculaire change la direction.",
     "en": "That is the magnitude of the whole acceleration. Only its part aligned with the velocity changes the speed; the perpendicular part changes the direction."
   },
+  "Esse é o módulo de a. A projeção só o alcança quando os vetores são paralelos e de mesmo sentido.": {
+    "fr": "C’est la norme de a. La projection ne l’atteint que si les vecteurs sont parallèles et de même sens.",
+    "en": "That is the magnitude of a. The projection only reaches it when the vectors are parallel and point the same way."
+  },
   "Esse é o módulo do deslocamento em m. Falta dividir pelos # s.": {
     "fr": "C’est la norme du déplacement en m. Il reste à diviser par les # s.",
     "en": "That is the magnitude of the displacement in m. Dividing by the # s is still missing."
@@ -9246,6 +9298,10 @@
   "Esse é o primeiro valor observado. O intercepto é o valor PREVISTO em x igual a zero, que costuma estar fora da faixa medida.": {
     "fr": "C’est la première valeur observée. L’ordonnée à l’origine est la valeur PRÉDITE en x égal à zéro, qui se trouve souvent hors de la plage mesurée.",
     "en": "That is the first observed value. The intercept is the PREDICTED value at x equal to zero, which usually lies outside the measured range."
+  },
+  "Esse é o produto escalar, não o ângulo. Ele é só o primeiro passo: falta dividir pelos módulos e tomar o arco-cosseno.": {
+    "fr": "C’est le produit scalaire, pas l’angle. Ce n’est que la première étape : il reste à diviser par les normes et à prendre l’arc cosinus.",
+    "en": "That is the dot product, not the angle. It is only the first step: you still have to divide by the magnitudes and take the arccosine."
   },
   "Esse é o que o subnível #d CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
     "fr": "C’est ce que la sous-couche #d PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
@@ -9395,6 +9451,10 @@
     "fr": "Ceci est la valeur de a², pas de a. Il manque la racine carrée à la dernière étape.",
     "en": "That is the value of a², not a. The square root in the last step is missing."
   },
+  "Esse é o valor de d². Falta extrair a raiz quadrada.": {
+    "fr": "C’est la valeur de d². Il reste à prendre la racine carrée.",
+    "en": "That is the value of d². The square root is still missing."
+  },
   "Esse é o valor de t = x². Falta voltar a x: x = √#.": {
     "fr": "C’est la valeur de t = x². Il reste à revenir à x : x = √#.",
     "en": "That is the value of t = x². Going back to x is still missing: x = √#."
@@ -9491,6 +9551,10 @@
     "fr": "C’est le x : y utilise le SINUS.",
     "en": "That is the x: y uses the SINE."
   },
+  "Esse é o y do ponto médio. A pergunta é pela abscissa.": {
+    "fr": "C’est le y du milieu. La question porte sur l’abscisse.",
+    "en": "That is the y of the midpoint. The question asks for the abscissa."
+  },
   "Esse é o y: x usa o COSSENO.": {
     "fr": "C’est le y : x utilise le COSINUS.",
     "en": "That is the y: x uses the COSINE."
@@ -9518,6 +9582,10 @@
   "Esse é o ângulo oposto ao MENOR lado. O maior ângulo fica sempre em frente ao maior lado — é ele que entra com sinal de menos no numerador.": {
     "fr": "Ceci est l’angle opposé au PLUS PETIT côté. Le plus grand angle est toujours face au plus grand côté — c’est lui qui entre avec le signe moins au numérateur.",
     "en": "That is the angle opposite the SHORTEST side. The largest angle always faces the longest side — that is the one entering with a minus sign in the numerator."
+  },
+  "Esse é o ângulo suplementar. Confira o sinal do produto escalar: positivo indica ângulo agudo, negativo indica obtuso.": {
+    "fr": "C’est l’angle supplémentaire. Vérifiez le signe du produit scalaire : positif indique un angle aigu, négatif un angle obtus.",
+    "en": "That is the supplementary angle. Check the sign of the dot product: positive means an acute angle, negative an obtuse one."
   },
   "Esse é o índice antes da redução — a carga do metal, crua. Depois de dividir pelos fatores comuns, o índice é outro.": {
     "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
@@ -9779,6 +9847,10 @@
     "fr": "Il manque la gravité : la pression vient du POIDS de la colonne, et non de la masse.",
     "en": "Gravity is missing: the pressure comes from the WEIGHT of the column, not from the mass."
   },
+  "Faltou a parcela do eixo y: o produto escalar soma as duas contribuições.": {
+    "fr": "Il manque le terme de l’axe y : le produit scalaire additionne les deux contributions.",
+    "en": "The y-axis term is missing: the dot product adds both contributions."
+  },
   "Faltou a parcela que deriva x e mantém a função trigonométrica. A regra do produto sempre soma duas parcelas, nunca uma.": {
     "fr": "Il manque le terme qui dérive x et garde la fonction trigonométrique. La règle du produit additionne toujours deux termes, jamais un seul.",
     "en": "The term that differentiates x and keeps the trigonometric function is missing. The product rule always adds two terms, never one."
@@ -9911,6 +9983,10 @@
     "fr": "Il manque la division par la norme de la vitesse. Le produit scalaire seul n’est pas une projection : il doit être normalisé par la direction sur laquelle on projette.",
     "en": "Dividing by the magnitude of the velocity is missing. The dot product alone is not a projection: it has to be normalised by the direction being projected onto."
   },
+  "Faltou dividir pelo módulo de b. Sem essa divisão, o resultado depende do comprimento de b — e a projeção deve depender só da sua direção.": {
+    "fr": "Il manque la division par la norme de b. Sans elle, le résultat dépend de la longueur de b — or la projection ne doit dépendre que de sa direction.",
+    "en": "The division by the magnitude of b is missing. Without it the result depends on the length of b — and the projection should depend only on its direction."
+  },
   "Faltou dividir por # — a área do triângulo é base × altura / #.": {
     "fr": "Il manque la division par # — l’aire du triangle est base × hauteur / #.",
     "en": "The division by # is missing — the area of a triangle is base × height / #."
@@ -9971,6 +10047,10 @@
     "fr": "Il manque la division par a = #. Les relations ne donnent −b et c directement que si a = #.",
     "en": "Dividing by a = # is missing. The relations only give −b and c directly when a = #."
   },
+  "Faltou dividir por √(a² + b²) = √#. O numerador sozinho não é distância: muda se a equação da reta for multiplicada por um número.": {
+    "fr": "Il manque la division par √(a² + b²) = √#. Le numérateur seul n’est pas une distance : il change si l’équation de la droite est multipliée par un nombre.",
+    "en": "The division by √(a² + b²) = √# is missing. The numerator alone is not a distance: it changes if the line’s equation is multiplied by a number."
+  },
   "Faltou elevar a temperatura à QUARTA potência. É ela que separa a radiação das outras duas formas de transferência.": {
     "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
     "en": "Raising the temperature to the FOURTH power is missing. It is what sets radiation apart from the other two modes of transfer."
@@ -9990,6 +10070,10 @@
   "Faltou extrair a raiz quadrada: isso tem unidade de velocidade ao quadrado.": {
     "fr": "Il manque l’extraction de la racine carrée : cela a l’unité d’une vitesse au carré.",
     "en": "Taking the square root is missing: that has units of speed squared."
+  },
+  "Faltou inverter: a perpendicular tem inclinação −#/m, não −m.": {
+    "fr": "Il manque l’inversion : la perpendiculaire a pour pente −#/m, pas −m.",
+    "en": "The inversion is missing: the perpendicular has slope −#/m, not −m."
   },
   "Faltou multiplicar a L₁ por # antes de subtrair.": {
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
@@ -10054,6 +10138,14 @@
   "Faltou o #: π multiplica o DIÂMETRO, que é o dobro do raio. C = πd = #πr.": {
     "fr": "Il manque le # : π multiplie le DIAMÈTRE, qui vaut le double du rayon. C = πd = #πr.",
     "en": "The # is missing: π multiplies the DIAMETER, which is twice the radius. C = πd = #πr."
+  },
+  "Faltou o c = # no numerador: substitua o ponto na expressão INTEIRA ax + by + c.": {
+    "fr": "Il manque le c = # au numérateur : remplacez le point dans l’expression ENTIÈRE ax + by + c.",
+    "en": "The c = # is missing in the numerator: substitute the point into the WHOLE expression ax + by + c."
+  },
+  "Faltou o cosseno: a força está inclinada em relação ao deslocamento, e só a componente alinhada realiza trabalho.": {
+    "fr": "Il manque le cosinus : la force est inclinée par rapport au déplacement, et seule la composante alignée travaille.",
+    "en": "The cosine is missing: the force is tilted with respect to the displacement, and only the aligned component does work."
   },
   "Faltou o cosseno: só a componente da força alinhada ao deslocamento trabalha.": {
     "fr": "Il manque le cosinus : seule la composante de la force alignée sur le déplacement travaille.",
@@ -10202,6 +10294,10 @@
   "Faltou tirar o #: o fator (# + i) inclui o capital. A taxa é o que passa de #.": {
     "fr": "Il manque le retrait du # : le facteur (# + i) comprend le capital. Le taux est ce qui dépasse #.",
     "en": "Taking out the # is missing: the factor (# + i) includes the capital. The rate is what goes beyond #."
+  },
+  "Faltou trocar o sinal: a perpendicular tem inclinação −#/m, o produto tem de dar −#.": {
+    "fr": "Il manque le changement de signe : la perpendiculaire a pour pente −#/m, le produit doit valoir −#.",
+    "en": "The sign change is missing: the perpendicular has slope −#/m, and the product must be −#."
   },
   "Faltou trocar o sinal: perpendiculares têm inclinações de sinais opostos (produto −#).": {
     "fr": "Il manque le changement de signe : des perpendiculaires ont des pentes de signes opposés (produit −#).",
@@ -10382,6 +10478,10 @@
   "Força final × distância supõe força constante igual a #·#. Ela cresce desde #·#: integre.": {
     "fr": "Force finale × distance suppose une force constante égale à #·#. Elle croît depuis #·# : intégrez.",
     "en": "Final force × distance assumes a constant force equal to #·#. It grows from #·#: integrate."
+  },
+  "Força perpendicular ao deslocamento não realiza trabalho nenhum.": {
+    "fr": "Une force perpendiculaire au déplacement n’effectue aucun travail.",
+    "en": "A force perpendicular to the displacement does no work at all."
   },
   "Força perpendicular ao movimento não realiza trabalho — nem a normal, nem a força centrípeta.": {
     "fr": "Une force perpendiculaire au mouvement ne travaille pas — ni la normale, ni la force centripète.",
@@ -11379,6 +11479,10 @@
     "fr": "Même équivalence, maintenant dans l’autre sens : le taux du trimestre est l’inconnue.",
     "en": "Same equivalence, now the other way round: the quarter rate is the unknown."
   },
+  "Mesma inclinação é a condição de PARALELAS. Perpendicular é −#/m.": {
+    "fr": "Une même pente est la condition de PARALLÉLISME. La perpendiculaire vaut −#/m.",
+    "en": "The same slope is the condition for PARALLEL lines. Perpendicular is −#/m."
+  },
   "Mesma receita, sinal trocado — e dois ramos separados.": {
     "fr": "Même recette, signe changé — et deux branches séparées.",
     "en": "Same recipe, sign reversed — and two separate branches."
@@ -11483,6 +11587,10 @@
     "fr": "Nous multiplions l’aire d’origine par ce facteur.",
     "en": "We multiply the original area by that factor."
   },
+  "Multiplicamos as componentes correspondentes e somamos.": {
+    "fr": "Nous multiplions les composantes correspondantes et additionnons.",
+    "en": "We multiply the corresponding components and add."
+  },
   "Multiplicamos componente a componente e somamos.": {
     "fr": "Nous multiplions composante par composante et nous additionnons.",
     "en": "We multiply component by component and sum."
@@ -11542,6 +11650,10 @@
   "Multiplicamos pela altura.": {
     "fr": "Nous multiplions par la hauteur.",
     "en": "We multiply by the height."
+  },
+  "Multiplicamos pelo deslocamento.": {
+    "fr": "Nous multiplions par le déplacement.",
+    "en": "We multiply by the displacement."
   },
   "Multiplicamos pelo volume original.": {
     "fr": "Nous multiplions par le volume d’origine.",
@@ -12167,6 +12279,10 @@
     "fr": "Négative : la coupe s’ouvre vers le bas.",
     "en": "Negative: the cross-section opens downwards."
   },
+  "Negativo: o ângulo é obtuso.": {
+    "fr": "Négatif : l’angle est obtus.",
+    "en": "Negative: the angle is obtuse."
+  },
   "Negativo: raízes complexas, e o sistema oscila enquanto a amplitude decai.": {
     "fr": "Négatif : racines complexes, et le système oscille pendant que l’amplitude décroît.",
     "en": "Negative: complex roots, and the system oscillates while the amplitude decays."
@@ -12270,6 +12386,22 @@
   "No cilindro, a área da base se repete em cada fatia: vezes a altura.": {
     "fr": "Dans le cylindre, l’aire de la base se répète à chaque tranche : fois la hauteur.",
     "en": "In a cylinder the base area repeats in every slice: times the height."
+  },
+  "No cruzamento os dois y são iguais: #x + # = #x + #. Resolva para x e substitua numa das retas.": {
+    "fr": "Au point d’intersection les deux y sont égaux : #x + # = #x + #. Résolvez en x et remplacez dans l’une des droites.",
+    "en": "At the intersection both y are equal: #x + # = #x + #. Solve for x and substitute into one of the lines."
+  },
+  "No cruzamento os dois y são iguais: #x + # = #x − #. Resolva para x.": {
+    "fr": "Au point d’intersection les deux y sont égaux : #x + # = #x − #. Résolvez en x.",
+    "en": "At the intersection both y are equal: #x + # = #x − #. Solve for x."
+  },
+  "No cruzamento os dois y são iguais: #x − # = #x + #. Resolva para x.": {
+    "fr": "Au point d’intersection les deux y sont égaux : #x − # = #x + #. Résolvez en x.",
+    "en": "At the intersection both y are equal: #x − # = #x + #. Solve for x."
+  },
+  "No cruzamento os dois y são iguais: #x − # = #x − #. Resolva para x e substitua numa das retas.": {
+    "fr": "Au point d’intersection les deux y sont égaux : #x − # = #x − #. Résolvez en x et remplacez dans l’une des droites.",
+    "en": "At the intersection both y are equal: #x − # = #x − #. Solve for x and substitute into one of the lines."
   },
   "No cruzamento os dois y são iguais: #x − # = #x − #. Resolva para x.": {
     "fr": "Au croisement les deux y sont égaux : #x − # = #x − #. Résolvez pour x.",
@@ -13363,6 +13495,10 @@
     "fr": "Le dénominateur est x, et non x élevé à l’exposant : une fois la puissance descendue, ce qui reste dans le logarithme n’est que le x.",
     "en": "The denominator is x, not x to the exponent: once the power has come down, what is left inside the logarithm is only the x."
   },
+  "O denominador é √(a² + b²), não a + b: é o comprimento do vetor (a, b).": {
+    "fr": "Le dénominateur est √(a² + b²), pas a + b : c’est la longueur du vecteur (a, b).",
+    "en": "The denominator is √(a² + b²), not a + b: it is the length of the vector (a, b)."
+  },
   "O denominador: o comprimento do vetor normal (a, b).": {
     "fr": "Le dénominateur : la longueur du vecteur normal (a, b).",
     "en": "The denominator: the length of the normal vector (a, b)."
@@ -14379,6 +14515,10 @@
     "fr": "Le prisme a deux bases : # sommets sur chacune.",
     "en": "The prism has two bases: # vertices on each."
   },
+  "O produto ESCALAR mede alinhamento e usa cosseno. A área usa o produto vetorial, com seno — e os dois são opostos: um zera onde o outro é máximo.": {
+    "fr": "Le produit SCALAIRE mesure l’alignement et utilise le cosinus. L’aire utilise le produit vectoriel, avec le sinus — et les deux sont opposés : l’un s’annule là où l’autre est maximal.",
+    "en": "The DOT product measures alignment and uses cosine. The area uses the cross product, with sine — and the two are opposites: one vanishes where the other is greatest."
+  },
   "O produto dos autovalores é sempre o determinante. É por isso que uma matriz com autovalor zero não tem inversa.": {
     "fr": "Le produit des valeurs propres est toujours le déterminant. C’est pourquoi une matrice ayant une valeur propre nulle n’a pas d’inverse.",
     "en": "The product of the eigenvalues is always the determinant. That is why a matrix with a zero eigenvalue has no inverse."
@@ -14595,6 +14735,10 @@
     "fr": "Le résultat est d'un autre ordre de précision.",
     "en": "The result is of a different order of precision."
   },
+  "O resultado é um NÚMERO, não um vetor.": {
+    "fr": "Le résultat est un NOMBRE, pas un vecteur.",
+    "en": "The result is a NUMBER, not a vector."
+  },
   "O resultado é um vetor perpendicular aos dois.": {
     "fr": "Le résultat est un vecteur perpendiculaire aux deux.",
     "en": "The result is a vector perpendicular to both."
@@ -14714,6 +14858,10 @@
   "O sinal alternado não é decorativo: ele é o que faz a conta medir volume.": {
     "fr": "Le signe alterné n’est pas décoratif : c’est lui qui fait que le calcul mesure un volume.",
     "en": "The alternating sign is not decorative: it is what makes the computation measure volume."
+  },
+  "O sinal ao isolar n saiu trocado: n = y₀ − m′·x₀.": {
+    "fr": "Le signe en isolant n est inversé : n = y₀ − m′·x₀.",
+    "en": "The sign when isolating n came out flipped: n = y₀ − m′·x₀."
   },
   "O sinal da correção saiu trocado: a fórmula SUBTRAI f/f′ do ponto atual.": {
     "fr": "Le signe de la correction est inversé : la formule SOUSTRAIT f/f′ du point actuel.",
@@ -14839,6 +14987,10 @@
     "fr": "Le signe est inversé. Comme la formule est a = −D/#, le signe du centre est opposé à celui du coefficient.",
     "en": "The sign is flipped. Since the formula is a = −D/#, the sign of the centre is opposite to the coefficient’s."
   },
+  "O sinal está trocado. Confira a ordem das subtrações: as duas diferenças precisam usar os pontos na MESMA ordem.": {
+    "fr": "Le signe est inversé. Vérifiez l’ordre des soustractions : les deux différences doivent prendre les points dans le MÊME ordre.",
+    "en": "The sign is flipped. Check the order of the subtractions: both differences must take the points in the SAME order."
+  },
   "O sinal está trocado. Este átomo GANHA elétrons, e elétron é carga negativa.": {
     "fr": "Le signe est inversé. Cet atome GAGNE des électrons, et un électron porte une charge négative.",
     "en": "The sign is flipped. This atom GAINS electrons, and an electron carries negative charge."
@@ -14926,6 +15078,10 @@
   "O sinal saiu trocado: a soma é −b/a, com o MENOS na frente.": {
     "fr": "Le signe est inversé : la somme vaut −b/a, avec le MOINS devant.",
     "en": "The sign is flipped: the sum is −b/a, with the MINUS in front."
+  },
+  "O sinal saiu trocado: confira a ordem a₁b₂ − a₂b₁ no determinante e nos numeradores.": {
+    "fr": "Le signe est inversé : vérifiez l’ordre a₁b₂ − a₂b₁ dans le déterminant et dans les numérateurs.",
+    "en": "The sign came out flipped: check the order a₁b₂ − a₂b₁ in the determinant and in the numerators."
   },
   "O sinal saiu trocado: confira as operações de linha feitas no bloco da identidade.": {
     "fr": "Le signe est inversé : vérifiez les opérations de ligne faites dans le bloc de l’identité.",
@@ -15238,6 +15394,10 @@
   "O trabalho usa COSSENO. O seno aparece no torque, que mede giro, não deslocamento alinhado.": {
     "fr": "Le travail utilise le COSINUS. Le sinus apparaît dans le moment de force, qui mesure la rotation, pas un déplacement aligné.",
     "en": "Work uses COSINE. Sine appears in torque, which measures turning, not aligned displacement."
+  },
+  "O trabalho usa COSSENO. O seno apareceria no torque, que mede giro, não deslocamento alinhado.": {
+    "fr": "Le travail utilise le COSINUS. Le sinus apparaîtrait dans le moment de force, qui mesure la rotation, pas un déplacement aligné.",
+    "en": "Work uses COSINE. Sine would appear in torque, which measures turning, not aligned displacement."
   },
   "O trabalho usa a VARIAÇÃO de volume, não o volume final. Só a expansão realiza trabalho.": {
     "fr": "Le travail utilise la VARIATION de volume, pas le volume final. Seule la dilatation effectue un travail.",
@@ -16863,6 +17023,10 @@
     "fr": "Positif : deux racines réelles, et le système revient au repos sans osciller.",
     "en": "Positive: two real roots, and the system returns to rest without oscillating."
   },
+  "Positivo: o ângulo entre eles é agudo.": {
+    "fr": "Positif : l’angle entre eux est aigu.",
+    "en": "Positive: the angle between them is acute."
+  },
   "Posição deslocada: no triângulo de Pascal a contagem começa do # (o # da ponta é a posição #).": {
     "fr": "Position décalée : dans le triangle de Pascal, le compte commence à # (le # du bord est la position #).",
     "en": "Position off by one: in Pascal’s triangle the count starts at # (the # at the edge is position #)."
@@ -16995,6 +17159,14 @@
     "fr": "D’abord m = (# − #) / (# − (#)). Ensuite mettez A dans y = mx + q et isolez q.",
     "en": "First m = (# − #) / (# − (#)). Then put A into y = mx + q and isolate q."
   },
+  "Primeiro m = (# − (#)) / (# − #). Depois ponha A em y = mx + q e isole q.": {
+    "fr": "D’abord m = (# − (#)) / (# − #). Ensuite mettez A dans y = mx + q et isolez q.",
+    "en": "First m = (# − (#)) / (# − #). Then put A into y = mx + q and isolate q."
+  },
+  "Primeiro m = (# − (#)) / (# − (#)). Depois ponha A em y = mx + q e isole q.": {
+    "fr": "D’abord m = (# − (#)) / (# − (#)). Ensuite mettez A dans y = mx + q et isolez q.",
+    "en": "First m = (# − (#)) / (# − (#)). Then put A into y = mx + q and isolate q."
+  },
   "Primeiro o externo, suplementar do interno.": {
     "fr": "D’abord l’extérieur, supplémentaire de l’intérieur.",
     "en": "First the exterior angle, supplementary to the interior one."
@@ -17099,9 +17271,21 @@
     "fr": "Produit scalaire et modules des normais.",
     "en": "Dot product and magnitudes of the normais."
   },
+  "Produto negativo: o ângulo é obtuso.": {
+    "fr": "Produit négatif : l’angle est obtus.",
+    "en": "Negative product: the angle is obtuse."
+  },
+  "Produto positivo: o ângulo é agudo.": {
+    "fr": "Produit positif : l’angle est aigu.",
+    "en": "Positive product: the angle is acute."
+  },
   "Produção por máquina e por hora.": {
     "fr": "Production par machine et par heure.",
     "en": "Production per machine and per hour."
+  },
+  "Projeção negativa: a aponta para o lado oposto ao de b.": {
+    "fr": "Projection négative : a pointe du côté opposé à b.",
+    "en": "Negative projection: a points opposite to b."
   },
   "Q = C·V: # μF vezes # V dá a carga em μC.": {
     "fr": "Q = C·V : # μF fois # V donne la charge en μC.",
@@ -17691,9 +17875,17 @@
     "fr": "Signe positif : des charges de même signe se repoussent.",
     "en": "Positive sign: charges of the same sign repel."
   },
+  "Sinal trocado ao isolar q: de # = m·(#) + q, q = # − m·(#).": {
+    "fr": "Signe inversé en isolant q : à partir de # = m·(#) + q, on a q = # − m·(#).",
+    "en": "Sign flipped when isolating q: from # = m·(#) + q, q = # − m·(#)."
+  },
   "Sinal trocado ao isolar x em f″ = #.": {
     "fr": "Signe inversé au moment d’isoler x dans f″ = #.",
     "en": "Sign flipped when isolating x in f″ = #."
+  },
+  "Sinal trocado ao passar os termos de lado: o que soma de um lado passa subtraindo.": {
+    "fr": "Signe inversé en faisant passer les termes : ce qui s’ajoute d’un côté passe en soustrayant.",
+    "en": "Sign flipped when moving the terms across: what is added on one side moves over subtracting."
   },
   "Sinal trocado: D = a₁b₂ − a₂b₁ = # dá a₁k = a₂b₁.": {
     "fr": "Signe inversé : D = a₁b₂ − a₂b₁ = # donne a₁k = a₂b₁.",
@@ -18591,6 +18783,10 @@
     "fr": "Seule la composante de la force alignée avec le déplacement réalise du travail.",
     "en": "Only the component of the force aligned with the displacement does work."
   },
+  "Só a componente da força na direção do deslocamento realiza trabalho.": {
+    "fr": "Seule la composante de la force dans la direction du déplacement effectue un travail.",
+    "en": "Only the component of the force along the displacement does work."
+  },
   "Só a componente da velocidade PERPENDICULAR ao campo conta: por isso o seno.": {
     "fr": "Seule la composante de la vitesse PERPENDICULAIRE au champ compte : d’où le sinus.",
     "en": "Only the component of the velocity PERPENDICULAR to the field counts: hence the sine."
@@ -18974,6 +19170,10 @@
   "Trabalho negativo: a força se opõe ao movimento, como o atrito.": {
     "fr": "Travail négatif : la force s'oppose au mouvement, comme le frottement.",
     "en": "Negative work: the force opposes the motion, like friction."
+  },
+  "Trabalho negativo: a força se opõe ao movimento.": {
+    "fr": "Travail négatif : la force s’oppose au mouvement.",
+    "en": "Negative work: the force opposes the motion."
   },
   "Trabalho é força vezes deslocamento.": {
     "fr": "Le travail est la force fois le déplacement.",
@@ -19587,6 +19787,10 @@
     "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
     "en": "You added the charge. A positive charge is a MISSING electron: it enters by subtraction."
   },
+  "Você somou as diferenças. A distância é a HIPOTENUSA do triângulo formado por elas, e não a soma dos catetos — andar na diagonal é mais curto que andar pelos dois lados.": {
+    "fr": "Vous avez additionné les différences. La distance est l’HYPOTÉNUSE du triangle qu’elles forment, et non la somme des côtés — marcher en diagonale est plus court que longer les deux côtés.",
+    "en": "You added the differences. The distance is the HYPOTENUSE of the triangle they form, not the sum of the legs — walking the diagonal is shorter than walking both sides."
+  },
   "Você somou as massas atômicas sem multiplicar pelos índices. O número pequeno da fórmula conta ÁTOMOS, e cada um deles pesa.": {
     "fr": "Vous avez additionné les masses atomiques sans multiplier par les indices. Le petit nombre de la formule compte des ATOMES, et chacun pèse.",
     "en": "You added the atomic masses without multiplying by the subscripts. The small number in the formula counts ATOMS, and each one weighs."
@@ -19618,6 +19822,10 @@
   "Você tratou √(a² − x²) como (a − x). A raiz de uma diferença não é a diferença das raízes — é justamente por isso que a troca trigonométrica existe.": {
     "fr": "Vous avez traité √(a² − x²) comme (a − x). La racine d’une différence n’est pas la différence des racines — c’est précisément pour cela que le changement trigonométrique existe.",
     "en": "You treated √(a² − x²) as (a − x). The root of a difference is not the difference of the roots — that is precisely why the trigonometric substitution exists."
+  },
+  "Você usou a inclinação da reta dada: essa é a PARALELA por P. A perpendicular usa −#/m.": {
+    "fr": "Vous avez utilisé la pente de la droite donnée : c’est la PARALLÈLE passant par P. La perpendiculaire utilise −#/m.",
+    "en": "You used the slope of the given line: that is the PARALLEL through P. The perpendicular uses −#/m."
   },
   "Você usou apenas a base menor. Ambas as bases entram, pela média.": {
     "fr": "Vous n’avez utilisé que la petite base. Les deux bases entrent, par la moyenne.",
@@ -19730,6 +19938,10 @@
   "Vá por concentração × volume em litros → mols → vezes a massa molar → gramas. O caminho é o mesmo da definição, de trás para a frente.": {
     "fr": "Passez par concentration × volume en litres → moles → fois la masse molaire → grammes. Le chemin est celui de la définition, pris à l’envers.",
     "en": "Go through concentration × volume in litres → moles → times the molar mass → grams. The route is the definition, read backwards."
+  },
+  "W = F · d · cos θ = # × # × cos #°: só a parte da força ao longo do deslocamento trabalha.": {
+    "fr": "W = F · d · cos θ = # × # × cos #° : seule la part de la force le long du déplacement travaille.",
+    "en": "W = F · d · cos θ = # × # × cos #°: only the part of the force along the displacement does work."
   },
   "W = integral de F(x) de # a #. A primitiva de x² é x³/#.": {
     "fr": "W = intégrale de F(x) de # à #. La primitive de x² est x³/#.",
@@ -20186,6 +20398,10 @@
   "b precisa ir AO QUADRADO no discriminante: b² − #ac.": {
     "fr": "b doit être AU CARRÉ dans le discriminant : b² − #ac.",
     "en": "b has to be SQUARED in the discriminant: b² − #ac."
+  },
+  "cos θ = a·b / (|a| |b|): calcule o escalar (#)(#) + (#)(#), os dois módulos, e depois o arco-cosseno.": {
+    "fr": "cos θ = a·b / (|a| |b|) : calculez le produit scalaire (#)(#) + (#)(#), les deux normes, puis l’arc cosinus.",
+    "en": "cos θ = a·b / (|a| |b|): compute the dot product (#)(#) + (#)(#), both magnitudes, then the arccosine."
   },
   "cos θ = a·b / (|a| |b|): calcule o escalar, os dois módulos, divida e tire o arco-cosseno.": {
     "fr": "cos θ = a·b / (|a| |b|) : calculez le scalaire, les deux modules, divisez et prenez l’arc cosinus.",
