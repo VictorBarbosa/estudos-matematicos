@@ -387,6 +387,10 @@
     "fr": "L’abscisse du sommet est −b divisé par #a.",
     "en": "The vertex’s x-coordinate is −b divided by #a."
   },
+  "A aceleração só seria g na queda livre (plano vertical). No plano inclinado, apenas a componente do peso acelera o bloco.": {
+    "fr": "L’accélération ne vaudrait g qu’en chute libre (plan vertical). Sur un plan incliné, seule la composante du poids accélère le bloc.",
+    "en": "The acceleration would only be g in free fall (a vertical plane). On an incline, only the component of the weight accelerates the block."
+  },
   "A aceleração é a taxa de variação da velocidade: derivamos de novo.": {
     "fr": "L'accélération est le taux de variation de la vitesse : on dérive encore.",
     "en": "Acceleration is the rate of change of velocity: we differentiate again."
@@ -706,6 +710,10 @@
   "A condição que vale é x menor que #.": {
     "fr": "La condition qui s’applique est x inférieur à #.",
     "en": "The condition that applies is x less than #."
+  },
+  "A condição é tan θ = μ, não sen θ = μ. O atrito é proporcional à normal, que traz o cosseno para a conta.": {
+    "fr": "La condition est tan θ = μ, pas sin θ = μ. Le frottement est proportionnel à la normale, qui amène le cosinus dans le calcul.",
+    "en": "The condition is tan θ = μ, not sin θ = μ. Friction is proportional to the normal force, which brings the cosine into the computation."
   },
   "A constante MULTIPLICA a integral; ela não é somada ao resultado.": {
     "fr": "La constante MULTIPLIE l’intégrale ; elle ne s’ajoute pas au résultat.",
@@ -1111,6 +1119,10 @@
     "fr": "La division est inversée. On cherche combien de moles TIENNENT dans la masse donnée, donc la masse va au-dessus et la masse molaire en dessous.",
     "en": "The division is upside down. You want how many moles FIT in the given mass, so the mass goes on top and the molar mass below."
   },
+  "A divisão está invertida: a massa vai no denominador. Mais massa, menos aceleração para a mesma força.": {
+    "fr": "La division est inversée : la masse va au dénominateur. Plus de masse, moins d’accélération à force égale.",
+    "en": "The division is upside down: the mass goes in the denominator. More mass, less acceleration for the same force."
+  },
   "A divisão está invertida: o principal vai no DENOMINADOR, sempre.": {
     "fr": "La division est inversée : le déterminant principal va au DÉNOMINATEUR, toujours.",
     "en": "The division is upside down: the main determinant always goes in the DENOMINATOR."
@@ -1359,6 +1371,10 @@
     "fr": "La forme factorisée montre les deux prix de profit nul : celui du coût et celui qui annule la demande. Le maximum est à mi-chemin. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
     "en": "The factored form shows the two prices of zero profit: the cost one and the one that kills demand. The maximum sits halfway. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
   },
+  "A força aponta na direção do braço: o torque é ZERO, não F·r.": {
+    "fr": "La force pointe dans la direction du bras : le moment est NUL, pas F·r.",
+    "en": "The force points along the arm: the torque is ZERO, not F·r."
+  },
   "A força da mola cresce com x (lei de Hooke): o trabalho é a integral, não força × distância.": {
     "fr": "La force du ressort croît avec x (loi de Hooke) : le travail est l’intégrale, et non force × distance.",
     "en": "The spring force grows with x (Hooke’s law): the work is the integral, not force × distance."
@@ -1374,6 +1390,10 @@
   "A força magnética faz o papel de força centrípeta.": {
     "fr": "La force magnétique joue le rôle de force centripète.",
     "en": "The magnetic force plays the part of the centripetal force."
+  },
+  "A força na outra ponta precisa equilibrar os dois torques.": {
+    "fr": "La force à l’autre extrémité doit équilibrer les deux moments.",
+    "en": "The force at the other end has to balance both torques."
   },
   "A força é #x. Integre de # a #: W = (#/#)·(x₂² − x₁²).": {
     "fr": "La force vaut #x. Intégrez de # à # : W = (#/#)·(x₂² − x₁²).",
@@ -2039,6 +2059,14 @@
     "fr": "La moyenne est le point d’équilibre de l’échantillon.",
     "en": "The mean is the balance point of the sample."
   },
+  "A normal equilibra só a parte do peso perpendicular ao plano: N = m·g·cos #°.": {
+    "fr": "La normale n’équilibre que la part du poids perpendiculaire au plan : N = m·g·cos #°.",
+    "en": "The normal force balances only the part of the weight perpendicular to the incline: N = m·g·cos #°."
+  },
+  "A normal só iguala o peso num plano HORIZONTAL. Inclinado, ela é a componente perpendicular: N = mg·cos θ.": {
+    "fr": "La normale n’égale le poids que sur un plan HORIZONTAL. Sur un plan incliné, elle vaut la composante perpendiculaire : N = mg·cos θ.",
+    "en": "The normal force equals the weight only on a HORIZONTAL surface. On an incline it is the perpendicular component: N = mg·cos θ."
+  },
   "A normal é perpendicular aos dois: o produto vetorial (com a positivo).": {
     "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
     "en": "The normal is perpendicular to both: the cross product (with a positive)."
@@ -2206,6 +2234,10 @@
   "A pergunta é pela força de sustentação.": {
     "fr": "La question porte sur la force de portance.",
     "en": "The question asks for the lift force."
+  },
+  "A pergunta é pela força normal, a componente perpendicular ao plano.": {
+    "fr": "La question porte sur la force normale, la composante perpendiculaire au plan.",
+    "en": "The question asks for the normal force, the component perpendicular to the incline."
   },
   "A pergunta é pela fração de propelente, que é o complementar do que sobrou.": {
     "fr": "La question porte sur la fraction d’ergol, qui est le complément de ce qui reste.",
@@ -2523,6 +2555,10 @@
     "fr": "La proportion est inversée. Chaque côté se place sur le sinus de SON angle opposé — vérifiez quel sinus va au numérateur.",
     "en": "The proportion is upside down. Each side goes over the sine of ITS opposite angle — check which sine belongs in the numerator."
   },
+  "A proporção está invertida: força MENOR exige braço MAIOR, não menor. Iguale os torques e isole a distância.": {
+    "fr": "La proportion est inversée : une force PLUS FAIBLE exige un bras PLUS LONG, pas plus court. Égalez les moments et isolez la distance.",
+    "en": "The proportion is reversed: a SMALLER force demands a LONGER arm, not a shorter one. Set the torques equal and isolate the distance."
+  },
   "A proporção ficou de cabeça para baixo. Altura está para sombra assim como altura está para sombra — não troque os papéis entre as duas figuras.": {
     "fr": "La proportion est à l’envers. La hauteur est à l’ombre ce que la hauteur est à l’ombre — n’échangez pas les rôles entre les deux figures.",
     "en": "The proportion is upside down. Height is to shadow as height is to shadow — do not swap the roles between the two figures."
@@ -2835,6 +2871,10 @@
     "fr": "La relation d’Euler est F + V = A + 2.",
     "en": "Euler’s relation is F + V = E + 2."
   },
+  "A relação entre μ e o ângulo não é linear: é a tangente que faz a ponte.": {
+    "fr": "La relation entre μ et l’angle n’est pas linéaire : c’est la tangente qui fait le lien.",
+    "en": "The relation between μ and the angle is not linear: the tangent is what bridges them."
+  },
   "A relação está invertida: quem vale o DOBRO é o central. O inscrito, com o vértice na circunferência, enxerga o mesmo arco por metade do ângulo.": {
     "fr": "La relation est inversée : c’est l’angle au CENTRE qui vaut le double. L’inscrit, dont le sommet est sur le cercle, voit le même arc sous la moitié de l’angle.",
     "en": "The relation is backwards: it is the CENTRAL angle that is twice. The inscribed one, with its vertex on the circle, sees the same arc at half the angle."
@@ -2846,6 +2886,10 @@
   "A relação não é direta assim. Passe pelo ângulo externo: n = #° / aₑ.": {
     "fr": "La relation n’est pas aussi directe. Passez par l’angle extérieur : n = #° / aₑ.",
     "en": "The relation is not that direct. Go through the exterior angle: n = #° / aₑ."
+  },
+  "A relação é F = ma, então a aceleração é F DIVIDIDO por m. Multiplicar daria uma grandeza sem sentido aqui.": {
+    "fr": "La relation est F = ma, donc l’accélération vaut F DIVISÉ par m. Multiplier donnerait une grandeur sans signification ici.",
+    "en": "The relation is F = ma, so the acceleration is F DIVIDED by m. Multiplying would give a quantity with no meaning here."
   },
   "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
     "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
@@ -3667,6 +3711,10 @@
     "fr": "En dérivant −ax/(by) de nouveau, le y varie aussi : la règle du quotient apporte un y′ au numérateur. Traiter y comme une constante perd ce terme.",
     "en": "Differentiating −ax/(by) again, the y varies too: the quotient rule brings a y′ into the numerator. Treating y as a constant loses that term."
   },
+  "Ao longo do plano: a componente do peso, g·sen #°, puxa para baixo; o atrito, μ·g·cos #°, segura. A massa se cancela.": {
+    "fr": "Le long du plan : la composante du poids, g·sin #°, tire vers le bas ; le frottement, μ·g·cos #°, retient. La masse se simplifie.",
+    "en": "Along the incline: the component of the weight, g·sin #°, pulls down; friction, μ·g·cos #°, holds back. The mass cancels out."
+  },
   "Ao menor ângulo (#°) se opõe o menor lado. O oposto a #° é o maior cateto, √# vezes o outro.": {
     "fr": "Au plus petit angle (#°) s’oppose le plus petit côté. L’opposé à #° est la plus grande cathète, √# fois l’autre.",
     "en": "The smallest angle (#°) faces the shortest side. The one opposite #° is the longer leg, √# times the other."
@@ -3974,6 +4022,10 @@
   "As diferenças de coordenadas são os catetos.": {
     "fr": "Les différences de coordonnées sont les cathètes.",
     "en": "The coordinate differences are the legs."
+  },
+  "As distâncias só seriam iguais se as forças também fossem. Com forças diferentes, os braços têm de compensar.": {
+    "fr": "Les distances ne seraient égales que si les forces l’étaient aussi. Avec des forces différentes, les bras doivent compenser.",
+    "en": "The distances would be equal only if the forces were too. With different forces, the arms have to compensate."
   },
   "As duas camadas: a função de fora e o miolo.": {
     "fr": "Les deux couches : la fonction extérieure et le noyau.",
@@ -4298,6 +4350,10 @@
   "Balanceie primeiro, e não esqueça o coeficiente #, que não se escreve mas conta na soma. Os dois lados entram.": {
     "fr": "Équilibrez d’abord, et n’oubliez pas le coefficient #, qui ne s’écrit pas mais compte dans la somme. Les deux côtés entrent.",
     "en": "Balance first, and do not forget the coefficient #, which is not written but counts in the sum. Both sides take part."
+  },
+  "Barra homogênea tem centro de massa no meio — é o que permite tratá-la como ponto.": {
+    "fr": "Une barre homogène a son centre de masse au milieu — c’est ce qui permet de la traiter comme un point.",
+    "en": "A uniform bar has its centre of mass at the middle — that is what allows treating it as a point."
   },
   "Base e altura são ambas multiplicadas por k.": {
     "fr": "La base et la hauteur sont toutes deux multipliées par k.",
@@ -6959,6 +7015,10 @@
     "fr": "Diviser # par le taux donnerait le temps en intérêts SIMPLES. En composés, le capital rapporte sur lui-même, et double avant cela.",
     "en": "Dividing # by the rate would give the time for SIMPLE interest. With compound interest the capital earns on itself, and doubles sooner."
   },
+  "Dividir o peso total por dois só valeria se a carga estivesse no meio da barra. Com a carga descentrada, é preciso usar torques.": {
+    "fr": "Diviser le poids total par deux ne vaudrait que si la charge était au milieu de la barre. Avec une charge décentrée, il faut passer par les moments.",
+    "en": "Dividing the total weight by two would only work if the load were at the middle of the bar. With the load off-centre, you have to use torques."
+  },
   "Dividir o total por # supõe que só existe a primeira quantidade. São duas incógnitas: monte as duas equações.": {
     "fr": "Diviser le total par # suppose qu’il n’existe que la première quantité. Il y a deux inconnues : montez les deux équations.",
     "en": "Dividing the total by # assumes only the first quantity exists. There are two unknowns: set up both equations."
@@ -7058,6 +7118,10 @@
   "Dobrar não é dividir # pela base. O t aparece no EXPOENTE, então é preciso usar logaritmo para isolá-lo.": {
     "fr": "Doubler n’est pas diviser # par la base. Le t apparaît dans l’EXPOSANT, il faut donc un logarithme pour l’isoler.",
     "en": "Doubling is not dividing # by the base. The t appears in the EXPONENT, so a logarithm is needed to isolate it."
+  },
+  "Dobrar o braço dobra o torque com a mesma força — é a vantagem da alavanca.": {
+    "fr": "Doubler le bras double le moment à force égale — c’est l’avantage du levier.",
+    "en": "Doubling the arm doubles the torque with the same force — that is the advantage of the lever."
   },
   "Dobrar o lado não dobra a área: quadruplica.": {
     "fr": "Doubler le côté ne double pas l’aire : elle quadruple.",
@@ -8695,6 +8759,10 @@
     "fr": "Cette expression est continue, il suffit donc de substituer le point.",
     "en": "That piece is continuous, so it is enough to substitute the point."
   },
+  "Essa seria a soma das forças, que a reação no apoio também ajuda a equilibrar. A pergunta é de TORQUE em relação ao apoio.": {
+    "fr": "Ce serait la somme des forces, que la réaction à l’appui contribue aussi à équilibrer. La question porte sur le MOMENT par rapport à l’appui.",
+    "en": "That would be the sum of the forces, which the reaction at the support also helps to balance. The question is about TORQUE about the support."
+  },
   "Essa é a ALTURA relativa à hipotenusa, não a projeção do cateto.": {
     "fr": "C’est la HAUTEUR relative à l’hypoténuse, et non la projection de la cathète.",
     "en": "That is the ALTITUDE to the hypotenuse, not the projection of the leg."
@@ -8714,6 +8782,10 @@
   "Essa é a ENERGIA potencial, em joules. A pergunta pede velocidade, em m/s: falta igualar à cinética e isolar v.": {
     "fr": "C'est l'ÉNERGIE potentielle, en joules. La question demande une vitesse, en m/s : il reste à l'égaler à l'énergie cinétique et à isoler v.",
     "en": "That is the potential ENERGY, in joules. The question asks for a speed, in m/s: you still have to set it equal to the kinetic energy and isolate v."
+  },
+  "Essa é a FORÇA em newtons, não a aceleração. Falta dividir pela massa.": {
+    "fr": "C’est la FORCE en newtons, pas l’accélération. Il reste à diviser par la masse.",
+    "en": "That is the FORCE in newtons, not the acceleration. You still have to divide by the mass."
   },
   "Essa é a INCLINAÇÃO da tangente, a derivada. Falta usar o ponto para achar onde a reta corta o eixo y.": {
     "fr": "C’est la PENTE de la tangente, la dérivée. Il reste à utiliser le point pour trouver où la droite coupe l’axe des ordonnées.",
@@ -8786,6 +8858,10 @@
   "Essa é a componente NORMAL, que curva a trajetória. A tangencial é a que acelera ou freia o movimento.": {
     "fr": "C’est la composante NORMALE, qui courbe la trajectoire. La tangentielle est celle qui accélère ou freine le mouvement.",
     "en": "That is the NORMAL component, which bends the path. The tangential one is what speeds up or slows down the motion."
+  },
+  "Essa é a componente PARALELA ao plano, que tende a fazer o bloco descer. A normal é a perpendicular, com cosseno.": {
+    "fr": "C’est la composante PARALLÈLE au plan, qui tend à faire descendre le bloc. La normale est la perpendiculaire, avec le cosinus.",
+    "en": "That is the component PARALLEL to the incline, which tends to make the block slide down. The normal one is the perpendicular, with cosine."
   },
   "Essa é a componente do produto VETORIAL (aₓb_y − a_ybₓ). O escalar soma os produtos correspondentes; o vetorial os subtrai cruzados.": {
     "fr": "C’est la composante du produit VECTORIEL (aₓb_y − a_ybₓ). Le produit scalaire additionne les produits correspondants ; le vectoriel les soustrait en croisé.",
@@ -9030,6 +9106,10 @@
   "Essa é a média de y. O intercepto só coincide com ela quando a média de x é zero, o que aqui não acontece.": {
     "fr": "C’est la moyenne de y. L’ordonnée à l’origine ne coïncide avec elle que si la moyenne de x est nulle, ce qui n’est pas le cas ici.",
     "en": "That is the mean of y. The intercept only coincides with it when the mean of x is zero, which is not the case here."
+  },
+  "Essa é a média simples das POSIÇÕES, que ignora as massas. O centro de massa é uma média ponderada: corpos pesados puxam mais.": {
+    "fr": "C’est la moyenne simple des POSITIONS, qui ignore les masses. Le centre de masse est une moyenne pondérée : les corps lourds tirent davantage.",
+    "en": "That is the plain average of the POSITIONS, which ignores the masses. The centre of mass is a weighted average: heavy bodies pull harder."
   },
   "Essa é a nota que se ouve (a média). Os batimentos por segundo são a DIFERENÇA.": {
     "fr": "C’est la note qu’on entend (la moyenne). Les battements par seconde sont la DIFFÉRENCE.",
@@ -9370,6 +9450,10 @@
   "Esse é o PERÍODO, o número de camadas ocupadas. O grupo é a coluna, e vem da contagem da última camada.": {
     "fr": "Ceci est la PÉRIODE, le nombre de couches occupées. Le groupe est la colonne, et vient du compte de la dernière couche.",
     "en": "That is the PERIOD, the number of occupied shells. The group is the column, and comes from the outer-shell count."
+  },
+  "Esse é o PESO do corpo, em newtons. A força dada já é a resultante; o peso não entra num movimento horizontal.": {
+    "fr": "C’est le POIDS du corps, en newtons. La force donnée est déjà la résultante ; le poids n’intervient pas dans un mouvement horizontal.",
+    "en": "That is the WEIGHT of the body, in newtons. The given force is already the net force; the weight does not enter a horizontal motion."
   },
   "Esse é o PESO do corpo, que usa a densidade DELE. O empuxo usa a densidade do FLUIDO deslocado.": {
     "fr": "C’est le POIDS du corps, qui utilise SA masse volumique. La poussée utilise la masse volumique du FLUIDE déplacé.",
@@ -9746,6 +9830,10 @@
   "Esse é o valor aproximado, não o erro. O erro é a diferença até o exato.": {
     "fr": "C’est la valeur approchée, et non l’erreur. L’erreur est l’écart jusqu’à la valeur exacte.",
     "en": "That is the approximate value, not the error. The error is the gap to the exact one."
+  },
+  "Esse é o valor da ACELERAÇÃO, em m/s². A pergunta pede a força resultante, em newtons.": {
+    "fr": "C’est la valeur de l’ACCÉLÉRATION, en m/s². La question demande la force résultante, en newtons.",
+    "en": "That is the value of the ACCELERATION, in m/s². The question asks for the net force, in newtons."
   },
   "Esse é o valor da derivada PRIMEIRA. Falta derivar mais uma vez.": {
     "fr": "C’est la valeur de la dérivée PREMIÈRE. Il reste à dériver une fois de plus.",
@@ -10639,6 +10727,10 @@
     "fr": "Il manque le sinus de # degrés. Seule la part de la vitesse perpendiculaire au rayon contribue à la rotation ; la part alignée avec lui ne fait rien tourner.",
     "en": "The sine of # degrees is missing. Only the part of the velocity perpendicular to the radius contributes to the turning; the part aligned with it turns nothing."
   },
+  "Faltou o seno: só a componente perpendicular ao braço produz giro.": {
+    "fr": "Il manque le sinus : seule la composante perpendiculaire au bras produit une rotation.",
+    "en": "The sine is missing: only the component perpendicular to the arm produces turning."
+  },
   "Faltou o sinal negativo ao isolar x. Ao passar b para o outro lado da igualdade, ele troca de sinal.": {
     "fr": "Il manque le signe négatif en isolant x. En passant b de l’autre côté de l’égalité, il change de signe.",
     "en": "The negative sign is missing when isolating x. Moving b to the other side of the equation flips its sign."
@@ -10886,6 +10978,14 @@
   "Força final × distância supõe força constante igual a #·#. Ela cresce desde #·#: integre.": {
     "fr": "Force finale × distance suppose une force constante égale à #·#. Elle croît depuis #·# : intégrez.",
     "en": "Final force × distance assumes a constant force equal to #·#. It grows from #·#: integrate."
+  },
+  "Força menor exige braço maior — é o princípio da alavanca de Arquimedes.": {
+    "fr": "Une force plus faible exige un bras plus long — c’est le principe du levier d’Archimède.",
+    "en": "A smaller force demands a longer arm — that is Archimedes’ principle of the lever."
+  },
+  "Força na direção do braço não produz torque: empurrar a porta pela dobradiça não a abre.": {
+    "fr": "Une force dans la direction du bras ne produit aucun moment : pousser la porte au niveau de la charnière ne l’ouvre pas.",
+    "en": "A force along the arm produces no torque: pushing a door at the hinge does not open it."
   },
   "Força perpendicular ao deslocamento não realiza trabalho nenhum.": {
     "fr": "Une force perpendiculaire au déplacement n’effectue aucun travail.",
@@ -11338,6 +11438,10 @@
   "Isolando a distância procurada.": {
     "fr": "En isolant la distance recherchée.",
     "en": "Isolating the sought distance."
+  },
+  "Isolando a força.": {
+    "fr": "En isolant la force.",
+    "en": "Isolating the force."
   },
   "Isolando a pressão no segundo ponto.": {
     "fr": "En isolant la pression au second point.",
@@ -12351,6 +12455,10 @@
     "fr": "La moyenne de trois contrôles vaut (somme)/#. Multipliez les deux côtés par # — il est positif, le sens ne change pas — puis retirez la somme des deux notes déjà obtenues.",
     "en": "The average of three tests is (sum)/#. Multiply both sides by # — it is positive, so the direction does not change — then subtract the sum of the two marks already obtained."
   },
+  "Média ponderada: some massa × posição dos três e divida pela massa total.": {
+    "fr": "Moyenne pondérée : additionnez masse × position pour les trois et divisez par la masse totale.",
+    "en": "Weighted average: add mass × position for the three and divide by the total mass."
+  },
   "Módulo maior que #: o que está dentro fica LONGE de zero, abaixo de −# ou acima de #.": {
     "fr": "Valeur absolue supérieure à # : ce qui est à l’intérieur reste LOIN de zéro, en dessous de −# ou au-dessus de #.",
     "en": "Absolute value greater than #: what is inside stays FAR from zero, below −# or above #."
@@ -12811,6 +12919,10 @@
     "fr": "Dans cette région une seule des expressions s’applique.",
     "en": "In that region only one of the pieces applies."
   },
+  "Nesse caso o atrito vale exatamente Pₓ, não o máximo.": {
+    "fr": "Dans ce cas le frottement vaut exactement Pₓ, pas son maximum.",
+    "en": "In this case friction equals exactly Pₓ, not its maximum."
+  },
   "Nesse caso o que se conserva é o PRODUTO, não a razão.": {
     "fr": "Dans ce cas ce qui se conserve est le PRODUIT, pas le rapport.",
     "en": "In this case what stays fixed is the PRODUCT, not the ratio."
@@ -13126,6 +13238,10 @@
   "No vértice, o lado segue em linha reta: o interno e o externo completam #°, então o externo é #° − #°. Andando o contorno inteiro, você gira um externo em cada vértice e termina olhando para o mesmo lado do começo — uma volta completa, #°.": {
     "fr": "Au sommet, le côté continue en ligne droite : l’intérieur et l’extérieur complètent #°, donc l’extérieur vaut #° − #°. En parcourant tout le contour, vous tournez d’un angle extérieur à chaque sommet et finissez en regardant du même côté qu’au départ — un tour complet, #°.",
     "en": "At the vertex the side continues in a straight line: the interior and the exterior make up #°, so the exterior is #° − #°. Walking the whole outline, you turn by one exterior angle at each vertex and end up facing the same way as at the start — a full turn, #°."
+  },
+  "No ângulo crítico o atrito máximo iguala a componente do peso: tan θ = μ, e θ = arctan μ.": {
+    "fr": "À l’angle critique le frottement maximal égale la composante du poids : tan θ = μ, et θ = arctan μ.",
+    "en": "At the critical angle the maximum friction equals the component of the weight: tan θ = μ, and θ = arctan μ."
   },
   "No ângulo crítico o raio refratado sai rasante: θ₂ = #°, e sen #° = #.": {
     "fr": "À l’angle critique le rayon réfracté sort rasant : θ₂ = #°, et sin #° = #.",
@@ -13611,6 +13727,10 @@
     "fr": "L’arrangement tend vers un rectangle de base la moitié du périmètre et de hauteur r.",
     "en": "The arrangement tends to a rectangle with base half the perimeter and height r."
   },
+  "O atrito age CONTRA o movimento, então entra com sinal negativo. Somar as duas daria a resultante de forças no mesmo sentido.": {
+    "fr": "Le frottement agit CONTRE le mouvement, il entre donc avec un signe négatif. Les additionner donnerait la résultante de forces de même sens.",
+    "en": "Friction acts AGAINST the motion, so it enters with a negative sign. Adding the two would give the resultant of forces in the same direction."
+  },
   "O atrito dá conta da componente do peso: o bloco fica parado.": {
     "fr": "Le frottement fait face à la composante du poids : le bloc reste immobile.",
     "en": "Friction handles the weight component: the block stays still."
@@ -13618,6 +13738,10 @@
   "O atrito máximo é proporcional à normal.": {
     "fr": "Le frottement maximum est proportionnel à la normale.",
     "en": "The maximum friction is proportional to the normal."
+  },
+  "O atrito não depende da área de contato, mas de quanto o corpo é comprimido.": {
+    "fr": "Le frottement ne dépend pas de l’aire de contact, mais de la force avec laquelle le corps est pressé.",
+    "en": "Friction does not depend on the contact area, but on how hard the body is pressed."
   },
   "O aumento compara as distâncias; o sinal de menos diz se a imagem inverte.": {
     "fr": "Le grandissement compare les distances ; le signe moins dit si l’image est renversée.",
@@ -13754,6 +13878,10 @@
   "O cateto oposto se relaciona com a hipotenusa pelo seno.": {
     "fr": "La cathète opposée se relie à l’hypoténuse par le sinus.",
     "en": "The opposite leg relates to the hypotenuse through the sine."
+  },
+  "O centro de massa fica sempre mais perto do corpo mais pesado.": {
+    "fr": "Le centre de masse est toujours plus proche du corps le plus lourd.",
+    "en": "The centre of mass always lies closer to the heavier body."
   },
   "O centro de massa é a média das posições pesada pela massa de cada pedacinho.": {
     "fr": "Le centre de masse est la moyenne des positions pondérée par la masse de chaque petit morceau.",
@@ -14935,6 +15063,10 @@
     "fr": "La période est un temps, donc l’expression doit avoir la dimension T.",
     "en": "The period is a time, so the expression must have dimension T."
   },
+  "O peso da barra atua no centro de massa, no meio dela.": {
+    "fr": "Le poids de la barre s’applique au centre de masse, en son milieu.",
+    "en": "The weight of the bar acts at the centre of mass, at its middle."
+  },
   "O peso de cada corpo é a sua capacidade térmica, não a sua massa sozinha.": {
     "fr": "Le poids de chaque corps est sa capacité thermique, et non sa masse seule.",
     "en": "The weight of each body is its heat capacity, not its mass alone."
@@ -15975,6 +16107,10 @@
     "fr": "Le couple mesure la capacité d'une force de produire une rotation.",
     "en": "Torque measures the ability of a force to produce rotation."
   },
+  "O torque usa SENO. O cosseno aparece no trabalho, que mede deslocamento alinhado, não rotação.": {
+    "fr": "Le moment de force utilise le SINUS. Le cosinus apparaît dans le travail, qui mesure un déplacement aligné, pas une rotation.",
+    "en": "Torque uses SINE. Cosine appears in work, which measures aligned displacement, not rotation."
+  },
   "O total de faces.": {
     "fr": "Le total des faces.",
     "en": "The total number of faces."
@@ -16250,6 +16386,10 @@
   "O ângulo EXTERNO é o suplemento do interno.": {
     "fr": "L’angle EXTÉRIEUR est le supplémentaire de l’intérieur.",
     "en": "The EXTERIOR angle is the supplement of the interior one."
+  },
+  "O ângulo crítico não depende da massa: um bloco leve e um pesado deslizam juntos.": {
+    "fr": "L’angle critique ne dépend pas de la masse : un bloc léger et un bloc lourd glissent au même moment.",
+    "en": "The critical angle does not depend on the mass: a light block and a heavy one slide at the same time."
   },
   "O ângulo cujo seno é esse.": {
     "fr": "L’angle dont c’est le sinus.",
@@ -18475,6 +18615,10 @@
     "fr": "Le sinus est le y du point, le cosinus le x, la tangente y/x. Regardez le quadrant.",
     "en": "Sine is the point’s y, cosine its x, tangent y/x. Look at the quadrant."
   },
+  "Seno, porque é o cateto oposto ao ângulo do plano.": {
+    "fr": "Sinus, car c’est le côté opposé à l’angle du plan.",
+    "en": "Sine, because it is the leg opposite the angle of the incline."
+  },
   "Sentido trocado: cargas de mesmo sinal se REPELEM — a força de A sobre M aponta para longe de A.": {
     "fr": "Sens inversé : des charges de même signe se REPOUSSENT — la force de A sur M pointe à l’opposé de A.",
     "en": "Direction flipped: charges of the same sign REPEL — the force of A on M points away from A."
@@ -18699,6 +18843,10 @@
     "fr": "Nous additionnons les carrés.",
     "en": "We add the squares."
   },
+  "Somamos os torques em relação ao apoio. A carga produz torque pelo seu braço.": {
+    "fr": "Nous additionnons les moments par rapport à l’appui. La charge produit un moment par son bras.",
+    "en": "We add the torques about the support. The load produces torque through its arm."
+  },
   "Somamos todas.": {
     "fr": "Nous les additionnons toutes.",
     "en": "We add them all up."
@@ -18866,6 +19014,10 @@
   "Some as fem com sinal (no mesmo sentido se somam) e divida pela resistência total # + #.": {
     "fr": "Additionnez les f.é.m. avec leur signe (no mesmo sentido se somam) et divisez par la résistance totale # + #.",
     "en": "Add the emfs with their sign (no mesmo sentido se somam) and divide by the total resistance # + #."
+  },
+  "Some as forças com os sinais de cada sentido.": {
+    "fr": "Additionnez les forces avec le signe de chaque sens.",
+    "en": "Add the forces with the sign of each direction."
   },
   "Some as massas atômicas de CH₄, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
     "fr": "Additionnez les masses atomiques de CH₄, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
@@ -19515,6 +19667,10 @@
     "fr": "Seule la composante du champ le long du chemin effectue un travail.",
     "en": "Only the component of the field along the path does work."
   },
+  "Só a componente perpendicular ao braço gira o corpo.": {
+    "fr": "Seule la composante perpendiculaire au bras fait tourner le corps.",
+    "en": "Only the component perpendicular to the arm turns the body."
+  },
   "Só a coordenada x.": {
     "fr": "Seulement la coordonnée x.",
     "en": "Only the x coordinate."
@@ -19886,6 +20042,10 @@
   "Tomar o módulo remove o sinal, mas não é isso que o quadrado faz. A fração explicada é r ao quadrado, que é sempre menor que o módulo quando r está entre # e #.": {
     "fr": "Prendre la valeur absolue enlève le signe, mais ce n’est pas ce que fait le carré. La fraction expliquée est r au carré, toujours plus petite que la valeur absolue lorsque r est entre # et #.",
     "en": "Taking the absolute value removes the sign, but that is not what squaring does. The explained fraction is r squared, which is always smaller than the absolute value when r is between # and #."
+  },
+  "Tome torques em relação ao apoio: o peso da barra age no meio (#/# m), a carga a # m, e a força que você procura na ponta, a # m.": {
+    "fr": "Prenez les moments par rapport à l’appui : le poids de la barre agit au milieu (#/# m), la charge à # m, et la force cherchée à l’extrémité, à # m.",
+    "en": "Take torques about the support: the bar’s weight acts at the middle (#/# m), the load at # m, and the force you are after at the end, at # m."
   },
   "Tome u = ln x. A escolha certa é a que simplifica ao derivar.": {
     "fr": "Prenez u = ln x. Le bon choix est celui qui se simplifie en dérivant.",
@@ -20483,9 +20643,17 @@
     "fr": "Vous n’avez écrit que le premier terme de la règle. Il reste à ajouter f·g′, qui traite de la variation du second facteur.",
     "en": "You wrote only the first term of the rule. Adding f·g′, which handles the variation of the second factor, is still missing."
   },
+  "Você esqueceu o peso da própria barra, que atua no centro dela e também produz torque.": {
+    "fr": "Vous avez oublié le poids de la barre elle-même, qui s’applique en son centre et produit aussi un moment.",
+    "en": "You forgot the weight of the bar itself, which acts at its centre and also produces torque."
+  },
   "Você esqueceu que i² = −#: o produto das partes imaginárias entra SUBTRAINDO na parte real.": {
     "fr": "Vous avez oublié que i² = −# : le produit des parties imaginaires entre en SOUSTRACTION dans la partie réelle.",
     "en": "You forgot that i² = −#: the product of the imaginary parts enters the real part by SUBTRACTION."
+  },
+  "Você ignorou o atrito, que se opõe ao deslizamento e reduz a aceleração.": {
+    "fr": "Vous avez ignoré le frottement, qui s’oppose au glissement et réduit l’accélération.",
+    "en": "You ignored friction, which opposes the sliding and reduces the acceleration."
   },
   "Você igualou os denominadores antes de multiplicar. Isso é necessário na soma e na subtração, mas na multiplicação não — e aqui altera o resultado.": {
     "fr": "Vous avez égalisé les dénominateurs avant de multiplier. C’est nécessaire pour l’addition et la soustraction, mais pas pour la multiplication — et ici cela change le résultat.",
@@ -20566,6 +20734,10 @@
   "Você somou em vez de subtrair. A = Z + n, então n = A − Z.": {
     "fr": "Vous avez additionné au lieu de soustraire. A = Z + n, donc n = A − Z.",
     "en": "You added instead of subtracting. A = Z + n, so n = A − Z."
+  },
+  "Você somou os produtos massa × posição mas não dividiu pela massa total.": {
+    "fr": "Vous avez additionné les produits masse × position mais n’avez pas divisé par la masse totale.",
+    "en": "You added the products mass × position but did not divide by the total mass."
   },
   "Você somou só dois lados. O perímetro é a volta inteira: duas larguras e dois comprimentos.": {
     "fr": "Vous n’avez additionné que deux côtés. Le périmètre est le tour complet : deux largeurs et deux longueurs.",
@@ -21206,6 +21378,14 @@
   "f(número) quer dizer: troque todo x por esse número e calcule.": {
     "fr": "f(nombre) veut dire : remplacez tout x par ce nombre et calculez.",
     "en": "f(number) means: replace every x by that number and compute."
+  },
+  "força aplicada; atrito": {
+    "fr": "force appliquée ; frottement",
+    "en": "applied force; friction"
+  },
+  "força resultante": {
+    "fr": "force résultante",
+    "en": "net force"
   },
   "f′ = f·(v + vₒ)/(v − v_f): vₒ = # e v_f = # (positivos quando se aproximam).": {
     "fr": "f′ = f·(v + vₒ)/(v − v_f) : vₒ = # et v_f = # (positifs quand ils s’approchent).",
@@ -21978,6 +22158,10 @@
   "τ = R·C: # kΩ vezes # μF dá direto em milissegundos (#³ × #⁻⁶ = #⁻³).": {
     "fr": "τ = R·C : # kΩ fois # μF donne directement des millisecondes (#³ × #⁻⁶ = #⁻³).",
     "en": "τ = R·C: # kΩ times # μF gives milliseconds directly (#³ × #⁻⁶ = #⁻³)."
+  },
+  "τ = r·F·sen θ": {
+    "fr": "τ = r·F·sin θ",
+    "en": "τ = r·F·sin θ"
   },
   "∀ é \"para todo\", e exige de todos. \"Existe\" é ∃, que pede apenas um.": {
     "fr": "∀ veut dire « pour tout », et l’exige de tous. « Il existe » est ∃, qui n’en demande qu’un.",
