@@ -523,6 +523,10 @@
     "fr": "La base triangular a # côtés.",
     "en": "The triangular base has # sides."
   },
+  "A base é e, não #. O logaritmo da equação do foguete é natural, porque vem da integral de #/m.": {
+    "fr": "La base est e, pas #. Le logarithme de l’équation de la fusée est naturel, car il vient de l’intégrale de #/m.",
+    "en": "The base is e, not #. The logarithm in the rocket equation is natural, because it comes from the integral of #/m."
+  },
   "A base é um círculo, e nela o raio vai ao quadrado.": {
     "fr": "La base est un cercle, et là le rayon passe au carré.",
     "en": "The base is a circle, and there the radius goes squared."
@@ -2071,6 +2075,10 @@
     "fr": "La question porte sur la force de portance.",
     "en": "The question asks for the lift force."
   },
+  "A pergunta é pela fração de propelente, que é o complementar do que sobrou.": {
+    "fr": "La question porte sur la fraction d’ergol, qui est le complément de ce qui reste.",
+    "en": "The question asks for the propellant fraction, which is the complement of what is left."
+  },
   "A pergunta é pela parte imaginária.": {
     "fr": "La question porte sur la partie imaginaire.",
     "en": "The question asks for the imaginary part."
@@ -2487,6 +2495,10 @@
     "fr": "Le rapport agit directement sur la quantité de matière.",
     "en": "The ratio acts directly on the amount of substance."
   },
+  "A razão de massas entra dentro de um LOGARITMO, não multiplicando. É justamente isso que torna o delta-v tão caro.": {
+    "fr": "Le rapport de masses entre dans un LOGARITHME, il ne multiplie pas. C’est précisément ce qui rend le delta-v si coûteux.",
+    "en": "The mass ratio goes inside a LOGARITHM, it does not multiply. That is exactly what makes delta-v so expensive."
+  },
   "A razão entre a intensidade e a de referência.": {
     "fr": "Le rapport entre l’intensité et celle de référence.",
     "en": "The ratio between the intensity and the reference one."
@@ -2671,6 +2683,10 @@
     "fr": "La relation est moment de force ÉGAL à inertie fois accélération angulaire. Pour trouver l’accélération, on divise le moment de force par l’inertie.",
     "en": "The relation is torque EQUALS inertia times angular acceleration. To find the acceleration, you divide the torque by the inertia."
   },
+  "A relação é uma DIVISÃO pela gravidade padrão: é ela que converte velocidade em segundos.": {
+    "fr": "La relation est une DIVISION par la gravité standard : c’est elle qui convertit une vitesse en secondes.",
+    "en": "The relation is a DIVISION by standard gravity: that is what turns a speed into seconds."
+  },
   "A relação é uma divisão: quanto maior a desaceleração, MENOR o tempo de parada.": {
     "fr": "La relation est une division : plus la décélération est grande, PLUS COURT est le temps d’arrêt.",
     "en": "The relation is a division: the greater the deceleration, the SHORTER the stopping time."
@@ -2678,6 +2694,10 @@
   "A resistência térmica é o análogo da resistência elétrica.": {
     "fr": "La résistance thermique est l'analogue de la résistance électrique.",
     "en": "Thermal resistance is the analogue of electrical resistance."
+  },
+  "A resposta é pedida em kN, e # kN são # N.": {
+    "fr": "La réponse est demandée en kN, et # kN font # N.",
+    "en": "The answer is asked for in kN, and # kN is # N."
   },
   "A resposta é pedida em kPa, e # kPa são # Pa.": {
     "fr": "La réponse est demandée en kPa, et # kPa font # Pa.",
@@ -3223,6 +3243,10 @@
     "fr": "Ouvert aux deux extrémités : fₙ = n·v/(#L), comme sur la corde.",
     "en": "Open at both ends: fₙ = n·v/(#L), as on the string."
   },
+  "Abrindo o determinante, aparece o polinômio característico.": {
+    "fr": "En développant le déterminant, le polynôme caractéristique apparaît.",
+    "en": "Expanding the determinant, the characteristic polynomial appears."
+  },
   "Aceleração constante significa somar a mesma quantidade a cada segundo.": {
     "fr": "Une accélération constante signifie ajouter la même quantité à chaque seconde.",
     "en": "Constant acceleration means adding the same amount every second."
@@ -3555,6 +3579,10 @@
     "fr": "Nous appliquons terme à terme.",
     "en": "We apply term by term."
   },
+  "Aplicando a exponencial dos dois lados.": {
+    "fr": "En appliquant l’exponentielle des deux côtés.",
+    "en": "Applying the exponential to both sides."
+  },
   "Aplicando ao caso.": {
     "fr": "Application au cas présent.",
     "en": "Applying it to this case."
@@ -3847,9 +3875,17 @@
     "fr": "Les racines rationnelles possibles viennent des diviseurs du terme constant et du coefficient dominant.",
     "en": "The possible rational roots come from the divisors of the constant term and the leading coefficient."
   },
+  "As raízes são a própria diagonal, sem conta nenhuma.": {
+    "fr": "Les racines sont la diagonale elle-même, sans aucun calcul.",
+    "en": "The roots are the diagonal itself, with no computation at all."
+  },
   "As raízes são complexas; a parte real dá o decaimento, a imaginária a oscilação.": {
     "fr": "Les racines sont complexes ; la partie réelle donne la décroissance, l’imaginaire l’oscillation.",
     "en": "The roots are complex; the real part gives the decay, the imaginary one the oscillation."
+  },
+  "As raízes são os autovalores.": {
+    "fr": "Les racines sont les valeurs propres.",
+    "en": "The roots are the eigenvalues."
   },
   "As relações de Girard ligam as raízes aos coeficientes.": {
     "fr": "Les relations de Viète lient les racines aux coefficients.",
@@ -5183,6 +5219,10 @@
     "fr": "En combinant en quadrature et en revenant à l'incertitude absolue.",
     "en": "Combining in quadrature and returning to absolute uncertainty."
   },
+  "Combustível: #% da massa inicial. Como o ganho é logarítmico, cada km/s extra custa muito mais que o anterior — e é por isso que foguetes têm estágios.": {
+    "fr": "Carburant : #% de la masse initiale. Comme le gain est logarithmique, chaque km/s supplémentaire coûte bien plus que le précédent — et c’est pourquoi les fusées ont des étages.",
+    "en": "Fuel: #% of the initial mass. Since the gain is logarithmic, each extra km/s costs far more than the last — and that is why rockets have stages."
+  },
   "Comece calculando x_v = −b/(#a), com a = # e b = #.": {
     "fr": "Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
     "en": "Start by working out x_v = −b/(#a), with a = # and b = #."
@@ -6511,6 +6551,10 @@
     "fr": "En divisant le coût total par les litres, on obtient le prix moyen.",
     "en": "Dividing the total cost by the litres gives the average price."
   },
+  "Dividindo pela gravidade padrão.": {
+    "fr": "En divisant par la gravité standard.",
+    "en": "Dividing by standard gravity."
+  },
   "Dividindo pela taxa.": {
     "fr": "En divisant par le taux.",
     "en": "Dividing by the rate."
@@ -6746,6 +6790,10 @@
   "E a aceleração centrípeta sai da velocidade e do raio.": {
     "fr": "Et l’accélération centripète vient de la vitesse et du rayon.",
     "en": "And the centripetal acceleration comes from the speed and the radius."
+  },
+  "E a conferência sai de graça: somam o traço e multiplicam o determinante.": {
+    "fr": "Et la vérification est gratuite : leur somme donne la trace et leur produit le déterminant.",
+    "en": "And the check comes for free: they add up to the trace and multiply to the determinant."
   },
   "E a constante final sobe ou desce a onda inteira.": {
     "fr": "Et la constante finale monte ou descend toute l'onde.",
@@ -7895,6 +7943,10 @@
     "fr": "Écrivez (A | I) et échelonnez jusqu’à ce que la gauche devienne l’identité ; faites chaque opération aussi dans le bloc de droite.",
     "en": "Write (A | I) and row-reduce until the left becomes the identity; do each operation in the right block too."
   },
+  "Escreva (A − λI)·(#, k) = (#, #). A primeira linha já basta: ela dá uma equação com k sozinho.": {
+    "fr": "Écrivez (A − λI)·(#, k) = (#, #). La première ligne suffit : elle donne une équation avec k seul.",
+    "en": "Write (A − λI)·(#, k) = (#, #). The first row is enough: it gives an equation with k alone."
+  },
   "Escreva a série até o termo de grau # e substitua x = # em cada termo antes de somar.": {
     "fr": "Écrivez la série jusqu’au terme de degré # et remplacez x = # dans chaque terme avant d’additionner.",
     "en": "Write the series up to the degree-# term and substitute x = # in each term before adding."
@@ -8383,6 +8435,10 @@
     "fr": "C’est la fraction en MASSE. Ce qui pousse la paroi, c’est la particule, pas le gramme : la fraction qui vaut ici est la molaire.",
     "en": "That is the fraction by MASS. What pushes the wall is particles, not grams: the fraction that counts here is the molar one."
   },
+  "Essa é a fração que SOBROU (estrutura e carga útil). A de propelente é o complementar: # menos essa razão.": {
+    "fr": "C’est la fraction qui RESTE (structure et charge utile). Celle de l’ergol en est le complément : # moins ce rapport.",
+    "en": "That is the fraction that REMAINS (structure and payload). The propellant fraction is its complement: # minus that ratio."
+  },
   "Essa é a fração que fica FORA da água. A submersa é a razão direta entre as densidades.": {
     "fr": "C’est la fraction qui reste HORS de l’eau. La fraction immergée est le rapport direct entre les masses volumiques.",
     "en": "That is the fraction that stays OUT of the water. The submerged one is the direct ratio of the densities."
@@ -8543,6 +8599,10 @@
     "fr": "C’est la racine du discriminant, qui apparaît dans la formule des racines. Le discriminant lui-même est ce qui se trouve à l’intérieur.",
     "en": "That is the square root of the discriminant, which shows up in the root formula. The discriminant itself is what sits inside it."
   },
+  "Essa é a razão de massas, que é maior que #. A fração pedida está entre # e #.": {
+    "fr": "C’est le rapport de masses, qui est supérieur à #. La fraction demandée est comprise entre # et #.",
+    "en": "That is the mass ratio, which is greater than #. The fraction asked for lies between # and #."
+  },
   "Essa é a razão dos coeficientes líderes — vale para x → ∞, não para x tendendo a um número.": {
     "fr": "C’est le rapport des coefficients dominants — il vaut pour x → ∞, pas pour x tendant vers un nombre.",
     "en": "That is the ratio of the leading coefficients — it holds for x → ∞, not for x tending to a number."
@@ -8566,6 +8626,10 @@
   "Essa é a soma da diagonal — o traço, não o determinante.": {
     "fr": "C’est la somme de la diagonale — la trace, pas le déterminant.",
     "en": "That is the sum of the diagonal — the trace, not the determinant."
+  },
+  "Essa é a soma da diagonal — o traço, que é a soma dos TRÊS autovalores. A pergunta quer só o maior deles.": {
+    "fr": "C’est la somme de la diagonale — la trace, qui est la somme des TROIS valeurs propres. La question ne demande que la plus grande.",
+    "en": "That is the sum of the diagonal — the trace, which is the sum of the THREE eigenvalues. The question asks only for the largest one."
   },
   "Essa é a soma dos quadrados dos outros dois lados. A pergunta é pelo quadrado do MAIOR lado — são as duas pontas da comparação.": {
     "fr": "C’est la somme des carrés des deux autres côtés. La question porte sur le carré du PLUS GRAND côté — ce sont les deux membres de la comparaison.",
@@ -8602,6 +8666,14 @@
   "Essa é a velocidade de ESCAPE nesse raio, √# vezes maior. Para orbitar, basta a velocidade em que a gravidade iguala a força centrípeta.": {
     "fr": "C'est la vitesse de LIBÉRATION à ce rayon, √# fois plus grande. Pour orbiter, il suffit de la vitesse où la gravité égale la force centripète.",
     "en": "That is the ESCAPE speed at this radius, √# times larger. To orbit, the speed at which gravity equals the centripetal force is enough."
+  },
+  "Essa é a velocidade de exaustão, em m/s. O impulso específico é essa velocidade dividida por g₀, e sai em segundos.": {
+    "fr": "C’est la vitesse d’éjection, en m/s. L’impulsion spécifique est cette vitesse divisée par g₀, et s’exprime en secondes.",
+    "en": "That is the exhaust velocity, in m/s. The specific impulse is that velocity divided by g₀, and comes out in seconds."
+  },
+  "Essa é a velocidade de exaustão. O delta-v só a iguala quando a razão de massas é e ≈ #.": {
+    "fr": "C’est la vitesse d’éjection. Le delta-v ne l’égale que lorsque le rapport de masses vaut e ≈ #.",
+    "en": "That is the exhaust velocity. The delta-v only equals it when the mass ratio is e ≈ #."
   },
   "Essa é a velocidade de um corpo que apenas desliza, sem girar. Quem rola precisa gastar parte da energia para girar, e por isso chega mais devagar.": {
     "fr": "C’est la vitesse d’un corps qui ne fait que glisser, sans tourner. Ce qui roule doit dépenser une part de l’énergie pour tourner, et arrive donc plus lentement.",
@@ -8699,6 +8771,10 @@
     "fr": "Cette valeur est en m³. La question demande des litres (# m³ = # L).",
     "en": "That value is in m³. The question asks for litres (# m³ = # L)."
   },
+  "Esse valor está em newtons. A pergunta pede kN (# kN = # N).": {
+    "fr": "Cette valeur est en newtons. La question demande des kN (# kN = # N).",
+    "en": "That value is in newtons. The question asks for kN (# kN = # N)."
+  },
   "Esse ângulo dá o mesmo valor de cosseno, mas está fora da imagem do arccos, que é [#°, #°]. A inversa devolve um ângulo só, o que está dentro dessa faixa.": {
     "fr": "Cet angle donne la même valeur, mais il est hors de l’image de l’arccos, qui vaut [#°, #°]. La fonction inverse ne rend qu’un seul angle, celui qui est dans cette plage.",
     "en": "That angle gives the same value, but it is outside the range of arccos, which is [#°, #°]. The inverse returns a single angle, the one inside that range."
@@ -8750,6 +8826,10 @@
   "Esse é o MONTANTE. O juro é só a parte que foi acrescentada: M − C.": {
     "fr": "C’est le MONTANT. L’intérêt n’est que la part ajoutée : M − C.",
     "en": "That is the AMOUNT. The interest is only the part added: M − C."
+  },
+  "Esse é o OUTRO autovalor, o menor. As duas raízes estão certas; a pergunta pede a maior.": {
+    "fr": "C’est l’AUTRE valeur propre, la plus petite. Les deux racines sont correctes ; la question demande la plus grande.",
+    "en": "That is the OTHER eigenvalue, the smaller one. Both roots are right; the question asks for the larger."
   },
   "Esse é o OUTRO ângulo agudo: a razão ficou invertida. A tangente é oposto sobre adjacente, vistos a partir do ângulo pedido.": {
     "fr": "C’est l’AUTRE angle aigu : le rapport est inversé. La tangente, c’est l’opposée sur l’adjacente, vues depuis l’angle demandé.",
@@ -8803,6 +8883,10 @@
     "fr": "C’est l’arc tangente brut. Le point est dans le #e quadrant : nous ajoutons #°.",
     "en": "That is the raw arctangent. The point is in quadrant #: we add #°."
   },
+  "Esse é o autovalor, não a coordenada do autovetor. O autovalor diz quanto a matriz ESTICA; o autovetor diz em que direção.": {
+    "fr": "C’est la valeur propre, pas la coordonnée du vecteur propre. La valeur propre dit de combien la matrice ÉTIRE ; le vecteur propre dit dans quelle direction.",
+    "en": "That is the eigenvalue, not a coordinate of the eigenvector. The eigenvalue says how much the matrix STRETCHES; the eigenvector says in which direction."
+  },
   "Esse é o coeficiente D da equação geral. O centro é −D/#: falta dividir por dois e trocar o sinal.": {
     "fr": "C’est le coefficient D de l’équation générale. Le centre vaut −D/# : il reste à diviser par deux et à changer le signe.",
     "en": "That is the coefficient D of the general equation. The centre is −D/#: dividing by two and flipping the sign is still missing."
@@ -8850,6 +8934,10 @@
   "Esse é o desvio padrão das medidas. A incerteza da média ainda divide por √n.": {
     "fr": "C’est l’écart type des mesures. L’incertitude de la moyenne divise encore par √n.",
     "en": "That is the standard deviation of the measurements. The uncertainty of the mean divides further by √n."
+  },
+  "Esse é o determinante, que é o PRODUTO dos autovalores. A soma deles é o traço — a soma da diagonal.": {
+    "fr": "C’est le déterminant, qui est le PRODUIT des valeurs propres. Leur somme est la trace — la somme de la diagonale.",
+    "en": "That is the determinant, which is the PRODUCT of the eigenvalues. Their sum is the trace — the sum of the diagonal."
   },
   "Esse é o discriminante, que decide o regime, mas não é uma raiz.": {
     "fr": "C’est le discriminant, qui décide du régime, mais ce n’est pas une racine.",
@@ -8983,6 +9071,10 @@
     "fr": "Ceci est le plan de coupe, pas l’abscisse du sommet de la courbe obtenue.",
     "en": "That is the cutting plane, not the abscissa of the vertex of the resulting curve."
   },
+  "Esse é o primeiro elemento da diagonal, não o maior. Os três são autovalores: compare-os.": {
+    "fr": "C’est le premier élément de la diagonale, pas le plus grand. Les trois sont des valeurs propres : comparez-les.",
+    "en": "That is the first element of the diagonal, not the largest. All three are eigenvalues: compare them."
+  },
   "Esse é o primeiro valor observado. O intercepto é o valor PREVISTO em x igual a zero, que costuma estar fora da faixa medida.": {
     "fr": "C’est la première valeur observée. L’ordonnée à l’origine est la valeur PRÉDITE en x égal à zéro, qui se trouve souvent hors de la plage mesurée.",
     "en": "That is the first observed value. The intercept is the PREDICTED value at x equal to zero, which usually lies outside the measured range."
@@ -9050,6 +9142,10 @@
   "Esse é o total de elétrons do átomo, que é o número atômico. A pergunta é sobre a ÚLTIMA camada — as de dentro não contam.": {
     "fr": "C’est le total d’électrons de l’atome, c’est-à-dire le numéro atomique. La question porte sur la DERNIÈRE couche — celles de l’intérieur ne comptent pas.",
     "en": "That is the atom’s total number of electrons, the atomic number. The question is about the LAST shell — the inner ones do not count."
+  },
+  "Esse é o traço, que é a SOMA dos autovalores. O produto deles é o determinante.": {
+    "fr": "C’est la trace, qui est la SOMME des valeurs propres. Leur produit est le déterminant.",
+    "en": "That is the trace, which is the SUM of the eigenvalues. Their product is the determinant."
   },
   "Esse é o valor EXATO da solução. O exercício pede o que o método de Euler devolve, que é diferente — e a diferença é justamente o que o tópico estuda.": {
     "fr": "C’est la valeur EXACTE de la solution. L’exercice demande ce que rend la méthode d’Euler, qui est différent — et cet écart est justement ce que le sujet étudie.",
@@ -10351,6 +10447,10 @@
     "fr": "Inversement proportionnel, c’est proportionnel à l’INVERSE : les poids sont 1/p1 et 1/p2.",
     "en": "Inversely proportional means proportional to the INVERSE: the weights are 1/p1 and 1/p2."
   },
+  "Inverta Tsiolkovsky: Δv/vₑ = ln(m₀/m_f). Converta # km/s para m/s, divida por # e aplique e elevado a esse número.": {
+    "fr": "Inversez Tsiolkovski : Δv/vₑ = ln(m₀/m_f). Convertissez # km/s en m/s, divisez par # et appliquez e élevé à ce nombre.",
+    "en": "Invert Tsiolkovsky: Δv/vₑ = ln(m₀/m_f). Convert # km/s to m/s, divide by # and raise e to that number."
+  },
   "Invertemos a segunda fração: # vira #/#.": {
     "fr": "Nous inversons la seconde fraction : # devient #/#.",
     "en": "We flip the second fraction: # becomes #/#."
@@ -10567,6 +10667,10 @@
     "fr": "En isolant le déplacement.",
     "en": "Isolating the displacement."
   },
+  "Isolando o logaritmo.": {
+    "fr": "En isolant le logarithme.",
+    "en": "Isolating the logarithm."
+  },
   "Isolando o período procurado.": {
     "fr": "En isolant la période recherchée.",
     "en": "Isolating the sought period."
@@ -10635,6 +10739,10 @@
     "fr": "Isolez x dans l’une des équations et remplacez cette expression dans l’autre.",
     "en": "Isolate x in one of the equations and substitute that expression into the other."
   },
+  "Isp alto significa mais empuxo por quilo de propelente queimado.": {
+    "fr": "Une Isp élevée signifie plus de poussée par kilo d’ergol brûlé.",
+    "en": "A high Isp means more thrust per kilogram of propellant burned."
+  },
   "Isso aplicaria a fórmula de um passo só, com o tempo total. Euler reaplica a tangente a cada passo, sempre a partir do novo valor.": {
     "fr": "Cela appliquerait la formule d’un seul pas, avec le temps total. Euler réapplique la tangente à chaque pas, toujours à partir de la nouvelle valeur.",
     "en": "That would apply the one-step formula with the total time. Euler reapplies the tangent at each step, always from the new value."
@@ -10646,6 +10754,10 @@
   "Isso não é um valor: é um aviso de que falta simplificar.": {
     "fr": "Ce n’est pas une valeur : c’est un avertissement qu’il reste à simplifier.",
     "en": "That is not a value: it is a warning that something must be simplified."
+  },
+  "Isso significa que #% da massa inicial precisa ser propelente.": {
+    "fr": "Cela signifie que #% de la masse initiale doit être de l’ergol.",
+    "en": "That means #% of the initial mass has to be propellant."
   },
   "Isso supõe um ângulo reto entre a e b. Calcule o ângulo pela lei dos cossenos antes.": {
     "fr": "Cela suppose un angle droit entre a et b. Calculez d’abord l’angle par la loi des cosinus.",
@@ -10698,6 +10810,10 @@
   "Isso é uma soma de comprimentos, em cm. A área se mede em cm².": {
     "fr": "C’est une somme de longueurs, en cm. L’aire se mesure en cm².",
     "en": "That is a sum of lengths, in cm. Area is measured in cm²."
+  },
+  "Iₛₚ = vₑ / g: a velocidade de exaustão dividida por #.": {
+    "fr": "Iₛₚ = vₑ / g : la vitesse d’éjection divisée par #.",
+    "en": "Iₛₚ = vₑ / g: the exhaust velocity divided by #."
   },
   "Juntamos os termos em x.": {
     "fr": "Nous réunissons les termes en x.",
@@ -11114,6 +11230,14 @@
   "Monte aₙ₊₁/aₙ: potências como bⁿ⁺¹/bⁿ viram b, e frações como (n + #)/n tendem a #.": {
     "fr": "Formez aₙ₊₁/aₙ : des puissances comme bⁿ⁺¹/bⁿ donnent b, et des fractions comme (n + #)/n tendent vers #.",
     "en": "Build aₙ₊₁/aₙ: powers like bⁿ⁺¹/bⁿ become b, and fractions like (n + #)/n tend to #."
+  },
+  "Monte λ² − (traço)λ + (determinante) = # e resolva. Das duas raízes, a pergunta quer a maior — e a soma delas tem de dar o traço.": {
+    "fr": "Écrivez λ² − (trace)λ + (déterminant) = # et résolvez. Des deux racines, la question veut la plus grande — et leur somme doit redonner la trace.",
+    "en": "Write λ² − (trace)λ + (determinant) = # and solve. Of the two roots, the question wants the larger — and their sum must give back the trace."
+  },
+  "Motores químicos chegam a cerca de # s; propulsão iônica passa de # s, com empuxo muito menor.": {
+    "fr": "Les moteurs chimiques atteignent environ # s ; la propulsion ionique dépasse # s, avec une poussée bien plus faible.",
+    "en": "Chemical engines reach about # s; ion propulsion goes beyond # s, with far less thrust."
   },
   "Multiplicamos TODOS os termos, dos dois lados, por #: as frações somem.": {
     "fr": "Nous multiplions TOUS les termes, des deux côtés, par # : les fractions disparaissent.",
@@ -12227,6 +12351,14 @@
     "fr": "Dans une matrice #×#, le déterminant est le nombre lui-même.",
     "en": "In a #×# matrix, the determinant is the number itself."
   },
+  "Numa matriz triangular os autovalores estão na diagonal, e não há conta a fazer. É por isso que diagonalizar vale o esforço.": {
+    "fr": "Dans une matrice triangulaire les valeurs propres sont sur la diagonale, et il n’y a aucun calcul à faire. C’est pourquoi diagonaliser vaut l’effort.",
+    "en": "In a triangular matrix the eigenvalues sit on the diagonal, and there is nothing to compute. That is why diagonalising is worth the effort."
+  },
+  "Numa matriz triangular, det(A − λI) é o produto da diagonal deslocada.": {
+    "fr": "Dans une matrice triangulaire, det(A − λI) est le produit de la diagonale décalée.",
+    "en": "In a triangular matrix, det(A − λI) is the product of the shifted diagonal."
+  },
   "Numa parábola, c é SEMPRE o ponto médio do intervalo — qualquer que seja a parábola.": {
     "fr": "Dans une parabole, c est TOUJOURS le milieu de l’intervalle — quelle que soit la parabole.",
     "en": "In a parabola, c is ALWAYS the midpoint of the interval — whatever the parabola."
@@ -12291,6 +12423,10 @@
     "fr": "Il n’y a pas de moitié à retirer : le parallélogramme est déjà le rectangle entier.",
     "en": "There is no half to take away: the parallelogram is already the whole rectangle."
   },
+  "Não há nada em que se apoiar no vácuo — o que empurra o foguete é o gás que ele joga para trás.": {
+    "fr": "Il n’y a rien sur quoi s’appuyer dans le vide — ce qui pousse la fusée, c’est le gaz qu’elle éjecte vers l’arrière.",
+    "en": "There is nothing to push against in vacuum — what pushes the rocket is the gas it throws backwards."
+  },
   "Não há nenhum fator primo em comum, então os números são primos entre si.": {
     "fr": "Il n’y a aucun facteur premier commun, donc les nombres sont premiers entre eux.",
     "en": "There is no common prime factor, so the numbers are coprime."
@@ -12302,6 +12438,10 @@
   "Não precisa achar as raízes: soma = −b/a e produto = c/a.": {
     "fr": "Pas besoin de trouver les racines : somme = −b/a et produit = c/a.",
     "en": "No need to find the roots: sum = −b/a and product = c/a."
+  },
+  "Não precisa achar os autovalores: a soma deles é sempre o traço, a soma da diagonal da matriz.": {
+    "fr": "Pas besoin de trouver les valeurs propres : leur somme est toujours la trace, la somme de la diagonale de la matrice.",
+    "en": "There is no need to find the eigenvalues: their sum is always the trace, the sum of the matrix diagonal."
   },
   "Não precisa multiplicar as matrizes: det(A·B) = det A × det B. Calcule cada um (ad − bc) e multiplique.": {
     "fr": "Pas besoin de multiplier les matrices : det(A·B) = det A × det B. Calculez chacun (ad − bc) et multipliez.",
@@ -12579,6 +12719,10 @@
     "fr": "Le grandissement compare les distances ; le signe moins dit si l’image est renversée.",
     "en": "The magnification compares the distances; the minus sign says whether the image is inverted."
   },
+  "O autovetor é (#, #) — e qualquer múltiplo dele, porque o que importa é a direção.": {
+    "fr": "Le vecteur propre est (#, #) — et tout multiple de celui-ci, car ce qui compte est la direction.",
+    "en": "The eigenvector is (#, #) — and any multiple of it, because what matters is the direction."
+  },
   "O barco aponta rio acima nesse ângulo, e a resultante sai perpendicular à margem.": {
     "fr": "Le bateau pointe vers l’amont sous cet angle, et la résultante sort perpendiculaire à la rive.",
     "en": "The boat points upstream at that angle, and the resultant comes out perpendicular to the bank."
@@ -12762,6 +12906,10 @@
   "O coeficiente de x² não é #: procure dois números que somem b e multipliquem a·c, e agrupe.": {
     "fr": "Le coefficient de x² n’est pas # : cherchez deux nombres dont la somme vaut b et le produit a·c, puis groupez.",
     "en": "The coefficient of x² is not #: look for two numbers adding to b and multiplying to a·c, then group."
+  },
+  "O coeficiente de λ é menos o traço (#) e o termo livre é o determinante (#).": {
+    "fr": "Le coefficient de λ vaut moins la trace (#) et le terme constant est le déterminant (#).",
+    "en": "The coefficient of λ is minus the trace (#) and the constant term is the determinant (#)."
   },
   "O coeficiente h não é propriedade do material: depende do escoamento.": {
     "fr": "Le coefficient h n’est pas une propriété du matériau : il dépend de l’écoulement.",
@@ -13095,6 +13243,10 @@
     "fr": "La poussée d’Archimède est le poids du fluide déplacé par le corps.",
     "en": "The buoyant force is the weight of the fluid the body displaces."
   },
+  "O empuxo é um PRODUTO: vazão multiplicada pela velocidade de exaustão.": {
+    "fr": "La poussée est un PRODUIT : le débit multiplié par la vitesse d’éjection.",
+    "en": "Thrust is a PRODUCT: the mass flow times the exhaust velocity."
+  },
   "O enunciado pede apenas o coeficiente do termo em x.": {
     "fr": "L’énoncé ne demande que le coefficient du terme en x.",
     "en": "The question only asks for the coefficient of the x term."
@@ -13323,6 +13475,10 @@
     "fr": "Le groupe se déduit du compte des électrons de la dernière couche.",
     "en": "The group comes from counting the outer-shell electrons."
   },
+  "O impulso específico expressa a eficiência do motor em segundos.": {
+    "fr": "L’impulsion spécifique exprime le rendement du moteur en secondes.",
+    "en": "Specific impulse expresses the engine’s efficiency in seconds."
+  },
   "O impulso específico expressa a mesma eficiência em segundos.": {
     "fr": "L'impulsion spécifique exprime la même efficacité en secondes.",
     "en": "Specific impulse expresses the same efficiency in seconds."
@@ -13430,6 +13586,10 @@
   "O logaritmo só existe para argumento positivo: x = # daria log de número negativo e é descartado.": {
     "fr": "Le logarithme n’existe que pour un argument positif : x = # donnerait le log d’un nombre négatif et est écarté.",
     "en": "The logarithm only exists for a positive argument: x = # would give the log of a negative number and is discarded."
+  },
+  "O logaritmo é NATURAL (base e), não decimal. Ele vem da integral de #/m.": {
+    "fr": "Le logarithme est NATUREL (base e), pas décimal. Il vient de l’intégrale de #/m.",
+    "en": "The logarithm is NATURAL (base e), not decimal. It comes from the integral of #/m."
   },
   "O losango ocupa metade do retângulo que tem as diagonais por lados.": {
     "fr": "Le losange occupe la moitié du rectangle qui a les diagonales pour côtés.",
@@ -13935,6 +14095,10 @@
     "fr": "Le prisme a deux bases : # sommets sur chacune.",
     "en": "The prism has two bases: # vertices on each."
   },
+  "O produto dos autovalores é sempre o determinante. É por isso que uma matriz com autovalor zero não tem inversa.": {
+    "fr": "Le produit des valeurs propres est toujours le déterminant. C’est pourquoi une matrice ayant une valeur propre nulle n’a pas d’inverse.",
+    "en": "The product of the eigenvalues is always the determinant. That is why a matrix with a zero eigenvalue has no inverse."
+  },
   "O produto dos dois é igual ao produto dos números originais.": {
     "fr": "Le produit des deux est égal au produit des nombres originaux.",
     "en": "The product of the two equals the product of the original numbers."
@@ -13974,6 +14138,10 @@
   "O produtório manda multiplicar, com k indo de # a #.": {
     "fr": "Le produit demande de multiplier, avec k allant de # à #.",
     "en": "The product tells you to multiply, with k going from # to #."
+  },
+  "O propelente é o que foi queimado: (massa inicial − massa final) dividido pela massa inicial. Converta as duas para a mesma unidade.": {
+    "fr": "L’ergol est ce qui a été brûlé : (masse initiale − masse finale) divisé par la masse initiale. Convertissez les deux dans la même unité.",
+    "en": "The propellant is what was burned: (initial mass − final mass) divided by the initial mass. Convert both to the same unit."
   },
   "O q some dos dois lados: ele inclina a curva inteira por igual.": {
     "fr": "Le q disparaît des deux côtés : il incline toute la courbe de la même façon.",
@@ -14311,6 +14479,10 @@
     "fr": "Le signe du terme du milieu suit le signe du terme du binôme. Vérifiez si vous êtes devant une somme ou une différence.",
     "en": "The sign of the middle term follows the sign of the binomial’s term. Check whether you are facing a sum or a difference."
   },
+  "O sinal do termo em λ está trocado. No polinômio característico ele é MENOS o traço: λ² − tr·λ + det = #.": {
+    "fr": "Le signe du terme en λ est inversé. Dans le polynôme caractéristique il vaut MOINS la trace : λ² − tr·λ + det = #.",
+    "en": "The sign of the λ term is flipped. In the characteristic polynomial it is MINUS the trace: λ² − tr·λ + det = #."
+  },
   "O sinal está invertido. Com b e c positivos, as duas raízes são negativas — é isso que faz o sistema voltar ao repouso.": {
     "fr": "Le signe est inversé. Avec b et c positifs, les deux racines sont négatives — c’est ce qui ramène le système au repos.",
     "en": "The sign is flipped. With b and c positive, both roots are negative — that is what brings the system back to rest."
@@ -14342,6 +14514,10 @@
   "O sinal está invertido: onde o fluido ACELERA, a pressão CAI. A queda pedida é positiva, e vale (v_B² − v_A²), não (v_A² − v_B²).": {
     "fr": "Le signe est inversé : là où le fluide ACCÉLÈRE, la pression CHUTE. La chute demandée est positive, et vaut (v_B² − v_A²), et non (v_A² − v_B²).",
     "en": "The sign is flipped: where the fluid SPEEDS UP, the pressure DROPS. The drop asked for is positive, and equals (v_B² − v_A²), not (v_A² − v_B²)."
+  },
+  "O sinal está trocado. A equação é (a − λ)·# + b·k = #, e isolar k deixa (λ − a) em cima.": {
+    "fr": "Le signe est inversé. L’équation est (a − λ)·# + b·k = #, et isoler k laisse (λ − a) au numérateur.",
+    "en": "The sign is flipped. The equation is (a − λ)·# + b·k = #, and isolating k leaves (λ − a) on top."
   },
   "O sinal está trocado. Como a fórmula é a = −D/#, o sinal do centro é oposto ao do coeficiente.": {
     "fr": "Le signe est inversé. Comme la formule est a = −D/#, le signe du centre est opposé à celui du coefficient.",
@@ -15587,6 +15763,10 @@
     "fr": "Les zéros de la fonction sont les racines du numérateur qui survivent.",
     "en": "The zeros of the function are the surviving roots of the numerator."
   },
+  "Os zeros de um lado da diagonal fazem o determinante virar um produto só.": {
+    "fr": "Les zéros d’un côté de la diagonale réduisent le déterminant à un simple produit.",
+    "en": "The zeros on one side of the diagonal turn the determinant into a single product."
+  },
   "Os índices ficaram de fora. Eles contam átomos: cada um multiplica a massa atômica do seu elemento antes da soma.": {
     "fr": "Les indices ont été oubliés. Ils comptent des atomes : chacun multiplie la masse atomique de son élément avant l’addition.",
     "en": "The subscripts were left out. They count atoms: each one multiplies its element’s atomic mass before the sum."
@@ -15763,6 +15943,10 @@
     "fr": "Pour l’exponentielle, le polynôme de degré # est celui-ci.",
     "en": "For the exponential, the degree-# polynomial is this one."
   },
+  "Para haver v não nulo, a matriz A − λI tem de ser singular.": {
+    "fr": "Pour qu’il existe un v non nul, la matrice A − λI doit être singulière.",
+    "en": "For a non-zero v to exist, the matrix A − λI must be singular."
+  },
   "Para logaritmo de # mais x, o padrão das derivadas em zero é conhecido.": {
     "fr": "Pour le logarithme de # plus x, le schéma des dérivées en zéro est connu.",
     "en": "For the logarithm of # plus x, the pattern of the derivatives at zero is known."
@@ -15859,6 +16043,10 @@
     "fr": "Pour z = f(x, y), chaque petit dA de l’ombre devient √(# + fx² + fy²)·dA sur la surface.",
     "en": "For z = f(x, y), each small dA of the shadow becomes √(# + fx² + fy²)·dA on the surface."
   },
+  "Para λ = #, a primeira linha de (A − λI)v = # já resolve.": {
+    "fr": "Pour λ = #, la première ligne de (A − λI)v = # suffit déjà.",
+    "en": "For λ = #, the first row of (A − λI)v = # already settles it."
+  },
   "Parametrizamos a elipse: x = #·cos t, y = #·sen t.": {
     "fr": "Nous paramétrons l’ellipse : x = #·cos t, y = #·sin t.",
     "en": "We parametrise the ellipse: x = #·cos t, y = #·sin t."
@@ -15886,6 +16074,10 @@
   "Partimos da divisão proposta.": {
     "fr": "Nous partons de l’opération proposée.",
     "en": "We start from the operation given."
+  },
+  "Partimos da equação de Tsiolkovsky.": {
+    "fr": "Nous partons de l’équation de Tsiolkovski.",
+    "en": "We start from Tsiolkovsky’s equation."
   },
   "Partimos da equação geral.": {
     "fr": "Nous partons de l'équation générale.",
@@ -16539,6 +16731,10 @@
     "fr": "Nous cherchons la valeur de x qui annule le diviseur : c’est elle qui effacera le quotient.",
     "en": "We look for the value of x that makes the divisor zero: it is what will wipe out the quotient."
   },
+  "Procurar λ é procurar as direções que a matriz deixa paradas, só esticadas.": {
+    "fr": "Chercher λ, c’est chercher les directions que la matrice laisse en place, seulement étirées.",
+    "en": "Looking for λ means looking for the directions the matrix leaves in place, merely stretched."
+  },
   "Procure dois números cuja soma e produto batam com a expressão.": {
     "fr": "Cherchez deux nombres dont la somme et le produit correspondent à l’expression.",
     "en": "Look for two numbers whose sum and product match the expression."
@@ -16974,6 +17170,10 @@
   "Se errar a direção de uma delas, o erro aparece como um fator trocado — nunca some.": {
     "fr": "Une erreur sur le sens de l’une d’elles apparaît comme un facteur inversé — elle ne disparaît jamais.",
     "en": "Getting the direction of one of them wrong shows up as an inverted factor — it never vanishes."
+  },
+  "Se o determinante não fosse zero, a única solução seria v = # — e o vetor nulo não aponta para direção nenhuma.": {
+    "fr": "Si le déterminant n’était pas nul, la seule solution serait v = # — et le vecteur nul ne pointe vers aucune direction.",
+    "en": "If the determinant were not zero, the only solution would be v = # — and the zero vector points in no direction at all."
   },
   "Se o módulo vale k, o que está dentro pode ser +k ou −k.": {
     "fr": "Si la valeur absolue vaut k, ce qui est à l’intérieur peut valoir +k ou −k.",
@@ -18535,6 +18735,10 @@
     "fr": "Un anneau, ou un tube à paroi mince : tout est sur le bord.",
     "en": "A hoop, or a thin-walled tube: everything on the rim."
   },
+  "Um autovalor é o número que a matriz multiplica, sem torcer a direção.": {
+    "fr": "Une valeur propre est le nombre par lequel la matrice multiplie, sans tordre la direction.",
+    "en": "An eigenvalue is the number the matrix multiplies by, without twisting the direction."
+  },
   "Um desvio pega cerca de # por cento; dois, #; três, #.": {
     "fr": "Un écart type couvre environ # pour cent ; deux, # ; trois, #.",
     "en": "One standard deviation covers about # per cent; two, #; three, #."
@@ -18690,6 +18894,10 @@
   "Uma grandeza elevada ao quadrado contribui com o dobro da sua incerteza relativa.": {
     "fr": "Une grandeur élevée au carré contribue au double de son incertitude relative.",
     "en": "A quantity raised to the square contributes twice its relative uncertainty."
+  },
+  "Uma linha basta: as duas são proporcionais, e é isso que faz o sistema ter solução.": {
+    "fr": "Une ligne suffit : les deux sont proportionnelles, et c’est ce qui donne une solution au système.",
+    "en": "One row is enough: the two are proportional, and that is what gives the system a solution."
   },
   "Uma soma de quadrados pede a tangente.": {
     "fr": "Une somme de carrés appelle la tangente.",
@@ -18966,6 +19174,10 @@
   "Você parou no valor de #x². Falta dividir por # e extrair a raiz para chegar ao x.": {
     "fr": "Vous vous êtes arrêté à la valeur de #x². Il reste à diviser par # et à extraire la racine pour arriver à x.",
     "en": "You stopped at the value of #x². Dividing by # and taking the root to reach x is still missing."
+  },
+  "Você parou no valor do logaritmo. Falta aplicar a exponencial para obter a razão de massas.": {
+    "fr": "Vous vous êtes arrêté à la valeur du logarithme. Il reste à appliquer l’exponentielle pour obtenir le rapport de masses.",
+    "en": "You stopped at the value of the logarithm. You still have to apply the exponential to get the mass ratio."
   },
   "Você somou a carga. Carga positiva é elétron que FALTA: ela entra subtraindo.": {
     "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
@@ -19935,6 +20147,10 @@
     "fr": "C’est la lecture inverse de la table : de l’aire vers le score.",
     "en": "It is the table read in reverse: from the area to the score."
   },
+  "É a melhor forma de verificar a própria resposta sem olhar o gabarito.": {
+    "fr": "C’est la meilleure façon de vérifier sa propre réponse sans regarder le corrigé.",
+    "en": "It is the best way to check your own answer without looking at the solution key."
+  },
   "É a mesma expressão de antes, agora com número no lugar da letra.": {
     "fr": "C’est la même expression qu’avant, avec un nombre à la place de la lettre.",
     "en": "It is the same expression as before, now with a number in place of the letter."
@@ -20171,6 +20387,10 @@
     "fr": "C'est pourquoi les collisions à grande vitesse sont bien plus destructrices.",
     "en": "That is why high-speed collisions are so much more destructive."
   },
+  "É por isso que diagonalizar vale o esforço: do outro lado, a resposta é de leitura.": {
+    "fr": "C’est pourquoi diagonaliser vaut l’effort : de l’autre côté, la réponse se lit directement.",
+    "en": "That is why diagonalising is worth the effort: on the other side, the answer can simply be read off."
+  },
   "É por isso que massa e peso crescem muito mais rápido que a altura.": {
     "fr": "C’est pour cela que la masse et le poids croissent bien plus vite que la hauteur.",
     "en": "That is why mass and weight grow much faster than height."
@@ -20254,6 +20474,10 @@
   "Δs = v₀² / (#a): a velocidade inicial AO QUADRADO, dividida pelo dobro da desaceleração.": {
     "fr": "Δs = v₀² / (#a) : la vitesse initiale AU CARRÉ, divisée par le double de la décélération.",
     "en": "Δs = v₀² / (#a): the initial speed SQUARED, divided by twice the deceleration."
+  },
+  "Δv = vₑ · ln(m₀/m_f): a velocidade de exaustão vezes o LOGARITMO NATURAL da razão entre a massa cheia e a vazia.": {
+    "fr": "Δv = vₑ · ln(m₀/m_f) : la vitesse d’éjection fois le LOGARITHME NATUREL du rapport entre la masse pleine et la masse vide.",
+    "en": "Δv = vₑ · ln(m₀/m_f): the exhaust velocity times the NATURAL LOGARITHM of the ratio between the full and the empty mass."
   },
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
