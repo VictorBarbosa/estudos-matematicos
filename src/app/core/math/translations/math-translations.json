@@ -99,9 +99,21 @@
     "fr": "# L = # dm³, et # m³ contient #³ dm³.",
     "en": "# L = # dm³, and # m³ holds #³ dm³."
   },
+  "# V é a fem. A corrente é fem/R.": {
+    "fr": "# V est la f.é.m. Le courant vaut f.é.m./R.",
+    "en": "# V is the emf. The current is emf/R."
+  },
+  "# V é a fem. Falta a corrente (fem/R) e a força B·I·L.": {
+    "fr": "# V est la f.é.m. Il manque le courant (f.é.m./R) et la force B·I·L.",
+    "en": "# V is the emf. The current (emf/R) and the force B·I·L are still missing."
+  },
   "# cm² = #⁻⁴ m²: o centímetro vai ao QUADRADO na conversão.": {
     "fr": "# cm² = #⁻⁴ m² : le centimètre est AU CARRÉ dans la conversion.",
     "en": "# cm² = #⁻⁴ m²: the centimetre is SQUARED in the conversion."
+  },
+  "# cm² = #⁻⁴ m²: o centímetro vai ao quadrado.": {
+    "fr": "# cm² = #⁻⁴ m² : le centimètre est au carré.",
+    "en": "# cm² = #⁻⁴ m²: the centimetre is squared."
   },
   "# dividido por # dá # com resto #. As duas formas valem como resposta: #/# ou # #/#.": {
     "fr": "# divisé par # donne # avec un reste de #. Les deux écritures valent comme réponse : #/# ou # #/#.",
@@ -703,6 +715,14 @@
     "fr": "La composante tangentielle est le quotient.",
     "en": "The tangential component is the quotient."
   },
+  "A componente x usa só y e z: a_y·b_z − a_z·b_y.": {
+    "fr": "La composante x n’utilise que y et z : a_y·b_z − a_z·b_y.",
+    "en": "The x component uses only y and z: a_y·b_z − a_z·b_y."
+  },
+  "A componente z usa só x e y: aₓ·b_y − a_y·bₓ.": {
+    "fr": "La composante z n’utilise que x et y : aₓ·b_y − a_y·bₓ.",
+    "en": "The z component uses only x and y: aₓ·b_y − a_y·bₓ."
+  },
   "A concavidade é o sinal da SEGUNDA derivada. Derivamos duas vezes.": {
     "fr": "La concavité est le signe de la dérivée SECONDE. Nous dérivons deux fois.",
     "en": "Concavity is the sign of the SECOND derivative. We differentiate twice."
@@ -830,6 +850,10 @@
   "A correlação é muito forte e positiva.": {
     "fr": "La corrélation est très forte et positive.",
     "en": "The correlation is very strong and positive."
+  },
+  "A corrente multiplica (mais corrente, mais força), não divide.": {
+    "fr": "Le courant multiplie (plus de courant, plus de force), il ne divise pas.",
+    "en": "The current multiplies (more current, more force), it does not divide."
   },
   "A corrente é a mesma nos dois; cada um fica com a fração da tensão igual à sua fração da resistência.": {
     "fr": "Le courant est le même dans les deux ; chacun prend la fraction de tension égale à sa fraction de résistance.",
@@ -1118,6 +1142,10 @@
   "A distância vai em metros.": {
     "fr": "La distance s’exprime en mètres.",
     "en": "The distance goes in metres."
+  },
+  "A distância vai em metros: # cm = # m.": {
+    "fr": "La distance se met en mètres : # cm = # m.",
+    "en": "The distance goes in metres: # cm = # m."
   },
   "A distância é a hipotenusa desse triângulo.": {
     "fr": "La distance est l'hypoténuse de ce triangle.",
@@ -1419,6 +1447,10 @@
     "fr": "La force magnétique joue le rôle de force centripète.",
     "en": "The magnetic force plays the part of the centripetal force."
   },
+  "A força magnética usa o SENO do ângulo entre v e B: só a parte perpendicular conta.": {
+    "fr": "La force magnétique utilise le SINUS de l’angle entre v et B : seule la part perpendiculaire compte.",
+    "en": "The magnetic force uses the SINE of the angle between v and B: only the perpendicular part counts."
+  },
   "A força na outra ponta precisa equilibrar os dois torques.": {
     "fr": "La force à l’autre extrémité doit équilibrer les deux moments.",
     "en": "The force at the other end has to balance both torques."
@@ -1438,6 +1470,10 @@
   "A força é perpendicular ao deslocamento: o trabalho é exatamente ZERO, não F·d.": {
     "fr": "La force est perpendiculaire au déplacement : le travail est exactement NUL, pas F·d.",
     "en": "The force is perpendicular to the displacement: the work is exactly ZERO, not F·d."
+  },
+  "A força é perpendicular à velocidade: muda a direção, nunca a rapidez.": {
+    "fr": "La force est perpendiculaire à la vitesse : elle change la direction, jamais la vitesse en valeur.",
+    "en": "The force is perpendicular to the velocity: it changes the direction, never the speed."
   },
   "A força é proporcional a q₁·q₂ e inversamente a r²: multiplique # por # e divida por #².": {
     "fr": "La force est proportionnelle à q₁·q₂ et inversement à r² : multipliez # par # et divisez par #².",
@@ -2190,6 +2226,10 @@
   "A ordem importa: trocar duas escolhas de lugar produz um arranjo diferente.": {
     "fr": "L’ordre compte : échanger deux choix produit un arrangement différent.",
     "en": "Order matters: swapping two choices produces a different arrangement."
+  },
+  "A ordem importa: trocar os vetores troca o sinal do resultado.": {
+    "fr": "L’ordre compte : échanger les vecteurs change le signe du résultat.",
+    "en": "Order matters: swapping the vectors flips the sign of the result."
   },
   "A ordem é V_B − V_A (final menos inicial); invertida, o sinal troca.": {
     "fr": "L’ordre est V_B − V_A (final moins initial) ; inversé, le signe change.",
@@ -4291,6 +4331,10 @@
     "fr": "Raccourci issu du même calcul : y″ = −a·c/(b²·y³) = −#·#/(#·#).",
     "en": "A shortcut from the same computation: y″ = −a·c/(b²·y³) = −#·#/(#·#)."
   },
+  "Atenção ao y: a ordem dos termos é trocada, e é aí que o sinal costuma se perder.": {
+    "fr": "Attention au y : l’ordre des termes est inversé, et c’est souvent là que le signe se perd.",
+    "en": "Mind the y: the order of the terms is reversed, and that is usually where the sign gets lost."
+  },
   "Até aqui nada se decidiu: a integral de dentro é comum, e tem limites finitos.": {
     "fr": "Jusqu’ici rien n’est décidé : l’intégrale intérieure est ordinaire, et ses bornes sont finies.",
     "en": "Nothing is decided yet: the inner integral is ordinary, and its limits are finite."
@@ -5574,6 +5618,10 @@
   "Com o numerador um grau acima, a assíntota é uma reta inclinada.": {
     "fr": "Avec le numérateur un degré au-dessus, l'asymptote est une droite inclinée.",
     "en": "With the numerator one degree higher, the asymptote is a slanted line."
+  },
+  "Com o ângulo medido a partir da NORMAL, o fluxo usa o cosseno.": {
+    "fr": "L’angle étant mesuré depuis la NORMALE, le flux utilise le cosinus.",
+    "en": "With the angle measured from the NORMAL, the flux uses the cosine."
   },
   "Com ordem: # opções para a #ª posição, # para a #ª, e assim por # posições.": {
     "fr": "Avec ordre : # possibilités pour la #ᵉ position, # pour la #ᵉ, et ainsi de suite sur # positions.",
@@ -6935,6 +6983,10 @@
     "fr": "Divisez la masse molaire par la masse de la formule empirique : le résultat est un entier, et c’est par lui que tous les indices se multiplient.",
     "en": "Divide the molar mass by the mass of the empirical formula: the result is a whole number, and it is what all the subscripts are multiplied by."
   },
+  "Divida cada componente pelo módulo de v, √((#)² + (#)² + (#)²).": {
+    "fr": "Divisez chaque composante par la norme de v, √((#)² + (#)² + (#)²).",
+    "en": "Divide each component by the magnitude of v, √((#)² + (#)² + (#)²)."
+  },
   "Divida em cima e embaixo pela maior potência de x: sobram só os coeficientes dos termos dominantes.": {
     "fr": "Divisez en haut et en bas par la plus grande puissance de x : il ne reste que les coefficients des termes dominants.",
     "en": "Divide top and bottom by the highest power of x: only the coefficients of the dominant terms are left."
@@ -7610,6 +7662,10 @@
   "Ele aponta para a direção de subida mais íngreme a partir daquele ponto.": {
     "fr": "Il pointe dans la direction de la montée la plus raide à partir de ce point.",
     "en": "It points in the direction of steepest ascent from that point."
+  },
+  "Ele guarda a direção e o sentido, e joga fora o tamanho.": {
+    "fr": "Il conserve la direction et le sens, et abandonne la longueur.",
+    "en": "It keeps the direction and sense, and throws away the length."
   },
   "Ele não depende do caminho: só de onde se começou e onde se terminou.": {
     "fr": "Il ne dépend pas du chemin : seulement d’où l’on est parti et où l’on est arrivé.",
@@ -9027,9 +9083,17 @@
     "fr": "C’est la composante du produit VECTORIEL (aₓb_y − a_ybₓ). Le produit scalaire additionne les produits correspondants ; le vectoriel les soustrait en croisé.",
     "en": "That is the component of the CROSS product (aₓb_y − a_ybₓ). The dot product adds the corresponding products; the cross product subtracts them crosswise."
   },
+  "Essa é a componente do vetor original. O unitário é o vetor DIVIDIDO pelo próprio módulo — ele guarda a direção e joga fora o tamanho.": {
+    "fr": "C’est la composante du vecteur d’origine. Le vecteur unitaire est le vecteur DIVISÉ par sa propre norme — il garde la direction et abandonne la longueur.",
+    "en": "That is a component of the original vector. The unit vector is the vector DIVIDED by its own magnitude — it keeps the direction and throws away the length."
+  },
   "Essa é a componente normal da aceleração, não o raio. Falta dividir o quadrado da velocidade por ela.": {
     "fr": "C’est la composante normale de l’accélération, et non le rayon. Il reste à diviser le carré de la vitesse par elle.",
     "en": "That is the normal component of the acceleration, not the radius. Dividing the square of the speed by it is still missing."
+  },
+  "Essa é a componente z do produto VETORIAL. O escalar multiplica componentes de mesmo nome e soma tudo — e devolve um número, não um vetor.": {
+    "fr": "C’est la composante z du produit VECTORIEL. Le produit scalaire multiplie les composantes de même nom et additionne le tout — et donne un nombre, pas un vecteur.",
+    "en": "That is the z component of the CROSS product. The dot product multiplies components of the same name and adds them all — and returns a number, not a vector."
   },
   "Essa é a constante de tempo (cai a #/e ≈ #%). Para cair à metade, entra ln #.": {
     "fr": "C’est la constante de temps (chute à #/e ≈ #%). Pour tomber à la moitié, c’est ln # qui intervient.",
@@ -9054,6 +9118,10 @@
   "Essa é a coordenada y de P. O pedido é a x.": {
     "fr": "C’est la coordonnée y de P. On demande celle en x.",
     "en": "That is the y coordinate of P. The one asked for is x."
+  },
+  "Essa é a corrente. A força de freio é B·I·L.": {
+    "fr": "C’est le courant. La force de freinage vaut B·I·L.",
+    "en": "That is the current. The braking force is B·I·L."
   },
   "Essa é a covariância, que ainda carrega as unidades das duas variáveis. A inclinação é ela dividida pela variância de x.": {
     "fr": "C’est la covariance, qui porte encore les unités des deux variables. La pente en est le quotient par la variance de x.",
@@ -9555,6 +9623,14 @@
     "fr": "Cette valeur est en mètres. La question demande des nanomètres : multipliez par #⁹.",
     "en": "That value is in metres. The question asks for nanometres: multiply by #⁹."
   },
+  "Esse valor está em metros; o pedido é em cm.": {
+    "fr": "Cette valeur est en mètres ; on demande des cm.",
+    "en": "That value is in metres; what is asked for is cm."
+  },
+  "Esse valor está em metros; o pedido é em mm.": {
+    "fr": "Cette valeur est en mètres ; on demande des mm.",
+    "en": "That value is in metres; what is asked for is mm."
+  },
   "Esse valor está em m³. A pergunta pede litros (# m³ = # L).": {
     "fr": "Cette valeur est en m³. La question demande des litres (# m³ = # L).",
     "en": "That value is in m³. The question asks for litres (# m³ = # L)."
@@ -9562,6 +9638,10 @@
   "Esse valor está em newtons. A pergunta pede kN (# kN = # N).": {
     "fr": "Cette valeur est en newtons. La question demande des kN (# kN = # N).",
     "en": "That value is in newtons. The question asks for kN (# kN = # N)."
+  },
+  "Esse valor está em newtons; o pedido é em mN.": {
+    "fr": "Cette valeur est en newtons ; on demande des mN.",
+    "en": "That value is in newtons; what is asked for is mN."
   },
   "Esse valor está em segundos; o pedido é em ms.": {
     "fr": "Cette valeur est en secondes ; on demande des ms.",
@@ -9943,6 +10023,10 @@
     "fr": "C’est la première valeur observée. L’ordonnée à l’origine est la valeur PRÉDITE en x égal à zéro, qui se trouve souvent hors de la plage mesurée.",
     "en": "That is the first observed value. The intercept is the PREDICTED value at x equal to zero, which usually lies outside the measured range."
   },
+  "Esse é o produto ESCALAR, que devolve um número só. O vetorial devolve um vetor, perpendicular aos dois, e aqui a pergunta é por uma das componentes dele.": {
+    "fr": "C’est le produit SCALAIRE, qui ne donne qu’un nombre. Le produit vectoriel donne un vecteur, perpendiculaire aux deux, et la question porte ici sur l’une de ses composantes.",
+    "en": "That is the DOT product, which returns a single number. The cross product returns a vector perpendicular to both, and here the question asks for one of its components."
+  },
   "Esse é o produto escalar, não o ângulo. Ele é só o primeiro passo: falta dividir pelos módulos e tomar o arco-cosseno.": {
     "fr": "C’est le produit scalaire, pas l’angle. Ce n’est que la première étape : il reste à diviser par les normes et à prendre l’arc cosinus.",
     "en": "That is the dot product, not the angle. It is only the first step: you still have to divide by the magnitudes and take the arccosine."
@@ -9982,6 +10066,10 @@
   "Esse é o resultado de Euler. Runge-Kutta avalia a inclinação quatro vezes por passo, e por isso acerta muitas casas a mais.": {
     "fr": "C’est le résultat d’Euler. Runge-Kutta évalue la pente quatre fois par pas, et gagne donc bien plus de décimales justes.",
     "en": "That is Euler’s result. Runge-Kutta evaluates the slope four times per step, and so gets many more digits right."
+  },
+  "Esse é o resultado de b × a. A ordem importa: trocar os vetores troca o sinal do produto vetorial inteiro.": {
+    "fr": "C’est le résultat de b × a. L’ordre compte : échanger les vecteurs change le signe de tout le produit vectoriel.",
+    "en": "That is the result of b × a. Order matters: swapping the vectors flips the sign of the whole cross product."
   },
   "Esse é o resultado dos juros SIMPLES, em que só o capital inicial rende. Nos compostos o montante inteiro rende a cada período, e o crescimento é exponencial.": {
     "fr": "C’est le résultat des intérêts SIMPLES, où seul le capital initial rapporte. En composés, tout le montant rapporte à chaque période, et la croissance est exponentielle.",
@@ -10523,6 +10611,10 @@
     "fr": "Il reste à diviser par #, le coefficient de x. Ce qui a été trouvé est la valeur de #x, pas celle de x.",
     "en": "You still have to divide by #, the coefficient of x. What was found is the value of #x, not of x."
   },
+  "Falta o módulo. O produto misto pode dar negativo — o sinal diz a orientação dos três vetores —, mas volume é sempre positivo.": {
+    "fr": "Il manque la valeur absolue. Le produit mixte peut être négatif — le signe indique l’orientation des trois vecteurs —, mais un volume est toujours positif.",
+    "en": "The absolute value is missing. The triple product can be negative — the sign tells the orientation of the three vectors — but a volume is always positive."
+  },
   "Falta o vértice do topo da pirâmide.": {
     "fr": "Il manque le sommet de la pyramide.",
     "en": "The apex of the pyramid is missing."
@@ -10835,6 +10927,10 @@
     "fr": "Il manque la multiplication par le troisième choix, les chaussures.",
     "en": "The multiplication by the third choice, the shoes, is missing."
   },
+  "Faltou multiplicar pelo número de espiras: cada uma soma a sua fem, N = #.": {
+    "fr": "Il manque la multiplication par le nombre de spires : chacune ajoute sa f.é.m., N = #.",
+    "en": "Multiplying by the number of turns is missing: each one adds its own emf, N = #."
+  },
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
     "en": "The multiplication by dr/dt is missing. The chain rule gives dV/dt = (dV/dr)·(dr/dt), and here dr/dt = #."
@@ -10854,6 +10950,10 @@
   "Faltou o # de #mk ao isolar k.": {
     "fr": "Il manque le # de #mk au moment d’isoler k.",
     "en": "The # of #mk was dropped when isolating k."
+  },
+  "Faltou o # de qV = ½mv²: v = √(#qV/m).": {
+    "fr": "Il manque le # de qV = ½mv² : v = √(#qV/m).",
+    "en": "The # from qV = ½mv² is missing: v = √(#qV/m)."
   },
   "Faltou o # elevado a #: o número junto do #/x também entra no termo.": {
     "fr": "Il manque le # élevé à # : le nombre accompagnant le #/x entre aussi dans le terme.",
@@ -10879,9 +10979,17 @@
     "fr": "Il manque le # : π multiplie le DIAMÈTRE, qui vaut le double du rayon. C = πd = #πr.",
     "en": "The # is missing: π multiplies the DIAMETER, which is twice the radius. C = πd = #πr."
   },
+  "Faltou o #π do denominador: B = μ₀I/(#πr).": {
+    "fr": "Il manque le #π du dénominateur : B = μ₀I/(#πr).",
+    "en": "The #π in the denominator is missing: B = μ₀I/(#πr)."
+  },
   "Faltou o c = # no numerador: substitua o ponto na expressão INTEIRA ax + by + c.": {
     "fr": "Il manque le c = # au numérateur : remplacez le point dans l’expression ENTIÈRE ax + by + c.",
     "en": "The c = # is missing in the numerator: substitute the point into the WHOLE expression ax + by + c."
+  },
+  "Faltou o comprimento do fio: F = B·I·L, com L = # m.": {
+    "fr": "Il manque la longueur du fil : F = B·I·L, avec L = # m.",
+    "en": "The length of the wire is missing: F = B·I·L, with L = # m."
   },
   "Faltou o cosseno: a força está inclinada em relação ao deslocamento, e só a componente alinhada realiza trabalho.": {
     "fr": "Il manque le cosinus : la force est inclinée par rapport au déplacement, et seule la composante alignée travaille.",
@@ -10967,6 +11075,10 @@
     "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
     "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
   },
+  "Faltou o sen #°: o ângulo não é #°.": {
+    "fr": "Il manque le sin #° : l’angle n’est pas #°.",
+    "en": "The sin #° is missing: the angle is not #°."
+  },
   "Faltou o seno de # graus. Só a parte da velocidade perpendicular ao raio contribui para o giro; a parte alinhada com ele não gira nada.": {
     "fr": "Il manque le sinus de # degrés. Seule la part de la vitesse perpendiculaire au rayon contribue à la rotation ; la part alignée avec lui ne fait rien tourner.",
     "en": "The sine of # degrees is missing. Only the part of the velocity perpendicular to the radius contributes to the turning; the part aligned with it turns nothing."
@@ -10990,6 +11102,10 @@
   "Faltou o sinal: ao isolar, o valor inicial passa para o outro lado trocando de sinal, então a conta é −b dividido por a.": {
     "fr": "Il manque le signe : en isolant, la valeur initiale passe de l’autre côté en changeant de signe, le calcul est donc −b divisé par a.",
     "en": "The sign is missing: when isolating, the initial value moves to the other side changing sign, so the computation is −b divided by a."
+  },
+  "Faltou o termo em z: o produto escalar soma as TRÊS parcelas.": {
+    "fr": "Il manque le terme en z : le produit scalaire additionne les TROIS termes.",
+    "en": "The z term is missing: the dot product adds all THREE terms."
   },
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
@@ -11066,6 +11182,10 @@
   "Faltou uma tampa: o cilindro fechado tem duas bases, uma em cada extremidade.": {
     "fr": "Il manque un couvercle : le cylindre fermé a deux bases, une à chaque extrémité.",
     "en": "One cap is missing: the closed cylinder has two bases, one at each end."
+  },
+  "Faraday usa a VARIAÇÃO do fluxo (final menos inicial), não o fluxo final.": {
+    "fr": "Faraday utilise la VARIATION du flux (final moins initial), pas le flux final.",
+    "en": "Faraday uses the CHANGE in flux (final minus initial), not the final flux."
   },
   "Faraday: a fem é N vezes a taxa de variação do fluxo (o sinal, pela lei de Lenz, só diz o sentido).": {
     "fr": "Faraday : la f.é.m. est N fois le taux de variation du flux (le signe, par la loi de Lenz, ne dit que le sens).",
@@ -12687,6 +12807,10 @@
     "fr": "Multipliez chaque entrée de la L₁ par # et soustrayez-la de la L₃, colonne par colonne.",
     "en": "Multiply each entry of L₁ by # and subtract it from L₃, column by column."
   },
+  "Multiplique componente com componente e some: (#)(#) + (#)(#) + (#)(#).": {
+    "fr": "Multipliez composante par composante et additionnez : (#)(#) + (#)(#) + (#)(#).",
+    "en": "Multiply component by component and add: (#)(#) + (#)(#) + (#)(#)."
+  },
   "Multiplique e divida por #x: sen(#x)/(#x) tende a # e sobra #x/(#x).": {
     "fr": "Multipliez et divisez par #x : sin(#x)/(#x) tend vers # et il reste #x/(#x).",
     "en": "Multiply and divide by #x: sin(#x)/(#x) tends to # and #x/(#x) is left."
@@ -14131,6 +14255,10 @@
     "fr": "Le champ d’une charge ponctuelle décroît en r², et non en r.",
     "en": "The field of a point charge falls off as r², not as r."
   },
+  "O campo dentro do solenoide é uniforme e não depende do raio.": {
+    "fr": "Le champ à l’intérieur du solénoïde est uniforme et ne dépend pas du rayon.",
+    "en": "The field inside the solenoid is uniform and does not depend on the radius."
+  },
   "O campo foi avaliado só no ponto final. O valor correto é a média integrada ao longo de todo o trajeto.": {
     "fr": "Le champ n’a été évalué qu’au point d’arrivée. La valeur correcte est la moyenne intégrée sur tout le trajet.",
     "en": "The field was evaluated only at the end point. The correct value is the average integrated over the whole route."
@@ -14318,6 +14446,10 @@
   "O comprimento medido em movimento é o próprio dividido por γ.": {
     "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
     "en": "The length measured in motion is the proper length divided by γ."
+  },
+  "O comprimento vai em metros, não em centímetros.": {
+    "fr": "La longueur se met en mètres, pas en centimètres.",
+    "en": "The length goes in metres, not centimetres."
   },
   "O comprimento é #·π·r: aqui, #·π·#.": {
     "fr": "La longueur vaut #·π·r : ici, #·π·#.",
@@ -15979,6 +16111,10 @@
     "fr": "Son signe indique la forme de la coupe dans cette direction.",
     "en": "Its sign tells the shape of the cross-section in that direction."
   },
+  "O sinal diz o ângulo: positivo é menos de #°, negativo é mais.": {
+    "fr": "Le signe indique l’angle : positif signifie moins de #°, négatif davantage.",
+    "en": "The sign tells the angle: positive means less than #°, negative means more."
+  },
   "O sinal do produto, pela regra dos sinais, pedaço por pedaço.": {
     "fr": "Le signe du produit, par la règle des signes, morceau par morceau.",
     "en": "The sign of the product, by the sign rule, piece by piece."
@@ -16698,6 +16834,10 @@
   "O x₀ precisa estar em RADIANOS na reta, não em graus.": {
     "fr": "Le x₀ doit être en RADIANS dans la droite, et non en degrés.",
     "en": "The x₀ has to be in RADIANS in the line, not in degrees."
+  },
+  "O z ficou de fora. No espaço são três componentes: Pitágoras se aplica duas vezes, primeiro no plano xy e depois com a altura.": {
+    "fr": "Le z a été oublié. Dans l’espace il y a trois composantes : Pythagore s’applique deux fois, d’abord dans le plan xy puis avec la hauteur.",
+    "en": "The z was left out. In space there are three components: Pythagoras applies twice, first in the xy plane and then with the height."
   },
   "O z não tem unidade: ele mede em desvios, não em metros ou em gramas.": {
     "fr": "Le z n’a pas d’unité : il mesure en écarts types, et non en mètres ou en grammes.",
@@ -18463,6 +18603,10 @@
     "fr": "Produit scalaire et modules des normais.",
     "en": "Dot product and magnitudes of the normais."
   },
+  "Produto escalar zero: os vetores são perpendiculares.": {
+    "fr": "Produit scalaire nul : les vecteurs sont perpendiculaires.",
+    "en": "Zero dot product: the vectors are perpendicular."
+  },
   "Produto negativo: o ângulo é obtuso.": {
     "fr": "Produit négatif : l’angle est obtus.",
     "en": "Negative product: the angle is obtuse."
@@ -18738,6 +18882,10 @@
   "Repare no sinal: subtrair h dentro dos parênteses desloca h para a DIREITA.": {
     "fr": "Notez le signe : soustraire h dans les parenthèses décale h vers la DROITE.",
     "en": "Note the sign: subtracting h inside the brackets shifts h to the RIGHT."
+  },
+  "Repare no y: a ordem dos termos é trocada, e é aí que o sinal se perde.": {
+    "fr": "Attention au y : l’ordre des termes y est inversé, et c’est là que le signe se perd.",
+    "en": "Watch the y: the order of the terms is reversed there, and that is where the sign gets lost."
   },
   "Repetindo para todas as posições.": {
     "fr": "En répétant pour toutes les positions.",
@@ -20783,6 +20931,10 @@
     "fr": "Un tiers du produit par la hauteur.",
     "en": "One third of the product by the height."
   },
+  "Um v se cancela ao igualar qvB a mv²/r: fica r = mv/(qB), com v na primeira potência.": {
+    "fr": "Un v se simplifie en égalant qvB à mv²/r : il reste r = mv/(qB), avec v à la puissance un.",
+    "en": "One v cancels when qvB is set equal to mv²/r: what remains is r = mv/(qB), with v to the first power."
+  },
   "Um ângulo negativo volta para [#°, #°) somando #°.": {
     "fr": "Un angle négatif revient dans [#°, #°) en ajoutant #°.",
     "en": "A negative angle comes back into [#°, #°) by adding #°."
@@ -21131,6 +21283,10 @@
     "fr": "Vous avez divisé les exposants. Dans la division de puissances de même base, les exposants se SOUSTRAIENT — c’est ce qui reste après simplification des facteurs communs.",
     "en": "You divided the exponents. In the division of powers with the same base the exponents SUBTRACT — it is what remains after cancelling the common factors."
   },
+  "Você dividiu pela soma das componentes, não pelo módulo. O módulo é a raiz da soma dos quadrados.": {
+    "fr": "Vous avez divisé par la somme des composantes, pas par la norme. La norme est la racine de la somme des carrés.",
+    "en": "You divided by the sum of the components, not by the magnitude. The magnitude is the root of the sum of the squares."
+  },
   "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
     "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
     "en": "You divided by the number of moles. More moles mean MORE particles, so the amount multiplies."
@@ -21219,6 +21375,10 @@
     "fr": "Vous vous êtes arrêté à la valeur du logarithme. Il reste à appliquer l’exponentielle pour obtenir le rapport de masses.",
     "en": "You stopped at the value of the logarithm. You still have to apply the exponential to get the mass ratio."
   },
+  "Você respondeu o complementar. O arco-cosseno já devolve o ângulo entre os vetores — não é preciso subtrair de #°.": {
+    "fr": "Vous avez répondu le complémentaire. L’arc cosinus donne déjà l’angle entre les vecteurs — inutile de le soustraire de #°.",
+    "en": "You answered the complement. The arccosine already gives the angle between the vectors — there is no need to subtract from #°."
+  },
   "Você somou # em vez de subtrair ao isolar o termo com x. A operação precisa DESFAZER o que está escrito na inequação.": {
     "fr": "Vous avez ajouté # au lieu de soustraire en isolant le terme en x. L’opération doit DÉFAIRE ce qui est écrit dans l’inégalité.",
     "en": "You added # instead of subtracting when isolating the term with x. The operation has to UNDO what is written in the inequality."
@@ -21242,6 +21402,10 @@
   "Você somou a taxa com o valor fixo. A taxa é só a parte que se repete a cada unidade — o valor fixo não entra nela.": {
     "fr": "Vous avez additionné le taux et la valeur fixe. Le taux n’est que la part qui se répète à chaque unité — la valeur fixe n’y entre pas.",
     "en": "You added the rate to the fixed value. The rate is only the part that repeats with each unit — the fixed value is not part of it."
+  },
+  "Você somou as componentes. O módulo não é a soma: é a raiz da soma dos QUADRADOS, porque as três direções são perpendiculares entre si.": {
+    "fr": "Vous avez additionné les composantes. La norme n’est pas la somme : c’est la racine de la somme des CARRÉS, car les trois directions sont perpendiculaires entre elles.",
+    "en": "You added the components. The magnitude is not the sum: it is the root of the sum of the SQUARES, because the three directions are mutually perpendicular."
   },
   "Você somou as diferenças. A distância é a HIPOTENUSA do triângulo formado por elas, e não a soma dos catetos — andar na diagonal é mais curto que andar pelos dois lados.": {
     "fr": "Vous avez additionné les différences. La distance est l’HYPOTÉNUSE du triangle qu’elles forment, et non la somme des côtés — marcher en diagonale est plus court que longer les deux côtés.",
@@ -21406,6 +21570,10 @@
   "Volume da solução pronta, e não do solvente que se usou para preparar.": {
     "fr": "Volume de la solution prête, et non du solvant utilisé pour la préparer.",
     "en": "Volume of the finished solution, not of the solvent used to prepare it."
+  },
+  "Volume diferente de zero: os três vetores ocupam o espaço.": {
+    "fr": "Volume non nul : les trois vecteurs occupent l’espace.",
+    "en": "Non-zero volume: the three vectors span space."
   },
   "Vá da área para o z e só então desfaça a padronização.": {
     "fr": "Allez de l’aire vers z et seulement ensuite défaites la standardisation.",
@@ -21991,6 +22159,10 @@
     "fr": "n est le nombre de spires PAR MÈTRE.",
     "en": "n is the number of turns PER METRE."
   },
+  "n é por METRO: divida as # espiras pelo comprimento # m.": {
+    "fr": "n est par MÈTRE : divisez les # spires par la longueur # m.",
+    "en": "n is per METRE: divide the # turns by the length # m."
+  },
   "n₁·sen θ₁ = n₂·sen θ₂: sen θ₂ = #·sen #° / #. Depois o arco-seno, em graus.": {
     "fr": "n₁·sin θ₁ = n₂·sin θ₂ : sin θ₂ = #·sin #° / #. Ensuite l’arcsinus, en degrés.",
     "en": "n₁·sin θ₁ = n₂·sin θ₂: sin θ₂ = #·sin #° / #. Then the arcsine, in degrees."
@@ -22254,6 +22426,10 @@
   "É Pitágoras duas vezes, como no módulo de um vetor no espaço.": {
     "fr": "C’est Pythagore deux fois, comme pour le module d’un vecteur dans l’espace.",
     "en": "It is Pythagoras twice, as for the magnitude of a vector in space."
+  },
+  "É Pitágoras duas vezes: primeiro no plano xy, depois com o z.": {
+    "fr": "C’est Pythagore deux fois : d’abord dans le plan xy, puis avec le z.",
+    "en": "It is Pythagoras twice: first in the xy plane, then with the z."
   },
   "É Z que identifica o elemento: mudá-lo muda o elemento, não o isótopo.": {
     "fr": "C’est Z qui identifie l’élément : le changer change l’élément, pas l’isotope.",
