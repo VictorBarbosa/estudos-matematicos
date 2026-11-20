@@ -547,6 +547,10 @@
     "fr": "Chaque période, le montant est multiplié par le même facteur.",
     "en": "Each period, the amount is multiplied by the same factor."
   },
+  "A cada segundo a velocidade cai # m/s. Quantos segundos para perder os # m/s?": {
+    "fr": "À chaque seconde la vitesse baisse de # m/s. Combien de secondes pour perdre les # m/s ?",
+    "en": "Every second the speed drops by # m/s. How many seconds to lose the # m/s?"
+  },
   "A cadeia foi aplicada como se o fator interno dividisse o resultado. Ele aparece no numerador e no denominador ao mesmo tempo, e por isso se cancela.": {
     "fr": "La chaîne a été appliquée comme si le facteur intérieur divisait le résultat. Il apparaît au numérateur et au dénominateur en même temps, et se simplifie donc.",
     "en": "The chain was applied as if the inner factor divided the result. It appears in the numerator and the denominator at once, so it cancels."
@@ -991,6 +995,10 @@
     "fr": "La distance à l’axe est r lui-même.",
     "en": "The distance to the axis is r itself."
   },
+  "A distância cresce com o QUADRADO da velocidade.": {
+    "fr": "La distance croît avec le CARRÉ de la vitesse.",
+    "en": "The distance grows with the SQUARE of the speed."
+  },
   "A distância entra AO QUADRADO na lei de Coulomb: divida por r², não por r.": {
     "fr": "La distance entre AU CARRÉ dans la loi de Coulomb : divisez par r², et non par r.",
     "en": "The distance enters SQUARED in Coulomb’s law: divide by r², not by r."
@@ -1038,6 +1046,10 @@
   "A divisão está invertida. Procura-se quantos mols CABEM na massa dada, então a massa vai em cima e a massa molar embaixo.": {
     "fr": "La division est inversée. On cherche combien de moles TIENNENT dans la masse donnée, donc la masse va au-dessus et la masse molaire en dessous.",
     "en": "The division is upside down. You want how many moles FIT in the given mass, so the mass goes on top and the molar mass below."
+  },
+  "A divisão está invertida: o principal vai no DENOMINADOR, sempre.": {
+    "fr": "La division est inversée : le déterminant principal va au DÉNOMINATEUR, toujours.",
+    "en": "The division is upside down: the main determinant always goes in the DENOMINATOR."
   },
   "A divisão está invertida: o tempo vai no denominador.": {
     "fr": "La division est inversée : le temps va au dénominateur.",
@@ -1198,6 +1210,10 @@
   "A equação reduzida da reta.": {
     "fr": "L'équation réduite de la droite.",
     "en": "The reduced equation of the line."
+  },
+  "A equação v = v₀ + at usa TEMPO, não deslocamento. Para relacionar velocidade e distância, use Torricelli.": {
+    "fr": "L’équation v = v₀ + at utilise le TEMPS, pas le déplacement. Pour relier vitesse et distance, utilisez Torricelli.",
+    "en": "The equation v = v₀ + at uses TIME, not displacement. To relate speed and distance, use Torricelli."
   },
   "A esfera cabe num cilindro de mesma altura e raio, ocupando dois terços dele.": {
     "fr": "La sphère tient dans un cylindre de même hauteur et de même rayon, dont elle occupe les deux tiers.",
@@ -1683,6 +1699,10 @@
     "fr": "La ligne # # # | c avec c ≠ # dit # = c, ce qui n’est jamais vrai : le système est incompatible, sans aucune solution.",
     "en": "The row # # # | c with c ≠ # says # = c, which never holds: the system is inconsistent, with no solution at all."
   },
+  "A linha vem da primeira matriz, a coluna da segunda.": {
+    "fr": "La ligne vient de la première matrice, la colonne de la seconde.",
+    "en": "The row comes from the first matrix, the column from the second."
+  },
   "A luz chega em pacotes de energia E = hf = hc/λ. Com λ em nm, hc vale # eV·nm.": {
     "fr": "La lumière arrive en paquets d’énergie E = hf = hc/λ. Avec λ en nm, hc vaut # eV·nm.",
     "en": "Light arrives in packets of energy E = hf = hc/λ. With λ in nm, hc is # eV·nm."
@@ -1902,6 +1922,10 @@
   "A normalização ficou pela metade: é preciso dividir pelos DOIS desvios padrão, o de x e o de y.": {
     "fr": "La normalisation est restée à moitié faite : il faut diviser par les DEUX écarts types, celui de x et celui de y.",
     "en": "The normalisation was left half done: you have to divide by BOTH standard deviations, x’s and y’s."
+  },
+  "A operação entre os dois produtos é SUBTRAÇÃO, não soma. É a diferença que mede área com sinal.": {
+    "fr": "L’opération entre les deux produits est une SOUSTRACTION, pas une addition. C’est la différence qui mesure une aire signée.",
+    "en": "The operation between the two products is SUBTRACTION, not addition. It is the difference that measures signed area."
   },
   "A operação ficou invertida: para achar o cateto, MULTIPLICAMOS a hipotenusa pela razão. Dividir seria o caminho para encontrar a hipotenusa a partir do cateto.": {
     "fr": "L’opération est inversée : pour trouver la cathète, on MULTIPLIE l’hypoténuse par le rapport. Diviser serait le chemin pour trouver l’hypoténuse à partir de la cathète.",
@@ -2162,6 +2186,10 @@
   "A primeira parcela é o regime permanente; a segunda é o transiente, que some.": {
     "fr": "Le premier terme est le régime permanent ; le second est le transitoire, qui disparaît.",
     "en": "The first term is the steady state; the second is the transient, which dies out."
+  },
+  "A primeira parcela é o retângulo; a segunda, o triângulo.": {
+    "fr": "Le premier terme est le rectangle ; le second, le triangle.",
+    "en": "The first term is the rectangle; the second, the triangle."
   },
   "A primitiva da exponencial é ela mesma, dividida pelo fator do expoente.": {
     "fr": "La primitive de l'exponentielle est elle-même, divisée par le facteur de l'exposant.",
@@ -2631,6 +2659,10 @@
     "fr": "La relation est moment de force ÉGAL à inertie fois accélération angulaire. Pour trouver l’accélération, on divise le moment de force par l’inertie.",
     "en": "The relation is torque EQUALS inertia times angular acceleration. To find the acceleration, you divide the torque by the inertia."
   },
+  "A relação é uma divisão: quanto maior a desaceleração, MENOR o tempo de parada.": {
+    "fr": "La relation est une division : plus la décélération est grande, PLUS COURT est le temps d’arrêt.",
+    "en": "The relation is a division: the greater the deceleration, the SHORTER the stopping time."
+  },
   "A resistência térmica é o análogo da resistência elétrica.": {
     "fr": "La résistance thermique est l'analogue de la résistance électrique.",
     "en": "Thermal resistance is the analogue of electrical resistance."
@@ -2987,6 +3019,14 @@
     "fr": "La vitesse angulaire est un tour complet divisé par la période.",
     "en": "Angular velocity is one full turn divided by the period."
   },
+  "A velocidade ao quadrado sozinha não é distância: é preciso dividir pela desaceleração (e pelo #).": {
+    "fr": "La vitesse au carré seule n’est pas une distance : il faut diviser par la décélération (et par #).",
+    "en": "The speed squared alone is not a distance: you have to divide by the deceleration (and by #)."
+  },
+  "A velocidade cresce linearmente com o tempo.": {
+    "fr": "La vitesse croît linéairement avec le temps.",
+    "en": "The speed grows linearly with time."
+  },
   "A velocidade em relação ao solo é a aeronave mais o vento.": {
     "fr": "La vitesse par rapport au sol est celle de l’avion plus celle du vent.",
     "en": "The ground speed is the aircraft plus the wind."
@@ -3166,6 +3206,10 @@
   "Aberto nas duas pontas: fₙ = n·v/(#L), como na corda.": {
     "fr": "Ouvert aux deux extrémités : fₙ = n·v/(#L), comme sur la corde.",
     "en": "Open at both ends: fₙ = n·v/(#L), as on the string."
+  },
+  "Aceleração constante significa somar a mesma quantidade a cada segundo.": {
+    "fr": "Une accélération constante signifie ajouter la même quantité à chaque seconde.",
+    "en": "Constant acceleration means adding the same amount every second."
   },
   "Aceleração é variação de velocidade por tempo.": {
     "fr": "L'accélération est la variation de vitesse par temps.",
@@ -4179,6 +4223,10 @@
     "fr": "Chaque masse devient une quantité de matière, par la masse atomique.",
     "en": "Each mass becomes an amount of substance, through the atomic mass."
   },
+  "Cada menor é o determinante #×# que sobra ao riscar linha e coluna.": {
+    "fr": "Chaque mineur est le déterminant #×# qui reste quand on barre une ligne et une colonne.",
+    "en": "Each minor is the #×# determinant left after crossing out a row and a column."
+  },
   "Cada mol pesa a massa molar: multiplique-a por #.": {
     "fr": "Chaque mole pèse la masse molaire : multipliez-la par #.",
     "en": "Each mole weighs the molar mass: multiply it by #."
@@ -4347,6 +4395,10 @@
     "fr": "Nous calculons chaque côté avec son expression.",
     "en": "We work out each side with its own piece."
   },
+  "Calculamos cada um separadamente.": {
+    "fr": "Nous calculons chacun séparément.",
+    "en": "We compute each one separately."
+  },
   "Calculamos essa diferença.": {
     "fr": "Nous calculons cette différence.",
     "en": "We calculate this difference."
@@ -4366,6 +4418,10 @@
   "Calculamos o MDC e o MMC.": {
     "fr": "Nous calculons le PGCD et le PPCM.",
     "en": "We calculate the GCD and LCM."
+  },
+  "Calculamos o determinante principal, da matriz dos coeficientes.": {
+    "fr": "Nous calculons le déterminant principal, celui de la matrice des coefficients.",
+    "en": "We compute the main determinant, that of the coefficient matrix."
   },
   "Calculamos o discriminante, que decide quantas raízes existem.": {
     "fr": "Nous calculons le discriminant, qui décide combien de racines existent.",
@@ -5163,6 +5219,10 @@
     "fr": "Comme l’argument est un multiple de x, la chaîne ajoute le facteur interne.",
     "en": "Since the argument is a multiple of x, the chain adds the inner factor."
   },
+  "Como o tempo não interessa, usamos Torricelli.": {
+    "fr": "Comme le temps n’intervient pas, nous utilisons Torricelli.",
+    "en": "Since the time does not matter, we use Torricelli."
+  },
   "Como o volume aparece nos dois, a comparação se reduz às densidades.": {
     "fr": "Comme le volume apparaît des deux côtés, la comparaison se réduit aux masses volumiques.",
     "en": "Since the volume appears on both sides, the comparison reduces to the densities."
@@ -5246,6 +5306,10 @@
   "Complete o quadrado até chegar a (x − h)² = #p(y − k); aí o foco é (h, k + p) e a diretriz, y = k − p.": {
     "fr": "Complétez le carré jusqu’à (x − h)² = #p(y − k) ; alors le foyer est (h, k + p) et la directrice, y = k − p.",
     "en": "Complete the square until you reach (x − h)² = #p(y − k); then the focus is (h, k + p) and the directrix, y = k − p."
+  },
+  "Compor duas transformações multiplica os fatores de área.": {
+    "fr": "Composer deux transformations multiplie les facteurs d’aire.",
+    "en": "Composing two transformations multiplies the area factors."
   },
   "Compor f com g é substituir TODA a expressão de g no lugar do x de f.": {
     "fr": "Composer f avec g, c’est substituer TOUTE l’expression de g à la place du x de f.",
@@ -6359,6 +6423,10 @@
     "fr": "Nous divisons le tout par le déterminant.",
     "en": "We divide everything by the determinant."
   },
+  "Dividimos um pelo outro.": {
+    "fr": "Nous divisons l’un par l’autre.",
+    "en": "We divide one by the other."
+  },
   "Dividimos uma variação pela outra.": {
     "fr": "Nous divisons une variation par l'autre.",
     "en": "We divide one variation by the other."
@@ -6506,6 +6574,10 @@
   "Dobrar a velocidade de lançamento quadruplica a altura.": {
     "fr": "Doubler la vitesse de lancement quadruple la hauteur.",
     "en": "Doubling the launch speed quadruples the height."
+  },
+  "Dobrar a velocidade quadruplica a distância de frenagem — é a razão física dos limites de velocidade.": {
+    "fr": "Doubler la vitesse quadruple la distance de freinage — c’est la raison physique des limitations de vitesse.",
+    "en": "Doubling the speed quadruples the braking distance — that is the physical reason for speed limits."
   },
   "Dobrar a velocidade quadruplica a energia.": {
     "fr": "Doubler la vitesse quadruple l'énergie.",
@@ -7415,6 +7487,10 @@
     "fr": "En moles, et non en grammes : ce qui pousse la paroi, c’est la particule, pas la masse.",
     "en": "In moles, not in grams: what pushes the wall is particles, not mass."
   },
+  "Em módulo, esse valor é a área do paralelogramo formado pelas linhas.": {
+    "fr": "En valeur absolue, ce nombre est l’aire du parallélogramme formé par les lignes.",
+    "en": "In absolute value, this number is the area of the parallelogram formed by the rows."
+  },
   "Em nanômetros (# nm = #⁻⁹ m).": {
     "fr": "En nanomètres (# nm = #⁻⁹ m).",
     "en": "In nanometres (# nm = #⁻⁹ m)."
@@ -8063,6 +8139,10 @@
     "fr": "C’est la HAUTEUR relative à l’hypoténuse, et non la projection de la cathète.",
     "en": "That is the ALTITUDE to the hypotenuse, not the projection of the leg."
   },
+  "Essa é a DISTÂNCIA de frenagem, em metros. A pergunta pede um tempo, em segundos.": {
+    "fr": "C’est la DISTANCE de freinage, en mètres. La question demande un temps, en secondes.",
+    "en": "That is the braking DISTANCE, in metres. The question asks for a time, in seconds."
+  },
   "Essa é a ENERGIA CINÉTICA, em joules. O momento é linear na velocidade, não quadrático, e não tem o fator #/#.": {
     "fr": "C’est l’ÉNERGIE CINÉTIQUE, en joules. La quantité de mouvement est linéaire en vitesse, pas quadratique, et n’a pas le facteur #/#.",
     "en": "That is the KINETIC ENERGY, in joules. Momentum is linear in velocity, not quadratic, and has no factor of #/#."
@@ -8094,6 +8174,10 @@
   "Essa é a MÉDIA. A pergunta pedia outra medida da amostra.": {
     "fr": "C’est la MOYENNE. La question portait sur une autre mesure de l’échantillon.",
     "en": "That is the MEAN. The question asked for a different measure of the sample."
+  },
+  "Essa é a POSIÇÃO (deslocamento), medida em metros. A velocidade é em m/s, e usa a equação linear em t.": {
+    "fr": "C’est la POSITION (le déplacement), mesurée en mètres. La vitesse est en m/s et utilise l’équation linéaire en t.",
+    "en": "That is the POSITION (displacement), measured in metres. The speed is in m/s and uses the equation linear in t."
   },
   "Essa é a PROJEÇÃO de um cateto sobre a hipotenusa, não a altura.": {
     "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
@@ -8206,6 +8290,10 @@
   "Essa é a entrada da própria A. A inversa é o bloco da DIREITA ao fim do escalonamento.": {
     "fr": "C’est l’entrée de A elle-même. L’inverse est le bloc de DROITE à la fin de l’échelonnement.",
     "en": "That is an entry of A itself. The inverse is the RIGHT block at the end of the reduction."
+  },
+  "Essa é a entrada de B·A. O produto de matrizes não comuta — a ordem muda o resultado.": {
+    "fr": "C’est l’entrée de B·A. Le produit matriciel n’est pas commutatif — l’ordre change le résultat.",
+    "en": "That is the entry of B·A. Matrix multiplication does not commute — the order changes the result."
   },
   "Essa é a fração NÃO explicada, que é o que sobra para os resíduos.": {
     "fr": "C’est la fraction NON expliquée, celle qui reste aux résidus.",
@@ -8394,6 +8482,10 @@
   "Essa é a solução da equação HOMOGÊNEA, sem o termo constante do lado direito. Ele acrescenta o regime permanente à solução.": {
     "fr": "C’est la solution de l’équation HOMOGÈNE, sans le terme constant du côté droit. Celui-ci ajoute le régime permanent à la solution.",
     "en": "That is the solution of the HOMOGENEOUS equation, without the constant term on the right. It adds the steady state to the solution."
+  },
+  "Essa é a soma da diagonal — o traço, não o determinante.": {
+    "fr": "C’est la somme de la diagonale — la trace, pas le déterminant.",
+    "en": "That is the sum of the diagonal — the trace, not the determinant."
   },
   "Essa é a soma dos quadrados dos outros dois lados. A pergunta é pelo quadrado do MAIOR lado — são as duas pontas da comparação.": {
     "fr": "C’est la somme des carrés des deux autres côtés. La question porte sur le carré du PLUS GRAND côté — ce sont les deux membres de la comparaison.",
@@ -8594,6 +8686,10 @@
   "Esse é o PRODUTO (c/a). A soma usa b: −b/a.": {
     "fr": "C’est le PRODUIT (c/a). La somme utilise b : −b/a.",
     "en": "That is the PRODUCT (c/a). The sum uses b: −b/a."
+  },
+  "Esse é o TEMPO de parada, em segundos. A pergunta pede uma distância, em metros.": {
+    "fr": "C’est le TEMPS d’arrêt, en secondes. La question demande une distance, en mètres.",
+    "en": "That is the stopping TIME, in seconds. The question asks for a distance, in metres."
   },
   "Esse é o TEMPO de subida, em segundos. A pergunta pede altura, em metros.": {
     "fr": "Ceci est le TEMPS de montée, en secondes. La question demande une hauteur, en mètres.",
@@ -9067,6 +9163,10 @@
     "fr": "C’est r². Il reste à prendre la racine.",
     "en": "That is r². Taking the root is still missing."
   },
+  "Esse é só o determinante de A. Falta a contribuição de B.": {
+    "fr": "Ceci n’est que le déterminant de A. Il manque la contribution de B.",
+    "en": "That is only the determinant of A. The contribution of B is missing."
+  },
   "Esse é só o divergente; falta multiplicar pelo volume.": {
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
@@ -9419,6 +9519,10 @@
     "fr": "Il manque la division par la norme de la vitesse. Le produit scalaire seul n’est pas une projection : il doit être normalisé par la direction sur laquelle on projette.",
     "en": "Dividing by the magnitude of the velocity is missing. The dot product alone is not a projection: it has to be normalised by the direction being projected onto."
   },
+  "Faltou dividir por # — a área do triângulo é base × altura / #.": {
+    "fr": "Il manque la division par # — l’aire du triangle est base × hauteur / #.",
+    "en": "The division by # is missing — the area of a triangle is base × height / #."
+  },
   "Faltou dividir por #, que vem do termo ρv²/# de Bernoulli.": {
     "fr": "Il manque la division par #, qui vient du terme ρv²/# de Bernoulli.",
     "en": "Dividing by #, which comes from Bernoulli’s ρv²/# term, is missing."
@@ -9555,6 +9659,10 @@
     "fr": "Il manque le cosinus : seule la composante de la force alignée sur le déplacement travaille.",
     "en": "The cosine is missing: only the component of the force aligned with the displacement does work."
   },
+  "Faltou o fator # do denominador, que vem de Torricelli.": {
+    "fr": "Il manque le facteur # au dénominateur, qui vient de Torricelli.",
+    "en": "The factor # in the denominator is missing; it comes from Torricelli."
+  },
   "Faltou o fator # do denominador, que vem do mv²/#.": {
     "fr": "Il manque le facteur # au dénominateur, qui vient du mv²/#.",
     "en": "The factor # in the denominator is missing; it comes from the mv²/#."
@@ -9598,6 +9706,10 @@
   "Faltou o fator #: v = √(#gh).": {
     "fr": "Il manque le facteur # : v = √(#gh).",
     "en": "The factor # is missing: v = √(#gh)."
+  },
+  "Faltou o fator #: v² = v₀² + #a·Δs.": {
+    "fr": "Il manque le facteur # : v² = v₀² + #a·Δs.",
+    "en": "The factor # is missing: v² = v₀² + #a·Δs."
   },
   "Faltou o fator #: β = #·log(I/I₀). O log sozinho dá bels, não decibéis.": {
     "fr": "Il manque le facteur # : β = #·log(I/I₀). Le log seul donne des bels, pas des décibels.",
@@ -9650,6 +9762,10 @@
   "Faltou somar a velocidade inicial de # m/s.": {
     "fr": "Il manque l’addition de la vitesse initiale de # m/s.",
     "en": "Adding the initial velocity of # m/s is missing."
+  },
+  "Faltou somar a velocidade inicial: o corpo já estava em movimento quando começou a acelerar.": {
+    "fr": "Il manque l’addition de la vitesse initiale : le corps était déjà en mouvement quand il a commencé à accélérer.",
+    "en": "Adding the initial speed is missing: the body was already moving when it started to accelerate."
   },
   "Faltou somar o intercepto, que é o valor da reta em x igual a zero.": {
     "fr": "Il manque l’addition de l’ordonnée à l’origine, qui est la valeur de la droite en x égal à zéro.",
@@ -10327,6 +10443,10 @@
     "fr": "En isolant le côté opposé.",
     "en": "Isolating the opposite leg."
   },
+  "Isolando o deslocamento.": {
+    "fr": "En isolant le déplacement.",
+    "en": "Isolating the displacement."
+  },
   "Isolando o período procurado.": {
     "fr": "En isolant la période recherchée.",
     "en": "Isolating the sought period."
@@ -10346,6 +10466,10 @@
   "Isolando o seno do ângulo.": {
     "fr": "En isolant le sinus de l'angle.",
     "en": "Isolating the sine of the angle."
+  },
+  "Isolando o tempo, com a aceleração negativa.": {
+    "fr": "En isolant le temps, avec l’accélération négative.",
+    "en": "Isolating the time, with the negative acceleration."
   },
   "Isolando o volume final.": {
     "fr": "En isolant le volume final.",
@@ -10655,6 +10779,10 @@
     "fr": "Reliez un sommet à tous les autres : le polygone se partage en # − # triangles, et chaque triangle apporte #°.",
     "en": "Join one vertex to all the others: the polygon splits into # − # triangles, and each triangle brings #°."
   },
+  "Linha de A vezes coluna de B: para a entrada (#), a linha # de A vezes a coluna # de B, termo a termo, e some.": {
+    "fr": "Ligne de A fois colonne de B : pour l’entrée (#), la ligne # de A fois la colonne # de B, terme à terme, puis additionnez.",
+    "en": "Row of A times column of B: for entry (#), row # of A times column # of B, term by term, then add."
+  },
   "Localizamos o número no plano: a parte real no eixo x, a imaginária no y.": {
     "fr": "Nous localisons le nombre dans le plan : la partie réelle sur l'axe x, l'imaginaires sur y.",
     "en": "We locate the number in the plane: the real part on the x-axis, the imaginary on y."
@@ -10955,6 +11083,10 @@
     "fr": "Nous multiplions x par des puissances de dix choisies pour aligner les queues périodiques.",
     "en": "We multiply x by powers of ten chosen to align the repeating tails."
   },
+  "Multiplicamos — não é preciso calcular o produto das matrizes.": {
+    "fr": "Nous multiplions — il n’est pas nécessaire de calculer le produit des matrices.",
+    "en": "We multiply — there is no need to compute the matrix product."
+  },
   "Multiplicamos.": {
     "fr": "Nous multiplions.",
     "en": "We multiply."
@@ -11035,6 +11167,10 @@
     "fr": "Multiplier les dimensions ajoute les exposants.",
     "en": "Multiplying dimensions adds the exponents."
   },
+  "Multiplicar entrada por entrada não é produto de matrizes. Cada posição é um produto escalar entre uma linha e uma coluna.": {
+    "fr": "Multiplier entrée par entrée n’est pas un produit matriciel. Chaque position est un produit scalaire entre une ligne et une colonne.",
+    "en": "Multiplying entry by entry is not matrix multiplication. Each position is a dot product between a row and a column."
+  },
   "Multiplicar grandezas soma os expoentes de cada dimensão.": {
     "fr": "Multiplier des grandeurs additionne les exposants de chaque dimension.",
     "en": "Multiplying quantities adds the exponents of each dimension."
@@ -11042,6 +11178,10 @@
   "Multiplicar parte por parte não funciona: a distributiva produz quatro termos, e eles se misturam entre real e imaginário.": {
     "fr": "Multiplier partie par partie ne marche pas : la distributivité produit quatre termes, et ils se mélangent entre réel et imaginaire.",
     "en": "Multiplying part by part does not work: expanding produces four terms, and they mix between real and imaginary."
+  },
+  "Multiplicar pela velocidade FINAL superestima: durante o percurso o corpo estava mais lento. O certo é usar a velocidade média.": {
+    "fr": "Multiplier par la vitesse FINALE surestime : pendant le trajet le corps allait moins vite. Il faut utiliser la vitesse moyenne.",
+    "en": "Multiplying by the FINAL speed overestimates: during the trip the body was slower. The right thing is to use the average speed."
   },
   "Multiplicar por ele transforma o lado esquerdo na derivada de um produto.": {
     "fr": "Le multiplier transforme le côté gauche en dérivée d’un produit.",
@@ -11054,6 +11194,10 @@
   "Multiplicar por um negativo espelha a reta numérica: o que era maior passa a ser menor. Confira com um exemplo: # < #, mas −# > −#.": {
     "fr": "Multiplier par un négatif reflète la droite numérique : ce qui était plus grand devient plus petit. Vérifiez avec un exemple : # < #, mais −# > −#.",
     "en": "Multiplying by a negative mirrors the number line: what was larger becomes smaller. Check with an example: # < #, but −# > −#."
+  },
+  "Multiplicar só a diagonal principal não basta. Isso valeria apenas para matrizes triangulares, onde o resto é zero.": {
+    "fr": "Multiplier seulement la diagonale principale ne suffit pas. Cela ne vaudrait que pour les matrices triangulaires, où le reste est nul.",
+    "en": "Multiplying only the main diagonal is not enough. That would hold only for triangular matrices, where the rest is zero."
   },
   "Multiplique a condutividade (#), a área e a diferença de # K; divida pela espessura.": {
     "fr": "Multipliez la conductivité (#), l’aire et l’écart de # K ; divisez par l’épaisseur.",
@@ -12683,6 +12827,14 @@
     "fr": "Le déplacement est l’aire sous la vitesse : l’intégrale de v sur l’intervalle.",
     "en": "The displacement is the area under the velocity: the integral of v over the interval."
   },
+  "O deslocamento é a área sob o gráfico da velocidade.": {
+    "fr": "Le déplacement est l’aire sous le graphe de la vitesse.",
+    "en": "The displacement is the area under the velocity graph."
+  },
+  "O determinante do produto é o produto dos determinantes.": {
+    "fr": "Le déterminant du produit est le produit des déterminants.",
+    "en": "The determinant of the product is the product of the determinants."
+  },
   "O determinante dos coeficientes decide o tipo de sistema.": {
     "fr": "Le déterminant des coefficients décide du type de système.",
     "en": "The determinant of the coefficients decides the type of system."
@@ -13619,6 +13771,10 @@
     "fr": "Le premier terme vaut (#x)², donc p = #. Le dernier vaut q² : prenez la racine et donnez à q le signe du terme du milieu.",
     "en": "The first term is (#x)², so p = #. The last is q²: take the root and give q the sign of the middle term."
   },
+  "O principal no denominador é o que exige que ele não seja zero.": {
+    "fr": "Le déterminant principal au dénominateur est ce qui exige qu’il ne soit pas nul.",
+    "en": "The main determinant in the denominator is what requires it to be non-zero."
+  },
   "O prisma tem duas bases de # lados ligadas por # faces laterais.": {
     "fr": "Le prisme a deux bases de # côtés reliées par # faces latérales.",
     "en": "The prism has two #-sided bases joined by # lateral faces."
@@ -13931,6 +14087,10 @@
     "fr": "Le signe alterne, et l’ordre du terme décide lequel c’est. Il vaut la peine d’écrire les premiers termes et de voir où le signe bascule.",
     "en": "The sign alternates, and the order of the term decides which it is. Worth writing the first terms and checking where the sign turns."
   },
+  "O sinal alternado não é decorativo: ele é o que faz a conta medir volume.": {
+    "fr": "Le signe alterné n’est pas décoratif : c’est lui qui fait que le calcul mesure un volume.",
+    "en": "The alternating sign is not decorative: it is what makes the computation measure volume."
+  },
   "O sinal da correção saiu trocado: a fórmula SUBTRAI f/f′ do ponto atual.": {
     "fr": "Le signe de la correction est inversé : la formule SOUSTRAIT f/f′ du point actuel.",
     "en": "The sign of the correction is flipped: the formula SUBTRACTS f/f′ from the current point."
@@ -14083,6 +14243,10 @@
     "fr": "Le signe négatif de la dérivée du cosinus a été oublié.",
     "en": "The negative sign of the derivative of cosine was left out."
   },
+  "O sinal negativo da desaceleração é o que faz a velocidade diminuir.": {
+    "fr": "Le signe négatif de la décélération est ce qui fait diminuer la vitesse.",
+    "en": "The negative sign of the deceleration is what makes the speed decrease."
+  },
   "O sinal negativo é a informação física: o topo DESCE enquanto o pé se afasta.": {
     "fr": "Le signe négatif est l’information physique : le sommet DESCEND pendant que le pied s’éloigne.",
     "en": "The negative sign is the physical information: the top GOES DOWN while the foot slides away."
@@ -14162,6 +14326,10 @@
   "O tempo depende só da velocidade que aponta para a outra margem.": {
     "fr": "Le temps ne dépend que de la vitesse qui pointe vers l’autre rive.",
     "en": "The time depends only on the velocity pointing to the other bank."
+  },
+  "O tempo desaparece — é isso que torna a equação útil.": {
+    "fr": "Le temps disparaît — c’est ce qui rend l’équation utile.",
+    "en": "Time disappears — that is what makes the equation useful."
   },
   "O tempo foi calculado com a velocidade resultante. Mas só a componente perpendicular atravessa o rio — a correnteza não aproxima nem afasta da outra margem.": {
     "fr": "Le temps a été calculé avec la vitesse résultante. Mais seule la composante perpendiculaire traverse le fleuve — le courant ne rapproche ni n’éloigne de l’autre rive.",
@@ -14735,6 +14903,10 @@
     "fr": "Ohm sur la résistance du milieu.",
     "en": "Ohm on the middle resistor."
   },
+  "Olhando a posição pedida (#, #).": {
+    "fr": "En regardant la position demandée (#, #).",
+    "en": "Looking at the requested position (#, #)."
+  },
   "Olhando o expoente de L.": {
     "fr": "Nous lisons l’exposant de L.",
     "en": "Reading the exponent of L."
@@ -15023,6 +15195,10 @@
     "fr": "Les dénominateurs sont #, # et # : le ppcm est #.",
     "en": "The denominators are #, # and #: the lcm is #."
   },
+  "Os determinantes se MULTIPLICAM, não se somam: cada transformação multiplica a área pela sua própria taxa.": {
+    "fr": "Les déterminants se MULTIPLIENT, ils ne s’additionnent pas : chaque transformation multiplie l’aire par son propre facteur.",
+    "en": "Determinants MULTIPLY, they do not add: each transformation multiplies the area by its own factor."
+  },
   "Os dois de cima se SOMAM, não se multiplicam.": {
     "fr": "Les deux du dessus s’ADDITIONNENT, ils ne se multiplient pas.",
     "en": "The two above ADD, they do not multiply."
@@ -15150,6 +15326,10 @@
   "Os pontos críticos: onde f′ zera.": {
     "fr": "Les points critiques : là où f′ s’annule.",
     "en": "The critical points: where f′ is zero."
+  },
+  "Os produtos são das DIAGONAIS (a·d e b·c), não das linhas. Siga o caminho cruzado.": {
+    "fr": "Les produits portent sur les DIAGONALES (a·d et b·c), pas sur les lignes. Suivez le chemin croisé.",
+    "en": "The products are of the DIAGONALS (a·d and b·c), not of the rows. Follow the crossed path."
   },
   "Os quadrantes são contados no sentido anti-horário a partir do eixo x positivo, em faixas de #°. Confira a redução à primeira volta.": {
     "fr": "Les quadrants se comptent dans le sens antihoraire à partir de l’axe x positif, par tranches de #°. Vérifiez la réduction au premier tour.",
@@ -15510,6 +15690,10 @@
   "Parametrize x = #·cos t, y = #·sen t e calcule (#/#)·∮(x dy − y dx) de # a #π.": {
     "fr": "Paramétrez x = #·cos t, y = #·sin t et calculez (#/#)·∮(x dy − y dx) de # à #π.",
     "en": "Parametrise x = #·cos t, y = #·sin t and work out (#/#)·∮(x dy − y dx) from # to #π."
+  },
+  "Parar significa velocidade final nula.": {
+    "fr": "S'arrêter signifie une vitesse finale nulle.",
+    "en": "Stopping means a final speed of zero."
   },
   "Parece que você somou numeradores com numeradores e denominadores com denominadores. O denominador indica o tamanho das partes, não uma quantidade a ser somada — por isso ele não entra na conta. Repare que #/# + #/# daria #/#, ou seja #/#, quando o resultado é #.": {
     "fr": "Il semble que vous ayez combiné numérateurs avec numérateurs et dénominateurs avec dénominateurs. Le dénominateur indique la taille des parts, pas une quantité à additionner — il n’entre donc pas dans le calcul. Remarquez que #/# + #/# donnerait #/#, soit #/#, alors que le résultat vaut #.",
@@ -16395,6 +16579,10 @@
     "fr": "Règle #–#–# : à #, # et # écarts-types de la moyenne restent environ #%, #% et #%.",
     "en": "The #–#–# rule: within #, # and # standard deviations of the mean lie about #%, #% and #%."
   },
+  "Regra de Sarrus: repita as duas primeiras colunas à direita; some os produtos das três diagonais que descem e subtraia os das três que sobem. A #ª linha é #, #, #.": {
+    "fr": "Règle de Sarrus : recopiez les deux premières colonnes à droite ; additionnez les produits des trois diagonales descendantes et soustrayez ceux des trois montantes. La #ᵉ ligne est #, #, #.",
+    "en": "Sarrus’ rule: copy the first two columns to the right; add the products of the three descending diagonals and subtract those of the three ascending ones. Row # is #, #, #."
+  },
   "Regra do produto: derive o primeiro fator e mantenha o segundo, depois o contrário, e some.": {
     "fr": "Règle du produit : dérivez le premier facteur et gardez le second, puis l’inverse, et additionnez.",
     "en": "Product rule: differentiate the first factor and keep the second, then the other way round, and add."
@@ -16622,6 +16810,10 @@
   "Sem esse último fator a conta fica incompleta, por mais que a potência esteja certa.": {
     "fr": "Sans ce dernier facteur le calcul reste incomplet, même si la puissance est juste.",
     "en": "Without that last factor the computation is incomplete, however right the power may be."
+  },
+  "Sem o tempo, use Torricelli: v² = #² + #·#·#; depois tire a raiz quadrada.": {
+    "fr": "Sans le temps, utilisez Torricelli : v² = #² + #·#·# ; puis prenez la racine carrée.",
+    "en": "Without the time, use Torricelli: v² = #² + #·#·#; then take the square root."
   },
   "Sem repetições, há n! ordens possíveis.": {
     "fr": "Sans répétitions, il y a n! ordres possibles.",
@@ -16923,6 +17115,10 @@
     "fr": "En additionnant les quantités de facteurs, nous obtenons le nouvel exposant.",
     "en": "Adding the quantities of factors, we obtain the new exponent."
   },
+  "Somando as três contribuições.": {
+    "fr": "En additionnant les trois contributions.",
+    "en": "Adding the three contributions."
+  },
   "Somando os expoentes.": {
     "fr": "En additionnant les exposants.",
     "en": "Adding the exponents."
@@ -16958,6 +17154,10 @@
   "Somar # ao denominador só diminui o integrando.": {
     "fr": "Ajouter # au dénominateur ne fait que diminuer l’intégrande.",
     "en": "Adding # to the denominator only makes the integrand smaller."
+  },
+  "Somar a diagonal principal dá o traço da matriz, que é outra coisa — útil, mas não é o determinante.": {
+    "fr": "Additionner la diagonale principale donne la trace de la matrice, qui est autre chose — utile, mais ce n’est pas le déterminant.",
+    "en": "Adding the main diagonal gives the trace of the matrix, which is something else — useful, but not the determinant."
   },
   "Somar as incertezas diretamente supõe que as duas medidas erram para o mesmo lado. Sendo independentes, elas se combinam em quadratura, e o total é menor.": {
     "fr": "Additionner les incertitudes directement suppose que les deux mesures se trompent dans le même sens. Étant indépendantes, elles se combinent en quadrature, et le total est plus petit.",
@@ -17290,6 +17490,14 @@
   "Substituímos G, a massa do planeta e a distância ao centro.": {
     "fr": "Nous remplaçons G, la masse de la planète et la distance au centre.",
     "en": "We substitute G, the mass of the planet and the distance to the centre."
+  },
+  "Substituímos a coluna de x pelas constantes.": {
+    "fr": "Nous remplaçons la colonne de x par les constantes.",
+    "en": "We replace the column of x with the constants."
+  },
+  "Substituímos a coluna de y pelas constantes.": {
+    "fr": "Nous remplaçons la colonne de y par les constantes.",
+    "en": "We replace the column of y with the constants."
   },
   "Substituímos a dimensão de velocidade.": {
     "fr": "Nous substituons la dimension de vitesse.",
@@ -18443,6 +18651,10 @@
     "fr": "Vous avez appliqué la proportion directement aux masses. Les coefficients comptent des MOLÉCULES, pas des grammes.",
     "en": "You applied the proportion straight to the masses. The coefficients count MOLECULES, not grams."
   },
+  "Você considerou apenas a velocidade inicial, como se o movimento fosse uniforme. Falta a contribuição da aceleração — o triângulo do gráfico.": {
+    "fr": "Vous n’avez tenu compte que de la vitesse initiale, comme si le mouvement était uniforme. Il manque la contribution de l’accélération — le triangle du graphe.",
+    "en": "You only took the initial speed into account, as if the motion were uniform. The contribution of the acceleration — the triangle of the graph — is missing."
+  },
   "Você contou as raízes em s, não os ângulos. Cada valor de cos x entre −# e # (sem ser ±#) aparece em DOIS ângulos da volta.": {
     "fr": "Vous avez compté les racines en s, et non les angles. Chaque valeur de cos x entre −# et # (sans être ±#) apparaît à DEUX angles du tour.",
     "en": "You counted the roots in s, not the angles. Each value of cos x between −# and # (other than ±#) appears at TWO angles of the turn."
@@ -18522,6 +18734,10 @@
   "Você parou em r². Falta extrair a raiz quadrada para chegar ao raio.": {
     "fr": "Vous vous êtes arrêté à r². Il reste à extraire la racine carrée pour arriver au rayon.",
     "en": "You stopped at r². Taking the square root to reach the radius is still missing."
+  },
+  "Você parou no determinante com a coluna substituída. Falta dividir pelo determinante principal.": {
+    "fr": "Vous vous êtes arrêté au déterminant avec la colonne remplacée. Il reste à diviser par le déterminant principal.",
+    "en": "You stopped at the determinant with the replaced column. You still have to divide by the main determinant."
   },
   "Você parou no uv e não subtraiu ∫v du. A fórmula tem os dois termos: uv − ∫v du.": {
     "fr": "Vous vous êtes arrêté à uv sans soustraire ∫v du. La formule comporte les deux termes : uv − ∫v du.",
@@ -19075,6 +19291,10 @@
     "fr": "Zéro est une réponse : cette sous-couche n’a pas encore commencé à recevoir des électrons.",
     "en": "Zero is an answer: this subshell has not started receiving electrons yet."
   },
+  "Zero: as linhas são proporcionais e a transformação achata o plano.": {
+    "fr": "Zéro : les lignes sont proportionnelles et la transformation aplatit le plan.",
+    "en": "Zero: the rows are proportional and the transformation flattens the plane."
+  },
   "Zn neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Zn neutre a # électrons, autant que de protons.",
     "en": "Neutral Zn has # electrons, as many as protons."
@@ -19266,6 +19486,10 @@
   "r é a hipotenusa do triângulo de catetos |x| e |y|.": {
     "fr": "r est l’hypoténuse du triangle de cathètes |x| et |y|.",
     "en": "r is the hypotenuse of the triangle with legs |x| and |y|."
+  },
+  "s = s₀ + v₀t + at²/# — o tempo entra AO QUADRADO no termo da aceleração.": {
+    "fr": "s = s₀ + v₀t + at²/# — le temps entre AU CARRÉ dans le terme d’accélération.",
+    "en": "s = s₀ + v₀t + at²/# — time enters SQUARED in the acceleration term."
   },
   "sen(u)/u → # só quando o ângulo e o denominador são iguais. Aqui o ângulo é #x: falta o fator #.": {
     "fr": "sin(u)/u → # seulement si l’angle et le dénominateur sont identiques. Ici l’angle vaut #x : il manque le facteur #.",
@@ -19731,6 +19955,10 @@
     "fr": "C’est toujours « ce qu’on veut annuler, sur le pivot ».",
     "en": "It is always “what you want to clear, over the pivot”."
   },
+  "É um produto escalar entre uma linha e uma coluna.": {
+    "fr": "C’est un produit scalaire entre une ligne et une colonne.",
+    "en": "It is a dot product between a row and a column."
+  },
   "É um produto: derivamos o primeiro mantendo o segundo, e somamos o contrário.": {
     "fr": "C'est un produit : nous dérivons le premier en gardant le second, et nous ajoutons l'inverse.",
     "en": "It is a product: we differentiate the first keeping the second, and add the opposite."
@@ -19790,6 +20018,10 @@
   "Δ = b² − #ac com a = #, b = #, c = #. Se der negativo, é ele mesmo a resposta.": {
     "fr": "Δ = b² − #ac avec a = #, b = #, c = #. S’il est négatif, c’est lui-même la réponse.",
     "en": "Δ = b² − #ac with a = #, b = #, c = #. If it comes out negative, it is itself the answer."
+  },
+  "Δs = v₀² / (#a): a velocidade inicial AO QUADRADO, dividida pelo dobro da desaceleração.": {
+    "fr": "Δs = v₀² / (#a) : la vitesse initiale AU CARRÉ, divisée par le double de la décélération.",
+    "en": "Δs = v₀² / (#a): the initial speed SQUARED, divided by twice the deceleration."
   },
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
