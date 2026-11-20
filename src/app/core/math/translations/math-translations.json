@@ -259,6 +259,10 @@
     "fr": "#/# n’est pas zéro : c’est une indétermination à lever.",
     "en": "#/# is not zero: it is an indeterminate form to resolve."
   },
+  "#/# é # elevado a MENOS #: o expoente é negativo.": {
+    "fr": "#/# vaut # élevé à MOINS # : l’exposant est négatif.",
+    "en": "#/# is # raised to MINUS #: the exponent is negative."
+  },
   "#/# é a razão dos termos soltos, o valor perto de n = #. No infinito mandam os termos de maior grau.": {
     "fr": "#/# est le rapport des termes constants, la valeur près de n = #. À l’infini, ce sont les termes de plus haut degré qui commandent.",
     "en": "#/# is the ratio of the constant terms, the value near n = #. At infinity the highest-degree terms are what rule."
@@ -2311,6 +2315,10 @@
     "fr": "La parabole touche l’axe des abscisses en un seul point, qui est le sommet lui-même.",
     "en": "The parabola touches the x-axis at a single point, which is the vertex itself."
   },
+  "A pergunta é o valor de x, não a soma das raízes — e uma delas nem vale.": {
+    "fr": "La question porte sur la valeur de x, pas sur la somme des racines — et l’une d’elles n’est même pas valable.",
+    "en": "The question asks for the value of x, not the sum of the roots — and one of them is not even valid."
+  },
   "A pergunta é o valor em um ponto: substituímos x pelo número dado.": {
     "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
     "en": "The question asks for the value at a point: we replace x by the given number."
@@ -3423,6 +3431,10 @@
     "fr": "La vitesse initiale a été ignorée. Une EDO du second ordre a besoin de DEUX conditions, et la seconde est précisément la dérivée en zéro.",
     "en": "The initial velocity was ignored. A second-order ODE needs TWO conditions, and the second one is precisely the derivative at zero."
   },
+  "A velocidade inicial inteira foi usada na vertical. Só a componente vertical dela sobe, e ela é o produto pelo seno do ângulo.": {
+    "fr": "La vitesse initiale entière a été utilisée à la verticale. Seule sa composante verticale monte, et elle vaut le produit par le sinus de l’angle.",
+    "en": "The whole initial velocity was used vertically. Only its vertical component rises, and that is the product with the sine of the angle."
+  },
   "A velocidade média é a variação da posição dividida pela variação do tempo.": {
     "fr": "La vitesse moyenne est la variation de la position divisée par la variation du temps.",
     "en": "Average velocity is the change in position divided by the change in time."
@@ -3771,6 +3783,10 @@
     "fr": "Al neutre a # électrons, autant que de protons.",
     "en": "Neutral Al has # electrons, as many as protons."
   },
+  "Alcance = v₀²·sen(#θ)/g: aqui #² vezes sen #°, dividido por #.": {
+    "fr": "Portée = v₀²·sin(#θ)/g : ici #² fois sin #°, divisé par #.",
+    "en": "Range = v₀²·sin(#θ)/g: here #² times sin #°, divided by #."
+  },
   "Alguma coluna ficou sem pivô: a variável dela é livre, e o sistema tem infinitas soluções.": {
     "fr": "Une colonne est restée sans pivot : sa variable est libre, et le système a une infinité de solutions.",
     "en": "Some column is left without a pivot: its variable is free, and the system has infinitely many solutions."
@@ -3842,6 +3858,10 @@
   "Ao passar os termos de y e z para o outro lado, o sinal deles troca. Aqui eles foram somados em vez de subtraídos.": {
     "fr": "En faisant passer les termes en y et z de l’autre côté, leur signe change. Ici ils ont été ajoutés au lieu d’être soustraits.",
     "en": "Moving the y and z terms to the other side flips their sign. Here they were added instead of subtracted."
+  },
+  "Ao passar x·ln b para o outro lado ele troca de sinal: fica ln c − ln b, não soma.": {
+    "fr": "En faisant passer x·ln b de l’autre côté il change de signe : on obtient ln c − ln b, pas une addition.",
+    "en": "Moving x·ln b to the other side changes its sign: you get ln c − ln b, not a sum."
   },
   "Apenas uma tem dimensão de tempo.": {
     "fr": "Une seule a la dimension d’un temps.",
@@ -7211,6 +7231,14 @@
     "fr": "Diviser # par le taux donnerait le temps en intérêts SIMPLES. En composés, le capital rapporte sur lui-même, et double avant cela.",
     "en": "Dividing # by the rate would give the time for SIMPLE interest. With compound interest the capital earns on itself, and doubles sooner."
   },
+  "Dividir # por # não desfaz a potência. Pergunte: # elevado a quanto dá #?": {
+    "fr": "Diviser # par # ne défait pas la puissance. Demandez-vous : # élevé à quelle puissance donne # ?",
+    "en": "Dividing # by # does not undo the power. Ask: # raised to what gives #?"
+  },
+  "Dividir # por # não resolve uma potência: x está no EXPOENTE. Tire o logaritmo dos dois lados.": {
+    "fr": "Diviser # par # ne résout pas une puissance : x est dans l’EXPOSANT. Prenez le logarithme des deux côtés.",
+    "en": "Dividing # by # does not solve a power: x is in the EXPONENT. Take the logarithm of both sides."
+  },
   "Dividir o peso total por dois só valeria se a carga estivesse no meio da barra. Com a carga descentrada, é preciso usar torques.": {
     "fr": "Diviser le poids total par deux ne vaudrait que si la charge était au milieu de la barre. Avec une charge décentrée, il faut passer par les moments.",
     "en": "Dividing the total weight by two would only work if the load were at the middle of the bar. With the load off-centre, you have to use torques."
@@ -9059,6 +9087,10 @@
     "fr": "C’est la PLUS PETITE racine. Les deux sont des solutions correctes de l’équation, mais l’énoncé demande la plus grande.",
     "en": "That is the SMALLER root. Both are correct solutions of the equation, but the question asks for the larger one."
   },
+  "Essa é a MENOR solução; o enunciado pede a maior.": {
+    "fr": "C’est la PLUS PETITE solution ; l’énoncé demande la plus grande.",
+    "en": "That is the SMALLER solution; the statement asks for the larger one."
+  },
   "Essa é a MÉDIA. A pergunta pedia outra medida da amostra.": {
     "fr": "C’est la MOYENNE. La question portait sur une autre mesure de l’échantillon.",
     "en": "That is the MEAN. The question asked for a different measure of the sample."
@@ -9151,9 +9183,21 @@
     "fr": "C’est la coordonnée x de P. On demande celle en y.",
     "en": "That is the x coordinate of P. The one asked for is y."
   },
+  "Essa é a coordenada x, que usa o cosseno. A coordenada y é a do seno.": {
+    "fr": "C’est la coordonnée x, qui utilise le cosinus. La coordonnée y est celle du sinus.",
+    "en": "That is the x coordinate, which uses the cosine. The y coordinate is the one with the sine."
+  },
   "Essa é a coordenada y de P. O pedido é a x.": {
     "fr": "C’est la coordonnée y de P. On demande celle en x.",
     "en": "That is the y coordinate of P. The one asked for is x."
+  },
+  "Essa é a coordenada y, que usa o outro semieixo e o seno.": {
+    "fr": "C’est la coordonnée y, qui utilise l’autre demi-axe et le sinus.",
+    "en": "That is the y coordinate, which uses the other semi-axis and the sine."
+  },
+  "Essa é a coordenada y. As duas equações andam juntas, mas cada uma devolve a sua própria coordenada.": {
+    "fr": "C’est la coordonnée y. Les deux équations vont de pair, mais chacune donne sa propre coordonnée.",
+    "en": "That is the y coordinate. The two equations go together, but each returns its own coordinate."
   },
   "Essa é a corrente. A força de freio é B·I·L.": {
     "fr": "C’est le courant. La force de freinage vaut B·I·L.",
@@ -9206,6 +9250,10 @@
   "Essa é a distância até a carga de # μC. O pedido é a partir da de # μC.": {
     "fr": "C’est la distance jusqu’à la charge de # μC. Ce qui est demandé part de celle de # μC.",
     "en": "That is the distance to the # μC charge. What is asked starts from the # μC one."
+  },
+  "Essa é a distância horizontal percorrida, não a altura.": {
+    "fr": "C’est la distance horizontale parcourue, pas la hauteur.",
+    "en": "That is the horizontal distance covered, not the height."
   },
   "Essa é a do meio — a média das três. A mais cheia tem dois livros a mais que a menor.": {
     "fr": "C’est celle du milieu — la moyenne des trois. La plus remplie a deux livres de plus que la moins remplie.",
@@ -9406,6 +9454,10 @@
   "Essa é a parcial em relação à OUTRA variável. Cada parcial mede a taxa ao andar numa direção só, e elas costumam ser bem diferentes.": {
     "fr": "C’est la dérivée partielle par rapport à l’AUTRE variable. Chaque partielle mesure le taux dans une seule direction, et elles sont souvent très différentes.",
     "en": "That is the partial with respect to the OTHER variable. Each partial measures the rate along one direction only, and they are usually quite different."
+  },
+  "Essa é a posição, não a velocidade. A velocidade é a derivada da posição.": {
+    "fr": "C’est la position, pas la vitesse. La vitesse est la dérivée de la position.",
+    "en": "That is the position, not the velocity. Velocity is the derivative of position."
   },
   "Essa é a pressão parcial do OUTRO gás. A fração molar usa os mols do gás que a pergunta nomeia.": {
     "fr": "C’est la pression partielle de l’AUTRE gaz. La fraction molaire utilise les moles du gaz que la question nomme.",
@@ -9642,6 +9694,10 @@
   "Esse produto só daria a área se os vetores fossem perpendiculares, quando sen θ = #.": {
     "fr": "Ce produit ne donnerait l’aire que si les vecteurs étaient perpendiculaires, quand sin θ = #.",
     "en": "That product would only give the area if the vectors were perpendicular, when sin θ = #."
+  },
+  "Esse seria o alcance de um lançamento a # graus, em que o seno do arco duplo vale #. Em qualquer outro ângulo ele é menor.": {
+    "fr": "Ce serait la portée d’un tir à # degrés, où le sinus de l’arc double vaut #. À tout autre angle elle est plus courte.",
+    "en": "That would be the range of a launch at # degrees, where the sine of the double angle is #. At any other angle it is shorter."
   },
   "Esse seria o produto escalar apenas se os vetores fossem paralelos e de mesmo sentido, quando cos θ = #.": {
     "fr": "Ce serait le produit scalaire seulement si les vecteurs étaient parallèles et de même sens, quand cos θ = #.",
@@ -10147,6 +10203,10 @@
     "fr": "C’est le temps de traversée en secondes, et non la distance en m.",
     "en": "That is the crossing time in seconds, not the distance in m."
   },
+  "Esse é o tempo de voo, em segundos. O alcance é a distância percorrida nele.": {
+    "fr": "C’est le temps de vol, en secondes. La portée est la distance parcourue pendant ce temps.",
+    "en": "That is the time of flight, in seconds. The range is the distance covered during it."
+  },
   "Esse é o tempo para cair a um DÉCIMO. Para a metade, usa-se ln #.": {
     "fr": "C’est le temps pour tomber au DIXIÈME. Pour la moitié, on utilise ln #.",
     "en": "That is the time to fall to a TENTH. For a half, ln # is used."
@@ -10262,6 +10322,10 @@
   "Esse é o valor de d². Falta extrair a raiz quadrada.": {
     "fr": "C’est la valeur de d². Il reste à prendre la racine carrée.",
     "en": "That is the value of d². The square root is still missing."
+  },
+  "Esse é o valor de t = #^x. Falta voltar a x: #^x = #.": {
+    "fr": "C’est la valeur de t = #^x. Il reste à revenir à x : #^x = #.",
+    "en": "That is the value of t = #^x. You still have to go back to x: #^x = #."
   },
   "Esse é o valor de t = x². Falta voltar a x: x = √#.": {
     "fr": "C’est la valeur de t = x². Il reste à revenir à x : x = √#.",
@@ -10667,6 +10731,10 @@
     "fr": "Il reste à diviser par #, le coefficient de x. Ce qui a été trouvé est la valeur de #x, pas celle de x.",
     "en": "You still have to divide by #, the coefficient of x. What was found is the value of #x, not of x."
   },
+  "Falta o fator que vem do arco duplo. O alcance usa o seno de duas vezes o ângulo, e não o seno dele sozinho.": {
+    "fr": "Il manque le facteur qui vient de l’arc double. La portée utilise le sinus du double de l’angle, et non le sinus de l’angle seul.",
+    "en": "The factor coming from the double angle is missing. The range uses the sine of twice the angle, not the sine of the angle alone."
+  },
   "Falta o módulo. O produto misto pode dar negativo — o sinal diz a orientação dos três vetores —, mas volume é sempre positivo.": {
     "fr": "Il manque la valeur absolue. Le produit mixte peut être négatif — le signe indique l’orientation des trois vecteurs —, mais un volume est toujours positif.",
     "en": "The absolute value is missing. The triple product can be negative — the sign tells the orientation of the three vectors — but a volume is always positive."
@@ -10811,6 +10879,10 @@
     "fr": "Il manque la double dérivation du terme #x³ : elle donne #x, et le terme #x² donne #.",
     "en": "Differentiating the term #x³ twice is missing: it gives #x, and the term #x² gives #."
   },
+  "Faltou descontar a queda. A gravidade entra com o termo quadrático, que é o que curva a trajetória.": {
+    "fr": "Il manque la soustraction de la chute. La gravité intervient par le terme quadratique, qui est ce qui courbe la trajectoire.",
+    "en": "Subtracting the fall is missing. Gravity enters through the quadratic term, which is what curves the trajectory."
+  },
   "Faltou descontar o ângulo B, que é igual ao E pela congruência.": {
     "fr": "Il manque la soustraction de l’angle B, égal à E par la congruence.",
     "en": "You forgot to subtract angle B, which equals E by the congruence."
@@ -10854,6 +10926,14 @@
   "Faltou dividir pelo módulo de b. Sem essa divisão, o resultado depende do comprimento de b — e a projeção deve depender só da sua direção.": {
     "fr": "Il manque la division par la norme de b. Sans elle, le résultat dépend de la longueur de b — or la projection ne doit dépendre que de sa direction.",
     "en": "The division by the magnitude of b is missing. Without it the result depends on the length of b — and the projection should depend only on its direction."
+  },
+  "Faltou dividir por # antes de tirar o logaritmo: o # multiplica a potência, não está dentro dela.": {
+    "fr": "Il manque la division par # avant de prendre le logarithme : le # multiplie la puissance, il n’est pas dedans.",
+    "en": "Dividing by # before taking the logarithm is missing: the # multiplies the power, it is not inside it."
+  },
+  "Faltou dividir por # antes do ln: o # multiplica a exponencial.": {
+    "fr": "Il manque la division par # avant le ln : le # multiplie l’exponentielle.",
+    "en": "Dividing by # before the ln is missing: the # multiplies the exponential."
   },
   "Faltou dividir por # — a área do triângulo é base × altura / #.": {
     "fr": "Il manque la division par # — l’aire du triangle est base × hauteur / #.",
@@ -10934,6 +11014,10 @@
   "Faltou extrair a raiz quadrada.": {
     "fr": "Il manque la racine carrée.",
     "en": "The square root is missing."
+  },
+  "Faltou extrair a raiz quadrada: a soma dos quadrados ainda não é o módulo.": {
+    "fr": "Il manque la racine carrée : la somme des carrés n’est pas encore la norme.",
+    "en": "The square root is missing: the sum of the squares is not yet the magnitude."
   },
   "Faltou extrair a raiz quadrada: esse é o valor de x ao quadrado, não de x.": {
     "fr": "Il manque la racine carrée : ceci est la valeur de x au carré, pas de x.",
@@ -11054,6 +11138,14 @@
   "Faltou o cosseno: só a componente da força alinhada ao deslocamento trabalha.": {
     "fr": "Il manque le cosinus : seule la composante de la force alignée sur le déplacement travaille.",
     "en": "The cosine is missing: only the component of the force aligned with the displacement does work."
+  },
+  "Faltou o expoente de # = #^#: fica #x = #, e x = #.": {
+    "fr": "Il manque l’exposant de # = #^# : on obtient #x = #, et x = #.",
+    "en": "The exponent of # = #^# is missing: you get #x = #, and x = #."
+  },
+  "Faltou o expoente de # = #^#: fica #x = #, e x = #/#.": {
+    "fr": "Il manque l’exposant de # = #^# : on obtient #x = #, et x = #/#.",
+    "en": "The exponent of # = #^# is missing: you get #x = #, and x = #/#."
   },
   "Faltou o fator # do denominador, que vem de Torricelli.": {
     "fr": "Il manque le facteur # au dénominateur, qui vient de Torricelli.",
@@ -11186,6 +11278,14 @@
   "Faltou somar a altura dos olhos (# m): o triângulo começa nela, não no chão.": {
     "fr": "Il manque l’addition de la hauteur des yeux (# m) : le triangle commence là, et non au sol.",
     "en": "Adding the eye height (# m) is missing: the triangle starts there, not at the ground."
+  },
+  "Faltou somar a coordenada do centro, que é #. O raio dá o tamanho, e o centro dá o lugar.": {
+    "fr": "Il manque l’addition de la coordonnée du centre, qui vaut #. Le rayon donne la taille, et le centre donne la place.",
+    "en": "Adding the coordinate of the centre, which is #, is missing. The radius gives the size, and the centre gives the place."
+  },
+  "Faltou somar a posição inicial #, que é de onde o móvel parte.": {
+    "fr": "Il manque l’addition de la position initiale #, d’où part le mobile.",
+    "en": "Adding the initial position #, where the moving point starts, is missing."
   },
   "Faltou somar a velocidade inicial de # m/s.": {
     "fr": "Il manque l’addition de la vitesse initiale de # m/s.",
@@ -11594,6 +11694,10 @@
   "Igualando os coeficientes.": {
     "fr": "En égalant les coefficients.",
     "en": "Equating the coefficients."
+  },
+  "Igualar os expoentes só vale com a MESMA base. Com bases diferentes, tire o ln.": {
+    "fr": "Égaler les exposants ne vaut qu’avec la MÊME base. Avec des bases différentes, prenez le ln.",
+    "en": "Equating exponents only works with the SAME base. With different bases, take the ln."
   },
   "Iguale a força magnética q·v·B à centrípeta m·v²/r: r = m·v/(q·B). Depois passe de metros para cm.": {
     "fr": "Égalez la force magnétique q·v·B à la centripète m·v²/r : r = m·v/(q·B). Passez ensuite des mètres aux cm.",
@@ -15239,6 +15343,10 @@
     "fr": "Le logarithme n’existe que pour un argument positif : x = # donnerait le log d’un nombre négatif et est écarté.",
     "en": "The logarithm only exists for a positive argument: x = # would give the log of a negative number and is discarded."
   },
+  "O logaritmo traz o expoente para a frente: ln(bˣ) = x·ln b.": {
+    "fr": "Le logarithme fait descendre l’exposant devant : ln(bˣ) = x·ln b.",
+    "en": "The logarithm brings the exponent out front: ln(bˣ) = x·ln b."
+  },
   "O logaritmo é NATURAL (base e), não decimal. Ele vem da integral de #/m.": {
     "fr": "Le logarithme est NATUREL (base e), pas décimal. Il vient de l’intégrale de #/m.",
     "en": "The logarithm is NATURAL (base e), not decimal. It comes from the integral of #/m."
@@ -15614,6 +15722,10 @@
   "O paralelo, por produto sobre soma.": {
     "fr": "Le parallèle, par produit sur somme.",
     "en": "The parallel, by product over sum."
+  },
+  "O parâmetro multiplica a velocidade. Aqui ele foi tratado como se valesse #, independentemente do instante pedido.": {
+    "fr": "Le paramètre multiplie la vitesse. Ici il a été traité comme s’il valait #, quel que soit l’instant demandé.",
+    "en": "The parameter multiplies the velocity. Here it was treated as if it were #, regardless of the instant asked for."
   },
   "O parêntese é obrigatório: o menos antes da segunda fração vale para o numerador inteiro.": {
     "fr": "La parenthèse est obligatoire : le moins devant la seconde fraction porte sur tout le numérateur.",
@@ -17439,6 +17551,10 @@
     "fr": "Les deux côtés sont des puissances de # : # = #².",
     "en": "Both sides are powers of #: # = #²."
   },
+  "Os dois lados são potências de #: # = #³, e uma fração #/algo é expoente negativo.": {
+    "fr": "Les deux côtés sont des puissances de # : # = #³, et une fraction #/quelque chose est un exposant négatif.",
+    "en": "Both sides are powers of #: # = #³, and a fraction #/something is a negative exponent."
+  },
   "Os dois lados são potências de #: # = #³.": {
     "fr": "Les deux côtés sont des puissances de # : # = #³.",
     "en": "Both sides are powers of #: # = #³."
@@ -17598,6 +17714,10 @@
   "Os raios de sol chegam paralelos, então os dois triângulos são semelhantes.": {
     "fr": "Les rayons du soleil arrivent parallèles, donc les deux triangles sont semblables.",
     "en": "The sun’s rays arrive parallel, so the two triangles are similar."
+  },
+  "Os semieixos ficaram trocados: quem multiplica o cosseno é o semieixo horizontal.": {
+    "fr": "Les demi-axes ont été intervertis : celui qui multiplie le cosinus est le demi-axe horizontal.",
+    "en": "The semi-axes were swapped: the one multiplying the cosine is the horizontal semi-axis."
   },
   "Os semieixos são # e # (as raízes de # e #), não os quadrados.": {
     "fr": "Les demi-axes sont # et # (les racines de # et #), et non les carrés.",
@@ -19347,6 +19467,10 @@
     "fr": "Étant régulier, tous les angles sont égaux : nous divisons la somme par n.",
     "en": "Being regular, all the angles are equal: we divide the sum by n."
   },
+  "Seno e cosseno ficaram trocados. Em x vai o cosseno, em y vai o seno — é a convenção que faz o parâmetro ser o ângulo medido do eixo x.": {
+    "fr": "Sinus et cosinus ont été intervertis. En x c’est le cosinus, en y le sinus — c’est la convention qui fait du paramètre l’angle mesuré depuis l’axe des x.",
+    "en": "Sine and cosine were swapped. In x goes the cosine, in y the sine — that is the convention making the parameter the angle measured from the x axis."
+  },
   "Seno é o y do ponto, cosseno é o x, tangente é y/x. Veja o quadrante.": {
     "fr": "Le sinus est le y du point, le cosinus le x, la tangente y/x. Regardez le quadrant.",
     "en": "Sine is the point’s y, cosine its x, tangent y/x. Look at the quadrant."
@@ -19447,9 +19571,21 @@
     "fr": "Signe inversé au moment d’isoler x dans f″ = #.",
     "en": "Sign flipped when isolating x in f″ = #."
   },
+  "Sinal trocado ao isolar x: de x + # = #, x = # − #.": {
+    "fr": "Signe inversé en isolant x : de x + # = #, on tire x = # − #.",
+    "en": "Sign flipped when isolating x: from x + # = #, x = # − #."
+  },
+  "Sinal trocado ao isolar x: de x - # = #, x = # + #.": {
+    "fr": "Signe inversé en isolant x : de x - # = #, on tire x = # + #.",
+    "en": "Sign flipped when isolating x: from x - # = #, x = # + #."
+  },
   "Sinal trocado ao passar os termos de lado: o que soma de um lado passa subtraindo.": {
     "fr": "Signe inversé en faisant passer les termes : ce qui s’ajoute d’un côté passe en soustrayant.",
     "en": "Sign flipped when moving the terms across: what is added on one side moves over subtracting."
+  },
+  "Sinal trocado.": {
+    "fr": "Signe inversé.",
+    "en": "Sign flipped."
   },
   "Sinal trocado: D = a₁b₂ − a₂b₁ = # dá a₁k = a₂b₁.": {
     "fr": "Signe inversé : D = a₁b₂ − a₂b₁ = # donne a₁k = a₂b₁.",
@@ -19862,6 +19998,10 @@
   "Substitua o ponto: algo diferente de zero sobre zero indica assíntota (infinita).": {
     "fr": "Remplacez par le point : quelque chose de non nul sur zéro indique une asymptote (infinie).",
     "en": "Substitute the point: something non-zero over zero indicates an asymptote (infinite)."
+  },
+  "Substitua o valor de t nas duas equações, uma de cada vez.": {
+    "fr": "Remplacez la valeur de t dans les deux équations, une à la fois.",
+    "en": "Substitute the value of t into both equations, one at a time."
   },
   "Substitua o y fixo e trate o que sobra como uma função de uma variável só.": {
     "fr": "Substituez le y fixe et traitez ce qui reste comme une fonction d’une seule variable.",
@@ -21175,6 +21315,14 @@
     "fr": "Un tour complet. C’est de là que vient le #°, et c’est pourquoi il ne dépend pas du nombre de côtés : tout polygone convexe fait un tour, et un seul.",
     "en": "One full turn. That is where the #° comes from, and why it does not depend on the number of sides: any convex polygon makes one turn, and only one."
   },
+  "Uma volta é #π, então t = #·#π/#. Substitua na equação de x: # vezes o cosseno de t.": {
+    "fr": "Un tour complet vaut #π, donc t = #·#π/#. Remplacez dans l’équation de x : # fois le cosinus de t.",
+    "en": "A full turn is #π, so t = #·#π/#. Substitute into the equation for x: # times the cosine of t."
+  },
+  "Uma volta é #π: # doze avos dão t = #·#π/#. Substitua t na equação de y.": {
+    "fr": "Un tour complet vaut #π : # douzièmes donnent t = #·#π/#. Remplacez t dans l’équation de y.",
+    "en": "A full turn is #π: # twelfths give t = #·#π/#. Substitute t into the equation for y."
+  },
   "União (∪): junte os elementos dos dois conjuntos, sem repetir.": {
     "fr": "Union (∪) : réunissez les éléments des deux ensembles, sans répétition.",
     "en": "Union (∪): put together the elements of both sets, without repeating."
@@ -22247,6 +22395,10 @@
     "fr": "det A = #. Dans l’adjointe, échangez les deux de la diagonale principale, changez le signe des deux autres et divisez le tout par #.",
     "en": "det A = #. In the adjugate, swap the two on the main diagonal, flip the sign of the other two and divide everything by #."
   },
+  "e^(rt) = # pede o ln de #, não # direto.": {
+    "fr": "e^(rt) = # demande le ln de #, pas # directement.",
+    "en": "e^(rt) = # calls for the ln of #, not # directly."
+  },
   "f(número) quer dizer: troque todo x por esse número e calcule.": {
     "fr": "f(nombre) veut dire : remplacez tout x par ce nombre et calculez.",
     "en": "f(number) means: replace every x by that number and compute."
@@ -22306,6 +22458,10 @@
   "kΩ vezes μF: #³ · #⁻⁶ = #⁻³, ou seja, milissegundos.": {
     "fr": "kΩ fois μF : #³ · #⁻⁶ = #⁻³, c’est-à-dire des millisecondes.",
     "en": "kΩ times μF: #³ · #⁻⁶ = #⁻³, that is, milliseconds."
+  },
+  "ln # ÷ ln # não é ln(# ÷ #): divida os logaritmos, não os números.": {
+    "fr": "ln # ÷ ln # n’est pas ln(# ÷ #) : divisez les logarithmes, pas les nombres.",
+    "en": "ln # ÷ ln # is not ln(# ÷ #): divide the logarithms, not the numbers."
   },
   "m = Δy / Δx: (# − #) dividido por (# − #), sempre na mesma ordem dos pontos.": {
     "fr": "m = Δy / Δx : (# − #) divisé par (# − #), toujours dans le même ordre des points.",
@@ -22427,6 +22583,10 @@
     "fr": "vₓ = |v| · cos θ : la norme fois le cosinus de l’angle avec l’axe des x.",
     "en": "vₓ = |v| · cos θ: the magnitude times the cosine of the angle with the x axis."
   },
+  "x = # resolve o #º grau, mas log de # não existe: o domínio exige x > #.": {
+    "fr": "x = # résout l’équation du #ᵉ degré, mais le log de # n’existe pas : le domaine exige x > #.",
+    "en": "x = # solves the degree-# equation, but the log of # does not exist: the domain requires x > #."
+  },
   "x = # zera o DENOMINADOR: ali a fração não existe, então essa fronteira fica de fora mesmo com «ou igual». Só a do numerador (x = #) entra.": {
     "fr": "x = # annule le DÉNOMINATEUR : la fraction n’y existe pas, cette borne reste donc dehors même avec « ou égal ». Seule celle du numérateur (x = #) entre.",
     "en": "x = # makes the DENOMINATOR zero: the fraction does not exist there, so that boundary stays out even with “or equal”. Only the numerator’s (x = #) is included."
@@ -22482,6 +22642,10 @@
   "y = r·sen θ: multiplique # pelo seno de #°.": {
     "fr": "y = r·sin θ : multipliez # par le sinus de #°.",
     "en": "y = r·sin θ: multiply # by the sine of #°."
+  },
+  "y = v₀·sen θ·t − g·t²/#: a subida usa só a componente vertical, #·sen #°, e o tempo entra AO QUADRADO na parte da gravidade.": {
+    "fr": "y = v₀·sin θ·t − g·t²/# : la montée n’utilise que la composante verticale, #·sin #°, et le temps entre AU CARRÉ dans la part de la gravité.",
+    "en": "y = v₀·sin θ·t − g·t²/#: the rise uses only the vertical component, #·sin #°, and time enters SQUARED in the gravity part."
   },
   "|#| tira o sinal; #! é # × # × # × # × #.": {
     "fr": "|#| enlève le signe ; #! vaut # × # × # × # × #.",
