@@ -1803,6 +1803,10 @@
     "fr": "L’indétermination #/# n’est pas zéro : c’est un avertissement qu’il reste à factoriser.",
     "en": "The indeterminate form #/# is not zero: it is a warning that factoring is still needed."
   },
+  "A integral acumulada sobre a região.": {
+    "fr": "L’intégrale cumulée sur la région.",
+    "en": "The integral accumulated over the region."
+  },
   "A integral de uma constante c de a até b é a área de um retângulo: c vezes (b − a).": {
     "fr": "L’intégrale d’une constante c de a à b est l’aire d’un rectangle : c fois (b − a).",
     "en": "The integral of a constant c from a to b is the area of a rectangle: c times (b − a)."
@@ -3543,6 +3547,10 @@
     "fr": "L’aire devient fonction d’une seule variable.",
     "en": "The area becomes a function of a single variable."
   },
+  "A área foi multiplicada em vez de dividida. A média é o total distribuído pela região, não concentrado nela.": {
+    "fr": "L’aire a été multipliée au lieu d’être divisée. La moyenne est le total réparti sur la région, pas concentré sur elle.",
+    "en": "The area was multiplied instead of divided. The average is the total spread over the region, not concentrated on it."
+  },
   "A área máxima é a do quadrado.": {
     "fr": "L’aire maximale est celle du carré.",
     "en": "The greatest area is the square’s."
@@ -3618,6 +3626,10 @@
   "AB e DE são lados correspondentes (A↔D, B↔E): têm a mesma medida.": {
     "fr": "AB et DE sont des côtés correspondants (A↔D, B↔E) : ils ont la même mesure.",
     "en": "AB and DE are matching sides (A↔D, B↔E): they have the same measure."
+  },
+  "AB está DENTRO do plano, não é normal a ele. A normal é AB × AC.": {
+    "fr": "AB est DANS le plan, il n’en est pas la normale. La normale est AB × AC.",
+    "en": "AB lies IN the plane, it is not normal to it. The normal is AB × AC."
   },
   "Abaixo de #, a ligação se trata como covalente apolar.": {
     "fr": "En dessous de #, la liaison est traitée comme covalente apolaire.",
@@ -4659,6 +4671,10 @@
     "fr": "Chaque composante est une dérivée partielle évaluée au point.",
     "en": "Each component is a partial derivative evaluated at the point."
   },
+  "Cada coordenada de P se multiplica pela coordenada correspondente da normal antes de somar.": {
+    "fr": "Chaque coordonnée de P se multiplie par la coordonnée correspondante de la normale avant l’addition.",
+    "en": "Each coordinate of P multiplies the corresponding coordinate of the normal before adding."
+  },
   "Cada derivada de e^(#x) devolve e^(#x) com um fator # da cadeia.": {
     "fr": "Chaque dérivée de e^(#x) rend e^(#x) avec un facteur # venant de la chaîne.",
     "en": "Each derivative of e^(#x) gives back e^(#x) with a factor # from the chain."
@@ -5479,6 +5495,10 @@
     "fr": "Avec une vitesse alignée au rayon, le moment cinétique serait nul.",
     "en": "With the velocity aligned with the radius the angular momentum would be zero."
   },
+  "Com a volta inteira e integrando #, isso é a área do círculo.": {
+    "fr": "Sur le tour complet et en intégrant #, c’est l’aire du cercle.",
+    "en": "Over the full turn and integrating #, that is the area of the circle."
+  },
   "Com a área em m² (# cm² = #⁻⁴ m²).": {
     "fr": "Avec l’aire en m² (# cm² = #⁻⁴ m²).",
     "en": "With the area in m² (# cm² = #⁻⁴ m²)."
@@ -5538,6 +5558,10 @@
   "Com esse valor o gráfico fica inteiro, sem salto na fronteira.": {
     "fr": "Avec cette valeur le graphe est d’un seul tenant, sans saut à la frontière.",
     "en": "With that value the graph is in one piece, with no jump at the boundary."
+  },
+  "Com f positiva, isso é o volume sob a superfície e acima do retângulo.": {
+    "fr": "Avec f positive, c’est le volume sous la surface et au-dessus du rectangle.",
+    "en": "With f positive, that is the volume under the surface and above the rectangle."
   },
   "Com forças perpendiculares ao braço, isso é força vezes distância.": {
     "fr": "Avec des forces perpendiculaires au bras, c'est force fois distance.",
@@ -7206,6 +7230,10 @@
   "Dividindo pela taxa.": {
     "fr": "En divisant par le taux.",
     "en": "Dividing by the rate."
+  },
+  "Dividindo pela área da região, que vale #.": {
+    "fr": "En divisant par l’aire de la région, qui vaut #.",
+    "en": "Dividing by the area of the region, which is #."
   },
   "Dividindo pelo tempo de # segundos.": {
     "fr": "En divisant par le temps de # secondes.",
@@ -9415,6 +9443,14 @@
     "fr": "C’est la pente, et non l’ordonnée à l’origine.",
     "en": "That is the slope, not the intercept."
   },
+  "Essa é a integral sobre o círculo INTEIRO. O setor cobre só # doze avos dele.": {
+    "fr": "C’est l’intégrale sur le cercle ENTIER. Le secteur n’en couvre que # douzièmes.",
+    "en": "That is the integral over the WHOLE circle. The sector covers only # twelfths of it."
+  },
+  "Essa é a integral. Falta dividir pela área da região, que vale #.": {
+    "fr": "C’est l’intégrale. Il reste à diviser par l’aire de la région, qui vaut #.",
+    "en": "That is the integral. You still have to divide by the area of the region, which is #."
+  },
   "Essa é a lateral. Faltam as duas tampas circulares.": {
     "fr": "C’est la latérale. Il manque les deux couvercles circulaires.",
     "en": "That is the lateral surface. The two circular caps are missing."
@@ -10091,6 +10127,10 @@
     "fr": "C’est la norme de a. La projection ne l’atteint que si les vecteurs sont parallèles et de même sens.",
     "en": "That is the magnitude of a. The projection only reaches it when the vectors are parallel and point the same way."
   },
+  "Esse é o módulo de v × w, a ÁREA da base. Falta o produto escalar com u para ter o volume.": {
+    "fr": "C’est la norme de v × w, l’AIRE de la base. Il manque le produit scalaire avec u pour obtenir le volume.",
+    "en": "That is the magnitude of v × w, the AREA of the base. The dot product with u is still needed for the volume."
+  },
   "Esse é o módulo do deslocamento em m. Falta dividir pelos # s.": {
     "fr": "C’est la norme du déplacement en m. Il reste à diviser par les # s.",
     "en": "That is the magnitude of the displacement in m. Dividing by the # s is still missing."
@@ -10303,6 +10343,10 @@
     "fr": "C’est la valeur EXACTE de la solution. L’exercice demande ce que rend la méthode d’Euler, qui est différent — et cet écart est justement ce que le sujet étudie.",
     "en": "That is the EXACT value of the solution. The exercise asks what Euler’s method returns, which is different — and that gap is precisely what this topic studies."
   },
+  "Esse é o valor MÉDIO da função na região. A integral é esse valor multiplicado pela área, não dividido por ela.": {
+    "fr": "C’est la valeur MOYENNE de la fonction sur la région. L’intégrale est cette valeur multipliée par l’aire, et non divisée par elle.",
+    "en": "That is the AVERAGE value of the function on the region. The integral is that value multiplied by the area, not divided by it."
+  },
   "Esse é o valor aproximado, não o erro. O erro é a diferença até o exato.": {
     "fr": "C’est la valeur approchée, et non l’erreur. L’erreur est l’écart jusqu’à la valeur exacte.",
     "en": "That is the approximate value, not the error. The error is the gap to the exact one."
@@ -10322,6 +10366,10 @@
   "Esse é o valor da derivada PRIMEIRA. Falta derivar mais uma vez.": {
     "fr": "C’est la valeur de la dérivée PREMIÈRE. Il reste à dériver une fois de plus.",
     "en": "That is the value of the FIRST derivative. One more differentiation is missing."
+  },
+  "Esse é o valor da função no centro do retângulo. A integral soma todas as alturas, não apenas uma delas.": {
+    "fr": "C’est la valeur de la fonction au centre du rectangle. L’intégrale additionne toutes les hauteurs, pas une seule.",
+    "en": "That is the value of the function at the centre of the rectangle. The integral adds up all the heights, not just one of them."
   },
   "Esse é o valor da função no ponto. A reta só corta o eixo y ali se x₀ = #.": {
     "fr": "C’est la valeur de la fonction au point. La droite ne coupe l’axe des ordonnées là que si x₀ = #.",
@@ -10483,6 +10531,10 @@
     "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
     "en": "That is the initial value. The system evolves from it, and at positive t it has already moved."
   },
+  "Esse é o valor no centro. Ele coincide com a média apenas em superfícies planas.": {
+    "fr": "C’est la valeur au centre. Elle ne coïncide avec la moyenne que pour des surfaces planes.",
+    "en": "That is the value at the centre. It coincides with the average only for flat surfaces."
+  },
   "Esse é o valor no extremo direito. O valor médio pondera todo o intervalo.": {
     "fr": "C’est la valeur à la borne de droite. La valeur moyenne pondère tout l’intervalle.",
     "en": "That is the value at the right end. The average value weighs the whole interval."
@@ -10535,9 +10587,17 @@
     "fr": "C’est l’angle en RADIANS. L’énoncé demande des degrés : vérifiez le mode de la calculatrice (DEG, et non RAD).",
     "en": "That is the angle in RADIANS. The question asks for degrees: check the calculator mode (DEG, not RAD)."
   },
+  "Esse é o ângulo em radianos. A pergunta pede graus.": {
+    "fr": "C’est l’angle en radians. La question demande des degrés.",
+    "en": "That is the angle in radians. The question asks for degrees."
+  },
   "Esse é o ângulo interno de CADA vértice, se o polígono for regular. A pergunta pede a soma de todos.": {
     "fr": "C’est l’angle intérieur de CHAQUE sommet, si le polygone est régulier. La question demande la somme de tous.",
     "en": "That is the interior angle at EACH vertex, if the polygon is regular. The question asks for the sum of all of them."
+  },
+  "Esse é o ângulo obtuso. Entre planos (ou retas) usa-se o agudo: tome o módulo do produto escalar.": {
+    "fr": "C’est l’angle obtus. Entre plans (ou droites) on prend l’angle aigu : prenez la valeur absolue du produit scalaire.",
+    "en": "That is the obtuse angle. Between planes (or lines) the acute one is used: take the absolute value of the dot product."
   },
   "Esse é o ângulo oposto ao MENOR lado. O maior ângulo fica sempre em frente ao maior lado — é ele que entra com sinal de menos no numerador.": {
     "fr": "Ceci est l’angle opposé au PLUS PETIT côté. Le plus grand angle est toujours face au plus grand côté — c’est lui qui entre avec le signe moins au numérateur.",
@@ -10991,6 +11051,10 @@
     "fr": "Il manque la division par le facteur # de l’exposant, que la primitive de l’exponentielle apporte.",
     "en": "Dividing by the factor # from the exponent, which the antiderivative of the exponential brings, is missing."
   },
+  "Faltou dividir pelo módulo da normal (#): o numerador sozinho depende do tamanho de n.": {
+    "fr": "Il manque la division par la norme de la normale (#) : le numérateur seul dépend de la taille de n.",
+    "en": "Dividing by the magnitude of the normal (#) is missing: the numerator alone depends on the size of n."
+  },
   "Faltou dividir pelo módulo da velocidade. O produto escalar sozinho não é uma projeção: ele precisa ser normalizado pela direção sobre a qual se projeta.": {
     "fr": "Il manque la division par la norme de la vitesse. Le produit scalaire seul n’est pas une projection : il doit être normalisé par la direction sur laquelle on projette.",
     "en": "Dividing by the magnitude of the velocity is missing. The dot product alone is not a projection: it has to be normalised by the direction being projected onto."
@@ -11115,6 +11179,10 @@
     "fr": "Il manque la multiplication du nombre isolé de droite (#) par # : le ppcm multiplie TOUS les termes.",
     "en": "You forgot to multiply the loose number on the right (#) by #: the LCM multiplies ALL the terms."
   },
+  "Faltou multiplicar pela constante # que está sendo integrada.": {
+    "fr": "Il manque la multiplication par la constante # qui est intégrée.",
+    "en": "Multiplying by the constant # being integrated is missing."
+  },
   "Faltou multiplicar pela cota M da derivada. Com M igual a # dá no mesmo, mas na exponencial ela é bem maior que #.": {
     "fr": "Il manque la multiplication par la borne M de la dérivée. Avec M égal à # cela revient au même, mais pour l’exponentielle elle est bien plus grande que #.",
     "en": "Multiplying by the bound M of the derivative is missing. With M equal to # it comes out the same, but for the exponential it is much larger than #."
@@ -11150,6 +11218,10 @@
   "Faltou multiplicar pelo raio. Na forma com velocidade angular, a aceleração é omega ao quadrado VEZES o raio.": {
     "fr": "Il manque la multiplication par le rayon. Dans la forme avec la vitesse angulaire, l’accélération vaut oméga au carré FOIS le rayon.",
     "en": "Multiplying by the radius is missing. In the form with angular velocity, the acceleration is omega squared TIMES the radius."
+  },
+  "Faltou multiplicar pelos coeficientes # e # antes de somar.": {
+    "fr": "Il manque la multiplication par les coefficients # et # avant l’addition.",
+    "en": "Multiplying by the coefficients # and # before adding is missing."
   },
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
@@ -11303,6 +11375,10 @@
     "fr": "Il manque le facteur qui vient du changement de base. Seulement en base e ce facteur vaut # ; en base # il vaut le logarithme naturel de #.",
     "en": "The factor coming from the change of base is missing. Only with base e is that factor #; with base # it is the natural logarithm of #."
   },
+  "Faltou o fator r do jacobiano. Sem ele a integral em r dá apenas o raio, e não a metade do raio ao quadrado — e o resultado deixa de ser uma área.": {
+    "fr": "Il manque le facteur r du jacobien. Sans lui l’intégrale en r ne donne que le rayon, et non la moitié du rayon au carré — et le résultat cesse d’être une aire.",
+    "en": "The Jacobian factor r is missing. Without it the integral in r gives only the radius, not half the radius squared — and the result stops being an area."
+  },
   "Faltou o fator um meio, que a fórmula da energia cinética sempre traz.": {
     "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
     "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
@@ -11386,6 +11462,10 @@
   "Faltou subtrair F(#). Mesmo com ln # = #, o termo −x²/# em x = # não é zero.": {
     "fr": "Il manque la soustraction de F(#). Même avec ln # = #, le terme −x²/# en x = # n’est pas nul.",
     "en": "Subtracting F(#) is missing. Even with ln # = #, the term −x²/# at x = # is not zero."
+  },
+  "Faltou subtrair d = #: o numerador é P na equação inteira, a·x₀ + b·y₀ + c·z₀ − d.": {
+    "fr": "Il manque la soustraction de d = # : le numérateur est P dans l’équation entière, a·x₀ + b·y₀ + c·z₀ − d.",
+    "en": "Subtracting d = # is missing: the numerator is P in the whole equation, a·x₀ + b·y₀ + c·z₀ − d."
   },
   "Faltou subtrair o valor em t = #: a integral definida é F(#) − F(#).": {
     "fr": "Il manque la soustraction de la valeur en t = # : l’intégrale définie est F(#) − F(#).",
@@ -11894,6 +11974,10 @@
   "Integre M em x, some uma g(y) e ache g comparando a derivada em y com N. Depois substitua o ponto.": {
     "fr": "Intégrez M en x, ajoutez une g(y) et trouvez g en comparant la dérivée en y avec N. Remplacez ensuite le point.",
     "en": "Integrate M in x, add a g(y) and find g by comparing the derivative in y with N. Then substitute the point."
+  },
+  "Integre primeiro em x, tratando y como constante; depois integre o resultado em y.": {
+    "fr": "Intégrez d’abord en x, en traitant y comme une constante ; intégrez ensuite le résultat en y.",
+    "en": "Integrate first in x, treating y as a constant; then integrate the result in y."
   },
   "Integre v(t): a primitiva de #t + # é #t²/# + #t. Avalie em # e em # e subtraia.": {
     "fr": "Intégrez v(t) : la primitive de #t + # est #t²/# + #t. Évaluez en # et en # et soustrayez.",
@@ -13002,6 +13086,10 @@
   "Multiplicar GRANDEZAS soma os expoentes; multiplicar os expoentes entre si seria o efeito de uma potência de potência.": {
     "fr": "Multiplier des GRANDEURS additionne les exposants ; multiplier les exposants entre eux serait l’effet d’une puissance de puissance.",
     "en": "Multiplying QUANTITIES adds the exponents; multiplying the exponents together would be the effect of a power of a power."
+  },
+  "Multiplicar a altura do centro pela área só daria o resultado exato se a superfície fosse um plano. Com termos quadráticos, ela não é.": {
+    "fr": "Multiplier la hauteur au centre par l’aire ne donnerait le résultat exact que si la surface était un plan. Avec des termes quadratiques, elle ne l’est pas.",
+    "en": "Multiplying the height at the centre by the area would give the exact result only if the surface were a plane. With quadratic terms, it is not."
   },
   "Multiplicar a probabilidade pelo número de tentativas conta cenários mais de uma vez, e com muitas tentativas passaria de #. Use o complementar.": {
     "fr": "Multiplier la probabilité par le nombre d’essais compte certains scénarios plusieurs fois, et avec beaucoup d’essais dépasserait #. Utilisez le complémentaire.",
@@ -16435,6 +16523,22 @@
     "fr": "Le signe de l’opération est « ÷ », donc on divise.",
     "en": "The operation sign is \"÷\", so we divide."
   },
+  "O sinal de # vai junto com v: some #·# com (#)·#.": {
+    "fr": "Le signe de # accompagne v : additionnez #·# et (#)·#.",
+    "en": "The sign of # goes with v: add #·# and (#)·#."
+  },
+  "O sinal de # vai junto com v: some #·# com (#)·(#).": {
+    "fr": "Le signe de # accompagne v : additionnez #·# et (#)·(#).",
+    "en": "The sign of # goes with v: add #·# and (#)·(#)."
+  },
+  "O sinal de # vai junto com v: some #·(#) com (#)·#.": {
+    "fr": "Le signe de # accompagne v : additionnez #·(#) et (#)·#.",
+    "en": "The sign of # goes with v: add #·(#) and (#)·#."
+  },
+  "O sinal de # vai junto com v: some #·(#) com (#)·(#).": {
+    "fr": "Le signe de # accompagne v : additionnez #·(#) et (#)·(#).",
+    "en": "The sign of # goes with v: add #·(#) and (#)·(#)."
+  },
   "O sinal de W: positivo quando o gás EXPANDE, empurrando o pistão.": {
     "fr": "Le signe de W : positif quand le gaz SE DILATE, en poussant le piston.",
     "en": "The sign of W: positive when the gas EXPANDS, pushing the piston."
@@ -17266,6 +17370,10 @@
   "O ângulo cujo seno é esse.": {
     "fr": "L’angle dont c’est le sinus.",
     "en": "The angle whose sine that is."
+  },
+  "O ângulo entre as retas é o das direções, tomado agudo (módulo do cosseno).": {
+    "fr": "L’angle entre les droites est celui des directions, pris aigu (valeur absolue du cosinus).",
+    "en": "The angle between the lines is the one between their directions, taken acute (absolute value of the cosine)."
   },
   "O ângulo entre os planos é o das normais, tomado agudo (módulo do cosseno).": {
     "fr": "L’angle entre les planos est celui des normais, pris aigu (module du cosinus).",
@@ -19015,6 +19123,10 @@
     "fr": "Produit positif : l’angle est aigu.",
     "en": "Positive product: the angle is acute."
   },
+  "Produtos escalares dois a dois não dão volume. O volume é o produto misto u·(v × w), o determinante.": {
+    "fr": "Des produits scalaires deux à deux ne donnent pas un volume. Le volume est le produit mixte u·(v × w), le déterminant.",
+    "en": "Pairwise dot products do not give a volume. The volume is the triple product u·(v × w), the determinant."
+  },
   "Produção por máquina e por hora.": {
     "fr": "Production par machine et par heure.",
     "en": "Production per machine and per hour."
@@ -19555,6 +19667,10 @@
     "fr": "Sans indépendance, le second événement a une probabilité modifiée.",
     "en": "Without independence, the second event has an altered probability."
   },
+  "Sem o fator r, o resultado sairia menor e sem significado geométrico.": {
+    "fr": "Sans le facteur r, le résultat serait plus petit et sans signification géométrique.",
+    "en": "Without the factor r, the result would come out smaller and with no geometric meaning."
+  },
   "Sem o tempo, use Torricelli: v² = #² + #·#·#; depois tire a raiz quadrada.": {
     "fr": "Sans le temps, utilisez Torricelli : v² = #² + #·#·# ; puis prenez la racine carrée.",
     "en": "Without the time, use Torricelli: v² = #² + #·#·#; then take the square root."
@@ -19683,6 +19799,10 @@
     "fr": "Signe de la fraction : règle des signes, morceau par morceau. Au zéro du dénominateur, elle n’existe pas (∄).",
     "en": "Sign of the fraction: the sign rule, piece by piece. At the denominator’s zero it does not exist (∄)."
   },
+  "Sinal de d trocado: com a normal escolhida com a > #, d = n·A.": {
+    "fr": "Signe de d inversé : avec la normale choisie telle que a > #, d = n·A.",
+    "en": "Sign of d flipped: with the normal chosen so that a > #, d = n·A."
+  },
   "Sinal negativo: cargas de sinais opostos se atraem.": {
     "fr": "Signe négatif : des charges de signes opposés s’attirent.",
     "en": "Negative sign: charges of opposite signs attract."
@@ -19694,6 +19814,10 @@
   "Sinal trocado ao isolar k. Confira a passagem do termo para o outro lado.": {
     "fr": "Signe inversé en isolant k. Vérifiez le passage du terme de l’autre côté.",
     "en": "Sign flipped when isolating k. Check moving the term to the other side."
+  },
+  "Sinal trocado ao isolar k: o termo que soma passa subtraindo.": {
+    "fr": "Signe inversé en isolant k : le terme qui s’ajoute passe en soustrayant.",
+    "en": "Sign flipped when isolating k: the term that adds moves across subtracting."
   },
   "Sinal trocado ao isolar q: de # = m·(#) + q, q = # − m·(#).": {
     "fr": "Signe inversé en isolant q : à partir de # = m·(#) + q, on a q = # − m·(#).",
@@ -19726,6 +19850,10 @@
   "Sinal trocado: anti-horário com n = k para cima dá ∂Q/∂x − ∂P/∂y.": {
     "fr": "Signe inversé : le sens antihoraire avec n = k vers le haut donne ∂Q/∂x − ∂P/∂y.",
     "en": "Sign flipped: counterclockwise with n = k pointing up gives ∂Q/∂x − ∂P/∂y."
+  },
+  "Sinal trocado: com tudo do lado esquerdo e d à direita, d = n·P (sem o menos).": {
+    "fr": "Signe inversé : avec tout au membre de gauche et d à droite, d = n·P (sans le moins).",
+    "en": "Sign flipped: with everything on the left and d on the right, d = n·P (without the minus)."
   },
   "Sinal trocado: o integrando é ∂Q/∂x − ∂P/∂y (e a borda é percorrida no sentido anti-horário).": {
     "fr": "Signe inversé : l’intégrande est ∂Q/∂x − ∂P/∂y (et le bord est parcouru dans le sens antihoraire).",
@@ -21591,6 +21719,10 @@
     "fr": "On a toujours P(x) = Q(x)·D(x) + R(x).",
     "en": "It always holds that P(x) = Q(x)·D(x) + R(x)."
   },
+  "Valor médio = integral dupla dividida pela área do retângulo, (# − #)·(# − #).": {
+    "fr": "Valeur moyenne = intégrale double divisée par l’aire du rectangle, (# − #)·(# − #).",
+    "en": "Average value = double integral divided by the area of the rectangle, (# − #)·(# − #)."
+  },
   "Valor médio = área dividida pela largura do intervalo (#). A área aqui é um trapézio.": {
     "fr": "Valeur moyenne = aire divisée par la largeur de l’intervalle (#). L’aire ici est un trapèze.",
     "en": "Average value = area divided by the width of the interval (#). The area here is a trapezoid."
@@ -22046,6 +22178,14 @@
   "Volume diferente de zero: os três vetores ocupam o espaço.": {
     "fr": "Volume non nul : les trois vecteurs occupent l’espace.",
     "en": "Non-zero volume: the three vectors span space."
+  },
+  "Volume não nulo: os três vetores são linearmente independentes.": {
+    "fr": "Volume non nul : les trois vecteurs sont linéairement indépendants.",
+    "en": "Non-zero volume: the three vectors are linearly independent."
+  },
+  "Volume zero: os três vetores estão num mesmo plano — são dependentes.": {
+    "fr": "Volume nul : les trois vecteurs sont dans un même plan — ils sont dépendants.",
+    "en": "Zero volume: the three vectors lie in one plane — they are dependent."
   },
   "Vá da área para o z e só então desfaça a padronização.": {
     "fr": "Allez de l’aire vers z et seulement ensuite défaites la standardisation.",
@@ -22591,6 +22731,10 @@
     "fr": "k = # ne convient pas : sans le x², l’équation ne serait même pas du #º degré.",
     "en": "k = # does not work: without the x², the equation would not even be of degree #."
   },
+  "k = # não zera o determinante aqui. Monte o produto misto e iguale a zero.": {
+    "fr": "k = # n’annule pas le déterminant ici. Écrivez le produit mixte et égalez-le à zéro.",
+    "en": "k = # does not make the determinant vanish here. Set up the triple product and set it equal to zero."
+  },
   "k² é o fator da ÁREA. Volume tem três dimensões: k³.": {
     "fr": "k² est le facteur de l’AIRE. Le volume a trois dimensions : k³.",
     "en": "k² is the AREA factor. Volume has three dimensions: k³."
@@ -22983,6 +23127,10 @@
     "fr": "C’est la même idée que la conservation de la quantité de mouvement, appliquée à la rotation.",
     "en": "It is the same idea as the conservation of linear momentum, applied to turning."
   },
+  "É a mesma ideia da média em uma variável, com área no lugar de comprimento.": {
+    "fr": "C’est la même idée que la moyenne à une variable, avec une aire à la place d’une longueur.",
+    "en": "It is the same idea as the average in one variable, with area in place of length."
+  },
   "É a média das bases multiplicada pela altura.": {
     "fr": "C’est la moyenne des bases multipliée par la hauteur.",
     "en": "It is the average of the bases times the height."
@@ -23111,6 +23259,10 @@
     "fr": "C’est l’instant où la hauteur est maximale.",
     "en": "It is the instant when the height is greatest."
   },
+  "É o jacobiano da mudança: pedaços mais afastados da origem são maiores.": {
+    "fr": "C’est le jacobien du changement : les morceaux plus éloignés de l’origine sont plus grands.",
+    "en": "It is the Jacobian of the change: patches farther from the origin are larger."
+  },
   "É o mesmo ângulo do sol nos dois lugares, no mesmo instante.": {
     "fr": "C’est le même angle du soleil aux deux endroits, au même instant.",
     "en": "It is the same angle of the sun at both places, at the same moment."
@@ -23210,6 +23362,10 @@
   "É o regime superamortecido: lento, e sem passar do ponto de equilíbrio.": {
     "fr": "C’est le régime suramorti : lent, et sans dépasser le point d’équilibre.",
     "en": "It is the overdamped regime: slow, and without overshooting the equilibrium point."
+  },
+  "É o teorema de Fubini: num retângulo a ordem de integração não altera o resultado.": {
+    "fr": "C’est le théorème de Fubini : sur un rectangle l’ordre d’intégration ne change pas le résultat.",
+    "en": "It is Fubini’s theorem: on a rectangle the order of integration does not change the result."
   },
   "É o tetraedro.": {
     "fr": "C’est le tetraedro.",
