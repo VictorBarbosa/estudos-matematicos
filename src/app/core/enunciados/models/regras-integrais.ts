@@ -16,13 +16,13 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Integre e informe o coeficiente de x² na primitiva de f(x) = #x.',
       '\\int ax\\,dx = \\frac{a}{2}x^2 + C',
-      '\\int #x\\,dx = \\frac{#}{2}x^2 + C',
+      '\\int #1x\\,dx = \\frac{#1}{2}x^2 + C',
       (v) => v[0]! / 2,
     ],
     [
       'Integre e informe o coeficiente de x³ na primitiva de f(x) = #x².',
       '\\int ax^2\\,dx = \\frac{a}{3}x^3 + C',
-      '\\int #x^2\\,dx = \\frac{#}{3}x^3 + C',
+      '\\int #1x^2\\,dx = \\frac{#1}{3}x^3 + C',
       (v) => v[0]! / 3,
     ],
     [
@@ -34,14 +34,14 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Tomando C = #, qual é o valor de F(#) para F(x) = ∫#x dx? (duas casas decimais)',
       'F(x) = \\frac{a}{2}x^2 + C',
-      'F(#) = \\frac{#}{2} \\cdot #^2 + #',
+      'F(#2) = \\frac{#3}{2} \\cdot #2^2 + #1',
       (v) => (v[2]! / 2) * v[1]! ** 2 + v[0]!,
       2,
     ],
     [
       'Tomando C = #, qual é o valor de F(#) para F(x) = ∫#x² dx? (duas casas decimais)',
       'F(x) = \\frac{a}{3}x^3 + C',
-      'F(#) = \\frac{#}{3} \\cdot #^3 + #',
+      'F(#2) = \\frac{#3}{3} \\cdot #2^3 + #1',
       (v) => (v[2]! / 3) * v[1]! ** 3 + v[0]!,
       2,
     ],
@@ -74,13 +74,13 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma função tem derivada igual a # e vale # em x = #. Quanto ela vale em x = #?',
       'f(x) = f(x_0) + a(x - x_0)',
-      'f(#) = # + # \\cdot (# - #)',
+      'f(#4) = #2 + #1 \\cdot (#4 - #3)',
       (v) => v[1]! + v[0]! * (v[3]! - v[2]!),
     ],
     [
       'Tomando C = #, qual é o valor de F(#) para F(x) = ∫e^(#x) dx? (duas casas decimais)',
       'F(x) = \\frac{e^{ax}}{a} + C',
-      'F(#) = \\frac{e^{# \\cdot #}}{#} + #',
+      'F(#2) = \\frac{e^{#3 \\cdot #2} - 1}{#3} + #1',
       (v) => (Math.exp(v[2]! * v[1]!) - 1) / v[2]! + v[0]!,
       2,
     ],
@@ -103,26 +103,26 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral de # no intervalo de # a #.',
       '\\int_a^b k\\,dx = k(b - a)',
-      '\\int_{#}^{#} #\\,dx = # \\cdot (# - #)',
+      '\\int_{#2}^{#3} #1\\,dx = #1 \\cdot (#3 - #2)',
       (v) => v[0]! * (v[2]! - v[1]!),
     ],
     [
       'Calcule a integral de x no intervalo de # a #. (duas casas decimais)',
       '\\int_a^b x\\,dx = \\frac{b^2 - a^2}{2}',
-      '\\int_{#}^{#} x\\,dx = \\frac{#^2 - #^2}{2}',
+      '\\int_{#1}^{#2} x\\,dx = \\frac{#2^2 - #1^2}{2}',
       (v) => (v[1]! ** 2 - v[0]! ** 2) / 2,
       2,
     ],
     [
       'Qual é a área sob a parábola que vale o quadrado de x, entre x = # e x = #?',
       '\\int_a^b x^2\\,dx = \\frac{b^3 - a^3}{3}',
-      '\\int_{#}^{#} x^2\\,dx = \\frac{#^3 - #^3}{3}',
+      '\\int_{#1}^{#2} x^2\\,dx = \\frac{#2^3 - #1^3}{3}',
       (v) => (v[1]! ** 3 - v[0]! ** 3) / 3,
     ],
     [
       'Qual é a área sob a reta que vale # vezes x, entre x = # e x = #?',
       '\\int_a^b kx\\,dx = \\frac{k(b^2 - a^2)}{2}',
-      '\\int_{#}^{#} #x\\,dx = \\frac{#(#^2 - #^2)}{2}',
+      '\\int_{#2}^{#3} #1x\\,dx = \\frac{#1(#3^2 - #2^2)}{2}',
       (v) => (v[0]! * (v[2]! ** 2 - v[1]! ** 2)) / 2,
     ],
     [
@@ -144,7 +144,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o valor MÉDIO de f(x) = x² no intervalo [#, #]? (duas casas decimais)',
       '\\bar{f} = \\frac{1}{b - a}\\int_a^b x^2\\,dx = \\frac{a^2 + ab + b^2}{3}',
-      '\\bar{f} = \\frac{#^2 + # \\cdot # + #^2}{3}',
+      '\\bar{f} = \\frac{#1^2 + #1 \\cdot #2 + #2^2}{3}',
       (v) => (v[0]! ** 2 + v[0]! * v[1]! + v[1]! ** 2) / 3,
       2,
     ],
@@ -166,28 +166,28 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Use o Teorema Fundamental para calcular a integral de # de # a #. (duas casas decimais)',
       '\\int_a^b k\\,dx = k(b - a)',
-      '\\int_{#}^{#} #\\,dx = # \\cdot (# - #)',
+      '\\int_{#2}^{#3} #1\\,dx = #1 \\cdot (#3 - #2)',
       (v) => v[0]! * (v[2]! - v[1]!),
       2,
     ],
     [
       'Use o Teorema Fundamental para calcular a integral de #x de # a #. (duas casas decimais)',
       '\\int_a^b kx\\,dx = \\frac{k(b^2 - a^2)}{2}',
-      '\\int_{#}^{#} #x\\,dx = \\frac{#(#^2 - #^2)}{2}',
+      '\\int_{#2}^{#3} #1x\\,dx = \\frac{#1(#3^2 - #2^2)}{2}',
       (v) => (v[0]! * (v[2]! ** 2 - v[1]! ** 2)) / 2,
       2,
     ],
     [
       'Use o Teorema Fundamental para calcular a integral de x² de # a #. (duas casas decimais)',
       '\\int_a^b x^2\\,dx = \\frac{b^3 - a^3}{3}',
-      '\\int_{#}^{#} x^2\\,dx = \\frac{#^3 - #^3}{3}',
+      '\\int_{#1}^{#2} x^2\\,dx = \\frac{#2^3 - #1^3}{3}',
       (v) => (v[1]! ** 3 - v[0]! ** 3) / 3,
       2,
     ],
     [
       'Use o Teorema Fundamental para calcular a integral de #/x de # a #, com b > #. (duas casas decimais)',
       '\\int_a^b \\frac{k}{x}\\,dx = k\\ln\\frac{b}{a}',
-      '\\int_{#}^{#} \\frac{#}{x}\\,dx = # \\cdot \\ln\\left(\\frac{#}{#}\\right)',
+      '\\int_{#2}^{#3} \\frac{#1}{x}\\,dx = #1 \\cdot \\ln\\left(\\frac{#3}{#2}\\right)',
       (v) => v[0]! * Math.log(v[2]! / v[1]!),
       2,
     ],
@@ -238,7 +238,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A área acumulada sob a reta que vale # vezes x, a partir de zero, é avaliada em x = #. Quanto ela vale?',
       '\\int_0^x kt\\,dt = \\frac{k x^2}{2}',
-      '\\int_0^{#} #t\\,dt = \\frac{#}{2} \\cdot #^2',
+      '\\int_0^{#2} #1t\\,dt = \\frac{#1}{2} \\cdot #2^2',
       (v) => (v[0]! / 2) * v[1]! ** 2,
     ],
   ],
@@ -254,7 +254,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproxime a área sob f(x) = x no intervalo [#, #] usando # retângulos com altura no ponto DIREITO de cada subintervalo. (duas casas decimais)',
       '\\sum_{i=1}^{n} f(a + i\\Delta x)\\Delta x,\\ \\Delta x = \\frac{b-a}{n}',
-      '\\sum_{i=1}^{#} (# + i \\cdot \\frac{# - #}{#}) \\cdot \\frac{# - #}{#}',
+      '\\sum_{i=1}^{#3} (#1 + i \\cdot \\frac{#2 - #1}{#3}) \\cdot \\frac{#2 - #1}{#3}',
       (v, texto) => {
         void texto;
         const [a, b, retangulos] = [v[0]!, v[1]!, v[2]!];
@@ -282,7 +282,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproxime a área sob f(x) = x² no intervalo [#, #] usando # retângulos com altura no ponto DIREITO. (duas casas decimais)',
       '\\sum_{i=1}^{n} (a + i\\Delta x)^2\\Delta x',
-      '\\sum_{i=1}^{#} (# + i \\cdot \\frac{# - #}{#})^2 \\cdot \\frac{# - #}{#}',
+      '\\sum_{i=1}^{#3} (#1 + i \\cdot \\frac{#2 - #1}{#3})^2 \\cdot \\frac{#2 - #1}{#3}',
       (v) => {
         const [a, b, retangulos] = [v[0]!, v[1]!, v[2]!];
         const dx = (b - a) / retangulos;
@@ -295,7 +295,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproxime a área sob f(x) = x² no intervalo [#, #] usando # retângulos com altura no ponto ESQUERDO. (duas casas decimais)',
       '\\sum_{i=0}^{n-1} (a + i\\Delta x)^2\\Delta x',
-      '\\sum_{i=0}^{#-1} (# + i \\cdot \\frac{# - #}{#})^2 \\cdot \\frac{# - #}{#}',
+      '\\sum_{i=0}^{#3-1} (#1 + i \\cdot \\frac{#2 - #1}{#3})^2 \\cdot \\frac{#2 - #1}{#3}',
       (v) => {
         const [a, b, retangulos] = [v[0]!, v[1]!, v[2]!];
         const dx = (b - a) / retangulos;
@@ -308,7 +308,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproxime a área sob a reta que vale # vezes x, entre # e #, usando # retângulos de mesma largura e a altura na extremidade DIREITA de cada um. (três casas decimais)',
       '\\sum_{i=1}^{n} k(a + i\\Delta x)\\Delta x',
-      '\\sum_{i=1}^{#} #(# + i \\cdot \\frac{# - #}{#}) \\cdot \\frac{# - #}{#}',
+      '\\sum_{i=1}^{#4} #1(#2 + i \\cdot \\frac{#3 - #2}{#4}) \\cdot \\frac{#3 - #2}{#4}',
       (v) => {
         const [k, a, b, retangulos] = [v[0]!, v[1]!, v[2]!, v[3]!];
         const dx = (b - a) / retangulos;
@@ -321,7 +321,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproxime a área sob f(x) = #x + # no intervalo [#, #] usando # retângulos com altura no ponto DIREITO. (duas casas decimais)',
       '\\sum_{i=1}^{n} (k(a + i\\Delta x) + c)\\Delta x',
-      '\\sum_{i=1}^{#} (#(# + i \\cdot \\frac{# - #}{#}) + #) \\cdot \\frac{# - #}{#}',
+      '\\sum_{i=1}^{#5} (#1(#3 + i \\cdot \\frac{#4 - #3}{#5}) + #2) \\cdot \\frac{#4 - #3}{#5}',
       (v) => {
         const [k, c, a, b, retangulos] = [v[0]!, v[1]!, v[2]!, v[3]!, v[4]!];
         const dx = (b - a) / retangulos;
@@ -334,7 +334,7 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Usando # retângulos com altura no ponto DIREITO, qual é o ERRO da aproximação da área sob f(x) = x² em [#, #]? (duas casas decimais)',
       'E = \\int_a^b x^2 dx - \\sum f(x_i)\\Delta x',
-      'E = \\frac{#^3 - #^3}{3} - \\sum_{i=1}^{#}(# + i\\frac{# - #}{#})^2\\frac{# - #}{#}',
+      'E = \\sum_{i=1}^{#1}(#2 + i\\frac{#3 - #2}{#1})^2\\frac{#3 - #2}{#1} - \\frac{#3^3 - #2^3}{3}',
       (v) => {
         const [retangulos, a, b] = [v[0]!, v[1]!, v[2]!];
         const dx = (b - a) / retangulos;
@@ -360,28 +360,28 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral de x³ de # a #. (duas casas decimais)',
       '\\int_a^b x^3 dx = \\frac{b^4 - a^4}{4}',
-      '\\int_{#}^{#} x^3\\,dx = \\frac{#^4 - #^4}{4}',
+      '\\int_{#1}^{#2} x^3\\,dx = \\frac{#2^4 - #1^4}{4}',
       (v) => (v[1]! ** 4 - v[0]! ** 4) / 4,
       2,
     ],
     [
       'Qual é a área sob a curva que vale o cubo de x, entre # e #? (duas casas decimais)',
       '\\int_a^b x^3 dx = \\frac{b^4 - a^4}{4}',
-      '\\int_{#}^{#} x^3\\,dx = \\frac{#^4 - #^4}{4}',
+      '\\int_{#1}^{#2} x^3\\,dx = \\frac{#2^4 - #1^4}{4}',
       (v) => (v[1]! ** 4 - v[0]! ** 4) / 4,
       2,
     ],
     [
       'Qual é a área sob a curva que vale # vezes o quadrado de x, entre # e #? (duas casas decimais)',
       '\\int_a^b kx^2 dx = \\frac{k(b^3 - a^3)}{3}',
-      '\\int_{#}^{#} #x^2\\,dx = \\frac{#(#^3 - #^3)}{3}',
+      '\\int_{#2}^{#3} #1x^2\\,dx = \\frac{#1(#3^3 - #2^3)}{3}',
       (v) => (v[0]! * (v[2]! ** 3 - v[1]! ** 3)) / 3,
       2,
     ],
     [
       'Use a substituição u = x² e calcule a integral de #x·e^(x²) de # a #. (duas casas decimais)',
       '\\int kx\\,e^{x^2}dx = \\frac{k}{2}e^{x^2}',
-      '\\int_{#}^{#} #x\\,e^{x^2}dx = \\frac{#}{2}\\left(e^{#^2} - e^{#^2}\\right)',
+      '\\int_{#2}^{#3} #1x\\,e^{x^2}dx = \\frac{#1}{2}\\left(e^{#3^2} - e^{#2^2}\\right)',
       (v) => (v[1]! / 2) * (Math.exp(v[3]! ** 2) - Math.exp(v[2]! ** 2)),
       2,
     ],
@@ -398,14 +398,14 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é a área sob a curva que vale # dividido por x, entre x = # e x = e, a base do logaritmo natural? (duas casas decimais)',
       '\\int_a^e \\frac{k}{x}dx = k(1 - \\ln a)',
-      '\\int_{#}^{e} \\frac{#}{x}dx = #(1 - \\ln #)',
+      '\\int_{#2}^{e} \\frac{#1}{x}dx = #1(1 - \\ln #2)',
       (v) => v[0]! * (1 - Math.log(v[1]!)),
       2,
     ],
     [
       'Calcule a integral de x·e^x de # a #, usando integração por partes. (duas casas decimais)',
       '\\int x e^x dx = e^x(x - 1)',
-      '\\int_{#}^{#} x e^x dx = \\left[e^x(x-1)\\right]_{#}^{#}',
+      '\\int_{#1}^{#2} x e^x dx = \\left[e^x(x-1)\\right]_{#1}^{#2}',
       (v) => Math.exp(v[1]!) * (v[1]! - 1) - Math.exp(v[0]!) * (v[0]! - 1),
       2,
     ],
@@ -432,14 +432,14 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral de #/(x·ln(x)) de e a #, usando substituição. (duas casas decimais)',
       '\\int \\frac{k}{x\\ln x}dx = k\\ln(\\ln x)',
-      '\\int_{e}^{#} \\frac{#}{x\\ln x}\\,dx = #\\left[\\ln(\\ln x)\\right]_{e}^{#}',
+      '\\int_{e}^{#1} \\frac{#2}{x\\ln x}\\,dx = #2\\left[\\ln(\\ln x)\\right]_{e}^{#1}',
       (v) => v[1]! * (Math.log(Math.log(v[0]!)) - Math.log(Math.log(e))),
       2,
     ],
     [
       'Por substituição, qual é a área sob a curva # vezes x vezes o quadrado de x, entre # e #? (duas casas decimais)',
       '\\int_a^b kx^3 dx = \\frac{k(b^4 - a^4)}{4}',
-      '\\int_{#}^{#} #x^3\\,dx = \\frac{#(#^4 - #^4)}{4}',
+      '\\int_{#2}^{#3} #1x^3\\,dx = \\frac{#1(#3^4 - #2^4)}{4}',
       (v) => (v[0]! * (v[2]! ** 4 - v[1]! ** 4)) / 4,
       2,
     ],
@@ -449,20 +449,20 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral imprópria de #/x² de # ao infinito. (duas casas decimais)',
       '\\int_a^\\infty \\frac{k}{x^2}dx = \\frac{k}{a}',
-      '\\int_{#}^{\\infty} \\frac{#}{x^2}dx = \\frac{#}{#}',
+      '\\int_{#2}^{\\infty} \\frac{#1}{x^2}dx = \\frac{#1}{#2}',
       (v) => v[0]! / v[1]!,
       2,
     ],
     [
       'A área sob a curva que vale # dividido pelo quadrado de x, de x = # até o infinito, é finita. Quanto ela vale?',
       '\\int_a^\\infty \\frac{k}{x^2}dx = \\frac{k}{a}',
-      '\\int_{#}^{\\infty} \\frac{#}{x^2}dx = \\frac{#}{#}',
+      '\\int_{#2}^{\\infty} \\frac{#1}{x^2}dx = \\frac{#1}{#2}',
       (v) => v[0]! / v[1]!,
     ],
     [
       'A área sob a curva que vale # dividido por x elevado a #, de x = # até o infinito, é finita. Quanto ela vale? Responda como fração.',
       '\\int_1^\\infty \\frac{k}{x^p}dx = \\frac{k}{p - 1}',
-      '\\int_{#}^{\\infty} \\frac{#}{x^{#}}dx = \\frac{#}{(# - 1)\\cdot #^{# - 1}}',
+      '\\int_{#3}^{\\infty} \\frac{#1}{x^{#2}}dx = \\frac{#1}{(#2 - 1)\\cdot #3^{#2 - 1}}',
       (v) => fracao(v[0]!, v[1]! - 1),
     ],
     [
@@ -480,14 +480,14 @@ export const REGRAS_INTEGRAIS: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule a integral imprópria de e^(−#x) de # ao infinito. (duas casas decimais)',
       '\\int_0^\\infty e^{-kx}dx = \\frac{1}{k}',
-      '\\int_{#}^{\\infty} e^{-#x}dx = \\frac{1}{#}',
+      '\\int_{#2}^{\\infty} e^{-#1x}dx = \\frac{1}{#1}',
       (v) => 1 / v[0]!,
       2,
     ],
     [
       'Calcule a integral imprópria de #/√x de # a #. (duas casas decimais)',
       '\\int_0^b \\frac{k}{\\sqrt{x}}dx = 2k\\sqrt{b}',
-      '\\int_{#}^{#} \\frac{#}{\\sqrt{x}}dx = 2 \\cdot # \\cdot \\sqrt{#}',
+      '\\int_{#2}^{#3} \\frac{#1}{\\sqrt{x}}dx = 2 \\cdot #1 \\cdot \\sqrt{#3}',
       (v) => 2 * v[0]! * Math.sqrt(v[2]!),
       2,
     ],
