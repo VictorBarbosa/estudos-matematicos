@@ -759,6 +759,10 @@
     "fr": "La masse linéique doit être en kg/m : # g/m = # kg/m. Sans conversion, la vitesse sort environ # fois trop petite.",
     "en": "The linear density has to be in kg/m: # g/m = # kg/m. Without converting, the speed comes out about # times too small."
   },
+  "A dependência é com o QUADRADO da distância. Dividir pelo fator seria o caso de uma proporcionalidade inversa simples.": {
+    "fr": "La dépendance porte sur le CARRÉ de la distance. Diviser par le facteur correspondrait à une proportionnalité inverse simple.",
+    "en": "The dependence is on the SQUARE of the distance. Dividing by the factor would be a simple inverse proportionality."
+  },
   "A derivada completa.": {
     "fr": "La dérivée complète.",
     "en": "The complete derivative."
@@ -1015,6 +1019,10 @@
     "fr": "La distance est la projection de P sur la normale, mesurée depuis le plan.",
     "en": "The distance is P’s projection onto the normal, measured from the plane."
   },
+  "A distância é medida do CENTRO da Terra: some o raio terrestre (# # km) à altitude.": {
+    "fr": "La distance est mesurée depuis le CENTRE de la Terre : ajoutez le rayon terrestre (# # km) à l’altitude.",
+    "en": "The distance is measured from the CENTRE of the Earth: add the Earth’s radius (# # km) to the altitude."
+  },
   "A distância é medida do CENTRO: raio do planeta mais altitude.": {
     "fr": "La distance est mesurée du CENTRE : rayon de la planète plus altitude.",
     "en": "Distance is measured from the CENTER: planetary radius plus altitude."
@@ -1074,6 +1082,22 @@
   "A energia cinética não se conserva: parte virou deformação e calor.": {
     "fr": "L'énergie cinétique ne se conserve pas : une partie est devenue déformation et chaleur.",
     "en": "Kinetic energy is not conserved: part became deformation and heat."
+  },
+  "A energia cinética precisa cancelar a potencial: v = √(#GM/R), com a massa e o raio de Júpiter. A conta sai em m/s; divida por #.": {
+    "fr": "L'énergie cinétique doit annuler l'énergie potentielle : v = √(#GM/R), avec la masse et le rayon de Jupiter. Le calcul donne des m/s ; divisez par #.",
+    "en": "The kinetic energy must cancel the potential energy: v = √(#GM/R), with the mass and radius of Jupiter. The result is in m/s; divide by #."
+  },
+  "A energia cinética precisa cancelar a potencial: v = √(#GM/R), com a massa e o raio de Marte. A conta sai em m/s; divida por #.": {
+    "fr": "L'énergie cinétique doit annuler l'énergie potentielle : v = √(#GM/R), avec la masse et le rayon de Mars. Le calcul donne des m/s ; divisez par #.",
+    "en": "The kinetic energy must cancel the potential energy: v = √(#GM/R), with the mass and radius of Mars. The result is in m/s; divide by #."
+  },
+  "A energia cinética precisa cancelar a potencial: v = √(#GM/R), com a massa e o raio de a Lua. A conta sai em m/s; divida por #.": {
+    "fr": "L'énergie cinétique doit annuler l'énergie potentielle : v = √(#GM/R), avec la masse et le rayon de la Lune. Le calcul donne des m/s ; divisez par #.",
+    "en": "The kinetic energy must cancel the potential energy: v = √(#GM/R), with the mass and radius of the Moon. The result is in m/s; divide by #."
+  },
+  "A energia cinética precisa cancelar a potencial: v = √(#GM/R), com a massa e o raio de a Terra. A conta sai em m/s; divida por #.": {
+    "fr": "L'énergie cinétique doit annuler l'énergie potentielle : v = √(#GM/R), avec la masse et le rayon de la Terre. Le calcul donne des m/s ; divisez par #.",
+    "en": "The kinetic energy must cancel the potential energy: v = √(#GM/R), with the mass and radius of the Earth. The result is in m/s; divide by #."
   },
   "A energia de rotação copia a de translação, trocando massa por inércia.": {
     "fr": "L'énergie de rotation copie celle de translation, échangeant masse par inertie.",
@@ -1251,6 +1275,10 @@
     "fr": "La force est GMm/r². La primitive de #/r² est −#/r : W = GMm·(#/R − #/(R + h)), avec les distances en mètres.",
     "en": "The force is GMm/r². The antiderivative of #/r² is −#/r: W = GMm·(#/R − #/(R + h)), with distances in metres."
   },
+  "A força é inversamente proporcional ao quadrado da distância.": {
+    "fr": "La force est inversement proportionnelle au carré de la distance.",
+    "en": "The force is inversely proportional to the square of the distance."
+  },
   "A força é proporcional a q₁·q₂ e inversamente a r²: multiplique # por # e divida por #².": {
     "fr": "La force est proportionnelle à q₁·q₂ et inversement à r² : multipliez # par # et divisez par #².",
     "en": "The force is proportional to q₁·q₂ and inversely to r²: multiply # by # and divide by #²."
@@ -1410,6 +1438,10 @@
   "A gravidade cai com o quadrado da distância ao centro: integramos de R até R + h.": {
     "fr": "La gravité décroît avec le carré de la distance au centre : nous intégrons de R à R + h.",
     "en": "Gravity falls with the square of the distance to the centre: we integrate from R to R + h."
+  },
+  "A gravidade local vem da lei da gravitação, dividida pela massa do corpo.": {
+    "fr": "La gravité locale vient de la loi de la gravitation, divisée par la masse du corps.",
+    "en": "Local gravity comes from the law of gravitation, divided by the mass of the body."
   },
   "A hipotenusa # corresponde ao #: a unidade vale #.": {
     "fr": "L’hypoténuse # correspond au # : l’unité vaut #.",
@@ -2047,6 +2079,10 @@
     "fr": "La puissance a été dérivée correctement, mais il manque la multiplication par la dérivée de la fonction intérieure. C’est la chaîne : la couche interne apporte toujours un facteur.",
     "en": "The power was differentiated correctly, but the multiplication by the derivative of the inner function is missing. That is the chain: the inner layer always contributes a factor."
   },
+  "A pressão constante faz o trabalho ser simplesmente a área do retângulo p × ΔV.": {
+    "fr": "La pression constante fait que le travail est simplement l'aire du rectangle p × ΔV.",
+    "en": "Constant pressure makes the work simply the area of the rectangle p × ΔV."
+  },
   "A pressão muda sim: parte da energia de pressão virou energia cinética do escoamento.": {
     "fr": "La pression change bel et bien : une part de l’énergie de pression est devenue énergie cinétique de l’écoulement.",
     "en": "The pressure does change: part of the pressure energy became kinetic energy of the flow."
@@ -2054,6 +2090,10 @@
   "A pressão numa profundidade é a atmosférica mais o peso da coluna de fluido.": {
     "fr": "La pression à une profondeur est la pression atmosphérique plus le poids de la colonne de fluide.",
     "en": "Pressure at a depth is atmospheric plus the weight of the fluid column."
+  },
+  "A pressão precisa estar em pascal: # atm = # # Pa. Em atmosferas, o resultado não sai em joules.": {
+    "fr": "La pression doit être en pascals : # atm = # # Pa. En atmosphères, le résultat ne sort pas en joules.",
+    "en": "The pressure must be in pascals: # atm = # # Pa. In atmospheres, the result does not come out in joules."
   },
   "A primeira derivada é a/x; escrita como potência, a·x⁻¹.": {
     "fr": "La dérivée première vaut a/x ; écrite en puissance, a·x⁻¹.",
@@ -2286,6 +2326,10 @@
   "A propriedade do logaritmo separa a constante, e constante derivada some.": {
     "fr": "La propriété du logarithme sépare la constante, et une constante dérivée disparaît.",
     "en": "The logarithm property splits off the constant, and a differentiated constant vanishes."
+  },
+  "A quantidade de gás não muda, então pV/T é constante.": {
+    "fr": "La quantité de gaz ne change pas, donc pV/T est constant.",
+    "en": "The amount of gas does not change, so pV/T is constant."
   },
   "A quantidade de gás não mudou, e por isso o nR some dos dois lados.": {
     "fr": "La quantité de gaz n’a pas changé, et le nR disparaît donc des deux côtés.",
@@ -2547,9 +2591,17 @@
     "fr": "La résistance thermique est l'analogue de la résistance électrique.",
     "en": "Thermal resistance is the analogue of electrical resistance."
   },
+  "A resposta é pedida em kPa, e # kPa são # Pa.": {
+    "fr": "La réponse est demandée en kPa, et # kPa font # Pa.",
+    "en": "The answer is asked for in kPa, and # kPa is # Pa."
+  },
   "A resposta é pedida em kPa.": {
     "fr": "La réponse est demandée en kPa.",
     "en": "The answer is asked for in kPa."
+  },
+  "A resposta é pedida em litros, e # m³ são # L.": {
+    "fr": "La réponse est demandée en litres, et # m³ font # L.",
+    "en": "The answer is asked for in litres, and # m³ is # L."
   },
   "A resposta.": {
     "fr": "La réponse.",
@@ -2835,6 +2887,10 @@
     "fr": "La température s’exprime en kelvins : ajoutez # aux degrés Celsius. L’équation dit que le volume est proportionnel à T, et une proportion exige une échelle dont le zéro est le vrai zéro.",
     "en": "Temperature goes in kelvin: add # to the Celsius reading. The equation says volume is proportional to T, and proportion needs a scale whose zero is the real zero."
   },
+  "A temperatura entra sempre em kelvin: em celsius a proporcionalidade se quebra.": {
+    "fr": "La température entre toujours en kelvins : en degrés celsius la proportionnalité se brise.",
+    "en": "Temperature always goes in kelvin: in celsius the proportionality breaks down."
+  },
   "A temperatura entrou em Celsius. A lei exige kelvin, e com a quarta potência o erro é enorme — não é um deslocamento, é um fator de muitas vezes.": {
     "fr": "La température est entrée en Celsius. La loi exige des kelvins, et avec la puissance quatre l’erreur est énorme — ce n’est pas un décalage, c’est un facteur de plusieurs fois.",
     "en": "The temperature went in as Celsius. The law requires kelvin, and with the fourth power the error is huge — it is not a shift, it is a factor of many times."
@@ -2847,9 +2903,17 @@
     "fr": "La température est restée en degrés Celsius. L’équation dit que le volume est proportionnel à T, et cela n’est vrai que sur une échelle dont le zéro est le vrai zéro : ajoutez #.",
     "en": "The temperature stayed in Celsius. The equation says volume is proportional to T, and that only holds on a scale whose zero is the real zero: add #."
   },
+  "A temperatura precisa estar em KELVIN. Em celsius, o zero da escala é arbitrário e a proporcionalidade se quebra — a # °C o resultado seria zero.": {
+    "fr": "La température doit être en KELVINS. En celsius, le zéro de l'échelle est arbitraire et la proportionnalité se brise — à # °C le résultat serait nul.",
+    "en": "The temperature must be in KELVIN. In celsius the zero of the scale is arbitrary and the proportionality breaks down — at # °C the result would be zero."
+  },
   "A temperatura precisa estar em kelvin: a quarta potência não perdoa escala errada.": {
     "fr": "La température doit être en kelvins : la puissance quatre ne pardonne pas une échelle fausse.",
     "en": "The temperature has to be in kelvin: the fourth power does not forgive a wrong scale."
+  },
+  "A temperatura precisa estar em kelvin: some # aos graus celsius.": {
+    "fr": "La température doit être en kelvins : ajoutez # aux degrés celsius.",
+    "en": "The temperature must be in kelvin: add # to the degrees celsius."
   },
   "A troca de nomes é o que reflete o gráfico na reta y = x.": {
     "fr": "L’échange des noms est ce qui reflète le graphique par rapport à la droite y = x.",
@@ -3022,6 +3086,10 @@
   "A área é π vezes o raio AO QUADRADO: π·#², ou seja, π·#.": {
     "fr": "L’aire vaut π fois le rayon AU CARRÉ : π·#², soit π·#.",
     "en": "The area is π times the radius SQUARED: π·#², that is, π·#."
+  },
+  "A órbita não depende da massa do satélite: um parafuso e a ISS orbitam igual.": {
+    "fr": "L'orbite ne dépend pas de la masse du satellite : un boulon et l'ISS orbitent de la même façon.",
+    "en": "The orbit does not depend on the satellite’s mass: a bolt and the ISS orbit alike."
   },
   "A última linha tem uma incógnita só.": {
     "fr": "La dernière ligne n’a qu’une seule inconnue.",
@@ -3639,6 +3707,10 @@
     "fr": "Les puissances de i se répètent de quatre en quatre.",
     "en": "The powers of i repeat every four."
   },
+  "As pressões estão trocadas. Aumentar a pressão COMPRIME o gás, então p₂ vai no denominador.": {
+    "fr": "Les pressions sont inversées. Augmenter la pression COMPRIME le gaz, donc p₂ va au dénominateur.",
+    "en": "The pressures are swapped. Increasing the pressure COMPRESSES the gas, so p₂ goes in the denominator."
+  },
   "As razões comparam dois lados do triângulo em relação ao ângulo escolhido.": {
     "fr": "Les rapports comparent deux côtés du triangle par rapport à l'angle choisi.",
     "en": "The ratios compare two sides of the triangle relative to the chosen angle."
@@ -3658,6 +3730,10 @@
   "As retas são paralelas distintas e nunca se cruzam.": {
     "fr": "Les droites sont parallèles distinctes et ne se croisent jamais.",
     "en": "The lines are distinct parallels and never cross."
+  },
+  "As temperaturas estão trocadas. Aquecer um gás a pressão constante o EXPANDE, então T₂ vai no numerador.": {
+    "fr": "Les températures sont inversées. Chauffer un gaz à pression constante le DILATE, donc T₂ va au numérateur.",
+    "en": "The temperatures are swapped. Heating a gas at constant pressure EXPANDS it, so T₂ goes in the numerator."
   },
   "As temperaturas ficaram em graus Celsius. Aqui o estrago é dobrado: a razão T₂/T₁ em Celsius não tem relação com a razão verdadeira.": {
     "fr": "Les températures sont restées en degrés Celsius. Ici le dégât est double : le rapport T₂/T₁ en Celsius n’a aucun lien avec le vrai rapport.",
@@ -6355,6 +6431,10 @@
     "fr": "Du total, # pour cent de l’énergie est restée dans la rotation.",
     "en": "Of the total, # per cent of the energy stayed in the rotation."
   },
+  "Dobrar a distância divide a força por quatro — não por dois.": {
+    "fr": "Doubler la distance divise la force par quatre — et non par deux.",
+    "en": "Doubling the distance divides the force by four — not by two."
+  },
   "Dobrar a temperatura em kelvin multiplica a emissão por dezesseis.": {
     "fr": "Doubler la température en kelvins multiplie l’émission par seize.",
     "en": "Doubling the temperature in kelvin multiplies the emission by sixteen."
@@ -7475,6 +7555,14 @@
     "fr": "Nous trouvons une primitive de l’intégrande.",
     "en": "We find an antiderivative of the integrand."
   },
+  "Energia interna aumentou: o gás esquentou.": {
+    "fr": "L'énergie interne a augmenté : le gaz s'est réchauffé.",
+    "en": "The internal energy increased: the gas warmed up."
+  },
+  "Energia interna diminuiu: o gás esfriou.": {
+    "fr": "L'énergie interne a diminué : le gaz s'est refroidi.",
+    "en": "The internal energy decreased: the gas cooled down."
+  },
   "Entre as grandezas do lançamento, a pergunta é por a altura máxima.": {
     "fr": "Parmi les grandeurs du lancer, la question porte sur la hauteur maximale.",
     "en": "Among the launch quantities, the question asks for the maximum height."
@@ -7542,6 +7630,10 @@
   "Escalone deixando k na última linha. A solução deixa de ser única quando o pivô que contém k vira zero.": {
     "fr": "Échelonnez en laissant k sur la dernière ligne. La solution cesse d’être unique quand le pivot qui contient k s’annule.",
     "en": "Row-reduce leaving k in the last row. The solution stops being unique when the pivot containing k becomes zero."
+  },
+  "Escapar exige apenas √# vezes a velocidade de orbitar — cerca de #% mais.": {
+    "fr": "S'échapper exige seulement √# fois la vitesse pour orbiter — environ #% de plus.",
+    "en": "Escaping requires only √# times the orbital speed — about #% more."
   },
   "Escapar significa chegar ao infinito com velocidade nula.": {
     "fr": "S'échapper signifie atteindre l'infini avec une vitesse nulle.",
@@ -8067,6 +8159,10 @@
     "fr": "C’est la formule empirique, que l’énoncé a déjà donnée. La masse molaire dit combien de fois elle tient dans la molécule — et c’est par ce nombre que tous les indices se multiplient.",
     "en": "That is the empirical formula, which the question already gave. The molar mass says how many times it fits in the molecule — and that number is what all the subscripts are multiplied by."
   },
+  "Essa é a gravidade na SUPERFÍCIE. A essa altitude ela já caiu — mas bem menos do que a intuição sugere.": {
+    "fr": "C'est la gravité à la SURFACE. À cette altitude elle a déjà diminué — mais bien moins que l'intuition ne le suggère.",
+    "en": "That is the gravity at the SURFACE. At this altitude it has already dropped — but far less than intuition suggests."
+  },
   "Essa é a hipotenusa inteira, um passo intermediário da conta.": {
     "fr": "C’est l’hypoténuse entière, une étape intermédiaire du calcul.",
     "en": "That is the whole hypotenuse, an intermediate step of the computation."
@@ -8247,6 +8343,14 @@
     "fr": "C’est la variation de la QUANTITÉ DE MOUVEMENT, en kg·m/s. Il reste à diviser par le temps pour obtenir la force.",
     "en": "That is the change in MOMENTUM, in kg·m/s. Dividing by the time to get the force is still missing."
   },
+  "Essa é a velocidade ORBITAL rasante. A de escape tem o fator # dentro da raiz, sendo √# vezes maior.": {
+    "fr": "C'est la vitesse ORBITALE rasante. Celle de libération porte le facteur # sous la racine et est √# fois plus grande.",
+    "en": "That is the grazing ORBITAL speed. The escape speed has the factor # inside the root, being √# times larger."
+  },
+  "Essa é a velocidade de ESCAPE nesse raio, √# vezes maior. Para orbitar, basta a velocidade em que a gravidade iguala a força centrípeta.": {
+    "fr": "C'est la vitesse de LIBÉRATION à ce rayon, √# fois plus grande. Pour orbiter, il suffit de la vitesse où la gravité égale la force centripète.",
+    "en": "That is the ESCAPE speed at this radius, √# times larger. To orbit, the speed at which gravity equals the centripetal force is enough."
+  },
   "Essa é a velocidade de um corpo que apenas desliza, sem girar. Quem rola precisa gastar parte da energia para girar, e por isso chega mais devagar.": {
     "fr": "C’est la vitesse d’un corps qui ne fait que glisser, sans tourner. Ce qui roule doit dépenser une part de l’énergie pour tourner, et arrive donc plus lentement.",
     "en": "That is the speed of a body that only slides, without turning. What rolls has to spend part of the energy turning, and so arrives more slowly."
@@ -8331,9 +8435,17 @@
     "fr": "Ce nombre sort entier, et sortir entier confirme que l’empirique était juste.",
     "en": "That number comes out whole, and coming out whole confirms the empirical formula was right."
   },
+  "Esse valor está em SEGUNDOS. A pergunta pede minutos.": {
+    "fr": "Cette valeur est en SECONDES. La question demande des minutes.",
+    "en": "That value is in SECONDS. The question asks for minutes."
+  },
   "Esse valor está em kPa; o enunciado pede a queda em Pa.": {
     "fr": "Cette valeur est en kPa ; l’énoncé demande la chute en Pa.",
     "en": "That value is in kPa; the question asks for the drop in Pa."
+  },
+  "Esse valor está em m³. A pergunta pede litros (# m³ = # L).": {
+    "fr": "Cette valeur est en m³. La question demande des litres (# m³ = # L).",
+    "en": "That value is in m³. The question asks for litres (# m³ = # L)."
   },
   "Esse ângulo dá o mesmo valor de cosseno, mas está fora da imagem do arccos, que é [#°, #°]. A inversa devolve um ângulo só, o que está dentro dessa faixa.": {
     "fr": "Cet angle donne la même valeur, mais il est hors de l’image de l’arccos, qui vaut [#°, #°]. La fonction inverse ne rend qu’un seul angle, celui qui est dans cette plage.",
@@ -8963,6 +9075,10 @@
     "fr": "En développant le carré et en intégrant.",
     "en": "Expanding the square and integrating."
   },
+  "Expansão: o gás realiza trabalho sobre o ambiente.": {
+    "fr": "Dilatation : le gaz effectue un travail sur le milieu extérieur.",
+    "en": "Expansion: the gas does work on its surroundings."
+  },
   "Expoente negativo: L está no denominador.": {
     "fr": "Exposant négatif : L est au dénominateur.",
     "en": "Negative exponent: L is in the denominator."
@@ -8982,6 +9098,10 @@
   "Exponenciando, a constante vira um fator multiplicativo.": {
     "fr": "En exponentiant, la constante devient un facteur multiplicatif.",
     "en": "Exponentiating, the constant becomes a multiplicative factor."
+  },
+  "Extraindo a raiz, com r medido do centro (raio do planeta mais altitude).": {
+    "fr": "En extrayant la racine, avec r mesuré depuis le centre (rayon de la planète plus altitude).",
+    "en": "Taking the root, with r measured from the centre (planet radius plus altitude)."
   },
   "Extraindo a raiz, com r medido do centro.": {
     "fr": "En extrayant la racine, avec r mesuré depuis le centre.",
@@ -9899,6 +10019,14 @@
     "fr": "Inversé : de |x − a|/b < # on tire R = b ; de b·|x − a| < # on tire R = #/b.",
     "en": "Flipped: from |x − a|/b < # comes R = b; from b·|x − a| < # comes R = #/b."
   },
+  "Isolamos a grandeza que falta: pressão.": {
+    "fr": "Nous isolons la grandeur manquante : la pression.",
+    "en": "We isolate the missing quantity: pressure."
+  },
+  "Isolamos a grandeza que falta: volume.": {
+    "fr": "Nous isolons la grandeur manquante : le volume.",
+    "en": "We isolate the missing quantity: volume."
+  },
   "Isolamos a quarta potência da temperatura.": {
     "fr": "Nous isolons la quatrième puissance de la température.",
     "en": "We isolate the fourth power of the temperature."
@@ -9938,6 +10066,10 @@
   "Isolamos o termo com x.": {
     "fr": "On isole le terme en x.",
     "en": "We isolate the term with x."
+  },
+  "Isolamos o volume final.": {
+    "fr": "Nous isolons le volume final.",
+    "en": "We isolate the final volume."
   },
   "Isolamos o ângulo desconhecido.": {
     "fr": "Nous isolons l’angle inconnu.",
@@ -10395,6 +10527,10 @@
     "fr": "Localement, toute courbe ressemble à un arc de cercle.",
     "en": "Locally, any curve looks like an arc of a circle."
   },
+  "Logo a força fica dividida pelo quadrado do fator.": {
+    "fr": "Donc la force est divisée par le carré du facteur.",
+    "en": "So the force is divided by the square of the factor."
+  },
   "Logo a área do triângulo é a metade.": {
     "fr": "Donc l'aire du triangle est la moitié.",
     "en": "Therefore the triangle area is half."
@@ -10687,6 +10823,10 @@
     "fr": "Nous multiplions.",
     "en": "We multiply."
   },
+  "Multiplicando a distância pelo fator, o denominador é elevado ao quadrado.": {
+    "fr": "En multipliant la distance par le facteur, le dénominateur est élevé au carré.",
+    "en": "Multiplying the distance by the factor squares the denominator."
+  },
   "Multiplicando os fatores.": {
     "fr": "En multipliant les facteurs.",
     "en": "Multiplying the factors."
@@ -10946,6 +11086,10 @@
   "Na elipse, c² = a² − b².": {
     "fr": "Dans l’ellipse, c² = a² − b².",
     "en": "In the ellipse, c² = a² − b²."
+  },
+  "Na energia potencial o raio aparece elevado a #, não ao quadrado. O quadrado é da FORÇA, não da energia.": {
+    "fr": "Dans l'énergie potentielle le rayon apparaît à la puissance #, pas au carré. Le carré concerne la FORCE, pas l'énergie.",
+    "en": "In the potential energy the radius appears to the power #, not squared. The square belongs to the FORCE, not the energy."
   },
   "Na equação reduzida, o semieixo é a RAIZ QUADRADA do denominador do termo em x: raiz de #.": {
     "fr": "Dans l’équation réduite, le demi-axe est la RACINE CARRÉE du dénominateur du terme en x : racine de #.",
@@ -11215,6 +11359,10 @@
     "fr": "Dans la somme partielle, chaque terme négatif annule le positif suivant ; il reste la première et la dernière part.",
     "en": "In the partial sum, each negative term cancels the next positive one; the first and last parts are left."
   },
+  "Na superfície seriam # m/s²: a queda é mais lenta do que a intuição sugere.": {
+    "fr": "À la surface ce serait # m/s² : la chute est plus lente que l'intuition ne le suggère.",
+    "en": "At the surface it would be # m/s²: the fall is slower than intuition suggests."
+  },
   "Na tabela dos ângulos notáveis, com o sinal já considerado.": {
     "fr": "Dans la table des angles remarquables, le signe étant déjà pris en compte.",
     "en": "In the table of special angles, with the sign already taken into account."
@@ -11266,6 +11414,10 @@
   "Nenhuma conta numérica: só aritmética de expoentes.": {
     "fr": "Aucun calcul numérique : seulement de l’arithmétique d’exposants.",
     "en": "No numeric computation: only arithmetic of exponents."
+  },
+  "Nenhuma conversão de unidade é necessária: as unidades se cancelam, desde que iguais nos dois estados.": {
+    "fr": "Aucune conversion d'unité n'est nécessaire : les unités s'annulent, à condition d'être les mêmes dans les deux états.",
+    "en": "No unit conversion is needed: the units cancel out, as long as they are the same in both states."
   },
   "Nenhuma potência de base positiva resulta em zero ou negativo.": {
     "fr": "Aucune puissance de base positive ne donne zéro ou négatif.",
@@ -12339,6 +12491,10 @@
     "fr": "Le dénominateur est # moins l’exposant, et non l’inverse. Inverser l’ordre change le signe de toute la réponse.",
     "en": "The denominator is # minus the exponent, not the other way round. Swapping the order flips the sign of the whole answer."
   },
+  "O denominador é a distância ao QUADRADO. Sem o quadrado, o resultado nem tem unidade de aceleração.": {
+    "fr": "Le dénominateur est la distance au CARRÉ. Sans le carré, le résultat n’a même pas une unité d’accélération.",
+    "en": "The denominator is the distance SQUARED. Without the square, the result does not even have units of acceleration."
+  },
   "O denominador é a ÁREA da base, πr², não o raio. Volume dividido por comprimento daria uma área, não uma altura.": {
     "fr": "Le dénominateur est l’AIRE de la base, πr², et non le rayon. Un volume divisé par une longueur donnerait une aire, pas une hauteur.",
     "en": "The denominator is the base AREA, πr², not the radius. Volume divided by a length would give an area, not a height."
@@ -12582,6 +12738,10 @@
   "O expoente está certo, mas o fatorial ficou um atrás: o denominador é # fatorial, o mesmo número do expoente.": {
     "fr": "L’exposant est juste, mais la factorielle est en retard d’un : le dénominateur est # factorielle, le même nombre que l’exposant.",
     "en": "The exponent is right, but the factorial is one behind: the denominator is # factorial, the same number as the exponent."
+  },
+  "O expoente é #, não #. O cubo aparece na terceira lei de Kepler, relacionando período e raio.": {
+    "fr": "L'exposant est #, pas #. Le cube apparaît dans la troisième loi de Kepler, reliant période et rayon.",
+    "en": "The exponent is #, not #. The cube appears in Kepler’s third law, relating period and radius."
   },
   "O expoente é #, não #: volume é uma grandeza de três dimensões.": {
     "fr": "L’exposant est #, et non # : le volume est une grandeur à trois dimensions.",
@@ -13415,6 +13575,10 @@
     "fr": "Ce qui passe au carré, c’est le RAYON, et non le taux : dV/dt = #πr²·(dr/dt).",
     "en": "What gets squared is the RADIUS, not the rate: dV/dt = #πr²·(dr/dt)."
   },
+  "O raio da órbita é medido do CENTRO: some o raio da Terra (# km) aos # km. Depois T = #π·r/v, com v = √(GM/r).": {
+    "fr": "Le rayon de l'orbite est mesuré depuis le CENTRE : ajoutez le rayon de la Terre (# km) aux # km. Ensuite T = #π·r/v, avec v = √(GM/r).",
+    "en": "The orbital radius is measured from the CENTRE: add the Earth’s radius (# km) to the # km. Then T = #π·r/v, with v = √(GM/r)."
+  },
   "O raio entra ao QUADRADO, porque ele mede a base, que é uma área. A altura entra uma vez só.": {
     "fr": "Le rayon entre au CARRÉ, parce qu’il mesure la base, qui est une aire. La hauteur n’entre qu’une fois.",
     "en": "The radius enters SQUARED, because it measures the base, which is an area. The height enters only once."
@@ -13434,6 +13598,10 @@
   "O raio é a raiz do lado direito.": {
     "fr": "Le rayon est la racine du côté droit.",
     "en": "The radius is the root of the right-hand side."
+  },
+  "O raio é medido do CENTRO: some os # # km do raio terrestre à altitude.": {
+    "fr": "Le rayon est mesuré depuis le CENTRE : ajoutez les # # km du rayon terrestre à l’altitude.",
+    "en": "The radius is measured from the CENTRE: add the # # km of the Earth’s radius to the altitude."
   },
   "O rendimento compara o obtido com esse teto.": {
     "fr": "Le rendement compare l’obtenu à ce plafond.",
@@ -13618,6 +13786,10 @@
   "O sinal da operação é \"/\", então dividimos.": {
     "fr": "Le signe de l’opération est « ÷ », donc on divise.",
     "en": "The operation sign is \"÷\", so we divide."
+  },
+  "O sinal de W: positivo quando o gás EXPANDE, empurrando o pistão.": {
+    "fr": "Le signe de W : positif quand le gaz SE DILATE, en poussant le piston.",
+    "en": "The sign of W: positive when the gas EXPANDS, pushing the piston."
   },
   "O sinal de cada fator em cada pedaço da reta (à direita do zero, o sinal do coeficiente de x).": {
     "fr": "Le signe de chaque facteur sur chaque morceau de la droite (à droite du zéro, le signe du coefficient de x).",
@@ -14059,9 +14231,17 @@
     "fr": "Le travail de l’agent est la variation d’énergie potentielle : charge fois la différence de potentiel.",
     "en": "The agent’s work is the change in potential energy: charge times the potential difference."
   },
+  "O trabalho realizado PELO gás sai dele, então entra subtraindo: ΔU = Q − W.": {
+    "fr": "Le travail effectué PAR le gaz en sort, donc il se soustrait : ΔU = Q − W.",
+    "en": "The work done BY the gas leaves it, so it is subtracted: ΔU = Q − W."
+  },
   "O trabalho total é o mesmo: operários × dias não muda.": {
     "fr": "Le travail total est le même : ouvriers × jours ne change pas.",
     "en": "The total work is the same: workers × days does not change."
+  },
+  "O trabalho usa a VARIAÇÃO de volume, não o volume final. Só a expansão realiza trabalho.": {
+    "fr": "Le travail utilise la VARIATION de volume, pas le volume final. Seule la dilatation effectue un travail.",
+    "en": "The work uses the CHANGE in volume, not the final volume. Only the expansion does work."
   },
   "O trabalho é a integral do campo projetado no deslocamento.": {
     "fr": "Le travail est l'intégrale du champ projeté sur le déplacement.",
@@ -14186,6 +14366,18 @@
   "O volume final é o que havia mais o que se acrescentou.": {
     "fr": "Le volume final est ce qu’il y avait plus ce qu’on a ajouté.",
     "en": "The final volume is what there was plus what was added."
+  },
+  "O volume muda sim: tanto a pressão quanto a temperatura foram alteradas.": {
+    "fr": "Le volume change bel et bien : la pression comme la température ont été modifiées.",
+    "en": "The volume does change: both the pressure and the temperature were altered."
+  },
+  "O volume precisa estar em m³, não em litros: # L = # m³. Usar litros direto erra por mil.": {
+    "fr": "Le volume doit être en m³, pas en litres : # L = # m³. Utiliser les litres directement fausse le résultat d’un facteur mille.",
+    "en": "The volume must be in m³, not litres: # L = # m³. Using litres directly is off by a factor of a thousand."
+  },
+  "O volume precisa estar em m³: # L = # m³. Em litros, o resultado erra por mil.": {
+    "fr": "Le volume doit être en m³ : # L = # m³. En litres, le résultat est faux d’un facteur mille.",
+    "en": "The volume must be in m³: # L = # m³. In litres, the result is off by a factor of a thousand."
   },
   "O volume é o módulo do determinante #×# com u, v e w nas linhas. Calcule v × w e depois o escalar com u.": {
     "fr": "Le volume est le module du déterminant #×# avec u, v et w sur les lignes. Calculez v × w puis le scalaire avec u.",
@@ -14759,6 +14951,10 @@
     "fr": "Les rôles de n et de P ont été intervertis. Le volume vaut nRT divisé par la pression : plus de gaz occupe plus, plus de pression comprime.",
     "en": "The roles of n and P got swapped. The volume is nRT divided by the pressure: more gas takes up more room, more pressure squeezes."
   },
+  "Os papéis estão trocados. O calor recebido entra somando; o trabalho realizado, subtraindo.": {
+    "fr": "Les rôles sont inversés. La chaleur reçue s’ajoute ; le travail effectué se soustrait.",
+    "en": "The roles are swapped. Heat received is added; work done is subtracted."
+  },
   "Os pedaços guardam a mesma razão nas duas transversais: # está para # como # está para o pedaço que falta. Multiplique cruzado.": {
     "fr": "Les segments gardent le même rapport sur les deux transversales : # est à # comme # est au segment manquant. Multipliez en croix.",
     "en": "The pieces keep the same ratio on both transversals: # is to # as # is to the missing piece. Cross-multiply."
@@ -14946,6 +15142,10 @@
   "Para a função ser contínua, o valor no ponto deve igualar o limite.": {
     "fr": "Pour que la fonction soit continue, la valeur au point doit égaler la limite.",
     "en": "For the function to be continuous, the value at the point must equal the limit."
+  },
+  "Para a mesma quantidade de gás, pV/T não muda: #·#/# = #·V/#. Isole V.": {
+    "fr": "Pour la même quantité de gaz, pV/T ne change pas : #·#/# = #·V/#. Isolez V.",
+    "en": "For the same amount of gas, pV/T does not change: #·#/# = #·V/#. Isolate V."
   },
   "Para a resultante ficar perpendicular, a componente rio acima deve anular a correnteza.": {
     "fr": "Pour que la résultante soit perpendiculaire, la composante rivière doit annuler le courant.",
@@ -16891,6 +17091,10 @@
     "fr": "Remplacer y par e élevé à rt transforme l’EDO en une équation du second degré.",
     "en": "Replacing y by e to the rt turns the ODE into a quadratic equation."
   },
+  "Substituímos G, a massa do planeta e a distância ao centro.": {
+    "fr": "Nous remplaçons G, la masse de la planète et la distance au centre.",
+    "en": "We substitute G, the mass of the planet and the distance to the centre."
+  },
   "Substituímos a dimensão de velocidade.": {
     "fr": "Nous substituons la dimension de vitesse.",
     "en": "We substitute the velocity dimension."
@@ -18171,6 +18375,10 @@
     "fr": "Vous avez utilisé le facteur LINÉAIRE. Dans une unité d’aire ou de volume, il doit être élevé à l’exposant correspondant.",
     "en": "You used the LINEAR factor. In a unit of area or volume, it has to be raised to the matching exponent."
   },
+  "Você usou o perímetro da órbita mas esqueceu de dividir pela velocidade orbital.": {
+    "fr": "Vous avez utilisé le périmètre de l'orbite mais oublié de diviser par la vitesse orbitale.",
+    "en": "You used the orbit’s perimeter but forgot to divide by the orbital speed."
+  },
   "Você usou o produto dos denominadores (#) como denominador comum — isso é válido, embora o MMC (#) deixe os números menores. O problema é que os numeradores não foram convertidos junto.": {
     "fr": "Vous avez utilisé le produit des dénominateurs (#) comme dénominateur commun — c’est valable, même si le PPCM (#) donne des nombres plus petits. Le problème est que les numérateurs n’ont pas été convertis avec.",
     "en": "You used the product of the denominators (#) as the common denominator — that is valid, though the LCM (#) keeps the numbers smaller. The problem is that the numerators were not converted along with it."
@@ -18735,6 +18943,10 @@
     "fr": "f″ est du #ᵉ degré : elle change de signe exactement là où elle s’annule.",
     "en": "f″ is of degree #: it changes sign exactly where it is zero."
   },
+  "g = GM/r², com r medido do centro da Terra.": {
+    "fr": "g = GM/r², avec r mesuré depuis le centre de la Terre.",
+    "en": "g = GM/r², with r measured from the centre of the Earth."
+  },
   "k = # não serve: sem o x², a equação nem seria do #º grau.": {
     "fr": "k = # ne convient pas : sans le x², l’équation ne serait même pas du #º degré.",
     "en": "k = # does not work: without the x², the equation would not even be of degree #."
@@ -18811,6 +19023,14 @@
     "fr": "p est la distance à θ = #° (le semi-latus rectum), et non le périhélie ni l’aphélie.",
     "en": "p is the distance at θ = #° (the semi-latus rectum), neither the perihelion nor the aphelion."
   },
+  "pV = nRT no SI: # °C vira kelvin (some #) e # L vira m³ (divida por #). A pressão sai em Pa; divida por # para kPa.": {
+    "fr": "pV = nRT en SI : # °C devient des kelvins (ajoutez #) et # L devient des m³ (divisez par #). La pression sort en Pa ; divisez par # pour des kPa.",
+    "en": "pV = nRT in SI: # °C becomes kelvin (add #) and # L becomes m³ (divide by #). The pressure comes out in Pa; divide by # for kPa."
+  },
+  "pV = nRT, com T em kelvin.": {
+    "fr": "pV = nRT, avec T en kelvins.",
+    "en": "pV = nRT, with T in kelvin."
+  },
   "p′ negativo: imagem virtual, do mesmo lado do objeto.": {
     "fr": "p′ négatif : image virtuelle, du même côté que l’objet.",
     "en": "p′ negative: a virtual image, on the same side as the object."
@@ -18838,6 +19058,10 @@
   "v = λ·f: multiplica-se, não se divide.": {
     "fr": "v = λ·f : on multiplie, on ne divise pas.",
     "en": "v = λ·f: you multiply, you do not divide."
+  },
+  "v = √(GM/r): a raiz QUADRADA de GM dividido por r, com r medido do centro da Terra (raio + altitude).": {
+    "fr": "v = √(GM/r) : la racine CARRÉE de GM divisé par r, avec r mesuré depuis le centre de la Terre (rayon + altitude).",
+    "en": "v = √(GM/r): the SQUARE root of GM divided by r, with r measured from the centre of the Earth (radius + altitude)."
   },
   "v = √(T/μ): divida # por # e tire a raiz quadrada.": {
     "fr": "v = √(T/μ) : divisez # par # et prenez la racine carrée.",
@@ -18958,6 +19182,10 @@
   "À esquerda ficou a identidade; à direita, a inversa.": {
     "fr": "À gauche est restée l’identité ; à droite, l’inverse.",
     "en": "The identity is left on the left; on the right, the inverse."
+  },
+  "À pressão constante, W = p·ΔV. Use p em Pa (# atm = # × # # Pa) e ΔV em m³ (os # L divididos por #).": {
+    "fr": "À pression constante, W = p·ΔV. Utilisez p en Pa (# atm = # × # # Pa) et ΔV en m³ (les # L divisés par #).",
+    "en": "At constant pressure, W = p·ΔV. Use p in Pa (# atm = # × # # Pa) and ΔV in m³ (the # L divided by #)."
   },
   "Área e base não se subtraem: elas têm unidades diferentes. A relação entre elas é um produto, então isolar h pede uma divisão.": {
     "fr": "L’aire et la base ne se soustraient pas : leurs unités diffèrent. La relation entre elles est un produit, donc isoler h demande une division.",
@@ -19290,6 +19518,10 @@
   "É x₂² − x₁², não (x₂ − x₁)²: a mola já estava esticada no começo.": {
     "fr": "C’est x₂² − x₁², et non (x₂ − x₁)² : le ressort était déjà étiré au départ.",
     "en": "It is x₂² − x₁², not (x₂ − x₁)²: the spring was already stretched at the start."
+  },
+  "Órbitas mais altas são mais lentas, e com período maior.": {
+    "fr": "Les orbites plus hautes sont plus lentes, avec une période plus longue.",
+    "en": "Higher orbits are slower, with a longer period."
   },
   "Δ < #: a parábola não toca o eixo. Com a = #, ela fica inteira ABAIXO dele — o trinômio é sempre negativo.": {
     "fr": "Δ < # : la parabole ne touche pas l’axe. Avec a = #, elle reste entièrement EN DESSOUS — le trinôme est toujours négatif.",
