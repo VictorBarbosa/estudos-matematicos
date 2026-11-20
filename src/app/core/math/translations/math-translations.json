@@ -799,6 +799,10 @@
     "fr": "Le calcul porte sur la différence des CARRÉS des vitesses, et non sur le carré de la différence. Ce sont deux choses bien distinctes.",
     "en": "The computation is the difference of the SQUARES of the speeds, not the square of the difference. They are quite different things."
   },
+  "A conta é mols dividido pelo coeficiente — não a massa, e não só os mols: é a razão que diz quantas vezes a reação cabe.": {
+    "fr": "Le calcul est moles divisées par le coefficient — ni la masse, ni les moles seules : c’est ce rapport qui dit combien de fois la réaction tient.",
+    "en": "The computation is moles divided by the coefficient — not the mass, and not the moles alone: that ratio tells how many times the reaction fits."
+  },
   "A conta é só de leitura, depois de distribuir na ordem certa.": {
     "fr": "Le calcul se réduit à une lecture, une fois la répartition faite dans le bon ordre.",
     "en": "The computation is just a reading, once the filling is done in the right order."
@@ -1483,6 +1487,10 @@
     "fr": "La force est proportionnelle au produit des charges et à #/r².",
     "en": "The force is proportional to the product of the charges and to #/r²."
   },
+  "A fração está invertida, e por isso o resultado passou de #%. O obtido vai em cima: compara-se o que saiu com o que era possível.": {
+    "fr": "La fraction est inversée, et c’est pourquoi le résultat dépasse #%. L’obtenu va au numérateur : on compare ce qui est sorti à ce qui était possible.",
+    "en": "The fraction is upside down, and that is why the result exceeded #%. What was obtained goes on top: you compare what came out with what was possible."
+  },
   "A fração está invertida, e por isso passou de #%. A parte vai em cima e o todo embaixo: nenhum elemento é mais que o composto inteiro.": {
     "fr": "La fraction est inversée, et c’est pourquoi elle dépasse #%. La partie va au-dessus et le tout en dessous : aucun élément n’est plus que le composé entier.",
     "en": "The fraction is upside down, which is why it went past #%. The part goes on top and the whole below: no element is more than the whole compound."
@@ -2058,6 +2066,10 @@
   "A massa teórica é o teto: o que sairia de NH₃ sem perda nenhuma.": {
     "fr": "La masse théorique est le plafond : ce qui sortirait de NH₃ sans aucune perte.",
     "en": "The theoretical mass is the ceiling: what would come out of NH₃ with no loss at all."
+  },
+  "A massa teórica é o teto: o que sairia de NaCl sem perda nenhuma.": {
+    "fr": "La masse théorique est le plafond : ce qu’on obtiendrait en NaCl sans aucune perte.",
+    "en": "The theoretical mass is the ceiling: what would come out as NaCl with no loss at all."
   },
   "A massa total (denominador).": {
     "fr": "La masse totale (le dénominateur).",
@@ -3659,6 +3671,10 @@
     "fr": "Trouvez γ = #/√(# − #²) et multipliez le temps propre par ce facteur : celui qui voit passer l’horloge mesure PLUS de temps.",
     "en": "Find γ = #/√(# − #²) and multiply the proper time by it: whoever watches the clock go by measures MORE time."
   },
+  "Acima de #% não há reação generosa: há erro de medida ou produto impuro.": {
+    "fr": "Au-dessus de #% il n’y a pas de réaction généreuse : il y a une erreur de mesure ou un produit impur.",
+    "en": "Above #% there is no generous reaction: there is a measurement error or an impure product."
+  },
   "Acima de #, a ligação se trata como iônica.": {
     "fr": "Au-dessus de #, la liaison est traitée comme ionique.",
     "en": "Above #, the bond is treated as ionic."
@@ -4334,6 +4350,10 @@
   "Atenção ao y: a ordem dos termos é trocada, e é aí que o sinal costuma se perder.": {
     "fr": "Attention au y : l’ordre des termes est inversé, et c’est souvent là que le signe se perd.",
     "en": "Mind the y: the order of the terms is reversed, and that is usually where the sign gets lost."
+  },
+  "Atribuir zero não resolve: o limite vale #k, e a continuidade exige que o valor no ponto seja exatamente o limite.": {
+    "fr": "Attribuer zéro ne résout rien : la limite vaut #k, et la continuité exige que la valeur au point soit exactement la limite.",
+    "en": "Assigning zero does not settle it: the limit is #k, and continuity requires the value at the point to be exactly the limit."
   },
   "Até aqui nada se decidiu: a integral de dentro é comum, e tem limites finitos.": {
     "fr": "Jusqu’ici rien n’est décidé : l’intégrale intérieure est ordinaire, et ses bornes sont finies.",
@@ -5118,6 +5138,10 @@
   "Calcule os dois laterais em x = #: a reta pela esquerda e a parábola (com x ao quadrado) pela direita. O salto é direita menos esquerda.": {
     "fr": "Calculez les deux limites latérales en x = # : la droite à gauche et la parabole (avec x au carré) à droite. Le saut est la droite moins la gauche.",
     "en": "Work out both one-sided limits at x = #: the line from the left and the parabola (with x squared) from the right. The jump is right minus left."
+  },
+  "Calcule os dois laterais. Iguais: removível. Diferentes e finitos: salto.": {
+    "fr": "Calculez les deux limites latérales. Égales : éliminable. Différentes et finies : saut.",
+    "en": "Compute both one-sided limits. Equal: removable. Different and finite: a jump."
   },
   "Calcule primeiro o de dentro com x = #; o módulo só tira o sinal de menos, se houver.": {
     "fr": "Calculez d’abord l’intérieur avec x = # ; la valeur absolue ne fait qu’enlever le signe moins, s’il y en a un.",
@@ -6323,6 +6347,10 @@
     "fr": "Après # pas.",
     "en": "After # steps."
   },
+  "Depois de cancelar sobra x + k. Substituindo x por k o resultado é #k.": {
+    "fr": "Après simplification il reste x + k. En remplaçant x par k le résultat vaut #k.",
+    "en": "After cancelling, x + k remains. Replacing x with k the result is #k."
+  },
   "Depois de cancelar sobram TRÊS termos, todos iguais a a² no ponto — o resultado é #a², não a².": {
     "fr": "Après simplification il reste TROIS termes, tous égaux à a² au point — le résultat vaut #a², et non a².",
     "en": "After cancelling, THREE terms are left, all equal to a² at the point — the result is #a², not a²."
@@ -6867,6 +6895,10 @@
     "fr": "Dérivez, trouvez où f′ = # et regardez le signe de f′ entre ces racines (c’est un trinôme : signe contraire à celui de a entre les racines).",
     "en": "Differentiate, find where f′ = # and look at the sign of f′ between those roots (it is a quadratic: the sign is opposite to a between the roots)."
   },
+  "Descontinuidade de salto.": {
+    "fr": "Discontinuité de saut.",
+    "en": "Jump discontinuity."
+  },
   "Descontinuidade infinita.": {
     "fr": "Discontinuité infinita.",
     "en": "infinita discontinuity."
@@ -7238,6 +7270,10 @@
   "Do #º ao #º termo, a razão multiplica # vezes.": {
     "fr": "Du #ᵉ au #ᵉ terme, la raison multiplie # fois.",
     "en": "From the #st to the #nd term, the ratio multiplies # times."
+  },
+  "Do limitante não sobra nada: é essa a definição dele.": {
+    "fr": "Du réactif limitant il ne reste rien : c’est précisément sa définition.",
+    "en": "Nothing is left of the limiting reagent: that is its very definition."
   },
   "Do quociente, o enunciado pede o coeficiente de x.": {
     "fr": "Du quotient, l’énoncé demande le coeficiente de x.",
@@ -9287,6 +9323,10 @@
     "fr": "C’est la latérale. Il manque les deux couvercles circulaires.",
     "en": "That is the lateral surface. The two circular caps are missing."
   },
+  "Essa é a massa PERDIDA, em gramas. O rendimento é uma porcentagem: a razão entre o obtido e o teórico, vezes cem.": {
+    "fr": "C’est la masse PERDUE, en grammes. Le rendement est un pourcentage : le rapport entre l’obtenu et le théorique, multiplié par cent.",
+    "en": "That is the mass LOST, in grams. The yield is a percentage: the ratio of the obtained to the theoretical, times one hundred."
+  },
   "Essa é a massa de UM mol. O enunciado pede a massa de #, então ainda falta multiplicar.": {
     "fr": "C’est la masse d’UNE mole. L’énoncé demande la masse de #, il reste donc à multiplier.",
     "en": "That is the mass of ONE mole. The question asks for the mass of #, so a multiplication is still missing."
@@ -9294,6 +9334,10 @@
   "Essa é a massa do isótopo mais abundante. A média fica PERTO dela, mas não nela: o outro isótopo também pesa.": {
     "fr": "C’est la masse de l’isotope le plus abondant. La moyenne en est PROCHE, sans s’y confondre : l’autre isotope pèse aussi.",
     "en": "That is the mass of the most abundant isotope. The average is CLOSE to it, but not at it: the other isotope weighs too."
+  },
+  "Essa é a massa do limitante, e dele não sobra nada — é justamente por acabar primeiro que ele limita.": {
+    "fr": "C’est la masse du réactif limitant, dont il ne reste rien — c’est justement parce qu’il s’épuise en premier qu’il limite.",
+    "en": "That is the mass of the limiting reagent, of which nothing is left — it limits precisely because it runs out first."
   },
   "Essa é a medida que o enunciado já deu. O outro ângulo é a metade dela.": {
     "fr": "C’est la mesure que l’énoncé a déjà donnée. L’autre angle en est la moitié.",
@@ -9875,6 +9919,10 @@
     "fr": "C’est le score z, et non la probabilité. Le z est une étape intermédiaire : il entre dans la table, et ce qui en sort est l’aire.",
     "en": "That is the z-score, not the probability. The z is an intermediate step: it goes into the table, and what comes out is the area."
   },
+  "Esse é o extremo SUPERIOR do intervalo. O enunciado pede o menor dos dois inteiros consecutivos.": {
+    "fr": "C’est la borne SUPÉRIEURE de l’intervalle. L’énoncé demande le plus petit des deux entiers consécutifs.",
+    "en": "That is the UPPER end of the interval. The statement asks for the smaller of the two consecutive integers."
+  },
   "Esse é o foco. A diretriz fica do lado OPOSTO, à mesma distância do vértice: y = −p.": {
     "fr": "C’est le foyer. La directrice est du côté OPPOSÉ, à la même distance du sommet : y = −p.",
     "en": "That is the focus. The directrix is on the OPPOSITE side, at the same distance from the vertex: y = −p."
@@ -10030,6 +10078,10 @@
   "Esse é o produto escalar, não o ângulo. Ele é só o primeiro passo: falta dividir pelos módulos e tomar o arco-cosseno.": {
     "fr": "C’est le produit scalaire, pas l’angle. Ce n’est que la première étape : il reste à diviser par les normes et à prendre l’arc cosinus.",
     "en": "That is the dot product, not the angle. It is only the first step: you still have to divide by the magnitudes and take the arccosine."
+  },
+  "Esse é o quanto do excesso foi CONSUMIDO. O que sobra é o que havia menos isso.": {
+    "fr": "C’est la part de l’excès qui a été CONSOMMÉE. Ce qui reste est ce qu’il y avait moins cela.",
+    "en": "That is how much of the excess was CONSUMED. What is left is what there was minus that."
   },
   "Esse é o que o subnível #d CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
     "fr": "C’est ce que la sous-couche #d PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
@@ -10258,6 +10310,10 @@
   "Esse é o valor do integrando em x = #, não a integral. Integrar exige a primitiva.": {
     "fr": "C’est la valeur de l’intégrande en x = #, et non l’intégrale. Intégrer exige la primitive.",
     "en": "That is the value of the integrand at x = #, not the integral. Integrating requires the antiderivative."
+  },
+  "Esse é o valor do limite pela esquerda, não o k. Falta subtrair a parte da segunda sentença que já depende de x.": {
+    "fr": "C’est la valeur de la limite à gauche, pas le k. Il reste à soustraire la part de la seconde expression qui dépend déjà de x.",
+    "en": "That is the value of the limit from the left, not the k. You still have to subtract the part of the second expression that already depends on x."
   },
   "Esse é o valor do trecho da esquerda na fronteira. A constante é a diferença que falta para a direita alcançá-lo, não o valor inteiro.": {
     "fr": "C’est la valeur du morceau de gauche à la frontière. La constante est l’écart qui manque à la droite pour l’atteindre, pas la valeur entière.",
@@ -12295,6 +12351,10 @@
     "fr": "Reliez un sommet à tous les autres : le polygone se partage en # − # triangles, et chaque triangle apporte #°.",
     "en": "Join one vertex to all the others: the polygon splits into # − # triangles, and each triangle brings #°."
   },
+  "Limite finito sem f definida no ponto: um buraco.": {
+    "fr": "Limite finie sans que f soit définie au point : un trou.",
+    "en": "A finite limit with f undefined at the point: a hole."
+  },
   "Linha de A vezes coluna de B: para a entrada (#), a linha # de A vezes a coluna # de B, termo a termo, e some.": {
     "fr": "Ligne de A fois colonne de B : pour l’entrée (#), la ligne # de A fois la colonne # de B, terme à terme, puis additionnez.",
     "en": "Row of A times column of B: for entry (#), row # of A times column # of B, term by term, then add."
@@ -13883,6 +13943,30 @@
     "fr": "On ne multiplie pas en croix : le signe du dénominateur est inconnu, et le sens pourrait s’inverser.",
     "en": "You do not cross-multiply: the sign of the denominator is unknown, and the direction could flip."
   },
+  "Não é de salto: numa função racional não há laterais finitos e diferentes: ou o limite existe, ou vai a ±∞.": {
+    "fr": "Ce n’est pas un saut : dans une fonction rationnelle il n’y a pas de limites latérales finies et différentes : soit la limite existe, soit elle part à ±∞.",
+    "en": "It is not a jump: in a rational function there are no finite, different one-sided limits: either the limit exists, or it goes to ±∞."
+  },
+  "Não é de salto: os dois laterais são iguais (o limite existe); salto exige laterais diferentes.": {
+    "fr": "Ce n’est pas un saut : les deux limites latérales sont égales (la limite existe) ; un saut exige des limites latérales différentes.",
+    "en": "It is not a jump: both one-sided limits are equal (the limit exists); a jump requires different one-sided limits."
+  },
+  "Não é de salto: salto tem laterais finitos; aqui a função vai a ±∞.": {
+    "fr": "Ce n’est pas un saut : un saut a des limites latérales finies ; ici la fonction part à ±∞.",
+    "en": "It is not a jump: a jump has finite one-sided limits; here the function goes to ±∞."
+  },
+  "Não é infinita: o fator (x − #) está em cima e embaixo e se cancela; o limite existe e vale #.": {
+    "fr": "Elle n’est pas infinie : le facteur (x − #) est en haut comme en bas et se simplifie ; la limite existe et vaut #.",
+    "en": "It is not infinite: the factor (x − #) appears above and below and cancels; the limit exists and equals #."
+  },
+  "Não é infinita: o numerador também zera, e o fator se cancela; infinita exige numerador diferente de zero.": {
+    "fr": "Elle n’est pas infinie : le numérateur s’annule lui aussi et le facteur se simplifie ; une discontinuité infinie exige un numérateur non nul.",
+    "en": "It is not infinite: the numerator vanishes too and the factor cancels; an infinite discontinuity requires a non-zero numerator."
+  },
+  "Não é infinita: os dois laterais são números finitos; infinita é quando algum vai a ±∞.": {
+    "fr": "Elle n’est pas infinie : les deux limites latérales sont des nombres finis ; elle est infinie lorsque l’une part à ±∞.",
+    "en": "It is not infinite: both one-sided limits are finite numbers; it is infinite when one of them goes to ±∞."
+  },
   "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de CH₄ e de O₂, cada um DIVIDIDO pelo seu coeficiente.": {
     "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de CH₄ et de O₂, chacune DIVISÉE par son coefficient.",
     "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of CH₄ and of O₂, each DIVIDED by its coefficient."
@@ -13899,6 +13983,10 @@
     "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de H₂ et de O₂, chacune DIVISÉE par son coefficient.",
     "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of H₂ and of O₂, each DIVIDED by its coefficient."
   },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de Na e de Cl₂, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de plus faible masse : comparez combien de « recettes » chacun permet — moles de Na et de Cl₂, chacune DIVISÉE par son coefficient.",
+    "en": "It is neither the lightest nor the one with least mass: compare how many “recipes” each one allows — moles of Na and of Cl₂, each DIVIDED by its coefficient."
+  },
   "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de N₂ e de H₂, cada um DIVIDIDO pelo seu coeficiente.": {
     "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de N₂ et de H₂, chacune DIVISÉE par son coefficient.",
     "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of N₂ and of H₂, each DIVIDED by its coefficient."
@@ -13914,6 +14002,18 @@
   "Não é preciso eliminar o parâmetro: a derivada é componente a componente.": {
     "fr": "Pas besoin d’éliminer le paramètre : la dérivée se fait composante par composante.",
     "en": "No need to eliminate the parameter: differentiation is component by component."
+  },
+  "Não é removível: o fator (x − #) não aparece no numerador para se cancelar; o numerador vale # ali.": {
+    "fr": "Elle n’est pas éliminable : le facteur (x − #) n’apparaît pas au numérateur pour se simplifier ; le numérateur y vaut #.",
+    "en": "It is not removable: the factor (x − #) does not appear in the numerator to cancel; the numerator equals # there."
+  },
+  "Não é removível: o numerador vale # em x = #, não zero: não há fator para cancelar.": {
+    "fr": "Elle n’est pas éliminable : le numérateur vaut # en x = #, pas zéro : il n’y a aucun facteur à simplifier.",
+    "en": "It is not removable: the numerator equals # at x = #, not zero: there is no factor to cancel."
+  },
+  "Não é removível: removível exige que os dois laterais sejam iguais; aqui eles discordam.": {
+    "fr": "Elle n’est pas éliminable : une discontinuité éliminable exige que les deux limites latérales soient égales ; ici elles diffèrent.",
+    "en": "It is not removable: a removable discontinuity requires both one-sided limits to be equal; here they disagree."
   },
   "Não é uma convenção arbitrária: é o que a divisão de uma potência por ela mesma exige.": {
     "fr": "Ce n’est pas une convention arbitraire : c’est ce qu’exige la division d’une puissance par elle-même.",
@@ -14823,9 +14923,17 @@
     "fr": "Le score z mesure la distance à la moyenne en écarts-types.",
     "en": "The z score measures the distance to the mean in standard deviations."
   },
+  "O excesso, CH₄, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, CH₄, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, CH₄, used up only what the recipes called for."
+  },
   "O excesso, CaCO₃, gastou só o que as receitas pediram.": {
     "fr": "L’excès, CaCO₃, n’a dépensé que ce que les recettes demandaient.",
     "en": "The excess, CaCO₃, only spent what the recipes called for."
+  },
+  "O excesso, Cl₂, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, Cl₂, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, Cl₂, used up only what the recipes called for."
   },
   "O excesso, Fe, gastou só o que as receitas pediram.": {
     "fr": "L’excès, Fe, n’a dépensé que ce que les recettes demandaient.",
@@ -14838,6 +14946,10 @@
   "O excesso, H₂, gastou só o que as receitas pediram.": {
     "fr": "L’excès, H₂, n’a dépensé que ce que les recettes demandaient.",
     "en": "The excess, H₂, only spent what the recipes called for."
+  },
+  "O excesso, Na, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, Na, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, Na, used up only what the recipes called for."
   },
   "O excesso, N₂, gastou só o que as receitas pediram.": {
     "fr": "L’excès, N₂, n’a dépensé que ce que les recettes demandaient.",
@@ -15175,6 +15287,14 @@
     "fr": "Le plus petit commande : CaCO₃ est le limitant, et HCl est en excès.",
     "en": "The smallest rules: CaCO₃ is the limiting one, and HCl is left over."
   },
+  "O menor manda: Cl₂ é o limitante, e Na sobra.": {
+    "fr": "C’est le plus petit qui commande : Cl₂ est le réactif limitant, et Na est en excès.",
+    "en": "The smallest one rules: Cl₂ is the limiting reagent, and Na is left over."
+  },
+  "O menor manda: Fe é o limitante, e O₂ sobra.": {
+    "fr": "C’est le plus petit qui commande : Fe est le réactif limitant, et O₂ est en excès.",
+    "en": "The smallest one rules: Fe is the limiting reagent, and O₂ is left over."
+  },
   "O menor manda: HCl é o limitante, e CaCO₃ sobra.": {
     "fr": "Le plus petit commande : HCl est le limitant, et CaCO₃ est en excès.",
     "en": "The smallest rules: HCl is the limiting one, and CaCO₃ is left over."
@@ -15187,9 +15307,17 @@
     "fr": "Le plus petit commande : H₂ est le limitant, et O₂ est en excès.",
     "en": "The smallest rules: H₂ is the limiting one, and O₂ is left over."
   },
+  "O menor manda: Na é o limitante, e Cl₂ sobra.": {
+    "fr": "C’est le plus petit qui commande : Na est le réactif limitant, et Cl₂ est en excès.",
+    "en": "The smallest one rules: Na is the limiting reagent, and Cl₂ is left over."
+  },
   "O menor manda: N₂ é o limitante, e H₂ sobra.": {
     "fr": "Le plus petit commande : N₂ est le limitant, et H₂ est en excès.",
     "en": "The smallest rules: N₂ is the limiting one, and H₂ is left over."
+  },
+  "O menor manda: O₂ é o limitante, e CH₄ sobra.": {
+    "fr": "C’est le plus petit qui commande : O₂ est le réactif limitant, et CH₄ est en excès.",
+    "en": "The smallest one rules: O₂ is the limiting reagent, and CH₄ is left over."
   },
   "O menor manda: O₂ é o limitante, e Fe sobra.": {
     "fr": "Le plus petit commande : O₂ est le limitant, et Fe est en excès.",
@@ -15470,6 +15598,10 @@
   "O obtido vai em cima e o teórico embaixo: compara-se o que saiu com o que era possível. O resultado é menor que #%.": {
     "fr": "L’obtenu va en haut et le théorique en bas : on compare ce qui est sorti avec ce qui était possible. Le résultat est inférieur à # %.",
     "en": "The obtained goes on top and the theoretical below: you compare what came out with what was possible. The result is less than #%."
+  },
+  "O obtido vai em cima: é ele que se compara ao que era possível.": {
+    "fr": "Le rendement obtenu va au numérateur : c’est lui qu’on compare à ce qui était possible.",
+    "en": "What was obtained goes on top: it is what is compared with what was possible."
   },
   "O outro lado dá o mesmo número, e é nisso que o balanceamento se confere.": {
     "fr": "L’autre côté donne le même nombre, et c’est ainsi que l’équilibrage se vérifie.",
@@ -16362,6 +16494,10 @@
   "O tempo vai no DENOMINADOR: quanto mais rápida a parada, maior a força.": {
     "fr": "Le temps va au DÉNOMINATEUR : plus l’arrêt est rapide, plus la force est grande.",
     "en": "The time goes in the DENOMINATOR: the faster the stop, the larger the force."
+  },
+  "O teorema garante que a raiz existe, sem precisar calculá-la.": {
+    "fr": "Le théorème garantit que la racine existe, sans avoir à la calculer.",
+    "en": "The theorem guarantees that the root exists, without having to compute it."
   },
   "O termo com eˣ vem de M e não tem y: ele entra em F uma vez só, pela integral de M.": {
     "fr": "Le terme en eˣ vient de M et ne contient pas y : il n’entre dans F qu’une seule fois, par l’intégrale de M.",
@@ -17319,6 +17455,10 @@
     "fr": "Les deux limites latérales divergent, donc la limite commune N’EXISTE PAS.",
     "en": "The two one-sided limits disagree, so the common limit does NOT exist."
   },
+  "Os dois laterais, cada um pela sua sentença.": {
+    "fr": "Les deux limites latérales, chacune par son expression.",
+    "en": "Both one-sided limits, each from its own expression."
+  },
   "Os dois pontos e a maior ordenada.": {
     "fr": "Les deux points et la plus grande ordonnée.",
     "en": "The two points and the larger y-coordinate."
@@ -17386,6 +17526,10 @@
   "Os lados discordam: o limite NÃO existe.": {
     "fr": "Les côtés ne concordent pas : la limite N'EXISTE PAS.",
     "en": "The sides disagree: the limit DOES NOT EXIST."
+  },
+  "Os laterais são finitos e diferentes: o gráfico pula de um valor para o outro.": {
+    "fr": "Les limites latérales sont finies et différentes : le graphe saute d’une valeur à l’autre.",
+    "en": "The one-sided limits are finite and different: the graph jumps from one value to the other."
   },
   "Os limites laterais discordam: há um salto.": {
     "fr": "Les limites latérales ne concordent pas : il y a un saut.",
@@ -17603,6 +17747,10 @@
     "fr": "Pour CaCO₃.",
     "en": "For CaCO₃."
   },
+  "Para Cl₂.": {
+    "fr": "Pour Cl₂.",
+    "en": "For Cl₂."
+  },
   "Para Fe.": {
     "fr": "Pour Fe.",
     "en": "For Fe."
@@ -17614,6 +17762,10 @@
   "Para H₂.": {
     "fr": "Pour H₂.",
     "en": "For H₂."
+  },
+  "Para Na.": {
+    "fr": "Pour Na.",
+    "en": "For Na."
   },
   "Para N₂.": {
     "fr": "Pour N₂.",
@@ -18715,6 +18867,10 @@
     "fr": "Qui est la somme des deux angles intérieurs opposés.",
     "en": "Which is the sum of the two opposite interior angles."
   },
+  "Quem acaba primeiro decide quanto se forma; o resto do outro fica parado.": {
+    "fr": "Celui qui s’épuise en premier décide de la quantité formée ; le reste de l’autre demeure inutilisé.",
+    "en": "Whichever runs out first decides how much forms; the rest of the other just sits there."
+  },
   "Quem define este valor é o trecho cuja condição inclui o igual.": {
     "fr": "C’est le morceau dont la condition contient le signe égal qui fixe cette valeur.",
     "en": "It is the piece whose condition includes the equals sign that sets this value."
@@ -19279,6 +19435,10 @@
     "fr": "Signe positif : des charges de même signe se repoussent.",
     "en": "Positive sign: charges of the same sign repel."
   },
+  "Sinal trocado ao isolar k. Confira a passagem do termo para o outro lado.": {
+    "fr": "Signe inversé en isolant k. Vérifiez le passage du terme de l’autre côté.",
+    "en": "Sign flipped when isolating k. Check moving the term to the other side."
+  },
   "Sinal trocado ao isolar q: de # = m·(#) + q, q = # − m·(#).": {
     "fr": "Signe inversé en isolant q : à partir de # = m·(#) + q, on a q = # − m·(#).",
     "en": "Sign flipped when isolating q: from # = m·(#) + q, q = # − m·(#)."
@@ -19531,6 +19691,10 @@
     "fr": "Additionner les incertitudes directement suppose que les deux mesures se trompent dans le même sens. Étant indépendantes, elles se combinent en quadrature, et le total est plus petit.",
     "en": "Adding the uncertainties directly assumes both measurements err in the same direction. Being independent, they combine in quadrature, and the total is smaller."
   },
+  "Somar as massas daria o produto apenas se tudo reagisse e nada sobrasse. Com um reagente em excesso, parte dessa massa continua ali depois da reação.": {
+    "fr": "Additionner les masses ne donnerait le produit que si tout réagissait sans rien laisser. Avec un réactif en excès, une partie de cette masse reste là après la réaction.",
+    "en": "Adding the masses would give the product only if everything reacted with nothing left over. With a reagent in excess, part of that mass is still there after the reaction."
+  },
   "Somar contaria \"um grupo OU o outro\". Como a comissão precisa dos dois ao mesmo tempo, as contagens se multiplicam.": {
     "fr": "Additionner compterait « un groupe OU l’autre ». Comme la commission a besoin des deux à la fois, les dénombrements se multiplient.",
     "en": "Adding would count “one group OR the other”. Since the committee needs both at once, the counts multiply."
@@ -19694,6 +19858,10 @@
   "Substitua o ponto. Se der #/#, simplifique ou olhe os dois laterais; se der número/#, é infinito.": {
     "fr": "Substituez le point. Si cela donne #/#, simplifiez ou regardez les deux limites latérales ; si cela donne nombre/#, c’est l’infini.",
     "en": "Substitute the point. If it gives #/#, simplify or look at the two one-sided limits; if it gives number/#, it is infinite."
+  },
+  "Substitua o ponto: algo diferente de zero sobre zero indica assíntota (infinita).": {
+    "fr": "Remplacez par le point : quelque chose de non nul sur zéro indique une asymptote (infinie).",
+    "en": "Substitute the point: something non-zero over zero indicates an asymptote (infinite)."
   },
   "Substitua o y fixo e trate o que sobra como uma função de uma variável só.": {
     "fr": "Substituez le y fixe et traitez ce qui reste comme une fonction d’une seule variable.",
@@ -21462,6 +21630,10 @@
   "Você usou apenas a base menor. Ambas as bases entram, pela média.": {
     "fr": "Vous n’avez utilisé que la petite base. Les deux bases entrent, par la moyenne.",
     "en": "You used only the shorter base. Both bases take part, through the average."
+  },
+  "Você usou como base o reagente que SOBRA. Quem decide quanto se forma é o que acaba primeiro — o resto do outro fica parado.": {
+    "fr": "Vous avez pris pour base le réactif qui RESTE. Celui qui décide de la quantité formée est celui qui s’épuise en premier — le reste de l’autre demeure inutilisé.",
+    "en": "You based it on the reagent that is LEFT OVER. The one that decides how much forms is the one that runs out first — the rest of the other just sits there."
   },
   "Você usou c² = a² + b², que é a relação da HIPÉRBOLE. Na elipse é uma subtração: c² = a² − b².": {
     "fr": "Vous avez utilisé c² = a² + b², qui est la relation de l’HYPERBOLE. Dans l’ellipse c’est une soustraction : c² = a² − b².",
