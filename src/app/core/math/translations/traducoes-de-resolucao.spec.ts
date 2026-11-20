@@ -34,15 +34,20 @@ const AMOSTRAS = 6;
  * para que uma mudança de gerador que invente frases novas apareça aqui, em vez
  * de aparecer na tela de quem estuda em francês.
  *
- * O andamento, para quem for continuar: passos de 759 para 1 409 e dicas de
- * 75 para 323, em vinte e seis tópicos. Traduzir um tópico é escrever as
- * frases DELE, e as frases de um tópico são variações de poucos moldes:
+ * O trabalho terminou: passos em 3 139/3 144 e dicas em 1 114/1 128. As
+ * dezenove frases que faltam são NOTAÇÃO PURA — «p = mv», «ΔU = Q − W»,
+ * «# × # = #» —, e notação não se traduz: uma entrada cuja tradução repete a
+ * chave é rejeitada pelo guarda «cada entrada tem francês e inglês de verdade».
+ * Por isso os pisos param pouco abaixo de 1, e não em 1.
+ *
+ * Como se traduziu, para quem precisar repetir em frases novas: por FAMÍLIA, e
+ * não por linha. As frases de um tópico são variações de poucos moldes —
  * «Zeramos o resto da coluna #: L₂ ← L₂ − #·L₁» tem trinta irmãs que mudam só
- * a notação. Por isso o trabalho rende por família, e não por linha — e por
- * isso a conta sobe aos saltos.
+ * a notação —, então escrever as frases de um tópico de cada vez rende muito
+ * mais que percorrer a lista inteira.
  */
-const PISO_DOS_PASSOS = 0.448;
-const PISO_DAS_DICAS = 0.286;
+const PISO_DOS_PASSOS = 0.998;
+const PISO_DAS_DICAS = 0.987;
 
 interface Frases {
   readonly passos: Set<string>;
@@ -160,8 +165,11 @@ describe('traduções de resolução, dica e diagnóstico', () => {
     const total = FRASES.diagnosticos.size;
     const prontas = cobertos(FRASES.diagnosticos);
 
-    expect(prontas / total, `${prontas}/${total} diagnósticos traduzidos.`).toBeGreaterThanOrEqual(
-      0,
-    );
+    // Os diagnósticos chegaram a 100%: o piso aqui é 1, e qualquer frase nova
+    // sem tradução derruba o teste no mesmo dia em que for escrita.
+    expect(
+      prontas / total,
+      [...FRASES.diagnosticos].filter((frase) => DICIONARIO[frase] === undefined).join(' | '),
+    ).toBeGreaterThanOrEqual(1);
   });
 });
