@@ -1735,6 +1735,10 @@
     "fr": "La formule de Héron donne la même valeur directement à partir des trois côtés.",
     "en": "Heron’s formula gives the same value directly from the three sides."
   },
+  "A fórmula diz quantos átomos do elemento há em cada molécula.": {
+    "fr": "La formule dit combien d’atomes de l’élément contient chaque molécule.",
+    "en": "The formula says how many atoms of the element each molecule has."
+  },
   "A fórmula do arco duplo para o seno.": {
     "fr": "La formule de l’angle double pour le sinus.",
     "en": "The double-angle formula for the sine."
@@ -2151,9 +2155,17 @@
     "fr": "La masse molaire dit combien pèse une mole de oxyde de fer(III).",
     "en": "The molar mass says how much one mole of iron(III) oxide weighs."
   },
+  "A massa molar sai da fórmula: é a soma das massas atômicas.": {
+    "fr": "La masse molaire vient de la formule : c’est la somme des masses atomiques.",
+    "en": "The molar mass comes from the formula: it is the sum of the atomic masses."
+  },
   "A massa molar sai em gramas por mol.": {
     "fr": "La masse molaire s’exprime en grammes par mole.",
     "en": "The molar mass comes out in grams per mole."
+  },
+  "A massa molar é a soma das massas atômicas da fórmula.": {
+    "fr": "La masse molaire est la somme des masses atomiques de la formule.",
+    "en": "The molar mass is the sum of the atomic masses in the formula."
   },
   "A massa molar é a soma de todas as parcelas.": {
     "fr": "La masse molaire est la somme de toutes les parts.",
@@ -2194,6 +2206,10 @@
   "A massa total (denominador).": {
     "fr": "La masse totale (le dénominateur).",
     "en": "The total mass (the denominator)."
+  },
+  "A massa é a quantidade de mols vezes a massa molar.": {
+    "fr": "La masse est la quantité de moles fois la masse molaire.",
+    "en": "The mass is the amount of moles times the molar mass."
   },
   "A massa é a quantidade vezes o que cada mol pesa.": {
     "fr": "La masse est la quantité multipliée par ce que pèse chaque mole.",
@@ -5042,6 +5058,10 @@
   "Cada menor é o determinante #×# que sobra ao riscar linha e coluna.": {
     "fr": "Chaque mineur est le déterminant #×# qui reste quand on barre une ligne et une colonne.",
     "en": "Each minor is the #×# determinant left after crossing out a row and a column."
+  },
+  "Cada mol da substância traz essa quantidade de átomos do elemento.": {
+    "fr": "Chaque mole de la substance apporte cette quantité d’atomes de l’élément.",
+    "en": "Each mole of the substance brings that many atoms of the element."
   },
   "Cada mol pesa a massa molar: multiplique-a por #.": {
     "fr": "Chaque mole pèse la masse molaire : multipliez-la par #.",
@@ -13667,6 +13687,10 @@
     "fr": "En multipliant par la pression.",
     "en": "Multiplying by the pressure."
   },
+  "Multiplicando pela quantidade de mols da amostra.": {
+    "fr": "En multipliant par la quantité de moles de l’échantillon.",
+    "en": "Multiplying by the amount of moles in the sample."
+  },
   "Multiplicando pelas máquinas e horas novas.": {
     "fr": "En multipliant par les nouvelles machines et heures.",
     "en": "Multiplying by the new machines and hours."
@@ -13686,6 +13710,10 @@
   "Multiplicando pelo novo número de pessoas.": {
     "fr": "En multipliant par le nouveau nombre de personnes.",
     "en": "Multiplying by the new number of people."
+  },
+  "Multiplicando pelos mols e pelo número de Avogadro.": {
+    "fr": "En multipliant par les moles et par le nombre d’Avogadro.",
+    "en": "Multiplying by the moles and by Avogadro’s number."
   },
   "Multiplicando pelos ovos pedidos.": {
     "fr": "En multipliant par les œufs demandés.",
@@ -18747,6 +18775,10 @@
     "fr": "Les limites latérales ne concordent pas : il y a un saut.",
     "en": "The one-sided limits disagree: there is a jump."
   },
+  "Os mols são a massa dividida pela massa molar.": {
+    "fr": "Les moles sont la masse divisée par la masse molaire.",
+    "en": "The moles are the mass divided by the molar mass."
+  },
   "Os módulos foram multiplicados, como se campo e deslocamento estivessem alinhados. Só a componente do campo AO LONGO do caminho realiza trabalho.": {
     "fr": "Les normes ont été multipliées, comme si le champ et le déplacement étaient alignés. Seule la composante du champ LE LONG du chemin effectue un travail.",
     "en": "The magnitudes were multiplied, as if field and displacement were aligned. Only the component of the field ALONG the path does work."
@@ -19786,6 +19818,10 @@
   "Primeiro a inclinação b; depois o intercepto sai de a = ȳ − b·x̄, porque a reta passa pelo ponto das médias.": {
     "fr": "D’abord la pente b ; ensuite l’ordonnée à l’origine sort de a = ȳ − b·x̄, puisque la droite passe par le point des moyennes.",
     "en": "First the slope b; then the intercept comes from a = ȳ − b·x̄, because the line passes through the point of the means."
+  },
+  "Primeiro a massa vira mols, dividindo pela massa molar.": {
+    "fr": "D’abord la masse devient des moles, en divisant par la masse molaire.",
+    "en": "First the mass becomes moles, by dividing by the molar mass."
   },
   "Primeiro a nova velocidade angular, pela conservação: I·ω não muda. Depois compare ½·I·ω² antes e depois.": {
     "fr": "D’abord la nouvelle vitesse angulaire, par la conservation : I·ω ne change pas. Comparez ensuite ½·I·ω² avant et après.",
@@ -22402,6 +22438,10 @@
   "Um mol tem o número de Avogadro de partículas.": {
     "fr": "Une mole contient le nombre d’Avogadro de particules.",
     "en": "One mole holds Avogadro’s number of particles."
+  },
+  "Um mol tem sempre o mesmo número de partículas, seja qual for a substância.": {
+    "fr": "Une mole contient toujours le même nombre de particules, quelle que soit la substance.",
+    "en": "A mole always holds the same number of particles, whatever the substance."
   },
   "Um número diferente de zero dividido por algo que tende a zero explode: assíntota vertical.": {
     "fr": "Un nombre différent de zéro divisé par quelque chose qui tend vers zéro explose : asymptote verticale.",
