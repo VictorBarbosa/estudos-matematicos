@@ -179,6 +179,10 @@
     "fr": "# sont les arêtes. Les sommets sortent d’Euler : V = A − F + #.",
     "en": "# are the edges. The vertices come from Euler: V = E − F + #."
   },
+  "# voltas por minuto são #/# voltas por segundo; cada volta vale # pi radianos.": {
+    "fr": "# tours par minute font #/# tours par seconde ; chaque tour vaut # pi radians.",
+    "en": "# turns per minute is #/# turns per second; each turn is # pi radians."
+  },
   "# é # inteiros, ou seja # partes de tamanho #. Escrito assim, ele entra na conta como qualquer outra fração — e fica claro que o denominador dele é #, e não o da outra fração.": {
     "fr": "# vaut # unités entières, c’est-à-dire # parts de taille #. Écrit ainsi, il entre dans le calcul comme n’importe quelle autre fraction — et il devient clair que son dénominateur est #, et non celui de l’autre fraction.",
     "en": "# is # whole units, that is, # parts of size #. Written this way, it enters the computation like any other fraction — and it becomes clear that its denominator is #, not the other fraction’s."
@@ -1499,6 +1503,10 @@
     "fr": "La fraction est inversée, et c’est pourquoi elle dépasse #%. La partie va au-dessus et le tout en dessous : aucun élément n’est plus que le composé entier.",
     "en": "The fraction is upside down, which is why it went past #%. The part goes on top and the whole below: no element is more than the whole compound."
   },
+  "A fração está invertida. A velocidade angular é o ângulo dividido pelo tempo, de modo que o período vai no denominador.": {
+    "fr": "La fraction est inversée. La vitesse angulaire est l’angle divisé par le temps, de sorte que la période va au dénominateur.",
+    "en": "The fraction is upside down. Angular velocity is the angle divided by the time, so the period goes in the denominator."
+  },
   "A fração está invertida: isso é a CONDUTÂNCIA, que é o inverso da resistência.": {
     "fr": "La fraction est inversée : c’est la CONDUCTANCE, qui est l’inverse de la résistance.",
     "en": "The fraction is upside down: that is the CONDUCTANCE, the reciprocal of the resistance."
@@ -2771,6 +2779,10 @@
     "fr": "La racine est le x qui fait valoir zéro à f(x).",
     "en": "The root is the x that makes f(x) equal zero."
   },
+  "A rapidez é constante, mas a velocidade não: o vetor muda de direção a cada instante. Mudar de direção já é acelerar, e é disso que trata a aceleração centrípeta.": {
+    "fr": "La vitesse en valeur est constante, mais le vecteur vitesse ne l’est pas : il change de direction à chaque instant. Changer de direction, c’est déjà accélérer, et c’est de cela que traite l’accélération centripète.",
+    "en": "The speed is constant, but the velocity is not: the vector changes direction at every instant. Changing direction is already accelerating, and that is what centripetal acceleration is about."
+  },
   "A rapidez é o módulo desse vetor.": {
     "fr": "La vitesse est le module de ce vecteur.",
     "en": "The speed is the magnitude of that vector."
@@ -3415,6 +3427,10 @@
     "fr": "La vitesse par rapport au sol est celle de l’avion plus celle du vent.",
     "en": "The ground speed is the aircraft plus the wind."
   },
+  "A velocidade entra ao QUADRADO. Dobrar a rapidez quadruplica a aceleração centrípeta, e é por isso que curvas rápidas exigem tanto das estruturas.": {
+    "fr": "La vitesse entre AU CARRÉ. Doubler la vitesse quadruple l’accélération centripète, et c’est pourquoi les virages rapides sollicitent tant les structures.",
+    "en": "The speed enters SQUARED. Doubling the speed quadruples the centripetal acceleration, and that is why fast turns demand so much of structures."
+  },
   "A velocidade entra ao QUADRADO. Essa é metade do momento linear, não energia.": {
     "fr": "La vitesse entre au CARRÉ. Ceci est la moitié de la quantité de mouvement, pas une énergie.",
     "en": "The speed enters SQUARED. This is half the linear momentum, not energy."
@@ -3646,6 +3662,10 @@
   "Ache a razão primeiro, r = (a_q − aₚ) / (q − p); depois volte: a₁ = aₚ − (p − #)r.": {
     "fr": "Trouvez d’abord la raison, r = (a_q − aₚ) / (q − p) ; puis revenez : a₁ = aₚ − (p − #)r.",
     "en": "Find the difference first, r = (a_q − aₚ) / (q − p); then go back: a₁ = aₚ − (p − #)r."
+  },
+  "Ache a velocidade (# pi vezes o raio sobre # s) e use v ao quadrado dividido pelo raio.": {
+    "fr": "Trouvez la vitesse (# pi fois le rayon sur # s) et utilisez v au carré divisé par le rayon.",
+    "en": "Find the speed (# pi times the radius over # s) and use v squared divided by the radius."
   },
   "Ache as raízes da característica, escreva a solução geral com duas constantes e use y(#) = # e y′(#) = # para achá-las.": {
     "fr": "Trouvez les racines de la caractéristique, écrivez la solution générale avec deux constantes et utilisez y(#) = # et y′(#) = # pour les déterminer.",
@@ -7251,6 +7271,10 @@
     "fr": "Diviser partie par partie ne marche pas. Il faut multiplier numérateur et dénominateur par le conjugué du dénominateur.",
     "en": "Dividing part by part does not work. You have to multiply numerator and denominator by the conjugate of the denominator."
   },
+  "Dividir pela razão não é a fórmula. A soma infinita divide o primeiro termo por # − q — é o que sobra quando qⁿ vai a zero.": {
+    "fr": "Diviser par la raison n’est pas la formule. La somme infinie divise le premier terme par # − q — c’est ce qui reste quand qⁿ tend vers zéro.",
+    "en": "Dividing by the ratio is not the formula. The infinite sum divides the first term by # − q — it is what remains when qⁿ goes to zero."
+  },
   "Dividir por # converte km/h em m/s.": {
     "fr": "Diviser par # convertit les km/h en m/s.",
     "en": "Dividing by # converts km/h into m/s."
@@ -7298,6 +7322,14 @@
   "Do #º ao #º termo, a razão multiplica # vezes.": {
     "fr": "Du #ᵉ au #ᵉ terme, la raison multiplie # fois.",
     "en": "From the #st to the #nd term, the ratio multiplies # times."
+  },
+  "Do #º termo ao #º são # divisões pela razão, não #.": {
+    "fr": "Du #ᵉ terme au #ᵉ il y a # divisions par la raison, pas #.",
+    "en": "From term # to term # there are # divisions by the ratio, not #."
+  },
+  "Do #º termo ao #º são # saltos para trás, não #.": {
+    "fr": "Du #ᵉ terme au #ᵉ il y a # sauts en arrière, pas #.",
+    "en": "From term # back to term # there are # steps backwards, not #."
   },
   "Do limitante não sobra nada: é essa a definição dele.": {
     "fr": "Du réactif limitant il ne reste rien : c’est précisément sa définition.",
@@ -8611,6 +8643,10 @@
     "fr": "Entre ces points, la droite est au-dessus de la parabole.",
     "en": "Between those points the line is above the parabola."
   },
+  "Entre o #º e o #º termo há # − # = # saltos, não #: conte os intervalos, não os termos.": {
+    "fr": "Entre le #ᵉ et le #ᵉ terme il y a # − # = # sauts, pas # : comptez les intervalles, pas les termes.",
+    "en": "Between term # and term # there are # − # = # steps, not #: count the gaps, not the terms."
+  },
   "Entre quais múltiplos de #° o ângulo está?": {
     "fr": "Entre quels multiples de #° l’angle se trouve-t-il ?",
     "en": "Between which multiples of #° does the angle lie?"
@@ -9239,6 +9275,10 @@
     "fr": "C’est l’écart entre les températures initiales. La finale se situe entre les deux, plus près de celui qui a la plus grande capacité thermique.",
     "en": "That is the gap between the initial temperatures. The final one lies between them, closer to the one with the larger heat capacity."
   },
+  "Essa é a diferença entre os dois termos. Ela vale # razões: divida por #.": {
+    "fr": "C’est la différence entre les deux termes. Elle vaut # raisons : divisez par #.",
+    "en": "That is the difference between the two terms. It equals # common differences: divide by #."
+  },
   "Essa é a diretriz. O foco fica do lado da abertura: y = k + p.": {
     "fr": "C’est la directrice. Le foyer est du côté de l’ouverture : y = k + p.",
     "en": "That is the directrix. The focus is on the side it opens: y = k + p."
@@ -9322,6 +9362,14 @@
   "Essa é a fórmula MOLECULAR, e a porcentagem não consegue distingui-la da empírica: C₆H₁₂O₆ e CH₂O têm exatamente a mesma composição. Sem a massa molar, a resposta é a proporção mais simples.": {
     "fr": "C’est la formule MOLÉCULAIRE, et le pourcentage ne peut pas la distinguer de l’empirique : C₆H₁₂O₆ et CH₂O ont exactement la même composition. Sans la masse molaire, la réponse est la proportion la plus simple.",
     "en": "That is the MOLECULAR formula, and the percentage cannot tell it from the empirical one: C₆H₁₂O₆ and CH₂O have exactly the same composition. Without the molar mass, the answer is the simplest proportion."
+  },
+  "Essa é a fórmula da PA. Na PG a razão MULTIPLICA, ela não soma.": {
+    "fr": "C’est la formule de la suite arithmétique. Dans une suite géométrique la raison MULTIPLIE, elle ne s’additionne pas.",
+    "en": "That is the formula for an arithmetic sequence. In a geometric one the ratio MULTIPLIES, it does not add."
+  },
+  "Essa é a fórmula da PG. Na PA a razão SOMA, ela não multiplica.": {
+    "fr": "C’est la formule de la suite géométrique. Dans une suite arithmétique la raison S’AJOUTE, elle ne multiplie pas.",
+    "en": "That is the formula for a geometric sequence. In an arithmetic one the common difference ADDS, it does not multiply."
   },
   "Essa é a fórmula empírica, que o enunciado já deu. A massa molar diz quantas vezes ela cabe na molécula — e é por esse número que todos os índices se multiplicam.": {
     "fr": "C’est la formule empirique, que l’énoncé a déjà donnée. La masse molaire dit combien de fois elle tient dans la molécule — et c’est par ce nombre que tous les indices se multiplient.",
@@ -9523,6 +9571,10 @@
     "fr": "C’est le rapport des coefficients dominants — il vaut pour x → ∞, pas pour x tendant vers un nombre.",
     "en": "That is the ratio of the leading coefficients — it holds for x → ∞, not for x tending to a number."
   },
+  "Essa é a razão. O pedido é o primeiro termo: falta voltar até a₁.": {
+    "fr": "C’est la raison. On demande le premier terme : il reste à remonter jusqu’à a₁.",
+    "en": "That is the ratio. What is asked for is the first term: you still have to go back to a₁."
+  },
   "Essa é a relação da elipse. Na hipérbole, c² = a² + b².": {
     "fr": "C’est la relation de l’ellipse. Dans l’hyperbole, c² = a² + b².",
     "en": "That is the ellipse relation. In the hyperbola, c² = a² + b²."
@@ -9591,6 +9643,10 @@
     "fr": "C'est la vitesse ORBITALE rasante. Celle de libération porte le facteur # sous la racine et est √# fois plus grande.",
     "en": "That is the grazing ORBITAL speed. The escape speed has the factor # inside the root, being √# times larger."
   },
+  "Essa é a velocidade angular, em rad/s. Ela é a mesma para todo ponto do corpo; a tangencial cresce com a distância ao eixo.": {
+    "fr": "C’est la vitesse angulaire, en rad/s. Elle est la même pour tout point du corps ; la vitesse tangentielle croît avec la distance à l’axe.",
+    "en": "That is the angular velocity, in rad/s. It is the same for every point of the body; the tangential speed grows with the distance from the axis."
+  },
   "Essa é a velocidade de ESCAPE nesse raio, √# vezes maior. Para orbitar, basta a velocidade em que a gravidade iguala a força centrípeta.": {
     "fr": "C'est la vitesse de LIBÉRATION à ce rayon, √# fois plus grande. Pour orbiter, il suffit de la vitesse où la gravité égale la force centripète.",
     "en": "That is the ESCAPE speed at this radius, √# times larger. To orbit, the speed at which gravity equals the centripetal force is enough."
@@ -9610,6 +9666,10 @@
   "Essa é a velocidade em relação ao ar, que é o que o instrumento de bordo mostra. O solo vê outra coisa, porque o próprio ar está se movendo.": {
     "fr": "C’est la vitesse par rapport à l’air, celle qu’affiche l’instrument de bord. Le sol en voit une autre, parce que l’air lui-même se déplace.",
     "en": "That is the airspeed, which is what the onboard instrument shows. The ground sees something else, because the air itself is moving."
+  },
+  "Essa é a velocidade tangencial, não a aceleração.": {
+    "fr": "C’est la vitesse tangentielle, pas l’accélération.",
+    "en": "That is the tangential speed, not the acceleration."
   },
   "Essa é a ÁREA, que se mede em unidades quadradas. O comprimento é uma medida linear: C = #πr.": {
     "fr": "C’est l’AIRE, qui se mesure en unités carrées. La longueur est une mesure linéaire : C = #πr.",
@@ -10103,6 +10163,10 @@
     "fr": "C’est la période de l’oscillation. Ce qui est demandé, c’est le temps pour que l’AMPLITUDE tombe de moitié.",
     "en": "That is the period of the oscillation. What is asked is the time for the AMPLITUDE to halve."
   },
+  "Esse é o peso do corpo. A força centrípeta não é o peso: é a resultante que aponta para o centro, e pode ser tensão, atrito, normal ou qualquer combinação delas.": {
+    "fr": "C’est le poids du corps. La force centripète n’est pas le poids : c’est la résultante dirigée vers le centre, et elle peut être une tension, un frottement, une normale ou n’importe quelle combinaison.",
+    "en": "That is the weight of the body. The centripetal force is not the weight: it is the resultant pointing to the centre, and it may be tension, friction, the normal force or any combination of them."
+  },
   "Esse é o pi maiúsculo, que MULTIPLICA. Somar é o sigma, ∑.": {
     "fr": "C’est le pi majuscule, qui MULTIPLIE. Additionner, c’est le sigma, ∑.",
     "en": "That is the capital pi, which MULTIPLIES. Adding is the sigma, ∑."
@@ -10486,6 +10550,10 @@
   "Esse é o índice antes da redução — a carga do metal, crua. Depois de dividir pelos fatores comuns, o índice é outro.": {
     "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
     "en": "That is the subscript before reducing — the metal’s raw charge. After dividing by the common factors, the subscript is different."
+  },
+  "Esse é o último TERMO, não a soma. A pergunta pede o acumulado de todos eles.": {
+    "fr": "C’est le dernier TERME, pas la somme. La question demande le cumul de tous.",
+    "en": "That is the last TERM, not the sum. The question asks for the total of all of them."
   },
   "Esse é o último termo SOMADO (o #º). A cota é o primeiro desprezado, o #º.": {
     "fr": "C’est le dernier terme ADDITIONNÉ (le #e). La borne est le premier terme négligé, le #e.",
@@ -10875,6 +10943,10 @@
     "fr": "Il manque la conversion de la charge : # μC = #⁻⁶ C.",
     "en": "Converting the charge is missing: # μC = #⁻⁶ C."
   },
+  "Faltou converter minutos em segundos. Rotações por minuto precisam ser divididas por # antes de virarem frequência em hertz.": {
+    "fr": "Il manque la conversion des minutes en secondes. Les tours par minute doivent être divisés par # avant de devenir une fréquence en hertz.",
+    "en": "Converting minutes to seconds is missing. Revolutions per minute must be divided by # before becoming a frequency in hertz."
+  },
   "Faltou derivar o termo #x³ duas vezes: dá #x, e o termo #x² dá #.": {
     "fr": "Il manque la double dérivation du terme #x³ : elle donne #x, et le terme #x² donne #.",
     "en": "Differentiating the term #x³ twice is missing: it gives #x, and the term #x² gives #."
@@ -11063,6 +11135,10 @@
     "fr": "Il manque la multiplication par la masse, qui vaut # kg.",
     "en": "Multiplying by the mass, which is # kg, is missing."
   },
+  "Faltou multiplicar pela massa: isso é a aceleração, em m/s².": {
+    "fr": "Il manque la multiplication par la masse : ceci est l’accélération, en m/s².",
+    "en": "Multiplying by the mass is missing: that is the acceleration, in m/s²."
+  },
   "Faltou multiplicar pela terceira escolha, os sapatos.": {
     "fr": "Il manque la multiplication par le troisième choix, les chaussures.",
     "en": "The multiplication by the third choice, the shoes, is missing."
@@ -11070,6 +11146,10 @@
   "Faltou multiplicar pelo número de espiras: cada uma soma a sua fem, N = #.": {
     "fr": "Il manque la multiplication par le nombre de spires : chacune ajoute sa f.é.m., N = #.",
     "en": "Multiplying by the number of turns is missing: each one adds its own emf, N = #."
+  },
+  "Faltou multiplicar pelo raio. Na forma com velocidade angular, a aceleração é omega ao quadrado VEZES o raio.": {
+    "fr": "Il manque la multiplication par le rayon. Dans la forme avec la vitesse angulaire, l’accélération vaut oméga au carré FOIS le rayon.",
+    "en": "Multiplying by the radius is missing. In the form with angular velocity, the acceleration is omega squared TIMES the radius."
   },
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
@@ -11162,6 +11242,10 @@
   "Faltou o fator # no denominador: ao substituir x = #, as duas raízes do conjugado ficam iguais e se somam.": {
     "fr": "Il manque le facteur # au dénominateur : en remplaçant x = #, les deux racines du conjugué deviennent égales et s’additionnent.",
     "en": "The factor # in the denominator is missing: substituting x = #, the two roots of the conjugate become equal and add up."
+  },
+  "Faltou o fator # pi: numa volta o ponto percorre a circunferência inteira, que vale # pi vezes o raio.": {
+    "fr": "Il manque le facteur # pi : en un tour le point parcourt toute la circonférence, qui vaut # pi fois le rayon.",
+    "en": "The factor # pi is missing: in one turn the point travels the whole circumference, which is # pi times the radius."
   },
   "Faltou o fator # pi: uma volta completa não é # radiano.": {
     "fr": "Il manque le facteur # pi : un tour complet ne fait pas # radian.",
@@ -12163,6 +12247,14 @@
     "fr": "Cela suppose un angle droit entre a et b. Calculez d’abord l’angle par la loi des cosinus.",
     "en": "That assumes a right angle between a and b. Work out the angle with the law of cosines first."
   },
+  "Isso tem unidade de momento linear, não de força. A força centrípeta é massa vezes ACELERAÇÃO centrípeta.": {
+    "fr": "Cela a l’unité d’une quantité de mouvement, pas d’une force. La force centripète vaut la masse fois l’ACCÉLÉRATION centripète.",
+    "en": "That has units of momentum, not of force. The centripetal force is mass times centripetal ACCELERATION."
+  },
+  "Isso trata a sequência como PA. Na PG a razão MULTIPLICA: divida os termos, não subtraia.": {
+    "fr": "Cela traite la suite comme arithmétique. Dans une suite géométrique la raison MULTIPLIE : divisez les termes, ne les soustrayez pas.",
+    "en": "That treats the sequence as arithmetic. In a geometric one the ratio MULTIPLIES: divide the terms, do not subtract them."
+  },
   "Isso usa a ÁREA da esfera. O teorema integra o divergente no VOLUME: (#/#)πR³.": {
     "fr": "Cela utilise l’AIRE de la sphère. Le théorème intègre la divergence dans le VOLUME : (#/#)πR³.",
     "en": "That uses the AREA of the sphere. The theorem integrates the divergence over the VOLUME: (#/#)πR³."
@@ -12195,6 +12287,14 @@
     "fr": "C’est la dérivée d’ordre n en zéro, et non le coefficient. Il manque la division par la factorielle de l’ordre, comme la formule l’exige.",
     "en": "That is the order-n derivative at zero, not the coefficient. Dividing by the factorial of the order, as the formula requires, is missing."
   },
+  "Isso é a frequência em hertz. Para chegar à velocidade angular, ainda falta multiplicar por # pi.": {
+    "fr": "C’est la fréquence en hertz. Pour obtenir la vitesse angulaire, il reste à multiplier par # pi.",
+    "en": "That is the frequency in hertz. To get the angular velocity, you still have to multiply by # pi."
+  },
+  "Isso é a frequência, em voltas por segundo. A velocidade angular mede radianos por segundo, e uma volta inteira vale # pi radianos.": {
+    "fr": "C’est la fréquence, en tours par seconde. La vitesse angulaire mesure des radians par seconde, et un tour complet vaut # pi radians.",
+    "en": "That is the frequency, in turns per second. Angular velocity measures radians per second, and one full turn is # pi radians."
+  },
   "Isso é a regra da potência, que serve para x elevado a uma constante. Aqui a constante é a base e o x é o expoente, e a regra é outra.": {
     "fr": "C’est la règle de la puissance, qui sert pour x élevé à une constante. Ici la constante est la base et le x est l’exposant, et la règle est autre.",
     "en": "That is the power rule, which is for x raised to a constant. Here the constant is the base and the x is the exponent, and the rule is a different one."
@@ -12210,6 +12310,10 @@
   "Isso é o momento linear. Para virar momento angular ainda falta a distância perpendicular ao ponto de referência.": {
     "fr": "C’est la quantité de mouvement. Pour devenir un moment cinétique, il manque encore la distance perpendiculaire au point de référence.",
     "en": "That is the linear momentum. To become angular momentum, the perpendicular distance to the reference point is still missing."
+  },
+  "Isso é o período, em segundos por volta, e não a velocidade angular.": {
+    "fr": "C’est la période, en secondes par tour, et non la vitesse angulaire.",
+    "en": "That is the period, in seconds per turn, and not the angular velocity."
   },
   "Isso é o quanto FALTA carregar. A carga é Q·(# − e^(−t/τ)).": {
     "fr": "C’est ce qu’il RESTE à charger. La charge vaut Q·(# − e^(−t/τ)).",
@@ -12926,6 +13030,10 @@
   "Multiplicar n por p não conta subconjuntos. A contagem passa por arranjos e depois descarta as ordens repetidas.": {
     "fr": "Multiplier n par p ne compte pas des sous-ensembles. Le dénombrement passe par les arrangements puis écarte les ordres répétés.",
     "en": "Multiplying n by p does not count subsets. The count goes through arrangements and then discards the repeated orders."
+  },
+  "Multiplicar o primeiro termo pela quantidade só valeria se todos os termos fossem iguais — ou seja, se a razão fosse # (ou #, na PG).": {
+    "fr": "Multiplier le premier terme par le nombre de termes ne vaudrait que si tous les termes étaient égaux — c’est-à-dire si la raison valait # (ou #, en géométrique).",
+    "en": "Multiplying the first term by the count would only work if all the terms were equal — that is, if the ratio were # (or #, in a geometric sequence)."
   },
   "Multiplicar parte por parte não funciona: a distributiva produz quatro termos, e eles se misturam entre real e imaginário.": {
     "fr": "Multiplier partie par partie ne marche pas : la distributivité produit quatre termes, et ils se mélangent entre réel et imaginaire.",
@@ -13975,6 +14083,10 @@
     "fr": "Dans une somme ou une soustraction, les incertitudes ABSOLUES se combinent.",
     "en": "In a sum or subtraction, ABSOLUTE uncertainties combine."
   },
+  "Numa volta o ponto percorre a circunferência, # pi vezes # m, em # s.": {
+    "fr": "En un tour le point parcourt la circonférence, # pi fois # m, en # s.",
+    "en": "In one turn the point travels the circumference, # pi times # m, in # s."
+  },
   "Numerador com numerador, denominador com denominador.": {
     "fr": "Numérateur avec numérateur, dénominateur avec dénominateur.",
     "en": "Numerator with numerator, denominator with denominator."
@@ -14791,6 +14903,10 @@
     "fr": "Le dénominateur est # moins l’exposant, et non l’inverse. Inverser l’ordre change le signe de toute la réponse.",
     "en": "The denominator is # minus the exponent, not the other way round. Swapping the order flips the sign of the whole answer."
   },
+  "O denominador é # − q, não # + q. Com q negativo é fácil trocar: preste atenção ao sinal antes de subtrair.": {
+    "fr": "Le dénominateur est # − q, pas # + q. Avec q négatif la confusion est facile : faites attention au signe avant de soustraire.",
+    "en": "The denominator is # − q, not # + q. With a negative q it is easy to mix up: mind the sign before subtracting."
+  },
   "O denominador é a distância ao QUADRADO. Sem o quadrado, o resultado nem tem unidade de aceleração.": {
     "fr": "Le dénominateur est la distance au CARRÉ. Sans le carré, le résultat n’a même pas une unité d’accélération.",
     "en": "The denominator is the distance SQUARED. Without the square, the result does not even have units of acceleration."
@@ -15094,6 +15210,14 @@
   "O expoente é #, não #: volume é uma grandeza de três dimensões.": {
     "fr": "L’exposant est #, et non # : le volume est une grandeur à trois dimensions.",
     "en": "The exponent is #, not #: volume is a three-dimensional quantity."
+  },
+  "O expoente é n − #, não n: o primeiro termo corresponde a q⁰. Você avançou um termo além do pedido.": {
+    "fr": "L’exposant est n − #, pas n : le premier terme correspond à q⁰. Vous avez avancé d’un terme de trop.",
+    "en": "The exponent is n − #, not n: the first term corresponds to q⁰. You went one term too far."
+  },
+  "O expoente é n − #, porque o primeiro termo já está contado.": {
+    "fr": "L’exposant est n − #, car le premier terme est déjà compté.",
+    "en": "The exponent is n − #, because the first term is already counted."
   },
   "O fator # multiplica apenas g, não a soma inteira. Confira onde ele está no integrando.": {
     "fr": "Le facteur # ne multiplie que g, et non toute la somme. Vérifiez où il se trouve dans l’intégrande.",
@@ -16070,6 +16194,10 @@
   "O raio esférico é a distância até a origem.": {
     "fr": "Le rayon sphérique est la distance à l’origine.",
     "en": "The spherical radius is the distance to the origin."
+  },
+  "O raio multiplica, não divide. Quanto mais longe do eixo, mais caminho o ponto percorre no mesmo tempo.": {
+    "fr": "Le rayon multiplie, il ne divise pas. Plus le point est loin de l’axe, plus il parcourt de chemin dans le même temps.",
+    "en": "The radius multiplies, it does not divide. The farther from the axis, the more path the point covers in the same time."
   },
   "O raio é a distância máxima ao centro.": {
     "fr": "Le rayon est la distance maximale au centre.",
@@ -19279,6 +19407,10 @@
     "fr": "En résolvant.",
     "en": "Solving."
   },
+  "Restam apenas o último termo da segunda e o primeiro da primeira.": {
+    "fr": "Il ne reste que le dernier terme de la seconde et le premier de la première.",
+    "en": "Only the last term of the second and the first of the first remain."
+  },
   "Resto zero: x + # é fator, e # é raiz.": {
     "fr": "Reste nul : x + # est un facteur, et # est une racine.",
     "en": "Zero remainder: x + # is a factor, and # is a root."
@@ -20531,6 +20663,10 @@
     "fr": "Ce sont n paires, et la somme doublée doit être divisée par deux.",
     "en": "There are n pairs, and the doubled sum must be divided by two."
   },
+  "São n − # saltos de razão, não n: do #º ao nº termo há um salto menos que o número de termos.": {
+    "fr": "Ce sont n − # sauts de raison, pas n : du #ᵉ au nᵉ terme il y a un saut de moins que le nombre de termes.",
+    "en": "There are n − # steps of the common difference, not n: from term # to term n there is one step fewer than the number of terms."
+  },
   "São n − # triângulos, não n. Os dois lados vizinhos ao vértice de onde saem as diagonais não geram triângulo novo.": {
     "fr": "Il y a n − # triangles, pas n. Les deux côtés voisins du sommet d’où partent les diagonales ne forment pas de nouveau triangle.",
     "en": "There are n − # triangles, not n. The two sides next to the vertex the diagonals start from do not form a new triangle."
@@ -21311,9 +21447,17 @@
     "fr": "Une surface coupée par un plan redonne une courbe à une seule variable.",
     "en": "A surface cut by a plane gives back a curve in a single variable."
   },
+  "Uma volta completa são # pi radianos, não pi. Meia volta é que vale pi.": {
+    "fr": "Un tour complet vaut # pi radians, pas pi. C’est le demi-tour qui vaut pi.",
+    "en": "A full turn is # pi radians, not pi. It is half a turn that is worth pi."
+  },
   "Uma volta completa. É daí que vem o #°, e é por isso que ele não depende do número de lados: qualquer polígono convexo dá uma volta e só uma.": {
     "fr": "Un tour complet. C’est de là que vient le #°, et c’est pourquoi il ne dépend pas du nombre de côtés : tout polygone convexe fait un tour, et un seul.",
     "en": "One full turn. That is where the #° comes from, and why it does not depend on the number of sides: any convex polygon makes one turn, and only one."
+  },
+  "Uma volta inteira são # pi radianos.": {
+    "fr": "Un tour complet vaut # pi radians.",
+    "en": "One full turn is # pi radians."
   },
   "Uma volta é #π, então t = #·#π/#. Substitua na equação de x: # vezes o cosseno de t.": {
     "fr": "Un tour complet vaut #π, donc t = #·#π/#. Remplacez dans l’équation de x : # fois le cosinus de t.",
@@ -21770,6 +21914,14 @@
   "Você tratou √(a² − x²) como (a − x). A raiz de uma diferença não é a diferença das raízes — é justamente por isso que a troca trigonométrica existe.": {
     "fr": "Vous avez traité √(a² − x²) comme (a − x). La racine d’une différence n’est pas la différence des racines — c’est précisément pour cela que le changement trigonométrique existe.",
     "en": "You treated √(a² − x²) as (a − x). The root of a difference is not the difference of the roots — that is precisely why the trigonometric substitution exists."
+  },
+  "Você usou a fórmula da soma da PA. Numa PG os termos não crescem de forma linear, então a média dos extremos não representa a soma.": {
+    "fr": "Vous avez utilisé la formule de la somme arithmétique. Dans une suite géométrique les termes ne croissent pas linéairement, la moyenne des extrêmes ne représente donc pas la somme.",
+    "en": "You used the arithmetic sum formula. In a geometric sequence the terms do not grow linearly, so the average of the extremes does not represent the sum."
+  },
+  "Você usou a fórmula da soma da PG numa PA. Aqui a razão soma, e a soma é a média dos extremos vezes a quantidade.": {
+    "fr": "Vous avez utilisé la formule de la somme géométrique sur une suite arithmétique. Ici la raison s’ajoute, et la somme est la moyenne des extrêmes fois le nombre de termes.",
+    "en": "You used the geometric sum formula on an arithmetic sequence. Here the common difference adds, and the sum is the average of the extremes times the count."
   },
   "Você usou a inclinação da reta dada: essa é a PARALELA por P. A perpendicular usa −#/m.": {
     "fr": "Vous avez utilisé la pente de la droite donnée : c’est la PARALLÈLE passant par P. La perpendiculaire utilise −#/m.",
@@ -23047,6 +23199,10 @@
     "fr": "C’est ce que dessine la carte topographique : chaque ligne est une altitude.",
     "en": "That is what a topographic map draws: each line is one altitude."
   },
+  "É o que resolve o paradoxo de Zenão: infinitos passos, distância finita.": {
+    "fr": "C’est ce qui résout le paradoxe de Zénon : une infinité de pas, une distance finie.",
+    "en": "That is what resolves Zeno’s paradox: infinitely many steps, a finite distance."
+  },
   "É o que se chama de multiplicar em cruz.": {
     "fr": "C’est ce qu’on appelle multiplier en croix.",
     "en": "That is what is called cross-multiplication."
@@ -23058,6 +23214,10 @@
   "É o tetraedro.": {
     "fr": "C’est le tetraedro.",
     "en": "It is the tetraedro."
+  },
+  "É o truque atribuído a Gauss: o primeiro com o último, o segundo com o penúltimo.": {
+    "fr": "C’est l’astuce attribuée à Gauss : le premier avec le dernier, le deuxième avec l’avant-dernier.",
+    "en": "It is the trick attributed to Gauss: the first with the last, the second with the second-to-last."
   },
   "É por isso que a velocidade final não depende da massa.": {
     "fr": "Voilà pourquoi la vitesse finale ne dépend pas de la masse.",
