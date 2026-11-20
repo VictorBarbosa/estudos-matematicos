@@ -2,8 +2,8 @@
 
 Medido em 19 de novembro de 2026. Última atualização: **frentes 2, 3 e 4
 fechadas** (o dicionário de resolução chegou ao fim da fila) e **frente 7 de
-3 071 para 1 823 entradas** — as 283 formas que mostravam a conta pela metade
-agora mostram a conta inteira.
+3 071 para 1 487 entradas** — as 283 formas que mostravam a conta pela metade
+agora mostram a conta inteira, e seis tópicos de química ganharam resolvedor.
 
 Cada número aqui saiu de um comando, não de estimativa. A coluna **como medir**
 é o comando que refaz a conta — use-a para conferir o progresso em vez de
@@ -19,9 +19,9 @@ confiar neste arquivo, que envelhece.
 | 4 | ~~Diagnósticos sem tradução~~ | **0** | ✅ |
 | 5 | Texto de exercício ainda em TypeScript | 19 arquivos, 3 832 linhas | **5** |
 | 6 | ~~Palavra em português injetada no molde~~ | **0** | ✅ |
-| 7 | Entrada do banco sem resolução própria | 1 823 entradas, 85 tópicos | **6** |
+| 7 | Entrada do banco sem resolução própria | 1 487 entradas, 80 tópicos | **5** |
 | 8 | ~~Legenda que explica o termo do enunciado~~ | **0** | ✅ |
-| | **Total** | | **11** |
+| | **Total** | | **10** |
 
 Uma «entrega» é uma rodada de trabalho que fecha um pedaço verificável e deixa
 a suíte verde. Pelo ritmo das últimas sessões, cada uma leva de uma a duas
@@ -127,30 +127,41 @@ valor lido de um campo de nome. Roda em `npm run verificar:geradores`.
 
 **Como medir:** `npm run verificar:geradores`.
 
-## 7 · Entrada do banco sem resolução própria — 1 823 entradas, 6 entregas
+## 7 · Entrada do banco sem resolução própria — 1 487 entradas, 5 entregas
 
-5 557 das 7 380 entradas prontas têm passos próprios (75,3 %). As outras caem
+5 893 das 7 380 entradas prontas têm passos próprios (79,9 %). As outras caem
 nas etapas genéricas: o aluno vê a resposta certa e não vê de onde ela sai —
 foi exatamente a queixa da fração geratriz.
 
-O que subiu de 4 273 para 5 557 nesta rodada não foi escrever regra nova: foi
-consertar a que já existia. A substituição escreve `#` no lugar de cada número,
-e quando a fórmula repete um valor que o texto traz uma vez só — a lei dos
-cossenos usa cada lado duas vezes — os marcadores acabavam antes da conta e a
-trilha inteira era recusada. Foram 283 formas, todas com o mesmo conserto:
-`#1`, `#2`… apontando o grupo.
+A rodada teve duas partes.
 
-Junto veio um defeito mais sério: `avaliarLatex`, que é quem confere se a conta
+**As 283 formas com marcador vazado.** A substituição escreve `#` no lugar de
+cada número, e quando a fórmula repete um valor que o texto traz uma vez só — a
+lei dos cossenos usa cada lado duas vezes — os marcadores acabavam antes da
+conta e a trilha inteira era recusada. Todas levaram o mesmo conserto: `#1`,
+`#2`… apontando o grupo. Cinco não cabiam em marcador nenhum (o numerador da
+fração geratriz, a carga do íon, os lados ordenados do triângulo) e passaram a
+calcular a própria linha.
+
+Junto veio um defeito mais sério: `avaliarLatex`, que confere se a conta
 mostrada fecha com a resposta, não sabia elevar um parêntese — e em JavaScript
 `^` é o OU-exclusivo, não a potência. A régua estava torta nos dois sentidos.
 Com ela reta, 60 regras mostravam conta errada na tela (o traço de
-[[1, 2], [3, 4]] aparecia como 1 + 2); hoje são 120 entradas, e nenhuma delas é
-índice trocado — é substituição que mostra uma comparação, um módulo ou um
-fator que só existe em símbolo.
+[[1, 2], [3, 4]] aparecia como 1 + 2); hoje são 120 entradas, nenhuma por
+índice trocado — é substituição que mostra comparação, módulo ou um fator que
+só existe em símbolo.
 
-O que falta agora é diferente: 85 tópicos **sem nenhuma regra**. Cada forma de
-pergunta ganha passos quando alguém escreve a fórmula dela, e uma rodada cobre
-um tópico inteiro quando as formas dele se parecem.
+**Seis tópicos de química, 336 entradas.** Mol e massa molar, gases ideais,
+soluções, átomos e íons, estrutura eletrônica e composição centesimal. Química
+não cabe nas regras declarativas, porque uma fórmula tem número dentro — o `3`
+do CaCO₃ seria lido como dado do exercício —, então esses tópicos têm
+resolvedores de texto em `resolvedores-quimica.ts`, que leem a fórmula com a
+mesma leitura do resto do site.
+
+Falta: 80 tópicos **sem nenhuma regra**, com destaque para os cinco de química
+que sobraram (estequiometria, limitante e rendimento, equações e
+balanceamento, fórmulas e nomenclatura, tabela e ligação), que pedem o motor de
+equação química, e as variantes de física e geometria com os dados só no texto.
 
 **Como medir:** subir `COBERTURA_MINIMA` em
 `src/app/core/enunciados/passos-do-banco.spec.ts` para 1.1 e rodar.
