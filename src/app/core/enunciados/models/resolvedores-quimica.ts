@@ -4,6 +4,7 @@ import {
   massaMolarDaFormula,
   partesDaFormula,
 } from '@core/math/quimica/formula/formula';
+import { elementoDe } from '@core/math/quimica/elementos/elementos';
 import {
   camadas,
   configuracaoParaTex,
@@ -1424,3 +1425,256 @@ function cargaEscrita(simbolo: string): number | null {
 
   return achado[2] === '⁺' ? quanto : -quanto;
 }
+
+/* ─────────────────── composição e fórmula ─────────────────── */
+
+/** O símbolo do elemento pelo nome que o enunciado usa. */
+const SIMBOLO_DO_NOME: Readonly<Record<string, string>> = {
+  hidrogênio: 'H',
+  carbono: 'C',
+  nitrogênio: 'N',
+  oxigênio: 'O',
+  sódio: 'Na',
+  magnésio: 'Mg',
+  alumínio: 'Al',
+  enxofre: 'S',
+  cloro: 'Cl',
+  potássio: 'K',
+  cálcio: 'Ca',
+  ferro: 'Fe',
+  cobre: 'Cu',
+  prata: 'Ag',
+  zinco: 'Zn',
+};
+
+/** A massa atômica do elemento pelo nome. */
+function massaDoElemento(nome: string): number | undefined {
+  const simbolo = SIMBOLO_DO_NOME[nome.trim().toLowerCase()];
+  return simbolo === undefined ? undefined : elementoDe(simbolo)?.massaAtomica;
+}
+
+/**
+ * A fórmula empírica a partir da composição centesimal.
+ *
+ * O caminho é o de sempre: cada porcentagem vira mols dividindo pela massa
+ * atômica, e os mols se dividem pelo menor deles. Quando a razão não dá
+ * inteira — 1,5 é o caso comum —, multiplicam-se todos por 2, 3 ou 4 até dar.
+ *
+ * Devolve `undefined` quando algum nome não é elemento conhecido.
+ */
+function formulaEmpirica(
+  composicao: readonly (readonly [string, number])[],
+): { readonly formula: string; readonly indices: readonly number[] } | undefined {
+  const mols: number[] = [];
+
+  for (const [nome, porcento] of composicao) {
+    const massa = massaDoElemento(nome);
+    if (massa === undefined) return undefined;
+    mols.push(porcento / massa);
+  }
+
+  const menor = Math.min(...mols);
+  const razoes = mols.map((valor) => valor / menor);
+
+  let fator = 1;
+  while (fator <= 6 && !razoes.every((r) => Math.abs(r * fator - Math.round(r * fator)) < 0.08)) {
+    fator += 1;
+  }
+
+  if (fator > 6) return undefined;
+
+  const indices = razoes.map((r) => Math.round(r * fator));
+  const formula = composicao
+    .map(([nome], i) => {
+      const simbolo = SIMBOLO_DO_NOME[nome.trim().toLowerCase()]!;
+      return indices[i] === 1 ? simbolo : `${simbolo}${indices[i]}`;
+    })
+    .join('');
+
+  return { formula, indices };
+}
+
+export const COMPOSICAO_E_FORMULA: readonly ((texto: string) => Resolucao | null)[] = [
+  // «Um composto de massa molar 44,01 g/mol contém 2 átomos de oxigênio por molécula.»
+  (texto) => {
+    const achado =
+      /massa molar (\d+(?:[.,]\d+)?) g\/mol contém (\d+) átomos de (\S+) por molécula/i.exec(texto);
+    if (achado === null) return null;
+
+    const massa = massaDoElemento(achado[3]!);
+    if (massa === undefined) return null;
+
+    const quantos = Number(achado[2]);
+    const total = quantos * massa;
+
+    return {
+      valor: total.toFixed(2),
+      passos: [
+        {
+          descricao: 'Cada átomo entra com a sua massa atômica.',
+          tex: `m = n \\cdot A`,
+        },
+        {
+          descricao: 'Multiplicando pela quantidade de átomos na molécula.',
+          tex: `m = ${quantos} \\cdot ${tex(massa)} = ${tex(total)}\\ \\text{g}`,
+        },
+      ],
+    };
+  },
+
+  // «Um composto tem fórmula mínima CH2 e massa molar 42,08 g/mol.»
+  (texto) => {
+    const achado =
+      /fórmula mínima ([A-Za-z0-9₀-₉]+) e massa molar (\d+(?:[.,]\d+)?) g\/mol/i.exec(texto);
+    if (achado === null) return null;
+
+    const minima = massaMolarDaFormula(achado[1]!);
+    if (minima === undefined || minima === 0) return null;
+
+    const molar = num(achado[2]!);
+    const unidades = Math.round(molar / minima);
+
+    return {
+      valor: inteiro(unidades),
+      passos: [
+        {
+          descricao: 'A fórmula mínima tem a sua própria massa.',
+          tex: `M(${achado[1]}) = ${tex(minima)}\\ \\text{g/mol}`,
+        },
+        {
+          descricao: 'A fórmula molecular é um múltiplo inteiro da mínima.',
+          tex: `n = \\frac{${molar}}{${tex(minima)}} = ${unidades}`,
+        },
+      ],
+    };
+  },
+
+  // «Um composto tem 72,71% em massa de oxigênio. Em 44 g, quantos gramas?»
+  (texto) => {
+    const achado =
+      /(\d+(?:[.,]\d+)?)% em massa de \S+\.\s*Em (\d+(?:[.,]\d+)?) g do composto/i.exec(texto);
+    if (achado === null) return null;
+
+    const [porcento, massa] = [num(achado[1]!), num(achado[2]!)];
+    const total = (porcento / 100) * massa;
+
+    return {
+      valor: total.toFixed(2),
+      passos: [
+        {
+          descricao: 'A porcentagem em massa é a fração do composto que é daquele elemento.',
+          tex: `m = \\frac{${porcento}}{100} \\cdot ${massa}`,
+        },
+        {
+          descricao: 'Efetuando a conta.',
+          tex: `m = ${tex(total)}\\ \\text{g}`,
+        },
+      ],
+    };
+  },
+
+  // «A análise deu 40% de cálcio e o resto de oxigênio, com massa molar 100,09 g/mol.»
+  (texto) => {
+    const achado =
+      /análise de um composto deu (\d+(?:[.,]\d+)?)% de \S+ e o resto de \S+, com massa molar (\d+(?:[.,]\d+)?) g\/mol/i.exec(
+        texto,
+      );
+    if (achado === null) return null;
+
+    const [porcento, molar] = [num(achado[1]!), num(achado[2]!)];
+    const total = (porcento / 100) * molar;
+
+    return {
+      valor: total.toFixed(2),
+      passos: [
+        {
+          descricao: 'Um mol do composto pesa a massa molar inteira.',
+          tex: `m_{mol} = ${molar}\\ \\text{g}`,
+        },
+        {
+          descricao: 'A porcentagem em massa é a fração do composto que é daquele elemento.',
+          tex: `m = \\frac{${porcento}}{100} \\cdot ${molar} = ${tex(total)}\\ \\text{g}`,
+        },
+      ],
+    };
+  },
+
+  // «… com 27,29% de carbono e 72,71% de oxigênio em massa. Qual é a fórmula empírica?»
+  // «Um mineral tem 40% de cálcio, 12% de carbono e 48% de oxigênio.»
+  (texto) => {
+    if (!/fórmula empírica/i.test(texto)) return null;
+
+    const partes = [...texto.matchAll(/(\d+(?:[.,]\d+)?)% de (\S+?)(?:[,.]| e | em)/gi)].map(
+      (achado) => [achado[2]!, num(achado[1]!)] as const,
+    );
+
+    if (partes.length < 2) return null;
+
+    const empirica = formulaEmpirica(partes);
+    if (empirica === undefined) return null;
+
+    return {
+      valor: empirica.formula,
+      passos: [
+        {
+          descricao: 'Cada porcentagem vira mols, dividindo pela massa atômica do elemento.',
+          tex: partes
+            .map(([nome, porcento]) => `\\frac{${porcento}}{${tex(massaDoElemento(nome)!)}}`)
+            .join(' : '),
+        },
+        {
+          descricao: 'Dividindo todos pelo menor, sai a proporção de átomos — a fórmula empírica.',
+          tex: `${empirica.indices.join(' : ')} \\Rightarrow ${empirica.formula}`,
+        },
+      ],
+    };
+  },
+
+  // «A composição centesimal é: 39,34% de sódio, 60,66% de cloro. Qual é a massa molar mínima?»
+  (texto) => {
+    if (!/massa molar mínima/i.test(texto)) return null;
+
+    const partes = [...texto.matchAll(/(\d+(?:[.,]\d+)?)% de (\S+?)(?:[,.]| e )/gi)].map(
+      (achado) => [achado[2]!, num(achado[1]!)] as const,
+    );
+
+    if (partes.length < 2) return null;
+
+    /*
+     * As porcentagens precisam fechar 100.
+     *
+     * Há entrada no banco em que elas somam 98 — o hidrogênio do composto ficou
+     * de fora do enunciado, e a resposta do arquivo o inclui. Com a composição
+     * incompleta, a fórmula empírica que sai daqui seria outra substância;
+     * melhor recusar a trilha e deixar a entrada nas etapas genéricas.
+     */
+    const soma = partes.reduce((total, [, porcento]) => total + porcento, 0);
+    if (Math.abs(soma - 100) > 0.5) return null;
+
+    const empirica = formulaEmpirica(partes);
+    if (empirica === undefined) return null;
+
+    const molar = massaMolarDaFormula(empirica.formula);
+    if (molar === undefined) return null;
+
+    return {
+      valor: molar.toFixed(2),
+      passos: [
+        {
+          descricao: 'Cada porcentagem vira mols, dividindo pela massa atômica do elemento.',
+          tex: partes
+            .map(([nome, porcento]) => `\\frac{${porcento}}{${tex(massaDoElemento(nome)!)}}`)
+            .join(' : '),
+        },
+        {
+          descricao: 'Dividindo todos pelo menor, sai a proporção de átomos — a fórmula empírica.',
+          tex: `${empirica.indices.join(' : ')} \\Rightarrow ${empirica.formula}`,
+        },
+        {
+          descricao: 'A massa molar mínima é a da fórmula empírica.',
+          tex: `M(${empirica.formula}) = ${tex(molar)}\\ \\text{g/mol}`,
+        },
+      ],
+    };
+  },
+];

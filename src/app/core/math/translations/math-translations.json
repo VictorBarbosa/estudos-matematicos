@@ -1795,6 +1795,14 @@
     "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale. Remplacez x par # et traitez la puissance d’abord.",
     "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed. Replace x with # and deal with the power first."
   },
+  "A fórmula molecular é um múltiplo inteiro da mínima.": {
+    "fr": "La formule moléculaire est un multiple entier de la formule empirique.",
+    "en": "The molecular formula is a whole multiple of the empirical one."
+  },
+  "A fórmula mínima tem a sua própria massa.": {
+    "fr": "La formule empirique a sa propre masse.",
+    "en": "The empirical formula has its own mass."
+  },
   "A fórmula pede a reta na forma ax + by + c = #. Multiplicamos y = mx + q por # e passamos tudo para um lado.": {
     "fr": "La formule demande la droite sous la forme ax + by + c = #. Nous multiplions y = mx + q par # et passons tout d’un côté.",
     "en": "The formula needs the line as ax + by + c = #. We multiply y = mx + q by # and move everything to one side."
@@ -2186,6 +2194,10 @@
   "A massa molar diz quanto pesa um mol de óxido de ferro(III).": {
     "fr": "La masse molaire dit combien pèse une mole de oxyde de fer(III).",
     "en": "The molar mass says how much one mole of iron(III) oxide weighs."
+  },
+  "A massa molar mínima é a da fórmula empírica.": {
+    "fr": "La masse molaire minimale est celle de la formule empirique.",
+    "en": "The minimum molar mass is that of the empirical formula."
   },
   "A massa molar sai da fórmula: é a soma das massas atômicas.": {
     "fr": "La masse molaire vient de la formule : c’est la somme des masses atomiques.",
@@ -2598,6 +2610,10 @@
   "A ponderação usou só as massas. O peso correto é a capacidade térmica, que é massa VEZES calor específico.": {
     "fr": "La pondération n’a utilisé que les masses. Le bon poids est la capacité thermique, qui vaut masse FOIS chaleur massique.",
     "en": "The weighting used only the masses. The right weight is the heat capacity, which is mass TIMES specific heat."
+  },
+  "A porcentagem em massa é a fração do composto que é daquele elemento.": {
+    "fr": "Le pourcentage massique est la fraction du composé qui appartient à cet élément.",
+    "en": "The mass percentage is the fraction of the compound belonging to that element."
   },
   "A porcentagem em massa é a razão entre as duas, vezes cem.": {
     "fr": "Le pourcentage massique est le rapport des deux, multiplié par cent.",
@@ -5183,6 +5199,10 @@
     "fr": "Chaque point du plan produit une hauteur, et leur ensemble forme la surface.",
     "en": "Each point of the plane produces a height, and the set of them is the surface."
   },
+  "Cada porcentagem vira mols, dividindo pela massa atômica do elemento.": {
+    "fr": "Chaque pourcentage devient des moles, en divisant par la masse atomique de l’élément.",
+    "en": "Each percentage becomes moles, by dividing by the element’s atomic mass."
+  },
   "Cada potência é a base repetida; juntando os dois grupos, continuamos multiplicando a mesma base.": {
     "fr": "Chaque puissance est la base répétée ; en joignant les deux groupes, nous continuons à multiplier la même base.",
     "en": "Each power is the base repeated; combining the two groups, we continue multiplying the same base."
@@ -5274,6 +5294,10 @@
   "Cada volta vale # pi radianos.": {
     "fr": "Chaque tour vaut # pi radians.",
     "en": "Each turn is # pi radians."
+  },
+  "Cada átomo entra com a sua massa atômica.": {
+    "fr": "Chaque atome entre avec sa masse atomique.",
+    "en": "Each atom enters with its own atomic mass."
   },
   "Cada índice multiplica o nox do seu elemento, porque são tantos átomos.": {
     "fr": "Chaque indice multiplie le n.o. de son élément, parce qu’il y a autant d’atomes.",
@@ -7658,6 +7682,10 @@
   "Dividindo todos pelo MENOR, os mols viram proporção.": {
     "fr": "En divisant tous par le PLUS PETIT, les moles deviennent une proportion.",
     "en": "Dividing them all by the SMALLEST, the moles become a proportion."
+  },
+  "Dividindo todos pelo menor, sai a proporção de átomos — a fórmula empírica.": {
+    "fr": "En divisant tous par le plus petit, on obtient la proportion d’atomes — la formule empirique.",
+    "en": "Dividing them all by the smallest gives the ratio of atoms — the empirical formula."
   },
   "Dividindo tudo pela maior potência, os termos constantes somem.": {
     "fr": "En divisant tout par la plus grande puissance, les termes constants disparaissent.",
@@ -13802,6 +13830,10 @@
   "Multiplicando pela quantidade de mols da amostra.": {
     "fr": "En multipliant par la quantité de moles de l’échantillon.",
     "en": "Multiplying by the amount of moles in the sample."
+  },
+  "Multiplicando pela quantidade de átomos na molécula.": {
+    "fr": "En multipliant par le nombre d’atomes dans la molécule.",
+    "en": "Multiplying by the number of atoms in the molecule."
   },
   "Multiplicando pelas máquinas e horas novas.": {
     "fr": "En multipliant par les nouvelles machines et heures.",
@@ -22606,6 +22638,10 @@
   "Um mol de óxido de ferro(III) pesa a massa molar.": {
     "fr": "Une mole de oxyde de fer(III) pèse la masse molaire.",
     "en": "One mole of iron(III) oxide weighs the molar mass."
+  },
+  "Um mol do composto pesa a massa molar inteira.": {
+    "fr": "Une mole du composé pèse toute la masse molaire.",
+    "en": "One mole of the compound weighs the whole molar mass."
   },
   "Um mol tem # × #²³ partículas. Multiplique esse # por # e a potência fica.": {
     "fr": "Une mole contient # × #²³ particules. Multipliez ce # par # et la puissance reste.",

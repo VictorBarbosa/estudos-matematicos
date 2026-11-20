@@ -3,6 +3,7 @@ import { resolverPorRegras } from '@core/enunciados/models/regras-de-passos';
 import { REGRAS_POR_TOPICO } from '@core/enunciados/models/regras.catalogo';
 import {
   ATOMOS_E_IONS,
+  COMPOSICAO_E_FORMULA,
   ESTRUTURA_ELETRONICA,
   GASES_IDEAIS,
   MOL_E_MASSA_MOLAR,
@@ -1047,6 +1048,9 @@ const POR_TOPICO: Readonly<Record<string, readonly Resolvedor[]>> = {
     (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
   ),
   'estrutura-eletronica': ESTRUTURA_ELETRONICA.map(
+    (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
+  ),
+  'composicao-e-formula': COMPOSICAO_E_FORMULA.map(
     (resolvedor) => (_dados: DadosDoBanco, texto: string) => resolvedor(texto),
   ),
 };
