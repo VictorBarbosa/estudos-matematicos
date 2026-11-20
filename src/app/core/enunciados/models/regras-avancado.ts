@@ -32,31 +32,31 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para P(x) = #x² − #x + #, qual é o valor de P(#)?',
       'P(x) = ax^2 - bx + c',
-      'P(#) = # \\cdot #^2 - # \\cdot # + #',
+      'P(#4) = #1 \\cdot #4^2 - #2 \\cdot #4 + #3',
       (v) => v[0]! * v[3]! ** 2 - v[1]! * v[3]! + v[2]!,
     ],
     [
       'Para P(x) = #x² + #x + #, qual é o valor de P(#)?',
       'P(x) = ax^2 + bx + c',
-      'P(#) = # \\cdot #^2 + # \\cdot # + #',
+      'P(#4) = #1 \\cdot #4^2 + #2 \\cdot #4 + #3',
       (v) => v[0]! * v[3]! ** 2 + v[1]! * v[3]! + v[2]!,
     ],
     [
       'Qual é o resto da divisão de x³ − #x + # por (x − #)?',
       'P(a) = r',
-      'P(#) = #^3 - # \\cdot # + #',
+      'P(#3) = #3^3 - #1 \\cdot #3 + #2',
       (v) => v[2]! ** 3 - v[0]! * v[2]! + v[1]!,
     ],
     [
       'Qual é o resto da divisão de x⁴ − # por (x + #)?',
       'P(-a) = r',
-      'P(-#) = (-#)^4 - #',
+      'P(-#2) = (-#2)^4 - #1',
       (v) => (-v[1]!) ** 4 - v[0]!,
     ],
     [
       'Qual é o resto da divisão de #x³ + x² − # por (x − #)?',
       'P(a) = r',
-      'P(#) = # \\cdot #^3 + #^2 - #',
+      'P(#3) = #1 \\cdot #3^3 + #3^2 - #2',
       (v) => v[0]! * v[2]! ** 3 + v[2]! ** 2 - v[1]!,
     ],
     [
@@ -68,7 +68,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'O polinômio P(x) = x³ + ax + # tem # como raiz. Qual é o valor de a?',
       'a = -\\frac{r^3 + c}{r}',
-      'a = -\\frac{#^3 + #}{#}',
+      'a = -\\frac{#2^3 + #1}{#2}',
       (v) => -(v[1]! ** 3 + v[0]!) / v[1]!,
     ],
     [
@@ -321,14 +321,14 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o trabalho do campo F = (y, x) ao longo do segmento de (#, #) a (#, #)? (duas casas decimais)',
       'W = \\int y\,dx + x\,dy = x_2y_2 - x_1y_1',
-      'W = # \\cdot # \\cdot (# - #) + # \\cdot # \\cdot (# - #)',
+      'W = #4 \\cdot #3 + #3 \\cdot #4',
       (v) => v[3]! * v[2]! + v[2]! * v[3]!,
       2,
     ],
     [
       'Qual é o trabalho do campo F = (#y, #x) ao longo do segmento de (#, #) a (#, #)? (duas casas decimais)',
       'W = k(x_2y_2 - x_1y_1)',
-      'W = # \\cdot # \\cdot (# - #) + # \\cdot # \\cdot (# - #)',
+      'W = #1 \\cdot #6 \\cdot (#5 - #3) + #2 \\cdot #5 \\cdot (#6 - #4)',
       (v) => v[0]! * v[5]! * (v[4]! - v[2]!) + v[1]! * v[4]! * (v[5]! - v[3]!),
       2,
     ],
@@ -562,7 +562,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Use o polinômio de Maclaurin de grau # para aproximar e^(#). (duas casas decimais)',
       'P_n(x) = \\sum_{k=0}^{n}\\frac{x^k}{k!}',
-      'P_{#}(#) = \\sum \\frac{#^k}{k!}',
+      'P_{#1}(#2) = \\sum \\frac{#2^k}{k!}',
       (v) => {
         const [grau, x] = [v[0]!, v[1]!];
         let soma = 0;
@@ -578,7 +578,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Aproximando e^(#) pelo polinômio de Maclaurin de grau #, de quanto é o erro cometido? (duas casas decimais)',
       'E = e^x - P_n(x)',
-      'E = e^{#} - P_{#}(#)',
+      'E = e^{#1} - P_{#2}(#1)',
       (v) => {
         const [x, grau] = [v[0]!, v[1]!];
         let soma = 0;
@@ -737,7 +737,7 @@ export const REGRAS_AVANCADO: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um corpo a # °C é deixado num ambiente a # °C, com constante # por minuto. Qual é a temperatura em t = # minutos? (duas casas decimais)',
       'T = T_a + (T_0 - T_a)e^{-kt}',
-      'T = # + (# - #)e^{-# \\cdot #}',
+      'T = #2 + (#1 - #2)e^{-#3 \\cdot #4}',
       (v) => v[1]! + (v[0]! - v[1]!) * Math.exp(-v[2]! * v[3]!),
       2,
     ],

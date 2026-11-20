@@ -163,7 +163,7 @@ export const REGRAS_AVANCADO_3: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Num triângulo, os ângulos internos são proporcionais a #, # e #. Quantos graus mede o MAIOR deles?',
       '\\hat{A}_{max} = 180\\frac{M}{a+b+c}',
-      '180 \\cdot \\frac{#}{# + # + #}',
+      '180 \\cdot \\frac{\\max(#1, #2, #3)}{#1 + #2 + #3}',
       (v) => (180 * Math.max(v[0]!, v[1]!, v[2]!)) / (v[0]! + v[1]! + v[2]!),
     ],
     [
@@ -284,7 +284,7 @@ export const REGRAS_AVANCADO_3: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um poliedro convexo tem # faces quadradas e # faces hexagonais, e nenhuma outra. Quantos vértices ele tem?',
       'A = \\frac{4F_4 + 6F_6}{2},\\ V = A - F + 2',
-      'V = \\frac{4 \\cdot # + 6 \\cdot #}{2} - (# + #) + 2',
+      'V = \\frac{4 \\cdot #1 + 6 \\cdot #2}{2} - (#1 + #2) + 2',
       (v) => (4 * v[0]! + 6 * v[1]!) / 2 - (v[0]! + v[1]!) + 2,
     ],
     [
@@ -323,7 +323,7 @@ export const REGRAS_AVANCADO_3: Readonly<Record<string, readonly Regra[]>> = {
     [
       'O perímetro de um terreno retangular é de # m e um dos lados mede # m. Qual é a área do terreno, em metros quadrados?',
       'A = a\\left(\\frac{P}{2} - a\\right)',
-      'A = # \\cdot \\left(\\frac{#}{2} - #\\right)',
+      'A = #2 \\cdot \\left(\\frac{#1}{2} - #2\\right)',
       (v) => v[1]! * (v[0]! / 2 - v[1]!),
     ],
     [
@@ -335,7 +335,7 @@ export const REGRAS_AVANCADO_3: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A fachada de uma casa é um retângulo de # m por # m com um triângulo de mesma base e altura # m em cima. Qual é a área total, em metros quadrados?',
       'A = bh + \\frac{b h_t}{2}',
-      'A = # \\cdot # + \\frac{# \\cdot #}{2}',
+      'A = #1 \\cdot #2 + \\frac{#1 \\cdot #3}{2}',
       (v) => v[0]! * v[1]! + (v[0]! * v[2]!) / 2,
     ],
     [

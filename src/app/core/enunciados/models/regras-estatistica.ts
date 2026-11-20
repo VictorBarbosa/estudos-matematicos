@@ -135,7 +135,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Numa normal de média # e desvio #, que proporção fica entre # e #? (duas casas decimais)',
       'P(a < X < b) = \\Phi\\left(\\frac{b-\\mu}{\\sigma}\\right) - \\Phi\\left(\\frac{a-\\mu}{\\sigma}\\right)',
-      'P = \\Phi\\left(\\frac{# - #}{#}\\right) - \\Phi\\left(\\frac{# - #}{#}\\right)',
+      'P = \\Phi\\left(\\frac{#4 - #1}{#2}\\right) - \\Phi\\left(\\frac{#3 - #1}{#2}\\right)',
       (v) => normalAcumulada((v[3]! - v[0]!) / v[1]!) - normalAcumulada((v[2]! - v[0]!) / v[1]!),
       2,
     ],
@@ -186,13 +186,13 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para as medidas #, # e #, qual é a AMPLITUDE (maior menos menor)?',
       'A = x_{max} - x_{min}',
-      'A = \\max(#, #, #) - \\min(#, #, #)',
+      'A = \\max(#1, #2, #3) - \\min(#1, #2, #3)',
       (v) => Math.max(v[0]!, v[1]!, v[2]!) - Math.min(v[0]!, v[1]!, v[2]!),
     ],
     [
       'Para as medidas #, #, # e #, qual é a amplitude, ou seja, a diferença entre a maior e a menor? (duas casas decimais)',
       'A = x_{max} - x_{min}',
-      'A = \\max(#, #, #, #) - \\min(#, #, #, #)',
+      'A = \\max(#1, #2, #3, #4) - \\min(#1, #2, #3, #4)',
       (v) => Math.max(v[0]!, v[1]!, v[2]!, v[3]!) - Math.min(v[0]!, v[1]!, v[2]!, v[3]!),
       2,
     ],
@@ -411,7 +411,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o determinante da matriz [[#, #, #], [#, #, #], [#, #, #]]?',
       '\\det = a(ei-fh) - b(di-fg) + c(dh-eg)',
-      '\\det = #(# \\cdot # - # \\cdot #) - #(# \\cdot # - # \\cdot #) + #(# \\cdot # - # \\cdot #)',
+      '\\det = #1(#5 \\cdot #9 - #6 \\cdot #8) - #2(#4 \\cdot #9 - #6 \\cdot #7) + #3(#4 \\cdot #8 - #5 \\cdot #7)',
       (v) =>
         v[0]! * (v[4]! * v[8]! - v[5]! * v[7]!) -
         v[1]! * (v[3]! * v[8]! - v[5]! * v[6]!) +
@@ -496,7 +496,7 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o maior autovalor da matriz [[#, #], [#, #]]? (duas casas decimais)',
       '\\lambda_{max} = \\frac{(a+d) + \\sqrt{(a-d)^2 + 4b^2}}{2}',
-      '\\lambda_{max} = \\frac{(# + #) + \\sqrt{(# - #)^2 + 4 \\cdot #^2}}{2}',
+      '\\lambda_{max} = \\frac{(#1 + #4) + \\sqrt{(#1 - #4)^2 + 4 \\cdot #2 \\cdot #3}}{2}',
       (v) => {
         const traco = v[0]! + v[3]!;
         const discriminante = (v[0]! - v[3]!) ** 2 + 4 * v[1]! * v[2]!;
@@ -573,19 +573,19 @@ export const REGRAS_ESTATISTICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quanto vale C(#, #), o número na linha #, posição # do triângulo de Pascal (contando do #)?',
       'C(n, k) = \\frac{n!}{k!(n-k)!}',
-      'C(#, #) = \\frac{#!}{#!(# - #)!}',
+      'C(#1, #2) = \\frac{#1!}{#2!(#1 - #2)!}',
       (v) => combinacao(v[0]!, v[1]!),
     ],
     [
       'Qual é o coeficiente de x^# no desenvolvimento de (x + #)^#?',
       'C(n, k)a^{n-k}',
-      'C(#, #) \\cdot #^{# - #}',
+      'C(#3, #1) \\cdot #2^{#3 - #1}',
       (v) => combinacao(v[2]!, v[0]!) * v[1]! ** (v[2]! - v[0]!),
     ],
     [
       'Qual é o coeficiente de x^# no desenvolvimento de (#x + #)^#?',
       'C(n, k)a^k b^{n-k}',
-      'C(#, #) \\cdot #^{#} \\cdot #^{# - #}',
+      'C(#4, #1) \\cdot #2^{#1} \\cdot #3^{#4 - #1}',
       (v) => combinacao(v[3]!, v[0]!) * v[1]! ** v[0]! * v[2]! ** (v[3]! - v[0]!),
     ],
     [

@@ -157,31 +157,31 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A temperatura de uma chapa é # vezes x mais # vezes y. Quanto ela vale no ponto (#, #)?',
       'f(x, y) = ax + by',
-      'f(#, #) = # \\cdot # + # \\cdot #',
+      'f(#3, #4) = #1 \\cdot #3 + #2 \\cdot #4',
       (v) => v[0]! * v[2]! + v[1]! * v[3]!,
     ],
     [
       'Uma superfície vale o quadrado de x mais o quadrado de y. Quanto ela vale no ponto (#, #)?',
       'f(x, y) = x^2 + y^2',
-      'f(#, #) = #^2 + #^2',
+      'f(#1, #2) = #1^2 + #2^2',
       (v) => v[0]! ** 2 + v[1]! ** 2,
     ],
     [
       'Quanto vale f(x, y) = x² + y² no ponto (#, #)?',
       'f(x, y) = x^2 + y^2',
-      'f(#, #) = #^2 + #^2',
+      'f(#1, #2) = #1^2 + #2^2',
       (v) => v[0]! ** 2 + v[1]! ** 2,
     ],
     [
       'Quanto vale f(x, y) = x·y no ponto (#, #)?',
       'f(x, y) = xy',
-      'f(#, #) = # \\cdot #',
+      'f(#1, #2) = #1 \\cdot #2',
       (v) => v[0]! * v[1]!,
     ],
     [
       'Quanto vale f(x, y) = #x² + #y no ponto (#, #)?',
       'f(x, y) = ax^2 + by',
-      'f(#, #) = # \\cdot #^2 + # \\cdot #',
+      'f(#3, #4) = #1 \\cdot #3^2 + #2 \\cdot #4',
       (v) => v[0]! * v[2]! ** 2 + v[1]! * v[3]!,
     ],
     [
@@ -328,7 +328,7 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Um número tem parte inteira zero, o algarismo # logo depois da vírgula e, em seguida, o algarismo # repetindo-se para sempre. Escreva a fração irredutível.',
       '0{,}a\\overline{d} = \\frac{10a + d - a}{90}',
-      '\\frac{# \\cdot 10 + # - #}{90}',
+      '\\frac{#1 \\cdot 10 + #2 - #1}{90}',
       (v) => fracao(v[0]! * 10 + v[1]! - v[0]!, 90),
     ],
     [

@@ -19,13 +19,13 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para f(x) = #x + #, qual é o valor de f(#)?',
       'f(x) = ax + b',
-      'f(#) = # \\cdot # + #',
+      'f(#3) = #1 \\cdot #3 + #2',
       (v) => v[0]! * v[2]! + v[1]!,
     ],
     [
       'Qual é o coeficiente linear (o valor de b) da função f(x) = #x + #?',
       'f(x) = ax + b \\Rightarrow b',
-      'f(x) = #x + # \\Rightarrow b = #',
+      'f(x) = #1x + #2 \\Rightarrow b = #2',
       (v) => v[1]!,
     ],
     [
@@ -61,13 +61,13 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'A função afim tem taxa de variação # e f(#) = #. Qual é o valor de f(#)?',
       'f(x_2) = f(x_1) + t(x_2 - x_1)',
-      'f(#) = # + # \\cdot (# - #)',
+      'f(#4) = #3 + #1 \\cdot (#4 - #2)',
       (v) => v[2]! + v[0]! * (v[3]! - v[1]!),
     ],
     [
       'Uma função afim vale # em x = # e vale # em x = #. Quanto ela vale em x = #?',
       'y = y_1 + \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1)',
-      'y = # + \\frac{# - #}{# - #} \\cdot (# - #)',
+      'y = #1 + \\frac{#3 - #1}{#4 - #2} \\cdot (#5 - #2)',
       (v) => v[0]! + ((v[2]! - v[0]!) / (v[3]! - v[1]!)) * (v[4]! - v[1]!),
     ],
     [
@@ -100,7 +100,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para f(x) = x² + #x + #, qual é o valor de f(#)?',
       'f(x) = x^2 + ax + b',
-      'f(#) = #^2 + # \\cdot # + #',
+      'f(#3) = #3^2 + #1 \\cdot #3 + #2',
       (v) => v[2]! ** 2 + v[0]! * v[2]! + v[1]!,
     ],
     [
@@ -133,7 +133,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quais são as raízes de x² − #x + # = #? Informe a MAIOR delas.',
       'x = \\frac{a + \\sqrt{a^2 - 4(b - c)}}{2}',
-      'x = \\frac{# + \\sqrt{#^2 - 4(# - #)}}{2}',
+      'x = \\frac{#1 + \\sqrt{#1^2 - 4(#2 - #3)}}{2}',
       (v) => raizes(1, -v[0]!, v[1]! - v[2]!)[0]!,
     ],
     [
@@ -174,7 +174,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma população cresce como P(t) = #·#^t, com t em horas. Qual é a população em t = #?',
       'P(t) = a b^t',
-      'P(#) = # \\cdot #^{#}',
+      'P(#3) = #1 \\cdot #2^{#3}',
       (v) => v[0]! * v[1]! ** v[2]!,
     ],
     [
@@ -218,7 +218,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Qual é o valor da função f(x) = #·#^x em x = #?',
       'f(x) = a b^x',
-      'f(#) = # \\cdot #^{#}',
+      'f(#3) = #1 \\cdot #2^{#3}',
       (v) => v[0]! * v[1]! ** v[2]!,
     ],
     [
@@ -253,7 +253,7 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Calcule o logaritmo: log_#(#).',
       '\\log_a b = \\frac{\\ln b}{\\ln a}',
-      '\\log_{#} # = \\frac{\\ln #}{\\ln #}',
+      '\\log_{#1} #2 = \\frac{\\ln #2}{\\ln #1}',
       (v) => Math.log(v[1]!) / Math.log(v[0]!),
     ],
     [
@@ -323,13 +323,13 @@ export const REGRAS_FUNCOES: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Para f(x) = |x − #|, qual é o valor de f(#)?',
       'f(x) = |x - a|',
-      'f(#) = |# - #|',
+      'f(#2) = |#2 - #1|',
       (v) => Math.abs(v[1]! - v[0]!),
     ],
     [
       'Para f(x) = |x| + #, qual é o valor de f(#)?',
       'f(x) = |x| + b',
-      'f(#) = |#| + #',
+      'f(#2) = |#2| + #1',
       (v) => Math.abs(v[1]!) + v[0]!,
     ],
     [

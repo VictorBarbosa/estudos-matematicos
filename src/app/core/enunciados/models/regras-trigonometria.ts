@@ -109,14 +109,14 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'Calcule o valor de sen #°. (duas casas decimais)',
       '\\sin\\theta',
-      '\\sin #^\\circ = \\sin\\left(#\\frac{\\pi}{180}\\right)',
+      '\\sin #1^\\circ = \\sin\\left(#1\\frac{\\pi}{180}\\right)',
       (v) => Math.sin(rad(v[0]!)),
       2,
     ],
     [
       'Calcule o valor de cos #°. (duas casas decimais)',
       '\\cos\\theta',
-      '\\cos #^\\circ = \\cos\\left(#\\frac{\\pi}{180}\\right)',
+      '\\cos #1^\\circ = \\cos\\left(#1\\frac{\\pi}{180}\\right)',
       (v) => Math.cos(rad(v[0]!)),
       2,
     ],
@@ -167,7 +167,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'A tangente de um ângulo agudo vale #. Quanto vale o seno desse ângulo? (duas casas decimais)',
       '\\sin\\theta = \\frac{\\tan\\theta}{\\sqrt{1 + \\tan^2\\theta}}',
-      '\\sin\\theta = \\frac{#}{\\sqrt{1 + #^2}}',
+      '\\sin\\theta = \\frac{#1}{\\sqrt{1 + #1^2}}',
       (v) => v[0]! / Math.sqrt(1 + v[0]! ** 2),
       2,
     ],
@@ -188,7 +188,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'O cosseno de um ângulo do primeiro quadrante vale #. Quanto vale a tangente desse ângulo? (duas casas decimais)',
       '\\tan\\theta = \\frac{\\sqrt{1 - \\cos^2\\theta}}{\\cos\\theta}',
-      '\\tan\\theta = \\frac{\\sqrt{1 - #^2}}{#}',
+      '\\tan\\theta = \\frac{\\sqrt{1 - #1^2}}{#1}',
       (v) => Math.sqrt(1 - v[0]! ** 2) / v[0]!,
       2,
     ],
@@ -310,7 +310,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'O seno de um ângulo agudo vale #. Use o arco duplo para calcular o seno do dobro desse ângulo. (duas casas decimais)',
       '\\sin 2\\theta = 2\\sin\\theta\\cos\\theta',
-      '\\sin 2\\theta = 2 \\cdot # \\cdot \\sqrt{1 - #^2}',
+      '\\sin 2\\theta = 2 \\cdot #1 \\cdot \\sqrt{1 - #1^2}',
       (v) => 2 * v[0]! * Math.sqrt(1 - v[0]! ** 2),
       2,
     ],
@@ -406,7 +406,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'A função f(x) = # · sen(#x) + # atinge que valor em x = #?',
       'f(x) = A\\sin(kx) + c',
-      'f(#) = # \\cdot \\sin(# \\cdot #) + #',
+      'f(#4) = #1 \\cdot \\sin(#2 \\cdot #4) + #3',
       (v) => v[0]! * Math.sin(v[1]! * v[3]!) + v[2]!,
     ],
     [
@@ -653,21 +653,21 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'Um terreno triangular tem dois lados de # m e # m, com #° entre eles. Quanto mede o terceiro lado, em metros? (duas casas decimais)',
       'c^2 = a^2 + b^2 - 2ab\\cos\\theta',
-      'c = \\sqrt{#^2 + #^2 - 2 \\cdot # \\cdot # \\cdot \\cos #^\\circ}',
+      'c = \\sqrt{#1^2 + #2^2 - 2 \\cdot #1 \\cdot #2 \\cdot \\cos #3^\\circ}',
       (v) => Math.sqrt(v[0]! ** 2 + v[1]! ** 2 - 2 * v[0]! * v[1]! * Math.cos(rad(v[2]!))),
       2,
     ],
     [
       'Dois lados de um triângulo medem # cm e # cm e formam entre si um ângulo de #°. Quantos centímetros mede o terceiro lado? (duas casas decimais)',
       'c^2 = a^2 + b^2 - 2ab\\cos\\theta',
-      'c = \\sqrt{#^2 + #^2 - 2 \\cdot # \\cdot # \\cdot \\cos #^\\circ}',
+      'c = \\sqrt{#1^2 + #2^2 - 2 \\cdot #1 \\cdot #2 \\cdot \\cos #3^\\circ}',
       (v) => Math.sqrt(v[0]! ** 2 + v[1]! ** 2 - 2 * v[0]! * v[1]! * Math.cos(rad(v[2]!))),
       2,
     ],
     [
       'Um terreno triangular tem lados de # m e # m, e o ângulo entre eles mede #°. Quantos metros mede o terceiro lado? (duas casas decimais)',
       'c^2 = a^2 + b^2 - 2ab\\cos\\theta',
-      'c = \\sqrt{#^2 + #^2 - 2 \\cdot # \\cdot # \\cdot \\cos #^\\circ}',
+      'c = \\sqrt{#1^2 + #2^2 - 2 \\cdot #1 \\cdot #2 \\cdot \\cos #3^\\circ}',
       (v) => Math.sqrt(v[0]! ** 2 + v[1]! ** 2 - 2 * v[0]! * v[1]! * Math.cos(rad(v[2]!))),
       2,
     ],
@@ -702,7 +702,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'Um triângulo tem lados de # cm, # cm e # cm. Quantos graus mede o ângulo oposto ao lado de # cm? (duas casas decimais)',
       '\\cos\\hat{A} = \\frac{b^2 + c^2 - a^2}{2bc}',
-      '\\cos\\hat{A} = \\frac{#^2 + #^2 - #^2}{2 \\cdot # \\cdot #}',
+      '\\hat{A} = \\arccos\\left(\\frac{#1^2 + #2^2 - #3^2}{2 \\cdot #1 \\cdot #2}\\right)',
       (v) => anguloOposto(v[2]!, v[0]!, v[1]!),
       2,
     ],
@@ -723,7 +723,7 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'Um navio está a # km de um farol e a # km de outro, que distam # km entre si. Quantos graus mede o ângulo sob o qual o navio vê os dois faróis? (duas casas decimais)',
       '\\cos\\hat{A} = \\frac{b^2 + c^2 - a^2}{2bc}',
-      '\\cos\\hat{N} = \\frac{#^2 + #^2 - #^2}{2 \\cdot # \\cdot #}',
+      '\\hat{N} = \\arccos\\left(\\frac{#1^2 + #2^2 - #3^2}{2 \\cdot #1 \\cdot #2}\\right)',
       (v) => anguloOposto(v[2]!, v[0]!, v[1]!),
       2,
     ],
