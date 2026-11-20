@@ -420,7 +420,10 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Escreva o número decimal # como fração irredutível.',
       'd = \\frac{N}{10^{n}}',
-      '# = \\frac{#}{10^{n}}',
+      (v) => {
+        const casas = (String(v[0]!).split('.')[1] ?? '').length;
+        return `${String(v[0]!).replace('.', '{,}')} = \\frac{${Math.round(v[0]! * 10 ** casas)}}{${10 ** casas}}`;
+      },
       (v) => {
         const texto = String(v[0]!);
         const casas = (texto.split('.')[1] ?? '').length;
@@ -430,7 +433,10 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma balança de precisão mostrou # kg. Escreva esse decimal como fração irredutível.',
       'd = \\frac{N}{10^{n}}',
-      '# = \\frac{#}{10^{n}}',
+      (v) => {
+        const casas = (String(v[0]!).split('.')[1] ?? '').length;
+        return `${String(v[0]!).replace('.', '{,}')} = \\frac{${Math.round(v[0]! * 10 ** casas)}}{${10 ** casas}}`;
+      },
       (v) => {
         const texto = String(v[0]!);
         const casas = (texto.split('.')[1] ?? '').length;

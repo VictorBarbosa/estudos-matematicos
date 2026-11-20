@@ -49,11 +49,16 @@ const ENTRADAS = todosOsEnunciados();
  * primeiras (o efeito Doppler, em duas formas, e o arranjo, em três)
  * devolveram 36 entradas: 4273 → 4309.
  *
- * Depois delas, mais 27 formas de vetores, planos, geometria e trigonometria:
- * 4309 → 4391 (59,5%). O trabalho é sempre o mesmo e rende por família — uma
- * regra consertada devolve todas as entradas que a usam.
+ * Depois delas, as 283 formas restantes, uma a uma: 4273 → 5557 (75,3%). O
+ * trabalho é sempre o mesmo e rende por família — uma regra consertada devolve
+ * todas as entradas que a usam. Cinco delas não tinham como ser escritas com
+ * marcadores (o numerador da fração geratriz, a carga do íon, os lados
+ * ordenados do triângulo): essas passaram a calcular a própria linha.
+ *
+ * O que falta agora são 85 tópicos SEM NENHUMA regra — e esses pedem escrever
+ * a fórmula de cada forma de pergunta, não mais consertar índice.
  */
-const COBERTURA_MINIMA = 0.5949;
+const COBERTURA_MINIMA = 0.7529;
 
 /**
  * Quantas substituições ainda mostram conta diferente da resposta.

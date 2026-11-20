@@ -127,7 +127,10 @@ export const REGRAS_QUIMICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quantos elétrons o íon * ganhou ou perdeu em relação ao átomo neutro, que tem # elétrons? Resposta em número de elétrons.',
       'e^- = Z - q',
-      'e^- = # - #',
+      (v, texto) => {
+        const ion = /o íon (.+?) ganhou/.exec(texto)?.[1] ?? '';
+        return `e^- = ${v[0]!} - (${cargaDoIon(ion, texto)})`;
+      },
       (v, texto) => {
         const ion = /o íon (.+?) ganhou/.exec(texto)?.[1] ?? '';
         return v[0]! - cargaDoIon(ion, texto);
@@ -139,7 +142,10 @@ export const REGRAS_QUIMICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Quantos elétrons o íon * ganhou ou perdeu em relação ao átomo neutro, que tem # elétrons? Resposta em número de elétrons.',
       'e^- = Z - q',
-      'e^- = # - #',
+      (v, texto) => {
+        const ion = /o íon (.+?) ganhou/.exec(texto)?.[1] ?? '';
+        return `e^- = ${v[0]!} - (${cargaDoIon(ion, texto)})`;
+      },
       (v, texto) => {
         const ion = /o íon (.+?) ganhou/.exec(texto)?.[1] ?? '';
         return v[0]! - cargaDoIon(ion, texto);

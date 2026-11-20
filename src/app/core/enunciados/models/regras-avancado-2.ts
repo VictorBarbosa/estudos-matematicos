@@ -302,14 +302,20 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Escreva o número decimal # como fração irredutível.',
       'd = \\frac{N}{10^{n}}',
-      '# = \\frac{#}{10^n}',
+      (v) => {
+        const casas = (String(v[0]!).split('.')[1] ?? '').length;
+        return `${String(v[0]!).replace('.', '{,}')} = \\frac{${Math.round(v[0]! * 10 ** casas)}}{${10 ** casas}}`;
+      },
       (_v, texto) =>
         geratrizDoDecimal((/decimal ([0-9.,]+)/.exec(texto)?.[1] ?? '0').replace('.', ',')),
     ],
     [
       'Escreva # como fração irredutível.',
       'd = \\frac{N}{10^{n}}',
-      '# = \\frac{#}{10^n}',
+      (v) => {
+        const casas = (String(v[0]!).split('.')[1] ?? '').length;
+        return `${String(v[0]!).replace('.', '{,}')} = \\frac{${Math.round(v[0]! * 10 ** casas)}}{${10 ** casas}}`;
+      },
       (_v, texto) =>
         geratrizDoDecimal((/Escreva ([0-9.,]+) como/.exec(texto)?.[1] ?? '0').replace('.', ',')),
     ],

@@ -730,7 +730,13 @@ export const REGRAS_TRIGONOMETRIA: Readonly<Record<string, readonly Regra[]>> = 
     [
       'Um triângulo tem lados #, # e #. Quantos graus mede o maior ângulo? (duas casas decimais)',
       '\\cos\\hat{A} = \\frac{b^2 + c^2 - a^2}{2bc},\\ a_{max}',
-      '\\cos\\hat{A} = \\frac{#^2 + #^2 - #^2}{2 \\cdot # \\cdot #}',
+      (v) => {
+        const [menor, meio, maior] = [v[0]!, v[1]!, v[2]!].sort((a, b) => a - b);
+        return (
+          `\\hat{A} = \\arccos\\left(\\frac{${menor}^2 + ${meio}^2 - ${maior}^2}` +
+          `{2 \\cdot ${menor} \\cdot ${meio}}\\right)`
+        );
+      },
       (v) => {
         const lados = [v[0]!, v[1]!, v[2]!].sort((a, b) => a - b);
         return anguloOposto(lados[2]!, lados[0]!, lados[1]!);
