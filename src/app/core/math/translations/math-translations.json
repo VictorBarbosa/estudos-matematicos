@@ -511,6 +511,10 @@
     "fr": "La balance a donné des grammes, et la concentration se mesure en moles : Na₂CO₃ devient une quantité de matière.",
     "en": "The scale gave grams, and concentration is measured in moles: Na₂CO₃ becomes an amount of substance."
   },
+  "A bandeirada se SUBTRAI do total antes de dividir — ela foi acrescentada em vez de tirada.": {
+    "fr": "La prise en charge se SOUSTRAIT du total avant la division — elle a été ajoutée au lieu d’être retirée.",
+    "en": "The flag-fall is SUBTRACTED from the total before dividing — it was added instead of removed."
+  },
   "A bandeirada é cobrada uma vez, antes de qualquer quilômetro. Qual é o valor fixo e qual se repete?": {
     "fr": "La prise en charge est facturée une fois, avant tout kilomètre. Quelle est la valeur fixe et laquelle se répète ?",
     "en": "The base fare is charged once, before any kilometre. Which is the fixed amount and which repeats?"
@@ -1099,6 +1103,10 @@
     "fr": "La division est inversée : λ = v/f, et non f/v.",
     "en": "The division is upside down: λ = v/f, not f/v."
   },
+  "A divisão ficou invertida. Dividimos o lado independente PELO coeficiente de x, não o contrário.": {
+    "fr": "La division est inversée. On divise le membre constant PAR le coefficient de x, et non l’inverse.",
+    "en": "The division is upside down. You divide the constant side BY the coefficient of x, not the other way round."
+  },
   "A divisão termina com resto zero, então o decimal é finito.": {
     "fr": "La division se termine avec un reste nul, donc la décimale est finie.",
     "en": "The division ends with zero remainder, so the decimal is finite."
@@ -1594,6 +1602,10 @@
   "A identidade lida de trás para frente.": {
     "fr": "L’identité lue à l’envers.",
     "en": "The identity read backwards."
+  },
+  "A igualdade se mantém porque a mesma operação foi feita nos dois lados.": {
+    "fr": "L’égalité se conserve parce que la même opération a été faite des deux côtés.",
+    "en": "The equality holds because the same operation was done on both sides."
   },
   "A imagem do arcsen e do arctg vai de −#° a #°; a do arccos, de #° a #°.": {
     "fr": "L’image de l’arcsin et de l’arctan va de −#° à #° ; celle de l’arccos, de #° à #°.",
@@ -2139,6 +2151,14 @@
     "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
     "en": "The question asks for the value at a point: we replace x by the given number."
   },
+  "A pergunta é pela componente x.": {
+    "fr": "La question porte sur la composante x.",
+    "en": "The question asks for the x component."
+  },
+  "A pergunta é pela componente y.": {
+    "fr": "La question porte sur la composante y.",
+    "en": "The question asks for the y component."
+  },
   "A pergunta é pela força de sustentação.": {
     "fr": "La question porte sur la force de portance.",
     "en": "The question asks for the lift force."
@@ -2222,6 +2242,10 @@
   "A potência foi derivada corretamente, mas faltou multiplicar pela derivada da função de dentro. É a cadeia: a camada interna sempre contribui com um fator.": {
     "fr": "La puissance a été dérivée correctement, mais il manque la multiplication par la dérivée de la fonction intérieure. C’est la chaîne : la couche interne apporte toujours un facteur.",
     "en": "The power was differentiated correctly, but the multiplication by the derivative of the inner function is missing. That is the chain: the inner layer always contributes a factor."
+  },
+  "A prateleira mais cheia tem x + #.": {
+    "fr": "L’étagère la plus remplie en a x + #.",
+    "en": "The fullest shelf has x + #."
   },
   "A pressão constante faz o trabalho ser simplesmente a área do retângulo p × ΔV.": {
     "fr": "La pression constante fait que le travail est simplement l'aire du rectangle p × ΔV.",
@@ -2667,6 +2691,10 @@
     "fr": "Le rapport est inversé. Le coefficient directeur est Δy sur Δx — la variation VERTICALE divisée par l’horizontale.",
     "en": "The ratio is upside down. The slope is Δy over Δx — the VERTICAL change divided by the horizontal one."
   },
+  "A razão está invertida: a tangente é a componente VERTICAL sobre a horizontal.": {
+    "fr": "Le rapport est inversé : la tangente est la composante VERTICALE sur l’horizontale.",
+    "en": "The ratio is upside down: the tangent is the VERTICAL component over the horizontal one."
+  },
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
     "en": "The ratio is upside down: at equilibrium, y is the constant term divided by the coefficient."
@@ -2903,6 +2931,10 @@
     "fr": "La solution est unique à une échelle près, et la convention est d’utiliser les plus petits entiers.",
     "en": "The solution is unique up to scale, and the convention is to use the smallest integers."
   },
+  "A soma # é a de daqui a # anos, não a de hoje: os anos que vão passar entram na equação.": {
+    "fr": "La somme # est celle de dans # ans, pas celle d’aujourd’hui : les années à venir entrent dans l’équation.",
+    "en": "The sum # is the one # years from now, not today’s: the years still to pass belong in the equation."
+  },
   "A soma começa em n = #: a primeira parcela que sobra é #/#, não #/#.": {
     "fr": "La somme commence en n = # : le premier terme qui reste vaut #/#, et non #/#.",
     "en": "The sum starts at n = #: the first term left is #/#, not #/#."
@@ -2922,6 +2954,10 @@
   "A soma dos internos do TRIÂNGULO é #°, não #°. Os #° valem para a soma dos ângulos externos, ou para os internos de um quadrilátero.": {
     "fr": "La somme des angles intérieurs du TRIANGLE vaut #°, pas #°. Les #° valent pour la somme des angles extérieurs, ou pour les angles intérieurs d’un quadrilatère.",
     "en": "The sum of the interior angles of a TRIANGLE is #°, not #°. The #° applies to the sum of the exterior angles, or to the interior angles of a quadrilateral."
+  },
+  "A soma dos módulos daria # — maior, porque parte de cada vetor cancela a do outro.": {
+    "fr": "La somme des normes donnerait # — davantage, car une partie de chaque vecteur annule celle de l’autre.",
+    "en": "The sum of the magnitudes would give # — larger, because part of each vector cancels part of the other."
   },
   "A soma dos nox de um composto neutro é ZERO. Comece pelo elemento de nox conhecido — oxigênio −#, halogênio −# — e não esqueça de multiplicar cada um pelo seu índice.": {
     "fr": "La somme des n.o. d’un composé neutre est NULLE. Commencez par l’élément au n.o. connu — oxygène −#, halogène −# — et n’oubliez pas de multiplier chacun par son indice.",
@@ -2998,6 +3034,10 @@
   "A tangencial é a projeção da aceleração na direção da velocidade: produto escalar a·v, dividido pelo módulo de v.": {
     "fr": "La tangentielle est la projection de l’accélération dans la direction de la vitesse : produit scalaire a·v, divisé par la norme de v.",
     "en": "The tangential one is the projection of the acceleration onto the direction of the velocity: dot product a·v, divided by the magnitude of v."
+  },
+  "A tangente do ângulo é a razão entre as componentes.": {
+    "fr": "La tangente de l’angle est le rapport des composantes.",
+    "en": "The tangent of the angle is the ratio of the components."
   },
   "A tangente em c tem de ter a mesma inclinação.": {
     "fr": "La tangente en c doit avoir la même pente.",
@@ -3747,6 +3787,10 @@
     "fr": "Ici les carrés se soustraient, ils ne s’additionnent pas.",
     "en": "Here the squares are subtracted, not added."
   },
+  "Aqui os vetores têm a mesma direção e sentido, e só por isso os módulos somam.": {
+    "fr": "Ici les vecteurs ont même direction et même sens, et c’est seulement pour cela que les normes s’additionnent.",
+    "en": "Here the vectors share direction and sense, and only for that reason do the magnitudes add."
+  },
   "Aqui u é a potência e v é a função trigonométrica.": {
     "fr": "Ici u est la puissance et v la fonction trigonométrique.",
     "en": "Here u is the power and v is the trigonometric function."
@@ -3798,6 +3842,14 @@
   "As componentes foram somadas em módulo, como se o corpo andasse pelos catetos. O deslocamento é a hipotenusa: vale Pitágoras, não soma simples.": {
     "fr": "Les composantes ont été additionnées en valeur absolue, comme si le corps marchait le long des cathètes. Le déplacement est l’hypoténuse : c’est Pythagore, et non une simple somme.",
     "en": "The components were added in magnitude, as if the body walked along the legs. The displacement is the hypotenuse: Pythagoras applies, not a plain sum."
+  },
+  "As componentes indicam o #º quadrante.": {
+    "fr": "Les composantes indiquent le #ᵉ quadrant.",
+    "en": "The components point to quadrant #."
+  },
+  "As componentes não se somam para dar o módulo — são os QUADRADOS que somam. Somar daria o caminho em L, não o caminho reto.": {
+    "fr": "Les composantes ne s’additionnent pas pour donner la norme — ce sont les CARRÉS qui s’additionnent. Les additionner donnerait le chemin en L, pas le chemin droit.",
+    "en": "The components do not add to give the magnitude — it is the SQUARES that add. Adding them would give the L-shaped path, not the straight one."
   },
   "As constantes como #π são adimensionais e não entram na conta.": {
     "fr": "Les constantes comme #π sont adimensionnelles et n’entrent pas dans le calcul.",
@@ -4715,6 +4767,10 @@
     "fr": "Calculez arctan(#/#) et corrigez selon le quadrant : le point (#, #) est dans le #e quadrant.",
     "en": "Compute arctan(#/#) and correct for the quadrant: the point (#, #) is in quadrant #."
   },
+  "Calcule arctg(v_y / vₓ) e corrija pelo quadrante: as componentes indicam o #º.": {
+    "fr": "Calculez arctan(v_y / vₓ) et corrigez selon le quadrant : les composantes indiquent le #ᵉ.",
+    "en": "Compute arctan(v_y / vₓ) and correct for the quadrant: the components point to number #."
+  },
   "Calcule f nos inteiros perto da raiz cúbica de k: onde o sinal troca, a raiz está no meio.": {
     "fr": "Calculez f sur les entiers proches de la racine cubique de k : là où le signe change, la racine est au milieu.",
     "en": "Work out f at the whole numbers near the cube root of k: where the sign changes, the root is in between."
@@ -5531,6 +5587,10 @@
     "fr": "Complétez le carré jusqu’à (x − h)² = #p(y − k) ; alors le foyer est (h, k + p) et la directrice, y = k − p.",
     "en": "Complete the square until you reach (x − h)² = #p(y − k); then the focus is (h, k + p) and the directrix, y = k − p."
   },
+  "Componente negativa não deixa o módulo negativo: módulo é distância.": {
+    "fr": "Une composante négative ne rend pas la norme négative : une norme est une distance.",
+    "en": "A negative component does not make the magnitude negative: a magnitude is a distance."
+  },
   "Compor duas transformações multiplica os fatores de área.": {
     "fr": "Composer deux transformations multiplie les facteurs d’aire.",
     "en": "Composing two transformations multiplies the area factors."
@@ -5642,6 +5702,10 @@
   "Confira que dá #/# em x = #; depois derive em cima e embaixo e substitua.": {
     "fr": "Vérifiez que cela donne #/# en x = # ; dérivez ensuite le haut et le bas et substituez.",
     "en": "Check that it gives #/# at x = #; then differentiate top and bottom and substitute."
+  },
+  "Consecutivos são x, x + # e x + #. Ache x e não esqueça que a pergunta é pelo maior.": {
+    "fr": "Les consécutifs sont x, x + # et x + #. Trouvez x et n’oubliez pas que la question porte sur le plus grand.",
+    "en": "The consecutive ones are x, x + # and x + #. Find x and do not forget the question asks for the largest."
   },
   "Constante vezes a área do disco, π·#².": {
     "fr": "Constante fois l’aire du disque, π·#².",
@@ -7215,6 +7279,10 @@
     "fr": "Nous élevons au carré pour que les écarts opposés ne s'annulent pas.",
     "en": "We square so that opposite deviations do not cancel."
   },
+  "Elevamos ao quadrado — o sinal desaparece.": {
+    "fr": "Nous élevons au carré — le signe disparaît.",
+    "en": "We square them — the sign disappears."
+  },
   "Elevamos o maior lado ao quadrado.": {
     "fr": "Nous élevons le plus grand côté au carré.",
     "en": "We square the longest side."
@@ -8599,6 +8667,10 @@
     "fr": "C’est la distance jusqu’à la charge de # μC. Ce qui est demandé part de celle de # μC.",
     "en": "That is the distance to the # μC charge. What is asked starts from the # μC one."
   },
+  "Essa é a do meio — a média das três. A mais cheia tem dois livros a mais que a menor.": {
+    "fr": "C’est celle du milieu — la moyenne des trois. La plus remplie a deux livres de plus que la moins remplie.",
+    "en": "That is the middle one — the average of the three. The fullest has two books more than the least full."
+  },
   "Essa é a energia TOTAL antes da colisão. A perda é a diferença entre antes e depois.": {
     "fr": "C’est l’énergie TOTALE avant la collision. La perte est l’écart entre avant et après.",
     "en": "That is the TOTAL energy before the collision. The loss is the gap between before and after."
@@ -8666,6 +8738,10 @@
   "Essa é a hipotenusa inteira, um passo intermediário da conta.": {
     "fr": "C’est l’hypoténuse entière, une étape intermédiaire du calcul.",
     "en": "That is the whole hypotenuse, an intermediate step of the computation."
+  },
+  "Essa é a idade de Ana. A pergunta é a idade de Bia.": {
+    "fr": "C’est l’âge d’Ana. La question porte sur l’âge de Bia.",
+    "en": "That is Ana’s age. The question asks for Bia’s age."
   },
   "Essa é a incerteza da MÉDIA, que já foi dividida por √n. O desvio padrão descreve a dispersão das medidas individuais.": {
     "fr": "C’est l’incertitude de la MOYENNE, déjà divisée par √n. L’écart type décrit la dispersion des mesures individuelles.",
@@ -8983,6 +9059,10 @@
     "fr": "Cette valeur est en newtons. La question demande des kN (# kN = # N).",
     "en": "That value is in newtons. The question asks for kN (# kN = # N)."
   },
+  "Esse x é a prateleira MENOS cheia. A mais cheia tem x + #.": {
+    "fr": "Ce x est l’étagère la MOINS remplie. La plus remplie en a x + #.",
+    "en": "That x is the LEAST full shelf. The fullest has x + #."
+  },
   "Esse ângulo dá o mesmo valor de cosseno, mas está fora da imagem do arccos, que é [#°, #°]. A inversa devolve um ângulo só, o que está dentro dessa faixa.": {
     "fr": "Cet angle donne la même valeur, mais il est hors de l’image de l’arccos, qui vaut [#°, #°]. La fonction inverse ne rend qu’un seul angle, celui qui est dans cette plage.",
     "en": "That angle gives the same value, but it is outside the range of arccos, which is [#°, #°]. The inverse returns a single angle, the one inside that range."
@@ -9143,6 +9223,10 @@
     "fr": "C’est la longueur du chemin parcouru en diagonale. La question ne porte que sur la distance descendue vers l’aval.",
     "en": "That is the length of the diagonal path travelled. The question only asks how far downstream it drifted."
   },
+  "Esse é o comprimento. A pergunta é a largura.": {
+    "fr": "C’est la longueur. La question porte sur la largeur.",
+    "en": "That is the length. The question asks for the width."
+  },
   "Esse é o denominador da equação, que vale a². O semieixo é a raiz quadrada dele.": {
     "fr": "C’est le dénominateur de l’équation, qui vaut a². Le demi-axe en est la racine carrée.",
     "en": "That is the denominator of the equation, which is a². The semi-axis is its square root."
@@ -9222,6 +9306,10 @@
   "Esse é o módulo do deslocamento em m. Falta dividir pelos # s.": {
     "fr": "C’est la norme du déplacement en m. Il reste à diviser par les # s.",
     "en": "That is the magnitude of the displacement in m. Dividing by the # s is still missing."
+  },
+  "Esse é o módulo do vetor inteiro. A componente é sempre menor ou igual a ele — igual apenas quando o vetor está sobre o eixo.": {
+    "fr": "C’est la norme du vecteur entier. La composante lui est toujours inférieure ou égale — égale seulement quand le vecteur est porté par l’axe.",
+    "en": "That is the magnitude of the whole vector. The component is always less than or equal to it — equal only when the vector lies on the axis."
   },
   "Esse é o módulo, não o ângulo. São as duas coordenadas polares do ponto.": {
     "fr": "C’est le module, et non l’angle. Ce sont les deux coordonnées polaires du point.",
@@ -9330,6 +9418,10 @@
   "Esse é o resto, não um coeficiente do quociente.": {
     "fr": "C’est le reste, pas un coefficient du quotient.",
     "en": "That is the remainder, not a coefficient of the quotient."
+  },
+  "Esse é o resultado cru do arco-tangente, que sempre cai entre −#° e #°. É preciso corrigir pelo quadrante, olhando os sinais das componentes.": {
+    "fr": "C’est le résultat brut de l’arc tangente, qui tombe toujours entre −#° et #°. Il faut corriger selon le quadrant, en regardant les signes des composantes.",
+    "en": "That is the raw output of the arctangent, which always lands between −#° and #°. It must be corrected for the quadrant, by looking at the signs of the components."
   },
   "Esse é o resultado de Euler. Runge-Kutta avalia a inclinação quatro vezes por passo, e por isso acerta muitas casas a mais.": {
     "fr": "C’est le résultat d’Euler. Runge-Kutta évalue la pente quatre fois par pas, et gagne donc bien plus de décimales justes.",
@@ -9807,6 +9899,10 @@
     "fr": "Il manque la base : outre les faces latérales, la pyramide a la face de la base.",
     "en": "The base is missing: besides the lateral faces, the pyramid has the base face."
   },
+  "Falta dividir por #, o coeficiente de x. O que foi encontrado é o valor de #x, não o de x.": {
+    "fr": "Il reste à diviser par #, le coefficient de x. Ce qui a été trouvé est la valeur de #x, pas celle de x.",
+    "en": "You still have to divide by #, the coefficient of x. What was found is the value of #x, not of x."
+  },
   "Falta o vértice do topo da pirâmide.": {
     "fr": "Il manque le sommet de la pyramide.",
     "en": "The apex of the pyramid is missing."
@@ -10078,6 +10174,14 @@
   "Faltou multiplicar a L₁ por # antes de subtrair.": {
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
     "en": "The multiplication of L₁ by # before subtracting is missing."
+  },
+  "Faltou multiplicar o lado direito por #: o mmc multiplica TODOS os termos, dos dois lados.": {
+    "fr": "Il manque la multiplication du membre de droite par # : le ppcm multiplie TOUS les termes, des deux côtés.",
+    "en": "You forgot to multiply the right-hand side by #: the LCM multiplies ALL the terms, on both sides."
+  },
+  "Faltou multiplicar o número solto do lado direito (#) por #: o mmc multiplica TODOS os termos.": {
+    "fr": "Il manque la multiplication du nombre isolé de droite (#) par # : le ppcm multiplie TOUS les termes.",
+    "en": "You forgot to multiply the loose number on the right (#) by #: the LCM multiplies ALL the terms."
   },
   "Faltou multiplicar pela cota M da derivada. Com M igual a # dá no mesmo, mas na exponencial ela é bem maior que #.": {
     "fr": "Il manque la multiplication par la borne M de la dérivée. Avec M égal à # cela revient au même, mais pour l’exponentielle elle est bien plus grande que #.",
@@ -10499,9 +10603,17 @@
     "fr": "Frange brillante : la différence de chemin est un nombre entier de longueurs d’onde. Pour de petits angles, y = m·λ·L/d.",
     "en": "Bright fringe: the path difference is a whole number of wavelengths. For small angles, y = m·λ·L/d."
   },
+  "Frações não se somam juntando os denominadores: x/p + x/r não é x/(p + r). Use o mmc.": {
+    "fr": "Les fractions ne s’additionnent pas en réunissant les dénominateurs : x/p + x/r n’est pas x/(p + r). Utilisez le ppcm.",
+    "en": "Fractions do not add by merging denominators: x/p + x/r is not x/(p + r). Use the LCM."
+  },
   "Gelo em água: densidade #, logo #% submerso — a ponta do iceberg é mesmo pequena.": {
     "fr": "Glace dans l’eau : masse volumique #, donc #% immergé — la pointe de l’iceberg est bien petite.",
     "en": "Ice in water: density #, so #% submerged — the tip of the iceberg really is small."
+  },
+  "Geometricamente, é a diagonal do paralelogramo formado pelos dois vetores.": {
+    "fr": "Géométriquement, c’est la diagonale du parallélogramme formé par les deux vecteurs.",
+    "en": "Geometrically, it is the diagonal of the parallelogram formed by the two vectors."
   },
   "Geometricamente, é a área de um quadrado de lado (a + b).": {
     "fr": "Géométriquement, c'est l'aire d'un carré de côté (a + b).",
@@ -11023,6 +11135,10 @@
     "fr": "En isolant x : la plus petite tourne plus.",
     "en": "Isolating x: the smaller one turns more."
   },
+  "Isolando x, a menor quantidade.": {
+    "fr": "En isolant x, la plus petite quantité.",
+    "en": "Isolating x, the smallest amount."
+  },
   "Isolando x.": {
     "fr": "En isolant x.",
     "en": "Isolating x."
@@ -11146,6 +11262,10 @@
   "Juntando os termos semelhantes.": {
     "fr": "En réunissant les termes semblables.",
     "en": "Gathering like terms."
+  },
+  "Juntando os termos.": {
+    "fr": "En regroupant les termes.",
+    "en": "Collecting the terms."
   },
   "Juntando por camada, aparece o período e a última camada.": {
     "fr": "En regroupant par couche, la période et la dernière couche apparaissent.",
@@ -13019,6 +13139,10 @@
     "fr": "L’arc tangente brut ne distingue pas le quadrant.",
     "en": "The raw arctangent does not tell the quadrant apart."
   },
+  "O arco-tangente simples não distingue o quadrante.": {
+    "fr": "L’arc tangente simple ne distingue pas le quadrant.",
+    "en": "The plain arctangent does not tell the quadrants apart."
+  },
   "O arco-tangente tem assíntota horizontal, e é por isso que o limite existe.": {
     "fr": "L'arc-tangente a une asymptote horizontale, et c'est pourquoi la limite existe.",
     "en": "The arctangent has a horizontal asymptote, and that is why the limit exists."
@@ -14071,6 +14195,14 @@
     "fr": "Le plus petit commande : O₂ est le limitant, et H₂ est en excès.",
     "en": "The smallest rules: O₂ is the limiting one, and H₂ is left over."
   },
+  "O menos antes da segunda fração não chegou ao #: −#(x + #) = −#x - #. O sinal troca nos dois termos do parêntese.": {
+    "fr": "Le moins devant la seconde fraction n’a pas atteint le # : −#(x + #) = −#x - #. Le signe change pour les deux termes de la parenthèse.",
+    "en": "The minus before the second fraction did not reach the #: −#(x + #) = −#x - #. The sign changes for both terms in the bracket."
+  },
+  "O menos antes da segunda fração não chegou ao #: −#(x - #) = −#x + #. O sinal troca nos dois termos do parêntese.": {
+    "fr": "Le moins devant la seconde fraction n’a pas atteint le # : −#(x - #) = −#x + #. Le signe change pour les deux termes de la parenthèse.",
+    "en": "The minus before the second fraction did not reach the #: −#(x - #) = −#x + #. The sign changes for both terms in the bracket."
+  },
   "O mesmo fator aparece em cima e embaixo, e pode ser cancelado.": {
     "fr": "Le même facteur apparaît en haut et en bas, et peut être annulé.",
     "en": "The same factor appears above and below, and can be cancelled."
@@ -14223,6 +14355,10 @@
     "fr": "Le module n’est jamais négatif : c’est une distance.",
     "en": "The modulus is never negative: it is a distance."
   },
+  "O módulo pedido é o do vetor soma.": {
+    "fr": "La norme demandée est celle du vecteur somme.",
+    "en": "The magnitude asked for is that of the sum vector."
+  },
   "O módulo é a distância até a origem no plano complexo.": {
     "fr": "Le module est la distance à l’origine dans le plan complexe.",
     "en": "The modulus is the distance to the origin in the complex plane."
@@ -14230,6 +14366,14 @@
   "O módulo é a distância até a origem, por Pitágoras.": {
     "fr": "Le module est la distance à l'origine, par Pythagore.",
     "en": "The magnitude is the distance to the origin, by Pythagoras."
+  },
+  "O módulo é a hipotenusa das componentes: (#) ao quadrado mais (#) ao quadrado, e a raiz da soma.": {
+    "fr": "La norme est l’hypoténuse des composantes : (#) au carré plus (#) au carré, puis la racine de la somme.",
+    "en": "The magnitude is the hypotenuse of the components: (#) squared plus (#) squared, then the root of the sum."
+  },
+  "O módulo é a hipotenusa do triângulo formado pelas componentes.": {
+    "fr": "La norme est l’hypoténuse du triangle formé par les composantes.",
+    "en": "The magnitude is the hypotenuse of the triangle formed by the components."
   },
   "O módulo é a raiz da soma dos quadrados das três componentes.": {
     "fr": "Le module est la racine de la somme des carrés des trois composantes.",
@@ -14330,6 +14474,10 @@
   "O paralelo, por produto sobre soma.": {
     "fr": "Le parallèle, par produit sur somme.",
     "en": "The parallel, by product over sum."
+  },
+  "O parêntese é obrigatório: o menos antes da segunda fração vale para o numerador inteiro.": {
+    "fr": "La parenthèse est obligatoire : le moins devant la seconde fraction porte sur tout le numérateur.",
+    "en": "The bracket is compulsory: the minus before the second fraction applies to the whole numerator."
   },
   "O pedaço está certo, mas as fronteiras ENTRAM: a relação tem «ou igual», e nelas a expressão vale #.": {
     "fr": "Le morceau est juste, mais les bornes ENTRENT : la relation comporte « ou égal », et l’expression y vaut #.",
@@ -15767,6 +15915,10 @@
     "fr": "Nous ordonnons les mesures.",
     "en": "We sort the measurements."
   },
+  "Os # anos passam para as DUAS: somam-se # anos, não #.": {
+    "fr": "Les # ans passent pour les DEUX : on ajoute # ans, pas #.",
+    "en": "The # years pass for BOTH: you add # years, not #."
+  },
   "Os botões abaixo do campo escrevem os símbolos.": {
     "fr": "Les boutons sous le champ écrivent les symboles.",
     "en": "The buttons below the field type the symbols."
@@ -16190,6 +16342,10 @@
   "Os semieixos são # e # (as raízes de # e #), não os quadrados.": {
     "fr": "Les demi-axes sont # et # (les racines de # et #), et non les carrés.",
     "en": "The semi-axes are # and # (the roots of # and #), not the squares."
+  },
+  "Os sinais das componentes é que dizem em qual quadrante o vetor está.": {
+    "fr": "Ce sont les signes des composantes qui disent dans quel quadrant se trouve le vecteur.",
+    "en": "It is the signs of the components that say which quadrant the vector is in."
   },
   "Os sinais das partes real e imaginária localizam o ponto.": {
     "fr": "Les signes des parties réelle et imaginaire localisent le point.",
@@ -17327,6 +17483,10 @@
     "fr": "Combien de fois elle tient dans la masse molaire du composé.",
     "en": "How many times it fits into the compound’s molar mass."
   },
+  "Quantidades consecutivas: x, x + # e x + #.": {
+    "fr": "Quantités consécutives : x, x + # et x + #.",
+    "en": "Consecutive amounts: x, x + # and x + #."
+  },
   "Quanto UMA máquina enche por minuto.": {
     "fr": "Combien UNE machine remplit par minute.",
     "en": "How much ONE machine fills per minute."
@@ -18127,6 +18287,10 @@
     "fr": "Additionner des incertitudes absolues est la règle de la SOMME, et non du produit. Ici ce qui se combine, ce sont les erreurs proportionnelles.",
     "en": "Adding absolute uncertainties is the rule for a SUM, not for a product. Here what combines are the proportional errors."
   },
+  "Somar os MÓDULOS só vale quando os vetores têm a mesma direção e sentido. Em geral, parte de um cancela parte do outro.": {
+    "fr": "Additionner les NORMES ne vaut que si les vecteurs ont même direction et même sens. En général, une partie de l’un annule une partie de l’autre.",
+    "en": "Adding the MAGNITUDES only works when the vectors share direction and sense. In general, part of one cancels part of the other."
+  },
   "Somar os desvios sem elevar daria exatamente zero, sempre.": {
     "fr": "Additionner les écarts sans les élever au carré donnerait exactement zéro, toujours.",
     "en": "Adding the deviations without squaring them would give exactly zero, every time."
@@ -18138,6 +18302,10 @@
   "Somar os graus é o que acontece na MULTIPLICAÇÃO. Na divisão, eles se subtraem.": {
     "fr": "Additionner les degrés est ce qui se passe dans la MULTIPLICATION. Dans la division, ils se soustraient.",
     "en": "Adding degrees is what happens in MULTIPLICATION. In division they subtract."
+  },
+  "Somar os módulos das componentes dá o percurso andando pelos eixos. O módulo do vetor é a distância em linha reta, que é menor.": {
+    "fr": "Additionner les normes des composantes donne le trajet le long des axes. La norme du vecteur est la distance en ligne droite, qui est plus courte.",
+    "en": "Adding the magnitudes of the components gives the path along the axes. The vector’s magnitude is the straight-line distance, which is shorter."
   },
   "Somar os módulos só vale se as duas forças apontam para o mesmo lado. Veja o sentido de cada uma.": {
     "fr": "Additionner les normes n’est valable que si les deux forces pointent du même côté. Regardez le sens de chacune.",
@@ -18711,6 +18879,10 @@
     "fr": "Soustraire les RAYONS puis élever au carré donne autre chose : π(R − r)² n’est pas πR² − πr². Ce qu’on soustrait, ce sont les aires.",
     "en": "Subtracting the RADII and then squaring gives something else: π(R − r)² is not πR² − πr². What gets subtracted are the areas."
   },
+  "Subtrair os módulos corresponde ao caso de sentidos opostos. Aqui é preciso somar componente por componente antes de calcular o módulo.": {
+    "fr": "Soustraire les normes correspond au cas des sens opposés. Ici il faut additionner composante par composante avant de calculer la norme.",
+    "en": "Subtracting the magnitudes corresponds to the case of opposite senses. Here you must add component by component before computing the magnitude."
+  },
   "Subtrair os r só vale se os pontos estão na mesma direção. Aqui o ângulo entre eles conta.": {
     "fr": "Soustraire les r n’est valable que si les points sont dans la même direction. Ici l’angle entre eux compte.",
     "en": "Subtracting the r values only works if the points lie in the same direction. Here the angle between them counts."
@@ -19239,6 +19411,10 @@
     "fr": "Échanger les bornes change le signe de l’intégrale.",
     "en": "Swapping the limits flips the sign of the integral."
   },
+  "Trocar seno por cosseno aqui é o erro mais comum do assunto.": {
+    "fr": "Confondre sinus et cosinus ici est l’erreur la plus fréquente du sujet.",
+    "en": "Swapping sine for cosine here is the most common mistake in this topic."
+  },
   "Trocou periélio e afélio: com # + e·cos θ no denominador, o MAIOR denominador (cos θ = #) dá o MENOR r.": {
     "fr": "Périhélie et aphélie ont été intervertis : avec # + e·cos θ au dénominateur, le PLUS GRAND dénominateur (cos θ = #) donne le PLUS PETIT r.",
     "en": "Perihelion and aphelion were swapped: with # + e·cos θ in the denominator, the LARGEST denominator (cos θ = #) gives the SMALLEST r."
@@ -19655,6 +19831,10 @@
     "fr": "La vitesse est le déplacement par temps.",
     "en": "Velocity is displacement per time."
   },
+  "Verificar a raiz é parte da resolução, não um extra.": {
+    "fr": "Vérifier la racine fait partie de la résolution, ce n’est pas un supplément.",
+    "en": "Checking the root is part of solving, not an extra."
+  },
   "Vezes a área da base.": {
     "fr": "Fois l’aire de la base.",
     "en": "Times the base area."
@@ -19710,6 +19890,10 @@
   "Você dividiu #° pelo ângulo INTERNO. A soma #° é dos externos — use primeiro o suplementar.": {
     "fr": "Vous avez divisé #° par l’angle INTÉRIEUR. La somme de #° est celle des angles extérieurs — passez d’abord par le supplémentaire.",
     "en": "You divided #° by the INTERIOR angle. The sum of #° is that of the exterior angles — go through the supplement first."
+  },
+  "Você dividiu o total por # sem descontar a bandeirada de $ #, que é paga uma vez só.": {
+    "fr": "Vous avez divisé le total par # sans déduire la prise en charge de $ #, qui ne se paie qu’une fois.",
+    "en": "You divided the total by # without deducting the $ # flag-fall, which is paid only once."
   },
   "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
     "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
@@ -19783,6 +19967,14 @@
     "fr": "Vous avez ajouté # au lieu de soustraire en isolant x. Le terme qui s’ajoute d’un côté passe en SOUSTRAYANT de l’autre — l’opération doit défaire ce qui est écrit.",
     "en": "You added # instead of subtracting when isolating x. A term that is added on one side moves across SUBTRACTING on the other — the operation has to undo what is written."
   },
+  "Você somou # em vez de subtrair. Para isolar o termo com x, a operação tem de DESFAZER o que está na equação: se aparece #, subtraímos # dos dois lados.": {
+    "fr": "Vous avez ajouté # au lieu de soustraire. Pour isoler le terme en x, l’opération doit DÉFAIRE ce qui est dans l’équation : si # apparaît, on soustrait # des deux côtés.",
+    "en": "You added # instead of subtracting. To isolate the term with x, the operation has to UNDO what is in the equation: if # appears, subtract # from both sides."
+  },
+  "Você somou # em vez de subtrair. Para isolar o termo com x, a operação tem de DESFAZER o que está na equação: se aparece +#, subtraímos # dos dois lados.": {
+    "fr": "Vous avez ajouté # au lieu de soustraire. Pour isoler le terme en x, l’opération doit DÉFAIRE ce qui est dans l’équation : si +# apparaît, on soustrait # des deux côtés.",
+    "en": "You added # instead of subtracting. To isolate the term with x, the operation has to UNDO what is in the equation: if +# appears, subtract # from both sides."
+  },
   "Você somou a carga. Carga positiva é elétron que FALTA: ela entra subtraindo.": {
     "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
     "en": "You added the charge. A positive charge is a MISSING electron: it enters by subtraction."
@@ -19798,6 +19990,10 @@
   "Você somou em vez de subtrair. A = Z + n, então n = A − Z.": {
     "fr": "Vous avez additionné au lieu de soustraire. A = Z + n, donc n = A − Z.",
     "en": "You added instead of subtracting. A = Z + n, so n = A − Z."
+  },
+  "Você somou só dois lados. O perímetro é a volta inteira: duas larguras e dois comprimentos.": {
+    "fr": "Vous n’avez additionné que deux côtés. Le périmètre est le tour complet : deux largeurs et deux longueurs.",
+    "en": "You added only two sides. The perimeter is the whole way round: two widths and two lengths."
   },
   "Você somou. O pi maiúsculo manda MULTIPLICAR — é o sigma que soma. Os dois têm o mesmo arranjo de índices, e é só a operação que muda.": {
     "fr": "Vous avez additionné. Le pi majuscule demande de MULTIPLIER — c’est le sigma qui additionne. Les deux ont la même disposition d’indices, et seule l’opération change.",
@@ -19843,6 +20039,10 @@
     "fr": "Vous avez utilisé le cosinus de C dans l’aire. L’aire utilise le SINUS ; le cosinus n’a servi qu’à trouver C.",
     "en": "You used the cosine of C in the area. The area uses the SINE; the cosine only served to find C."
   },
+  "Você usou o cosseno. A componente VERTICAL é o cateto oposto ao ângulo, e por isso usa seno.": {
+    "fr": "Vous avez utilisé le cosinus. La composante VERTICALE est le côté opposé à l’angle, et utilise donc le sinus.",
+    "en": "You used cosine. The VERTICAL component is the leg opposite the angle, and therefore uses sine."
+  },
   "Você usou o cosseno. O cateto OPOSTO ao ângulo se relaciona pelo seno; o cosseno trata do cateto adjacente.": {
     "fr": "Vous avez utilisé le cosinus. La cathète OPPOSÉE à l’angle se relie par le sinus ; le cosinus concerne la cathète adjacente.",
     "en": "You used the cosine. The leg OPPOSITE the angle relates through the sine; the cosine deals with the adjacent leg."
@@ -19862,6 +20062,10 @@
   "Você usou o produto dos denominadores (#) como denominador comum — isso é válido, embora o MMC (#) deixe os números menores. O problema é que os numeradores não foram convertidos junto.": {
     "fr": "Vous avez utilisé le produit des dénominateurs (#) comme dénominateur commun — c’est valable, même si le PPCM (#) donne des nombres plus petits. Le problème est que les numérateurs n’ont pas été convertis avec.",
     "en": "You used the product of the denominators (#) as the common denominator — that is valid, though the LCM (#) keeps the numbers smaller. The problem is that the numerators were not converted along with it."
+  },
+  "Você usou o seno. A componente HORIZONTAL é o cateto adjacente ao ângulo, e por isso usa cosseno.": {
+    "fr": "Vous avez utilisé le sinus. La composante HORIZONTALE est le côté adjacent à l’angle, et utilise donc le cosinus.",
+    "en": "You used sine. The HORIZONTAL component is the leg adjacent to the angle, and therefore uses cosine."
   },
   "Você usou o seno. O cateto ADJACENTE ao ângulo se relaciona pelo cosseno; o seno trata do oposto.": {
     "fr": "Vous avez utilisé le sinus. La cathète ADJACENTE à l’angle se relie par le cosinus ; le sinus concerne l’opposée.",
@@ -20578,6 +20782,14 @@
   "v(#) = # + integral de a(t) de # a #. A primitiva de t² é t³/#.": {
     "fr": "v(#) = # + intégrale de a(t) de # à #. La primitive de t² est t³/#.",
     "en": "v(#) = # + integral of a(t) from # to #. The antiderivative of t² is t³/#."
+  },
+  "v_y = |v| · sen θ: o módulo vezes o seno do ângulo com o eixo x.": {
+    "fr": "v_y = |v| · sin θ : la norme fois le sinus de l’angle avec l’axe des x.",
+    "en": "v_y = |v| · sin θ: the magnitude times the sine of the angle with the x axis."
+  },
+  "vₓ = |v| · cos θ: o módulo vezes o cosseno do ângulo com o eixo x.": {
+    "fr": "vₓ = |v| · cos θ : la norme fois le cosinus de l’angle avec l’axe des x.",
+    "en": "vₓ = |v| · cos θ: the magnitude times the cosine of the angle with the x axis."
   },
   "x = # zera o DENOMINADOR: ali a fração não existe, então essa fronteira fica de fora mesmo com «ou igual». Só a do numerador (x = #) entra.": {
     "fr": "x = # annule le DÉNOMINATEUR : la fraction n’y existe pas, cette borne reste donc dehors même avec « ou égal ». Seule celle du numérateur (x = #) entre.",
