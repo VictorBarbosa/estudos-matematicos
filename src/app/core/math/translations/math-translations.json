@@ -1451,6 +1451,10 @@
     "fr": "La forme canonique montre le décalage directement.",
     "en": "The canonical form shows the shift directly."
   },
+  "A forma fatorada mostra os dois preços de lucro zero: o de custo e o que zera a demanda. O máximo fica a meio caminho.": {
+    "fr": "La forme factorisée montre les deux prix de bénéfice nul : celui du coût et celui qui annule la demande. Le maximum se situe à mi-chemin.",
+    "en": "The factored form shows the two prices of zero profit: the cost one and the one that kills demand. The maximum lies halfway between."
+  },
   "A forma fatorada mostra os dois preços de lucro zero: o de custo e o que zera a demanda. O máximo fica a meio caminho. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
     "fr": "La forme factorisée montre les deux prix de profit nul : celui du coût et celui qui annule la demande. Le maximum est à mi-chemin. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
     "en": "The factored form shows the two prices of zero profit: the cost one and the one that kills demand. The maximum sits halfway. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
@@ -1694,6 +1698,10 @@
   "A fórmula já está dada: −#t² é o termo quadrático, o número que multiplica t é a velocidade inicial. Comece calculando x_v = −b/(#a), com a = # e b = #.": {
     "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale. Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
     "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed. Start by working out x_v = −b/(#a), with a = # and b = #."
+  },
+  "A fórmula já está dada: −#t² é o termo quadrático, o número que multiplica t é a velocidade inicial. Troque x por # e resolva a potência primeiro.": {
+    "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale. Remplacez x par # et traitez la puissance d’abord.",
+    "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed. Replace x with # and deal with the power first."
   },
   "A fórmula pede a reta na forma ax + by + c = #. Multiplicamos y = mx + q por # e passamos tudo para um lado.": {
     "fr": "La formule demande la droite sous la forme ax + by + c = #. Nous multiplions y = mx + q par # et passons tout d’un côté.",
@@ -2294,6 +2302,10 @@
   "A ordem é V_B − V_A (final menos inicial); invertida, o sinal troca.": {
     "fr": "L’ordre est V_B − V_A (final moins initial) ; inversé, le signe change.",
     "en": "The order is V_B − V_A (final minus initial); reversed, the sign flips."
+  },
+  "A ordem é direita MENOS esquerda; você fez o contrário e o sinal inverteu.": {
+    "fr": "L’ordre est droite MOINS gauche ; vous avez fait l’inverse et le signe s’est inversé.",
+    "en": "The order is right MINUS left; you did the opposite and the sign flipped."
   },
   "A ordem é: parênteses, depois potências, depois multiplicação e divisão, e por fim adição e subtração.": {
     "fr": "L’ordre est : parenthèses, puis puissances, puis multiplication et division, et enfin addition et soustraction.",
@@ -5611,6 +5623,10 @@
     "fr": "Avec cette valeur le graphe est d’un seul tenant, sans saut à la frontière.",
     "en": "With that value the graph is in one piece, with no jump at the boundary."
   },
+  "Com expoente par, (x − a)^# é positivo dos DOIS lados: o sinal vem só do numerador #.": {
+    "fr": "Avec un exposant pair, (x − a)^# est positif des DEUX côtés : le signe ne vient que du numérateur #.",
+    "en": "With an even exponent, (x − a)^# is positive on BOTH sides: the sign comes only from the numerator #."
+  },
   "Com f positiva, isso é o volume sob a superfície e acima do retângulo.": {
     "fr": "Avec f positive, c’est le volume sous la surface et au-dessus du rectangle.",
     "en": "With f positive, that is the volume under the surface and above the rectangle."
@@ -6179,6 +6195,14 @@
     "fr": "Vérifiez le reste de la division par # : les restes # et # donnent des résultats purement imaginaires, dont la partie réelle est nulle.",
     "en": "Check the remainder of the division by #: remainders # and # give purely imaginary results, whose real part is zero."
   },
+  "Confira o sinal: pela direita, x − a é positivo, e o numerador é #.": {
+    "fr": "Vérifiez le signe : par la droite, x − a est positif, et le numérateur vaut #.",
+    "en": "Check the sign: from the right, x − a is positive, and the numerator is #."
+  },
+  "Confira o sinal: pela esquerda, x − a é negativo, e o numerador é #.": {
+    "fr": "Vérifiez le signe : par la gauche, x − a est négatif, et le numérateur vaut #.",
+    "en": "Check the sign: from the left, x − a is negative, and the numerator is #."
+  },
   "Confira qual coordenada é o cosseno (a horizontal, x) e de que lado do eixo o ponto está nesse quadrante.": {
     "fr": "Vérifiez quelle coordonnée est le cosinus (l’horizontale, x) et de quel côté de l’axe se trouve le point dans ce quadrant.",
     "en": "Check which coordinate is the cosine (the horizontal one, x) and on which side of the axis the point lies in that quadrant."
@@ -6478,6 +6502,10 @@
   "Depois de cancelar sobram TRÊS termos, todos iguais a a² no ponto — o resultado é #a², não a².": {
     "fr": "Après simplification il reste TROIS termes, tous égaux à a² au point — le résultat vaut #a², et non a².",
     "en": "After cancelling, THREE terms are left, all equal to a² at the point — the result is #a², not a²."
+  },
+  "Depois de derivar a potência, não esqueça de multiplicar pela derivada de dentro.": {
+    "fr": "Après avoir dérivé la puissance, n’oubliez pas de multiplier par la dérivée de l’intérieur.",
+    "en": "After differentiating the power, do not forget to multiply by the derivative of the inside."
   },
   "Depois de trocar por u, não esqueça o fator que vem de dx = du/a.": {
     "fr": "Après le changement en u, n’oubliez pas le facteur qui vient de dx = du/a.",
@@ -6803,6 +6831,10 @@
     "fr": "Dérivez V par rapport à t avant de substituer le rayon.",
     "en": "Differentiate V with respect to t before substituting the radius."
   },
+  "Derive a função de fora mantendo o miolo, calcule o miolo em x = # (dá #) e não esqueça de multiplicar por #, a derivada do miolo.": {
+    "fr": "Dérivez la fonction extérieure en gardant l’intérieur, calculez l’intérieur en x = # (cela donne #) et n’oubliez pas de multiplier par #, la dérivée de l’intérieur.",
+    "en": "Differentiate the outer function keeping the inside, evaluate the inside at x = # (it gives #) and do not forget to multiply by #, the derivative of the inside."
+  },
   "Derive a posição para obter a velocidade; a taxa média não precisa de derivada.": {
     "fr": "Dérivez la position pour obtenir la vitesse ; le taux moyen n’a pas besoin de dérivée.",
     "en": "Differentiate the position to get the velocity; the average rate needs no derivative."
@@ -6818,6 +6850,10 @@
   "Derive duas vezes em y, tratando a outra variável como constante: só o termo com y² deixa algo.": {
     "fr": "Dérivez deux fois en y, en traitant l’autre variable comme constante : seul le terme en y² laisse quelque chose.",
     "en": "Differentiate twice in y, treating the other variable as constant: only the y² term leaves anything."
+  },
+  "Derive duas vezes. Cada derivada traz um fator # da cadeia, e na segunda desce o expoente #.": {
+    "fr": "Dérivez deux fois. Chaque dérivation apporte un facteur # de la chaîne, et à la seconde l’exposant # descend.",
+    "en": "Differentiate twice. Each differentiation brings a factor # from the chain, and on the second the exponent # comes down."
   },
   "Derive duas vezes: cada derivada de e^(#x) multiplica por #. Ao todo, #² = #.": {
     "fr": "Dérivez deux fois : chaque dérivée de e^(#x) multiplie par #. En tout, #² = #.",
@@ -9351,6 +9387,10 @@
     "fr": "C’est la courbe de DESCENTE. En partant d’un courant nul, ce qui croît est le complément : un moins l’exponentielle.",
     "en": "That is the DECAY curve. Starting from zero current, what grows is the complement: one minus the exponential."
   },
+  "Essa é a derivada PRIMEIRA no ponto. Falta derivar mais uma vez.": {
+    "fr": "C’est la dérivée PREMIÈRE au point. Il reste à dériver encore une fois.",
+    "en": "That is the FIRST derivative at the point. One more differentiation is missing."
+  },
   "Essa é a derivada PRIMEIRA, a/x. Falta derivar mais uma vez.": {
     "fr": "C’est la dérivée PREMIÈRE, a/x. Il reste à dériver une fois de plus.",
     "en": "That is the FIRST derivative, a/x. One more differentiation is missing."
@@ -10195,6 +10235,14 @@
     "fr": "C’est le k. Ce qui est demandé, c’est m, le terme constant de la seconde équation.",
     "en": "That is the k. What is asked for is m, the constant term of the second equation."
   },
+  "Esse é o lateral do outro lado. Pela direita, x − a é positivo, e o módulo não muda o sinal.": {
+    "fr": "C’est la limite de l’autre côté. Par la droite, x − a est positif, et la valeur absolue ne change pas le signe.",
+    "en": "That is the limit from the other side. From the right, x − a is positive, and the absolute value leaves the sign alone."
+  },
+  "Esse é o lateral do outro lado. Pela esquerda, x − a é negativo, e o módulo troca o sinal.": {
+    "fr": "C’est la limite de l’autre côté. Par la gauche, x − a est négatif, et la valeur absolue change le signe.",
+    "en": "That is the limit from the other side. From the left, x − a is negative, and the absolute value flips the sign."
+  },
   "Esse é o limite no infinito sozinho. Falta subtrair o arco-tangente em #, que é a borda de baixo da integral.": {
     "fr": "C’est la limite à l’infini toute seule. Il reste à soustraire l’arc tangente en #, qui est la borne inférieure de l’intégrale.",
     "en": "That is the limit at infinity on its own. Subtracting the arctangent at #, the lower edge of the integral, is still missing."
@@ -10326,6 +10374,10 @@
   "Esse é o potencial no ponto final. O trabalho é a DIFERENÇA entre os dois potenciais.": {
     "fr": "C’est le potentiel au point d’arrivée. Le travail est la DIFFÉRENCE entre les deux potentiels.",
     "en": "That is the potential at the end point. The work is the DIFFERENCE between the two potentials."
+  },
+  "Esse é o preço, tempo ou quantidade do vértice (a abscissa). A pergunta é pelo valor máximo ou mínimo que acontece ali.": {
+    "fr": "C’est le prix, le temps ou la quantité au sommet (l’abscisse). La question porte sur la valeur maximale ou minimale qui s’y produit.",
+    "en": "That is the price, time or quantity at the vertex (the abscissa). The question asks for the maximum or minimum value occurring there."
   },
   "Esse é o primeiro elemento da diagonal, não o maior. Os três são autovalores: compare-os.": {
     "fr": "C’est le premier élément de la diagonale, pas le plus grand. Les trois sont des valeurs propres : comparez-les.",
@@ -10519,6 +10571,10 @@
     "fr": "C’est la valeur de la fonction elle-même en cet arc, et non celle de la dérivée.",
     "en": "That is the value of the function itself at that arc, not of the derivative."
   },
+  "Esse é o valor da própria função no ponto, não da derivada.": {
+    "fr": "C’est la valeur de la fonction elle-même au point, pas celle de la dérivée.",
+    "en": "That is the value of the function itself at the point, not of the derivative."
+  },
   "Esse é o valor da própria função no ponto, não o da derivada.": {
     "fr": "C’est la valeur de la fonction elle-même au point, et non celle de la dérivée.",
     "en": "That is the value of the function itself at the point, not of the derivative."
@@ -10555,6 +10611,18 @@
     "fr": "C’est la valeur de t = x². Il reste à revenir à x : x = √#.",
     "en": "That is the value of t = x². Going back to x is still missing: x = √#."
   },
+  "Esse é o valor de uma RAIZ, onde a parábola cruza o eixo x — o ponto em que o lucro, a altura ou a área se anulam. O vértice é o ponto extremo, a meio caminho entre as duas raízes.": {
+    "fr": "C’est la valeur d’une RACINE, là où la parabole coupe l’axe des x — le point où le bénéfice, la hauteur ou l’aire s’annulent. Le sommet est le point extrême, à mi-chemin entre les deux racines.",
+    "en": "That is the value of a ROOT, where the parabola crosses the x axis — the point at which the profit, the height or the area vanishes. The vertex is the extreme point, halfway between the two roots."
+  },
+  "Esse é o valor de uma RAIZ, onde a parábola cruza o eixo x. O vértice é o ponto extremo da curva, que fica a meio caminho entre as duas raízes.": {
+    "fr": "C’est la valeur d’une RACINE, là où la parabole coupe l’axe des x. Le sommet est le point extrême de la courbe, à mi-chemin entre les deux racines.",
+    "en": "That is the value of a ROOT, where the parabola crosses the x axis. The vertex is the extreme point of the curve, halfway between the two roots."
+  },
+  "Esse é o valor de x do vértice. A pergunta é pela ordenada, isto é, o y.": {
+    "fr": "C’est la valeur de x du sommet. La question porte sur l’ordonnée, c’est-à-dire y.",
+    "en": "That is the x value of the vertex. The question asks for the ordinate, that is, y."
+  },
   "Esse é o valor de x; o pedido é y. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de x ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
     "en": "That is the value of x; the question asks for y. Check which column belongs to which variable."
@@ -10562,6 +10630,10 @@
   "Esse é o valor de x; o pedido é z. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de x ; c’est z qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
     "en": "That is the value of x; the question asks for z. Check which column belongs to which variable."
+  },
+  "Esse é o valor de y do vértice. A pergunta é pela abscissa, isto é, o x.": {
+    "fr": "C’est la valeur de y du sommet. La question porte sur l’abscisse, c’est-à-dire x.",
+    "en": "That is the y value of the vertex. The question asks for the abscissa, that is, x."
   },
   "Esse é o valor de y. Falta substituir na primeira linha para achar x.": {
     "fr": "C’est la valeur de y. Il reste à la substituer dans la première ligne pour trouver x.",
@@ -10642,6 +10714,10 @@
   "Esse é o valor inicial. O sistema evolui a partir dele, e em t positivo já se moveu.": {
     "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
     "en": "That is the initial value. The system evolves from it, and at positive t it has already moved."
+  },
+  "Esse é o valor máximo ou mínimo (a ordenada). A pergunta é pelo preço, tempo ou quantidade que o produz — a abscissa.": {
+    "fr": "C’est la valeur maximale ou minimale (l’ordonnée). La question porte sur le prix, le temps ou la quantité qui la produit — l’abscisse.",
+    "en": "That is the maximum or minimum value (the ordinate). The question asks for the price, time or quantity that produces it — the abscissa."
   },
   "Esse é o valor no centro. Ele coincide com a média apenas em superfícies planas.": {
     "fr": "C’est la valeur au centre. Elle ne coïncide avec la moyenne que pour des surfaces planes.",
@@ -11015,6 +11091,10 @@
     "fr": "Il manque la conductivité du matériau. C’est elle qui distingue le cuivre de la laine de verre, et l’écart entre les deux dépasse quatre ordres de grandeur.",
     "en": "The conductivity of the material is missing. It is what tells copper from glass wool, and the gap between the two is over four orders of magnitude."
   },
+  "Faltou a derivada da camada mais de dentro: o binômio contribui com #.": {
+    "fr": "Il manque la dérivée de la couche la plus intérieure : le binôme apporte #.",
+    "en": "The derivative of the innermost layer is missing: the binomial contributes #."
+  },
   "Faltou a emissividade, que vale #. Só um corpo negro perfeito irradia com emissividade #.": {
     "fr": "Il manque l’émissivité, qui vaut #. Seul un corps noir parfait rayonne avec une émissivité de #.",
     "en": "The emissivity, which is #, is missing. Only a perfect black body radiates with emissivity #."
@@ -11319,6 +11399,14 @@
     "fr": "Il manque la multiplication par la dérivée intérieure, qui vaut #. Le résultat est # fois plus petit que le bon, et c’est l’étourderie la plus fréquente de la règle de la chaîne.",
     "en": "The multiplication by the inner derivative, which is #, is missing. The result comes out # times smaller than the right one, and it is the most frequent slip of the chain rule."
   },
+  "Faltou multiplicar pela derivada do miolo, que vale #. É o mesmo erro da potência, agora com outra função por fora.": {
+    "fr": "Il manque la multiplication par la dérivée de l’intérieur, qui vaut #. C’est la même erreur que pour la puissance, avec une autre fonction à l’extérieur.",
+    "en": "Multiplying by the derivative of the inside, which is #, is missing. It is the same mistake as with the power, now with a different outer function."
+  },
+  "Faltou multiplicar pela derivada interna, que vale #. Sem ela o resultado fica # vezes menor que o correto — é o erro mais comum da regra da cadeia.": {
+    "fr": "Il manque la multiplication par la dérivée interne, qui vaut #. Sans elle le résultat est # fois trop petit — c’est l’erreur la plus fréquente de la règle de la chaîne.",
+    "en": "Multiplying by the inner derivative, which is #, is missing. Without it the result is # times too small — the most common mistake with the chain rule."
+  },
   "Faltou multiplicar pela gravidade: o empuxo é o PESO do fluido deslocado, em newtons.": {
     "fr": "Il manque la multiplication par la gravité : la poussée est le POIDS du fluide déplacé, en newtons.",
     "en": "Multiplying by gravity is missing: the buoyant force is the WEIGHT of the displaced fluid, in newtons."
@@ -11515,6 +11603,10 @@
     "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
     "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
   },
+  "Faltou o segundo fator #: cada derivada passa pela cadeia, então são #·# = #.": {
+    "fr": "Il manque le second facteur # : chaque dérivation passe par la chaîne, donc cela fait #·# = #.",
+    "en": "The second factor # is missing: each differentiation goes through the chain, so it is #·# = #."
+  },
   "Faltou o sen #°: o ângulo não é #°.": {
     "fr": "Il manque le sin #° : l’angle n’est pas #°.",
     "en": "The sin #° is missing: the angle is not #°."
@@ -11542,6 +11634,14 @@
   "Faltou o sinal negativo. Ao isolar, o termo b passa para o outro lado da igualdade trocando de sinal: x = −b/a.": {
     "fr": "Il manque le signe négatif. En isolant, le terme b passe de l’autre côté de l’égalité en changeant de signe : x = −b/a.",
     "en": "The minus sign is missing. When isolating, the term b moves to the other side of the equality changing sign: x = −b/a."
+  },
+  "Faltou o sinal negativo: a fórmula é x_v = −b/(#a).": {
+    "fr": "Il manque le signe négatif : la formule est x_v = −b/(#a).",
+    "en": "The minus sign is missing: the formula is x_v = −b/(#a)."
+  },
+  "Faltou o sinal negativo: a fórmula é y_v = −Δ/(#a).": {
+    "fr": "Il manque le signe négatif : la formule est y_v = −Δ/(#a).",
+    "en": "The minus sign is missing: the formula is y_v = −Δ/(#a)."
   },
   "Faltou o sinal: ao isolar, o valor inicial passa para o outro lado trocando de sinal, então a conta é −b dividido por a.": {
     "fr": "Il manque le signe : en isolant, la valeur initiale passe de l’autre côté en changeant de signe, le calcul est donc −b divisé par a.",
@@ -11926,6 +12026,10 @@
   "Há um pivô em cada coluna das incógnitas: cada variável fica determinada, e a solução é única.": {
     "fr": "Il y a un pivot dans chaque colonne des inconnues : chaque variable est déterminée, et la solution est unique.",
     "en": "There is a pivot in every column of the unknowns: each variable is determined, and the solution is unique."
+  },
+  "Há um salto de altura # no gráfico.": {
+    "fr": "Il y a un saut de hauteur # dans le graphe.",
+    "en": "There is a jump of height # in the graph."
   },
   "I = V/R = # / # em ampères; multiplique por # para mA.": {
     "fr": "I = V/R = # / # en ampères ; multipliez par # pour des mA.",
@@ -12638,6 +12742,10 @@
   "Lados opostos são paralelos: dois ângulos consecutivos são colaterais internos e somam #°.": {
     "fr": "Les côtés opposés sont parallèles : deux angles consécutifs sont des angles internes du même côté et leur somme vaut #°.",
     "en": "Opposite sides are parallel: two consecutive angles are co-interior and add up to #°."
+  },
+  "Laterais diferentes: o limite no ponto não existe.": {
+    "fr": "Limites latérales différentes : la limite au point n’existe pas.",
+    "en": "Different one-sided limits: the limit at the point does not exist."
   },
   "Laterais diferentes: o limite não existe.": {
     "fr": "Limites latérales différentes : la limite n’existe pas.",
@@ -13743,6 +13851,10 @@
     "fr": "En rotation, c’est le moment d’inertie qui divise le moment de force, et non la masse. C’est le dictionnaire du sujet : la masse devient inertie, la force devient moment de force, l’accélération devient accélération angulaire.",
     "en": "In rotation it is the moment of inertia that divides the torque, not the mass. It is the dictionary of this topic: mass becomes inertia, force becomes torque, acceleration becomes angular acceleration."
   },
+  "Na segunda derivada desce o novo expoente, #, não # de novo.": {
+    "fr": "À la dérivée seconde c’est le nouvel exposant, #, qui descend, pas # de nouveau.",
+    "en": "In the second derivative the new exponent, #, comes down, not # again."
+  },
   "Na segunda derivada o fator # sai de novo pela cadeia: fica #·# = #, não #.": {
     "fr": "À la dérivée seconde, le facteur # sort de nouveau par la chaîne : cela fait #·# = #, et non #.",
     "en": "In the second derivative the factor # comes out again by the chain: it makes #·# = #, not #."
@@ -13750,6 +13862,10 @@
   "Na semelhança de razão k, cada comprimento é multiplicado por k.": {
     "fr": "Dans la similarité de rapport k, chaque longueur est multipliée par k.",
     "en": "In the similarity of ratio k, each length is multiplied by k."
+  },
+  "Na sentença da direita, x está AO QUADRADO: substitua o ponto e eleve antes de multiplicar pelo coeficiente.": {
+    "fr": "Dans l’expression de droite, x est AU CARRÉ : remplacez par le point et élevez avant de multiplier par le coefficient.",
+    "en": "In the right-hand expression, x is SQUARED: substitute the point and square before multiplying by the coefficient."
   },
   "Na soma de Riemann, Δx = (b − a)/n muda de sinal quando se percorre o intervalo ao contrário.": {
     "fr": "Dans la somme de Riemann, Δx = (b − a)/n change de signe quand on parcourt l’intervalle à l’envers.",
@@ -14347,6 +14463,10 @@
     "fr": "Numérateur et dénominateur ont le même degré : la limite est le rapport des coefficients, #/#, et non #.",
     "en": "Numerator and denominator have the same degree: the limit is the ratio of the coefficients, #/#, not #."
   },
+  "Numerador negativo sobre um denominador negativo quase zero.": {
+    "fr": "Numérateur négatif sur un dénominateur négatif presque nul.",
+    "en": "A negative numerator over a negative denominator that is nearly zero."
+  },
   "Numerador negativo sobre um denominador positivo quase zero.": {
     "fr": "Numérateur negativo sur un dénominateur positivo presque nul.",
     "en": "A negativo numerator over a positivo denominator close to zero."
@@ -14927,6 +15047,14 @@
     "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM.",
     "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM."
   },
+  "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
+    "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
+    "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM. First find the abscissa of the vertex, then put it back into the function: that is the greatest or the least value."
+  },
+  "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO. Comece calculando x_v = −b/(#a), com a = # e b = #.": {
+    "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM. Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
+    "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM. Start by computing x_v = −b/(#a), with a = # and b = #."
+  },
   "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO. Troque x por # e resolva a potência primeiro.": {
     "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM. Remplacez x par # et résolvez d’abord la puissance.",
     "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM. Replace x by # and do the power first."
@@ -15459,6 +15587,10 @@
     "fr": "L’exposant doit AUGMENTER de un en intégrant. Ici il a été gardé, ce qui reviendrait à dériver.",
     "en": "The exponent must GO UP by one when integrating. Here it was kept, which would amount to differentiating."
   },
+  "O expoente deve DIMINUIR em um ao derivar. Aqui ele foi mantido, e a potência ficou um grau acima do correto.": {
+    "fr": "L’exposant doit DIMINUER d’une unité à la dérivation. Ici il a été conservé, et la puissance est d’un degré trop élevée.",
+    "en": "The exponent must DECREASE by one when differentiating. Here it was kept, and the power ended up one degree too high."
+  },
   "O expoente está certo, mas o fatorial ficou um atrás: o denominador é # fatorial, o mesmo número do expoente.": {
     "fr": "L’exposant est juste, mais la factorielle est en retard d’un : le dénominateur est # factorielle, le même nombre que l’exposant.",
     "en": "The exponent is right, but the factorial is one behind: the denominator is # factorial, the same number as the exponent."
@@ -15614,6 +15746,10 @@
   "O grupo sai da contagem da última camada.": {
     "fr": "Le groupe se déduit du compte des électrons de la dernière couche.",
     "en": "The group comes from counting the outer-shell electrons."
+  },
+  "O gráfico emenda sem salto nesse ponto.": {
+    "fr": "Le graphe se raccorde sans saut en ce point.",
+    "en": "The graph joins up with no jump at that point."
   },
   "O gráfico se parte, e nenhum valor no ponto consegue colar as duas pontas.": {
     "fr": "Le graphe se brise, et aucune valeur au point ne parvient à recoller les deux bouts.",
@@ -17131,6 +17267,10 @@
     "fr": "Le terme du milieu est positif, donc le binôme est une SOMME : q porte ce signe.",
     "en": "The middle term is positive, so the binomial is a SUM: q carries that sign."
   },
+  "O termo do módulo não some: ele vale +k ou −k perto do ponto, nunca #.": {
+    "fr": "Le terme en valeur absolue ne disparaît pas : il vaut +k ou −k près du point, jamais #.",
+    "en": "The absolute-value term does not vanish: near the point it equals +k or −k, never #."
+  },
   "O termo em x vem de dois produtos cruzados: #·# e #·#.": {
     "fr": "Le terme en x vient de deux produits croisés : #·# et #·#.",
     "en": "The x term comes from two cross products: #·# and #·#."
@@ -18083,6 +18223,10 @@
     "fr": "Les côtés ne concordent pas : la limite N'EXISTE PAS.",
     "en": "The sides disagree: the limit DOES NOT EXIST."
   },
+  "Os laterais coincidem: o limite existe e o gráfico emenda.": {
+    "fr": "Les limites latérales coïncident : la limite existe et le graphe se raccorde.",
+    "en": "The one-sided limits agree: the limit exists and the graph joins up."
+  },
   "Os laterais são finitos e diferentes: o gráfico pula de um valor para o outro.": {
     "fr": "Les limites latérales sont finies et différentes : le graphe saute d’une valeur à l’autre.",
     "en": "The one-sided limits are finite and different: the graph jumps from one value to the other."
@@ -18574,6 +18718,10 @@
   "Parece que você subtraiu numeradores com numeradores e denominadores com denominadores. O denominador indica o tamanho das partes, não uma quantidade a ser somada — por isso ele não entra na conta. Repare que #/# + #/# daria #/#, ou seja #/#, quando o resultado é #.": {
     "fr": "Il semble que vous ayez combiné numérateurs avec numérateurs et dénominateurs avec dénominateurs. Le dénominateur indique la taille des parts, pas une quantité à additionner — il n’entre donc pas dans le calcul. Remarquez que #/# + #/# donnerait #/#, soit #/#, alors que le résultat vaut #.",
     "en": "It looks like you combined numerators with numerators and denominators with denominators. The denominator says the size of the parts, not an amount to add — so it does not take part in the computation. Notice that #/# + #/# would give #/#, that is #/#, when the result is #."
+  },
+  "Parou na primeira camada. O quadrado e o binômio também derivam: #v e o coeficiente de x.": {
+    "fr": "Vous vous êtes arrêté à la première couche. Le carré et le binôme se dérivent aussi : #v et le coefficient de x.",
+    "en": "You stopped at the first layer. The square and the binomial differentiate too: #v and the coefficient of x."
   },
   "Partimos da divisão proposta.": {
     "fr": "Nous partons de l’opération proposée.",
@@ -19822,6 +19970,10 @@
   "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
     "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
     "en": "If the width is x, L − #x metres are left for the length: the area is x times that. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
+  },
+  "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso. Comece calculando x_v = −b/(#a), com a = # e b = #.": {
+    "fr": "Si la largeur vaut x, il reste L − #x mètres pour la longueur : l’aire vaut x fois cela. Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
+    "en": "If the width is x, L − #x metres are left for the length: the area is x times that. Start by computing x_v = −b/(#a), with a = # and b = #."
   },
   "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso. Troque x por # e resolva a potência primeiro.": {
     "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela. Remplacez x par # et résolvez d’abord la puissance.",
@@ -21551,6 +21703,22 @@
     "fr": "Remplacez x² par t et résolvez. Chaque t positif donne deux racines ; un t négatif n’en donne aucune.",
     "en": "Replace x² by t and solve. Each positive t gives two roots; a negative t gives none."
   },
+  "Três camadas, três fatores: #/(# + v²), depois #v, depois # (com v = #x + #).": {
+    "fr": "Trois couches, trois facteurs : #/(# + v²), puis #v, puis # (avec v = #x + #).",
+    "en": "Three layers, three factors: #/(# + v²), then #v, then # (with v = #x + #)."
+  },
+  "Três camadas, três fatores: #/(# + v²), depois #v, depois # (com v = #x - #).": {
+    "fr": "Trois couches, trois facteurs : #/(# + v²), puis #v, puis # (avec v = #x - #).",
+    "en": "Three layers, three factors: #/(# + v²), then #v, then # (with v = #x - #)."
+  },
+  "Três camadas, três fatores: #/(# + v²), depois #v, depois # (com v = x + #).": {
+    "fr": "Trois couches, trois facteurs : #/(# + v²), puis #v, puis # (avec v = x + #).",
+    "en": "Three layers, three factors: #/(# + v²), then #v, then # (with v = x + #)."
+  },
+  "Três camadas, três fatores: #/(# + v²), depois #v, depois # (com v = x - #).": {
+    "fr": "Trois couches, trois facteurs : #/(# + v²), puis #v, puis # (avec v = x - #).",
+    "en": "Three layers, three factors: #/(# + v²), then #v, then # (with v = x - #)."
+  },
   "Três pirâmides de mesma base e altura preenchem exatamente um prisma.": {
     "fr": "Trois pyramides de même base et hauteur remplissent exactement un prisme.",
     "en": "Three pyramids of the same base and height exactly fill a prism."
@@ -21951,6 +22119,10 @@
     "fr": "Repérez le quadrant par les signes de x et y. arctan(#/#) donne un angle entre −#° et #° ; ajustez en ajoutant #° ou #°.",
     "en": "Find the quadrant from the signs of x and y. arctan(#/#) gives an angle between −#° and #°; adjust by adding #° or #°."
   },
+  "Veja o sinal de cada parte: o numerador é #; pela direita, x − # é positivo, mas elevado a expoente par fica positivo.": {
+    "fr": "Regardez le signe de chaque partie : le numérateur vaut # ; par la droite, x − # est positif, et élevé à un exposant pair il reste positif.",
+    "en": "Look at the sign of each part: the numerator is #; from the right, x − # is positive, and raised to an even exponent it stays positive."
+  },
   "Veja o sinal de cada parte: o numerador é #; pela direita, x − # é positivo.": {
     "fr": "Regardez le signe de chaque partie : le numérateur est # ; à direita, x − # est positivo.",
     "en": "Look at the sign of each part: the numerator is #; from the direita, x − # is positivo."
@@ -22266,6 +22438,14 @@
   "Você usou a inclinação da reta dada: essa é a PARALELA por P. A perpendicular usa −#/m.": {
     "fr": "Vous avez utilisé la pente de la droite donnée : c’est la PARALLÈLE passant par P. La perpendiculaire utilise −#/m.",
     "en": "You used the slope of the given line: that is the PARALLEL through P. The perpendicular uses −#/m."
+  },
+  "Você usou a sentença do lado errado. Pela direita, x é maior que #, então vale a outra sentença do sistema.": {
+    "fr": "Vous avez utilisé l’expression du mauvais côté. Par la droite, x est supérieur à #, c’est donc l’autre expression du système qui vaut.",
+    "en": "You used the expression from the wrong side. From the right, x is greater than #, so the other expression of the system applies."
+  },
+  "Você usou a sentença do lado errado. Pela esquerda, x é menor que #, então vale a outra sentença do sistema.": {
+    "fr": "Vous avez utilisé l’expression du mauvais côté. Par la gauche, x est inférieur à #, c’est donc l’autre expression du système qui vaut.",
+    "en": "You used the expression from the wrong side. From the left, x is less than #, so the other expression of the system applies."
   },
   "Você usou apenas a base menor. Ambas as bases entram, pela média.": {
     "fr": "Vous n’avez utilisé que la petite base. Les deux bases entrent, par la moyenne.",
@@ -23134,6 +23314,10 @@
   "x² foi tratado como #x na substituição.": {
     "fr": "x² a été traité comme #x lors de la substitution.",
     "en": "x² was treated as #x in the substitution."
+  },
+  "x² foi tratado como #x. Elevar ao quadrado é multiplicar x por ele mesmo.": {
+    "fr": "x² a été traité comme #x. Élever au carré, c’est multiplier x par lui-même.",
+    "en": "x² was treated as #x. Squaring means multiplying x by itself."
   },
   "x₁ = x₀ − f(x₀)/f′(x₀). Calcule f e f′ no ponto de partida e substitua.": {
     "fr": "x₁ = x₀ − f(x₀)/f′(x₀). Calculez f et f′ au point de départ et remplacez.",
