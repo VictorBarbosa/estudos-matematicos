@@ -1931,6 +1931,10 @@
     "fr": "La pente : la dérivée au même arc.",
     "en": "The slope: the derivative at the same arc."
   },
+  "A incógnita está embaixo: para isolá-la, DIVIDIMOS o lado conhecido pela razão.": {
+    "fr": "L’inconnue est au dénominateur : pour l’isoler, nous DIVISONS le côté connu par le rapport.",
+    "en": "The unknown is in the denominator: to isolate it, we DIVIDE the known side by the ratio."
+  },
   "A indeterminação #/# NÃO significa que o limite seja zero. Ela indica que a substituição direta não serve e a expressão precisa ser simplificada antes.": {
     "fr": "L’indétermination #/# ne signifie PAS que la limite soit nulle. Elle indique que la substitution directe ne convient pas et que l’expression doit d’abord être simplifiée.",
     "en": "The indeterminate form #/# does NOT mean the limit is zero. It means direct substitution will not do and the expression has to be simplified first."
@@ -2342,6 +2346,10 @@
   "A operação entre os dois produtos é SUBTRAÇÃO, não soma. É a diferença que mede área com sinal.": {
     "fr": "L’opération entre les deux produits est une SOUSTRACTION, pas une addition. C’est la différence qui mesure une aire signée.",
     "en": "The operation between the two products is SUBTRACTION, not addition. It is the difference that measures signed area."
+  },
+  "A operação ficou invertida. Escreva a razão com a incógnita no lugar certo e isole-a: quando ela está embaixo, a conta é uma DIVISÃO.": {
+    "fr": "L’opération est inversée. Écrivez le rapport avec l’inconnue à sa place et isolez-la : quand elle est au dénominateur, le calcul est une DIVISION.",
+    "en": "The operation is upside down. Write the ratio with the unknown in its place and isolate it: when it sits in the denominator, the computation is a DIVISION."
   },
   "A operação ficou invertida: para achar o cateto, MULTIPLICAMOS a hipotenusa pela razão. Dividir seria o caminho para encontrar a hipotenusa a partir do cateto.": {
     "fr": "L’opération est inversée : pour trouver la cathète, on MULTIPLIE l’hypoténuse par le rapport. Diviser serait le chemin pour trouver l’hypoténuse à partir de la cathète.",
@@ -3166,6 +3174,10 @@
   "A razão está invertida: λc = hc/φ = #/φ.": {
     "fr": "Le rapport est inversé : λc = hc/φ = #/φ.",
     "en": "The ratio is upside down: λc = hc/φ = #/φ."
+  },
+  "A razão está trocada. O lado de frente para o ângulo é o OPOSTO, e o que fica encostado nele é o ADJACENTE — confira qual dos dois o enunciado dá e qual ele pede.": {
+    "fr": "Le rapport est inversé. Le côté face à l’angle est l’OPPOSÉ, et celui qui le touche est l’ADJACENT — vérifiez lequel des deux l’énoncé donne et lequel il demande.",
+    "en": "The ratio is swapped. The side facing the angle is the OPPOSITE one, and the side touching it is the ADJACENT one — check which of the two the statement gives and which it asks for."
   },
   "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
@@ -4018,6 +4030,10 @@
   "Acrescentar água não cria nem destrói soluto: os mols são os mesmos. O volume final é o que havia MAIS o que se acrescentou.": {
     "fr": "Ajouter de l’eau ne crée ni ne détruit de soluté : les moles sont les mêmes. Le volume final est ce qu’il y avait PLUS ce qu’on a ajouté.",
     "en": "Adding water neither creates nor destroys solute: the moles are the same. The final volume is what there was PLUS what was added."
+  },
+  "Adjacente sobre hipotenusa é o cosseno.": {
+    "fr": "Adjacent sur hypoténuse, c’est le cosinus.",
+    "en": "Adjacent over hypotenuse is the cosine."
   },
   "Afastar as cargas ENFRAQUECE a força: o fator da distância divide, não multiplica.": {
     "fr": "Éloigner les charges AFFAIBLIT la force : le facteur de distance divise, il ne multiplie pas.",
@@ -10815,6 +10831,10 @@
     "fr": "C’est le reste, pas un coefficient du quotient.",
     "en": "That is the remainder, not a coefficient of the quotient."
   },
+  "Esse é o resultado com o ÂNGULO COMPLEMENTAR, 90° menos o do enunciado. Conte o ângulo a partir da linha que o enunciado nomeia.": {
+    "fr": "C’est le résultat avec l’ANGLE COMPLÉMENTAIRE, 90° moins celui de l’énoncé. Comptez l’angle à partir de la ligne que l’énoncé nomme.",
+    "en": "That is the result with the COMPLEMENTARY ANGLE, 90° minus the one in the statement. Measure the angle from the line the statement names."
+  },
   "Esse é o resultado cru do arco-tangente, que sempre cai entre −#° e #°. É preciso corrigir pelo quadrante, olhando os sinais das componentes.": {
     "fr": "C’est le résultat brut de l’arc tangente, qui tombe toujours entre −#° et #°. Il faut corriger selon le quadrant, en regardant les signes des composantes.",
     "en": "That is the raw output of the arctangent, which always lands between −#° and #°. It must be corrected for the quadrant, by looking at the signs of the components."
@@ -12810,6 +12830,10 @@
   "Isolamos o cosseno.": {
     "fr": "Nous isolons le cosinus.",
     "en": "We isolate the cosine."
+  },
+  "Isolamos o lado procurado multiplicando pelo lado conhecido.": {
+    "fr": "Nous isolons le côté cherché en multipliant par le côté connu.",
+    "en": "We isolate the side we want by multiplying by the known side."
   },
   "Isolamos o segmento procurado.": {
     "fr": "Nous isolons le segment recherché.",
@@ -16407,6 +16431,30 @@
     "fr": "Le k se simplifie ; en prenant la racine des deux côtés (tout est positif entre les charges).",
     "en": "The k cancels; taking the root of both sides (everything is positive between the charges)."
   },
+  "O lado conhecido está de frente para o ângulo dado (OPOSTO) e o procurado está encostado nele (ADJACENTE): os dois são catetos.": {
+    "fr": "Le côté connu fait face à l’angle donné (OPPOSÉ) et celui qu’on cherche le touche (ADJACENT) : ce sont les deux côtés de l’angle droit.",
+    "en": "The known side faces the given angle (OPPOSITE) and the one you want touches it (ADJACENT): both are legs."
+  },
+  "O lado conhecido está de frente para o ângulo dado: é o cateto OPOSTO. O procurado é a hipotenusa, o maior de todos.": {
+    "fr": "Le côté connu est face à l’angle donné : c’est le côté OPPOSÉ. Celui qu’on cherche est l’hypoténuse, le plus grand de tous.",
+    "en": "The known side faces the given angle: it is the OPPOSITE leg. The one you want is the hypotenuse, the longest of all."
+  },
+  "O lado conhecido está encostado no ângulo dado (ADJACENTE) e o procurado está de frente para ele (OPOSTO): os dois são catetos.": {
+    "fr": "Le côté connu touche l’angle donné (ADJACENT) et celui qu’on cherche lui fait face (OPPOSÉ) : ce sont les deux côtés de l’angle droit.",
+    "en": "The known side touches the given angle (ADJACENT) and the one you want faces it (OPPOSITE): both are legs."
+  },
+  "O lado conhecido está encostado no ângulo dado: é o cateto ADJACENTE. O procurado é a hipotenusa, o maior de todos.": {
+    "fr": "Le côté connu touche l’angle donné : c’est le côté ADJACENT. Celui qu’on cherche est l’hypoténuse, le plus grand de tous.",
+    "en": "The known side touches the given angle: it is the ADJACENT leg. The one you want is the hypotenuse, the longest of all."
+  },
+  "O lado conhecido é o maior, de frente para o ângulo reto: é a hipotenusa. O procurado está de frente para o ângulo dado: é o cateto OPOSTO.": {
+    "fr": "Le côté connu est le plus grand, face à l’angle droit : c’est l’hypoténuse. Celui qu’on cherche est face à l’angle donné : c’est le côté OPPOSÉ.",
+    "en": "The known side is the longest, facing the right angle: it is the hypotenuse. The one you want faces the given angle: it is the OPPOSITE leg."
+  },
+  "O lado conhecido é o maior, de frente para o ângulo reto: é a hipotenusa. O procurado está encostado no ângulo dado: é o cateto ADJACENTE.": {
+    "fr": "Le côté connu est le plus grand, face à l’angle droit : c’est l’hypoténuse. Celui qu’on cherche touche l’angle donné : c’est le côté ADJACENT.",
+    "en": "The known side is the longest, facing the right angle: it is the hypotenuse. The one you want touches the given angle: it is the ADJACENT leg."
+  },
   "O lado novo é uma soma: calcule o lado primeiro e só então eleve ao quadrado.": {
     "fr": "Le nouveau côté est une somme : calculez le côté d’abord et seulement ensuite élevez au carré.",
     "en": "The new side is a sum: work out the side first and only then square it."
@@ -18547,9 +18595,17 @@
     "fr": "L’opposée et l’adjacente ensemble donnent la tangente de l’angle.",
     "en": "Opposite and adjacent together give the tangent of the angle."
   },
+  "Oposto sobre adjacente é a tangente.": {
+    "fr": "Opposé sur adjacent, c’est la tangente.",
+    "en": "Opposite over adjacent is the tangent."
+  },
   "Oposto sobre adjacente é a tangente: tg θ = #/#. O ângulo é o arco tangente disso, em graus.": {
     "fr": "Opposée sur adjacente, c’est la tangente : tan θ = #/#. L’angle en est l’arc tangente, en degrés.",
     "en": "Opposite over adjacent is the tangent: tan θ = #/#. The angle is the arctangent of that, in degrees."
+  },
+  "Oposto sobre hipotenusa é o seno.": {
+    "fr": "Opposé sur hypoténuse, c’est le sinus.",
+    "en": "Opposite over hypotenuse is the sine."
   },
   "Ordem trocada: é ∂Q/∂x MENOS ∂P/∂y, não o contrário.": {
     "fr": "Ordre inversé : c’est ∂Q/∂x MOINS ∂P/∂y, et non l’inverse.",

@@ -1,4 +1,5 @@
 import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { exercicioDeCena } from '@core/treino/cenas/cena.gerador';
 import { Razao, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -13,20 +14,20 @@ import {
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'cateto' | 'notavel' | 'altura' | 'angulo' | 'duas-visadas';
+type Pergunta = 'cateto' | 'notavel' | 'altura' | 'angulo' | 'duas-visadas' | 'cena';
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
-      return rng.escolher<Pergunta>(['cateto', 'notavel']);
+      return rng.escolher<Pergunta>(['cateto', 'notavel', 'cena']);
     case 'medio':
-      return rng.escolher<Pergunta>(['cateto', 'notavel', 'altura']);
+      return rng.escolher<Pergunta>(['cateto', 'notavel', 'altura', 'cena']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['cateto', 'altura']);
+      return rng.escolher<Pergunta>(['cateto', 'altura', 'cena']);
     // Dos lados para o ângulo, e a torre vista de dois pontos: as duas
     // perguntas que pedem montar o triângulo, não só aplicar a razão.
     case 'extremo':
-      return rng.escolher<Pergunta>(['angulo', 'duas-visadas', 'cateto']);
+      return rng.escolher<Pergunta>(['angulo', 'duas-visadas', 'cateto', 'cena']);
   }
 }
 
@@ -46,6 +47,17 @@ export const geradorTriangulo: GeradorExercicio<number> = {
     if (pergunta === 'notavel') return exercicioNotavel(nivel, rng);
     if (pergunta === 'altura') return exercicioAltura(nivel, rng);
     if (pergunta === 'duas-visadas') return exercicioDuasVisadas(nivel, rng);
+    /*
+     * As cenas: a história onde o triângulo aparece.
+     *
+     * O motor devolve `null` quando a cena sorteada não fecha com o ângulo —
+     * defeito de dados que `cenas.spec.ts` persegue. Aqui a pergunta cai para
+     * o cateto de sempre, em vez de o exercício não sair.
+     */
+    if (pergunta === 'cena') {
+      const daCena = exercicioDeCena(nivel, rng);
+      if (daCena !== null) return daCena;
+    }
 
     // Múltiplos de 5°: no fácil, entre 15° e 75°. Os notáveis continuam
     // aparecendo, mas não são os únicos — era isso que limitava o tópico a

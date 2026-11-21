@@ -255,3 +255,38 @@ export function enunciadoDoMoldePorIdioma(
     },
   };
 }
+
+/**
+ * Partes coladas, cada uma com os valores da sua língua.
+ *
+ * `enunciadoComSufixos` cola as partes mas dá o mesmo valor às três línguas;
+ * `enunciadoDoMoldePorIdioma` dá o valor de cada língua mas não cola nada. O
+ * enunciado montado por cena — a história, depois a pergunta, depois o modo de
+ * responder — precisa das duas coisas ao mesmo tempo: a pergunta nomeia o lado
+ * procurado («a altura que a escada alcança na parede» / «la hauteur que
+ * l'échelle atteint sur le mur»), e esse nome é diferente em cada língua.
+ *
+ * A dica vem do molde PRINCIPAL, como nas outras: é dele que ela fala.
+ */
+export function enunciadoComSufixosPorIdioma(
+  molde: MoldeDeEnunciado,
+  sufixos: readonly MoldeDeEnunciado[],
+  valores: ValoresPorIdioma,
+): EnunciadoTrilingue {
+  const juntar = (idioma: Idioma): string =>
+    [molde, ...sufixos]
+      .map((parte) => textoDoMolde(parte, valores[idioma], idioma).trim())
+      .filter((texto) => texto.length > 0)
+      .join(' ');
+
+  const base = enunciadoDoMoldePorIdioma(molde, valores);
+
+  return {
+    enunciado: juntar('pt'),
+    dica: base.dica,
+    traducoes: {
+      fr: { enunciado: juntar('fr'), dica: base.traducoes.fr?.dica },
+      en: { enunciado: juntar('en'), dica: base.traducoes.en?.dica },
+    },
+  };
+}

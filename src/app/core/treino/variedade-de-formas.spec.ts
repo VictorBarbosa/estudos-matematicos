@@ -158,7 +158,13 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'trajetoria-balistica': [2, 3, 4, 2],
   'transferencia-de-calor': [13, 22, 35, 9],
   'transformacoes-de-graficos': [2, 4, 3, 2],
-  'triangulo-retangulo': [5, 7, 3, 4],
+  /*
+   * 20/11/2026: o motor de cenas entrou no tópico e as formas subiram de
+   * 5/7/3/4 para 8/10/6/7 — uma cena, com três perguntas. Cada cena nova
+   * acrescenta tantas formas quantas forem as perguntas dela, e o número
+   * volta a ser remedido a cada lote.
+   */
+  'triangulo-retangulo': [8, 10, 6, 7],
   'vetores-no-espaco': [5, 9, 9, 2],
   'vetores-no-plano': [2, 3, 3, 2],
   'vizinhancas-e-infinito': [2, 3, 2, 1],

@@ -22,7 +22,16 @@
 import { readFileSync } from 'node:fs';
 import { globSync } from 'node:fs';
 
-const ARQUIVOS = globSync('src/app/features/**/*.ts').filter((a) => !a.endsWith('.spec.ts'));
+/*
+ * Os geradores vivem em `features`, e o motor de cenas vive em
+ * `core/treino/cenas` — é ele que mais injeta, porque a cena põe o nome de
+ * cada lado na lacuna. Varrer só `features` deixaria cego exatamente o lugar
+ * onde a palavra portuguesa tem mais chance de passar.
+ */
+const ARQUIVOS = [
+  ...globSync('src/app/features/**/*.ts'),
+  ...globSync('src/app/core/treino/**/*.ts'),
+].filter((a) => !a.endsWith('.spec.ts'));
 
 const CHAMADA =
   /(?:textoDoMolde|enunciadoDoMolde|textosDoMolde|traducoesDoMolde|enunciadoComSufixos)\s*\(/g;

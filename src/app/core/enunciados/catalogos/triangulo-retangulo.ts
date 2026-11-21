@@ -32,8 +32,10 @@ import etrianguloRetanguloMoldesCatetoOpostoA60 from '@core/enunciados/enunciado
 import etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-da-torre-por-dois-angulos.json';
 import etrianguloRetanguloMoldesAlturaDoPoste from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-poste.json';
 import etrianguloRetanguloMoldesAlturaDoPredio from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-predio.json';
+import etrianguloRetanguloMoldesCenaEscadaParede from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-escada-parede.json';
 import etrianguloRetanguloMoldesIsoscelesCateto from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-cateto.json';
 import etrianguloRetanguloMoldesIsoscelesHipotenusa from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-hipotenusa.json';
+import etrianguloRetanguloMoldesPerguntaLado from '@core/enunciados/enunciados/triangulo-retangulo/moldes/pergunta-lado.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
@@ -63,6 +65,8 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', forma: 'altura-da-torre-por-dois-angulos', conteudo: etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos },
   { topico: 'triangulo-retangulo', forma: 'altura-do-poste', conteudo: etrianguloRetanguloMoldesAlturaDoPoste },
   { topico: 'triangulo-retangulo', forma: 'altura-do-predio', conteudo: etrianguloRetanguloMoldesAlturaDoPredio },
+  { topico: 'triangulo-retangulo', forma: 'cena-escada-parede', conteudo: etrianguloRetanguloMoldesCenaEscadaParede },
   { topico: 'triangulo-retangulo', forma: 'isosceles-cateto', conteudo: etrianguloRetanguloMoldesIsoscelesCateto },
   { topico: 'triangulo-retangulo', forma: 'isosceles-hipotenusa', conteudo: etrianguloRetanguloMoldesIsoscelesHipotenusa },
+  { topico: 'triangulo-retangulo', forma: 'pergunta-lado', conteudo: etrianguloRetanguloMoldesPerguntaLado },
 ];

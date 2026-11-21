@@ -34,11 +34,17 @@ const AMOSTRAS = 6;
  * para que uma mudança de gerador que invente frases novas apareça aqui, em vez
  * de aparecer na tela de quem estuda em francês.
  *
- * O trabalho terminou: passos em 3 139/3 144 e dicas em 1 114/1 128. As
- * dezenove frases que faltam são NOTAÇÃO PURA — «p = mv», «ΔU = Q − W»,
- * «# × # = #» —, e notação não se traduz: uma entrada cuja tradução repete a
- * chave é rejeitada pelo guarda «cada entrada tem francês e inglês de verdade».
- * Por isso os pisos param pouco abaixo de 1, e não em 1.
+ * O trabalho terminou, e os pisos são 1 — com a conta feita sobre o que de
+ * fato se traduz. Duas coisas saem do denominador, e cada uma por um motivo
+ * que estava escondido atrás de um número quebrado:
+ *
+ * - **notação pura** («p = mv», «# × # = #»): fórmula escrita no campo de
+ *   texto. Não muda de idioma, e uma entrada cujo francês repetisse a chave é
+ *   recusada pelo guarda das entradas vazias — ficaria para sempre na conta
+ *   como dívida que ninguém pode pagar;
+ * - **a dica que vem de MOLDE** e o diagnóstico que traz `diagnosticoTraducoes`:
+ *   já chegam traduzidos do arquivo. Exigi-los aqui mandaria escrever a mesma
+ *   frase duas vezes, e a segunda cópia seria a que envelhece.
  *
  * Como se traduziu, para quem precisar repetir em frases novas: por FAMÍLIA, e
  * não por linha. As frases de um tópico são variações de poucos moldes —
@@ -46,8 +52,8 @@ const AMOSTRAS = 6;
  * a notação —, então escrever as frases de um tópico de cada vez rende muito
  * mais que percorrer a lista inteira.
  */
-const PISO_DOS_PASSOS = 0.998;
-const PISO_DAS_DICAS = 0.987;
+const PISO_DOS_PASSOS = 1;
+const PISO_DAS_DICAS = 1;
 
 interface Frases {
   readonly passos: Set<string>;
@@ -72,10 +78,21 @@ function coletar(): Frases {
               passos.add(normalizarTexto(passo.nota));
             }
           }
-          if (exercicio.dica) {
+          /*
+           * A dica que vem de MOLDE já chega traduzida, e o dicionário não é o
+           * lugar dela: exigi-la aqui obrigaria a escrever duas vezes a mesma
+           * frase — uma no arquivo do enunciado, nas três línguas, e outra no
+           * dicionário — e a segunda cópia seria a que envelhece. O que esta
+           * medida persegue é a frase escrita em TypeScript, que sem o
+           * dicionário chega à tela francesa em português.
+           */
+          if (exercicio.dica && exercicio.traducoes?.fr?.dica === undefined) {
             dicas.add(normalizarTexto(exercicio.dica));
           }
           for (const armadilha of exercicio.armadilhas) {
+            if (armadilha.diagnosticoTraducoes !== undefined) {
+              continue;
+            }
             diagnosticos.add(normalizarTexto(armadilha.diagnostico));
           }
         }
@@ -86,8 +103,28 @@ function coletar(): Frases {
   return { passos, dicas, diagnosticos };
 }
 
-const FRASES = coletar();
+const TODAS = coletar();
+
+/** Só as frases com texto: notação pura não entra na conta. */
+const FRASES: Frases = {
+  passos: new Set([...TODAS.passos].filter(temTextoTraduzivel)),
+  dicas: new Set([...TODAS.dicas].filter(temTextoTraduzivel)),
+  diagnosticos: new Set([...TODAS.diagnosticos].filter(temTextoTraduzivel)),
+};
 const DICIONARIO = dicionario as Readonly<Record<string, { fr?: string; en?: string }>>;
+
+/**
+ * A frase tem texto para traduzir?
+ *
+ * `p = mv`, `Ec = mv²/#`, `# × # = #` são FÓRMULA escrita no campo de texto,
+ * e notação não muda de idioma: uma entrada cujo francês repetisse a chave é
+ * recusada pelo guarda das entradas vazias, logo essas frases nunca podem ser
+ * cobertas — e contá-las no denominador empurra a medida para baixo sem que
+ * exista trabalho a fazer. A régua é ter uma palavra de quatro letras ou mais.
+ */
+function temTextoTraduzivel(frase: string): boolean {
+  return /[A-Za-zÀ-ÿ]{4,}/.test(frase);
+}
 
 function cobertos(frases: Set<string>): number {
   return [...frases].filter((frase) => DICIONARIO[frase] !== undefined).length;
