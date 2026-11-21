@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} estica a corda de uma barraca até uma estaca, formando {dados-calculo.angulo}° com o chão.",
-    "fr": "{dados-calculo.pessoa} tend la corde d'une tente jusqu'à un piquet, formant {dados-calculo.angulo}° avec le sol.",
-    "en": "{dados-calculo.pessoa} pulls a tent rope down to a peg, making {dados-calculo.angulo}° with the ground."
+    "br": "{dados-calculo.pessoa} estica a corda de uma barraca até uma estaca no chão.",
+    "fr": "{dados-calculo.pessoa} tend la corde d'une tente jusqu'à un piquet planté au sol.",
+    "en": "{dados-calculo.pessoa} pulls a tent rope down to a peg in the ground."
   },
   "dica": {
-    "br": "A corda é a hipotenusa; a altura do ponto de amarração é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância até a estaca é o adjacente.",
-    "fr": "La corde est l'hypoténuse ; la hauteur du point d'attache est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance au piquet est le côté adjacent.",
-    "en": "The rope is the hypotenuse; the height of the tie point is the leg opposite the {dados-calculo.angulo}° angle; the distance to the peg is the adjacent leg."
+    "br": "A corda é a hipotenusa; a altura do ponto de amarração é o cateto oposto ao ângulo com o chão; a distância até a estaca é o adjacente.",
+    "fr": "La corde est l'hypoténuse ; la hauteur du point d'attache est le côté opposé à l'angle avec le sol ; la distance au piquet est le côté adjacent.",
+    "en": "The rope is the hypotenuse; the height of the tie point is the leg opposite the angle with the ground; the distance to the peg is the adjacent leg."
   }
 }

@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} instala uma escada rolante que sobe fazendo {dados-calculo.angulo}° com o chão.",
-    "fr": "{dados-calculo.pessoa} installe un escalier mécanique qui monte en faisant {dados-calculo.angulo}° avec le sol.",
-    "en": "{dados-calculo.pessoa} installs an escalator that rises at {dados-calculo.angulo}° to the ground."
+    "br": "{dados-calculo.pessoa} instala uma escada rolante entre dois pisos.",
+    "fr": "{dados-calculo.pessoa} installe un escalier mécanique entre deux étages.",
+    "en": "{dados-calculo.pessoa} installs an escalator between two floors."
   },
   "dica": {
-    "br": "A escada rolante é a hipotenusa; a altura entre os pisos é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o comprimento no chão é o adjacente.",
-    "fr": "L'escalier mécanique est l'hypoténuse ; la hauteur entre les étages est le côté opposé à l'angle de {dados-calculo.angulo}° ; la longueur au sol est le côté adjacent.",
-    "en": "The escalator is the hypotenuse; the height between floors is the leg opposite the {dados-calculo.angulo}° angle; the length along the ground is the adjacent leg."
+    "br": "A escada rolante é a hipotenusa; a altura entre os pisos é o cateto oposto ao ângulo com o chão; o comprimento no chão é o adjacente.",
+    "fr": "L'escalier mécanique est l'hypoténuse ; la hauteur entre les étages est le côté opposé à l'angle avec le sol ; la longueur au sol est le côté adjacent.",
+    "en": "The escalator is the hypotenuse; the height between floors is the leg opposite the angle with the ground; the length along the ground is the adjacent leg."
   }
 }

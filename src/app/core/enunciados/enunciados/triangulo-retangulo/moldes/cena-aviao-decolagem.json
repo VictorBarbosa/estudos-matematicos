@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} mantém o avião subindo em linha reta, fazendo {dados-calculo.angulo}° com a pista horizontal.",
-    "fr": "{dados-calculo.pessoa} maintient l'avion en montée rectiligne, à {dados-calculo.angulo}° de la piste horizontale.",
-    "en": "{dados-calculo.pessoa} keeps the plane climbing in a straight line at {dados-calculo.angulo}° to the horizontal runway."
+    "br": "{dados-calculo.pessoa} mantém o avião subindo em linha reta depois da decolagem.",
+    "fr": "{dados-calculo.pessoa} maintient l'avion en montée rectiligne après le décollage.",
+    "en": "{dados-calculo.pessoa} keeps the plane climbing in a straight line after take-off."
   },
   "dica": {
-    "br": "A trajetória é a hipotenusa; a altitude ganha é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o avanço sobre o solo é o adjacente.",
-    "fr": "La trajectoire est l'hypoténuse ; l'altitude gagnée est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'avancée au sol est le côté adjacent.",
-    "en": "The flight path is the hypotenuse; the altitude gained is the leg opposite the {dados-calculo.angulo}° angle; the ground advance is the adjacent leg."
+    "br": "A trajetória é a hipotenusa; a altitude ganha é o cateto oposto ao ângulo com a horizontal; o avanço sobre o solo é o adjacente.",
+    "fr": "La trajectoire est l'hypoténuse ; l'altitude gagnée est le côté opposé à l'angle avec l'horizontale ; l'avancée au sol est le côté adjacent.",
+    "en": "The flight path is the hypotenuse; the altitude gained is the leg opposite the angle with the horizontal; the ground advance is the adjacent leg."
   }
 }

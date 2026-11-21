@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} levanta um telhado de uma água, cuja inclinação faz {dados-calculo.angulo}° com a horizontal.",
-    "fr": "{dados-calculo.pessoa} monte une toiture à un seul pan, dont la pente fait {dados-calculo.angulo}° avec l'horizontale.",
-    "en": "{dados-calculo.pessoa} puts up a single-slope roof whose pitch makes {dados-calculo.angulo}° with the horizontal."
+    "br": "{dados-calculo.pessoa} levanta um telhado de uma água.",
+    "fr": "{dados-calculo.pessoa} monte une toiture à un seul pan.",
+    "en": "{dados-calculo.pessoa} puts up a single-slope roof."
   },
   "dica": {
-    "br": "O caibro é a hipotenusa; a altura ganha do beiral à cumeeira é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o vão horizontal é o adjacente.",
-    "fr": "Le chevron est l'hypoténuse ; la hauteur gagnée de l'avant-toit au faîtage est le côté opposé à l'angle de {dados-calculo.angulo}° ; la portée horizontale est le côté adjacent.",
-    "en": "The rafter is the hypotenuse; the height gained from the eaves to the ridge is the leg opposite the {dados-calculo.angulo}° angle; the horizontal span is the adjacent leg."
+    "br": "O caibro é a hipotenusa; a altura ganha do beiral à cumeeira é o cateto oposto ao ângulo com a horizontal; o vão horizontal é o adjacente.",
+    "fr": "Le chevron est l'hypoténuse ; la hauteur gagnée de l'avant-toit au faîtage est le côté opposé à l'angle avec l'horizontale ; la portée horizontale est le côté adjacent.",
+    "en": "The rafter is the hypotenuse; the height gained from the eaves to the ridge is the leg opposite the angle with the horizontal; the horizontal span is the adjacent leg."
   }
 }

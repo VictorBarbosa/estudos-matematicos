@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "Uma pipa está presa por uma linha esticada que faz um ângulo de {dados-calculo.angulo}° com o chão.",
-    "fr": "Un cerf-volant est retenu par un fil tendu qui fait un angle de {dados-calculo.angulo}° avec le sol.",
-    "en": "A kite is held by a taut line that makes an angle of {dados-calculo.angulo}° with the ground."
+    "br": "Uma pipa é segurada por uma linha esticada.",
+    "fr": "Un cerf-volant est retenu par un fil tendu.",
+    "en": "A kite is held by a taut line."
   },
   "dica": {
-    "br": "A linha é a hipotenusa; a altura da pipa é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância no chão é o adjacente.",
-    "fr": "Le fil est l'hypoténuse ; la hauteur du cerf-volant est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance au sol est le côté adjacent.",
-    "en": "The line is the hypotenuse; the height of the kite is the leg opposite the {dados-calculo.angulo}° angle; the distance along the ground is the adjacent leg."
+    "br": "A linha é a hipotenusa; a altura da pipa é o cateto oposto ao ângulo com o chão; a distância no chão é o adjacente.",
+    "fr": "Le fil est l'hypoténuse ; la hauteur du cerf-volant est le côté opposé à l'angle avec le sol ; la distance au sol est le côté adjacent.",
+    "en": "The line is the hypotenuse; the height of the kite is the leg opposite the angle with the ground; the distance along the ground is the adjacent leg."
   }
 }

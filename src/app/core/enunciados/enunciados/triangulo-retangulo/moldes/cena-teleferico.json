@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} acompanha o cabo de um teleférico que sobe fazendo {dados-calculo.angulo}° com a horizontal.",
-    "fr": "{dados-calculo.pessoa} suit le câble d'un téléphérique qui monte en faisant {dados-calculo.angulo}° avec l'horizontale.",
-    "en": "{dados-calculo.pessoa} follows the cable of a cable car that climbs at {dados-calculo.angulo}° to the horizontal."
+    "br": "{dados-calculo.pessoa} acompanha o cabo de um teleférico que sobe a encosta.",
+    "fr": "{dados-calculo.pessoa} suit le câble d'un téléphérique qui monte le versant.",
+    "en": "{dados-calculo.pessoa} follows the cable of a cable car climbing the hillside."
   },
   "dica": {
-    "br": "O cabo é a hipotenusa; a altura ganha é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o avanço horizontal é o adjacente.",
-    "fr": "Le câble est l'hypoténuse ; la hauteur gagnée est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'avancée horizontale est le côté adjacent.",
-    "en": "The cable is the hypotenuse; the height gained is the leg opposite the {dados-calculo.angulo}° angle; the horizontal advance is the adjacent leg."
+    "br": "O cabo é a hipotenusa; a altura ganha é o cateto oposto ao ângulo com a horizontal; o avanço horizontal é o adjacente.",
+    "fr": "Le câble est l'hypoténuse ; la hauteur gagnée est le côté opposé à l'angle avec l'horizontale ; l'avancée horizontale est le côté adjacent.",
+    "en": "The cable is the hypotenuse; the height gained is the leg opposite the angle with the horizontal; the horizontal advance is the adjacent leg."
   }
 }

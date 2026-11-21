@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.conhecido} mede {dados-calculo.valor} {dados-calculo.unidade} e {dados-calculo.conhecido2} mede {dados-calculo.valor2} {dados-calculo.unidade}. Quantos graus mede o ângulo que {dados-calculo.objeto} faz com {dados-calculo.referencia}?",
+    "fr": "{dados-calculo.conhecido} mesure {dados-calculo.valor} {dados-calculo.unidade} et {dados-calculo.conhecido2} mesure {dados-calculo.valor2} {dados-calculo.unidade}. Combien de degrés mesure l'angle que {dados-calculo.objeto} fait avec {dados-calculo.referencia} ?",
+    "en": "{dados-calculo.conhecido} measures {dados-calculo.valor} {dados-calculo.unidade} and {dados-calculo.conhecido2} measures {dados-calculo.valor2} {dados-calculo.unidade}. How many degrees is the angle {dados-calculo.objeto} makes with {dados-calculo.referencia}?"
+  }
+}

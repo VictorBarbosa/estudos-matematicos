@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} observa a sombra de uma árvore quando os raios do sol fazem {dados-calculo.angulo}° com o chão.",
-    "fr": "{dados-calculo.pessoa} observe l'ombre d'un arbre lorsque les rayons du soleil font {dados-calculo.angulo}° avec le sol.",
-    "en": "{dados-calculo.pessoa} looks at the shadow of a tree when the sun's rays make {dados-calculo.angulo}° with the ground."
+    "br": "{dados-calculo.pessoa} observa a sombra que uma árvore projeta no chão.",
+    "fr": "{dados-calculo.pessoa} observe l'ombre qu'un arbre projette sur le sol.",
+    "en": "{dados-calculo.pessoa} looks at the shadow a tree casts on the ground."
   },
   "dica": {
-    "br": "A altura da árvore é o cateto oposto ao ângulo de {dados-calculo.angulo}°, e a sombra no chão é o cateto adjacente.",
-    "fr": "La hauteur de l'arbre est le côté opposé à l'angle de {dados-calculo.angulo}°, et l'ombre au sol est le côté adjacent.",
-    "en": "The height of the tree is the leg opposite the {dados-calculo.angulo}° angle, and the shadow on the ground is the adjacent leg."
+    "br": "A altura da árvore é o cateto oposto ao ângulo com o chão, e a sombra no chão é o cateto adjacente.",
+    "fr": "La hauteur de l'arbre est le côté opposé à l'angle avec le sol, et l'ombre au sol est le côté adjacent.",
+    "en": "The height of the tree is the leg opposite the angle with the ground, and the shadow on the ground is the adjacent leg."
   }
 }

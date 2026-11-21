@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "Uma escada está apoiada numa parede e faz um ângulo de {dados-calculo.angulo}° com o chão.",
-    "fr": "Une échelle est appuyée contre un mur et fait un angle de {dados-calculo.angulo}° avec le sol.",
-    "en": "A ladder leans against a wall and makes an angle of {dados-calculo.angulo}° with the ground."
+    "br": "{dados-calculo.pessoa} apoia uma escada numa parede.",
+    "fr": "{dados-calculo.pessoa} appuie une échelle contre un mur.",
+    "en": "{dados-calculo.pessoa} leans a ladder against a wall."
   },
   "dica": {
-    "br": "A escada é a hipotenusa; a altura na parede é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o chão é o cateto adjacente.",
-    "fr": "L'échelle est l'hypoténuse ; la hauteur sur le mur est le côté opposé à l'angle de {dados-calculo.angulo}° ; le sol est le côté adjacent.",
-    "en": "The ladder is the hypotenuse; the height on the wall is the leg opposite the {dados-calculo.angulo}° angle; the ground is the adjacent leg."
+    "br": "A escada é a hipotenusa; a altura na parede é o cateto oposto ao ângulo com o chão; o chão é o cateto adjacente.",
+    "fr": "L'échelle est l'hypoténuse ; la hauteur sur le mur est le côté opposé à l'angle avec le sol ; le sol est le côté adjacent.",
+    "en": "The ladder is the hypotenuse; the height on the wall is the leg opposite the angle with the ground; the ground is the adjacent leg."
   }
 }

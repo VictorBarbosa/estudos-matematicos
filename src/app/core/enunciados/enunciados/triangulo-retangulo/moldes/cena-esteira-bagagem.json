@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} regula uma esteira que leva bagagem para o porão do avião, inclinada {dados-calculo.angulo}° em relação ao chão.",
-    "fr": "{dados-calculo.pessoa} règle un tapis qui monte les bagages vers la soute, incliné de {dados-calculo.angulo}° par rapport au sol.",
-    "en": "{dados-calculo.pessoa} sets a belt loader that carries luggage up to the hold, tilted {dados-calculo.angulo}° from the ground."
+    "br": "{dados-calculo.pessoa} regula a esteira que leva a bagagem até o porão do avião.",
+    "fr": "{dados-calculo.pessoa} règle le tapis qui monte les bagages vers la soute de l'avion.",
+    "en": "{dados-calculo.pessoa} sets the belt loader that carries luggage up to the plane's hold."
   },
   "dica": {
-    "br": "A esteira é a hipotenusa; a altura do porão é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância no chão é o adjacente.",
-    "fr": "Le tapis est l'hypoténuse ; la hauteur de la soute est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance au sol est le côté adjacent.",
-    "en": "The belt is the hypotenuse; the height of the hold is the leg opposite the {dados-calculo.angulo}° angle; the distance along the ground is the adjacent leg."
+    "br": "A esteira é a hipotenusa; a altura do porão é o cateto oposto ao ângulo com o chão; a distância no chão é o adjacente.",
+    "fr": "Le tapis est l'hypoténuse ; la hauteur de la soute est le côté opposé à l'angle avec le sol ; la distance au sol est le côté adjacent.",
+    "en": "The belt is the hypotenuse; the height of the hold is the leg opposite the angle with the ground; the distance along the ground is the adjacent leg."
   }
 }

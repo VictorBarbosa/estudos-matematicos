@@ -30,6 +30,12 @@ import { Limites } from '@core/treino/cenas/faixas';
  * `quel/quelle`.
  */
 
+/** A linha com que o ângulo é formado, escrita em cada língua. */
+export const REFERENCIA_ESCRITA: Readonly<Record<'chao' | 'horizontal', Sintagma>> = {
+  chao: { pt: 'o chão', fr: 'le sol', en: 'the ground' },
+  horizontal: { pt: 'a horizontal', fr: "l'horizontale", en: 'the horizontal' },
+};
+
 /** Uma expressão nominal escrita por extenso em cada língua. */
 export interface Sintagma {
   readonly pt: string;
@@ -43,6 +49,14 @@ export interface Sintagma {
  * O nome diz o papel do lado PROCURADO e o do lado CONHECIDO, nessa ordem.
  */
 export type Forma =
+  /**
+   * O ângulo, a partir dos dois catetos.
+   *
+   * É a pergunta que o enunciado NUNCA pode fazer sem dizer com o que o ângulo
+   * é formado — «qual é o ângulo?» sozinho não tem resposta. Por isso a
+   * pergunta nomeia a linha de referência da cena e o objeto que a encontra.
+   */
+  | 'angulo'
   | 'vertical-por-inclinado'
   | 'horizontal-por-inclinado'
   | 'vertical-por-horizontal'
@@ -125,7 +139,7 @@ export const CENAS: readonly Cena[] = [
     },
     unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
     profissoes: ['pedreiro', 'bombeira', 'eletricista', 'padeiro', 'pintora'],
     /*
      * Escada de verdade: entre 2 m e 10 m, inclinada entre 55° e 78°. Abaixo
@@ -166,7 +180,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
     profissoes: ['arquiteta', 'engenheiro', 'pedreiro'],
     limites: {
       vertical: [0.3, 2.5],
@@ -240,7 +254,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-horizontal', 'horizontal-por-vertical', 'inclinado-por-vertical', 'vertical-por-inclinado'],
+    formas: ['angulo', 'vertical-por-horizontal', 'horizontal-por-vertical', 'inclinado-por-vertical', 'vertical-por-inclinado'],
     profissoes: ['topografa', 'agrimensor', 'fotografo'],
     limites: {
       vertical: [3, 12],
@@ -277,7 +291,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-horizontal', 'horizontal-por-vertical', 'vertical-por-inclinado'],
+    formas: ['angulo', 'vertical-por-horizontal', 'horizontal-por-vertical', 'vertical-por-inclinado'],
     profissoes: ['jardineiro', 'guia', 'topografa'],
     limites: {
       vertical: [2, 15],
@@ -351,7 +365,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
     profissoes: ['marceneiro', 'engenheiro'],
     limites: {
       vertical: [1, 3.5],
@@ -388,7 +402,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-horizontal', 'inclinado-por-horizontal', 'vertical-por-inclinado'],
+    formas: ['angulo', 'vertical-por-horizontal', 'inclinado-por-horizontal', 'vertical-por-inclinado'],
     profissoes: ['telhadista', 'pedreiro', 'arquiteta'],
     limites: {
       vertical: [0.8, 4],
@@ -425,7 +439,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'inclinado-por-vertical', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'inclinado-por-vertical', 'vertical-por-horizontal'],
     profissoes: ['eletricista', 'engenheiro', 'alpinista'],
     limites: {
       vertical: [6, 40],
@@ -462,7 +476,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
     profissoes: ['guia', 'engenheiro', 'fotografo'],
     limites: {
       vertical: [40, 400],
@@ -499,7 +513,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
     profissoes: ['guia', 'alpinista', 'socorrista'],
     limites: {
       vertical: [30, 300],
@@ -610,7 +624,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
     profissoes: ['estivador', 'engenheiro'],
     limites: {
       vertical: [1.5, 5],
@@ -684,7 +698,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal', 'inclinado-por-vertical'],
     profissoes: ['engenheiro', 'estivador', 'pedreiro'],
     limites: {
       vertical: [5, 35],
@@ -721,7 +735,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
     profissoes: ['engenheiro', 'marceneiro'],
     limites: {
       vertical: [3, 8],
@@ -795,7 +809,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'chao',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'inclinado-por-vertical'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'inclinado-por-vertical'],
     profissoes: ['capita', 'estivador'],
     limites: {
       vertical: [1.5, 8],
@@ -869,7 +883,7 @@ export const CENAS: readonly Cena[] = [
       en: 'metres',
     },
     referencia: 'horizontal',
-    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
+    formas: ['angulo', 'vertical-por-inclinado', 'horizontal-por-inclinado', 'vertical-por-horizontal'],
     profissoes: ['eletricista', 'telhadista', 'arquiteta'],
     limites: {
       vertical: [0.4, 1.6],

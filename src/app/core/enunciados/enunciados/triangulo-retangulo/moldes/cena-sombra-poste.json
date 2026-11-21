@@ -1,12 +1,12 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.pessoa} mede a sombra de um poste no momento em que os raios do sol fazem {dados-calculo.angulo}° com o chão.",
-    "fr": "{dados-calculo.pessoa} mesure l'ombre d'un poteau au moment où les rayons du soleil font {dados-calculo.angulo}° avec le sol.",
-    "en": "{dados-calculo.pessoa} measures the shadow of a pole at the moment when the sun's rays make {dados-calculo.angulo}° with the ground."
+    "br": "{dados-calculo.pessoa} mede a sombra que um poste projeta no chão.",
+    "fr": "{dados-calculo.pessoa} mesure l'ombre qu'un poteau projette sur le sol.",
+    "en": "{dados-calculo.pessoa} measures the shadow a pole casts on the ground."
   },
   "dica": {
-    "br": "A altura do poste é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a sombra é o cateto adjacente; a hipotenusa vai do topo do poste à ponta da sombra.",
-    "fr": "La hauteur du poteau est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'ombre est le côté adjacent ; l'hypoténuse va du sommet du poteau au bout de l'ombre.",
-    "en": "The height of the pole is the leg opposite the {dados-calculo.angulo}° angle; the shadow is the adjacent leg; the hypotenuse runs from the top of the pole to the tip of the shadow."
+    "br": "A altura do poste é o cateto oposto ao ângulo com o chão; a sombra é o cateto adjacente; a hipotenusa vai do topo do poste à ponta da sombra.",
+    "fr": "La hauteur du poteau est le côté opposé à l'angle avec le sol ; l'ombre est le côté adjacent ; l'hypoténuse va du sommet du poteau au bout de l'ombre.",
+    "en": "The height of the pole is the leg opposite the angle with the ground; the shadow is the adjacent leg; the hypotenuse runs from the top of the pole to the tip of the shadow."
   }
 }

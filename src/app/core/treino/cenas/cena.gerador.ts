@@ -4,7 +4,13 @@ import {
   type ValoresPorIdioma,
 } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
-import { Cena, CENAS, Forma, Sintagma } from '@core/treino/cenas/cenas.contextos';
+import {
+  Cena,
+  CENAS,
+  Forma,
+  REFERENCIA_ESCRITA,
+  Sintagma,
+} from '@core/treino/cenas/cenas.contextos';
 import { anguloDaCena, intervaloDoLado, Lado, valorNoIntervalo } from '@core/treino/cenas/faixas';
 import { PROFISSOES, profissaoDe } from '@core/treino/cenas/profissoes.contextos';
 import { Exercicio, Nivel, SEM_FORMULA, semColisoes } from '@core/treino/models/treino.model';
@@ -45,8 +51,15 @@ import { Rng } from '@core/treino/rng/rng';
  *   seriam dezenas de entradas novas; por forma são poucas.
  */
 
-/** O que cada forma dá e o que ela pede. */
-const PAPEIS: Readonly<Record<Forma, { readonly procurado: Lado; readonly conhecido: Lado }>> = {
+/**
+ * O que cada forma dá e o que ela pede.
+ *
+ * A forma `angulo` fica de fora: ela dá os DOIS catetos e pede o ângulo, e é
+ * construída à parte.
+ */
+const PAPEIS: Readonly<
+  Record<Exclude<Forma, 'angulo'>, { readonly procurado: Lado; readonly conhecido: Lado }>
+> = {
   'vertical-por-inclinado': { procurado: 'vertical', conhecido: 'inclinado' },
   'horizontal-por-inclinado': { procurado: 'horizontal', conhecido: 'inclinado' },
   'vertical-por-horizontal': { procurado: 'vertical', conhecido: 'horizontal' },
@@ -114,6 +127,11 @@ function comMaiuscula(texto: string): string {
 export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] = CENAS): Exercicio<number> | null {
   const cena = rng.escolher(cenas);
   const forma = rng.escolher(cena.formas);
+
+  if (forma === 'angulo') {
+    return exercicioDoAngulo(nivel, rng, cena);
+  }
+
   const { procurado, conhecido } = PAPEIS[forma];
 
   const anguloGraus = anguloDaCena(rng, nivel === 'facil', cena.limites.angulo);
@@ -140,21 +158,17 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   const nomeConhecido = sintagma(cena, conhecido, false);
   const nomeProcurado = sintagma(cena, procurado, true);
 
-  /*
-   * A pessoa da cena, quando a cena tem gente.
-   *
-   * O sorteio acontece SEMPRE, mesmo na cena sem ninguém: é o que mantém o
-   * consumo do rng igual para todas elas, e uma cena nova com profissões não
-   * desloca o que vinha depois. O valor entra na lacuna só quando o molde a
-   * tem — e os moldes das cenas sem gente não a têm.
-   */
-  const escolhida = rng.escolher(cena.profissoes.length > 0 ? cena.profissoes : ['pedreiro']);
-  const pessoa = (profissaoDe(escolhida) ?? PROFISSOES[0]!).nome;
+  const pessoa = pessoaDaCena(rng, cena);
+
+  const objeto = cena.inclinado;
+  const referencia = REFERENCIA_ESCRITA[cena.referencia];
 
   const valores: ValoresPorIdioma = {
     pt: {
       angulo: anguloGraus,
       pessoa: pessoa.pt,
+      objeto: comMaiuscula(objeto.pt),
+      referencia: referencia.pt,
       conhecido: comMaiuscula(nomeConhecido.pt),
       valor: valorConhecido,
       unidade: cena.unidade.pt,
@@ -163,6 +177,8 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     fr: {
       angulo: anguloGraus,
       pessoa: pessoa.fr,
+      objeto: comMaiuscula(objeto.fr),
+      referencia: referencia.fr,
       conhecido: comMaiuscula(nomeConhecido.fr),
       valor: valorConhecido,
       unidade: cena.unidade.fr,
@@ -171,6 +187,8 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     en: {
       angulo: anguloGraus,
       pessoa: pessoa.en,
+      objeto: comMaiuscula(objeto.en),
+      referencia: referencia.en,
       conhecido: comMaiuscula(nomeConhecido.en),
       valor: valorConhecido,
       unidade: cena.unidade.en,
@@ -178,17 +196,29 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     },
   };
 
+  /*
+   * Duas redações para a mesma pergunta.
+   *
+   * Quando o dado é o próprio lado inclinado, dizer «A escada faz 68° com o
+   * chão. A escada mede 6 m.» repetiria o sujeito; uma frase só resolve. Nas
+   * outras, o ângulo é do lado inclinado e o dado é um cateto, e as duas
+   * informações não cabem na mesma oração sem confundir a quem pertence o
+   * ângulo.
+   */
   const texto = enunciadoComSufixosPorIdioma(
     moldesDe('triangulo-retangulo', `cena-${cena.id}`)[0]!,
     [
-      ...moldesDe('triangulo-retangulo', 'pergunta-lado'),
+      ...moldesDe(
+        'triangulo-retangulo',
+        conhecido === 'inclinado' ? 'pergunta-lado-inclinado' : 'pergunta-lado',
+      ),
       ...moldesDe('triangulo-retangulo', 'sufixo-casas-2'),
     ],
     valores,
   );
 
   return {
-    id: `cena-${cena.id}-${forma}-${escolhida}-${anguloGraus}-${valorConhecido}-${rng.inteiro(0, 9999)}`,
+    id: `cena-${cena.id}-${forma}-${anguloGraus}-${valorConhecido}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: texto.enunciado,
     traducoes: texto.traducoes,
@@ -331,4 +361,151 @@ function ondeCadaLadoEsta(procurado: Lado, conhecido: Lado): string {
   return procurado === 'vertical'
     ? 'O lado conhecido está encostado no ângulo dado (ADJACENTE) e o procurado está de frente para ele (OPOSTO): os dois são catetos.'
     : 'O lado conhecido está de frente para o ângulo dado (OPOSTO) e o procurado está encostado nele (ADJACENTE): os dois são catetos.';
+}
+
+/**
+ * O ângulo, a partir dos dois catetos.
+ *
+ * ## Por que o ângulo é sorteado primeiro
+ *
+ * Sortear os dois catetos à solta produz triângulos de 4° e de 86° com a mesma
+ * frequência dos de 40° — e nenhuma escada fica a 4° do chão. Aqui o ângulo
+ * nasce dentro da faixa da cena, o cateto adjacente vem do intervalo
+ * admissível, e o oposto é DERIVADO dele.
+ *
+ * ## Por que o gabarito vem dos números escritos
+ *
+ * O oposto é arredondado para caber no enunciado, e isso desloca o ângulo em
+ * alguns centésimos. Quem refaz a conta a partir do texto tem de chegar ao
+ * mesmo número, então a resposta é recalculada dos dois valores EXIBIDOS, e
+ * não do ângulo que serviu para construí-los.
+ */
+function exercicioDoAngulo(nivel: Nivel, rng: Rng, cena: Cena): Exercicio<number> | null {
+  const anguloBase = anguloDaCena(rng, nivel === 'facil', cena.limites.angulo);
+  const intervalo = intervaloDoLado('horizontal', anguloBase, cena.limites);
+  if (intervalo === null) {
+    return null;
+  }
+
+  const adjacente = valorNoIntervalo(rng, intervalo);
+  const oposto = Math.round(adjacente * Math.tan(paraRadianos(anguloBase)) * 2) / 2;
+  if (oposto <= 0) {
+    return null;
+  }
+
+  const gabarito = (Math.atan(oposto / adjacente) * 180) / Math.PI;
+
+  const pessoa = pessoaDaCena(rng, cena);
+  const referencia = REFERENCIA_ESCRITA[cena.referencia];
+
+  const valores: ValoresPorIdioma = {
+    pt: {
+      pessoa: pessoa.pt,
+      objeto: cena.inclinado.pt,
+      referencia: referencia.pt,
+      conhecido: comMaiuscula(cena.vertical.pt),
+      valor: oposto,
+      conhecido2: cena.horizontal.pt,
+      valor2: adjacente,
+      unidade: cena.unidade.pt,
+    },
+    fr: {
+      pessoa: pessoa.fr,
+      objeto: cena.inclinado.fr,
+      referencia: referencia.fr,
+      conhecido: comMaiuscula(cena.vertical.fr),
+      valor: oposto,
+      conhecido2: cena.horizontal.fr,
+      valor2: adjacente,
+      unidade: cena.unidade.fr,
+    },
+    en: {
+      pessoa: pessoa.en,
+      objeto: cena.inclinado.en,
+      referencia: referencia.en,
+      conhecido: comMaiuscula(cena.vertical.en),
+      valor: oposto,
+      conhecido2: cena.horizontal.en,
+      valor2: adjacente,
+      unidade: cena.unidade.en,
+    },
+  };
+
+  const texto = enunciadoComSufixosPorIdioma(
+    moldesDe('triangulo-retangulo', `cena-${cena.id}`)[0]!,
+    [
+      ...moldesDe('triangulo-retangulo', 'pergunta-angulo'),
+      ...moldesDe('triangulo-retangulo', 'sufixo-casas-2'),
+    ],
+    valores,
+  );
+
+  const razao = oposto / adjacente;
+
+  return {
+    id: `cena-${cena.id}-angulo-${oposto}-${adjacente}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
+    dica: texto.dica,
+    enunciadoTex: SEM_FORMULA,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Oposto e adjacente juntos dão a tangente do ângulo.',
+          tex: `\\tan \\theta = \\frac{${tex(oposto, 1)}}{${tex(adjacente, 1)}} = ${tex(razao, 4)}`,
+        },
+        {
+          descricao: 'Para voltar da razão ao ângulo, usamos a função inversa, o arco-tangente.',
+          tex: `\\theta = \\arctan(${tex(razao, 4)})`,
+          nota: 'Na calculadora: tan⁻¹, com o modo em GRAUS.',
+        },
+        {
+          descricao: 'Calculando.',
+          tex: `\\theta = ${tex(gabarito)}°`,
+        },
+      ],
+    },
+    conceitos: ['triangulo.razoes'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: 90 - gabarito,
+          diagnostico:
+            'Esse é o OUTRO ângulo agudo: a razão ficou invertida. A tangente é oposto sobre ' +
+            'adjacente, vistos a partir do ângulo pedido.',
+          passo: 0,
+          conceito: 'triangulo.razoes',
+        },
+        {
+          resposta: Math.atan(razao),
+          diagnostico:
+            'Esse é o ângulo em RADIANOS. A calculadora estava no modo errado: passe para graus.',
+          passo: 1,
+          conceito: 'triangulo.razoes',
+        },
+        {
+          resposta: razao,
+          diagnostico: 'Essa é a tangente, não o ângulo. Falta aplicar o arco-tangente.',
+          passo: 1,
+          conceito: 'triangulo.razoes',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+  };
+}
+
+/**
+ * Quem aparece na cena.
+ *
+ * O sorteio acontece mesmo quando a cena não tem gente: é o que mantém o
+ * consumo do rng igual para todas elas.
+ */
+function pessoaDaCena(rng: Rng, cena: Cena): Sintagma {
+  const escolhida = rng.escolher(cena.profissoes.length > 0 ? cena.profissoes : ['pedreiro']);
+  return (profissaoDe(escolhida) ?? PROFISSOES[0]!).nome;
 }

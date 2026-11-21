@@ -55,6 +55,8 @@ import etrianguloRetanguloMoldesCenaTelhado from '@core/enunciados/enunciados/tr
 import etrianguloRetanguloMoldesCenaTrilhaMontanha from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-trilha-montanha.json';
 import etrianguloRetanguloMoldesIsoscelesCateto from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-cateto.json';
 import etrianguloRetanguloMoldesIsoscelesHipotenusa from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-hipotenusa.json';
+import etrianguloRetanguloMoldesPerguntaAngulo from '@core/enunciados/enunciados/triangulo-retangulo/moldes/pergunta-angulo.json';
+import etrianguloRetanguloMoldesPerguntaLadoInclinado from '@core/enunciados/enunciados/triangulo-retangulo/moldes/pergunta-lado-inclinado.json';
 import etrianguloRetanguloMoldesPerguntaLado from '@core/enunciados/enunciados/triangulo-retangulo/moldes/pergunta-lado.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
@@ -108,5 +110,7 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', forma: 'cena-trilha-montanha', conteudo: etrianguloRetanguloMoldesCenaTrilhaMontanha },
   { topico: 'triangulo-retangulo', forma: 'isosceles-cateto', conteudo: etrianguloRetanguloMoldesIsoscelesCateto },
   { topico: 'triangulo-retangulo', forma: 'isosceles-hipotenusa', conteudo: etrianguloRetanguloMoldesIsoscelesHipotenusa },
+  { topico: 'triangulo-retangulo', forma: 'pergunta-angulo', conteudo: etrianguloRetanguloMoldesPerguntaAngulo },
+  { topico: 'triangulo-retangulo', forma: 'pergunta-lado-inclinado', conteudo: etrianguloRetanguloMoldesPerguntaLadoInclinado },
   { topico: 'triangulo-retangulo', forma: 'pergunta-lado', conteudo: etrianguloRetanguloMoldesPerguntaLado },
 ];
