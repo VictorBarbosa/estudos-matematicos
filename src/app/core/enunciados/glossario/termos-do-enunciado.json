@@ -208,5 +208,33 @@
       "termo": "root",
       "definicao": "The value of x that makes the expression zero: where the graph crosses the horizontal axis."
     }
+  },
+  "angulo de elevacao": {
+    "pt": {
+      "termo": "ângulo de elevação",
+      "definicao": "Ângulo entre a linha horizontal que passa pelos olhos de quem observa e a linha de visada, quando se olha para CIMA."
+    },
+    "fr": {
+      "termo": "angle d'élévation",
+      "definicao": "Angle entre l'horizontale passant par les yeux de l'observateur et la ligne de visée, lorsqu'on regarde vers le HAUT."
+    },
+    "en": {
+      "termo": "angle of elevation",
+      "definicao": "The angle between the horizontal line through the observer’s eyes and the line of sight, when looking UPWARD."
+    }
+  },
+  "angulo de depressao": {
+    "pt": {
+      "termo": "ângulo de depressão",
+      "definicao": "Ângulo entre a horizontal de quem observa e a linha de visada, quando se olha para BAIXO. Ele fica fora do triângulo, e é igual ao ângulo de elevação visto do outro ponto."
+    },
+    "fr": {
+      "termo": "angle de dépression",
+      "definicao": "Angle entre l'horizontale de l'observateur et la ligne de visée, lorsqu'on regarde vers le BAS. Il reste hors du triangle et égale l'angle d'élévation vu depuis l'autre point."
+    },
+    "en": {
+      "termo": "angle of depression",
+      "definicao": "The angle between the observer’s horizontal and the line of sight, when looking DOWNWARD. It lies outside the triangle and equals the angle of elevation seen from the other point."
+    }
   }
 }

@@ -5,6 +5,7 @@ import {
 } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import {
+  anguloNoTopo,
   Cena,
   CENAS,
   Forma,
@@ -73,24 +74,41 @@ const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 /** O número como o LaTeX o mostra: vírgula, que é como o site escreve. */
 const tex = (valor: number, casas = 2): string => valor.toFixed(casas).replace('.', '{,}');
 
-/** O lado medido a partir do lado conhecido e do ângulo. */
-function medida(lado: Lado, inclinado: number, radianos: number): number {
+/**
+ * O papel do lado em relação ao ângulo: é ele que decide a razão.
+ *
+ * Com o ângulo no chão, o vertical está de frente para ele (oposto). Com o
+ * ângulo no topo — a escada contra a parede —, é o horizontal que fica de
+ * frente, e o vertical passa a encostar nele.
+ */
+type Papel = 'oposto' | 'adjacente' | 'hipotenusa';
+
+function papelDo(lado: Lado, noTopo: boolean): Papel {
+  if (lado === 'inclinado') return 'hipotenusa';
+  const vertical = lado === 'vertical';
+  return vertical === !noTopo ? 'oposto' : 'adjacente';
+}
+
+/** O lado medido a partir do lado inclinado e do ângulo. */
+function medida(lado: Lado, inclinado: number, radianos: number, noTopo: boolean): number {
   if (lado === 'inclinado') return inclinado;
-  return lado === 'vertical' ? inclinado * Math.sin(radianos) : inclinado * Math.cos(radianos);
+  return papelDo(lado, noTopo) === 'oposto'
+    ? inclinado * Math.sin(radianos)
+    : inclinado * Math.cos(radianos);
 }
 
 /** O fator que leva do lado conhecido ao procurado, e a razão que o nomeia. */
 function razaoEntre(
-  procurado: Lado,
-  conhecido: Lado,
+  procuradoPapel: Papel,
+  conhecidoPapel: Papel,
 ): { readonly razao: 'sen' | 'cos' | 'tg'; readonly multiplica: boolean } {
-  if (conhecido === 'inclinado') {
-    return { razao: procurado === 'vertical' ? 'sen' : 'cos', multiplica: true };
+  if (conhecidoPapel === 'hipotenusa') {
+    return { razao: procuradoPapel === 'oposto' ? 'sen' : 'cos', multiplica: true };
   }
-  if (procurado === 'inclinado') {
-    return { razao: conhecido === 'vertical' ? 'sen' : 'cos', multiplica: false };
+  if (procuradoPapel === 'hipotenusa') {
+    return { razao: conhecidoPapel === 'oposto' ? 'sen' : 'cos', multiplica: false };
   }
-  return { razao: 'tg', multiplica: procurado === 'vertical' };
+  return { razao: 'tg', multiplica: procuradoPapel === 'oposto' };
 }
 
 const TEX_DA_RAZAO: Readonly<Record<'sen' | 'cos' | 'tg', string>> = {
@@ -134,10 +152,11 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
 
   const { procurado, conhecido } = PAPEIS[forma];
 
+  const noTopo = anguloNoTopo(cena.referencia);
   const anguloGraus = anguloDaCena(rng, nivel === 'facil', cena.limites.angulo);
   const radianos = paraRadianos(anguloGraus);
 
-  const intervalo = intervaloDoLado(conhecido, anguloGraus, cena.limites);
+  const intervalo = intervaloDoLado(conhecido, anguloGraus, cena.limites, noTopo);
   if (intervalo === null) {
     return null;
   }
@@ -153,16 +172,19 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
    */
   const correcao = valorNoIntervalo(rng, cena.correcao ?? [0, 0], 0.1);
   const somaCorrecao = correcao > 0 && procurado === 'vertical';
+  const papelConhecido = papelDo(conhecido, noTopo);
+  const papelProcurado = papelDo(procurado, noTopo);
+
   const inclinado =
-    conhecido === 'inclinado'
+    papelConhecido === 'hipotenusa'
       ? valorConhecido
-      : conhecido === 'vertical'
+      : papelConhecido === 'oposto'
         ? valorConhecido / Math.sin(radianos)
         : valorConhecido / Math.cos(radianos);
 
-  const ladoProcurado = medida(procurado, inclinado, radianos);
+  const ladoProcurado = medida(procurado, inclinado, radianos, noTopo);
   const gabarito = somaCorrecao ? ladoProcurado + correcao : ladoProcurado;
-  const { razao, multiplica } = razaoEntre(procurado, conhecido);
+  const { razao, multiplica } = razaoEntre(papelProcurado, papelConhecido);
   const fator =
     razao === 'sen' ? Math.sin(radianos) : razao === 'cos' ? Math.cos(radianos) : Math.tan(radianos);
 
@@ -172,7 +194,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   const pessoa = pessoaDaCena(rng, cena);
 
   const objeto = cena.inclinado;
-  const referencia = REFERENCIA_ESCRITA[cena.referencia];
+  const referencia = cena.referenciaEscrita ?? REFERENCIA_ESCRITA[cena.referencia];
 
   const valores: ValoresPorIdioma = {
     pt: {
@@ -219,13 +241,27 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
    * informações não cabem na mesma oração sem confundir a quem pertence o
    * ângulo.
    */
+  /*
+   * Qual pergunta o enunciado usa.
+   *
+   * Quando o dado é o próprio lado inclinado, uma frase só evita repetir o
+   * sujeito («A escada faz 68° com o chão. A escada mede 6 m.»). Quando o
+   * observador olha de cima ou de baixo, a frase nomeia o ângulo como a aula
+   * o nomeia — de DEPRESSÃO ou de ELEVAÇÃO —, que é o vocabulário que a prova
+   * cobra e que o glossário explica ao passar o cursor.
+   */
+  const pergunta = cena.depressao
+    ? 'pergunta-lado-depressao'
+    : cena.elevacao === true || cena.referencia === 'horizontal-do-olhar'
+      ? 'pergunta-lado-elevacao'
+      : conhecido === 'inclinado'
+        ? 'pergunta-lado-inclinado'
+        : 'pergunta-lado';
+
   const texto = enunciadoComSufixosPorIdioma(
     moldesDe('triangulo-retangulo', `cena-${cena.id}`)[0]!,
     [
-      ...moldesDe(
-        'triangulo-retangulo',
-        conhecido === 'inclinado' ? 'pergunta-lado-inclinado' : 'pergunta-lado',
-      ),
+      ...moldesDe('triangulo-retangulo', pergunta),
       ...moldesDe('triangulo-retangulo', 'sufixo-casas-2'),
     ],
     valores,
@@ -251,7 +287,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     gabarito,
     resolucao: {
       resultado: gabarito,
-      passos: passosDaForma(procurado, conhecido, razao, multiplica, {
+      passos: passosDaForma(papelProcurado, papelConhecido, razao, multiplica, cena.depressao, {
         anguloGraus,
         valorConhecido,
         fator,
@@ -328,10 +364,11 @@ function fatorDoComplemento(razao: 'sen' | 'cos' | 'tg', radianos: number): numb
  * dicionário de traduções.
  */
 function passosDaForma(
-  procurado: Lado,
-  conhecido: Lado,
+  procurado: Papel,
+  conhecido: Papel,
   razao: 'sen' | 'cos' | 'tg',
   multiplica: boolean,
+  depressao: boolean | undefined,
   numeros: {
     readonly anguloGraus: number;
     readonly valorConhecido: number;
@@ -355,6 +392,24 @@ function passosDaForma(
         : 'Oposto sobre adjacente é a tangente.';
 
   return [
+    /*
+     * O passo que falta a quem olha de cima.
+     *
+     * O ângulo de depressão é medido da horizontal do observador para baixo, e
+     * por isso não está dentro do triângulo. O que está é o ângulo igual a
+     * ele, visto lá de baixo — alternos internos entre duas horizontais. Sem
+     * essa frase, quem estuda não sabe qual cateto é o oposto.
+     */
+    ...(depressao === true
+      ? [
+          {
+            descricao:
+              'O ângulo de depressão é medido da HORIZONTAL do observador para baixo, e por isso ' +
+              'fica fora do triângulo. Dentro dele está o ângulo igual a esse, visto de baixo.',
+            tex: '\\text{dep} = \\text{elev}',
+          },
+        ]
+      : []),
     {
       descricao: ondeCadaLadoEsta(procurado, conhecido),
       tex: `${simbolo} ${anguloGraus}° = ${
@@ -398,18 +453,18 @@ function passosDaForma(
  * São quatro, não seis: o que importa é o PAPEL de cada lado, e «dou a
  * hipotenusa, peço o oposto» é a mesma frase em qualquer cena.
  */
-function ondeCadaLadoEsta(procurado: Lado, conhecido: Lado): string {
-  if (conhecido === 'inclinado') {
-    return procurado === 'vertical'
+function ondeCadaLadoEsta(procurado: Papel, conhecido: Papel): string {
+  if (conhecido === 'hipotenusa') {
+    return procurado === 'oposto'
       ? 'O lado conhecido é o maior, de frente para o ângulo reto: é a hipotenusa. O procurado está de frente para o ângulo dado: é o cateto OPOSTO.'
       : 'O lado conhecido é o maior, de frente para o ângulo reto: é a hipotenusa. O procurado está encostado no ângulo dado: é o cateto ADJACENTE.';
   }
-  if (procurado === 'inclinado') {
-    return conhecido === 'vertical'
+  if (procurado === 'hipotenusa') {
+    return conhecido === 'oposto'
       ? 'O lado conhecido está de frente para o ângulo dado: é o cateto OPOSTO. O procurado é a hipotenusa, o maior de todos.'
       : 'O lado conhecido está encostado no ângulo dado: é o cateto ADJACENTE. O procurado é a hipotenusa, o maior de todos.';
   }
-  return procurado === 'vertical'
+  return procurado === 'oposto'
     ? 'O lado conhecido está encostado no ângulo dado (ADJACENTE) e o procurado está de frente para ele (OPOSTO): os dois são catetos.'
     : 'O lado conhecido está de frente para o ângulo dado (OPOSTO) e o procurado está encostado nele (ADJACENTE): os dois são catetos.';
 }
@@ -447,7 +502,7 @@ function exercicioDoAngulo(nivel: Nivel, rng: Rng, cena: Cena): Exercicio<number
   const gabarito = (Math.atan(oposto / adjacente) * 180) / Math.PI;
 
   const pessoa = pessoaDaCena(rng, cena);
-  const referencia = REFERENCIA_ESCRITA[cena.referencia];
+  const referencia = cena.referenciaEscrita ?? REFERENCIA_ESCRITA[cena.referencia];
 
   const valores: ValoresPorIdioma = {
     pt: {

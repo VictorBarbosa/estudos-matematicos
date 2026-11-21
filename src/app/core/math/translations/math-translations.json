@@ -18479,6 +18479,10 @@
     "fr": "L’angle dont c’est le sinus.",
     "en": "The angle whose sine that is."
   },
+  "O ângulo de depressão é medido da HORIZONTAL do observador para baixo, e por isso fica fora do triângulo. Dentro dele está o ângulo igual a esse, visto de baixo.": {
+    "fr": "L’angle de dépression se mesure depuis l’HORIZONTALE de l’observateur vers le bas, et il reste donc hors du triangle. À l’intérieur se trouve l’angle qui lui est égal, vu d’en bas.",
+    "en": "The angle of depression is measured from the observer’s HORIZONTAL downwards, so it falls outside the triangle. Inside it sits the angle equal to it, seen from below."
+  },
   "O ângulo entre as retas é o das direções, tomado agudo (módulo do cosseno).": {
     "fr": "L’angle entre les droites est celui des directions, pris aigu (valeur absolue du cosinus).",
     "en": "The angle between the lines is the one between their directions, taken acute (absolute value of the cosine)."

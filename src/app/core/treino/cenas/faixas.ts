@@ -61,10 +61,16 @@ export function intervaloDoLado(
   lado: Lado,
   anguloGraus: number,
   limites: Limites,
+  anguloNoTopo = false,
 ): Intervalo | null {
   const radianos = paraRadianos(anguloGraus);
-  const sen = Math.sin(radianos);
-  const cos = Math.cos(radianos);
+  /*
+   * Com o ângulo medido no TOPO — a escada contra a parede, o cabo contra o
+   * mastro —, quem vai com o seno é o lado horizontal, e não o vertical: o
+   * ângulo trocou de vértice, e com ele trocaram os papéis dos dois catetos.
+   */
+  const sen = anguloNoTopo ? Math.cos(radianos) : Math.sin(radianos);
+  const cos = anguloNoTopo ? Math.sin(radianos) : Math.cos(radianos);
 
   if (sen <= 0 || cos <= 0) {
     return null;

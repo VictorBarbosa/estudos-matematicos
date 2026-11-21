@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} observa, da torre de controle, um avião parado na pista.",
+    "fr": "{dados-calculo.pessoa} observe, depuis la tour de contrôle, un avion arrêté sur la piste.",
+    "en": "{dados-calculo.pessoa} watches a plane standing on the runway from the control tower."
+  },
+  "dica": {
+    "br": "O ângulo de depressão é contado da horizontal para BAIXO; dentro do triângulo está o ângulo igual a ele, visto da pista. A altura da torre é o cateto oposto a esse ângulo; a distância na pista é o adjacente.",
+    "fr": "L'angle de dépression se compte depuis l'horizontale vers le BAS ; dans le triangle se trouve l'angle égal, vu depuis la piste. La hauteur de la tour est le côté opposé à cet angle ; la distance sur la piste est le côté adjacent.",
+    "en": "The angle of depression is measured from the horizontal DOWNWARD; inside the triangle is the equal angle seen from the runway. The height of the tower is the leg opposite that angle; the distance along the runway is the adjacent leg."
+  }
+}

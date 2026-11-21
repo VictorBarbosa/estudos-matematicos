@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} apoia uma escada numa parede, encostando-a bem perto dela.",
+    "fr": "{dados-calculo.pessoa} appuie une échelle contre un mur, tout près de celui-ci.",
+    "en": "{dados-calculo.pessoa} leans a ladder against a wall, close up against it."
+  },
+  "dica": {
+    "br": "Atenção: aqui o ângulo é contado da PAREDE, não do chão. Com ele no topo, a altura na parede é o cateto ADJACENTE e a distância no chão é o OPOSTO — o contrário do caso de sempre.",
+    "fr": "Attention : ici l'angle est compté depuis le MUR, pas depuis le sol. L'angle étant en haut, la hauteur sur le mur est le côté ADJACENT et la distance au sol est le côté OPPOSÉ — l'inverse du cas habituel.",
+    "en": "Careful: here the angle is measured from the WALL, not from the ground. With the angle at the top, the height on the wall is the ADJACENT leg and the distance along the ground is the OPPOSITE one — the other way round from the usual case."
+  }
+}

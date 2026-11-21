@@ -286,7 +286,7 @@ reler quando quiser — este plano, em definitivo).
 | 1b · as 20 cenas e as profissões | **feita** em 20/11/2026 — 21 cenas, 20 profissões |
 | 1b · o ângulo pela inversa | **feita** em 20/11/2026 — em 14 das 21 cenas |
 | 2 · migrar poste e prédio | **feita** em 21/11/2026 — com a correção aditiva |
-| 3 · ângulo no topo e depressão | a fazer |
+| 3 · ângulo no topo e depressão | **feita** em 21/11/2026 — 28 cenas no total |
 
 ### O que a implementação revelou
 
@@ -301,6 +301,20 @@ reler quando quiser — este plano, em definitivo).
   («p = mv») e a dica que já vem do molde saíram do denominador, e os dois pisos viraram 1.
 - **O piso de formas é amostra, não conteúdo.** 138/117/128/108 medidos em 600 sorteios
   contra um espaço maior que isso; registrados 90%, com a razão escrita no arquivo.
+- **O ângulo no topo troca os papéis, e isso virou dado da cena.** «68° com o chão» e «22° com
+  a parede» são o mesmo triângulo; com o ângulo em cima, o cateto vertical passa a ser o
+  ADJACENTE. As duas cenas da escada existem lado a lado de propósito: é a troca que mais
+  derruba quem decorou «altura é seno».
+- **A depressão é geometria de sempre mais uma frase.** O ângulo de depressão fica FORA do
+  triângulo; dentro está o ângulo igual, visto de baixo. A conta não muda — o que faltava era
+  o passo que diz isso, e sem ele o aluno não sabe qual cateto é o oposto.
+- **O glossário cobra presença.** «Ângulo de elevação» só aparecia em duas das vinte e oito
+  cenas, e a amostra do guarda (40 sementes × 4 níveis) não caía nelas. A saída não foi
+  afrouxar o guarda: foi nomear o ângulo onde ele já existia — a pipa também é um olhar para
+  cima.
+- **A pessoa abre a frase, e agora há um guarda para isso.** «Da torre de controle, O piloto
+  observa…» passou por todos os testes de tradução, porque as três línguas estavam igualmente
+  erradas. `cenas.spec.ts` passou a exigir que a lacuna da pessoa só apareça no começo.
 - **A altura dos olhos é uma correção ADITIVA, não um lado.** O triângulo dá a altura acima
   dos olhos; a altura do prédio é essa mais a dos olhos. Por isso a cena declara `correcao`,
   o motor acrescenta um passo visível e uma armadilha própria, e a referência do ângulo passa

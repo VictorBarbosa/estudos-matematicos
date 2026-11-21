@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} prende um cabo do alto do mastro até o convés.",
+    "fr": "{dados-calculo.pessoa} fixe un câble du haut du mât jusqu'au pont.",
+    "en": "{dados-calculo.pessoa} ties a cable from the top of the mast down to the deck."
+  },
+  "dica": {
+    "br": "Atenção: o ângulo é contado do MASTRO, que é vertical. Com ele no topo, a altura do mastro é o cateto ADJACENTE e a distância no convés é o OPOSTO.",
+    "fr": "Attention : l'angle est compté depuis le MÂT, qui est vertical. L'angle étant en haut, la hauteur du mât est le côté ADJACENT et la distance sur le pont est le côté OPPOSÉ.",
+    "en": "Careful: the angle is measured from the MAST, which is vertical. With the angle at the top, the height of the mast is the ADJACENT leg and the distance on the deck is the OPPOSITE one."
+  }
+}

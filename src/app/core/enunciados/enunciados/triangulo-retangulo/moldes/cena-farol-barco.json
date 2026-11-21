@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} avista um barco no mar do alto de um farol.",
+    "fr": "{dados-calculo.pessoa} aperçoit un bateau en mer du haut d'un phare.",
+    "en": "{dados-calculo.pessoa} spots a boat at sea from the top of a lighthouse."
+  },
+  "dica": {
+    "br": "O ângulo de depressão é contado da horizontal para BAIXO, e por isso não está dentro do triângulo — dentro dele está o ângulo igual a ele, visto do barco. A altura do farol é o cateto oposto a esse ângulo; a distância no mar é o adjacente.",
+    "fr": "L'angle de dépression se compte depuis l'horizontale vers le BAS, et il n'est donc pas dans le triangle — ce qui s'y trouve est l'angle égal, vu depuis le bateau. La hauteur du phare est le côté opposé à cet angle ; la distance en mer est le côté adjacent.",
+    "en": "The angle of depression is measured from the horizontal DOWNWARD, so it is not inside the triangle — what is inside is the equal angle seen from the boat. The height of the lighthouse is the leg opposite that angle; the distance at sea is the adjacent leg."
+  }
+}

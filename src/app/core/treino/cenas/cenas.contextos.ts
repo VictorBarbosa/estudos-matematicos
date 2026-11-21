@@ -45,10 +45,23 @@ export const REFERENCIA_ESCRITA: Readonly<Record<Referencia, Sintagma>> = {
     fr: "l'horizontale des yeux",
     en: 'the horizontal at eye level',
   },
+  parede: { pt: 'a parede', fr: 'le mur', en: 'the wall' },
 };
 
 /** Com o que o ângulo da cena é formado. */
-export type Referencia = 'chao' | 'horizontal' | 'horizontal-do-olhar';
+export type Referencia = 'chao' | 'horizontal' | 'horizontal-do-olhar' | 'parede';
+
+/**
+ * O ângulo está no TOPO do triângulo?
+ *
+ * Medido com a parede — ou com o mastro, ou com qualquer vertical —, o ângulo
+ * muda de vértice: o cateto vertical passa a ser o ADJACENTE e o horizontal, o
+ * OPOSTO. É a troca que mais derruba quem decorou «altura é seno», e por isso
+ * a cena a declara em vez de o motor adivinhar.
+ */
+export function anguloNoTopo(referencia: Referencia): boolean {
+  return referencia === 'parede';
+}
 
 /** Uma expressão nominal escrita por extenso em cada língua. */
 export interface Sintagma {
@@ -106,6 +119,33 @@ export interface Cena {
    * precisa para saber qual cateto é o oposto.
    */
   readonly referencia: Referencia;
+  /**
+   * O nome da linha de referência, quando o genérico não serve.
+   *
+   * `REFERENCIA_ESCRITA` diz «a parede» para todo ângulo medido numa vertical,
+   * e no navio isso vira «o cabo faz 42° com a parede» — não há parede nenhuma
+   * ali. A cena que tem nome próprio para a sua vertical escreve-o aqui.
+   */
+  readonly referenciaEscrita?: Sintagma;
+  /**
+   * O observador olha para BAIXO?
+   *
+   * O ângulo de depressão é medido da horizontal do observador para baixo, e
+   * por isso ele NÃO está dentro do triângulo: o que está lá dentro é o ângulo
+   * de elevação visto de baixo, que vale o mesmo por serem alternos internos.
+   * A conta é a de sempre; o que muda é a frase da pergunta e um passo a mais,
+   * que é justamente onde o aluno tropeça.
+   */
+  readonly depressao?: boolean;
+  /**
+   * O ângulo é de ELEVAÇÃO — alguém olha para cima ao longo da visada.
+   *
+   * As cenas em que a correção aditiva existe já são de elevação por
+   * definição (o observador tem olhos acima do chão); esta marca serve às
+   * outras, como a pipa, em que a linha sobe do chão e o nome do ângulo é o
+   * mesmo que a prova usa.
+   */
+  readonly elevacao?: boolean;
   /** As perguntas que fazem sentido nesta história. */
   readonly formas: readonly Forma[];
   /**
@@ -355,6 +395,7 @@ export const CENAS: readonly Cena[] = [
     referencia: 'chao',
     formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'inclinado-por-vertical'],
     profissoes: [],
+    elevacao: true,
     limites: {
       vertical: [5, 60],
       horizontal: [4, 60],
@@ -954,6 +995,203 @@ export const CENAS: readonly Cena[] = [
       horizontal: [10, 80],
       inclinado: [11, 110],
       angulo: [20, 62],
+    },
+    correcao: [1.5, 1.8],
+  },
+  {
+    /*
+     * A MESMA escada, medida pela outra linha.
+     *
+     * «68° com o chão» e «22° com a parede» são o mesmo triângulo, e quem
+     * decorou «altura é seno» erra esta. Por isso a cena existe ao lado da
+     * primeira, com os mesmos objetos: a diferença está só em de onde se conta
+     * o ângulo, e é isso que ela cobra.
+     */
+    id: 'escada-parede-topo',
+    vertical: {
+      pt: 'a altura que a escada alcança na parede',
+      fr: "la hauteur que l'échelle atteint sur le mur",
+      en: 'the height the ladder reaches on the wall',
+    },
+    horizontal: {
+      pt: 'a distância do pé da escada até a parede',
+      fr: "la distance du pied de l'échelle au mur",
+      en: 'the distance from the foot of the ladder to the wall',
+    },
+    inclinado: { pt: 'a escada', fr: "l'échelle", en: 'the ladder' },
+    comprimento: {
+      pt: 'o comprimento da escada',
+      fr: "la longueur de l'échelle",
+      en: 'the length of the ladder',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'parede',
+    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'horizontal-por-vertical'],
+    profissoes: ['pedreiro', 'bombeira', 'eletricista', 'pintora'],
+    limites: {
+      vertical: [1.5, 9.5],
+      horizontal: [0.5, 5],
+      inclinado: [2, 10],
+      angulo: [12, 35],
+    },
+  },
+  {
+    id: 'mastro-cabo-topo',
+    vertical: { pt: 'a altura do mastro', fr: 'la hauteur du mât', en: 'the height of the mast' },
+    horizontal: {
+      pt: 'a distância no convés entre a base do mastro e o ponto de amarração',
+      fr: "la distance sur le pont entre le pied du mât et le point d'attache",
+      en: 'the distance on the deck between the foot of the mast and the tie point',
+    },
+    inclinado: { pt: 'o cabo', fr: 'le câble', en: 'the cable' },
+    comprimento: {
+      pt: 'o comprimento do cabo',
+      fr: 'la longueur du câble',
+      en: 'the length of the cable',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'parede',
+    referenciaEscrita: { pt: 'o mastro', fr: 'le mât', en: 'the mast' },
+    formas: ['vertical-por-inclinado', 'horizontal-por-inclinado', 'horizontal-por-vertical'],
+    profissoes: ['capita', 'marceneiro', 'estivador'],
+    limites: {
+      vertical: [4, 18],
+      horizontal: [2, 12],
+      inclinado: [5, 22],
+      angulo: [15, 45],
+    },
+  },
+  {
+    id: 'farol-barco',
+    vertical: { pt: 'a altura do farol', fr: 'la hauteur du phare', en: 'the height of the lighthouse' },
+    horizontal: {
+      pt: 'a distância do barco até a base do farol',
+      fr: 'la distance du bateau au pied du phare',
+      en: 'the distance from the boat to the foot of the lighthouse',
+    },
+    inclinado: { pt: 'a linha de visada', fr: 'la ligne de visée', en: 'the line of sight' },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal',
+    depressao: true,
+    formas: ['horizontal-por-vertical', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    profissoes: ['capita', 'socorrista', 'fotografo'],
+    limites: {
+      vertical: [20, 60],
+      horizontal: [40, 600],
+      inclinado: [50, 610],
+      angulo: [4, 25],
+    },
+  },
+  {
+    id: 'torre-controle',
+    vertical: {
+      pt: 'a altura da torre de controle',
+      fr: 'la hauteur de la tour de contrôle',
+      en: 'the height of the control tower',
+    },
+    horizontal: {
+      pt: 'a distância do avião até a base da torre',
+      fr: "la distance de l'avion au pied de la tour",
+      en: 'the distance from the plane to the foot of the tower',
+    },
+    inclinado: { pt: 'a linha de visada', fr: 'la ligne de visée', en: 'the line of sight' },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal',
+    depressao: true,
+    formas: ['horizontal-por-vertical', 'vertical-por-horizontal'],
+    profissoes: ['piloto', 'engenheiro', 'agrimensor'],
+    limites: {
+      vertical: [25, 70],
+      horizontal: [60, 900],
+      inclinado: [70, 910],
+      angulo: [3, 20],
+    },
+  },
+  {
+    id: 'penhasco-barco',
+    vertical: { pt: 'a altura do penhasco', fr: 'la hauteur de la falaise', en: 'the height of the cliff' },
+    horizontal: {
+      pt: 'a distância do barco até o pé do penhasco',
+      fr: 'la distance du bateau au pied de la falaise',
+      en: 'the distance from the boat to the foot of the cliff',
+    },
+    inclinado: { pt: 'a linha de visada', fr: 'la ligne de visée', en: 'the line of sight' },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal',
+    depressao: true,
+    formas: ['horizontal-por-vertical', 'vertical-por-horizontal', 'inclinado-por-vertical'],
+    profissoes: ['guia', 'fotografo', 'alpinista', 'socorrista'],
+    limites: {
+      vertical: [15, 90],
+      horizontal: [30, 700],
+      inclinado: [40, 710],
+      angulo: [5, 28],
+    },
+  },
+  {
+    id: 'drone-telhado',
+    vertical: { pt: 'a altura do drone', fr: 'la hauteur du drone', en: 'the height of the drone' },
+    horizontal: {
+      pt: 'a distância no chão entre o drone e o telhado',
+      fr: 'la distance au sol entre le drone et le toit',
+      en: 'the distance along the ground between the drone and the roof',
+    },
+    inclinado: { pt: 'a linha de visada', fr: 'la ligne de visée', en: 'the line of sight' },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal',
+    depressao: true,
+    formas: ['horizontal-por-vertical', 'vertical-por-horizontal'],
+    profissoes: ['fotografo', 'telhadista', 'arquiteta', 'engenheiro'],
+    limites: {
+      vertical: [8, 60],
+      horizontal: [10, 200],
+      inclinado: [15, 210],
+      angulo: [10, 45],
+    },
+  },
+  {
+    id: 'monumento-visado',
+    vertical: { pt: 'a altura do monumento', fr: 'la hauteur du monument', en: 'the height of the monument' },
+    horizontal: {
+      pt: 'a distância de quem observa até o monumento',
+      fr: "la distance entre l'observateur et le monument",
+      en: 'the distance from the observer to the monument',
+    },
+    inclinado: { pt: 'a linha de visada', fr: 'la ligne de visée', en: 'the line of sight' },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal-do-olhar',
+    formas: ['vertical-por-horizontal'],
+    profissoes: ['guia', 'fotografo', 'topografa', 'arquiteta'],
+    limites: {
+      vertical: [6, 50],
+      horizontal: [8, 60],
+      inclinado: [10, 80],
+      angulo: [25, 65],
     },
     correcao: [1.5, 1.8],
   },

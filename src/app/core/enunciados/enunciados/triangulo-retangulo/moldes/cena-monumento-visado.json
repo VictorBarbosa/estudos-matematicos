@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} olha para o alto de um monumento, com os olhos a {dados-calculo.correcao} m do chão.",
+    "fr": "{dados-calculo.pessoa} regarde le sommet d'un monument, les yeux à {dados-calculo.correcao} m du sol.",
+    "en": "{dados-calculo.pessoa} looks at the top of a monument, with eyes {dados-calculo.correcao} m above the ground."
+  },
+  "dica": {
+    "br": "A linha de visada é a hipotenusa; a altura ACIMA DOS OLHOS é o cateto oposto ao ângulo com a horizontal dos olhos; a distância no chão é o adjacente. No fim, some a altura dos olhos.",
+    "fr": "La ligne de visée est l'hypoténuse ; la hauteur AU-DESSUS DES YEUX est le côté opposé à l'angle avec l'horizontale des yeux ; la distance au sol est le côté adjacent. À la fin, ajoutez la hauteur des yeux.",
+    "en": "The line of sight is the hypotenuse; the height ABOVE EYE LEVEL is the leg opposite the angle with the horizontal at eye level; the distance along the ground is the adjacent leg. At the end, add the eye height."
+  }
+}

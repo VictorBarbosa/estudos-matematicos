@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} avista um barco do alto de um penhasco.",
+    "fr": "{dados-calculo.pessoa} aperçoit un bateau du haut d'une falaise.",
+    "en": "{dados-calculo.pessoa} spots a boat from the top of a cliff."
+  },
+  "dica": {
+    "br": "O ângulo de depressão é contado da horizontal para BAIXO e fica fora do triângulo; dentro dele está o ângulo igual, visto do barco. A altura do penhasco é o cateto oposto a esse ângulo; a distância no mar é o adjacente.",
+    "fr": "L'angle de dépression se compte depuis l'horizontale vers le BAS et reste hors du triangle ; à l'intérieur se trouve l'angle égal, vu depuis le bateau. La hauteur de la falaise est le côté opposé à cet angle ; la distance en mer est le côté adjacent.",
+    "en": "The angle of depression is measured from the horizontal DOWNWARD and lies outside the triangle; inside it sits the equal angle seen from the boat. The height of the cliff is the leg opposite that angle; the distance at sea is the adjacent leg."
+  }
+}

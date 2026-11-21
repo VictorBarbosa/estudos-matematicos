@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} filma com um drone parado no ar e aponta a câmera para um telhado lá embaixo.",
+    "fr": "{dados-calculo.pessoa} filme avec un drone immobile en vol et pointe la caméra vers un toit en contrebas.",
+    "en": "{dados-calculo.pessoa} films with a drone hovering in place and points the camera at a roof below."
+  },
+  "dica": {
+    "br": "O ângulo de depressão é contado da horizontal do drone para BAIXO; dentro do triângulo está o ângulo igual, visto do telhado. A altura do drone é o cateto oposto a esse ângulo; a distância no chão é o adjacente.",
+    "fr": "L'angle de dépression se compte depuis l'horizontale du drone vers le BAS ; dans le triangle se trouve l'angle égal, vu depuis le toit. La hauteur du drone est le côté opposé à cet angle ; la distance au sol est le côté adjacent.",
+    "en": "The angle of depression is measured from the drone's horizontal DOWNWARD; inside the triangle sits the equal angle seen from the roof. The height of the drone is the leg opposite that angle; the distance along the ground is the adjacent leg."
+  }
+}

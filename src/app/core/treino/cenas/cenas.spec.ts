@@ -1,6 +1,6 @@
 import { moldesDe } from '@core/enunciados/moldes/moldes.model';
 import { todosOsMoldes } from '@core/enunciados/moldes/moldes.model';
-import { CENAS } from '@core/treino/cenas/cenas.contextos';
+import { anguloNoTopo, CENAS } from '@core/treino/cenas/cenas.contextos';
 import { anguloDaCena, intervaloDoLado, Lado } from '@core/treino/cenas/faixas';
 import { exercicioDeCena } from '@core/treino/cenas/cena.gerador';
 import { NIVEIS } from '@core/treino/models/treino.model';
@@ -40,6 +40,32 @@ describe('as cenas', () => {
   });
 
   /**
+   * A pessoa abre a frase, sempre.
+   *
+   * O catálogo guarda a profissão já com a maiúscula, porque é assim que ela
+   * entra no começo da história — «O pedreiro apoia…». Pôr essa mesma lacuna
+   * no meio de uma frase produz «Da torre de controle, O piloto observa…», e
+   * nenhum guarda de tradução enxergaria isso: as três línguas estariam
+   * igualmente erradas.
+   */
+  it('a lacuna da pessoa só aparece no começo da história', () => {
+    const fora: string[] = [];
+
+    for (const molde of todosOsMoldes()) {
+      if (molde.topico !== 'triangulo-retangulo' || !molde.forma.startsWith('cena-')) {
+        continue;
+      }
+      for (const [idioma, texto] of Object.entries(molde.enunciado)) {
+        if (texto !== undefined && texto.includes('{dados-calculo.pessoa}') && !texto.startsWith('{dados-calculo.pessoa}')) {
+          fora.push(`${molde.forma} (${idioma})`);
+        }
+      }
+    }
+
+    expect(fora).toEqual([]);
+  });
+
+  /**
    * Os limites têm de fechar com o ângulo — em TODA a faixa dele.
    *
    * Uma escada que vai de 2 m a 10 m e um pé que vai de 0,5 m a 5 m não se
@@ -55,7 +81,7 @@ describe('as cenas', () => {
       const [minimo, maximo] = cena.limites.angulo;
       for (let angulo = minimo; angulo <= maximo; angulo += 1) {
         for (const lado of LADOS) {
-          if (intervaloDoLado(lado, angulo, cena.limites) === null) {
+          if (intervaloDoLado(lado, angulo, cena.limites, anguloNoTopo(cena.referencia)) === null) {
             vazios.push(`${cena.id}: ${lado} a ${angulo}°`);
           }
         }

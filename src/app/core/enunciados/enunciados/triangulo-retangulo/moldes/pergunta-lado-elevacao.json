@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.objeto} faz um ângulo de elevação de {dados-calculo.angulo}° com {dados-calculo.referencia}. {dados-calculo.conhecido} mede {dados-calculo.valor} {dados-calculo.unidade}. Quanto mede {dados-calculo.procurado}?",
+    "fr": "{dados-calculo.objeto} fait un angle d'élévation de {dados-calculo.angulo}° avec {dados-calculo.referencia}. {dados-calculo.conhecido} mesure {dados-calculo.valor} {dados-calculo.unidade}. Combien mesure {dados-calculo.procurado} ?",
+    "en": "{dados-calculo.objeto} makes an angle of elevation of {dados-calculo.angulo}° with {dados-calculo.referencia}. {dados-calculo.conhecido} measures {dados-calculo.valor} {dados-calculo.unidade}. What is {dados-calculo.procurado}?"
+  }
+}
