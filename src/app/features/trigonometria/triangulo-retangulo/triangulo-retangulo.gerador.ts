@@ -64,31 +64,38 @@ export const geradorTriangulo: GeradorExercicio<number> = {
     const nomeLado = procurado === 'seno' ? 'oposto' : 'adjacente';
     const razaoCerta = procurado === 'seno' ? '\\sin' : '\\cos';
 
+    /*
+     * Um molde por lado, e não uma lacuna com a palavra.
+     *
+     * A lacuna recebia «oposto» ou «adjacente» — português — e o mesmo valor
+     * ia para as três línguas: o francês saía «du côté oposto» e o inglês
+     * «the side adjacente». Com um molde por lado, cada língua escreve a
+     * frase na sua ordem natural (o inglês antepõe: «the opposite leg»).
+     */
+    const molde = moldesDe(
+      'triangulo-retangulo',
+      procurado === 'seno' ? 'forma-1-oposto' : 'forma-1-adjacente',
+    )[0]!;
+
     return {
       id: `triangulo-${anguloGraus}-${hipotenusa}-${procurado}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(
-        moldesDe('triangulo-retangulo', 'forma-1')[0]!,
-        { hipotenusa, anguloGraus, nomeLado },
-        'pt',
-      ),
-      traducoes: traducoesDoMolde(moldesDe('triangulo-retangulo', 'forma-1')[0]!, {
-        hipotenusa,
-        anguloGraus,
-        nomeLado,
-      }),
-      enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \\;?`,
+      enunciado: textoDoMolde(molde, { hipotenusa, anguloGraus }, 'pt'),
+      traducoes: traducoesDoMolde(molde, { hipotenusa, anguloGraus }),
+      // A fórmula não tem tradução: o lado procurado é `x`, e não uma palavra
+      // em português desenhada na tela francesa.
+      enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad x = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
         passos: [
           {
             descricao: `O cateto ${nomeLado} se relaciona com a hipotenusa pelo ${procurado}.`,
-            tex: `${razaoCerta} ${anguloGraus}° = \\frac{\\text{${nomeLado}}}{${hipotenusa}}`,
+            tex: `${razaoCerta} ${anguloGraus}° = \\frac{x}{${hipotenusa}}`,
           },
           {
             descricao: 'Isolamos o cateto multiplicando pela hipotenusa.',
-            tex: `\\text{${nomeLado}} = ${hipotenusa} \\cdot ${razaoCerta} ${anguloGraus}°`,
+            tex: `x = ${hipotenusa} \\cdot ${razaoCerta} ${anguloGraus}°`,
           },
           {
             descricao: 'Calculando.',

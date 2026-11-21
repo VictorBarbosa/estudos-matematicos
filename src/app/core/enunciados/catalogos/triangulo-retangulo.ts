@@ -22,7 +22,8 @@ import etrianguloRetanguloExtremo01 from '@core/enunciados/enunciados/triangulo-
 import etrianguloRetanguloExtremo02 from '@core/enunciados/enunciados/triangulo-retangulo/extremo/02.json';
 import etrianguloRetanguloExtremo03 from '@core/enunciados/enunciados/triangulo-retangulo/extremo/03.json';
 import etrianguloRetanguloExtremo04 from '@core/enunciados/enunciados/triangulo-retangulo/extremo/04.json';
-import etrianguloRetanguloMoldesForma1 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-1.json';
+import etrianguloRetanguloMoldesForma1Adjacente from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-1-adjacente.json';
+import etrianguloRetanguloMoldesForma1Oposto from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-1-oposto.json';
 import etrianguloRetanguloMoldesForma2 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-2.json';
 import etrianguloRetanguloMoldesSufixoCasas2 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/sufixo-casas-2.json';
 import etrianguloRetanguloMoldesSufixoExataOu2Casas from '@core/enunciados/enunciados/triangulo-retangulo/moldes/sufixo-exata-ou-2-casas.json';
@@ -52,7 +53,8 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', nivel: 'extremo', conteudo: etrianguloRetanguloExtremo02 },
   { topico: 'triangulo-retangulo', nivel: 'extremo', conteudo: etrianguloRetanguloExtremo03 },
   { topico: 'triangulo-retangulo', nivel: 'extremo', conteudo: etrianguloRetanguloExtremo04 },
-  { topico: 'triangulo-retangulo', forma: 'forma-1', conteudo: etrianguloRetanguloMoldesForma1 },
+  { topico: 'triangulo-retangulo', forma: 'forma-1-adjacente', conteudo: etrianguloRetanguloMoldesForma1Adjacente },
+  { topico: 'triangulo-retangulo', forma: 'forma-1-oposto', conteudo: etrianguloRetanguloMoldesForma1Oposto },
   { topico: 'triangulo-retangulo', forma: 'forma-2', conteudo: etrianguloRetanguloMoldesForma2 },
   { topico: 'triangulo-retangulo', forma: 'sufixo-casas-2', conteudo: etrianguloRetanguloMoldesSufixoCasas2 },
   { topico: 'triangulo-retangulo', forma: 'sufixo-exata-ou-2-casas', conteudo: etrianguloRetanguloMoldesSufixoExataOu2Casas },

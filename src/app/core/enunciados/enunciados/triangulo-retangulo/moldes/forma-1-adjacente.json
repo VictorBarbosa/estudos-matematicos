@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo com hipotenusa {dados-calculo.hipotenusa} e um ângulo de {dados-calculo.anguloGraus}°, qual é a medida do cateto adjacente? (2 casas decimais)",
+    "fr": "Dans un triangle rectangle avec une hypoténuse {dados-calculo.hipotenusa} et un angle de {dados-calculo.anguloGraus}°, quelle est la mesure du côté adjacent ? (2 décimales)",
+    "en": "In a right triangle with hypotenuse {dados-calculo.hipotenusa} and an angle of {dados-calculo.anguloGraus}°, what is the length of the adjacent leg? (2 decimal places)"
+  }
+}
