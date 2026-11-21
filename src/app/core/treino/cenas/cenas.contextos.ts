@@ -31,10 +31,24 @@ import { Limites } from '@core/treino/cenas/faixas';
  */
 
 /** A linha com que o ângulo é formado, escrita em cada língua. */
-export const REFERENCIA_ESCRITA: Readonly<Record<'chao' | 'horizontal', Sintagma>> = {
+export const REFERENCIA_ESCRITA: Readonly<Record<Referencia, Sintagma>> = {
   chao: { pt: 'o chão', fr: 'le sol', en: 'the ground' },
   horizontal: { pt: 'a horizontal', fr: "l'horizontale", en: 'the horizontal' },
+  /*
+   * Quando quem olha está com os olhos acima do chão, o ângulo não parte do
+   * chão: parte da horizontal que passa pelos olhos. Dizer «com o chão» aí
+   * seria mentira, e é justamente essa linha que o aluno precisa enxergar para
+   * entender por que a altura dos olhos se soma no fim.
+   */
+  'horizontal-do-olhar': {
+    pt: 'a horizontal dos olhos',
+    fr: "l'horizontale des yeux",
+    en: 'the horizontal at eye level',
+  },
 };
+
+/** Com o que o ângulo da cena é formado. */
+export type Referencia = 'chao' | 'horizontal' | 'horizontal-do-olhar';
 
 /** Uma expressão nominal escrita por extenso em cada língua. */
 export interface Sintagma {
@@ -91,7 +105,7 @@ export interface Cena {
    * O molde da cena é obrigado a dizê-lo com todas as letras: é o que o aluno
    * precisa para saber qual cateto é o oposto.
    */
-  readonly referencia: 'chao' | 'horizontal';
+  readonly referencia: Referencia;
   /** As perguntas que fazem sentido nesta história. */
   readonly formas: readonly Forma[];
   /**
@@ -105,6 +119,17 @@ export interface Cena {
   readonly profissoes: readonly string[];
   /** Os limites de cada lado e do ângulo, todos obrigatórios. */
   readonly limites: Limites;
+  /**
+   * A altura que se SOMA ao cateto vertical no fim da conta.
+   *
+   * Quem mede o ângulo com os olhos a 1,7 m do chão não mede a altura do
+   * prédio: mede a altura ACIMA DOS OLHOS. O triângulo dá essa parte, e a
+   * altura dos olhos entra depois, somando — é o passo que mais se esquece, e
+   * por isso ele é um passo visível e uma armadilha com diagnóstico próprio.
+   *
+   * Ausente na maioria das cenas: a escada começa no chão.
+   */
+  readonly correcao?: readonly [number, number];
 }
 
 /**
@@ -891,6 +916,46 @@ export const CENAS: readonly Cena[] = [
       inclinado: [1, 2.6],
       angulo: [15, 40],
     },
+  },
+  {
+    /*
+     * A cena que trouxe a correção aditiva.
+     *
+     * Era `exercicioAltura` escrito à mão; virou cena para que a mesma
+     * história ganhe as perguntas e as profissões das outras.
+     */
+    id: 'predio-visado',
+    vertical: {
+      pt: 'a altura do prédio',
+      fr: "la hauteur de l'immeuble",
+      en: 'the height of the building',
+    },
+    horizontal: {
+      pt: 'a distância de quem observa até o prédio',
+      fr: "la distance entre l'observateur et l'immeuble",
+      en: 'the distance from the observer to the building',
+    },
+    inclinado: {
+      pt: 'a linha de visada',
+      fr: 'la ligne de visée',
+      en: 'the line of sight',
+    },
+    comprimento: {
+      pt: 'o comprimento da linha de visada',
+      fr: 'la longueur de la ligne de visée',
+      en: 'the length of the line of sight',
+    },
+    unidade: { pt: 'metros', fr: 'mètres', en: 'metres' },
+    referencia: 'horizontal-do-olhar',
+    formas: ['vertical-por-horizontal'],
+    profissoes: ['topografa', 'arquiteta', 'fotografo', 'agrimensor', 'engenheiro'],
+    limites: {
+      vertical: [4, 70],
+      horizontal: [10, 80],
+      inclinado: [11, 110],
+      angulo: [20, 62],
+    },
+    correcao: [1.5, 1.8],
   },
 ];
 

@@ -87,23 +87,26 @@ export function intervaloDoLado(
 }
 
 /**
- * Um valor do intervalo, em passos de meio metro, com UMA chamada ao rng.
+ * Um valor do intervalo, em passos redondos, com UMA chamada ao rng.
  *
- * Meio metro porque é o que se lê bem num enunciado: «uma escada de 6,5 m».
- * Quando nenhum múltiplo de 0,5 cabe no intervalo — faixa estreita demais —, o
- * meio do intervalo com uma casa decimal serve, e o sorteio acontece do mesmo
+ * Meio metro é o que se lê bem num enunciado («uma escada de 6,5 m»); a altura
+ * dos olhos de quem observa pede um passo mais fino, de um decímetro. Quando
+ * nenhum múltiplo do passo cabe no intervalo — faixa estreita demais —, o meio
+ * do intervalo com uma casa decimal serve, e o sorteio acontece do mesmo
  * jeito: o determinismo não pode depender do conteúdo da cena.
  */
-export function valorNoIntervalo(rng: Rng, [minimo, maximo]: Intervalo): number {
-  const primeiro = Math.ceil(minimo * 2) / 2;
-  const ultimo = Math.floor(maximo * 2) / 2;
-  const quantos = Math.round((ultimo - primeiro) * 2) + 1;
+export function valorNoIntervalo(rng: Rng, [minimo, maximo]: Intervalo, passo = 0.5): number {
+  const primeiro = Math.ceil(minimo / passo) * passo;
+  const ultimo = Math.floor(maximo / passo) * passo;
+  const quantos = Math.round((ultimo - primeiro) / passo) + 1;
 
-  // A chamada acontece sempre, caiba ou não um múltiplo de 0,5: é ela que
+  // A chamada acontece sempre, caiba ou não um múltiplo do passo: é ela que
   // mantém o consumo do rng igual para todas as cenas.
-  const passo = rng.inteiro(0, Math.max(quantos - 1, 0));
+  const sorteado = rng.inteiro(0, Math.max(quantos - 1, 0));
 
-  return quantos > 0 ? primeiro + passo / 2 : Number(((minimo + maximo) / 2).toFixed(1));
+  return quantos > 0
+    ? Number((primeiro + sorteado * passo).toFixed(2))
+    : Number(((minimo + maximo) / 2).toFixed(1));
 }
 
 /**

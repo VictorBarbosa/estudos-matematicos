@@ -140,13 +140,21 @@ describe('geradorTriangulo — notáveis e alturas', () => {
     }
   });
 
-  it('a altura pela tangente confere, inclusive com a altura dos olhos', () => {
-    const casos = [...lote('medio'), ...lote('dificil')].filter((e) =>
-      e.id.startsWith('triangulo-altura'),
+  /**
+   * A altura do prédio é a do triângulo MAIS a dos olhos.
+   *
+   * Era `exercicioAltura`, escrito à mão; hoje é a cena `predio-visado`, e a
+   * correção aditiva é o que ela trouxe ao motor. O teste continua o mesmo
+   * porque o que ele protege não mudou: quem mede o ângulo com os olhos a
+   * 1,7 m do chão não mede a altura do prédio, mede a altura acima dos olhos.
+   */
+  it('a altura do prédio soma a altura dos olhos', () => {
+    const casos = [...lote('facil'), ...lote('medio'), ...lote('dificil')].filter((e) =>
+      e.id.startsWith('cena-predio-visado'),
     );
     expect(casos.length).toBeGreaterThan(0);
     for (const e of casos) {
-      const [, ang, dist, olho] = /altura-(\d+)-(\d+)-([\d.]+)/.exec(e.id)!;
+      const [, ang, dist, olho] = /predio-visado-\S+?-(\d+)-([\d.]+)-([\d.]+)-/.exec(e.id)!;
       expect(e.gabarito).toBeCloseTo(Number(dist) * Math.tan(rad(Number(ang))) + Number(olho), 9);
     }
   });

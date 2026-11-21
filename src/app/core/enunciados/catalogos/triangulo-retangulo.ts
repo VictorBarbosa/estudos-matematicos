@@ -30,8 +30,6 @@ import etrianguloRetanguloMoldesSufixoExataOu2Casas from '@core/enunciados/enunc
 import etrianguloRetanguloMoldesCatetoOpostoA30 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cateto-oposto-a-30.json';
 import etrianguloRetanguloMoldesCatetoOpostoA60 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cateto-oposto-a-60.json';
 import etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-da-torre-por-dois-angulos.json';
-import etrianguloRetanguloMoldesAlturaDoPoste from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-poste.json';
-import etrianguloRetanguloMoldesAlturaDoPredio from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-predio.json';
 import etrianguloRetanguloMoldesCenaAviaoAproximacao from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-aviao-aproximacao.json';
 import etrianguloRetanguloMoldesCenaAviaoDecolagem from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-aviao-decolagem.json';
 import etrianguloRetanguloMoldesCenaCaboAntena from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-cabo-antena.json';
@@ -46,6 +44,7 @@ import etrianguloRetanguloMoldesCenaPainelSolar from '@core/enunciados/enunciado
 import etrianguloRetanguloMoldesCenaPipa from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-pipa.json';
 import etrianguloRetanguloMoldesCenaPonteLevadica from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-ponte-levadica.json';
 import etrianguloRetanguloMoldesCenaPranchaNavio from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-prancha-navio.json';
+import etrianguloRetanguloMoldesCenaPredioVisado from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-predio-visado.json';
 import etrianguloRetanguloMoldesCenaRampaAcesso from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-rampa-acesso.json';
 import etrianguloRetanguloMoldesCenaRampaGaragem from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-rampa-garagem.json';
 import etrianguloRetanguloMoldesCenaSombraArvore from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cena-sombra-arvore.json';
@@ -85,8 +84,6 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', forma: 'cateto-oposto-a-30', conteudo: etrianguloRetanguloMoldesCatetoOpostoA30 },
   { topico: 'triangulo-retangulo', forma: 'cateto-oposto-a-60', conteudo: etrianguloRetanguloMoldesCatetoOpostoA60 },
   { topico: 'triangulo-retangulo', forma: 'altura-da-torre-por-dois-angulos', conteudo: etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos },
-  { topico: 'triangulo-retangulo', forma: 'altura-do-poste', conteudo: etrianguloRetanguloMoldesAlturaDoPoste },
-  { topico: 'triangulo-retangulo', forma: 'altura-do-predio', conteudo: etrianguloRetanguloMoldesAlturaDoPredio },
   { topico: 'triangulo-retangulo', forma: 'cena-aviao-aproximacao', conteudo: etrianguloRetanguloMoldesCenaAviaoAproximacao },
   { topico: 'triangulo-retangulo', forma: 'cena-aviao-decolagem', conteudo: etrianguloRetanguloMoldesCenaAviaoDecolagem },
   { topico: 'triangulo-retangulo', forma: 'cena-cabo-antena', conteudo: etrianguloRetanguloMoldesCenaCaboAntena },
@@ -101,6 +98,7 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', forma: 'cena-pipa', conteudo: etrianguloRetanguloMoldesCenaPipa },
   { topico: 'triangulo-retangulo', forma: 'cena-ponte-levadica', conteudo: etrianguloRetanguloMoldesCenaPonteLevadica },
   { topico: 'triangulo-retangulo', forma: 'cena-prancha-navio', conteudo: etrianguloRetanguloMoldesCenaPranchaNavio },
+  { topico: 'triangulo-retangulo', forma: 'cena-predio-visado', conteudo: etrianguloRetanguloMoldesCenaPredioVisado },
   { topico: 'triangulo-retangulo', forma: 'cena-rampa-acesso', conteudo: etrianguloRetanguloMoldesCenaRampaAcesso },
   { topico: 'triangulo-retangulo', forma: 'cena-rampa-garagem', conteudo: etrianguloRetanguloMoldesCenaRampaGaragem },
   { topico: 'triangulo-retangulo', forma: 'cena-sombra-arvore', conteudo: etrianguloRetanguloMoldesCenaSombraArvore },

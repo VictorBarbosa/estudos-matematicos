@@ -285,7 +285,7 @@ reler quando quiser — este plano, em definitivo).
 | 1a · esqueleto andante | **feita** em 20/11/2026 |
 | 1b · as 20 cenas e as profissões | **feita** em 20/11/2026 — 21 cenas, 20 profissões |
 | 1b · o ângulo pela inversa | **feita** em 20/11/2026 — em 14 das 21 cenas |
-| 2 · migrar poste e prédio | a fazer |
+| 2 · migrar poste e prédio | **feita** em 21/11/2026 — com a correção aditiva |
 | 3 · ângulo no topo e depressão | a fazer |
 
 ### O que a implementação revelou
@@ -301,6 +301,12 @@ reler quando quiser — este plano, em definitivo).
   («p = mv») e a dica que já vem do molde saíram do denominador, e os dois pisos viraram 1.
 - **O piso de formas é amostra, não conteúdo.** 138/117/128/108 medidos em 600 sorteios
   contra um espaço maior que isso; registrados 90%, com a razão escrita no arquivo.
+- **A altura dos olhos é uma correção ADITIVA, não um lado.** O triângulo dá a altura acima
+  dos olhos; a altura do prédio é essa mais a dos olhos. Por isso a cena declara `correcao`,
+  o motor acrescenta um passo visível e uma armadilha própria, e a referência do ângulo passa
+  a ser «a horizontal dos olhos» — dizer «com o chão» ali seria mentira.
+- **O poste com sombra já estava coberto.** `exercicioAltura` sem a altura dos olhos é a cena
+  `sombra-poste` com a pergunta da tangente; só o prédio precisava de cena nova.
 - **O ângulo saiu da cena e foi para a pergunta.** A história não pode dizer «faz 68° com o
   chão» quando é justamente o ângulo que se vai perguntar. A cena ficou com o cenário, e as
   três perguntas (`pergunta-lado`, `pergunta-lado-inclinado`, `pergunta-angulo`) carregam o

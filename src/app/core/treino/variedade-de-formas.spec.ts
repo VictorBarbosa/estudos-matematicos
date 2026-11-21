@@ -160,9 +160,10 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'transformacoes-de-graficos': [2, 4, 3, 2],
   /*
    * 20/11/2026: o motor de cenas entrou no tópico. Eram 5/7/3/4; com vinte e
-   * uma cenas, cada uma com três a cinco perguntas — inclusive a do ÂNGULO,
+   * duas cenas, cada uma com três a cinco perguntas — inclusive a do ÂNGULO,
    * que diz com o que ele é formado — e uma lista própria de profissões, a
-   * medida foi 138/117/128/108.
+   * medida foi 136/130/153/100. (A altura do prédio deixou de ser exercício
+   * escrito à mão e virou cena, o que tirou duas formas e trouxe outras.)
    *
    * O piso NÃO é o valor medido. O espaço de combinações (cena × pergunta ×
    * profissão) passa dos seiscentos sorteios da amostra, então o número que
@@ -172,7 +173,7 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
    * para baixo — ainda uma ordem de grandeza acima do que havia, e com folga
    * para o sorteio respirar.
    */
-  'triangulo-retangulo': [124, 105, 115, 97],
+  'triangulo-retangulo': [122, 117, 137, 90],
   'vetores-no-espaco': [5, 9, 9, 2],
   'vetores-no-plano': [2, 3, 3, 2],
   'vizinhancas-e-infinito': [2, 3, 2, 1],

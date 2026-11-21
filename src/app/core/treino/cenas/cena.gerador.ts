@@ -143,6 +143,16 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   }
 
   const valorConhecido = valorNoIntervalo(rng, intervalo);
+
+  /*
+   * A altura que se soma no fim — os olhos de quem observa.
+   *
+   * Sorteada SEMPRE, mesmo na cena que não a tem (onde a faixa é zero e o
+   * resultado é zero): é o que mantém o consumo do rng igual para todas as
+   * cenas, e o passo é de um decímetro, que é como se mede altura de pessoa.
+   */
+  const correcao = valorNoIntervalo(rng, cena.correcao ?? [0, 0], 0.1);
+  const somaCorrecao = correcao > 0 && procurado === 'vertical';
   const inclinado =
     conhecido === 'inclinado'
       ? valorConhecido
@@ -150,7 +160,8 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
         ? valorConhecido / Math.sin(radianos)
         : valorConhecido / Math.cos(radianos);
 
-  const gabarito = medida(procurado, inclinado, radianos);
+  const ladoProcurado = medida(procurado, inclinado, radianos);
+  const gabarito = somaCorrecao ? ladoProcurado + correcao : ladoProcurado;
   const { razao, multiplica } = razaoEntre(procurado, conhecido);
   const fator =
     razao === 'sen' ? Math.sin(radianos) : razao === 'cos' ? Math.cos(radianos) : Math.tan(radianos);
@@ -166,6 +177,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   const valores: ValoresPorIdioma = {
     pt: {
       angulo: anguloGraus,
+      correcao,
       pessoa: pessoa.pt,
       objeto: comMaiuscula(objeto.pt),
       referencia: referencia.pt,
@@ -176,6 +188,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     },
     fr: {
       angulo: anguloGraus,
+      correcao,
       pessoa: pessoa.fr,
       objeto: comMaiuscula(objeto.fr),
       referencia: referencia.fr,
@@ -186,6 +199,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     },
     en: {
       angulo: anguloGraus,
+      correcao,
       pessoa: pessoa.en,
       objeto: comMaiuscula(objeto.en),
       referencia: referencia.en,
@@ -218,7 +232,12 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   );
 
   return {
-    id: `cena-${cena.id}-${forma}-${anguloGraus}-${valorConhecido}-${rng.inteiro(0, 9999)}`,
+    /*
+     * O id carrega os números do caso — ângulo, lado conhecido e a correção —
+     * porque é por ele que o teste do tópico confere a conta sem ter de ler o
+     * enunciado em português.
+     */
+    id: `cena-${cena.id}-${forma}-${anguloGraus}-${valorConhecido}-${somaCorrecao ? correcao : 0}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: texto.enunciado,
     traducoes: texto.traducoes,
@@ -236,10 +255,12 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
         anguloGraus,
         valorConhecido,
         fator,
-        gabarito,
+        gabarito: ladoProcurado,
+        correcao: somaCorrecao ? correcao : 0,
+        total: gabarito,
       }),
     },
-    conceitos: ['triangulo.razoes'],
+    conceitos: somaCorrecao ? ['triangulo.razoes', 'triangulo.elevacao'] : ['triangulo.razoes'],
     armadilhas: semColisoes(
       [
         {
@@ -261,6 +282,16 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
           passo: 1,
           conceito: 'triangulo.razoes',
         },
+        ...(somaCorrecao
+          ? [
+              {
+                resposta: ladoProcurado,
+                diagnostico: `Faltou somar a altura dos olhos (${String(correcao).replace('.', ',')} m): o triângulo começa nela, não no chão.`,
+                passo: 2,
+                conceito: 'triangulo.elevacao',
+              },
+            ]
+          : []),
         {
           // O complemento: contar o ângulo a partir da outra linha.
           resposta: multiplica
@@ -305,10 +336,15 @@ function passosDaForma(
     readonly anguloGraus: number;
     readonly valorConhecido: number;
     readonly fator: number;
+    /** O lado do triângulo, antes da correção. */
     readonly gabarito: number;
+    /** A altura que se soma no fim, ou zero quando a cena não a tem. */
+    readonly correcao: number;
+    /** A resposta: o lado mais a correção. */
+    readonly total: number;
   },
 ): Exercicio<number>['resolucao']['passos'] {
-  const { anguloGraus, valorConhecido, fator, gabarito } = numeros;
+  const { anguloGraus, valorConhecido, fator, gabarito, correcao, total } = numeros;
   const simbolo = TEX_DA_RAZAO[razao];
 
   const descricaoDaRazao =
@@ -338,6 +374,21 @@ function passosDaForma(
       descricao: 'Calculando.',
       tex: `x = ${tex(valorConhecido, 1)} ${multiplica ? '\\cdot' : '\\div'} ${tex(fator, 4)} = ${tex(gabarito)}`,
     },
+    /*
+     * O passo que mais se esquece.
+     *
+     * O triângulo começa na altura dos olhos, não no chão: o que a razão dá é
+     * a altura ACIMA deles. A frase é a mesma que o exercício antigo usava, e
+     * de propósito — ela já está no dicionário nas três línguas.
+     */
+    ...(correcao > 0
+      ? [
+          {
+            descricao: `O ângulo foi medido da altura dos olhos: somamos os ${String(correcao).replace('.', ',')} m.`,
+            tex: `${tex(gabarito)} + ${tex(correcao)} = ${tex(total)}`,
+          },
+        ]
+      : []),
   ];
 }
 

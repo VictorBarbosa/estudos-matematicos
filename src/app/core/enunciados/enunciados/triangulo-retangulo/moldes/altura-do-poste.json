@@ -1,7 +1,0 @@
-{
-  "enunciado": {
-    "br": "Um poste projeta uma sombra de {dados-calculo.distancia} m quando os raios do sol fazem {dados-calculo.angulo}° com o chão. Qual é a altura do poste, em metros?",
-    "fr": "Un poteau projette une ombre de {dados-calculo.distancia} m quand les rayons du soleil font {dados-calculo.angulo}° avec le sol. Quelle est la hauteur du poteau, en mètres ?",
-    "en": "A pole casts a {dados-calculo.distancia} m shadow when the sun rays make {dados-calculo.angulo}° with the ground. How tall is the pole, in metres?"
-  }
-}

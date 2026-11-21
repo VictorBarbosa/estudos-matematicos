@@ -7,23 +7,22 @@ import { anguloRedondo } from '@core/treino/sorteio/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 import {
-  exercicioAltura,
   exercicioDuasVisadas,
   exercicioNotavel,
 } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.aplicacoes';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'cateto' | 'notavel' | 'altura' | 'angulo' | 'duas-visadas' | 'cena';
+type Pergunta = 'cateto' | 'notavel' | 'angulo' | 'duas-visadas' | 'cena';
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
       return rng.escolher<Pergunta>(['cateto', 'notavel', 'cena']);
     case 'medio':
-      return rng.escolher<Pergunta>(['cateto', 'notavel', 'altura', 'cena']);
+      return rng.escolher<Pergunta>(['cateto', 'notavel', 'cena']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['cateto', 'altura', 'cena']);
+      return rng.escolher<Pergunta>(['cateto', 'cena']);
     // Dos lados para o ângulo, e a torre vista de dois pontos: as duas
     // perguntas que pedem montar o triângulo, não só aplicar a razão.
     case 'extremo':
@@ -45,7 +44,6 @@ export const geradorTriangulo: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
     if (pergunta === 'angulo') return exercicioAngulo(nivel, rng);
     if (pergunta === 'notavel') return exercicioNotavel(nivel, rng);
-    if (pergunta === 'altura') return exercicioAltura(nivel, rng);
     if (pergunta === 'duas-visadas') return exercicioDuasVisadas(nivel, rng);
     /*
      * As cenas: a história onde o triângulo aparece.
