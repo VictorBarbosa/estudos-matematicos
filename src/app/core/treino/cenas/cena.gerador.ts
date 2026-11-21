@@ -250,11 +250,16 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
    * o nomeia — de DEPRESSÃO ou de ELEVAÇÃO —, que é o vocabulário que a prova
    * cobra e que o glossário explica ao passar o cursor.
    */
+  const fundida = conhecido === 'inclinado';
   const pergunta = cena.depressao
-    ? 'pergunta-lado-depressao'
+    ? fundida
+      ? 'pergunta-lado-inclinado-depressao'
+      : 'pergunta-lado-depressao'
     : cena.elevacao === true || cena.referencia === 'horizontal-do-olhar'
-      ? 'pergunta-lado-elevacao'
-      : conhecido === 'inclinado'
+      ? fundida
+        ? 'pergunta-lado-inclinado-elevacao'
+        : 'pergunta-lado-elevacao'
+      : fundida
         ? 'pergunta-lado-inclinado'
         : 'pergunta-lado';
 

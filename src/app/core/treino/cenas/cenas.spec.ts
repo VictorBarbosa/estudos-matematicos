@@ -91,6 +91,23 @@ describe('as cenas', () => {
     expect(vazios.slice(0, 10)).toEqual([]);
   });
 
+  /**
+   * A pergunta do ângulo ainda não sabe contar do topo.
+   *
+   * `exercicioDoAngulo` calcula `arctg(oposto/adjacente)` tomando o vertical
+   * como oposto — o que vale quando o ângulo está no chão. Numa cena medida
+   * pela parede a resposta sairia complementar, e nada acusaria: o enunciado
+   * estaria perfeito nas três línguas e o número, errado. Até a inversa saber
+   * do topo, as duas coisas não se misturam.
+   */
+  it('cena com o ângulo no topo não oferece a pergunta do ângulo', () => {
+    const erradas = CENAS.filter(
+      (cena) => anguloNoTopo(cena.referencia) && cena.formas.includes('angulo'),
+    ).map((cena) => cena.id);
+
+    expect(erradas).toEqual([]);
+  });
+
   it('o ângulo sorteado fica sempre dentro da faixa da cena', () => {
     const rng = criarRng(2026);
     const fora: string[] = [];

@@ -286,7 +286,11 @@ reler quando quiser — este plano, em definitivo).
 | 1b · as 20 cenas e as profissões | **feita** em 20/11/2026 — 21 cenas, 20 profissões |
 | 1b · o ângulo pela inversa | **feita** em 20/11/2026 — em 14 das 21 cenas |
 | 2 · migrar poste e prédio | **feita** em 21/11/2026 — com a correção aditiva |
-| 3 · ângulo no topo e depressão | **feita** em 21/11/2026 — 28 cenas no total |
+| 3 · ângulo no topo e depressão | **feita** em 21/11/2026 |
+
+**O plano está cumprido.** São 29 cenas, 20 profissões, oito perguntas e as três famílias de
+ângulo (do chão, da vertical e de depressão). O que vier a mais é conteúdo — uma cena nova é
+um arquivo JSON e uma entrada no catálogo —, e não motor.
 
 ### O que a implementação revelou
 
