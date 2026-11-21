@@ -6,6 +6,7 @@ import {
 import { paraRadianos } from '@core/math';
 import { Cena, CENAS, Forma, Sintagma } from '@core/treino/cenas/cenas.contextos';
 import { anguloDaCena, intervaloDoLado, Lado, valorNoIntervalo } from '@core/treino/cenas/faixas';
+import { PROFISSOES, profissaoDe } from '@core/treino/cenas/profissoes.contextos';
 import { Exercicio, Nivel, SEM_FORMULA, semColisoes } from '@core/treino/models/treino.model';
 import { Rng } from '@core/treino/rng/rng';
 
@@ -85,9 +86,18 @@ const TEX_DA_RAZAO: Readonly<Record<'sen' | 'cos' | 'tg', string>> = {
   tg: '\\tan',
 };
 
-/** O nome do lado em cada língua, para a lacuna da pergunta. */
-function sintagma(cena: Cena, lado: Lado): Sintagma {
-  return lado === 'vertical' ? cena.vertical : lado === 'horizontal' ? cena.horizontal : cena.inclinado;
+/**
+ * O nome do lado em cada língua.
+ *
+ * O lado inclinado tem dois nomes: o do OBJETO, que entra na frase do dado («A
+ * escada mede 6 metros»), e o da MEDIDA, que entra na pergunta («Quanto mede o
+ * comprimento da escada?»). Em inglês a diferença é a de uma pergunta que faz
+ * sentido e uma que não faz: «What is the ladder?».
+ */
+function sintagma(cena: Cena, lado: Lado, perguntado: boolean): Sintagma {
+  if (lado === 'vertical') return cena.vertical;
+  if (lado === 'horizontal') return cena.horizontal;
+  return perguntado ? cena.comprimento : cena.inclinado;
 }
 
 /** A primeira letra maiúscula: o nome do lado abre a frase da pergunta. */
@@ -127,12 +137,24 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   const fator =
     razao === 'sen' ? Math.sin(radianos) : razao === 'cos' ? Math.cos(radianos) : Math.tan(radianos);
 
-  const nomeConhecido = sintagma(cena, conhecido);
-  const nomeProcurado = sintagma(cena, procurado);
+  const nomeConhecido = sintagma(cena, conhecido, false);
+  const nomeProcurado = sintagma(cena, procurado, true);
+
+  /*
+   * A pessoa da cena, quando a cena tem gente.
+   *
+   * O sorteio acontece SEMPRE, mesmo na cena sem ninguém: é o que mantém o
+   * consumo do rng igual para todas elas, e uma cena nova com profissões não
+   * desloca o que vinha depois. O valor entra na lacuna só quando o molde a
+   * tem — e os moldes das cenas sem gente não a têm.
+   */
+  const escolhida = rng.escolher(cena.profissoes.length > 0 ? cena.profissoes : ['pedreiro']);
+  const pessoa = (profissaoDe(escolhida) ?? PROFISSOES[0]!).nome;
 
   const valores: ValoresPorIdioma = {
     pt: {
       angulo: anguloGraus,
+      pessoa: pessoa.pt,
       conhecido: comMaiuscula(nomeConhecido.pt),
       valor: valorConhecido,
       unidade: cena.unidade.pt,
@@ -140,6 +162,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     },
     fr: {
       angulo: anguloGraus,
+      pessoa: pessoa.fr,
       conhecido: comMaiuscula(nomeConhecido.fr),
       valor: valorConhecido,
       unidade: cena.unidade.fr,
@@ -147,6 +170,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
     },
     en: {
       angulo: anguloGraus,
+      pessoa: pessoa.en,
       conhecido: comMaiuscula(nomeConhecido.en),
       valor: valorConhecido,
       unidade: cena.unidade.en,
@@ -164,7 +188,7 @@ export function exercicioDeCena(nivel: Nivel, rng: Rng, cenas: readonly Cena[] =
   );
 
   return {
-    id: `cena-${cena.id}-${forma}-${anguloGraus}-${valorConhecido}-${rng.inteiro(0, 9999)}`,
+    id: `cena-${cena.id}-${forma}-${escolhida}-${anguloGraus}-${valorConhecido}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: texto.enunciado,
     traducoes: texto.traducoes,

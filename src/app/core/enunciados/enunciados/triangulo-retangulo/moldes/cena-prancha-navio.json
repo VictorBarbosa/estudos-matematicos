@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} baixa a prancha de embarque do navio até o cais, formando {dados-calculo.angulo}° com o chão.",
+    "fr": "{dados-calculo.pessoa} abaisse la passerelle du navire jusqu'au quai, formant {dados-calculo.angulo}° avec le sol.",
+    "en": "{dados-calculo.pessoa} lowers the ship's gangway onto the quay, making {dados-calculo.angulo}° with the ground."
+  },
+  "dica": {
+    "br": "A prancha é a hipotenusa; a altura do convés acima do cais é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância no cais é o adjacente.",
+    "fr": "La passerelle est l'hypoténuse ; la hauteur du pont au-dessus du quai est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance sur le quai est le côté adjacent.",
+    "en": "The gangway is the hypotenuse; the height of the deck above the quay is the leg opposite the {dados-calculo.angulo}° angle; the distance along the quay is the adjacent leg."
+  }
+}

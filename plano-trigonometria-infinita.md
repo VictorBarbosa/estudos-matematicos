@@ -282,7 +282,21 @@ reler quando quiser — este plano, em definitivo).
 | Fase | Situação |
 |---|---|
 | 0 · `forma-1` dividido em dois moldes | **feita** em 20/11/2026 |
-| 1a · esqueleto andante | a fazer |
-| 1b · as 20 cenas e as profissões | a fazer |
+| 1a · esqueleto andante | **feita** em 20/11/2026 |
+| 1b · as 20 cenas e as profissões | **feita** em 20/11/2026 — 21 cenas, 20 profissões |
 | 2 · migrar poste e prédio | a fazer |
 | 3 · ângulo no topo e depressão | a fazer |
+
+### O que a implementação revelou
+
+- **O lado inclinado precisa de dois nomes.** «A escada mede 6 metros» é a frase do dado;
+  «Quanto mede o comprimento da escada?» é a da pergunta. Em inglês a diferença separa
+  uma pergunta de geometria de uma que não existe: «What is the ladder?». A cena ganhou o
+  campo `comprimento`, e a derivação automática não serve — a contração do artigo muda com a
+  palavra (`da escada`, `do escorregador`, `du toboggan`, `de l'échelle`).
+- **A pessoa é sorteada mesmo na cena sem gente.** É o que mantém o consumo do rng igual
+  para todas as cenas; o valor só entra na lacuna quando o molde a tem.
+- **A medida de cobertura das traduções estava medindo o que não se traduz.** Notação pura
+  («p = mv») e a dica que já vem do molde saíram do denominador, e os dois pisos viraram 1.
+- **O piso de formas é amostra, não conteúdo.** 120/106/120/97 medidos em 600 sorteios
+  contra um espaço maior que isso; registrados 90%, com a razão escrita no arquivo.

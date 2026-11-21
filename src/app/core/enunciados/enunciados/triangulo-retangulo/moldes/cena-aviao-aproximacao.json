@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} desce para o pouso numa reta que faz {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} descend vers l'atterrissage sur une droite qui fait {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} descends for landing along a straight line that makes {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "A descida é a hipotenusa; a altitude perdida é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância até a cabeceira é o adjacente.",
+    "fr": "La descente est l'hypoténuse ; l'altitude perdue est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance jusqu'au seuil est le côté adjacent.",
+    "en": "The descent is the hypotenuse; the altitude lost is the leg opposite the {dados-calculo.angulo}° angle; the distance to the threshold is the adjacent leg."
+  }
+}

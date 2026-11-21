@@ -159,12 +159,19 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'transferencia-de-calor': [13, 22, 35, 9],
   'transformacoes-de-graficos': [2, 4, 3, 2],
   /*
-   * 20/11/2026: o motor de cenas entrou no tópico e as formas subiram de
-   * 5/7/3/4 para 8/10/6/7 — uma cena, com três perguntas. Cada cena nova
-   * acrescenta tantas formas quantas forem as perguntas dela, e o número
-   * volta a ser remedido a cada lote.
+   * 20/11/2026: o motor de cenas entrou no tópico. Eram 5/7/3/4; com vinte e
+   * uma cenas, cada uma com três ou quatro perguntas e uma lista própria de
+   * profissões, a medida foi 120/106/120/97.
+   *
+   * O piso NÃO é o valor medido. O espaço de combinações (cena × pergunta ×
+   * profissão) passa dos seiscentos sorteios da amostra, então o número que
+   * sai mede tanto o conteúdo quanto o tamanho da amostra: registrar o máximo
+   * deixaria o teste vermelho na primeira mudança que deslocasse o consumo do
+   * rng, sem que nada tivesse encolhido. Ficam 90% do medido, arredondados
+   * para baixo — ainda uma ordem de grandeza acima do que havia, e com folga
+   * para o sorteio respirar.
    */
-  'triangulo-retangulo': [8, 10, 6, 7],
+  'triangulo-retangulo': [108, 95, 108, 87],
   'vetores-no-espaco': [5, 9, 9, 2],
   'vetores-no-plano': [2, 3, 3, 2],
   'vizinhancas-e-infinito': [2, 3, 2, 1],

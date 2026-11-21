@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} projeta uma rampa de acesso que sobe fazendo um ângulo de {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} conçoit une rampe d'accès qui monte en faisant un angle de {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} designs an access ramp that rises at an angle of {dados-calculo.angulo}° to the horizontal."
+  },
+  "dica": {
+    "br": "A rampa é a hipotenusa; o desnível vencido é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o avanço no chão é o adjacente.",
+    "fr": "La rampe est l'hypoténuse ; la dénivellation franchie est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'avancée au sol est le côté adjacent.",
+    "en": "The ramp is the hypotenuse; the height it rises is the leg opposite the {dados-calculo.angulo}° angle; the horizontal run is the adjacent leg."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} inclina um painel solar de modo que ele faça {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} incline un panneau solaire de sorte qu'il fasse {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} tilts a solar panel so that it makes {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "O painel é a hipotenusa; a altura da borda mais alta é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a sombra que o painel ocupa no telhado é o adjacente.",
+    "fr": "Le panneau est l'hypoténuse ; la hauteur du bord le plus haut est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'emprise du panneau sur le toit est le côté adjacent.",
+    "en": "The panel is the hypotenuse; the height of its upper edge is the leg opposite the {dados-calculo.angulo}° angle; the footprint of the panel on the roof is the adjacent leg."
+  }
+}

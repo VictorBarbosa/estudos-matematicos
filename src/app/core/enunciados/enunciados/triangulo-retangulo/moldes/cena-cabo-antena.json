@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} estica um cabo de sustentação da antena até o chão, onde ele faz um ângulo de {dados-calculo.angulo}° com o solo.",
+    "fr": "{dados-calculo.pessoa} tend un hauban de l'antenne jusqu'au sol, où il fait un angle de {dados-calculo.angulo}° avec le sol.",
+    "en": "{dados-calculo.pessoa} runs a guy wire from the antenna down to the ground, where it makes an angle of {dados-calculo.angulo}° with the ground."
+  },
+  "dica": {
+    "br": "O cabo é a hipotenusa; a altura presa na antena é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância da base é o adjacente.",
+    "fr": "Le hauban est l'hypoténuse ; la hauteur fixée sur l'antenne est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance à la base est le côté adjacent.",
+    "en": "The wire is the hypotenuse; the height where it is fixed on the antenna is the leg opposite the {dados-calculo.angulo}° angle; the distance from the base is the adjacent leg."
+  }
+}

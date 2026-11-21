@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} desce a rampa da garagem, que faz um ângulo de {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} descend la rampe du garage, qui fait un angle de {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} goes down the garage ramp, which makes an angle of {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "A rampa é a hipotenusa; a profundidade descida é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o comprimento no chão é o adjacente.",
+    "fr": "La rampe est l'hypoténuse ; la profondeur descendue est le côté opposé à l'angle de {dados-calculo.angulo}° ; la longueur au sol est le côté adjacent.",
+    "en": "The ramp is the hypotenuse; the depth it goes down is the leg opposite the {dados-calculo.angulo}° angle; the length along the ground is the adjacent leg."
+  }
+}

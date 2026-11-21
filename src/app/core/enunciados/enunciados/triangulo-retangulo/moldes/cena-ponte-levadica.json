@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} levanta a folha de uma ponte levadiça, que forma {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} lève le tablier d'un pont-levis, qui forme {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} raises the leaf of a drawbridge, which forms {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "A folha levantada é a hipotenusa; a altura da ponta é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o avanço horizontal é o adjacente.",
+    "fr": "Le tablier levé est l'hypoténuse ; la hauteur de l'extrémité est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'avancée horizontale est le côté adjacent.",
+    "en": "The raised leaf is the hypotenuse; the height of its tip is the leg opposite the {dados-calculo.angulo}° angle; the horizontal advance is the adjacent leg."
+  }
+}

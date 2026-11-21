@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} prende um cabo do alto do mastro até o convés, onde ele faz {dados-calculo.angulo}° com o piso.",
+    "fr": "{dados-calculo.pessoa} fixe un câble du haut du mât jusqu'au pont, où il fait {dados-calculo.angulo}° avec le plancher.",
+    "en": "{dados-calculo.pessoa} ties a cable from the top of the mast down to the deck, where it makes {dados-calculo.angulo}° with the floor."
+  },
+  "dica": {
+    "br": "O cabo é a hipotenusa; a altura do mastro é o cateto oposto ao ângulo de {dados-calculo.angulo}°; a distância até a base é o adjacente.",
+    "fr": "Le câble est l'hypoténuse ; la hauteur du mât est le côté opposé à l'angle de {dados-calculo.angulo}° ; la distance à la base est le côté adjacent.",
+    "en": "The cable is the hypotenuse; the height of the mast is the leg opposite the {dados-calculo.angulo}° angle; the distance to the base is the adjacent leg."
+  }
+}

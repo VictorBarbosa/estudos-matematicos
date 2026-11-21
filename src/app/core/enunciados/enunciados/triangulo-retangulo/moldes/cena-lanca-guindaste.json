@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} levanta a lança de um guindaste até que ela faça {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} lève la flèche d'une grue jusqu'à ce qu'elle fasse {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} raises a crane's boom until it makes {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "A lança é a hipotenusa; a altura alcançada pela ponta é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o alcance horizontal é o adjacente.",
+    "fr": "La flèche est l'hypoténuse ; la hauteur atteinte par la pointe est le côté opposé à l'angle de {dados-calculo.angulo}° ; la portée horizontale est le côté adjacent.",
+    "en": "The boom is the hypotenuse; the height reached by the tip is the leg opposite the {dados-calculo.angulo}° angle; the horizontal reach is the adjacent leg."
+  }
+}

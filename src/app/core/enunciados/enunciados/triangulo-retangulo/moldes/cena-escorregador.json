@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} instala um escorregador que desce fazendo um ângulo de {dados-calculo.angulo}° com o chão.",
+    "fr": "{dados-calculo.pessoa} installe un toboggan qui descend en faisant un angle de {dados-calculo.angulo}° avec le sol.",
+    "en": "{dados-calculo.pessoa} installs a slide that goes down at an angle of {dados-calculo.angulo}° to the ground."
+  },
+  "dica": {
+    "br": "O escorregador é a hipotenusa; a altura da plataforma é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o espaço no chão é o adjacente.",
+    "fr": "Le toboggan est l'hypoténuse ; la hauteur de la plateforme est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'espace au sol est le côté adjacent.",
+    "en": "The slide is the hypotenuse; the height of the platform is the leg opposite the {dados-calculo.angulo}° angle; the space on the ground is the adjacent leg."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.pessoa} sobe uma trilha reta que faz um ângulo de {dados-calculo.angulo}° com a horizontal.",
+    "fr": "{dados-calculo.pessoa} monte un sentier rectiligne qui fait un angle de {dados-calculo.angulo}° avec l'horizontale.",
+    "en": "{dados-calculo.pessoa} climbs a straight trail that makes an angle of {dados-calculo.angulo}° with the horizontal."
+  },
+  "dica": {
+    "br": "A trilha é a hipotenusa; a altitude ganha é o cateto oposto ao ângulo de {dados-calculo.angulo}°; o avanço no mapa é o adjacente.",
+    "fr": "Le sentier est l'hypoténuse ; l'altitude gagnée est le côté opposé à l'angle de {dados-calculo.angulo}° ; l'avancée sur la carte est le côté adjacent.",
+    "en": "The trail is the hypotenuse; the altitude gained is the leg opposite the {dados-calculo.angulo}° angle; the advance on the map is the adjacent leg."
+  }
+}
