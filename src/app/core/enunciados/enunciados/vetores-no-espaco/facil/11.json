@@ -1,6 +1,6 @@
 {
   "enunciado": {
-    "br": "Qual é o módulo do vetor (0, 0, 5)? (duas casas decimais)",
+    "br": "Qual é o módulo do vetor (use pitagoras) (0, 0, 5)? (duas casas decimais)",
     "fr": "Quel est le module du vecteur (0, 0, 5) ? (deux décimales)",
     "en": "What is the magnitude of the vector (0, 0, 5)? (two decimal places)"
   },

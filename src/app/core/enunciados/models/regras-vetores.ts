@@ -24,7 +24,7 @@ function anguloEntre(
 export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
   'vetores-no-plano': [
     [
-      'Qual é o módulo do vetor (#, #)? (duas casas decimais)',
+      'Qual é o módulo do vetor (use pitagoras) (#, #)? (duas casas decimais)',
       '|v| = \\sqrt{x^2 + y^2}',
       '|v| = \\sqrt{#^2 + #^2}',
       (v) => Math.hypot(v[0]!, v[1]!),
@@ -75,7 +75,7 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
       2,
     ],
     [
-      'Qual é o módulo do vetor diferença entre (#, #) e (#, #)? (duas casas decimais)',
+      'Qual é o módulo do vetor (use pitagoras) diferença entre (#, #) e (#, #)? (duas casas decimais)',
       '|a - b| = \\sqrt{(a_x-b_x)^2 + (a_y-b_y)^2}',
       '|a - b| = \\sqrt{(#4444 - #2221)^2 + (#1112 - #3333)^2}',
       (v) => Math.hypot(v[0]! - v[2]!, v[1]! - v[3]!),
@@ -202,14 +202,14 @@ export const REGRAS_VETORES: Readonly<Record<string, readonly Regra[]>> = {
       (v) => v[0]! * v[3]! + v[1]! * v[4]! + v[2]! * v[5]!,
     ],
     [
-      'Qual é o módulo do vetor (#, #, #)? (duas casas decimais)',
+      'Qual é o módulo do vetor (use pitagoras) (#, #, #)? (duas casas decimais)',
       '|v| = \\sqrt{x^2 + y^2 + z^2}',
       '|v| = \\sqrt{#^2 + #^2 + #^2}',
       (v) => Math.hypot(v[0]!, v[1]!, v[2]!),
       2,
     ],
     [
-      'Qual é o módulo do vetor de componentes (#, #, #)?',
+      'Qual é o módulo do vetor (use pitagoras) de componentes (#, #, #)?',
       '|v| = \\sqrt{x^2 + y^2 + z^2}',
       '|v| = \\sqrt{#^2 + #^2 + #^2}',
       (v) => Math.hypot(v[0]!, v[1]!, v[2]!),
